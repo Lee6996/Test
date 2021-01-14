@@ -38,7 +38,7 @@ namespace Final
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(312, 233);
+            this.button2.Location = new System.Drawing.Point(253, 280);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 19;
@@ -48,7 +48,7 @@ namespace Final
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(71, 233);
+            this.textBox2.Location = new System.Drawing.Point(12, 280);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(224, 102);
@@ -56,7 +56,7 @@ namespace Final
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(312, 113);
+            this.button1.Location = new System.Drawing.Point(253, 160);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 17;
@@ -66,7 +66,7 @@ namespace Final
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(71, 113);
+            this.textBox1.Location = new System.Drawing.Point(12, 160);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(224, 102);
@@ -74,7 +74,7 @@ namespace Final
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(71, 359);
+            this.textBox3.Location = new System.Drawing.Point(12, 406);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(224, 102);
