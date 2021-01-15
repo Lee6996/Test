@@ -31,26 +31,26 @@ namespace Final
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinalMDIParent));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -73,15 +73,28 @@ namespace Final
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel2
+            // label1
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel2.Controls.Add(this.tabControl1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 30);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1582, 100);
-            this.panel2.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(198, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(283, 15);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "FFFFFFFFFinal PPPPPPPPPPProject";
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button6.Location = new System.Drawing.Point(1508, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(33, 29);
+            this.button6.TabIndex = 6;
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -94,6 +107,16 @@ namespace Final
             this.button1.Size = new System.Drawing.Size(30, 27);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 30);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1582, 100);
+            this.panel2.TabIndex = 5;
             // 
             // tabControl1
             // 
@@ -124,6 +147,79 @@ namespace Final
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.Location = new System.Drawing.Point(252, 0);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(85, 74);
+            this.button13.TabIndex = 7;
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.Location = new System.Drawing.Point(84, 0);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(85, 74);
+            this.button12.TabIndex = 6;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.Location = new System.Drawing.Point(420, 0);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(85, 74);
+            this.button11.TabIndex = 5;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.Location = new System.Drawing.Point(336, 0);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(85, 74);
+            this.button10.TabIndex = 4;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.Location = new System.Drawing.Point(168, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(85, 74);
+            this.button9.TabIndex = 3;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(85, 74);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "홈";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.HighlightText;
@@ -136,17 +232,17 @@ namespace Final
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
-            // button3
+            // button7
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 74);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = false;
+            this.button7.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.Location = new System.Drawing.Point(84, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(85, 74);
+            this.button7.TabIndex = 3;
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -171,18 +267,6 @@ namespace Final
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.button8);
-            this.tabPage4.Controls.Add(this.button5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1574, 74);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.HighlightText;
@@ -195,52 +279,17 @@ namespace Final
             this.button4.TabIndex = 2;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // tabPage4
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 74);
-            this.button5.TabIndex = 2;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button6.Location = new System.Drawing.Point(1508, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(33, 29);
-            this.button6.TabIndex = 6;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(198, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 15);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "FFFFFFFFFinal PPPPPPPPPPProject";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.Location = new System.Drawing.Point(84, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(85, 74);
-            this.button7.TabIndex = 3;
-            this.button7.UseVisualStyleBackColor = false;
+            this.tabPage4.Controls.Add(this.button8);
+            this.tabPage4.Controls.Add(this.button5);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1574, 74);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
@@ -254,65 +303,17 @@ namespace Final
             this.button8.TabIndex = 3;
             this.button8.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // button5
             // 
-            this.button9.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.Location = new System.Drawing.Point(168, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(85, 74);
-            this.button9.TabIndex = 3;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.Location = new System.Drawing.Point(336, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(85, 74);
-            this.button10.TabIndex = 4;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.Location = new System.Drawing.Point(420, 0);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(85, 74);
-            this.button11.TabIndex = 5;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.Location = new System.Drawing.Point(252, 0);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(85, 74);
-            this.button13.TabIndex = 7;
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.Location = new System.Drawing.Point(84, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(85, 74);
-            this.button12.TabIndex = 6;
-            this.button12.UseVisualStyleBackColor = false;
+            this.button5.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(85, 74);
+            this.button5.TabIndex = 2;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // FinalMDIParent
             // 
