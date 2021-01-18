@@ -16,7 +16,7 @@ namespace Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Test());
+            Application.Run(new frm_MSS_CON_002());
         }
     }
 }
