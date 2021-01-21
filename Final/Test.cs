@@ -21,6 +21,7 @@ namespace Final
         {
             AESEnc enc = new AESEnc();
             textBox2.Text = enc.AESEncrypt256(textBox1.Text);
+
         }
 
         private void button2_Click(object sender, EventArgs e)

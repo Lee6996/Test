@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Final
 {
-    public partial class frm_MSS_CON_002 : Final.FinalMDIParent
+    public partial class frm_PPS_SCH_003 : Final.FinalMDIParent
     {
-        public frm_MSS_CON_002()
+        public frm_PPS_SCH_003()
         {
             InitializeComponent();
         }

@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Final
 {
-    public partial class frm_MSS_CON_001 : Final.FinalMDIParent
+    public partial class frm_KPI_RPT_1 : Form
     {
-        public frm_MSS_CON_001()
+        public frm_KPI_RPT_1()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

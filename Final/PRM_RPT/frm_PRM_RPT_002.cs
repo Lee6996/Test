@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Final
 {
-    public partial class frm_MSS_CON_002_1 : Form
+    public partial class frm_PRM_RPT_002 : Final.FinalMDIParent
     {
-        public frm_MSS_CON_002_1()
+        public frm_PRM_RPT_002()
         {
             InitializeComponent();
         }
