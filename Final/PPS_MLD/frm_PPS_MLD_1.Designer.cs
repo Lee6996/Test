@@ -1,17 +1,17 @@
 ﻿
-namespace Final
+namespace Final.PPS_MLD
 {
-    partial class frm_PPS_MLD_001
+    partial class frm_PPS_MLD_1
     {
         /// <summary>
-        /// 필수 디자이너 변수입니다.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// 사용 중인 모든 리소스를 정리합니다.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,11 +21,11 @@ namespace Final
             base.Dispose(disposing);
         }
 
-        #region Windows Form 디자이너에서 생성한 코드
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// 디자이너 지원에 필요한 메서드입니다. 
-        /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -91,10 +91,10 @@ namespace Final
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.panel4.Location = new System.Drawing.Point(225, 152);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1357, 67);
-            this.panel4.TabIndex = 19;
+            this.panel4.Size = new System.Drawing.Size(1354, 67);
+            this.panel4.TabIndex = 20;
             // 
             // comboBox1
             // 
@@ -108,10 +108,10 @@ namespace Final
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(490, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.Size = new System.Drawing.Size(68, 18);
             this.label4.TabIndex = 12;
             this.label4.Text = "금형그룹";
             // 
@@ -126,10 +126,10 @@ namespace Final
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(291, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 10;
             this.label3.Text = "금형명";
             // 
@@ -155,10 +155,10 @@ namespace Final
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(6, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 13);
+            this.label2.Size = new System.Drawing.Size(141, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "조회조건 : 금형코드";
             // 
@@ -170,10 +170,10 @@ namespace Final
             this.panel5.Controls.Add(this.dataGridView1);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(225, 219);
+            this.panel5.Location = new System.Drawing.Point(0, 67);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1357, 685);
-            this.panel5.TabIndex = 20;
+            this.panel5.Size = new System.Drawing.Size(1354, 670);
+            this.panel5.TabIndex = 21;
             // 
             // label15
             // 
@@ -212,9 +212,9 @@ namespace Final
             this.panel10.Controls.Add(this.label9);
             this.panel10.Controls.Add(this.textBox6);
             this.panel10.Controls.Add(this.panel8);
-            this.panel10.Location = new System.Drawing.Point(6, 474);
+            this.panel10.Location = new System.Drawing.Point(6, 459);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1339, 199);
+            this.panel10.Size = new System.Drawing.Size(1336, 199);
             this.panel10.TabIndex = 4;
             // 
             // button21
@@ -241,7 +241,7 @@ namespace Final
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(618, 167);
+            this.label13.Location = new System.Drawing.Point(617, 167);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 12);
             this.label13.TabIndex = 21;
@@ -250,7 +250,7 @@ namespace Final
             // textBox8
             // 
             this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox8.Location = new System.Drawing.Point(719, 158);
+            this.textBox8.Location = new System.Drawing.Point(718, 158);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 21);
             this.textBox8.TabIndex = 22;
@@ -259,7 +259,7 @@ namespace Final
             // 
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(719, 62);
+            this.dateTimePicker1.Location = new System.Drawing.Point(718, 62);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(100, 21);
             this.dateTimePicker1.TabIndex = 20;
@@ -268,7 +268,7 @@ namespace Final
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(618, 68);
+            this.label18.Location = new System.Drawing.Point(617, 68);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(77, 12);
             this.label18.TabIndex = 19;
@@ -278,7 +278,7 @@ namespace Final
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(394, 167);
+            this.label17.Location = new System.Drawing.Point(393, 167);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(53, 12);
             this.label17.TabIndex = 17;
@@ -287,7 +287,7 @@ namespace Final
             // textBox7
             // 
             this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox7.Location = new System.Drawing.Point(488, 161);
+            this.textBox7.Location = new System.Drawing.Point(487, 161);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 21);
             this.textBox7.TabIndex = 18;
@@ -296,7 +296,7 @@ namespace Final
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(394, 134);
+            this.label16.Location = new System.Drawing.Point(393, 134);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(53, 12);
             this.label16.TabIndex = 15;
@@ -305,7 +305,7 @@ namespace Final
             // textBox4
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(488, 127);
+            this.textBox4.Location = new System.Drawing.Point(487, 127);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 21);
             this.textBox4.TabIndex = 16;
@@ -322,7 +322,7 @@ namespace Final
             // 
             this.dateTimePicker3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(719, 26);
+            this.dateTimePicker3.Location = new System.Drawing.Point(718, 26);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(100, 21);
             this.dateTimePicker3.TabIndex = 13;
@@ -331,7 +331,7 @@ namespace Final
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(618, 32);
+            this.label14.Location = new System.Drawing.Point(617, 32);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 12);
             this.label14.TabIndex = 12;
@@ -341,7 +341,7 @@ namespace Final
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(618, 102);
+            this.label12.Location = new System.Drawing.Point(617, 102);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 12);
             this.label12.TabIndex = 9;
@@ -350,7 +350,7 @@ namespace Final
             // textBox5
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Location = new System.Drawing.Point(719, 94);
+            this.textBox5.Location = new System.Drawing.Point(718, 94);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(192, 52);
@@ -360,7 +360,7 @@ namespace Final
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(394, 101);
+            this.label11.Location = new System.Drawing.Point(393, 101);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 12);
             this.label11.TabIndex = 7;
@@ -370,7 +370,7 @@ namespace Final
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(394, 68);
+            this.label10.Location = new System.Drawing.Point(393, 68);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 12);
             this.label10.TabIndex = 5;
@@ -379,7 +379,7 @@ namespace Final
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(488, 60);
+            this.textBox3.Location = new System.Drawing.Point(487, 60);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 21);
             this.textBox3.TabIndex = 6;
@@ -388,7 +388,7 @@ namespace Final
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(394, 35);
+            this.label9.Location = new System.Drawing.Point(393, 35);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 12);
             this.label9.TabIndex = 3;
@@ -397,7 +397,7 @@ namespace Final
             // textBox6
             // 
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Location = new System.Drawing.Point(488, 26);
+            this.textBox6.Location = new System.Drawing.Point(487, 26);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 21);
             this.textBox6.TabIndex = 4;
@@ -449,7 +449,7 @@ namespace Final
             this.dataGridView1.Location = new System.Drawing.Point(6, 45);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1339, 423);
+            this.dataGridView1.Size = new System.Drawing.Size(1336, 408);
             this.dataGridView1.TabIndex = 1;
             // 
             // panel6
@@ -490,17 +490,16 @@ namespace Final
             this.label5.TabIndex = 0;
             this.label5.Text = "조회내역";
             // 
-            // frm_PPS_MLD_001
+            // frm_PPS_MLD_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(1582, 904);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1354, 737);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "frm_PPS_MLD_001";
-            this.Tag = "금형정보 등록";
-            this.Controls.SetChildIndex(this.panel4, 0);
-            this.Controls.SetChildIndex(this.panel5, 0);
+            this.Name = "frm_PPS_MLD_1";
+            this.Text = "frm_PPS_MLD_1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -533,6 +532,17 @@ namespace Final
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
@@ -551,16 +561,5 @@ namespace Final
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

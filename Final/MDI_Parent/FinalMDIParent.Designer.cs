@@ -146,6 +146,7 @@ namespace Final
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabControl1.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -233,7 +234,7 @@ namespace Final
             this.button3.BackColor = System.Drawing.SystemColors.HighlightText;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button3.Location = new System.Drawing.Point(0, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(85, 74);
@@ -356,6 +357,7 @@ namespace Final
             // 
             // button18
             // 
+            this.button18.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button18.Location = new System.Drawing.Point(60, 246);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(134, 50);
@@ -377,6 +379,7 @@ namespace Final
             // 
             // button17
             // 
+            this.button17.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button17.Location = new System.Drawing.Point(60, 190);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(134, 50);
@@ -398,6 +401,7 @@ namespace Final
             // 
             // button16
             // 
+            this.button16.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button16.Location = new System.Drawing.Point(60, 134);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(134, 50);
@@ -419,6 +423,7 @@ namespace Final
             // 
             // button15
             // 
+            this.button15.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button15.Location = new System.Drawing.Point(60, 78);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(134, 50);
@@ -440,6 +445,7 @@ namespace Final
             // 
             // button14
             // 
+            this.button14.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button14.Location = new System.Drawing.Point(60, 22);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(134, 50);
@@ -518,7 +524,6 @@ namespace Final
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button4;
@@ -546,6 +551,7 @@ namespace Final
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
