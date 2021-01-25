@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Final
 {
-    public partial class frm_MDS_ODS_001 : Final.FinalMDIParent
+    public partial class frm_MDS_ODS_001 : Form
     {
         public frm_MDS_ODS_001()
         {
