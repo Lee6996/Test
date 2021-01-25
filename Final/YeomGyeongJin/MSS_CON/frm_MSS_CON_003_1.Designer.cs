@@ -40,8 +40,6 @@ namespace Final
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCancle = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
-            this.txtID = new FinalEnc.tbWatermark();
-            this.txtPwd = new FinalEnc.tbWatermark();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -163,28 +161,6 @@ namespace Final
             this.btnInsert.Text = "저장";
             this.btnInsert.UseVisualStyleBackColor = true;
             // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtID.ForeColor = System.Drawing.Color.Gray;
-            this.txtID.Location = new System.Drawing.Point(29, 202);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(385, 26);
-            this.txtID.TabIndex = 14;
-            this.txtID.Text = "아이디를 입력하세요.";
-            this.txtID.WatermarkText = "아이디를 입력하세요.";
-            // 
-            // txtPwd
-            // 
-            this.txtPwd.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtPwd.ForeColor = System.Drawing.Color.Gray;
-            this.txtPwd.Location = new System.Drawing.Point(29, 282);
-            this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(385, 26);
-            this.txtPwd.TabIndex = 15;
-            this.txtPwd.Text = "비밀번호를 입력하세요.";
-            this.txtPwd.WatermarkText = "비밀번호를 입력하세요.";
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(29, 135);
@@ -197,8 +173,6 @@ namespace Final
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(440, 521);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtPwd);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txt_D_Process_Code);
             this.Controls.Add(this.lblDate);
@@ -232,8 +206,6 @@ namespace Final
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCancle;
         private System.Windows.Forms.Button btnInsert;
-        private FinalEnc.tbWatermark txtID;
-        private FinalEnc.tbWatermark txtPwd;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
