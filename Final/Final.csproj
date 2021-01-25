@@ -139,18 +139,6 @@
     <Compile Include="LeeYounggyu\MDS_CDS_006.Designer.cs">
       <DependentUpon>MDS_CDS_006.cs</DependentUpon>
     </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_007.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_007.Designer.cs">
-      <DependentUpon>MDS_CDS_007.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_008.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_008.Designer.cs">
-      <DependentUpon>MDS_CDS_008.cs</DependentUpon>
-    </Compile>
     <Compile Include="LeeYounggyu\MDS_SDS_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -543,12 +531,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LeeYounggyu\MDS_CDS_006.resx">
       <DependentUpon>MDS_CDS_006.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_007.resx">
-      <DependentUpon>MDS_CDS_007.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_008.resx">
-      <DependentUpon>MDS_CDS_008.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeeYounggyu\MDS_SDS_001.resx">
       <DependentUpon>MDS_SDS_001.cs</DependentUpon>
