@@ -79,6 +79,78 @@
     <Compile Include="KPI_RPT\frm_KPI_RPT_4.Designer.cs">
       <DependentUpon>frm_KPI_RPT_4.cs</DependentUpon>
     </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_001.Designer.cs">
+      <DependentUpon>MDS_CDS_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_002.Designer.cs">
+      <DependentUpon>MDS_CDS_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_003.Designer.cs">
+      <DependentUpon>MDS_CDS_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_004.Designer.cs">
+      <DependentUpon>MDS_CDS_004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_005.Designer.cs">
+      <DependentUpon>MDS_CDS_005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_006.Designer.cs">
+      <DependentUpon>MDS_CDS_006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_007.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_007.Designer.cs">
+      <DependentUpon>MDS_CDS_007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_008.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_CDS_008.Designer.cs">
+      <DependentUpon>MDS_CDS_008.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_SDS_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_SDS_001.Designer.cs">
+      <DependentUpon>MDS_SDS_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_SDS_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_SDS_002.Designer.cs">
+      <DependentUpon>MDS_SDS_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_SDS_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_SDS_003.Designer.cs">
+      <DependentUpon>MDS_SDS_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_SDS_004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\MDS_SDS_004.Designer.cs">
+      <DependentUpon>MDS_SDS_004.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDI_Parent\MID_MDIParent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +411,42 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_4.resx">
       <DependentUpon>frm_KPI_RPT_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_001.resx">
+      <DependentUpon>MDS_CDS_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_002.resx">
+      <DependentUpon>MDS_CDS_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_003.resx">
+      <DependentUpon>MDS_CDS_003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_004.resx">
+      <DependentUpon>MDS_CDS_004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_005.resx">
+      <DependentUpon>MDS_CDS_005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_006.resx">
+      <DependentUpon>MDS_CDS_006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_007.resx">
+      <DependentUpon>MDS_CDS_007.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_008.resx">
+      <DependentUpon>MDS_CDS_008.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_SDS_001.resx">
+      <DependentUpon>MDS_SDS_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_SDS_002.resx">
+      <DependentUpon>MDS_SDS_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_SDS_003.resx">
+      <DependentUpon>MDS_SDS_003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\MDS_SDS_004.resx">
+      <DependentUpon>MDS_SDS_004.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI_Parent\MID_MDIParent.resx">
       <DependentUpon>MID_MDIParent.cs</DependentUpon>
