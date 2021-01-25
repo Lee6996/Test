@@ -33,7 +33,6 @@ namespace Final
             this.tp_Sub_Menu = new System.Windows.Forms.TabPage();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.label9 = new System.Windows.Forms.Label();
-            this.tbWatermark1 = new FinalEnc.tbWatermark();
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
             this.label10 = new System.Windows.Forms.Label();
             this.cbScreen_Name = new System.Windows.Forms.ComboBox();
@@ -47,7 +46,6 @@ namespace Final
             this.txtAdmin = new System.Windows.Forms.TextBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUpper_Name = new FinalEnc.tbWatermark();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
             this.cbUpper_Code = new System.Windows.Forms.ComboBox();
@@ -62,10 +60,8 @@ namespace Final
             this.txtUpper_Admin = new System.Windows.Forms.TextBox();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtMenu_Name = new FinalEnc.tbWatermark();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtMenu_Code = new FinalEnc.tbWatermark();
             this.tabControl1.SuspendLayout();
             this.tp_Sub_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
@@ -152,7 +148,6 @@ namespace Final
             // 
             // splitContainer9.Panel2
             // 
-            this.splitContainer9.Panel2.Controls.Add(this.tbWatermark1);
             this.splitContainer9.Size = new System.Drawing.Size(337, 40);
             this.splitContainer9.SplitterDistance = 126;
             this.splitContainer9.TabIndex = 7;
@@ -166,18 +161,6 @@ namespace Final
             this.label9.Size = new System.Drawing.Size(84, 16);
             this.label9.TabIndex = 2;
             this.label9.Text = "*화면코드";
-            // 
-            // tbWatermark1
-            // 
-            this.tbWatermark1.ForeColor = System.Drawing.Color.Silver;
-            this.tbWatermark1.Location = new System.Drawing.Point(4, 5);
-            this.tbWatermark1.Name = "tbWatermark1";
-            this.tbWatermark1.Size = new System.Drawing.Size(198, 26);
-            this.tbWatermark1.TabIndex = 0;
-            this.tbWatermark1.Text = "이름을 입력해주세요";
-            this.tbWatermark1.WatermarkColor = System.Drawing.Color.Silver;
-            this.tbWatermark1.WatermarkText = "이름을 입력해주세요";
-            // 
             // splitContainer10
             // 
             this.splitContainer10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -317,7 +300,6 @@ namespace Final
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.txtUpper_Name);
             this.splitContainer2.Size = new System.Drawing.Size(337, 40);
             this.splitContainer2.SplitterDistance = 126;
             this.splitContainer2.TabIndex = 1;
@@ -331,17 +313,6 @@ namespace Final
             this.label1.Size = new System.Drawing.Size(118, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "*상위메뉴이름";
-            // 
-            // txtUpper_Name
-            // 
-            this.txtUpper_Name.ForeColor = System.Drawing.Color.Silver;
-            this.txtUpper_Name.Location = new System.Drawing.Point(4, 5);
-            this.txtUpper_Name.Name = "txtUpper_Name";
-            this.txtUpper_Name.Size = new System.Drawing.Size(198, 26);
-            this.txtUpper_Name.TabIndex = 0;
-            this.txtUpper_Name.Text = "이름을 입력해주세요";
-            this.txtUpper_Name.WatermarkColor = System.Drawing.Color.Silver;
-            this.txtUpper_Name.WatermarkText = "이름을 입력해주세요";
             // 
             // splitContainer1
             // 
@@ -498,7 +469,6 @@ namespace Final
             // 
             // splitContainer7.Panel2
             // 
-            this.splitContainer7.Panel2.Controls.Add(this.txtMenu_Name);
             this.splitContainer7.Size = new System.Drawing.Size(337, 40);
             this.splitContainer7.SplitterDistance = 126;
             this.splitContainer7.TabIndex = 7;
@@ -513,17 +483,6 @@ namespace Final
             this.label7.TabIndex = 2;
             this.label7.Text = "*메뉴명";
             // 
-            // txtMenu_Name
-            // 
-            this.txtMenu_Name.ForeColor = System.Drawing.Color.Silver;
-            this.txtMenu_Name.Location = new System.Drawing.Point(4, 5);
-            this.txtMenu_Name.Name = "txtMenu_Name";
-            this.txtMenu_Name.Size = new System.Drawing.Size(198, 26);
-            this.txtMenu_Name.TabIndex = 0;
-            this.txtMenu_Name.Text = "이름을 입력해주세요";
-            this.txtMenu_Name.WatermarkColor = System.Drawing.Color.Silver;
-            this.txtMenu_Name.WatermarkText = "이름을 입력해주세요";
-            // 
             // splitContainer8
             // 
             this.splitContainer8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -537,7 +496,6 @@ namespace Final
             // 
             // splitContainer8.Panel2
             // 
-            this.splitContainer8.Panel2.Controls.Add(this.txtMenu_Code);
             this.splitContainer8.Size = new System.Drawing.Size(337, 40);
             this.splitContainer8.SplitterDistance = 126;
             this.splitContainer8.TabIndex = 6;
@@ -551,17 +509,6 @@ namespace Final
             this.label8.Size = new System.Drawing.Size(84, 16);
             this.label8.TabIndex = 2;
             this.label8.Text = "*메뉴코드";
-            // 
-            // txtMenu_Code
-            // 
-            this.txtMenu_Code.ForeColor = System.Drawing.Color.Silver;
-            this.txtMenu_Code.Location = new System.Drawing.Point(4, 5);
-            this.txtMenu_Code.Name = "txtMenu_Code";
-            this.txtMenu_Code.Size = new System.Drawing.Size(198, 26);
-            this.txtMenu_Code.TabIndex = 0;
-            this.txtMenu_Code.Text = "코드를 입력해주세요";
-            this.txtMenu_Code.WatermarkColor = System.Drawing.Color.Silver;
-            this.txtMenu_Code.WatermarkText = "코드를 입력해주세요";
             // 
             // frm_MSS_SYS_003_1
             // 
@@ -657,7 +604,6 @@ namespace Final
         private System.Windows.Forms.TextBox txtAdmin;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Label label1;
-        private FinalEnc.tbWatermark txtUpper_Name;
         private System.Windows.Forms.Button btnCancle;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button button1;
@@ -670,13 +616,10 @@ namespace Final
         private System.Windows.Forms.TextBox txtUpper_Admin;
         private System.Windows.Forms.SplitContainer splitContainer7;
         private System.Windows.Forms.Label label7;
-        private FinalEnc.tbWatermark txtMenu_Name;
         private System.Windows.Forms.SplitContainer splitContainer8;
         private System.Windows.Forms.Label label8;
-        private FinalEnc.tbWatermark txtMenu_Code;
         private System.Windows.Forms.SplitContainer splitContainer9;
         private System.Windows.Forms.Label label9;
-        private FinalEnc.tbWatermark tbWatermark1;
         private System.Windows.Forms.SplitContainer splitContainer10;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbScreen_Name;
