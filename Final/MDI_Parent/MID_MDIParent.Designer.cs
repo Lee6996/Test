@@ -89,6 +89,7 @@ namespace Final.KPI_RPT
             // button24
             // 
             this.button24.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button24.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button24.Location = new System.Drawing.Point(719, 22);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(44, 23);
@@ -98,6 +99,7 @@ namespace Final.KPI_RPT
             // 
             // textBox6
             // 
+            this.textBox6.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox6.Location = new System.Drawing.Point(782, 22);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 21);
@@ -116,6 +118,7 @@ namespace Final.KPI_RPT
             // button23
             // 
             this.button23.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button23.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button23.Location = new System.Drawing.Point(478, 23);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(44, 23);
@@ -126,6 +129,7 @@ namespace Final.KPI_RPT
             // button22
             // 
             this.button22.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button22.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button22.Location = new System.Drawing.Point(365, 21);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(44, 23);
@@ -135,6 +139,7 @@ namespace Final.KPI_RPT
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox1.Location = new System.Drawing.Point(541, 23);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
@@ -143,15 +148,16 @@ namespace Final.KPI_RPT
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(255, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 15);
+            this.label4.Size = new System.Drawing.Size(14, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "~";
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(273, 22);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -160,6 +166,7 @@ namespace Final.KPI_RPT
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(167, 22);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -209,18 +216,18 @@ namespace Final.KPI_RPT
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Button button24;
+        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Button button23;
+        public System.Windows.Forms.Button button22;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.DateTimePicker dateTimePicker2;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.Label label3;
     }
 }
 

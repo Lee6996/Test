@@ -36,11 +36,41 @@ namespace Final.KPI_RPT
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.Size = new System.Drawing.Size(126, 18);
+            this.label2.Text = "조회조건 : 생산월";
+            // 
+            // button24
+            // 
+            this.button24.Visible = false;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.Visible = false;
+            // 
+            // button23
+            // 
+            this.button23.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.Visible = false;
             // 
             // panel5
             // 
@@ -121,7 +151,10 @@ namespace Final.KPI_RPT
             this.Controls.Add(this.panel5);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frm_KPI_RPT_4";
+            this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

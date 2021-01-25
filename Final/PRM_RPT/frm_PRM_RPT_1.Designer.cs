@@ -4,14 +4,14 @@ namespace Final.PRM_RPT
     partial class frm_PRM_RPT_1
     {
         /// <summary>
-        /// Required designer variable.
+        /// 필수 디자이너 변수입니다.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// 사용 중인 모든 리소스를 정리합니다.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,21 +21,16 @@ namespace Final.PRM_RPT
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Windows Form 디자이너에서 생성한 코드
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// 디자이너 지원에 필요한 메서드입니다. 
+        /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,78 +41,80 @@ namespace Final.PRM_RPT
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel4
+            // label2
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.button20);
-            this.panel4.Controls.Add(this.button22);
-            this.panel4.Controls.Add(this.dateTimePicker1);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1152, 73);
-            this.panel4.TabIndex = 16;
+            this.label2.Location = new System.Drawing.Point(46, 30);
+            this.label2.Size = new System.Drawing.Size(68, 18);
+            this.label2.Text = "생산일자";
             // 
-            // button20
+            // button24
             // 
-            this.button20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button20.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button20.Location = new System.Drawing.Point(1020, 28);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(44, 25);
-            this.button20.TabIndex = 9;
-            this.button20.Text = "출력";
-            this.button20.UseVisualStyleBackColor = false;
+            this.button24.Location = new System.Drawing.Point(1198, 21);
+            this.button24.Text = "출력";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(868, 21);
+            this.textBox6.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(809, 24);
+            this.label16.Visible = false;
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(630, 22);
+            this.button23.Visible = false;
             // 
             // button22
             // 
-            this.button22.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button22.Location = new System.Drawing.Point(212, 24);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(44, 25);
-            this.button22.TabIndex = 8;
-            this.button22.Text = "검색";
-            this.button22.UseVisualStyleBackColor = false;
+            this.button22.Location = new System.Drawing.Point(223, 25);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(693, 22);
+            this.textBox1.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(850, 46);
+            this.label4.Visible = false;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(868, 43);
+            this.dateTimePicker2.Visible = false;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 26);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(86, 21);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.Location = new System.Drawing.Point(120, 27);
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(28, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "생산일자";
+            this.label3.Location = new System.Drawing.Point(584, 24);
+            this.label3.Visible = false;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 73);
+            this.panel5.Location = new System.Drawing.Point(0, 67);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1152, 651);
-            this.panel5.TabIndex = 17;
+            this.panel5.Size = new System.Drawing.Size(1266, 739);
+            this.panel5.TabIndex = 18;
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(511, 353);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(332, 41);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "파일 양식 출력(건조)";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(511, 353);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(332, 41);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "파일 양식 출력(건조)";
             // 
             // panel6
             // 
@@ -143,7 +140,7 @@ namespace Final.PRM_RPT
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(34, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 13);
+            this.label6.Size = new System.Drawing.Size(53, 12);
             this.label6.TabIndex = 0;
             this.label6.Text = "생산의뢰";
             // 
@@ -152,20 +149,19 @@ namespace Final.PRM_RPT
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(34, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 0;
             this.label5.Text = "조회내역";
             // 
             // frm_PRM_RPT_1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 724);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.ClientSize = new System.Drawing.Size(1266, 828);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frm_PRM_RPT_1";
-            this.Text = "frm_PRM_RPT_1";
+            this.Controls.SetChildIndex(this.panel4, 0);
+            this.Controls.SetChildIndex(this.panel5, 0);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -175,18 +171,14 @@ namespace Final.PRM_RPT
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label6;
