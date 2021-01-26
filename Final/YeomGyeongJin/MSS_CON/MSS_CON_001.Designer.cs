@@ -31,6 +31,14 @@ namespace Final.YeomGyeongJin.MSS_CON
         {
             this.components = new System.ComponentModel.Container();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.txtUserGroup_Name_Insert = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtUserGroup_Code_Insert = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
@@ -45,19 +53,11 @@ namespace Final.YeomGyeongJin.MSS_CON
             this.txtUserGroup_Code = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.txtUserGroup_Name_Insert = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtUserGroup_Code_Insert = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
@@ -74,14 +74,102 @@ namespace Final.YeomGyeongJin.MSS_CON
             this.panel6.Size = new System.Drawing.Size(1566, 865);
             this.panel6.TabIndex = 16;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label1.Location = new System.Drawing.Point(9, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 18);
+            this.label1.TabIndex = 21;
+            this.label1.Tag = "사용자 그룹관리";
+            this.label1.Text = "▶사용자 그룹목록";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.Info;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.btnReset);
+            this.panel5.Controls.Add(this.btnSave);
+            this.panel5.Controls.Add(this.txtUserGroup_Name_Insert);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.txtUserGroup_Code_Insert);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 746);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1566, 119);
+            this.panel5.TabIndex = 20;
+            // 
+            // btnReset
+            // 
+            this.btnReset.AutoSize = true;
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnReset.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnReset.Location = new System.Drawing.Point(1079, 37);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(85, 35);
+            this.btnReset.TabIndex = 10;
+            this.btnReset.Text = "초기화";
+            this.btnReset.UseVisualStyleBackColor = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.AutoSize = true;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSave.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSave.Location = new System.Drawing.Point(988, 37);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(85, 35);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "저장";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // txtUserGroup_Name_Insert
+            // 
+            this.txtUserGroup_Name_Insert.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtUserGroup_Name_Insert.Location = new System.Drawing.Point(483, 18);
+            this.txtUserGroup_Name_Insert.Name = "txtUserGroup_Name_Insert";
+            this.txtUserGroup_Name_Insert.Size = new System.Drawing.Size(140, 26);
+            this.txtUserGroup_Name_Insert.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(349, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 18);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "사용자 그룹명";
+            // 
+            // txtUserGroup_Code_Insert
+            // 
+            this.txtUserGroup_Code_Insert.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtUserGroup_Code_Insert.Location = new System.Drawing.Point(170, 18);
+            this.txtUserGroup_Code_Insert.Name = "txtUserGroup_Code_Insert";
+            this.txtUserGroup_Code_Insert.Size = new System.Drawing.Size(140, 26);
+            this.txtUserGroup_Code_Insert.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(28, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 18);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "사용자 그룹코드";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label6.Location = new System.Drawing.Point(12, 706);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 16);
+            this.label6.Size = new System.Drawing.Size(132, 18);
             this.label6.TabIndex = 10;
             this.label6.Text = "▶사용자 그룹설정";
             // 
@@ -205,94 +293,6 @@ namespace Final.YeomGyeongJin.MSS_CON
             this.label2.TabIndex = 0;
             this.label2.Text = "조회조건 : 사용자 그룹명";
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Info;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.btnReset);
-            this.panel5.Controls.Add(this.btnSave);
-            this.panel5.Controls.Add(this.txtUserGroup_Name_Insert);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.txtUserGroup_Code_Insert);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 746);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1566, 119);
-            this.panel5.TabIndex = 20;
-            // 
-            // btnReset
-            // 
-            this.btnReset.AutoSize = true;
-            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnReset.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnReset.Location = new System.Drawing.Point(1079, 37);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(85, 35);
-            this.btnReset.TabIndex = 10;
-            this.btnReset.Text = "초기화";
-            this.btnReset.UseVisualStyleBackColor = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.AutoSize = true;
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSave.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSave.Location = new System.Drawing.Point(988, 37);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(85, 35);
-            this.btnSave.TabIndex = 9;
-            this.btnSave.Text = "저장";
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // txtUserGroup_Name_Insert
-            // 
-            this.txtUserGroup_Name_Insert.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtUserGroup_Name_Insert.Location = new System.Drawing.Point(483, 18);
-            this.txtUserGroup_Name_Insert.Name = "txtUserGroup_Name_Insert";
-            this.txtUserGroup_Name_Insert.Size = new System.Drawing.Size(140, 26);
-            this.txtUserGroup_Name_Insert.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(349, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "사용자 그룹명";
-            // 
-            // txtUserGroup_Code_Insert
-            // 
-            this.txtUserGroup_Code_Insert.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtUserGroup_Code_Insert.Location = new System.Drawing.Point(170, 18);
-            this.txtUserGroup_Code_Insert.Name = "txtUserGroup_Code_Insert";
-            this.txtUserGroup_Code_Insert.Size = new System.Drawing.Size(140, 26);
-            this.txtUserGroup_Code_Insert.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(28, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 16);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "사용자 그룹코드";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Location = new System.Drawing.Point(9, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 18);
-            this.label1.TabIndex = 21;
-            this.label1.Tag = "사용자 그룹관리";
-            this.label1.Text = "▶사용자 그룹목록";
-            // 
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
@@ -308,13 +308,14 @@ namespace Final.YeomGyeongJin.MSS_CON
             this.Controls.Add(this.panel6);
             this.Name = "MSS_CON_001";
             this.Text = "MSS_CON_001";
+            this.Load += new System.EventHandler(this.MSS_CON_001_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
