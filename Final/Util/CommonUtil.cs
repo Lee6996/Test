@@ -109,7 +109,9 @@ namespace Final
                             string dataPropertyName,
                             int colWidth = 100,
                             bool visibility = true,
-                            DataGridViewContentAlignment textAlign = DataGridViewContentAlignment.MiddleLeft)
+                            DataGridViewContentAlignment textAlign = DataGridViewContentAlignment.MiddleCenter,
+                            DataGridViewContentAlignment headerAlign = DataGridViewContentAlignment.MiddleCenter
+                            )
         {
             DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn
             {
@@ -120,6 +122,7 @@ namespace Final
                 Visible = visibility,
                 ReadOnly = true
             };
+            col.HeaderCell.Style.Alignment = headerAlign;
             col.DefaultCellStyle.Alignment = textAlign;
 
             dgv.Columns.Add(col);
