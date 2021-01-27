@@ -462,6 +462,7 @@
     <Compile Include="YeomGyeongJin\MSS_CON\MSS_CON_001.Designer.cs">
       <DependentUpon>MSS_CON_001.cs</DependentUpon>
     </Compile>
+    <Compile Include="YeomGyeongJin\MSS_CON\UserGroupService.cs" />
     <Compile Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_001.cs">
       <SubType>Form</SubType>
     </Compile>
