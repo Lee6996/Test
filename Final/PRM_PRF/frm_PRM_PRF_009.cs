@@ -14,5 +14,16 @@ namespace Final.PRM_PRF
         {
             InitializeComponent();
         }
+
+        private void frm_PRM_PRF_009_Load(object sender, EventArgs e)
+        {
+            CommonUtil.SetInitGridView(dgvPRM_PRF_009);
+            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "근무일", "Work_Date", 200);
+            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "작업장", "Wc_Name", 200);
+            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "작업자", "User_Name", 200);
+            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "근무시작시간", "Work_StartTime", 200);
+            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "근무종료시간", "Work_EndTime", 200);
+            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "근무시간", "Work_Time", 200);
+        }
     }
 }

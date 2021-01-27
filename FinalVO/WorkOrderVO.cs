@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace FinalVO
 {
-    class WorkOrderVO
+    public class WorkOrderVO
     {
         public string Workorderno { get; set; }
         public string Item_Code { get; set; }
-        public string Wc_Code { get; set; }
         public int Plan_Qty { get; set; }
         public string Plan_Unit { get; set; }
         public string Plan_Date { get; set; }
@@ -36,5 +35,7 @@ namespace FinalVO
         public string Ins_Emp { get; set; }
         public string Up_Date { get; set; }
         public string Up_Emp { get; set; }
+        public string Wc_Name { get; set; }
+        public string Item_Name { get; set; }
     }
 }
