@@ -10,6 +10,7 @@ namespace FinalVO
     {
         public string Workorderno { get; set; }
         public string Item_Code { get; set; }
+        public string Wc_Code { get; set; }
         public int Plan_Qty { get; set; }
         public string Plan_Unit { get; set; }
         public string Plan_Date { get; set; }

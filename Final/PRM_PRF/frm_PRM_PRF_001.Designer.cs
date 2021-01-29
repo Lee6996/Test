@@ -29,8 +29,7 @@ namespace Final.PRM_PRF
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgvPRM_PRF_001 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -46,8 +45,7 @@ namespace Final.PRM_PRF
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnEdit);
             this.panel4.Controls.SetChildIndex(this.label2, 0);
             this.panel4.Controls.SetChildIndex(this.label3, 0);
             this.panel4.Controls.SetChildIndex(this.dateTimePicker1, 0);
@@ -59,31 +57,22 @@ namespace Final.PRM_PRF
             this.panel4.Controls.SetChildIndex(this.label16, 0);
             this.panel4.Controls.SetChildIndex(this.textBox6, 0);
             this.panel4.Controls.SetChildIndex(this.button24, 0);
-            this.panel4.Controls.SetChildIndex(this.button1, 0);
-            this.panel4.Controls.SetChildIndex(this.button2, 0);
+            this.panel4.Controls.SetChildIndex(this.btnEdit, 0);
             // 
             // label2
             // 
             this.label2.Size = new System.Drawing.Size(149, 20);
             this.label2.Text = "조회조건 : 작업 지시 일자";
             // 
-            // button1
+            // btnEdit
             // 
-            this.button1.Location = new System.Drawing.Point(1052, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "실적보정";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1154, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "실적분할";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEdit.Location = new System.Drawing.Point(1173, 22);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 13;
+            this.btnEdit.Text = "실적보정";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel5
             // 
@@ -109,6 +98,7 @@ namespace Final.PRM_PRF
             this.dgvPRM_PRF_001.Size = new System.Drawing.Size(1248, 682);
             this.dgvPRM_PRF_001.TabIndex = 1;
             this.dgvPRM_PRF_001.Tag = "";
+            this.dgvPRM_PRF_001.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_001_CellClick);
             // 
             // panel6
             // 
@@ -172,9 +162,7 @@ namespace Final.PRM_PRF
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dgvPRM_PRF_001;
         private System.Windows.Forms.Panel panel6;

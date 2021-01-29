@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,11 @@ using System.Windows.Forms;
 /// </summary>
 namespace Final.PRM_PRF
 {
-    public partial class frm_PRM_PRF_001 : KPI_RPT.KPI_RPT_MDIParent
+    public partial class frm_PRM_PRF_001 : Final.KPI_RPT.KPI_RPT_MDIParent
     {
+        WorkOrderVO vo;
+        List<WorkOrderVO> list = new PRM_PRF_Service().GetWorkOrderVOList();
+
         public frm_PRM_PRF_001()
         {
             InitializeComponent();
@@ -31,7 +35,18 @@ namespace Final.PRM_PRF
             CommonUtil.AddGridTextColumn(dgvPRM_PRF_001, "투입수량", "In_Qty_Main", 150);
             CommonUtil.AddGridTextColumn(dgvPRM_PRF_001, "산출수량", "Out_Qty_Main", 150);
             CommonUtil.AddGridTextColumn(dgvPRM_PRF_001, "생산수량", "Prd_Qty", 150);
-            new PRM_PRF_Service().DgvDataBind(dgvPRM_PRF_001);
+            dgvPRM_PRF_001.DataSource = list;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            PopUp.frm_PRM_PRF_001_PopUp frm = new PopUp.frm_PRM_PRF_001_PopUp(vo);
+            frm.ShowDialog();
+        }
+
+        private void dgvPRM_PRF_001_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            vo = list[e.RowIndex];
         }
     }
 }
