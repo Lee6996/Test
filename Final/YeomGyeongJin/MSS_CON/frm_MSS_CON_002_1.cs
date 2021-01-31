@@ -16,10 +16,5 @@ namespace Final
         {
             InitializeComponent();
         }
-
-        private void frm_MSS_CON_002_1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

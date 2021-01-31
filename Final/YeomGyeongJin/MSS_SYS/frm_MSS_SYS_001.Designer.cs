@@ -37,13 +37,13 @@ namespace Final
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgvScreen = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
             this.pnl.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScreen)).BeginInit();
@@ -143,6 +143,17 @@ namespace Final
             this.dgvScreen.Size = new System.Drawing.Size(1335, 650);
             this.dgvScreen.TabIndex = 18;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label6.Location = new System.Drawing.Point(12, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 16);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "▶화면목록";
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "화면코드";
@@ -179,26 +190,12 @@ namespace Final
             this.Column6.Name = "Column6";
             this.Column6.Width = 200;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label6.Location = new System.Drawing.Point(12, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 16);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "▶화면목록";
-            // 
             // frm_MSS_SYS_001
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1582, 904);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pnl);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frm_MSS_SYS_001";
-            this.Tag = "화면관리";
             this.Controls.SetChildIndex(this.pnl, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.pnl.ResumeLayout(false);

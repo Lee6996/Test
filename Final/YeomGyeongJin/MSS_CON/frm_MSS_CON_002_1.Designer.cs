@@ -44,17 +44,16 @@ namespace Final
             this.Select = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnGroup_Select = new System.Windows.Forms.Button();
             this.txtGroup_Code = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbGroup_Name = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnScreen_Select = new System.Windows.Forms.Button();
             this.txtScreen = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -63,8 +62,11 @@ namespace Final
             this.button1 = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnGroup_Select = new System.Windows.Forms.Button();
+            this.btnScreen_Select = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdd_Screen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -186,6 +188,11 @@ namespace Final
             this.Delete.HeaderText = "삭제";
             this.Delete.Name = "Delete";
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // splitter1
             // 
             this.splitter1.BackColor = System.Drawing.Color.White;
@@ -230,18 +237,6 @@ namespace Final
             this.label2.TabIndex = 1;
             this.label2.Text = "그룹";
             // 
-            // btnGroup_Select
-            // 
-            this.btnGroup_Select.BackColor = System.Drawing.Color.DimGray;
-            this.btnGroup_Select.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnGroup_Select.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnGroup_Select.Location = new System.Drawing.Point(565, 5);
-            this.btnGroup_Select.Name = "btnGroup_Select";
-            this.btnGroup_Select.Size = new System.Drawing.Size(75, 29);
-            this.btnGroup_Select.TabIndex = 98;
-            this.btnGroup_Select.Text = "조회";
-            this.btnGroup_Select.UseVisualStyleBackColor = false;
-            // 
             // txtGroup_Code
             // 
             this.txtGroup_Code.Location = new System.Drawing.Point(376, 7);
@@ -252,7 +247,7 @@ namespace Final
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(292, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 18);
@@ -270,7 +265,7 @@ namespace Final
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(22, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 18);
@@ -309,18 +304,6 @@ namespace Final
             this.label5.TabIndex = 2;
             this.label5.Text = "화면";
             // 
-            // btnScreen_Select
-            // 
-            this.btnScreen_Select.BackColor = System.Drawing.Color.DimGray;
-            this.btnScreen_Select.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnScreen_Select.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnScreen_Select.Location = new System.Drawing.Point(565, 8);
-            this.btnScreen_Select.Name = "btnScreen_Select";
-            this.btnScreen_Select.Size = new System.Drawing.Size(75, 29);
-            this.btnScreen_Select.TabIndex = 99;
-            this.btnScreen_Select.Text = "조회";
-            this.btnScreen_Select.UseVisualStyleBackColor = false;
-            // 
             // txtScreen
             // 
             this.txtScreen.Location = new System.Drawing.Point(188, 9);
@@ -331,7 +314,6 @@ namespace Final
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.radioButton2.Location = new System.Drawing.Point(95, 10);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(86, 22);
@@ -343,7 +325,6 @@ namespace Final
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.radioButton1.Location = new System.Drawing.Point(17, 10);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(71, 22);
@@ -413,6 +394,30 @@ namespace Final
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
+            // btnGroup_Select
+            // 
+            this.btnGroup_Select.BackColor = System.Drawing.Color.DimGray;
+            this.btnGroup_Select.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnGroup_Select.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGroup_Select.Location = new System.Drawing.Point(565, 5);
+            this.btnGroup_Select.Name = "btnGroup_Select";
+            this.btnGroup_Select.Size = new System.Drawing.Size(75, 29);
+            this.btnGroup_Select.TabIndex = 98;
+            this.btnGroup_Select.Text = "조회";
+            this.btnGroup_Select.UseVisualStyleBackColor = false;
+            // 
+            // btnScreen_Select
+            // 
+            this.btnScreen_Select.BackColor = System.Drawing.Color.DimGray;
+            this.btnScreen_Select.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnScreen_Select.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnScreen_Select.Location = new System.Drawing.Point(565, 8);
+            this.btnScreen_Select.Name = "btnScreen_Select";
+            this.btnScreen_Select.Size = new System.Drawing.Size(75, 29);
+            this.btnScreen_Select.TabIndex = 99;
+            this.btnScreen_Select.Text = "조회";
+            this.btnScreen_Select.UseVisualStyleBackColor = false;
+            // 
             // frm_MSS_CON_002_1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -432,9 +437,9 @@ namespace Final
             this.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "frm_MSS_CON_002_1";
             this.Text = "frm_MSS_CON_002_1";
-            this.Load += new System.EventHandler(this.frm_MSS_CON_002_1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdd_Screen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -457,6 +462,7 @@ namespace Final
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvAdd_Screen;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Check;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monitoring_Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

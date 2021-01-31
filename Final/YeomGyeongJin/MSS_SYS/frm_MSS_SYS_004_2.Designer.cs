@@ -29,6 +29,7 @@ namespace Final
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnInsert = new System.Windows.Forms.Button();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@ namespace Final
             this.label2 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnInsert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -55,6 +55,19 @@ namespace Final
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.AutoSize = true;
+            this.btnInsert.BackColor = System.Drawing.SystemColors.Info;
+            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsert.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnInsert.Location = new System.Drawing.Point(286, 573);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(75, 31);
+            this.btnInsert.TabIndex = 22;
+            this.btnInsert.Text = "저장";
+            this.btnInsert.UseVisualStyleBackColor = false;
             // 
             // txtRemark
             // 
@@ -73,7 +86,7 @@ namespace Final
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.splitContainer3.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.splitContainer3.Panel1.Controls.Add(this.label7);
             this.splitContainer3.Panel1.Controls.Add(this.label5);
             this.splitContainer3.Panel1.Padding = new System.Windows.Forms.Padding(3);
@@ -89,7 +102,7 @@ namespace Final
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.Location = new System.Drawing.Point(26, 6);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 16);
@@ -110,7 +123,7 @@ namespace Final
             // 
             this.dtpEnd.Location = new System.Drawing.Point(4, 2);
             this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(232, 26);
+            this.dtpEnd.Size = new System.Drawing.Size(232, 22);
             this.dtpEnd.TabIndex = 1;
             // 
             // splitContainer2
@@ -121,7 +134,7 @@ namespace Final
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.splitContainer2.Panel1.Controls.Add(this.label3);
             this.splitContainer2.Panel1.Padding = new System.Windows.Forms.Padding(3);
             // 
@@ -137,10 +150,10 @@ namespace Final
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(26, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 18);
+            this.label3.Size = new System.Drawing.Size(59, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "등록일";
             // 
@@ -148,7 +161,7 @@ namespace Final
             // 
             this.dtpStart.Location = new System.Drawing.Point(4, 2);
             this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(232, 26);
+            this.dtpStart.Size = new System.Drawing.Size(232, 22);
             this.dtpStart.TabIndex = 0;
             // 
             // splitContainer1
@@ -159,7 +172,7 @@ namespace Final
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(2);
             // 
@@ -174,10 +187,10 @@ namespace Final
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(26, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 18);
+            this.label2.Size = new System.Drawing.Size(42, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "제목";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,45 +199,33 @@ namespace Final
             // 
             this.txtTitle.Location = new System.Drawing.Point(2, 3);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(361, 26);
+            this.txtTitle.Size = new System.Drawing.Size(361, 22);
             this.txtTitle.TabIndex = 0;
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.DimGray;
-            this.btnExit.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnExit.Location = new System.Drawing.Point(390, 572);
+            this.btnExit.AutoSize = true;
+            this.btnExit.BackColor = System.Drawing.SystemColors.Info;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnExit.Location = new System.Drawing.Point(417, 573);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(85, 35);
-            this.btnExit.TabIndex = 62;
+            this.btnExit.Size = new System.Drawing.Size(75, 31);
+            this.btnExit.TabIndex = 15;
             this.btnExit.Text = "닫기";
             this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnInsert
-            // 
-            this.btnInsert.BackColor = System.Drawing.Color.DimGray;
-            this.btnInsert.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnInsert.Location = new System.Drawing.Point(276, 572);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(85, 35);
-            this.btnInsert.TabIndex = 63;
-            this.btnInsert.Text = "저장";
-            this.btnInsert.UseVisualStyleBackColor = false;
             // 
             // frm_MSS_SYS_004_2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(505, 616);
             this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.splitContainer3);
             this.Controls.Add(this.splitContainer2);
             this.Controls.Add(this.splitContainer1);
-            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Controls.Add(this.btnExit);
+            this.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_MSS_SYS_004_2";
             this.Tag = "공지사항추가";
@@ -251,6 +252,8 @@ namespace Final
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label7;
@@ -260,9 +263,8 @@ namespace Final
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DateTimePicker dtpEnd;
         private System.Windows.Forms.DateTimePicker dtpStart;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnInsert;
     }
 }
