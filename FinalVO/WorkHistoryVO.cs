@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinalVO
 {
-    class WorkHistoryVO
+    public class WorkHistoryVO
     {
         public string Work_Seq { get; set; }
         public string Work_Date { get; set; }
