@@ -29,7 +29,6 @@ namespace Final
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnExit = new System.Windows.Forms.Button();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@ namespace Final
             this.lblNum = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -57,19 +57,6 @@ namespace Final
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnExit
-            // 
-            this.btnExit.AutoSize = true;
-            this.btnExit.BackColor = System.Drawing.SystemColors.Info;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnExit.Location = new System.Drawing.Point(417, 478);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 31);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "닫기";
-            this.btnExit.UseVisualStyleBackColor = false;
             // 
             // txtRemark
             // 
@@ -88,7 +75,7 @@ namespace Final
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.splitContainer3.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitContainer3.Panel1.Controls.Add(this.label7);
             this.splitContainer3.Panel1.Controls.Add(this.label5);
             this.splitContainer3.Panel1.Padding = new System.Windows.Forms.Padding(3);
@@ -103,7 +90,7 @@ namespace Final
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.Location = new System.Drawing.Point(23, 5);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 16);
@@ -125,7 +112,7 @@ namespace Final
             this.txtNotice_End.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNotice_End.Location = new System.Drawing.Point(1, 1);
             this.txtNotice_End.Name = "txtNotice_End";
-            this.txtNotice_End.Size = new System.Drawing.Size(121, 22);
+            this.txtNotice_End.Size = new System.Drawing.Size(121, 26);
             this.txtNotice_End.TabIndex = 0;
             // 
             // splitContainer2
@@ -136,7 +123,7 @@ namespace Final
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitContainer2.Panel1.Controls.Add(this.label3);
             this.splitContainer2.Panel1.Padding = new System.Windows.Forms.Padding(3);
             // 
@@ -152,10 +139,10 @@ namespace Final
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(16, 6);
+            this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(26, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 16);
+            this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "시작일";
             // 
@@ -164,7 +151,7 @@ namespace Final
             this.txtNotice_Date.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNotice_Date.Location = new System.Drawing.Point(1, 1);
             this.txtNotice_Date.Name = "txtNotice_Date";
-            this.txtNotice_Date.Size = new System.Drawing.Size(123, 22);
+            this.txtNotice_Date.Size = new System.Drawing.Size(123, 26);
             this.txtNotice_Date.TabIndex = 0;
             // 
             // splitContainer1
@@ -175,7 +162,7 @@ namespace Final
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(2);
             // 
@@ -190,10 +177,10 @@ namespace Final
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(26, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 16);
+            this.label2.Size = new System.Drawing.Size(38, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "제목";
             // 
@@ -201,7 +188,7 @@ namespace Final
             // 
             this.txtTitle.Location = new System.Drawing.Point(2, 3);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(361, 22);
+            this.txtTitle.Size = new System.Drawing.Size(361, 26);
             this.txtTitle.TabIndex = 0;
             // 
             // lblNum
@@ -209,7 +196,7 @@ namespace Final
             this.lblNum.AutoSize = true;
             this.lblNum.Location = new System.Drawing.Point(130, 20);
             this.lblNum.Name = "lblNum";
-            this.lblNum.Size = new System.Drawing.Size(31, 15);
+            this.lblNum.Size = new System.Drawing.Size(38, 18);
             this.lblNum.TabIndex = 9;
             this.lblNum.Text = "번호";
             this.lblNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -219,27 +206,40 @@ namespace Final
             this.lbl.AutoSize = true;
             this.lbl.Location = new System.Drawing.Point(12, 20);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(91, 15);
+            this.lbl.Size = new System.Drawing.Size(111, 18);
             this.lbl.TabIndex = 8;
             this.lbl.Text = "공지사항번호 : ";
             // 
             // btnUpdate
             // 
-            this.btnUpdate.AutoSize = true;
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.Info;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.Location = new System.Drawing.Point(291, 478);
+            this.btnUpdate.BackColor = System.Drawing.Color.DimGray;
+            this.btnUpdate.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUpdate.Location = new System.Drawing.Point(270, 478);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 31);
-            this.btnUpdate.TabIndex = 14;
+            this.btnUpdate.Size = new System.Drawing.Size(85, 35);
+            this.btnUpdate.TabIndex = 60;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.DimGray;
+            this.btnExit.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnExit.Location = new System.Drawing.Point(389, 478);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(85, 35);
+            this.btnExit.TabIndex = 61;
+            this.btnExit.Text = "닫기";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frm_MSS_SYS_004_1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(505, 520);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.splitContainer3);
@@ -247,8 +247,7 @@ namespace Final
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.lblNum);
             this.Controls.Add(this.lbl);
-            this.Controls.Add(this.btnExit);
-            this.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_MSS_SYS_004_1";
             this.Tag = "공지사항조회";
@@ -277,7 +276,6 @@ namespace Final
         }
 
         #endregion
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label7;
@@ -292,5 +290,6 @@ namespace Final
         private System.Windows.Forms.Label lblNum;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnExit;
     }
 }

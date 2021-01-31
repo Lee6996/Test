@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final
+namespace Final.YeomGyeongJin.MSS_SYS
 {
-    public partial class frm_MSS_SYS_004_2 : Form
+    public partial class MSS_SYS_003 : Form
     {
-        public frm_MSS_SYS_004_2()
+        public MSS_SYS_003()
         {
             InitializeComponent();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
