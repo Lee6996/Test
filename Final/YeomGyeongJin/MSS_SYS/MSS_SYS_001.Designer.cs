@@ -30,6 +30,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
         private void InitializeComponent()
         {
             this.pnl = new System.Windows.Forms.Panel();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.cbScreen_Name = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtScreen_Code = new System.Windows.Forms.TextBox();
@@ -42,7 +43,6 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnSelect = new System.Windows.Forms.Button();
             this.pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScreen)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,18 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.pnl.Name = "pnl";
             this.pnl.Size = new System.Drawing.Size(1344, 56);
             this.pnl.TabIndex = 16;
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.DimGray;
+            this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSelect.Location = new System.Drawing.Point(700, 11);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(85, 35);
+            this.btnSelect.TabIndex = 110;
+            this.btnSelect.Text = "조회";
+            this.btnSelect.UseVisualStyleBackColor = false;
             // 
             // cbScreen_Name
             // 
@@ -163,18 +175,6 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.label6.TabIndex = 19;
             this.label6.Text = "▶화면목록";
             // 
-            // btnSelect
-            // 
-            this.btnSelect.BackColor = System.Drawing.Color.DimGray;
-            this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSelect.Location = new System.Drawing.Point(700, 11);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(85, 35);
-            this.btnSelect.TabIndex = 110;
-            this.btnSelect.Text = "조회";
-            this.btnSelect.UseVisualStyleBackColor = false;
-            // 
             // MSS_SYS_001
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -184,6 +184,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.Controls.Add(this.pnl);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "MSS_SYS_001";
+            this.Tag = "화면관리";
             this.Text = "MSS_SYS_001";
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();

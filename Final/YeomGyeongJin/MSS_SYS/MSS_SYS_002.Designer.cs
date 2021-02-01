@@ -37,6 +37,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.cbUser_Name = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -44,7 +45,6 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.cbScreen_Name = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSelect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +123,18 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.panel4.Size = new System.Drawing.Size(1344, 56);
             this.panel4.TabIndex = 23;
             // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.DimGray;
+            this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSelect.Location = new System.Drawing.Point(1173, 10);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(85, 35);
+            this.btnSelect.TabIndex = 111;
+            this.btnSelect.Text = "조회";
+            this.btnSelect.UseVisualStyleBackColor = false;
+            // 
             // cbUser_Name
             // 
             this.cbUser_Name.FormattingEnabled = true;
@@ -184,18 +196,6 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.label2.Text = "사용자명";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnSelect
-            // 
-            this.btnSelect.BackColor = System.Drawing.Color.DimGray;
-            this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSelect.Location = new System.Drawing.Point(1173, 10);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(85, 35);
-            this.btnSelect.TabIndex = 111;
-            this.btnSelect.Text = "조회";
-            this.btnSelect.UseVisualStyleBackColor = false;
-            // 
             // MSS_SYS_002
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -205,6 +205,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.Controls.Add(this.label6);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "MSS_SYS_002";
+            this.Tag = "로그인 이력정보";
             this.Text = "MSS_SYS_002";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);

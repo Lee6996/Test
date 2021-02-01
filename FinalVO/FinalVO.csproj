@@ -42,6 +42,7 @@
     <Compile Include="AttendanceManagementVO.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="UserGroupVO.cs" />
+    <Compile Include="UserVO.cs" />
     <Compile Include="WorkHistoryVO.cs" />
     <Compile Include="WorkOrderVO.cs" />
   </ItemGroup>

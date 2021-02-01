@@ -16,5 +16,10 @@ namespace Final.YeomGyeongJin.MSS_CON
         {
             InitializeComponent();
         }
+
+        private void MSS_CON_003_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

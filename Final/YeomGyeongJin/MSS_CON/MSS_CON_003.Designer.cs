@@ -265,6 +265,7 @@ namespace Final.YeomGyeongJin.MSS_CON
             this.Name = "MSS_CON_003";
             this.Tag = "사용자 관리";
             this.Text = "MSS_CON_003";
+            this.Load += new System.EventHandler(this.MSS_CON_003_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();

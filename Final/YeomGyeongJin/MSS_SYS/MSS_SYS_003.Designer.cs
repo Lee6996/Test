@@ -111,6 +111,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.Controls.Add(this.label6);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "MSS_SYS_003";
+            this.Tag = "메뉴관리";
             this.Text = "MSS_SYS_003";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu_Under)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu_module)).EndInit();

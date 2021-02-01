@@ -30,11 +30,11 @@ namespace Final.YeomGyeongJin.MSS_SYS
         private void InitializeComponent()
         {
             this.pnl = new System.Windows.Forms.Panel();
+            this.btnNotice_Insert = new System.Windows.Forms.Button();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpNotice_End = new System.Windows.Forms.DateTimePicker();
             this.dtpNotice_Date = new System.Windows.Forms.DateTimePicker();
-            this.btnSelect = new System.Windows.Forms.Button();
-            this.btnNotice_Insert = new System.Windows.Forms.Button();
             this.dgvNotice = new System.Windows.Forms.DataGridView();
             this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NoticeStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +60,30 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.pnl.Size = new System.Drawing.Size(1344, 56);
             this.pnl.TabIndex = 18;
             // 
+            // btnNotice_Insert
+            // 
+            this.btnNotice_Insert.BackColor = System.Drawing.Color.DimGray;
+            this.btnNotice_Insert.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnNotice_Insert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnNotice_Insert.Location = new System.Drawing.Point(712, 10);
+            this.btnNotice_Insert.Name = "btnNotice_Insert";
+            this.btnNotice_Insert.Size = new System.Drawing.Size(85, 35);
+            this.btnNotice_Insert.TabIndex = 113;
+            this.btnNotice_Insert.Text = "등록";
+            this.btnNotice_Insert.UseVisualStyleBackColor = false;
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.DimGray;
+            this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSelect.Location = new System.Drawing.Point(568, 10);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(85, 35);
+            this.btnSelect.TabIndex = 112;
+            this.btnSelect.Text = "조회";
+            this.btnSelect.UseVisualStyleBackColor = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -84,30 +108,6 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.dtpNotice_Date.Name = "dtpNotice_Date";
             this.dtpNotice_Date.Size = new System.Drawing.Size(200, 26);
             this.dtpNotice_Date.TabIndex = 6;
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.BackColor = System.Drawing.Color.DimGray;
-            this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSelect.Location = new System.Drawing.Point(568, 10);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(85, 35);
-            this.btnSelect.TabIndex = 112;
-            this.btnSelect.Text = "조회";
-            this.btnSelect.UseVisualStyleBackColor = false;
-            // 
-            // btnNotice_Insert
-            // 
-            this.btnNotice_Insert.BackColor = System.Drawing.Color.DimGray;
-            this.btnNotice_Insert.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnNotice_Insert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnNotice_Insert.Location = new System.Drawing.Point(712, 10);
-            this.btnNotice_Insert.Name = "btnNotice_Insert";
-            this.btnNotice_Insert.Size = new System.Drawing.Size(85, 35);
-            this.btnNotice_Insert.TabIndex = 113;
-            this.btnNotice_Insert.Text = "등록";
-            this.btnNotice_Insert.UseVisualStyleBackColor = false;
             // 
             // dgvNotice
             // 
@@ -175,6 +175,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.Controls.Add(this.pnl);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "MSS_SYS_004";
+            this.Tag = "공지사항등록";
             this.Text = "MSS_SYS_004";
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();
