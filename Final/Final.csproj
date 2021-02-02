@@ -33,11 +33,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Mvvm.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.2.Drawing, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraWizard.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="FinalEnc, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -363,12 +384,6 @@
     <Compile Include="PRM_RPT\frm_PRM_RPT_3.Designer.cs">
       <DependentUpon>frm_PRM_RPT_3.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_33.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_33.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_33.cs</DependentUpon>
-    </Compile>
     <Compile Include="PRM_RPT\frm_PRM_RPT_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,44 +414,40 @@
     <Compile Include="PRM_RPT\frm_PRM_RPT_005.Designer.cs">
       <DependentUpon>frm_PRM_RPT_005.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_11.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_11.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_22.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_22.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_22.cs</DependentUpon>
-    </Compile>
     <Compile Include="PRM_RPT\frm_PRM_RPT_4.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PRM_RPT\frm_PRM_RPT_4.Designer.cs">
       <DependentUpon>frm_PRM_RPT_4.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_44.cs">
-      <SubType>Form</SubType>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_1-1.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_44.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_44.cs</DependentUpon>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_1-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_1-1.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_5.cs">
-      <SubType>Form</SubType>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_3-1.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_5.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_5.cs</DependentUpon>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_3-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_3-1.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_55.cs">
-      <SubType>Form</SubType>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_4-1.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_55.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_55.cs</DependentUpon>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_4-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_4-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_2-1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_2-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_2-1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ProcessService.cs" />
+    <Compile Include="Service\WorkCenterService.cs" />
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -722,32 +733,26 @@
     <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_1.resx">
       <DependentUpon>frm_PRM_RPT_1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_11.resx">
-      <DependentUpon>frm_PRM_RPT_11.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_2.resx">
       <DependentUpon>frm_PRM_RPT_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_22.resx">
-      <DependentUpon>frm_PRM_RPT_22.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_3.resx">
       <DependentUpon>frm_PRM_RPT_3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_33.resx">
-      <DependentUpon>frm_PRM_RPT_33.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_4.resx">
       <DependentUpon>frm_PRM_RPT_4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_44.resx">
-      <DependentUpon>frm_PRM_RPT_44.cs</DependentUpon>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_1-1.resx">
+      <DependentUpon>frm_PRM_RPT_1-1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_5.resx">
-      <DependentUpon>frm_PRM_RPT_5.cs</DependentUpon>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_3-1.resx">
+      <DependentUpon>frm_PRM_RPT_3-1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_55.resx">
-      <DependentUpon>frm_PRM_RPT_55.cs</DependentUpon>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_4-1.resx">
+      <DependentUpon>frm_PRM_RPT_4-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_2-1.resx">
+      <DependentUpon>frm_PRM_RPT_2-1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

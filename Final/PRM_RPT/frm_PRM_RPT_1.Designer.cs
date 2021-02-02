@@ -47,10 +47,10 @@ namespace Final.PRM_RPT
             this.label2.Size = new System.Drawing.Size(68, 18);
             this.label2.Text = "생산일자";
             // 
-            // button24
+            // btn_WorkCenter
             // 
-            this.button24.Location = new System.Drawing.Point(1198, 21);
-            this.button24.Text = "출력";
+            this.btn_WorkCenter.Location = new System.Drawing.Point(1198, 21);
+            this.btn_WorkCenter.Text = "출력";
             // 
             // textBox6
             // 
@@ -62,10 +62,10 @@ namespace Final.PRM_RPT
             this.label16.Location = new System.Drawing.Point(809, 24);
             this.label16.Visible = false;
             // 
-            // button23
+            // btn_Process
             // 
-            this.button23.Location = new System.Drawing.Point(630, 22);
-            this.button23.Visible = false;
+            this.btn_Process.Location = new System.Drawing.Point(630, 22);
+            this.btn_Process.Visible = false;
             // 
             // button22
             // 

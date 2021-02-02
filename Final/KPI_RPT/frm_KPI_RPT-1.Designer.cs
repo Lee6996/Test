@@ -30,9 +30,9 @@ namespace Final
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Process = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Process)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,15 +45,15 @@ namespace Final
             this.label1.TabIndex = 0;
             this.label1.Text = "공정목록";
             // 
-            // dataGridView1
+            // dgv_Process
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 45);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(479, 304);
-            this.dataGridView1.TabIndex = 1;
+            this.dgv_Process.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dgv_Process.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Process.Location = new System.Drawing.Point(12, 45);
+            this.dgv_Process.Name = "dgv_Process";
+            this.dgv_Process.RowTemplate.Height = 23;
+            this.dgv_Process.Size = new System.Drawing.Size(479, 304);
+            this.dgv_Process.TabIndex = 1;
             // 
             // label2
             // 
@@ -72,12 +72,13 @@ namespace Final
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(503, 362);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_Process);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "frm_KPI_RPT_1";
             this.Text = "공정찾기";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frm_KPI_RPT_1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Process)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,7 +87,7 @@ namespace Final
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Process;
         private System.Windows.Forms.Label label2;
     }
 }

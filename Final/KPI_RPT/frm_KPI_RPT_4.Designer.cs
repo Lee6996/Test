@@ -50,7 +50,7 @@ namespace Final.KPI_RPT
             // 
             // button24
             // 
-            this.button24.Visible = false;
+            this.btn_WorkCenter.Visible = false;
             // 
             // textBox6
             // 
@@ -62,7 +62,7 @@ namespace Final.KPI_RPT
             // 
             // button23
             // 
-            this.button23.Visible = false;
+            this.btn_Process.Visible = false;
             // 
             // textBox1
             // 

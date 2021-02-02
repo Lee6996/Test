@@ -85,10 +85,10 @@ namespace Final.PPS_MLD
             this.panel4.Controls.SetChildIndex(this.label4, 0);
             this.panel4.Controls.SetChildIndex(this.textBox1, 0);
             this.panel4.Controls.SetChildIndex(this.button22, 0);
-            this.panel4.Controls.SetChildIndex(this.button23, 0);
+            this.panel4.Controls.SetChildIndex(this.btn_Process, 0);
             this.panel4.Controls.SetChildIndex(this.label16, 0);
             this.panel4.Controls.SetChildIndex(this.textBox6, 0);
-            this.panel4.Controls.SetChildIndex(this.button24, 0);
+            this.panel4.Controls.SetChildIndex(this.btn_WorkCenter, 0);
             this.panel4.Controls.SetChildIndex(this.textBox9, 0);
             this.panel4.Controls.SetChildIndex(this.comboBox1, 0);
             // 
@@ -109,8 +109,8 @@ namespace Final.PPS_MLD
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(1033, 27);
-            this.button23.Visible = false;
+            this.btn_Process.Location = new System.Drawing.Point(1033, 27);
+            this.btn_Process.Visible = false;
             // 
             // button22
             // 
