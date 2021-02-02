@@ -33,9 +33,6 @@ namespace Final.PRM_RPT
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
-            this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
-            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
@@ -44,9 +41,15 @@ namespace Final.PRM_RPT
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -61,14 +64,11 @@ namespace Final.PRM_RPT
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -104,6 +104,136 @@ namespace Final.PRM_RPT
             this.ReportHeader.HeightF = 307.4586F;
             this.ReportHeader.Name = "ReportHeader";
             // 
+            // xrLabel1
+            // 
+            this.xrLabel1.Dpi = 254F;
+            this.xrLabel1.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel1.Multiline = true;
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(1700F, 140.8767F);
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.StylePriority.UseTextAlignment = false;
+            this.xrLabel1.Text = "성 형  작 업 일 지";
+            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel2.Dpi = 254F;
+            this.xrLabel2.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(1864.955F, 115.8786F);
+            this.xrLabel2.Multiline = true;
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(59.53113F, 166.58F);
+            this.xrLabel2.StylePriority.UseBorders = false;
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UsePadding = false;
+            this.xrLabel2.StylePriority.UseTextAlignment = false;
+            this.xrLabel2.Text = "결      재";
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel3
+            // 
+            this.xrLabel3.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel3.Dpi = 254F;
+            this.xrLabel3.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(1924.486F, 115.8786F);
+            this.xrLabel3.Multiline = true;
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(197.1139F, 51.53999F);
+            this.xrLabel3.StylePriority.UseBorders = false;
+            this.xrLabel3.StylePriority.UseFont = false;
+            this.xrLabel3.StylePriority.UsePadding = false;
+            this.xrLabel3.StylePriority.UseTextAlignment = false;
+            this.xrLabel3.Text = "작    성";
+            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel4.Dpi = 254F;
+            this.xrLabel4.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(2121.6F, 115.8786F);
+            this.xrLabel4.Multiline = true;
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(197.1138F, 51.53999F);
+            this.xrLabel4.StylePriority.UseBorders = false;
+            this.xrLabel4.StylePriority.UseFont = false;
+            this.xrLabel4.StylePriority.UsePadding = false;
+            this.xrLabel4.StylePriority.UseTextAlignment = false;
+            this.xrLabel4.Text = "검   토";
+            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel5
+            // 
+            this.xrLabel5.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel5.Dpi = 254F;
+            this.xrLabel5.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(2318.714F, 115.8776F);
+            this.xrLabel5.Multiline = true;
+            this.xrLabel5.Name = "xrLabel5";
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(197.1146F, 51.54088F);
+            this.xrLabel5.StylePriority.UseBorders = false;
+            this.xrLabel5.StylePriority.UseFont = false;
+            this.xrLabel5.StylePriority.UsePadding = false;
+            this.xrLabel5.StylePriority.UseTextAlignment = false;
+            this.xrLabel5.Text = "승  인";
+            this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel7
+            // 
+            this.xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrLabel7.Dpi = 254F;
+            this.xrLabel7.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(1924.486F, 167.4196F);
+            this.xrLabel7.Multiline = true;
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel7.SizeF = new System.Drawing.SizeF(197.1139F, 115.04F);
+            this.xrLabel7.StylePriority.UseBorders = false;
+            this.xrLabel7.StylePriority.UseFont = false;
+            this.xrLabel7.StylePriority.UsePadding = false;
+            // 
+            // xrLabel8
+            // 
+            this.xrLabel8.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel8.Dpi = 254F;
+            this.xrLabel8.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(2121.6F, 167.4186F);
+            this.xrLabel8.Multiline = true;
+            this.xrLabel8.Name = "xrLabel8";
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(197.1138F, 115.04F);
+            this.xrLabel8.StylePriority.UseBorders = false;
+            this.xrLabel8.StylePriority.UseFont = false;
+            this.xrLabel8.StylePriority.UsePadding = false;
+            // 
+            // xrLabel9
+            // 
+            this.xrLabel9.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel9.Dpi = 254F;
+            this.xrLabel9.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(2318.714F, 167.4185F);
+            this.xrLabel9.Multiline = true;
+            this.xrLabel9.Name = "xrLabel9";
+            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(197.1146F, 115.0409F);
+            this.xrLabel9.StylePriority.UseBorders = false;
+            this.xrLabel9.StylePriority.UseFont = false;
+            this.xrLabel9.StylePriority.UsePadding = false;
+            // 
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -128,186 +258,157 @@ namespace Final.PRM_RPT
             this.PageHeader.HeightF = 142.6622F;
             this.PageHeader.Name = "PageHeader";
             // 
-            // ReportFooter
+            // xrLabel25
             // 
-            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel10,
-            this.xrLabel6});
-            this.ReportFooter.Dpi = 254F;
-            this.ReportFooter.HeightF = 84.66634F;
-            this.ReportFooter.Name = "ReportFooter";
+            this.xrLabel25.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xrLabel25.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel25.Dpi = 254F;
+            this.xrLabel25.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(2425.829F, 70.00001F);
+            this.xrLabel25.Multiline = true;
+            this.xrLabel25.Name = "xrLabel25";
+            this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel25.SizeF = new System.Drawing.SizeF(90F, 70F);
+            this.xrLabel25.StylePriority.UseBackColor = false;
+            this.xrLabel25.StylePriority.UseBorders = false;
+            this.xrLabel25.StylePriority.UseFont = false;
+            this.xrLabel25.StylePriority.UsePadding = false;
+            this.xrLabel25.StylePriority.UseTextAlignment = false;
+            this.xrLabel25.Text = "Val";
+            this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // PageFooter
+            // xrLabel26
             // 
-            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPageInfo1});
-            this.PageFooter.Dpi = 254F;
-            this.PageFooter.HeightF = 92.60384F;
-            this.PageFooter.Name = "PageFooter";
+            this.xrLabel26.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xrLabel26.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel26.Dpi = 254F;
+            this.xrLabel26.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(2335.829F, 70.00001F);
+            this.xrLabel26.Multiline = true;
+            this.xrLabel26.Name = "xrLabel26";
+            this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel26.SizeF = new System.Drawing.SizeF(90F, 70F);
+            this.xrLabel26.StylePriority.UseBackColor = false;
+            this.xrLabel26.StylePriority.UseBorders = false;
+            this.xrLabel26.StylePriority.UseFont = false;
+            this.xrLabel26.StylePriority.UsePadding = false;
+            this.xrLabel26.StylePriority.UseTextAlignment = false;
+            this.xrLabel26.Text = "Time";
+            this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel1
+            // xrLabel21
             // 
-            this.xrLabel1.Dpi = 254F;
-            this.xrLabel1.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLabel1.Multiline = true;
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(1700F, 140.8767F);
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "성 형  작 업 일 지";
-            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel21.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xrLabel21.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel21.Dpi = 254F;
+            this.xrLabel21.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(2245.829F, 70.00001F);
+            this.xrLabel21.Multiline = true;
+            this.xrLabel21.Name = "xrLabel21";
+            this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel21.SizeF = new System.Drawing.SizeF(90F, 70F);
+            this.xrLabel21.StylePriority.UseBackColor = false;
+            this.xrLabel21.StylePriority.UseBorders = false;
+            this.xrLabel21.StylePriority.UseFont = false;
+            this.xrLabel21.StylePriority.UsePadding = false;
+            this.xrLabel21.StylePriority.UseTextAlignment = false;
+            this.xrLabel21.Text = "Val";
+            this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel2
+            // xrLabel22
             // 
-            this.xrLabel2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel2.Dpi = 254F;
-            this.xrLabel2.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(1911.668F, 115.8786F);
-            this.xrLabel2.Multiline = true;
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(59.53113F, 166.58F);
-            this.xrLabel2.StylePriority.UseBorders = false;
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UsePadding = false;
-            this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "결      재";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel22.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xrLabel22.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel22.Dpi = 254F;
+            this.xrLabel22.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(2155.829F, 70.00001F);
+            this.xrLabel22.Multiline = true;
+            this.xrLabel22.Name = "xrLabel22";
+            this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel22.SizeF = new System.Drawing.SizeF(90F, 70F);
+            this.xrLabel22.StylePriority.UseBackColor = false;
+            this.xrLabel22.StylePriority.UseBorders = false;
+            this.xrLabel22.StylePriority.UseFont = false;
+            this.xrLabel22.StylePriority.UsePadding = false;
+            this.xrLabel22.StylePriority.UseTextAlignment = false;
+            this.xrLabel22.Text = "Time";
+            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel3
+            // xrLabel17
             // 
-            this.xrLabel3.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel3.Dpi = 254F;
-            this.xrLabel3.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(1971.199F, 115.8786F);
-            this.xrLabel3.Multiline = true;
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(197.1139F, 51.53999F);
-            this.xrLabel3.StylePriority.UseBorders = false;
-            this.xrLabel3.StylePriority.UseFont = false;
-            this.xrLabel3.StylePriority.UsePadding = false;
-            this.xrLabel3.StylePriority.UseTextAlignment = false;
-            this.xrLabel3.Text = "작    성";
-            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel17.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xrLabel17.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel17.Dpi = 254F;
+            this.xrLabel17.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(2065.829F, 70.00001F);
+            this.xrLabel17.Multiline = true;
+            this.xrLabel17.Name = "xrLabel17";
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(90F, 70F);
+            this.xrLabel17.StylePriority.UseBackColor = false;
+            this.xrLabel17.StylePriority.UseBorders = false;
+            this.xrLabel17.StylePriority.UseFont = false;
+            this.xrLabel17.StylePriority.UsePadding = false;
+            this.xrLabel17.StylePriority.UseTextAlignment = false;
+            this.xrLabel17.Text = "Val";
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel4
+            // xrLabel18
             // 
-            this.xrLabel4.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel4.Dpi = 254F;
-            this.xrLabel4.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(2168.313F, 115.8786F);
-            this.xrLabel4.Multiline = true;
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(197.1138F, 51.53999F);
-            this.xrLabel4.StylePriority.UseBorders = false;
-            this.xrLabel4.StylePriority.UseFont = false;
-            this.xrLabel4.StylePriority.UsePadding = false;
-            this.xrLabel4.StylePriority.UseTextAlignment = false;
-            this.xrLabel4.Text = "검   토";
-            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel18.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xrLabel18.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel18.Dpi = 254F;
+            this.xrLabel18.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(1975.829F, 70.00001F);
+            this.xrLabel18.Multiline = true;
+            this.xrLabel18.Name = "xrLabel18";
+            this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel18.SizeF = new System.Drawing.SizeF(90F, 70F);
+            this.xrLabel18.StylePriority.UseBackColor = false;
+            this.xrLabel18.StylePriority.UseBorders = false;
+            this.xrLabel18.StylePriority.UseFont = false;
+            this.xrLabel18.StylePriority.UsePadding = false;
+            this.xrLabel18.StylePriority.UseTextAlignment = false;
+            this.xrLabel18.Text = "Time";
+            this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel5
+            // xrLabel13
             // 
-            this.xrLabel5.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel5.Dpi = 254F;
-            this.xrLabel5.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(2365.427F, 115.8776F);
-            this.xrLabel5.Multiline = true;
-            this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(197.1146F, 51.54088F);
-            this.xrLabel5.StylePriority.UseBorders = false;
-            this.xrLabel5.StylePriority.UseFont = false;
-            this.xrLabel5.StylePriority.UsePadding = false;
-            this.xrLabel5.StylePriority.UseTextAlignment = false;
-            this.xrLabel5.Text = "승  인";
-            this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xrLabel13.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel13.Dpi = 254F;
+            this.xrLabel13.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(1885.829F, 70.00001F);
+            this.xrLabel13.Multiline = true;
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(90F, 70F);
+            this.xrLabel13.StylePriority.UseBackColor = false;
+            this.xrLabel13.StylePriority.UseBorders = false;
+            this.xrLabel13.StylePriority.UseFont = false;
+            this.xrLabel13.StylePriority.UsePadding = false;
+            this.xrLabel13.StylePriority.UseTextAlignment = false;
+            this.xrLabel13.Text = "Val";
+            this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel7
+            // xrLabel15
             // 
-            this.xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrLabel7.Dpi = 254F;
-            this.xrLabel7.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(1971.199F, 167.4196F);
-            this.xrLabel7.Multiline = true;
-            this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel7.SizeF = new System.Drawing.SizeF(197.1139F, 115.04F);
-            this.xrLabel7.StylePriority.UseBorders = false;
-            this.xrLabel7.StylePriority.UseFont = false;
-            this.xrLabel7.StylePriority.UsePadding = false;
-            // 
-            // xrLabel8
-            // 
-            this.xrLabel8.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel8.Dpi = 254F;
-            this.xrLabel8.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(2168.313F, 167.4186F);
-            this.xrLabel8.Multiline = true;
-            this.xrLabel8.Name = "xrLabel8";
-            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel8.SizeF = new System.Drawing.SizeF(197.1138F, 115.04F);
-            this.xrLabel8.StylePriority.UseBorders = false;
-            this.xrLabel8.StylePriority.UseFont = false;
-            this.xrLabel8.StylePriority.UsePadding = false;
-            // 
-            // xrLabel9
-            // 
-            this.xrLabel9.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel9.Dpi = 254F;
-            this.xrLabel9.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(2365.427F, 167.4185F);
-            this.xrLabel9.Multiline = true;
-            this.xrLabel9.Name = "xrLabel9";
-            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(197.1146F, 115.0409F);
-            this.xrLabel9.StylePriority.UseBorders = false;
-            this.xrLabel9.StylePriority.UseFont = false;
-            this.xrLabel9.StylePriority.UsePadding = false;
-            // 
-            // xrLabel10
-            // 
-            this.xrLabel10.Dpi = 254F;
-            this.xrLabel10.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(2311.266F, 11.19896F);
-            this.xrLabel10.Multiline = true;
-            this.xrLabel10.Name = "xrLabel10";
-            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(204.5625F, 58.42F);
-            this.xrLabel10.StylePriority.UseFont = false;
-            this.xrLabel10.Text = "성형작업일지";
-            // 
-            // xrLabel6
-            // 
-            this.xrLabel6.Dpi = 254F;
-            this.xrLabel6.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(10.94498F, 11.19903F);
-            this.xrLabel6.Multiline = true;
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(201.555F, 58.42F);
-            this.xrLabel6.StylePriority.UseFont = false;
-            this.xrLabel6.Text = "구디아카데미";
-            // 
-            // xrPageInfo1
-            // 
-            this.xrPageInfo1.Dpi = 254F;
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(0.8428249F, 31.93941F);
-            this.xrPageInfo1.Name = "xrPageInfo1";
-            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(2569.157F, 58.42F);
-            this.xrPageInfo1.StylePriority.UseTextAlignment = false;
-            this.xrPageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel15.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xrLabel15.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel15.Dpi = 254F;
+            this.xrLabel15.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(1795.829F, 70.00001F);
+            this.xrLabel15.Multiline = true;
+            this.xrLabel15.Name = "xrLabel15";
+            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(90F, 70F);
+            this.xrLabel15.StylePriority.UseBackColor = false;
+            this.xrLabel15.StylePriority.UseBorders = false;
+            this.xrLabel15.StylePriority.UseFont = false;
+            this.xrLabel15.StylePriority.UsePadding = false;
+            this.xrLabel15.StylePriority.UseTextAlignment = false;
+            this.xrLabel15.Text = "Time";
+            this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrTable2
             // 
@@ -552,157 +653,56 @@ namespace Final.PRM_RPT
             this.xrLabel24.Text = "Val";
             this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel13
+            // ReportFooter
             // 
-            this.xrLabel13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xrLabel13.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel13.Dpi = 254F;
-            this.xrLabel13.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(1885.829F, 70.00001F);
-            this.xrLabel13.Multiline = true;
-            this.xrLabel13.Name = "xrLabel13";
-            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(90F, 70F);
-            this.xrLabel13.StylePriority.UseBackColor = false;
-            this.xrLabel13.StylePriority.UseBorders = false;
-            this.xrLabel13.StylePriority.UseFont = false;
-            this.xrLabel13.StylePriority.UsePadding = false;
-            this.xrLabel13.StylePriority.UseTextAlignment = false;
-            this.xrLabel13.Text = "Val";
-            this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel10,
+            this.xrLabel6});
+            this.ReportFooter.Dpi = 254F;
+            this.ReportFooter.HeightF = 84.66634F;
+            this.ReportFooter.Name = "ReportFooter";
             // 
-            // xrLabel15
+            // xrLabel10
             // 
-            this.xrLabel15.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xrLabel15.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel15.Dpi = 254F;
-            this.xrLabel15.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(1795.829F, 70.00001F);
-            this.xrLabel15.Multiline = true;
-            this.xrLabel15.Name = "xrLabel15";
-            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(90F, 70F);
-            this.xrLabel15.StylePriority.UseBackColor = false;
-            this.xrLabel15.StylePriority.UseBorders = false;
-            this.xrLabel15.StylePriority.UseFont = false;
-            this.xrLabel15.StylePriority.UsePadding = false;
-            this.xrLabel15.StylePriority.UseTextAlignment = false;
-            this.xrLabel15.Text = "Time";
-            this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel10.Dpi = 254F;
+            this.xrLabel10.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(2311.266F, 11.19896F);
+            this.xrLabel10.Multiline = true;
+            this.xrLabel10.Name = "xrLabel10";
+            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(204.5625F, 58.42F);
+            this.xrLabel10.StylePriority.UseFont = false;
+            this.xrLabel10.Text = "성형작업일지";
             // 
-            // xrLabel17
+            // xrLabel6
             // 
-            this.xrLabel17.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xrLabel17.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel17.Dpi = 254F;
-            this.xrLabel17.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(2065.829F, 70.00001F);
-            this.xrLabel17.Multiline = true;
-            this.xrLabel17.Name = "xrLabel17";
-            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel17.SizeF = new System.Drawing.SizeF(90F, 70F);
-            this.xrLabel17.StylePriority.UseBackColor = false;
-            this.xrLabel17.StylePriority.UseBorders = false;
-            this.xrLabel17.StylePriority.UseFont = false;
-            this.xrLabel17.StylePriority.UsePadding = false;
-            this.xrLabel17.StylePriority.UseTextAlignment = false;
-            this.xrLabel17.Text = "Val";
-            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel6.Dpi = 254F;
+            this.xrLabel6.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(10.94498F, 11.19903F);
+            this.xrLabel6.Multiline = true;
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(201.555F, 58.42F);
+            this.xrLabel6.StylePriority.UseFont = false;
+            this.xrLabel6.Text = "구디아카데미";
             // 
-            // xrLabel18
+            // PageFooter
             // 
-            this.xrLabel18.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xrLabel18.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel18.Dpi = 254F;
-            this.xrLabel18.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(1975.829F, 70.00001F);
-            this.xrLabel18.Multiline = true;
-            this.xrLabel18.Name = "xrLabel18";
-            this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel18.SizeF = new System.Drawing.SizeF(90F, 70F);
-            this.xrLabel18.StylePriority.UseBackColor = false;
-            this.xrLabel18.StylePriority.UseBorders = false;
-            this.xrLabel18.StylePriority.UseFont = false;
-            this.xrLabel18.StylePriority.UsePadding = false;
-            this.xrLabel18.StylePriority.UseTextAlignment = false;
-            this.xrLabel18.Text = "Time";
-            this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPageInfo1});
+            this.PageFooter.Dpi = 254F;
+            this.PageFooter.HeightF = 92.60384F;
+            this.PageFooter.Name = "PageFooter";
             // 
-            // xrLabel21
+            // xrPageInfo1
             // 
-            this.xrLabel21.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xrLabel21.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel21.Dpi = 254F;
-            this.xrLabel21.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(2245.829F, 70.00001F);
-            this.xrLabel21.Multiline = true;
-            this.xrLabel21.Name = "xrLabel21";
-            this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel21.SizeF = new System.Drawing.SizeF(90F, 70F);
-            this.xrLabel21.StylePriority.UseBackColor = false;
-            this.xrLabel21.StylePriority.UseBorders = false;
-            this.xrLabel21.StylePriority.UseFont = false;
-            this.xrLabel21.StylePriority.UsePadding = false;
-            this.xrLabel21.StylePriority.UseTextAlignment = false;
-            this.xrLabel21.Text = "Val";
-            this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel22
-            // 
-            this.xrLabel22.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xrLabel22.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel22.Dpi = 254F;
-            this.xrLabel22.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(2155.829F, 70.00001F);
-            this.xrLabel22.Multiline = true;
-            this.xrLabel22.Name = "xrLabel22";
-            this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel22.SizeF = new System.Drawing.SizeF(90F, 70F);
-            this.xrLabel22.StylePriority.UseBackColor = false;
-            this.xrLabel22.StylePriority.UseBorders = false;
-            this.xrLabel22.StylePriority.UseFont = false;
-            this.xrLabel22.StylePriority.UsePadding = false;
-            this.xrLabel22.StylePriority.UseTextAlignment = false;
-            this.xrLabel22.Text = "Time";
-            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel25
-            // 
-            this.xrLabel25.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xrLabel25.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel25.Dpi = 254F;
-            this.xrLabel25.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(2425.829F, 70.00001F);
-            this.xrLabel25.Multiline = true;
-            this.xrLabel25.Name = "xrLabel25";
-            this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel25.SizeF = new System.Drawing.SizeF(90F, 70F);
-            this.xrLabel25.StylePriority.UseBackColor = false;
-            this.xrLabel25.StylePriority.UseBorders = false;
-            this.xrLabel25.StylePriority.UseFont = false;
-            this.xrLabel25.StylePriority.UsePadding = false;
-            this.xrLabel25.StylePriority.UseTextAlignment = false;
-            this.xrLabel25.Text = "Val";
-            this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel26
-            // 
-            this.xrLabel26.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xrLabel26.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel26.Dpi = 254F;
-            this.xrLabel26.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(2335.829F, 70.00001F);
-            this.xrLabel26.Multiline = true;
-            this.xrLabel26.Name = "xrLabel26";
-            this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel26.SizeF = new System.Drawing.SizeF(90F, 70F);
-            this.xrLabel26.StylePriority.UseBackColor = false;
-            this.xrLabel26.StylePriority.UseBorders = false;
-            this.xrLabel26.StylePriority.UseFont = false;
-            this.xrLabel26.StylePriority.UsePadding = false;
-            this.xrLabel26.StylePriority.UseTextAlignment = false;
-            this.xrLabel26.Text = "Time";
-            this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrPageInfo1.Dpi = 254F;
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(0.8428249F, 31.93941F);
+            this.xrPageInfo1.Name = "xrPageInfo1";
+            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(2569.157F, 58.42F);
+            this.xrPageInfo1.StylePriority.UseTextAlignment = false;
+            this.xrPageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // XtraReport5
             // 
