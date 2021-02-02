@@ -117,9 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>                                        품목코드 / 품목명 / 품목유형 / 사양 / 캐비티수 / 안전재고 생산량 / 리드타임 / LotSize / 사용여부 /
-               Level 1 / Level 2 / Level 3 / Level 4 / Level 5 / Level 6 / 시간당 생산수 / 배치당 생산수 / 성형줄당 PCS수 / 포장Shot당 PCS수 / 건조대차 기본 수량 / 소성대차 기본 수량 
-                                        비고 </value>
-  </data>
 </root>
