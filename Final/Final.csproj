@@ -335,6 +335,31 @@
     <Compile Include="PPS_SCH\frm_PPS_SCH_44.Designer.cs">
       <DependentUpon>frm_PPS_SCH_44.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_001.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_009.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_009.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_009.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_010.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\PRM_PRF_Service.cs" />
     <Compile Include="PRM_RPT\frm_PRM_RPT_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,6 +448,7 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util\AutoClosingMessageBox.cs" />
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_001.cs">
       <SubType>Form</SubType>
@@ -436,11 +462,11 @@
     <Compile Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_002.Designer.cs">
       <DependentUpon>frm_MSS_CON_002.cs</DependentUpon>
     </Compile>
-    <Compile Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_002_1.cs">
+    <Compile Include="YeomGyeongJin\MSS_CON\MSS_CON_002_1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_002_1.Designer.cs">
-      <DependentUpon>frm_MSS_CON_002_1.cs</DependentUpon>
+    <Compile Include="YeomGyeongJin\MSS_CON\MSS_CON_002_1.Designer.cs">
+      <DependentUpon>MSS_CON_002_1.cs</DependentUpon>
     </Compile>
     <Compile Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_003.cs">
       <SubType>Form</SubType>
@@ -448,11 +474,11 @@
     <Compile Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_003.Designer.cs">
       <DependentUpon>frm_MSS_CON_003.cs</DependentUpon>
     </Compile>
-    <Compile Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_003_1.cs">
+    <Compile Include="YeomGyeongJin\MSS_CON\MSS_CON_003_1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_003_1.Designer.cs">
-      <DependentUpon>frm_MSS_CON_003_1.cs</DependentUpon>
+    <Compile Include="YeomGyeongJin\MSS_CON\MSS_CON_003_1.Designer.cs">
+      <DependentUpon>MSS_CON_003_1.cs</DependentUpon>
     </Compile>
     <Compile Include="YeomGyeongJin\MSS_CON\MSS_CON_001.cs">
       <SubType>Form</SubType>
@@ -460,6 +486,19 @@
     <Compile Include="YeomGyeongJin\MSS_CON\MSS_CON_001.Designer.cs">
       <DependentUpon>MSS_CON_001.cs</DependentUpon>
     </Compile>
+    <Compile Include="YeomGyeongJin\MSS_CON\MSS_CON_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_CON\MSS_CON_002.Designer.cs">
+      <DependentUpon>MSS_CON_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_CON\MSS_CON_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_CON\MSS_CON_003.Designer.cs">
+      <DependentUpon>MSS_CON_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_CON\UserGroupService.cs" />
     <Compile Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,11 +517,11 @@
     <Compile Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_003.Designer.cs">
       <DependentUpon>frm_MSS_SYS_003.cs</DependentUpon>
     </Compile>
-    <Compile Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_003_1.cs">
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_003_1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_003_1.Designer.cs">
-      <DependentUpon>frm_MSS_SYS_003_1.cs</DependentUpon>
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_003_1.Designer.cs">
+      <DependentUpon>MSS_SYS_003_1.cs</DependentUpon>
     </Compile>
     <Compile Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_004.cs">
       <SubType>Form</SubType>
@@ -490,17 +529,41 @@
     <Compile Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_004.Designer.cs">
       <DependentUpon>frm_MSS_SYS_004.cs</DependentUpon>
     </Compile>
-    <Compile Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_004_1.cs">
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_004_1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_004_1.Designer.cs">
-      <DependentUpon>frm_MSS_SYS_004_1.cs</DependentUpon>
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_004_1.Designer.cs">
+      <DependentUpon>MSS_SYS_004_1.cs</DependentUpon>
     </Compile>
-    <Compile Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_004_2.cs">
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_004_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_004_2.Designer.cs">
-      <DependentUpon>frm_MSS_SYS_004_2.cs</DependentUpon>
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_004_2.Designer.cs">
+      <DependentUpon>MSS_SYS_004_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_001.Designer.cs">
+      <DependentUpon>MSS_SYS_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_002.Designer.cs">
+      <DependentUpon>MSS_SYS_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_003.Designer.cs">
+      <DependentUpon>MSS_SYS_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_004.Designer.cs">
+      <DependentUpon>MSS_SYS_004.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_1.resx">
       <DependentUpon>frm_KPI_RPT_1.cs</DependentUpon>
@@ -631,6 +694,18 @@
     <EmbeddedResource Include="PPS_SCH\frm_PPS_SCH_44.resx">
       <DependentUpon>frm_PPS_SCH_44.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_001.resx">
+      <DependentUpon>frm_PRM_PRF_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_009.resx">
+      <DependentUpon>frm_PRM_PRF_009.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_010.resx">
+      <DependentUpon>frm_PRM_PRF_010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.resx">
+      <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_001.resx">
       <DependentUpon>frm_PRM_RPT_001.cs</DependentUpon>
     </EmbeddedResource>
@@ -690,17 +765,23 @@
     <EmbeddedResource Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_002.resx">
       <DependentUpon>frm_MSS_CON_002.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_002_1.resx">
-      <DependentUpon>frm_MSS_CON_002_1.cs</DependentUpon>
+    <EmbeddedResource Include="YeomGyeongJin\MSS_CON\MSS_CON_002_1.resx">
+      <DependentUpon>MSS_CON_002_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_003.resx">
       <DependentUpon>frm_MSS_CON_003.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="YeomGyeongJin\MSS_CON\frm_MSS_CON_003_1.resx">
-      <DependentUpon>frm_MSS_CON_003_1.cs</DependentUpon>
+    <EmbeddedResource Include="YeomGyeongJin\MSS_CON\MSS_CON_003_1.resx">
+      <DependentUpon>MSS_CON_003_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YeomGyeongJin\MSS_CON\MSS_CON_001.resx">
       <DependentUpon>MSS_CON_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeomGyeongJin\MSS_CON\MSS_CON_002.resx">
+      <DependentUpon>MSS_CON_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeomGyeongJin\MSS_CON\MSS_CON_003.resx">
+      <DependentUpon>MSS_CON_003.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_001.resx">
       <DependentUpon>frm_MSS_SYS_001.cs</DependentUpon>
@@ -711,17 +792,29 @@
     <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_003.resx">
       <DependentUpon>frm_MSS_SYS_003.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_003_1.resx">
-      <DependentUpon>frm_MSS_SYS_003_1.cs</DependentUpon>
+    <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\MSS_SYS_003_1.resx">
+      <DependentUpon>MSS_SYS_003_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_004.resx">
       <DependentUpon>frm_MSS_SYS_004.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_004_1.resx">
-      <DependentUpon>frm_MSS_SYS_004_1.cs</DependentUpon>
+    <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\MSS_SYS_004_1.resx">
+      <DependentUpon>MSS_SYS_004_1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\frm_MSS_SYS_004_2.resx">
-      <DependentUpon>frm_MSS_SYS_004_2.cs</DependentUpon>
+    <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\MSS_SYS_004_2.resx">
+      <DependentUpon>MSS_SYS_004_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\MSS_SYS_001.resx">
+      <DependentUpon>MSS_SYS_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\MSS_SYS_002.resx">
+      <DependentUpon>MSS_SYS_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\MSS_SYS_003.resx">
+      <DependentUpon>MSS_SYS_003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeomGyeongJin\MSS_SYS\MSS_SYS_004.resx">
+      <DependentUpon>MSS_SYS_004.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

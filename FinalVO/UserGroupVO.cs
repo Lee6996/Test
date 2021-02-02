@@ -10,16 +10,16 @@ namespace FinalVO
     /// UserGroup VO
     /// 2021_01_26 염경진
     /// </summary>
-    public class UserGroup
+    public class UserGroupVO
     {
         //사용자 그룹 코드
         public string UserGroup_Code { get; set; }
         //사용자 그룹명
         public string UserGroup_Name { get; set; }
         //관리자권한 여부
-        public char Admin { get; set; }
+        public string Admin { get; set; }
         //사용여부
-        public char Use_YN { get; set; }
+        public string Use_YN { get; set; }
         //최초입력일자
         public string Ins_Date { get; set; }
         //최초입력자

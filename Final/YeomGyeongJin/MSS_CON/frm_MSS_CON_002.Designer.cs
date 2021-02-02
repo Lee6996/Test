@@ -37,21 +37,21 @@ namespace Final
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.Monitoring_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monitoring_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Admin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monitoring_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monitoring_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -141,19 +141,51 @@ namespace Final
             this.panel5.Size = new System.Drawing.Size(1357, 704);
             this.panel5.TabIndex = 14;
             // 
-            // dataGridView2
+            // label7
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Monitoring_Code,
-            this.Monitoring_Name,
-            this.Admin});
-            this.dataGridView2.Location = new System.Drawing.Point(652, 51);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(695, 645);
-            this.dataGridView2.TabIndex = 23;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label7.Location = new System.Drawing.Point(12, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(150, 16);
+            this.label7.TabIndex = 20;
+            this.label7.Tag = "사용자 그룹관리";
+            this.label7.Text = "▶사용자 그룹목록";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label4.Location = new System.Drawing.Point(649, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 16);
+            this.label4.TabIndex = 21;
+            this.label4.Tag = "사용자 그룹관리";
+            this.label4.Text = "▶화면권한 허용";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "사용여부";
+            this.Column4.Name = "Column4";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "입력날짜";
+            this.Column3.Name = "Column3";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "사용자그룹코드";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "사용자그룹명";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
             // 
             // dataGridView1
             // 
@@ -170,57 +202,11 @@ namespace Final
             this.dataGridView1.Size = new System.Drawing.Size(620, 645);
             this.dataGridView1.TabIndex = 22;
             // 
-            // Column1
+            // Admin
             // 
-            this.Column1.HeaderText = "사용자그룹명";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "사용자그룹코드";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "입력날짜";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "사용여부";
-            this.Column4.Name = "Column4";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label4.Location = new System.Drawing.Point(649, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 16);
-            this.label4.TabIndex = 21;
-            this.label4.Tag = "사용자 그룹관리";
-            this.label4.Text = "▶화면권한 허용";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label7.Location = new System.Drawing.Point(12, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 16);
-            this.label7.TabIndex = 20;
-            this.label7.Tag = "사용자 그룹관리";
-            this.label7.Text = "▶사용자 그룹목록";
-            // 
-            // Monitoring_Code
-            // 
-            this.Monitoring_Code.HeaderText = "화면코드";
-            this.Monitoring_Code.Name = "Monitoring_Code";
-            this.Monitoring_Code.Width = 240;
+            this.Admin.HeaderText = "설정자";
+            this.Admin.Name = "Admin";
+            this.Admin.Width = 200;
             // 
             // Monitoring_Name
             // 
@@ -228,17 +214,33 @@ namespace Final
             this.Monitoring_Name.Name = "Monitoring_Name";
             this.Monitoring_Name.Width = 240;
             // 
-            // Admin
+            // Monitoring_Code
             // 
-            this.Admin.HeaderText = "설정자";
-            this.Admin.Name = "Admin";
-            this.Admin.Width = 200;
+            this.Monitoring_Code.HeaderText = "화면코드";
+            this.Monitoring_Code.Name = "Monitoring_Code";
+            this.Monitoring_Code.Width = 240;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Monitoring_Code,
+            this.Monitoring_Name,
+            this.Admin});
+            this.dataGridView2.Location = new System.Drawing.Point(652, 51);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(695, 645);
+            this.dataGridView2.TabIndex = 23;
             // 
             // frm_MSS_CON_002
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1582, 904);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frm_MSS_CON_002";
             this.Tag = "사용자 그룹별 권한설정";
             this.Controls.SetChildIndex(this.panel4, 0);
@@ -247,8 +249,8 @@ namespace Final
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,16 +265,16 @@ namespace Final
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monitoring_Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monitoring_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Admin;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monitoring_Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monitoring_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Admin;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
     }
 }
