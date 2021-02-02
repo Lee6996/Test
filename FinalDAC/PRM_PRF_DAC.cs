@@ -23,28 +23,20 @@ namespace FinalDAC
         }
         #endregion
 
+        #region
+        #endregion
+
         #region 001
-        public List<WorkOrderVO> Select_001()
-        {
-            string sql = "select * from View_WorkOrder";
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<WorkOrderVO> list = Helper.DataReaderMapToList<WorkOrderVO>(reader);
 
-                conn.Close();
-                return list;
-            }
-        }
-
-        public bool Update_001(WorkOrderVO vo)
+        public bool Update_001(WorkOrderVO vo, UserVO user)
         {
-            string sql = "update WorkOrder set Prd_Qty = @Prd_Qty where Workorderno = @Workorderno";
+            string sql = "update WorkOrder set Prd_Qty = @Prd_Qty, Up_Date = NOW(), Up_Emp = @Up_Emp where Workorderno = @Workorderno";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@Workorderno", vo.Workorderno);
                 cmd.Parameters.AddWithValue("@Prd_Qty", vo.Prd_Qty);
+                cmd.Parameters.AddWithValue("@Up_Emp", user.User_ID); 
 
                 int iResult = cmd.ExecuteNonQuery();
                 Debug.WriteLine(iResult.ToString());
@@ -106,19 +98,6 @@ namespace FinalDAC
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
                 return dt;
-            }
-        }
-
-        public List<AttendanceManagementVO> Select_010_2()
-        {
-            string sql = "select * from View_AttendanceManagement";
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<AttendanceManagementVO> list = Helper.DataReaderMapToList<AttendanceManagementVO>(reader);
-
-                conn.Close();
-                return list;
             }
         }
         #endregion

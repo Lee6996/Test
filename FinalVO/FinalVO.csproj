@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="AttendanceManagementVO.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="GoodsInHistoryVO.cs" />
     <Compile Include="UserGroupVO.cs" />
     <Compile Include="UserVO.cs" />
     <Compile Include="WorkHistoryVO.cs" />

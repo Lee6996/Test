@@ -158,8 +158,8 @@ namespace Final.PRM_PRF
             // 
             // dgvPRM_PRF_010_1
             // 
-            this.dgvPRM_PRF_010_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvPRM_PRF_010_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPRM_PRF_010_1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF_010_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -224,8 +224,8 @@ namespace Final.PRM_PRF
             // 
             // dgvPRM_PRF_010_2
             // 
-            this.dgvPRM_PRF_010_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvPRM_PRF_010_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPRM_PRF_010_2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF_010_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

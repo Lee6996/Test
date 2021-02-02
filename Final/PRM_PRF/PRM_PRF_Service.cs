@@ -11,12 +11,12 @@ namespace Final.PRM_PRF
         #region 001
         public List<WorkOrderVO> GetWorkOrderVOList()
         {
-            return new PRM_PRF_DAC().Select_001();
+            return new SelectDAC().SelectWorkOrder();
         }
 
-        public bool Correction(WorkOrderVO vo)
+        public bool Correction(WorkOrderVO vo, UserVO user)
         {
-           return new PRM_PRF_DAC().Update_001(vo);
+           return new PRM_PRF_DAC().Update_001(vo, user);
         }
         #endregion
 
@@ -45,7 +45,7 @@ namespace Final.PRM_PRF
         #region 009
         public List<WorkHistoryVO> GetWorkHistoryVOList()
         {
-           return new PRM_PRF_DAC().Select_009();
+            return new SelectDAC().SelectWorkHistory();
         }
 
         public void BindDGV_010_1(DataGridView dgv, string Start_Date, string End_Date)
@@ -55,7 +55,7 @@ namespace Final.PRM_PRF
 
         public List<AttendanceManagementVO> GetAttendanceManagementVOList()
         {
-            return new PRM_PRF_DAC().Select_010_2();
+            return new SelectDAC().SelectAttendanceManagement();
         }
         #endregion
     }
