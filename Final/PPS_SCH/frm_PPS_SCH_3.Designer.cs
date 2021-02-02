@@ -59,10 +59,10 @@ namespace Final.PPS_SCH
             this.panel4.Controls.SetChildIndex(this.label4, 0);
             this.panel4.Controls.SetChildIndex(this.textBox1, 0);
             this.panel4.Controls.SetChildIndex(this.button22, 0);
-            this.panel4.Controls.SetChildIndex(this.button23, 0);
+            this.panel4.Controls.SetChildIndex(this.btn_Process, 0);
             this.panel4.Controls.SetChildIndex(this.label16, 0);
             this.panel4.Controls.SetChildIndex(this.textBox6, 0);
-            this.panel4.Controls.SetChildIndex(this.button24, 0);
+            this.panel4.Controls.SetChildIndex(this.btn_WorkCenter, 0);
             this.panel4.Controls.SetChildIndex(this.label17, 0);
             this.panel4.Controls.SetChildIndex(this.comboBox1, 0);
             // 

@@ -21,11 +21,11 @@ namespace FinalVO
         //사용여부
         public char Use_YN { get; set; }
         //최초입력일자
-        public DateTime Ins_Date { get; set; }
+        public string Ins_Date { get; set; }
         //최초입력자
         public string Ins_Emp { get; set; }
         //최종수정 일자
-        public DateTime Up_Date { get; set; }
+        public string Up_Date { get; set; }
         //최종수정자
         public string Up_Emp { get; set; }
     }

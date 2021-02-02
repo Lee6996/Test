@@ -49,7 +49,7 @@ namespace Final.PRM_RPT
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(1198, 21);
+            this.btn_WorkCenter.Location = new System.Drawing.Point(1198, 21);
             // 
             // textBox6
             // 
@@ -63,8 +63,8 @@ namespace Final.PRM_RPT
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(604, 24);
-            this.button23.Visible = false;
+            this.btn_Process.Location = new System.Drawing.Point(604, 24);
+            this.btn_Process.Visible = false;
             // 
             // button22
             // 

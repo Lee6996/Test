@@ -30,9 +30,9 @@ namespace Final
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_WorkCenter = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkCenter)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -45,15 +45,15 @@ namespace Final
             this.label2.TabIndex = 5;
             this.label2.Text = "작업장코드 - 작업장이름";
             // 
-            // dataGridView1
+            // dgv_WorkCenter
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 45);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(479, 304);
-            this.dataGridView1.TabIndex = 4;
+            this.dgv_WorkCenter.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dgv_WorkCenter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_WorkCenter.Location = new System.Drawing.Point(12, 45);
+            this.dgv_WorkCenter.Name = "dgv_WorkCenter";
+            this.dgv_WorkCenter.RowTemplate.Height = 23;
+            this.dgv_WorkCenter.Size = new System.Drawing.Size(479, 304);
+            this.dgv_WorkCenter.TabIndex = 4;
             // 
             // label1
             // 
@@ -72,11 +72,12 @@ namespace Final
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(503, 362);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_WorkCenter);
             this.Controls.Add(this.label1);
             this.Name = "frm_KPI_RPT_2";
             this.Text = "작업장찾기";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frm_KPI_RPT_2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkCenter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -85,7 +86,7 @@ namespace Final
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_WorkCenter;
         private System.Windows.Forms.Label label1;
     }
 }

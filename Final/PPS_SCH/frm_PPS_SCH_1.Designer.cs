@@ -68,17 +68,17 @@ namespace Final.PPS_SCH
             this.panel4.Controls.SetChildIndex(this.textBox1, 0);
             this.panel4.Controls.SetChildIndex(this.button22, 0);
             this.panel4.Controls.SetChildIndex(this.button20, 0);
-            this.panel4.Controls.SetChildIndex(this.button23, 0);
+            this.panel4.Controls.SetChildIndex(this.btn_Process, 0);
             this.panel4.Controls.SetChildIndex(this.label16, 0);
             this.panel4.Controls.SetChildIndex(this.button21, 0);
             this.panel4.Controls.SetChildIndex(this.textBox6, 0);
-            this.panel4.Controls.SetChildIndex(this.button24, 0);
+            this.panel4.Controls.SetChildIndex(this.btn_WorkCenter, 0);
             this.panel4.Controls.SetChildIndex(this.button1, 0);
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(725, 26);
-            this.button24.Visible = false;
+            this.btn_WorkCenter.Location = new System.Drawing.Point(725, 26);
+            this.btn_WorkCenter.Visible = false;
             // 
             // textBox6
             // 
@@ -92,8 +92,8 @@ namespace Final.PPS_SCH
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(919, 29);
-            this.button23.Visible = false;
+            this.btn_Process.Location = new System.Drawing.Point(919, 29);
+            this.btn_Process.Visible = false;
             // 
             // label3
             // 

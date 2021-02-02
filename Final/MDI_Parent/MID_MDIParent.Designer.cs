@@ -34,10 +34,10 @@ namespace Final.KPI_RPT
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button24 = new System.Windows.Forms.Button();
+            this.btn_WorkCenter = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.button23 = new System.Windows.Forms.Button();
+            this.btn_Process = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -69,10 +69,10 @@ namespace Final.KPI_RPT
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.button24);
+            this.panel4.Controls.Add(this.btn_WorkCenter);
             this.panel4.Controls.Add(this.textBox6);
             this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.button23);
+            this.panel4.Controls.Add(this.btn_Process);
             this.panel4.Controls.Add(this.button22);
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.label4);
@@ -86,16 +86,16 @@ namespace Final.KPI_RPT
             this.panel4.Size = new System.Drawing.Size(1266, 67);
             this.panel4.TabIndex = 14;
             // 
-            // button24
+            // btn_WorkCenter
             // 
-            this.button24.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button24.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button24.Location = new System.Drawing.Point(719, 22);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(44, 23);
-            this.button24.TabIndex = 12;
-            this.button24.Text = "검색";
-            this.button24.UseVisualStyleBackColor = false;
+            this.btn_WorkCenter.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_WorkCenter.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_WorkCenter.Location = new System.Drawing.Point(719, 22);
+            this.btn_WorkCenter.Name = "btn_WorkCenter";
+            this.btn_WorkCenter.Size = new System.Drawing.Size(44, 23);
+            this.btn_WorkCenter.TabIndex = 12;
+            this.btn_WorkCenter.Text = "검색";
+            this.btn_WorkCenter.UseVisualStyleBackColor = false;
             // 
             // textBox6
             // 
@@ -115,16 +115,16 @@ namespace Final.KPI_RPT
             this.label16.TabIndex = 10;
             this.label16.Text = "작업장";
             // 
-            // button23
+            // btn_Process
             // 
-            this.button23.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button23.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button23.Location = new System.Drawing.Point(478, 23);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(44, 23);
-            this.button23.TabIndex = 9;
-            this.button23.Text = "검색";
-            this.button23.UseVisualStyleBackColor = false;
+            this.btn_Process.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Process.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_Process.Location = new System.Drawing.Point(478, 23);
+            this.btn_Process.Name = "btn_Process";
+            this.btn_Process.Size = new System.Drawing.Size(44, 23);
+            this.btn_Process.TabIndex = 9;
+            this.btn_Process.Text = "검색";
+            this.btn_Process.UseVisualStyleBackColor = false;
             // 
             // button22
             // 
@@ -218,10 +218,10 @@ namespace Final.KPI_RPT
         private System.Windows.Forms.ToolTip toolTip;
         public System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Button button24;
+        public System.Windows.Forms.Button btn_WorkCenter;
         public System.Windows.Forms.TextBox textBox6;
         public System.Windows.Forms.Label label16;
-        public System.Windows.Forms.Button button23;
+        public System.Windows.Forms.Button btn_Process;
         public System.Windows.Forms.Button button22;
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Label label4;
