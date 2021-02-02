@@ -68,11 +68,10 @@ namespace Final.PRM_PRF
             this.label2.Size = new System.Drawing.Size(68, 18);
             this.label2.Text = "생산일자";
             // 
-            // button24
+            // btn_WorkCenter
             // 
-            this.button24.Location = new System.Drawing.Point(1149, 27);
-            this.button24.Size = new System.Drawing.Size(100, 23);
-            this.button24.Text = "팔렛트 마감";
+            this.btn_WorkCenter.Location = new System.Drawing.Point(765, -30);
+            this.btn_WorkCenter.Visible = false;
             // 
             // textBox6
             // 
@@ -84,11 +83,10 @@ namespace Final.PRM_PRF
             this.label16.Location = new System.Drawing.Point(654, -24);
             this.label16.Visible = false;
             // 
-            // button23
+            // btn_Process
             // 
-            this.button23.Location = new System.Drawing.Point(1043, 27);
-            this.button23.Size = new System.Drawing.Size(100, 23);
-            this.button23.Text = "작업 지시 마감";
+            this.btn_Process.Location = new System.Drawing.Point(524, -29);
+            this.btn_Process.Visible = false;
             // 
             // button22
             // 
@@ -315,7 +313,9 @@ namespace Final.PRM_PRF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1266, 828);
+            this.Controls.Add(this.btn_WorkCenter);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btn_Process);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label3);
@@ -328,7 +328,9 @@ namespace Final.PRM_PRF
             this.Controls.SetChildIndex(this.label16, 0);
             this.Controls.SetChildIndex(this.textBox6, 0);
             this.Controls.SetChildIndex(this.panel4, 0);
+            this.Controls.SetChildIndex(this.btn_Process, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.btn_WorkCenter, 0);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel8.ResumeLayout(false);

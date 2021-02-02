@@ -35,5 +35,7 @@ namespace FinalVO
         // 최종수정일자
         public string Up_Emp { get; set; }
         // 최종수정자
+        public string User_Name { get; set; }
+        public string Wc_Name { get; set; }
     }
 }

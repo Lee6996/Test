@@ -53,16 +53,56 @@ namespace Final.PRM_PRF
             this.panel4.Controls.SetChildIndex(this.label4, 0);
             this.panel4.Controls.SetChildIndex(this.textBox1, 0);
             this.panel4.Controls.SetChildIndex(this.button22, 0);
-            this.panel4.Controls.SetChildIndex(this.button23, 0);
+            this.panel4.Controls.SetChildIndex(this.btn_Process, 0);
             this.panel4.Controls.SetChildIndex(this.label16, 0);
             this.panel4.Controls.SetChildIndex(this.textBox6, 0);
-            this.panel4.Controls.SetChildIndex(this.button24, 0);
+            this.panel4.Controls.SetChildIndex(this.btn_WorkCenter, 0);
             this.panel4.Controls.SetChildIndex(this.btnEdit, 0);
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(149, 20);
+            this.label2.Size = new System.Drawing.Size(179, 18);
             this.label2.Text = "조회조건 : 작업 지시 일자";
+            // 
+            // btn_WorkCenter
+            // 
+            this.btn_WorkCenter.Location = new System.Drawing.Point(742, 23);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(805, 23);
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(680, 26);
+            // 
+            // btn_Process
+            // 
+            this.btn_Process.Location = new System.Drawing.Point(501, 24);
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(388, 22);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(564, 24);
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(278, 26);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(296, 23);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(190, 23);
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(455, 26);
             // 
             // btnEdit
             // 

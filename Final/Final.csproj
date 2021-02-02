@@ -420,30 +420,6 @@
     <Compile Include="PRM_RPT\frm_PRM_RPT_4.Designer.cs">
       <DependentUpon>frm_PRM_RPT_4.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_1-1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_1-1.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_1-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_3-1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_3-1.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_3-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_4-1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_4-1.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_4-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_2-1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_2-1.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_2-1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ProcessService.cs" />
@@ -741,18 +717,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_4.resx">
       <DependentUpon>frm_PRM_RPT_4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_1-1.resx">
-      <DependentUpon>frm_PRM_RPT_1-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_3-1.resx">
-      <DependentUpon>frm_PRM_RPT_3-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_4-1.resx">
-      <DependentUpon>frm_PRM_RPT_4-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_2-1.resx">
-      <DependentUpon>frm_PRM_RPT_2-1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
