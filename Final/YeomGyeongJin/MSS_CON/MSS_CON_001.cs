@@ -63,15 +63,15 @@ namespace Final.YeomGyeongJin.MSS_CON
                 MessageBox.Show(err.Message);
             }
         }
-
+        //조회 버튼
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            string name = txtUserGroup_Name.Text;
-            if (name.Length < 1)
-            {
-                MessageBox.Show("사용자 그룹명을 입력해주세요");
-                return;
-            }
+            string name = txtUserGroup_Code.Text;
+            //if (name.Length < 1)
+            //{
+            //    MessageBox.Show("사용자 그룹명을 입력해주세요");
+            //    return;
+            //}
 
             DataLoad(name);
         }
@@ -129,12 +129,14 @@ namespace Final.YeomGyeongJin.MSS_CON
 
         private void cboUserGroup_Name_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboUserGroup_Name.SelectedIndex < 1) return;
+            //if (cboUserGroup_Name.SelectedIndex < 1) return;
+            string txt;
+            if (cboUserGroup_Name.SelectedIndex < 1)
+                txt = "";
+            else
+            txt = cboUserGroup_Name.Text;
 
-            //int value = Convert.ToInt32(cboUserGroup_Name.SelectedValue);
-            string txt = cboUserGroup_Name.Text;
-
-            DataLoad(txt);
+            txtUserGroup_Code.Text = txt;
         }
     }
 }

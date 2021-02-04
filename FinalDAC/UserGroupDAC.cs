@@ -20,18 +20,19 @@ namespace FinalDAC
             conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString);
             conn.Open();
         }
-        public List<UserGroupVO> SelectUserGroupInfo(string usergoup_Name)
+        public List<UserGroupVO> SelectUserGroupInfo(string usergroup_Name)
         {
-            string sQuery = @"select UserGroup_Code, UserGroup_Name, Admin, Use_YN, Ins_Date, Ins_Emp, Up_Date, Up_Emp 
-                              from UserGroup_Master where 1 = 1 ";
+            string sQuery = @"select UserGroup_Code, UserGroup_Name, Admin, case when Use_YN='Y' then 1 else 0 end Use_YN, Ins_Date, Ins_Emp, Up_Date, Up_Emp
 
-            if (!string.IsNullOrEmpty(usergoup_Name))
+from UserGroup_Master where 1 = 1  ";
+
+            if (!string.IsNullOrEmpty(usergroup_Name))
                 sQuery += " and UserGroup_Name Like @groupName ";
 
             using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
-                if (!string.IsNullOrEmpty(usergoup_Name))
-                    cmd.Parameters.AddWithValue("@groupName", "%" + usergoup_Name + "%"); //포함하는 문자열
+                if (!string.IsNullOrEmpty(usergroup_Name))
+                    cmd.Parameters.AddWithValue("@groupName", "%" + usergroup_Name + "%"); //포함하는 문자열
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<UserGroupVO> list = Helper.DataReaderMapToList<UserGroupVO>(reader);
