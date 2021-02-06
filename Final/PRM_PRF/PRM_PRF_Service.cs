@@ -9,9 +9,9 @@ namespace Final.PRM_PRF
     class PRM_PRF_Service
     {
         #region 001
-        public List<WorkOrderVO> GetWorkOrderVOList()
+        public List<WorkOrderVO> GetWorkOrderVOList(string dtpFrom, string dtpTo)
         {
-            return new SelectDAC().SelectWorkOrder();
+            return new SelectDAC().SelectWorkOrder(dtpFrom, dtpTo);
         }
 
         public bool Correction(WorkOrderVO vo, UserVO user)
@@ -22,18 +22,31 @@ namespace Final.PRM_PRF
 
         #region 002
 
+        public List<GoodsInHistoryVO> GetGoodsInHistoryVOList(string workorderno)
+        {
+            return new SelectDAC().SelectGoodsInHistory(workorderno);
+        }
         #endregion
 
         #region 003
-        #endregion
-
-        #region 004
+        public List<ReceivingListVO> GetSelectReceivingListVOList(string dtpFrom, string dtpTo)
+        {
+            return new SelectDAC().SelectReceivingListVO(dtpFrom, dtpTo);
+        }
         #endregion
 
         #region 005
+        public void BindDGV_005(DataGridView dgv)
+        {
+            dgv.DataSource = new SelectDAC().SelectGVStatus();
+        }
         #endregion
 
         #region 006
+        public List<GVHistoryVO> GetGVHistoryVOList(string dtpFrom, string dtpTo)
+        {
+            return new SelectDAC().SelectGVHistory(dtpFrom, dtpTo);
+        }
         #endregion
 
         #region 007

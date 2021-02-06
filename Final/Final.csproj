@@ -209,6 +209,18 @@
     <Compile Include="LeeYounggyu\MDS_SDS_004_1.Designer.cs">
       <DependentUpon>MDS_SDS_004_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDI_Parent\frm_MDIParent_1Grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Parent\frm_MDIParent_1Grid.Designer.cs">
+      <DependentUpon>frm_MDIParent_1Grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI_Parent\frm_MDIParent_2Grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Parent\frm_MDIParent_2Grid.Designer.cs">
+      <DependentUpon>frm_MDIParent_2Grid.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDI_Parent\MID_MDIParent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -359,6 +371,12 @@
     <Compile Include="PPS_SCH\frm_PPS_SCH_44.Designer.cs">
       <DependentUpon>frm_PPS_SCH_44.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_005.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_005.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRM_PRF\frm_PRM_PRF_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -370,6 +388,18 @@
     </Compile>
     <Compile Include="PRM_PRF\frm_PRM_PRF_002.Designer.cs">
       <DependentUpon>frm_PRM_PRF_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_003.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_006.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_006.cs</DependentUpon>
     </Compile>
     <Compile Include="PRM_PRF\frm_PRM_PRF_009.cs">
       <SubType>Form</SubType>
@@ -637,6 +667,12 @@
     <EmbeddedResource Include="LeeYounggyu\MDS_SDS_004_1.resx">
       <DependentUpon>MDS_SDS_004_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDI_Parent\frm_MDIParent_1Grid.resx">
+      <DependentUpon>frm_MDIParent_1Grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI_Parent\frm_MDIParent_2Grid.resx">
+      <DependentUpon>frm_MDIParent_2Grid.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDI_Parent\MID_MDIParent.resx">
       <DependentUpon>MID_MDIParent.cs</DependentUpon>
     </EmbeddedResource>
@@ -717,6 +753,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_002.resx">
       <DependentUpon>frm_PRM_PRF_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_003.resx">
+      <DependentUpon>frm_PRM_PRF_003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_005.resx">
+      <DependentUpon>frm_PRM_PRF_005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_006.resx">
+      <DependentUpon>frm_PRM_PRF_006.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_009.resx">
       <DependentUpon>frm_PRM_PRF_009.cs</DependentUpon>

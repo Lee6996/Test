@@ -1,10 +1,7 @@
 ﻿
-using System;
-using System.Windows.Forms;
-
 namespace Final.PRM_PRF
 {
-    partial class frm_PRM_PRF_001
+    partial class frm_PRM_PRF_003
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -32,8 +29,11 @@ namespace Final.PRM_PRF
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEdit = new System.Windows.Forms.Button();
             this.dgvPRM_PRF = new System.Windows.Forms.DataGridView();
+            this.txtItemDetail = new System.Windows.Forms.TextBox();
+            this.btnItem = new System.Windows.Forms.Button();
+            this.txtItem = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -43,51 +43,34 @@ namespace Final.PRM_PRF
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnEdit);
+            this.panel4.Controls.Add(this.txtItemDetail);
+            this.panel4.Controls.Add(this.btnItem);
+            this.panel4.Controls.Add(this.txtItem);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.SetChildIndex(this.label2, 0);
             this.panel4.Controls.SetChildIndex(this.dtpFrom, 0);
             this.panel4.Controls.SetChildIndex(this.dtpTo, 0);
             this.panel4.Controls.SetChildIndex(this.label4, 0);
             this.panel4.Controls.SetChildIndex(this.btnTimeSearch, 0);
-            this.panel4.Controls.SetChildIndex(this.btnEdit, 0);
+            this.panel4.Controls.SetChildIndex(this.label1, 0);
+            this.panel4.Controls.SetChildIndex(this.txtItem, 0);
+            this.panel4.Controls.SetChildIndex(this.btnItem, 0);
+            this.panel4.Controls.SetChildIndex(this.txtItemDetail, 0);
             // 
             // btnTimeSearch
             // 
-            this.btnTimeSearch.Location = new System.Drawing.Point(388, 25);
             this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(278, 29);
-            // 
-            // dtpTo
-            // 
-            this.dtpTo.Location = new System.Drawing.Point(296, 26);
-            // 
-            // dtpFrom
-            // 
-            this.dtpFrom.Location = new System.Drawing.Point(190, 26);
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(171, 18);
-            this.label2.Text = "조회조건 : 작업지시일자";
+            this.label2.Size = new System.Drawing.Size(141, 18);
+            this.label2.Text = "조회조건 : 생산일자";
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dgvPRM_PRF);
             this.panel5.Controls.SetChildIndex(this.panel6, 0);
             this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF, 0);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(1173, 22);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 25);
-            this.btnEdit.TabIndex = 9;
-            this.btnEdit.Text = "실적보정";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // dgvPRM_PRF
             // 
@@ -97,15 +80,48 @@ namespace Final.PRM_PRF
             this.dgvPRM_PRF.Name = "dgvPRM_PRF";
             this.dgvPRM_PRF.RowTemplate.Height = 23;
             this.dgvPRM_PRF.Size = new System.Drawing.Size(1248, 763);
-            this.dgvPRM_PRF.TabIndex = 2;
+            this.dgvPRM_PRF.TabIndex = 23;
             this.dgvPRM_PRF.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_CellClick);
             // 
-            // frm_PRM_PRF_001
+            // txtItemDetail
+            // 
+            this.txtItemDetail.Location = new System.Drawing.Point(722, 29);
+            this.txtItemDetail.Name = "txtItemDetail";
+            this.txtItemDetail.Size = new System.Drawing.Size(100, 21);
+            this.txtItemDetail.TabIndex = 19;
+            // 
+            // btnItem
+            // 
+            this.btnItem.Location = new System.Drawing.Point(692, 27);
+            this.btnItem.Name = "btnItem";
+            this.btnItem.Size = new System.Drawing.Size(24, 23);
+            this.btnItem.TabIndex = 18;
+            this.btnItem.Text = "...";
+            this.btnItem.UseVisualStyleBackColor = true;
+            // 
+            // txtItem
+            // 
+            this.txtItem.Location = new System.Drawing.Point(617, 29);
+            this.txtItem.Name = "txtItem";
+            this.txtItem.Size = new System.Drawing.Size(69, 21);
+            this.txtItem.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F);
+            this.label1.Location = new System.Drawing.Point(543, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 18);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "품목";
+            // 
+            // frm_PRM_PRF_003
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.ClientSize = new System.Drawing.Size(1266, 897);
-            this.Name = "frm_PRM_PRF_001";
-            this.Load += new System.EventHandler(this.frm_PRM_PRF_001_Load);
+            this.Name = "frm_PRM_PRF_003";
+            this.Load += new System.EventHandler(this.frm_PRM_PRF_003_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -118,11 +134,12 @@ namespace Final.PRM_PRF
 
         }
 
-
-
         #endregion
 
-        private System.Windows.Forms.Button btnEdit;
-        private DataGridView dgvPRM_PRF;
+        private System.Windows.Forms.DataGridView dgvPRM_PRF;
+        private System.Windows.Forms.TextBox txtItemDetail;
+        private System.Windows.Forms.Button btnItem;
+        private System.Windows.Forms.TextBox txtItem;
+        private System.Windows.Forms.Label label1;
     }
 }

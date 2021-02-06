@@ -21,11 +21,14 @@ namespace FinalDAC
         #endregion
 
         //WorkOrderVO
-        public List<WorkOrderVO> SelectWorkOrder()
+        public List<WorkOrderVO> SelectWorkOrder(string dtpFrom, string dtpTo)
         {
-            string sql = "select * from View_WorkOrder";
+            string sql = "select * from View_WorkOrder where 1=1 and Plan_Date between @dtpFrom and @dtpTo";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkOrderVO> list = Helper.DataReaderMapToList<WorkOrderVO>(reader);
 
@@ -35,13 +38,39 @@ namespace FinalDAC
         }
 
         //GoodsInHistory
-        public List<GoodsInHistoryVO> SelectGoodsInHistory()
+        public List<GoodsInHistoryVO> SelectGoodsInHistory(string workorderno)
         {
             string sql = "select * from View_Pallet";
+            if (!string.IsNullOrEmpty(workorderno))
+            {
+                sql += " where Workorderno = @workorderno";
+            }
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
+                if (!string.IsNullOrEmpty(workorderno))
+                {
+                    cmd.Parameters.AddWithValue("@workorderno", workorderno);
+                }
+                
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<GoodsInHistoryVO> list = Helper.DataReaderMapToList<GoodsInHistoryVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+
+        //ReceivingListVO
+        public List<ReceivingListVO> SelectReceivingListVO(string dtpFrom, string dtpTo)
+        {
+            string sql = "select * from View_ReceivingList where In_Date between @dtpFrom and @dtpTo";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ReceivingListVO> list = Helper.DataReaderMapToList<ReceivingListVO>(reader);
 
                 conn.Close();
                 return list;
@@ -116,5 +145,33 @@ namespace FinalDAC
             }
         }
 
+        public List<GVStatusVO> SelectGVStatus()
+        {
+            string sql = "select * from View_GVStatus";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<GVStatusVO> list = Helper.DataReaderMapToList<GVStatusVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+
+        public List<GVHistoryVO> SelectGVHistory(string dtpFrom, string dtpTo)
+        {
+            string sql = "select * from View_GVHistory where Loading_Date between @dtpFrom and @dtpTo";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<GVHistoryVO> list = Helper.DataReaderMapToList<GVHistoryVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
     }
 }

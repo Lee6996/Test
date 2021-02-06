@@ -94,5 +94,20 @@ namespace Final.KPI_RPT
                 childForm.Close();
             }
         }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Process_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_WorkCenter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

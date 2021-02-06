@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,8 +9,12 @@ using System.Windows.Forms;
 
 namespace Final.PRM_PRF
 {
-    public partial class frm_PRM_PRF_002 : Final.KPI_RPT.KPI_RPT_MDIParent
+    public partial class frm_PRM_PRF_002 : MDI_Parent.frm_MDIParent_2Grid
     {
+        List<WorkOrderVO> Wlist;
+        List<GoodsInHistoryVO> Glist;
+        string workorderno;
+
         public frm_PRM_PRF_002()
         {
             InitializeComponent();
@@ -17,16 +22,33 @@ namespace Final.PRM_PRF
 
         private void frm_PRM_PRF_002_Load(object sender, EventArgs e)
         {
-            SetDgv_1(dgvPRM_PRF_002_1);
+            SetDgv_1(dgvPRM_PRF_1);
+            SetDgv_2(dgvPRM_PRF_2);
+
+            RefreshState();
+            
+        }
+        private void btnTimeSearch_Click(object sender, EventArgs e)
+        {
+            RefreshState();
         }
 
+        private void dgvPRM_PRF_1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            workorderno = Wlist[e.RowIndex].Workorderno;
+            RefreshState_2();
+        }
+
+        #region MyMethod
+
+        #region DGV1
         private void SetDgv_1(DataGridView dgv)
         {
             CommonUtil.SetInitGridView(dgv);
             dgv.Columns.Add(new DataGridViewCheckBoxColumn());
             CommonUtil.AddGridTextColumn(dgv, "생산일자", "Prd_Date", 200);
-            CommonUtil.AddGridTextColumn(dgv, "작업지시상태", "Wo_Status", 200);
             CommonUtil.AddGridTextColumn(dgv, "작업지시번호", "Workorderno", 200);
+            CommonUtil.AddGridTextColumn(dgv, "작업지시상태", "Wo_Status", 200);
             CommonUtil.AddGridTextColumn(dgv, "품목코드", "Item_Code", 200);
             CommonUtil.AddGridTextColumn(dgv, "품목명", "Item_Name", 200);
             CommonUtil.AddGridTextColumn(dgv, "작업장", "Wc_Name", 200);
@@ -34,6 +56,18 @@ namespace Final.PRM_PRF
             CommonUtil.AddGridTextColumn(dgv, "산출수량", "Out_Qty_Main", 200);
             CommonUtil.AddGridTextColumn(dgv, "생산수량", "Prd_Qty", 200);
         }
+
+        private void RefreshState()
+        {
+            Wlist = new PRM_PRF_Service().GetWorkOrderVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString());
+            dgvPRM_PRF_1.DataSource = Wlist;
+            dgvPRM_PRF_2.DataSource = null;
+        }
+
+
+        #endregion
+
+        #region DGV2
         private void SetDgv_2(DataGridView dgv)
         {
             CommonUtil.SetInitGridView(dgv);
@@ -45,20 +79,23 @@ namespace Final.PRM_PRF
             CommonUtil.AddGridTextColumn(dgv, "포장등급명", "Boxing_Grade_Name", 200);
             CommonUtil.AddGridTextColumn(dgv, "생산수량", "In_Qty", 200);
         }
-        /*
-         private void dataGridView1_CurrentCellDirtyStateChanged(object sender, EventArgs e)
 
+        private void RefreshState_2()
         {
-
-            if (dataGridView1.CurrentCell is DataGridViewCheckBoxCell)
-
-            {
-
-                dataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
-
-            }
-
+            Glist = new PRM_PRF_Service().GetGoodsInHistoryVOList(workorderno);
+            dgvPRM_PRF_2.DataSource = Glist;
         }
-         */
+        #endregion
+
+        #endregion
+
+
+        //private void dataGridView1_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        //{
+        //    if (dataGridView1.CurrentCell is DataGridViewCheckBoxCell)
+        //    {
+        //        dataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
+        //    }
+        //}
     }
 }
