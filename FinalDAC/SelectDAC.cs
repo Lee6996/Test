@@ -51,7 +51,7 @@ namespace FinalDAC
                 {
                     cmd.Parameters.AddWithValue("@workorderno", workorderno);
                 }
-                
+
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<GoodsInHistoryVO> list = Helper.DataReaderMapToList<GoodsInHistoryVO>(reader);
 
@@ -145,7 +145,23 @@ namespace FinalDAC
             }
         }
 
-<<<<<<< HEAD
+        //GVHistory
+        public List<GVHistoryVO> SelectGVHistory(string dtpFrom, string dtpTo)
+        {
+            string sql = "select * from View_ReceivingList where Loading_date between @dtpFrom and @dtpTo";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<GVHistoryVO> list = Helper.DataReaderMapToList<GVHistoryVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+
         public List<GVStatusVO> SelectGVStatus()
         {
             string sql = "select * from View_GVStatus";
@@ -159,18 +175,6 @@ namespace FinalDAC
             }
         }
 
-        public List<GVHistoryVO> SelectGVHistory(string dtpFrom, string dtpTo)
-        {
-            string sql = "select * from View_GVHistory where Loading_Date between @dtpFrom and @dtpTo";
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
-                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
-                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<GVHistoryVO> list = Helper.DataReaderMapToList<GVHistoryVO>(reader);
-=======
-
         //ItemLevelInfo
         public List<ItemInfoVO> SelectItemLevel()
         {
@@ -179,11 +183,11 @@ namespace FinalDAC
             {
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<ItemInfoVO> list = Helper.DataReaderMapToList<ItemInfoVO>(reader);
->>>>>>> 68984b1c991d850a3e282e6ca5782fddd0650e9e
 
                 conn.Close();
                 return list;
             }
         }
+
     }
 }

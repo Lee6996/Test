@@ -40,12 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceManagementVO.cs" />
-<<<<<<< HEAD
     <Compile Include="GVHistoryVO.cs" />
     <Compile Include="GVStatusVO.cs" />
-=======
     <Compile Include="ItemInfoVO.cs" />
->>>>>>> 68984b1c991d850a3e282e6ca5782fddd0650e9e
+    <Compile Include="ItemInfoVO.cs" />
     <Compile Include="ProcessVO.cs" />
     <Compile Include="Production_History_DayVO.cs" />
     <Compile Include="ReceivingListVO.cs" />
