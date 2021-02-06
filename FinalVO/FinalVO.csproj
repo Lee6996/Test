@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceManagementVO.cs" />
+    <Compile Include="ItemInfoVO.cs" />
     <Compile Include="ProcessVO.cs" />
     <Compile Include="Production_History_DayVO.cs" />
     <Compile Include="WorkCenterVO.cs" />

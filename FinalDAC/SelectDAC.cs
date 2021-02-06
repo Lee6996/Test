@@ -116,5 +116,19 @@ namespace FinalDAC
             }
         }
 
+
+        //ItemLevelInfo
+        public List<ItemInfoVO> SelectItemLevel()
+        {
+            string sql = "SELECT Level_Code, Level_Name, Item_lvl1, Item_lvl2, Item_lvl3, Item_lvl4, Item_lvl5, Box_Qty, Pcs_Qty, Mat_Qty, Use_YN   FROM Item_Level_Master";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ItemInfoVO> list = Helper.DataReaderMapToList<ItemInfoVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
     }
 }
