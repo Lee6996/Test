@@ -145,6 +145,7 @@ namespace FinalDAC
             }
         }
 
+<<<<<<< HEAD
         public List<GVStatusVO> SelectGVStatus()
         {
             string sql = "select * from View_GVStatus";
@@ -168,6 +169,17 @@ namespace FinalDAC
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<GVHistoryVO> list = Helper.DataReaderMapToList<GVHistoryVO>(reader);
+=======
+
+        //ItemLevelInfo
+        public List<ItemInfoVO> SelectItemLevel()
+        {
+            string sql = "SELECT Level_Code, Level_Name, Item_lvl1, Item_lvl2, Item_lvl3, Item_lvl4, Item_lvl5, Box_Qty, Pcs_Qty, Mat_Qty, Use_YN   FROM Item_Level_Master";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ItemInfoVO> list = Helper.DataReaderMapToList<ItemInfoVO>(reader);
+>>>>>>> 68984b1c991d850a3e282e6ca5782fddd0650e9e
 
                 conn.Close();
                 return list;
