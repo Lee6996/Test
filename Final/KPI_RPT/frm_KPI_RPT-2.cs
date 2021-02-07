@@ -21,8 +21,8 @@ namespace Final
         {
             CommonUtil.SetInitGridView(dgv_WorkCenter);
 
-            CommonUtil.AddGridTextColumn(dgv_WorkCenter, "공정코드", "Process_code", 120);
-            CommonUtil.AddGridTextColumn(dgv_WorkCenter, "공정명", "Process_name", 120);
+            CommonUtil.AddGridTextColumn(dgv_WorkCenter, "작업장코드", "Wc_Code", 240);
+            CommonUtil.AddGridTextColumn(dgv_WorkCenter, "작업장이름", "Wc_Name", 240);
         }
     }
 }

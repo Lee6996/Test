@@ -52,7 +52,7 @@ namespace Final
             this.dgv_WorkCenter.Location = new System.Drawing.Point(12, 45);
             this.dgv_WorkCenter.Name = "dgv_WorkCenter";
             this.dgv_WorkCenter.RowTemplate.Height = 23;
-            this.dgv_WorkCenter.Size = new System.Drawing.Size(479, 304);
+            this.dgv_WorkCenter.Size = new System.Drawing.Size(480, 304);
             this.dgv_WorkCenter.TabIndex = 4;
             // 
             // label1

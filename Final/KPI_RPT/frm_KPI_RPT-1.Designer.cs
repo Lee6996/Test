@@ -52,7 +52,7 @@ namespace Final
             this.dgv_Process.Location = new System.Drawing.Point(12, 45);
             this.dgv_Process.Name = "dgv_Process";
             this.dgv_Process.RowTemplate.Height = 23;
-            this.dgv_Process.Size = new System.Drawing.Size(479, 304);
+            this.dgv_Process.Size = new System.Drawing.Size(480, 304);
             this.dgv_Process.TabIndex = 1;
             // 
             // label2

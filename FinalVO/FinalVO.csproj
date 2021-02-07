@@ -40,8 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceManagementVO.cs" />
-    <Compile Include="Class1.cs" />
-    <Compile Include="GasUseVO.cs" />
     <Compile Include="ProcessVO.cs" />
     <Compile Include="Production_History_DayVO.cs" />
     <Compile Include="UserGroup.cs" />
