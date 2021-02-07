@@ -27,6 +27,5 @@ namespace FinalVO
         public string Up_Date { get; set; }
         // 최종수정자
         public string Up_Emp { get; set; }
-        
     }
 }

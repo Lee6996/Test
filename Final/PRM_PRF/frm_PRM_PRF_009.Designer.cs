@@ -60,7 +60,7 @@ namespace Final.PRM_PRF
             this.panel4.Controls.SetChildIndex(this.label4, 0);
             this.panel4.Controls.SetChildIndex(this.textBox1, 0);
             this.panel4.Controls.SetChildIndex(this.button22, 0);
-            this.panel4.Controls.SetChildIndex(this.button23, 0);
+            this.panel4.Controls.SetChildIndex(this.btn_Process, 0);
             // 
             // label2
             // 
@@ -77,32 +77,32 @@ namespace Final.PRM_PRF
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(705, 25);
+            this.btn_Process.Location = new System.Drawing.Point(719, 26);
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(337, 25);
+            this.button22.Location = new System.Drawing.Point(352, 23);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(458, 25);
+            this.textBox1.Location = new System.Drawing.Point(472, 26);
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(227, 28);
+            this.label4.Location = new System.Drawing.Point(242, 26);
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(245, 25);
+            this.dateTimePicker2.Location = new System.Drawing.Point(260, 23);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(139, 25);
+            this.dateTimePicker1.Location = new System.Drawing.Point(154, 23);
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(407, 25);
-            this.label3.Size = new System.Drawing.Size(45, 20);
+            this.label3.Location = new System.Drawing.Point(421, 26);
+            this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.Text = "작업자";
             // 
             // btnSave_Excel
@@ -116,14 +116,14 @@ namespace Final.PRM_PRF
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(599, 25);
+            this.textBox2.Location = new System.Drawing.Point(613, 26);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 21);
             this.textBox2.TabIndex = 0;
             // 
             // btnSearchWorker
             // 
-            this.btnSearchWorker.Location = new System.Drawing.Point(563, 25);
+            this.btnSearchWorker.Location = new System.Drawing.Point(577, 26);
             this.btnSearchWorker.Name = "btnSearchWorker";
             this.btnSearchWorker.Size = new System.Drawing.Size(30, 23);
             this.btnSearchWorker.TabIndex = 15;
@@ -199,13 +199,13 @@ namespace Final.PRM_PRF
             this.ClientSize = new System.Drawing.Size(1266, 828);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button24);
+            this.Controls.Add(this.btn_WorkCenter);
             this.Controls.Add(this.label16);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frm_PRM_PRF_009";
             this.Load += new System.EventHandler(this.frm_PRM_PRF_009_Load);
             this.Controls.SetChildIndex(this.label16, 0);
-            this.Controls.SetChildIndex(this.button24, 0);
+            this.Controls.SetChildIndex(this.btn_WorkCenter, 0);
             this.Controls.SetChildIndex(this.textBox6, 0);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);

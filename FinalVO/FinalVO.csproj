@@ -40,11 +40,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceManagementVO.cs" />
+    <Compile Include="GVHistoryVO.cs" />
+    <Compile Include="GVStatusVO.cs" />
+    <Compile Include="ItemInfoVO.cs" />
+    <Compile Include="ItemInfoVO.cs" />
     <Compile Include="ProcessVO.cs" />
     <Compile Include="Production_History_DayVO.cs" />
-    <Compile Include="UserGroup.cs" />
+    <Compile Include="ReceivingListVO.cs" />
     <Compile Include="WorkCenterVO.cs" />
     <Compile Include="WorkHistoryVO.cs" />
+    <Compile Include="GoodsInHistoryVO.cs" />
+    <Compile Include="UserGroupVO.cs" />
+    <Compile Include="UserVO.cs" />
+    <Compile Include="WorkOrderVO.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

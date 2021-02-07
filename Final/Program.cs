@@ -1,4 +1,5 @@
-﻿using Final.YeomGyeongJin.MSS_CON;
+﻿using Final.LeeYounggyu;
+using Final.YeomGyeongJin.MSS_CON;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MSS_CON_001());
+            Application.Run(new MDS_SDS_001());
         }
     }
 }

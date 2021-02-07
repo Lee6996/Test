@@ -96,6 +96,7 @@ namespace Final.KPI_RPT
             this.btn_WorkCenter.TabIndex = 12;
             this.btn_WorkCenter.Text = "검색";
             this.btn_WorkCenter.UseVisualStyleBackColor = false;
+            this.btn_WorkCenter.Click += new System.EventHandler(this.btn_WorkCenter_Click);
             // 
             // textBox6
             // 
@@ -125,6 +126,7 @@ namespace Final.KPI_RPT
             this.btn_Process.TabIndex = 9;
             this.btn_Process.Text = "검색";
             this.btn_Process.UseVisualStyleBackColor = false;
+            this.btn_Process.Click += new System.EventHandler(this.btn_Process_Click);
             // 
             // button22
             // 
@@ -136,6 +138,7 @@ namespace Final.KPI_RPT
             this.button22.TabIndex = 8;
             this.button22.Text = "검색";
             this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // textBox1
             // 
