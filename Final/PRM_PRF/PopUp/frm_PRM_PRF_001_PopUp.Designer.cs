@@ -56,98 +56,89 @@ namespace Final.PRM_PRF.PopUp
             // 
             this.txtPrd_Qty.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
             this.txtPrd_Qty.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtPrd_Qty.Location = new System.Drawing.Point(148, 444);
-            this.txtPrd_Qty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPrd_Qty.Location = new System.Drawing.Point(130, 361);
             this.txtPrd_Qty.Name = "txtPrd_Qty";
-            this.txtPrd_Qty.Size = new System.Drawing.Size(210, 21);
+            this.txtPrd_Qty.Size = new System.Drawing.Size(184, 21);
             this.txtPrd_Qty.TabIndex = 0;
             this.txtPrd_Qty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrd_Qty_KeyPress);
             // 
             // txtWo_Status
             // 
             this.txtWo_Status.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.txtWo_Status.Location = new System.Drawing.Point(148, 156);
-            this.txtWo_Status.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtWo_Status.Location = new System.Drawing.Point(130, 127);
             this.txtWo_Status.Name = "txtWo_Status";
             this.txtWo_Status.ReadOnly = true;
-            this.txtWo_Status.Size = new System.Drawing.Size(210, 21);
+            this.txtWo_Status.Size = new System.Drawing.Size(184, 21);
             this.txtWo_Status.TabIndex = 1;
             // 
             // txtItem_Code
             // 
             this.txtItem_Code.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.txtItem_Code.Location = new System.Drawing.Point(148, 204);
-            this.txtItem_Code.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtItem_Code.Location = new System.Drawing.Point(130, 166);
             this.txtItem_Code.Name = "txtItem_Code";
             this.txtItem_Code.ReadOnly = true;
-            this.txtItem_Code.Size = new System.Drawing.Size(210, 21);
+            this.txtItem_Code.Size = new System.Drawing.Size(184, 21);
             this.txtItem_Code.TabIndex = 2;
             // 
             // txtPlan_Date
             // 
             this.txtPlan_Date.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.txtPlan_Date.Location = new System.Drawing.Point(148, 108);
-            this.txtPlan_Date.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPlan_Date.Location = new System.Drawing.Point(130, 88);
             this.txtPlan_Date.Name = "txtPlan_Date";
             this.txtPlan_Date.ReadOnly = true;
-            this.txtPlan_Date.Size = new System.Drawing.Size(210, 21);
+            this.txtPlan_Date.Size = new System.Drawing.Size(184, 21);
             this.txtPlan_Date.TabIndex = 4;
             // 
             // txtWorkorderno
             // 
             this.txtWorkorderno.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.txtWorkorderno.Location = new System.Drawing.Point(148, 60);
-            this.txtWorkorderno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtWorkorderno.Location = new System.Drawing.Point(130, 49);
             this.txtWorkorderno.Name = "txtWorkorderno";
             this.txtWorkorderno.ReadOnly = true;
-            this.txtWorkorderno.Size = new System.Drawing.Size(210, 21);
+            this.txtWorkorderno.Size = new System.Drawing.Size(184, 21);
             this.txtWorkorderno.TabIndex = 3;
             // 
             // txtWc_Name
             // 
             this.txtWc_Name.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.txtWc_Name.Location = new System.Drawing.Point(148, 300);
-            this.txtWc_Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtWc_Name.Location = new System.Drawing.Point(130, 244);
             this.txtWc_Name.Name = "txtWc_Name";
             this.txtWc_Name.ReadOnly = true;
-            this.txtWc_Name.Size = new System.Drawing.Size(210, 21);
+            this.txtWc_Name.Size = new System.Drawing.Size(184, 21);
             this.txtWc_Name.TabIndex = 8;
             // 
             // txtItem_Name
             // 
             this.txtItem_Name.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.txtItem_Name.Location = new System.Drawing.Point(148, 252);
-            this.txtItem_Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtItem_Name.Location = new System.Drawing.Point(130, 205);
             this.txtItem_Name.Name = "txtItem_Name";
             this.txtItem_Name.ReadOnly = true;
-            this.txtItem_Name.Size = new System.Drawing.Size(210, 21);
+            this.txtItem_Name.Size = new System.Drawing.Size(184, 21);
             this.txtItem_Name.TabIndex = 7;
             // 
             // txtOut_Qty_Main
             // 
             this.txtOut_Qty_Main.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.txtOut_Qty_Main.Location = new System.Drawing.Point(148, 396);
-            this.txtOut_Qty_Main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtOut_Qty_Main.Location = new System.Drawing.Point(130, 322);
             this.txtOut_Qty_Main.Name = "txtOut_Qty_Main";
             this.txtOut_Qty_Main.ReadOnly = true;
-            this.txtOut_Qty_Main.Size = new System.Drawing.Size(210, 21);
+            this.txtOut_Qty_Main.Size = new System.Drawing.Size(184, 21);
             this.txtOut_Qty_Main.TabIndex = 6;
             // 
             // txtIn_Qty_Main
             // 
             this.txtIn_Qty_Main.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.txtIn_Qty_Main.Location = new System.Drawing.Point(148, 348);
-            this.txtIn_Qty_Main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIn_Qty_Main.Location = new System.Drawing.Point(130, 283);
             this.txtIn_Qty_Main.Name = "txtIn_Qty_Main";
             this.txtIn_Qty_Main.ReadOnly = true;
-            this.txtIn_Qty_Main.Size = new System.Drawing.Size(210, 21);
+            this.txtIn_Qty_Main.Size = new System.Drawing.Size(184, 21);
             this.txtIn_Qty_Main.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.label1.Location = new System.Drawing.Point(19, 64);
+            this.label1.Location = new System.Drawing.Point(17, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 9;
@@ -158,7 +149,7 @@ namespace Final.PRM_PRF.PopUp
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.label2.Location = new System.Drawing.Point(19, 112);
+            this.label2.Location = new System.Drawing.Point(17, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 10;
@@ -169,7 +160,7 @@ namespace Final.PRM_PRF.PopUp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.label3.Location = new System.Drawing.Point(19, 208);
+            this.label3.Location = new System.Drawing.Point(17, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 12;
@@ -180,7 +171,7 @@ namespace Final.PRM_PRF.PopUp
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.label4.Location = new System.Drawing.Point(19, 160);
+            this.label4.Location = new System.Drawing.Point(17, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 13);
             this.label4.TabIndex = 11;
@@ -191,7 +182,7 @@ namespace Final.PRM_PRF.PopUp
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.label5.Location = new System.Drawing.Point(19, 400);
+            this.label5.Location = new System.Drawing.Point(17, 325);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 16;
@@ -202,7 +193,7 @@ namespace Final.PRM_PRF.PopUp
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.label6.Location = new System.Drawing.Point(19, 352);
+            this.label6.Location = new System.Drawing.Point(17, 286);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 13);
             this.label6.TabIndex = 15;
@@ -213,7 +204,7 @@ namespace Final.PRM_PRF.PopUp
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.label7.Location = new System.Drawing.Point(19, 304);
+            this.label7.Location = new System.Drawing.Point(17, 247);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 14;
@@ -224,7 +215,7 @@ namespace Final.PRM_PRF.PopUp
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.label8.Location = new System.Drawing.Point(19, 256);
+            this.label8.Location = new System.Drawing.Point(17, 208);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 13;
@@ -235,7 +226,7 @@ namespace Final.PRM_PRF.PopUp
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.label12.Location = new System.Drawing.Point(19, 448);
+            this.label12.Location = new System.Drawing.Point(17, 364);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 13);
             this.label12.TabIndex = 17;
@@ -246,7 +237,7 @@ namespace Final.PRM_PRF.PopUp
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("나눔스퀘어OTF ExtraBold", 18F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(12, 15);
+            this.label9.Location = new System.Drawing.Point(10, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 27);
             this.label9.TabIndex = 18;
@@ -256,9 +247,10 @@ namespace Final.PRM_PRF.PopUp
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.btnSave.Location = new System.Drawing.Point(216, 505);
+            this.btnSave.Location = new System.Drawing.Point(189, 410);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(68, 33);
+            this.btnSave.Size = new System.Drawing.Size(60, 27);
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -268,18 +260,19 @@ namespace Final.PRM_PRF.PopUp
             // 
             this.btncancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btncancel.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.btncancel.Location = new System.Drawing.Point(290, 505);
+            this.btncancel.Location = new System.Drawing.Point(254, 410);
+            this.btncancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(68, 33);
+            this.btncancel.Size = new System.Drawing.Size(60, 27);
             this.btncancel.TabIndex = 20;
             this.btncancel.Text = "취소";
             this.btncancel.UseVisualStyleBackColor = true;
             // 
             // frm_PRM_PRF_001_PopUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 561);
+            this.ClientSize = new System.Drawing.Size(332, 456);
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label9);
@@ -301,8 +294,7 @@ namespace Final.PRM_PRF.PopUp
             this.Controls.Add(this.txtItem_Code);
             this.Controls.Add(this.txtWo_Status);
             this.Controls.Add(this.txtPrd_Qty);
-            this.Font = new System.Drawing.Font("나눔고딕", 10.5F);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
             this.Name = "frm_PRM_PRF_001_PopUp";
             this.Text = "실적보정";
             this.Load += new System.EventHandler(this.frm_PRM_PRF_001_PopUp_Load);

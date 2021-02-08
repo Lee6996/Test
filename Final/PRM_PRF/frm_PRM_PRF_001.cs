@@ -1,4 +1,5 @@
-﻿using FinalVO;
+﻿using Final.PRM_PRF.PopUp;
+using FinalVO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,6 +42,34 @@ namespace Final.PRM_PRF
             vo = list[e.RowIndex];
         }
 
+        private void btnProcess_Click(object sender, EventArgs e)
+        {
+            MainPop frm = new MainPop("Process")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtProcess.Text = frm.SCode;
+                txtProcessDetail.Text = frm.SName;
+            }
+        }
+
+        private void btnWorkCenter_Click(object sender, EventArgs e)
+        {
+            MainPop frm = new MainPop("WC")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtWorkCenter.Text = frm.SCode;
+                txtWorkCenterDetail.Text = frm.SName;
+            }
+        }
+
         #region MyMethod
         private void SettingDGV(DataGridView dgv)
         {
@@ -58,9 +87,12 @@ namespace Final.PRM_PRF
 
         private void RefreshState()
         {
-            list = new PRM_PRF_Service().GetWorkOrderVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString());
+            list = new PRM_PRF_Service().GetWorkOrderVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), txtProcess.Text, txtWorkCenterDetail.Text);
             dgvPRM_PRF.DataSource = list;
         }
+
+
         #endregion
+
     }
 }

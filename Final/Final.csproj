@@ -384,6 +384,12 @@
     <Compile Include="PRM_PRF\frm_PRM_PRF_007.Designer.cs">
       <DependentUpon>frm_PRM_PRF_007.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_008.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_008.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_008.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRM_PRF\frm_PRM_PRF_009.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -395,6 +401,12 @@
     </Compile>
     <Compile Include="PRM_PRF\frm_PRM_PRF_010.Designer.cs">
       <DependentUpon>frm_PRM_PRF_010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\MainPop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\MainPop.Designer.cs">
+      <DependentUpon>MainPop.cs</DependentUpon>
     </Compile>
     <Compile Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.cs">
       <SubType>Form</SubType>
@@ -685,6 +697,9 @@
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_007.resx">
       <DependentUpon>frm_PRM_PRF_007.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_008.resx">
+      <DependentUpon>frm_PRM_PRF_008.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_009.resx">
       <DependentUpon>frm_PRM_PRF_009.cs</DependentUpon>
     </EmbeddedResource>
@@ -693,6 +708,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.resx">
       <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\MainPop.resx">
+      <DependentUpon>MainPop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

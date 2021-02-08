@@ -9,9 +9,9 @@ namespace Final.PRM_PRF
     class PRM_PRF_Service
     {
         #region 001
-        public List<WorkOrderVO> GetWorkOrderVOList(string dtpFrom, string dtpTo)
+        public List<WorkOrderVO> GetWorkOrderVOList(string dtpFrom, string dtpTo, string processCode, string wcCode)
         {
-            return new SelectDAC().SelectWorkOrder(dtpFrom, dtpTo);
+            return new SelectDAC().SelectWorkOrder(dtpFrom, dtpTo, processCode, wcCode);
         }
 
         public bool Correction(WorkOrderVO vo, UserVO user)
@@ -53,6 +53,10 @@ namespace Final.PRM_PRF
         #endregion
 
         #region 008
+        internal object GetNOPVOList(string dtpFrom, string dtpTo)
+        {
+            return new SelectDAC().SelectNOP(dtpFrom, dtpTo);
+        }
         #endregion
 
         #region 009
