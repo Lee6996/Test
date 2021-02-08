@@ -101,6 +101,18 @@
     <Compile Include="KPI_RPT\frm_KPI_RPT_4.Designer.cs">
       <DependentUpon>frm_KPI_RPT_4.cs</DependentUpon>
     </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_P.Designer.cs">
+      <DependentUpon>frm_KPI_RPT_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_W.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_W.Designer.cs">
+      <DependentUpon>frm_KPI_RPT_W.cs</DependentUpon>
+    </Compile>
     <Compile Include="LeeYounggyu\MDS_CDS_002_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,7 +221,6 @@
     <Compile Include="LeeYounggyu\MDS_SDS_004_1.Designer.cs">
       <DependentUpon>MDS_SDS_004_1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LeeYounggyu\UserStatic.cs" />
     <Compile Include="MDI_Parent\frm_MDIParent_1Grid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,18 +245,6 @@
     </Compile>
     <Compile Include="MDI_Parent\FinalMDIParent.Designer.cs">
       <DependentUpon>FinalMDIParent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT-1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT-1.Designer.cs">
-      <DependentUpon>frm_KPI_RPT-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT-2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT-2.Designer.cs">
-      <DependentUpon>frm_KPI_RPT-2.cs</DependentUpon>
     </Compile>
     <Compile Include="PPS_MLD\frm_PPS_MLD_001.cs">
       <SubType>Form</SubType>
@@ -379,6 +378,12 @@
     <Compile Include="PRM_PRF\frm_PRM_PRF_006.Designer.cs">
       <DependentUpon>frm_PRM_PRF_006.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_007.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_007.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_007.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRM_PRF\frm_PRM_PRF_009.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,30 +403,6 @@
       <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="PRM_PRF\PRM_PRF_Service.cs" />
-    <Compile Include="PRM_RPT\frm_PRM_RPT_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_1.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_2.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_3.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_4.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ProcessService.cs" />
@@ -549,6 +530,8 @@
     <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_004.Designer.cs">
       <DependentUpon>MSS_SYS_004.cs</DependentUpon>
     </Compile>
+    <Compile Include="YeomGyeongJin\MSS_SYS\ScreenService.cs" />
+    <Compile Include="YeomGyeongJin\MSS_SYS\SysNoticeService.cs" />
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_1.resx">
       <DependentUpon>frm_KPI_RPT_1.cs</DependentUpon>
     </EmbeddedResource>
@@ -560,6 +543,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_4.resx">
       <DependentUpon>frm_KPI_RPT_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_P.resx">
+      <DependentUpon>frm_KPI_RPT_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_W.resx">
+      <DependentUpon>frm_KPI_RPT_W.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeeYounggyu\MDS_CDS_002_1.resx">
       <DependentUpon>MDS_CDS_002_1.cs</DependentUpon>
@@ -627,12 +616,6 @@
     <EmbeddedResource Include="MDI_Parent\FinalMDIParent.resx">
       <DependentUpon>FinalMDIParent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT-1.resx">
-      <DependentUpon>frm_KPI_RPT-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT-2.resx">
-      <DependentUpon>frm_KPI_RPT-2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PPS_MLD\frm_PPS_MLD_001.resx">
       <DependentUpon>frm_PPS_MLD_001.cs</DependentUpon>
     </EmbeddedResource>
@@ -699,6 +682,9 @@
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_006.resx">
       <DependentUpon>frm_PRM_PRF_006.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_007.resx">
+      <DependentUpon>frm_PRM_PRF_007.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_009.resx">
       <DependentUpon>frm_PRM_PRF_009.cs</DependentUpon>
     </EmbeddedResource>
@@ -708,19 +694,6 @@
     <EmbeddedResource Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.resx">
       <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_1.resx">
-      <DependentUpon>frm_PRM_RPT_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_2.resx">
-      <DependentUpon>frm_PRM_RPT_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_3.resx">
-      <DependentUpon>frm_PRM_RPT_3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_4.resx">
-      <DependentUpon>frm_PRM_RPT_4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -806,6 +779,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EncLibrary\FinalEnc.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserCountrol\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\FinalDAC\FinalDAC.csproj">
       <Project>{55b68008-cbe4-4d16-a344-82ca9c47f6ee}</Project>
       <Name>FinalDAC</Name>
@@ -814,13 +793,6 @@
       <Project>{e0737b4c-95a5-4fb4-a26f-0f1edb71a8c3}</Project>
       <Name>FinalVO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="EncLibrary\FinalEnc.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DevExpress\" />
-    <Folder Include="UserCountrol\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

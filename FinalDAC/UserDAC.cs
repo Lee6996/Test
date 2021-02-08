@@ -15,7 +15,7 @@ namespace FinalDAC
 
         public UserDAC()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString);
+            conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
             conn.Open();
         }
         public List<UserVO> SelectUserGroupInfo(string usergoup_Name)

@@ -12,7 +12,7 @@ namespace FinalDAC
     public class SelectDAC
     {
         #region Connection Open
-        static SqlConnection conn;
+        SqlConnection conn;
         public SelectDAC()
         {
             conn = new SqlConnection(ConfigurationManager.ConnectionStrings["team2"].ConnectionString);
@@ -36,38 +36,6 @@ namespace FinalDAC
                 return list;
             }
         }
-        //GetAllItem
-        public static  List<ItemInfoVO> GetAllItem_Level_Master()
-        {
-            List<ItemInfoVO> ItemGroup = null;
-            string sql = @"SELECT Level_Code
-                                      , Level_Name
-                                      , Item_lvl1
-                                      , Item_lvl2
-                                      , Item_lvl3
-                                      , Item_lvl4
-                                      , Item_lvl5
-                                      , Box_Qty
-                                      , Pcs_Qty
-                                      , Mat_Qty
-                                      , Use_YN
-                                      , Ins_Date
-                                      , Ins_Emp
-                                      , Up_Date
-                                      , Up_Emp
-                                  FROM Item_Level_Master";
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {       
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<ItemInfoVO> list = Helper.DataReaderMapToList<ItemInfoVO>(reader);
-
-                conn.Close();
-                return ItemGroup;
-            }
-        }
-
-
 
         //GoodsInHistory
         public List<GoodsInHistoryVO> SelectGoodsInHistory(string workorderno)
@@ -219,43 +187,33 @@ namespace FinalDAC
                 conn.Close();
                 return list;
             }
-        }  
-        public List<Item_MasterVO> GetAllItem_Master()
-        {            
-                string sql = @"SELECT Item_Code
-                                            , Item_Name
-                                            , Item_Type
-                                            , Item_Spec
-                                            , Item_Unit
-                                            , Level_1
-                                            , Level_2
-                                            , Level_3
-                                            , Level_4
-                                            , Level_5
-                                            , Item_Stock
-                                            , Lead_Time
-                                            , LotSize
-                                            , PrdQty_Per_Hour
-                                            , PrdQTy_Per_Batch
-                                            , Cavity
-                                            , Line_Per_Qty
-                                            , Shot_Per_Qty
-                                            , Dry_GV_Qty
-                                            , Heat_GV_Qty
-                                            , Remark
-                                            , Use_YN
-
-
-                                            FROM Item_Master";
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    List<Item_MasterVO> list = Helper.DataReaderMapToList<Item_MasterVO>(reader);
-
-                    conn.Close();
-                    return list;
-                }        
-
         }
-     }
+        
+        //Process
+        public List<ProcessVO> SelectProcess()
+        {
+            string sql = " SELECT * from Process_Master";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ProcessVO> list = Helper.DataReaderMapToList<ProcessVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        //WorkCenter
+        public List<WorkCenterVO> SelectWorkCenter()
+        {
+            string sql = " SELECT * from WorkCenter_Master";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkCenterVO> list = Helper.DataReaderMapToList<WorkCenterVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+    }
 }

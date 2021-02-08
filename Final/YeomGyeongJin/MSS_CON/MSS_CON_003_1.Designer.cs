@@ -36,13 +36,13 @@ namespace Final
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.txt_D_Process_Code = new System.Windows.Forms.ComboBox();
+            this.cbDefault_ProcessCode = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btnSelect = new System.Windows.Forms.Button();
             this.btnCancle = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.txtUser_Name = new System.Windows.Forms.TextBox();
+            this.txtUser_ID = new System.Windows.Forms.TextBox();
+            this.txtUser_Pwd = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -119,60 +119,29 @@ namespace Final
             this.lblDate.Text = "label5";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txt_D_Process_Code
+            // cbDefault_ProcessCode
             // 
-            this.txt_D_Process_Code.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txt_D_Process_Code.FormattingEnabled = true;
-            this.txt_D_Process_Code.Location = new System.Drawing.Point(29, 362);
-            this.txt_D_Process_Code.Name = "txt_D_Process_Code";
-            this.txt_D_Process_Code.Size = new System.Drawing.Size(309, 27);
-            this.txt_D_Process_Code.TabIndex = 11;
+            this.cbDefault_ProcessCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDefault_ProcessCode.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbDefault_ProcessCode.FormattingEnabled = true;
+            this.cbDefault_ProcessCode.Location = new System.Drawing.Point(29, 362);
+            this.cbDefault_ProcessCode.Name = "cbDefault_ProcessCode";
+            this.cbDefault_ProcessCode.Size = new System.Drawing.Size(309, 27);
+            this.cbDefault_ProcessCode.TabIndex = 11;
+            this.cbDefault_ProcessCode.Tag = "기본공정코드";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.btnCancle);
-            this.panel2.Controls.Add(this.btnSelect);
+            this.panel2.Controls.Add(this.btnInsert);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel2.Location = new System.Drawing.Point(0, 433);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(384, 49);
             this.panel2.TabIndex = 12;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(29, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 26);
-            this.textBox1.TabIndex = 16;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(29, 216);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(309, 26);
-            this.textBox2.TabIndex = 17;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(29, 293);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(309, 26);
-            this.textBox3.TabIndex = 18;
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.BackColor = System.Drawing.Color.DimGray;
-            this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSelect.Location = new System.Drawing.Point(160, 7);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(85, 35);
-            this.btnSelect.TabIndex = 99;
-            this.btnSelect.Text = "저장";
-            this.btnSelect.UseVisualStyleBackColor = false;
             // 
             // btnCancle
             // 
@@ -185,16 +154,51 @@ namespace Final
             this.btnCancle.TabIndex = 100;
             this.btnCancle.Text = "취소";
             this.btnCancle.UseVisualStyleBackColor = false;
+            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.BackColor = System.Drawing.Color.DimGray;
+            this.btnInsert.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnInsert.Location = new System.Drawing.Point(160, 7);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(85, 35);
+            this.btnInsert.TabIndex = 99;
+            this.btnInsert.Text = "저장";
+            this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // txtUser_Name
+            // 
+            this.txtUser_Name.Location = new System.Drawing.Point(28, 121);
+            this.txtUser_Name.Name = "txtUser_Name";
+            this.txtUser_Name.Size = new System.Drawing.Size(309, 26);
+            this.txtUser_Name.TabIndex = 16;
+            // 
+            // txtUser_ID
+            // 
+            this.txtUser_ID.Location = new System.Drawing.Point(29, 201);
+            this.txtUser_ID.Name = "txtUser_ID";
+            this.txtUser_ID.Size = new System.Drawing.Size(309, 26);
+            this.txtUser_ID.TabIndex = 17;
+            // 
+            // txtUser_Pwd
+            // 
+            this.txtUser_Pwd.Location = new System.Drawing.Point(29, 281);
+            this.txtUser_Pwd.Name = "txtUser_Pwd";
+            this.txtUser_Pwd.Size = new System.Drawing.Size(309, 26);
+            this.txtUser_Pwd.TabIndex = 18;
             // 
             // frm_MSS_CON_003_1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(384, 482);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUser_Pwd);
+            this.Controls.Add(this.txtUser_ID);
+            this.Controls.Add(this.txtUser_Name);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.txt_D_Process_Code);
+            this.Controls.Add(this.cbDefault_ProcessCode);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -205,6 +209,7 @@ namespace Final
             this.Name = "frm_MSS_CON_003_1";
             this.Tag = "사용자 등록";
             this.Text = "사용자등록";
+            this.Load += new System.EventHandler(this.frm_MSS_CON_003_1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -222,12 +227,12 @@ namespace Final
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.ComboBox txt_D_Process_Code;
+        private System.Windows.Forms.ComboBox cbDefault_ProcessCode;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtUser_Name;
+        private System.Windows.Forms.TextBox txtUser_ID;
+        private System.Windows.Forms.TextBox txtUser_Pwd;
         private System.Windows.Forms.Button btnCancle;
-        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.Button btnInsert;
     }
 }

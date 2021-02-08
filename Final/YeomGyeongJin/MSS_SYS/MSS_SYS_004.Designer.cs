@@ -34,13 +34,8 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.btnSelect = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpNotice_End = new System.Windows.Forms.DateTimePicker();
-            this.dtpNotice_Date = new System.Windows.Forms.DateTimePicker();
+            this.dtpNotice_Start = new System.Windows.Forms.DateTimePicker();
             this.dgvNotice = new System.Windows.Forms.DataGridView();
-            this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoticeStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoticeEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoticeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Notice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotice)).BeginInit();
@@ -53,7 +48,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.pnl.Controls.Add(this.btnSelect);
             this.pnl.Controls.Add(this.label4);
             this.pnl.Controls.Add(this.dtpNotice_End);
-            this.pnl.Controls.Add(this.dtpNotice_Date);
+            this.pnl.Controls.Add(this.dtpNotice_Start);
             this.pnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl.Location = new System.Drawing.Point(0, 0);
             this.pnl.Name = "pnl";
@@ -83,6 +78,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.btnSelect.TabIndex = 112;
             this.btnSelect.Text = "조회";
             this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // label4
             // 
@@ -102,58 +98,22 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.dtpNotice_End.Size = new System.Drawing.Size(200, 26);
             this.dtpNotice_End.TabIndex = 7;
             // 
-            // dtpNotice_Date
+            // dtpNotice_Start
             // 
-            this.dtpNotice_Date.Location = new System.Drawing.Point(14, 14);
-            this.dtpNotice_Date.Name = "dtpNotice_Date";
-            this.dtpNotice_Date.Size = new System.Drawing.Size(200, 26);
-            this.dtpNotice_Date.TabIndex = 6;
+            this.dtpNotice_Start.Location = new System.Drawing.Point(14, 14);
+            this.dtpNotice_Start.Name = "dtpNotice_Start";
+            this.dtpNotice_Start.Size = new System.Drawing.Size(200, 26);
+            this.dtpNotice_Start.TabIndex = 6;
             // 
             // dgvNotice
             // 
             this.dgvNotice.BackgroundColor = System.Drawing.Color.White;
             this.dgvNotice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNotice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.num,
-            this.NoticeStart,
-            this.NoticeEnd,
-            this.NoticeName,
-            this.Notice});
             this.dgvNotice.Location = new System.Drawing.Point(12, 105);
             this.dgvNotice.Name = "dgvNotice";
             this.dgvNotice.RowTemplate.Height = 23;
             this.dgvNotice.Size = new System.Drawing.Size(1320, 748);
             this.dgvNotice.TabIndex = 23;
-            // 
-            // num
-            // 
-            this.num.HeaderText = "공지사항번호";
-            this.num.Name = "num";
-            this.num.Width = 140;
-            // 
-            // NoticeStart
-            // 
-            this.NoticeStart.HeaderText = "공지사항시작일자";
-            this.NoticeStart.Name = "NoticeStart";
-            this.NoticeStart.Width = 160;
-            // 
-            // NoticeEnd
-            // 
-            this.NoticeEnd.HeaderText = "공지사항종료일자";
-            this.NoticeEnd.Name = "NoticeEnd";
-            this.NoticeEnd.Width = 160;
-            // 
-            // NoticeName
-            // 
-            this.NoticeName.HeaderText = "제목";
-            this.NoticeName.Name = "NoticeName";
-            this.NoticeName.Width = 150;
-            // 
-            // Notice
-            // 
-            this.Notice.HeaderText = "공지내역";
-            this.Notice.Name = "Notice";
-            this.Notice.Width = 500;
             // 
             // label6
             // 
@@ -177,6 +137,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.Name = "MSS_SYS_004";
             this.Tag = "공지사항등록";
             this.Text = "MSS_SYS_004";
+            this.Load += new System.EventHandler(this.MSS_SYS_004_Load);
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotice)).EndInit();
@@ -190,15 +151,10 @@ namespace Final.YeomGyeongJin.MSS_SYS
         private System.Windows.Forms.Panel pnl;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpNotice_End;
-        private System.Windows.Forms.DateTimePicker dtpNotice_Date;
+        private System.Windows.Forms.DateTimePicker dtpNotice_Start;
         private System.Windows.Forms.Button btnNotice_Insert;
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.DataGridView dgvNotice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn num;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoticeStart;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoticeEnd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoticeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Notice;
         private System.Windows.Forms.Label label6;
     }
 }
