@@ -48,7 +48,7 @@ namespace Final.LeeYounggyu
             this.dgvItemLevel = new System.Windows.Forms.DataGridView();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbLevelGroup = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -144,6 +144,7 @@ namespace Final.LeeYounggyu
             this.button2.TabIndex = 35;
             this.button2.Text = "저장";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label9
             // 
@@ -239,6 +240,7 @@ namespace Final.LeeYounggyu
             this.dgvItemLevel.RowTemplate.Height = 23;
             this.dgvItemLevel.Size = new System.Drawing.Size(1340, 483);
             this.dgvItemLevel.TabIndex = 98;
+            this.dgvItemLevel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemLevel_CellClick);
             this.dgvItemLevel.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemLevel_CellDoubleClick);
             // 
             // splitter1
@@ -263,14 +265,15 @@ namespace Final.LeeYounggyu
             this.label1.TabIndex = 103;
             this.label1.Text = "품목명";
             // 
-            // comboBox1
+            // cbLevelGroup
             // 
-            this.comboBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(78, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 104;
+            this.cbLevelGroup.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbLevelGroup.FormattingEnabled = true;
+            this.cbLevelGroup.Location = new System.Drawing.Point(78, 24);
+            this.cbLevelGroup.Name = "cbLevelGroup";
+            this.cbLevelGroup.Size = new System.Drawing.Size(121, 23);
+            this.cbLevelGroup.TabIndex = 104;
+            this.cbLevelGroup.SelectedIndexChanged += new System.EventHandler(this.cbLevelGroup_SelectedIndexChanged);
             // 
             // btnSearch
             // 
@@ -311,7 +314,7 @@ namespace Final.LeeYounggyu
             this.lblLevel.BackColor = System.Drawing.Color.White;
             this.lblLevel.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblLevel.ForeColor = System.Drawing.Color.Black;
-            this.lblLevel.Location = new System.Drawing.Point(277, 27);
+            this.lblLevel.Location = new System.Drawing.Point(282, 27);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(0, 17);
             this.lblLevel.TabIndex = 108;
@@ -323,7 +326,7 @@ namespace Final.LeeYounggyu
             this.ClientSize = new System.Drawing.Size(1341, 732);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbLevelGroup);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
@@ -365,7 +368,7 @@ namespace Final.LeeYounggyu
         private System.Windows.Forms.DataGridView dgvItemLevel;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbLevelGroup;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;

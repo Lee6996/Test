@@ -43,7 +43,6 @@
     <Compile Include="GVHistoryVO.cs" />
     <Compile Include="GVStatusVO.cs" />
     <Compile Include="ItemInfoVO.cs" />
-    <Compile Include="ItemInfoVO.cs" />
     <Compile Include="ProcessVO.cs" />
     <Compile Include="Production_History_DayVO.cs" />
     <Compile Include="ReceivingListVO.cs" />

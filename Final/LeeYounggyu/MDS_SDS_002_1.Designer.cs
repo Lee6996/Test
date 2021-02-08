@@ -30,29 +30,28 @@ namespace Final.LeeYounggyu
         private void InitializeComponent()
         {
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.cbLevel5 = new System.Windows.Forms.ComboBox();
+            this.cbLevel4 = new System.Windows.Forms.ComboBox();
+            this.cbLevel3 = new System.Windows.Forms.ComboBox();
+            this.cbLevel2 = new System.Windows.Forms.ComboBox();
+            this.cbLevel1 = new System.Windows.Forms.ComboBox();
+            this.nudrgdv = new System.Windows.Forms.NumericUpDown();
+            this.nushotper = new System.Windows.Forms.NumericUpDown();
+            this.nulinper = new System.Windows.Forms.NumericUpDown();
+            this.nubatch = new System.Windows.Forms.NumericUpDown();
+            this.nuhour = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.nuStock = new System.Windows.Forms.NumericUpDown();
+            this.nucavity = new System.Windows.Forms.NumericUpDown();
+            this.cbType = new System.Windows.Forms.ComboBox();
+            this.nuunit = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSpec = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -60,7 +59,6 @@ namespace Final.LeeYounggyu
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -74,16 +72,17 @@ namespace Final.LeeYounggyu
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            this.lblManager = new System.Windows.Forms.Label();
+            this.lblDay = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nudrgdv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nushotper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nulinper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nubatch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuhour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nucavity)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,17 +98,18 @@ namespace Final.LeeYounggyu
             this.button2.Text = "취소";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(238, 407);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 62);
-            this.button1.TabIndex = 152;
-            this.button1.Text = "등록";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.DimGray;
+            this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSave.Location = new System.Drawing.Point(230, 407);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(144, 62);
+            this.btnSave.TabIndex = 152;
+            this.btnSave.Text = "등록";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label22
             // 
@@ -121,98 +121,90 @@ namespace Final.LeeYounggyu
             this.label22.TabIndex = 151;
             this.label22.Text = "* PR:완제품PT:자재SA:반제품";
             // 
-            // comboBox6
+            // cbLevel5
             // 
-            this.comboBox6.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(105, 438);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 29);
-            this.comboBox6.TabIndex = 150;
+            this.cbLevel5.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbLevel5.FormattingEnabled = true;
+            this.cbLevel5.Location = new System.Drawing.Point(407, 365);
+            this.cbLevel5.Name = "cbLevel5";
+            this.cbLevel5.Size = new System.Drawing.Size(121, 29);
+            this.cbLevel5.TabIndex = 150;
             // 
-            // comboBox5
+            // cbLevel4
             // 
-            this.comboBox5.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(105, 404);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 29);
-            this.comboBox5.TabIndex = 149;
+            this.cbLevel4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbLevel4.FormattingEnabled = true;
+            this.cbLevel4.Location = new System.Drawing.Point(407, 331);
+            this.cbLevel4.Name = "cbLevel4";
+            this.cbLevel4.Size = new System.Drawing.Size(121, 29);
+            this.cbLevel4.TabIndex = 149;
             // 
-            // comboBox4
+            // cbLevel3
             // 
-            this.comboBox4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(105, 368);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 29);
-            this.comboBox4.TabIndex = 148;
+            this.cbLevel3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbLevel3.FormattingEnabled = true;
+            this.cbLevel3.Location = new System.Drawing.Point(105, 368);
+            this.cbLevel3.Name = "cbLevel3";
+            this.cbLevel3.Size = new System.Drawing.Size(121, 29);
+            this.cbLevel3.TabIndex = 148;
             // 
-            // comboBox3
+            // cbLevel2
             // 
-            this.comboBox3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(105, 334);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 29);
-            this.comboBox3.TabIndex = 147;
+            this.cbLevel2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbLevel2.FormattingEnabled = true;
+            this.cbLevel2.Location = new System.Drawing.Point(105, 334);
+            this.cbLevel2.Name = "cbLevel2";
+            this.cbLevel2.Size = new System.Drawing.Size(121, 29);
+            this.cbLevel2.TabIndex = 147;
             // 
-            // comboBox2
+            // cbLevel1
             // 
-            this.comboBox2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(105, 300);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 29);
-            this.comboBox2.TabIndex = 146;
+            this.cbLevel1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbLevel1.FormattingEnabled = true;
+            this.cbLevel1.Location = new System.Drawing.Point(105, 300);
+            this.cbLevel1.Name = "cbLevel1";
+            this.cbLevel1.Size = new System.Drawing.Size(121, 29);
+            this.cbLevel1.TabIndex = 146;
             // 
-            // numericUpDown10
+            // nudrgdv
             // 
-            this.numericUpDown10.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown10.Location = new System.Drawing.Point(407, 329);
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(121, 29);
-            this.numericUpDown10.TabIndex = 145;
+            this.nudrgdv.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nudrgdv.Location = new System.Drawing.Point(406, 295);
+            this.nudrgdv.Name = "nudrgdv";
+            this.nudrgdv.Size = new System.Drawing.Size(121, 29);
+            this.nudrgdv.TabIndex = 144;
             // 
-            // numericUpDown9
+            // nushotper
             // 
-            this.numericUpDown9.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown9.Location = new System.Drawing.Point(406, 295);
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(121, 29);
-            this.numericUpDown9.TabIndex = 144;
+            this.nushotper.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nushotper.Location = new System.Drawing.Point(407, 261);
+            this.nushotper.Name = "nushotper";
+            this.nushotper.Size = new System.Drawing.Size(121, 29);
+            this.nushotper.TabIndex = 143;
             // 
-            // numericUpDown8
+            // nulinper
             // 
-            this.numericUpDown8.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown8.Location = new System.Drawing.Point(407, 261);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(121, 29);
-            this.numericUpDown8.TabIndex = 143;
+            this.nulinper.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nulinper.Location = new System.Drawing.Point(407, 227);
+            this.nulinper.Name = "nulinper";
+            this.nulinper.Size = new System.Drawing.Size(121, 29);
+            this.nulinper.TabIndex = 142;
             // 
-            // numericUpDown7
+            // nubatch
             // 
-            this.numericUpDown7.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown7.Location = new System.Drawing.Point(407, 227);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(121, 29);
-            this.numericUpDown7.TabIndex = 142;
+            this.nubatch.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nubatch.Location = new System.Drawing.Point(407, 193);
+            this.nubatch.Name = "nubatch";
+            this.nubatch.Size = new System.Drawing.Size(121, 29);
+            this.nubatch.TabIndex = 141;
             // 
-            // numericUpDown6
+            // nuhour
             // 
-            this.numericUpDown6.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown6.Location = new System.Drawing.Point(407, 193);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(121, 29);
-            this.numericUpDown6.TabIndex = 141;
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown5.Location = new System.Drawing.Point(407, 159);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(121, 29);
-            this.numericUpDown5.TabIndex = 140;
+            this.nuhour.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nuhour.Location = new System.Drawing.Point(407, 159);
+            this.nuhour.Name = "nuhour";
+            this.nuhour.Size = new System.Drawing.Size(121, 29);
+            this.nuhour.TabIndex = 140;
             // 
             // numericUpDown4
             // 
@@ -230,38 +222,38 @@ namespace Final.LeeYounggyu
             this.numericUpDown3.Size = new System.Drawing.Size(120, 29);
             this.numericUpDown3.TabIndex = 138;
             // 
-            // numericUpDown2
+            // nuStock
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown2.Location = new System.Drawing.Point(106, 158);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 29);
-            this.numericUpDown2.TabIndex = 137;
+            this.nuStock.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nuStock.Location = new System.Drawing.Point(106, 158);
+            this.nuStock.Name = "nuStock";
+            this.nuStock.Size = new System.Drawing.Size(120, 29);
+            this.nuStock.TabIndex = 137;
             // 
-            // numericUpDown1
+            // nucavity
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown1.Location = new System.Drawing.Point(106, 263);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 29);
-            this.numericUpDown1.TabIndex = 136;
+            this.nucavity.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nucavity.Location = new System.Drawing.Point(106, 263);
+            this.nucavity.Name = "nucavity";
+            this.nucavity.Size = new System.Drawing.Size(120, 29);
+            this.nucavity.TabIndex = 136;
             // 
-            // comboBox1
+            // cbType
             // 
-            this.comboBox1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(106, 85);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 29);
-            this.comboBox1.TabIndex = 135;
+            this.cbType.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbType.FormattingEnabled = true;
+            this.cbType.Location = new System.Drawing.Point(106, 85);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(121, 29);
+            this.cbType.TabIndex = 135;
             // 
-            // textBox4
+            // nuunit
             // 
-            this.textBox4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox4.Location = new System.Drawing.Point(406, 117);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(120, 29);
-            this.textBox4.TabIndex = 134;
+            this.nuunit.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nuunit.Location = new System.Drawing.Point(406, 117);
+            this.nuunit.Name = "nuunit";
+            this.nuunit.Size = new System.Drawing.Size(120, 29);
+            this.nuunit.TabIndex = 134;
             // 
             // label21
             // 
@@ -273,29 +265,29 @@ namespace Final.LeeYounggyu
             this.label21.TabIndex = 133;
             this.label21.Text = "단위";
             // 
-            // textBox3
+            // txtSpec
             // 
-            this.textBox3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(406, 82);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 29);
-            this.textBox3.TabIndex = 132;
+            this.txtSpec.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtSpec.Location = new System.Drawing.Point(406, 82);
+            this.txtSpec.Name = "txtSpec";
+            this.txtSpec.Size = new System.Drawing.Size(121, 29);
+            this.txtSpec.TabIndex = 132;
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(406, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 29);
-            this.textBox2.TabIndex = 131;
+            this.txtName.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtName.Location = new System.Drawing.Point(406, 47);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(120, 29);
+            this.txtName.TabIndex = 131;
             // 
-            // textBox1
+            // txtCode
             // 
-            this.textBox1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(106, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 29);
-            this.textBox1.TabIndex = 130;
+            this.txtCode.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCode.Location = new System.Drawing.Point(106, 50);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(120, 29);
+            this.txtCode.TabIndex = 130;
             // 
             // label20
             // 
@@ -322,7 +314,7 @@ namespace Final.LeeYounggyu
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(36, 441);
+            this.label19.Location = new System.Drawing.Point(338, 368);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(58, 21);
             this.label19.TabIndex = 128;
@@ -332,7 +324,7 @@ namespace Final.LeeYounggyu
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label18.Location = new System.Drawing.Point(36, 407);
+            this.label18.Location = new System.Drawing.Point(338, 334);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 21);
             this.label18.TabIndex = 127;
@@ -367,16 +359,6 @@ namespace Final.LeeYounggyu
             this.label15.Size = new System.Drawing.Size(58, 21);
             this.label15.TabIndex = 124;
             this.label15.Text = "Level1";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(247, 334);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(150, 21);
-            this.label14.TabIndex = 123;
-            this.label14.Text = "소성대차 기본 수량";
             // 
             // label13
             // 
@@ -502,12 +484,32 @@ namespace Final.LeeYounggyu
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.lblManager);
+            this.panel1.Controls.Add(this.lblDay);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(534, 40);
             this.panel1.TabIndex = 110;
+            // 
+            // lblManager
+            // 
+            this.lblManager.AutoSize = true;
+            this.lblManager.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblManager.Location = new System.Drawing.Point(215, 9);
+            this.lblManager.Name = "lblManager";
+            this.lblManager.Size = new System.Drawing.Size(0, 21);
+            this.lblManager.TabIndex = 154;
+            // 
+            // lblDay
+            // 
+            this.lblDay.AutoSize = true;
+            this.lblDay.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblDay.Location = new System.Drawing.Point(386, 9);
+            this.lblDay.Name = "lblDay";
+            this.lblDay.Size = new System.Drawing.Size(0, 21);
+            this.lblDay.TabIndex = 154;
             // 
             // MDS_SDS_002_1
             // 
@@ -516,36 +518,34 @@ namespace Final.LeeYounggyu
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(534, 475);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.numericUpDown10);
-            this.Controls.Add(this.numericUpDown9);
-            this.Controls.Add(this.numericUpDown8);
-            this.Controls.Add(this.numericUpDown7);
-            this.Controls.Add(this.numericUpDown6);
-            this.Controls.Add(this.numericUpDown5);
+            this.Controls.Add(this.cbLevel5);
+            this.Controls.Add(this.cbLevel4);
+            this.Controls.Add(this.cbLevel3);
+            this.Controls.Add(this.cbLevel2);
+            this.Controls.Add(this.cbLevel1);
+            this.Controls.Add(this.nudrgdv);
+            this.Controls.Add(this.nushotper);
+            this.Controls.Add(this.nulinper);
+            this.Controls.Add(this.nubatch);
+            this.Controls.Add(this.nuhour);
             this.Controls.Add(this.numericUpDown4);
             this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.nuStock);
+            this.Controls.Add(this.nucavity);
+            this.Controls.Add(this.cbType);
+            this.Controls.Add(this.nuunit);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSpec);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtCode);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -561,16 +561,16 @@ namespace Final.LeeYounggyu
             this.Controls.Add(this.panel1);
             this.Name = "MDS_SDS_002_1";
             this.Text = "MDS_SDS_002_1";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            this.Load += new System.EventHandler(this.MDS_SDS_002_1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nudrgdv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nushotper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nulinper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nubatch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuhour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nucavity)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -581,29 +581,28 @@ namespace Final.LeeYounggyu
         #endregion
 
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.ComboBox cbLevel5;
+        private System.Windows.Forms.ComboBox cbLevel4;
+        private System.Windows.Forms.ComboBox cbLevel3;
+        private System.Windows.Forms.ComboBox cbLevel2;
+        private System.Windows.Forms.ComboBox cbLevel1;
+        private System.Windows.Forms.NumericUpDown nudrgdv;
+        private System.Windows.Forms.NumericUpDown nushotper;
+        private System.Windows.Forms.NumericUpDown nulinper;
+        private System.Windows.Forms.NumericUpDown nubatch;
+        private System.Windows.Forms.NumericUpDown nuhour;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.NumericUpDown nuStock;
+        private System.Windows.Forms.NumericUpDown nucavity;
+        private System.Windows.Forms.ComboBox cbType;
+        private System.Windows.Forms.TextBox nuunit;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSpec;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label19;
@@ -611,7 +610,6 @@ namespace Final.LeeYounggyu
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -625,5 +623,7 @@ namespace Final.LeeYounggyu
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblDay;
+        private System.Windows.Forms.Label lblManager;
     }
 }
