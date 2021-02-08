@@ -17,14 +17,13 @@ namespace FinalDAC
 
         public UserGroupDAC()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString);
+            conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
             conn.Open();
         }
         public List<UserGroupVO> SelectUserGroupInfo(string usergroup_Name)
         {
             string sQuery = @"select UserGroup_Code, UserGroup_Name, Admin, case when Use_YN='Y' then 1 else 0 end Use_YN, Ins_Date, Ins_Emp, Up_Date, Up_Emp
-
-from UserGroup_Master where 1 = 1  ";
+                                from UserGroup_Master where 1 = 1  ";
 
             if (!string.IsNullOrEmpty(usergroup_Name))
                 sQuery += " and UserGroup_Name Like @groupName ";
@@ -78,6 +77,22 @@ from UserGroup_Master where 1 = 1  ";
 
                     return true;
                 }
+            }
+        }
+
+        public bool UpdateUserGroup(UserGroupVO vo)
+        {
+            string sQuery = @"update UserGroup_Master set Use_YN = @Use_YN where UserGroup_Code = @UserGroup_Code";
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
+            {
+                cmd.Parameters.AddWithValue("@UserGroup_Code", vo.UserGroup_Code);
+                cmd.Parameters.AddWithValue("@Use_YN", (vo.Use_YN == 1) ? "Y" : "N");
+
+                int iCnt = Convert.ToInt32(cmd.ExecuteScalar());
+                if (iCnt > 0)
+                    return true;
+                else
+                    return false;
             }
         }
         public DataTable SelectUserGroupNameBinding()

@@ -39,6 +39,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FinalEnc">
+      <HintPath>..\Final\EncLibrary\FinalEnc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
@@ -49,6 +52,8 @@
   <ItemGroup>
     <Compile Include="Helper.cs" />
     <Compile Include="PRM_PRF_DAC.cs" />
+    <Compile Include="ScreenDAC.cs" />
+    <Compile Include="SysNoticeDAC.cs" />
     <Compile Include="UserDAC.cs" />
     <Compile Include="UserGroupDAC.cs" />
   </ItemGroup>
@@ -57,6 +62,9 @@
       <Project>{e0737b4c-95a5-4fb4-a26f-0f1edb71a8c3}</Project>
       <Name>FinalVO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

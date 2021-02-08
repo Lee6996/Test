@@ -554,6 +554,8 @@
     <Compile Include="YeomGyeongJin\MSS_SYS\MSS_SYS_004.Designer.cs">
       <DependentUpon>MSS_SYS_004.cs</DependentUpon>
     </Compile>
+    <Compile Include="YeomGyeongJin\MSS_SYS\ScreenService.cs" />
+    <Compile Include="YeomGyeongJin\MSS_SYS\SysNoticeService.cs" />
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_1.resx">
       <DependentUpon>frm_KPI_RPT_1.cs</DependentUpon>
     </EmbeddedResource>

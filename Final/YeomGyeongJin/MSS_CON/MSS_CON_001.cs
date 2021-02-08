@@ -13,13 +13,11 @@ namespace Final.YeomGyeongJin.MSS_CON
 {
     public partial class MSS_CON_001 : Form
     {
-        UserGroupVO userGroupVO;
-        DataTable dt = null;
         public MSS_CON_001()
         {
             InitializeComponent();
         }
-
+        
         private void MSS_CON_001_Load(object sender, EventArgs e)
         {
             UserGroupService service = new UserGroupService();
@@ -28,9 +26,18 @@ namespace Final.YeomGyeongJin.MSS_CON
             CommonUtil.AddGridTextColumn(dgvUser, "사용자그룹코드", "UserGroup_Code", 220);
             CommonUtil.AddGridTextColumn(dgvUser, "사용자그룹명", "UserGroup_Name", 220);
             CommonUtil.AddGridTextColumn(dgvUser, "입력일자", "Ins_Date", 150);
-            CommonUtil.AddGridTextColumn(dgvUser, "사용여부", "Use_YN", 150);
+            CommonUtil.AddGridTextColumn(dgvUser, "사용여부", "Use_YN", 150, visibility:false);
 
-            
+            DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn(false);
+            col.Name = "chk";
+            col.HeaderText = "사용여부";
+            col.Width = 100;
+            col.TrueValue = 1;
+            col.FalseValue = 0;
+            col.DataPropertyName = "Use_YN";
+            this.dgvUser.Columns.Add(col);
+
+            //dgvUser.CellClick += dgvUser_CellClick;
 
             //콤보박스에 유저 그룹 정보 바인딩
             DataTable dtName = service.UserGroupNameSelectBinding();
@@ -47,6 +54,27 @@ namespace Final.YeomGyeongJin.MSS_CON
 
             DataLoad("");
         }
+
+        private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4)
+            {
+                //dgvUser.EndEdit();
+
+                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)dgvUser.Rows[e.RowIndex].Cells[4];
+                int useyn = (Convert.ToInt32(chk.Value) == 1) ? 0: 1;
+
+                UserGroupVO vo = new UserGroupVO
+                {
+                    UserGroup_Code = dgvUser.Rows[e.RowIndex].Cells[0].Value.ToString(),
+                    Use_YN = useyn
+                };
+
+                UserGroupService service = new UserGroupService();
+                service.UpdateUserGroup(vo);
+            }
+        }
+
         private void DataLoad(string groupName)
         {
             try

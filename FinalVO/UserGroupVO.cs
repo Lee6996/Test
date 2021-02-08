@@ -19,7 +19,7 @@ namespace FinalVO
         //관리자권한 여부
         public string Admin { get; set; }
         //사용여부
-        public string Use_YN { get; set; }
+        public int Use_YN { get; set; }
         //최초입력일자
         public DateTime Ins_Date { get; set; }
         //최초입력자

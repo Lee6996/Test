@@ -18,7 +18,7 @@ namespace FinalDAC
         #region Connection Open
         public PRM_PRF_DAC()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["team2"].ConnectionString);
+            conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
             conn.Open();
         }
         #endregion

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,5 +22,23 @@ namespace Final.YeomGyeongJin.MSS_CON
         {
 
         }
+
+        private void DataLoad(string groupName)
+        {
+            try
+            {
+                UserGroupService service = new UserGroupService();
+                List<UserGroupVO> list = service.UserGroupSelectInfo(groupName);
+
+                dgvUser.DataSource = list;
+                dgvUser.ClearSelection();
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
     }
 }

@@ -48,12 +48,14 @@ namespace Final
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnGroup_Select = new System.Windows.Forms.Button();
             this.txtGroup_Code = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbGroup_Name = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnScreen_Select = new System.Windows.Forms.Button();
             this.txtScreen = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -62,8 +64,6 @@ namespace Final
             this.button1 = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnGroup_Select = new System.Windows.Forms.Button();
-            this.btnScreen_Select = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdd_Screen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -237,6 +237,18 @@ namespace Final
             this.label2.TabIndex = 1;
             this.label2.Text = "그룹";
             // 
+            // btnGroup_Select
+            // 
+            this.btnGroup_Select.BackColor = System.Drawing.Color.DimGray;
+            this.btnGroup_Select.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnGroup_Select.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGroup_Select.Location = new System.Drawing.Point(565, 5);
+            this.btnGroup_Select.Name = "btnGroup_Select";
+            this.btnGroup_Select.Size = new System.Drawing.Size(75, 29);
+            this.btnGroup_Select.TabIndex = 98;
+            this.btnGroup_Select.Text = "조회";
+            this.btnGroup_Select.UseVisualStyleBackColor = false;
+            // 
             // txtGroup_Code
             // 
             this.txtGroup_Code.Location = new System.Drawing.Point(376, 7);
@@ -304,6 +316,18 @@ namespace Final
             this.label5.TabIndex = 2;
             this.label5.Text = "화면";
             // 
+            // btnScreen_Select
+            // 
+            this.btnScreen_Select.BackColor = System.Drawing.Color.DimGray;
+            this.btnScreen_Select.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnScreen_Select.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnScreen_Select.Location = new System.Drawing.Point(565, 8);
+            this.btnScreen_Select.Name = "btnScreen_Select";
+            this.btnScreen_Select.Size = new System.Drawing.Size(75, 29);
+            this.btnScreen_Select.TabIndex = 99;
+            this.btnScreen_Select.Text = "조회";
+            this.btnScreen_Select.UseVisualStyleBackColor = false;
+            // 
             // txtScreen
             // 
             this.txtScreen.Location = new System.Drawing.Point(188, 9);
@@ -355,6 +379,7 @@ namespace Final
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(85, 35);
             this.btnSelect.TabIndex = 98;
+            this.btnSelect.Tag = "사용자그룹 추가,수정,삭제 권한설정";
             this.btnSelect.Text = "저장";
             this.btnSelect.UseVisualStyleBackColor = false;
             // 
@@ -393,30 +418,6 @@ namespace Final
             this.btnDelete.TabIndex = 101;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnGroup_Select
-            // 
-            this.btnGroup_Select.BackColor = System.Drawing.Color.DimGray;
-            this.btnGroup_Select.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnGroup_Select.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnGroup_Select.Location = new System.Drawing.Point(565, 5);
-            this.btnGroup_Select.Name = "btnGroup_Select";
-            this.btnGroup_Select.Size = new System.Drawing.Size(75, 29);
-            this.btnGroup_Select.TabIndex = 98;
-            this.btnGroup_Select.Text = "조회";
-            this.btnGroup_Select.UseVisualStyleBackColor = false;
-            // 
-            // btnScreen_Select
-            // 
-            this.btnScreen_Select.BackColor = System.Drawing.Color.DimGray;
-            this.btnScreen_Select.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnScreen_Select.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnScreen_Select.Location = new System.Drawing.Point(565, 8);
-            this.btnScreen_Select.Name = "btnScreen_Select";
-            this.btnScreen_Select.Size = new System.Drawing.Size(75, 29);
-            this.btnScreen_Select.TabIndex = 99;
-            this.btnScreen_Select.Text = "조회";
-            this.btnScreen_Select.UseVisualStyleBackColor = false;
             // 
             // frm_MSS_CON_002_1
             // 
