@@ -188,6 +188,32 @@ namespace FinalDAC
                 return list;
             }
         }
+        
+        //Process
+        public List<ProcessVO> SelectProcess()
+        {
+            string sql = " SELECT * from Process_Master";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ProcessVO> list = Helper.DataReaderMapToList<ProcessVO>(reader);
 
+                conn.Close();
+                return list;
+            }
+        }
+        //WorkCenter
+        public List<WorkCenterVO> SelectWorkCenter()
+        {
+            string sql = " SELECT * from WorkCenter_Master";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkCenterVO> list = Helper.DataReaderMapToList<WorkCenterVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
     }
 }

@@ -31,28 +31,64 @@ namespace Final.KPI_RPT
         {
             this.panel5 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_KPI_MONTH = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtWCodeText = new System.Windows.Forms.TextBox();
+            this.txtPCodeText = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_KPI_MONTH)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.txtWCodeText);
+            this.panel4.Controls.Add(this.txtPCodeText);
+            this.panel4.Controls.SetChildIndex(this.label2, 0);
+            this.panel4.Controls.SetChildIndex(this.label3, 0);
+            this.panel4.Controls.SetChildIndex(this.dateTimePicker1, 0);
+            this.panel4.Controls.SetChildIndex(this.dateTimePicker2, 0);
+            this.panel4.Controls.SetChildIndex(this.label4, 0);
+            this.panel4.Controls.SetChildIndex(this.textBox1, 0);
+            this.panel4.Controls.SetChildIndex(this.button22, 0);
+            this.panel4.Controls.SetChildIndex(this.btn_Process, 0);
+            this.panel4.Controls.SetChildIndex(this.label16, 0);
+            this.panel4.Controls.SetChildIndex(this.textBox6, 0);
+            this.panel4.Controls.SetChildIndex(this.btn_WorkCenter, 0);
+            this.panel4.Controls.SetChildIndex(this.txtPCodeText, 0);
+            this.panel4.Controls.SetChildIndex(this.txtWCodeText, 0);
             // 
             // label2
             // 
             this.label2.Size = new System.Drawing.Size(126, 18);
             this.label2.Text = "조회조건 : 생산월";
             // 
+            // btn_WorkCenter
+            // 
+            this.btn_WorkCenter.Click += new System.EventHandler(this.btn_WorkCenter_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(1144, 25);
+            // 
+            // btn_Process
+            // 
+            this.btn_Process.Click += new System.EventHandler(this.btn_Process_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1106, 12);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel5.Controls.Add(this.label15);
-            this.panel5.Controls.Add(this.dataGridView1);
+            this.panel5.Controls.Add(this.dgv_KPI_MONTH);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 67);
@@ -70,18 +106,18 @@ namespace Final.KPI_RPT
             this.label15.Text = "공정 - 작업장 - 품목 - 당월(목표량/생산량/생산시간/달성율/달성율가동율/일일생산량/생산일수) - 전월(목표량/생산량/생산시간/달성율/달성율가" +
     "동률/일일생산량/생산일수/전월대비증감량)";
             // 
-            // dataGridView1
+            // dgv_KPI_MONTH
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_KPI_MONTH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 45);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1248, 682);
-            this.dataGridView1.TabIndex = 1;
+            this.dgv_KPI_MONTH.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dgv_KPI_MONTH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_KPI_MONTH.Location = new System.Drawing.Point(6, 45);
+            this.dgv_KPI_MONTH.Name = "dgv_KPI_MONTH";
+            this.dgv_KPI_MONTH.RowTemplate.Height = 23;
+            this.dgv_KPI_MONTH.Size = new System.Drawing.Size(1248, 682);
+            this.dgv_KPI_MONTH.TabIndex = 1;
             // 
             // panel6
             // 
@@ -120,6 +156,20 @@ namespace Final.KPI_RPT
             this.label5.TabIndex = 0;
             this.label5.Text = "조회내역";
             // 
+            // txtWCodeText
+            // 
+            this.txtWCodeText.Location = new System.Drawing.Point(783, 22);
+            this.txtWCodeText.Name = "txtWCodeText";
+            this.txtWCodeText.Size = new System.Drawing.Size(100, 21);
+            this.txtWCodeText.TabIndex = 16;
+            // 
+            // txtPCodeText
+            // 
+            this.txtPCodeText.Location = new System.Drawing.Point(538, 23);
+            this.txtPCodeText.Name = "txtPCodeText";
+            this.txtPCodeText.Size = new System.Drawing.Size(100, 21);
+            this.txtPCodeText.TabIndex = 15;
+            // 
             // frm_KPI_RPT_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -127,13 +177,14 @@ namespace Final.KPI_RPT
             this.Controls.Add(this.panel5);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frm_KPI_RPT_2";
+            this.Load += new System.EventHandler(this.frm_KPI_RPT_2_Load);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_KPI_MONTH)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -147,10 +198,12 @@ namespace Final.KPI_RPT
 
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_KPI_MONTH;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtWCodeText;
+        private System.Windows.Forms.TextBox txtPCodeText;
     }
 }

@@ -30,6 +30,8 @@ namespace Final.PRM_RPT
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -37,6 +39,7 @@ namespace Final.PRM_RPT
             this.label5 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +101,7 @@ namespace Final.PRM_RPT
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -105,6 +109,23 @@ namespace Final.PRM_RPT
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1266, 739);
             this.panel5.TabIndex = 18;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.documentViewer1);
+            this.panel1.Location = new System.Drawing.Point(6, 48);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1257, 688);
+            this.panel1.TabIndex = 11;
+            // 
+            // documentViewer1
+            // 
+            this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.documentViewer1.IsMetric = true;
+            this.documentViewer1.Location = new System.Drawing.Point(0, 0);
+            this.documentViewer1.Name = "documentViewer1";
+            this.documentViewer1.Size = new System.Drawing.Size(1257, 688);
+            this.documentViewer1.TabIndex = 0;
             // 
             // label1
             // 
@@ -166,6 +187,7 @@ namespace Final.PRM_RPT
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -183,5 +205,7 @@ namespace Final.PRM_RPT
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
     }
 }
