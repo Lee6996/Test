@@ -221,6 +221,7 @@
     <Compile Include="LeeYounggyu\MDS_SDS_004_1.Designer.cs">
       <DependentUpon>MDS_SDS_004_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LeeYounggyu\UserStatic.cs" />
     <Compile Include="MDI_Parent\frm_MDIParent_1Grid.cs">
       <SubType>Form</SubType>
     </Compile>
