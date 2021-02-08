@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FinalDAC;
+using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,12 @@ using System.Threading.Tasks;
 
 namespace Final.Service
 {
-    class WorkCenterService
+    public class WorkCenterService
     {
+        SelectDAC dac;
+        public List<WorkCenterVO> SelectWorkCenter()
+        {
+            return dac.SelectWorkCenter();
+        }
     }
 }

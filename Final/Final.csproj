@@ -101,6 +101,18 @@
     <Compile Include="KPI_RPT\frm_KPI_RPT_4.Designer.cs">
       <DependentUpon>frm_KPI_RPT_4.cs</DependentUpon>
     </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_P.Designer.cs">
+      <DependentUpon>frm_KPI_RPT_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_W.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_W.Designer.cs">
+      <DependentUpon>frm_KPI_RPT_W.cs</DependentUpon>
+    </Compile>
     <Compile Include="LeeYounggyu\MDS_CDS_002_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,18 +245,6 @@
     </Compile>
     <Compile Include="MDI_Parent\FinalMDIParent.Designer.cs">
       <DependentUpon>FinalMDIParent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT-1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT-1.Designer.cs">
-      <DependentUpon>frm_KPI_RPT-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT-2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT-2.Designer.cs">
-      <DependentUpon>frm_KPI_RPT-2.cs</DependentUpon>
     </Compile>
     <Compile Include="PPS_MLD\frm_PPS_MLD_001.cs">
       <SubType>Form</SubType>
@@ -560,6 +560,12 @@
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_4.resx">
       <DependentUpon>frm_KPI_RPT_4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_P.resx">
+      <DependentUpon>frm_KPI_RPT_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_W.resx">
+      <DependentUpon>frm_KPI_RPT_W.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LeeYounggyu\MDS_CDS_002_1.resx">
       <DependentUpon>MDS_CDS_002_1.cs</DependentUpon>
     </EmbeddedResource>
@@ -625,12 +631,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDI_Parent\FinalMDIParent.resx">
       <DependentUpon>FinalMDIParent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT-1.resx">
-      <DependentUpon>frm_KPI_RPT-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT-2.resx">
-      <DependentUpon>frm_KPI_RPT-2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PPS_MLD\frm_PPS_MLD_001.resx">
       <DependentUpon>frm_PPS_MLD_001.cs</DependentUpon>
