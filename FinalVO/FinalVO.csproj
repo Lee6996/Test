@@ -40,11 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceManagementVO.cs" />
-<<<<<<< HEAD
-    <Compile Include="Class1.cs" />
     <Compile Include="ScreenVO.cs" />
     <Compile Include="SysNoticeVO.cs" />
-=======
     <Compile Include="GVHistoryVO.cs" />
     <Compile Include="GVStatusVO.cs" />
     <Compile Include="ItemInfoVO.cs" />
@@ -55,7 +52,6 @@
     <Compile Include="WorkCenterVO.cs" />
     <Compile Include="WorkHistoryVO.cs" />
     <Compile Include="GoodsInHistoryVO.cs" />
->>>>>>> a1fc3fdcb883a1a30a79a41ab2c74e35746840c2
     <Compile Include="UserGroupVO.cs" />
     <Compile Include="UserVO.cs" />
     <Compile Include="WorkOrderVO.cs" />
