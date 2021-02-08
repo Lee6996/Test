@@ -13,9 +13,9 @@ namespace FinalVO
         //사용자명
         public string User_Name { get; set; }
         //사용자 패스워드
-        public string User_PW        { get; set; }
+        public string User_PW { get; set; }
         //거래처코드
-        public string Customer_Code        { get; set; }
+        public string Customer_Code { get; set; }
         //사용자구분
         public string User_Type { get; set; }
         //기본화면코드

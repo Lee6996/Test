@@ -52,8 +52,12 @@
   <ItemGroup>
     <Compile Include="Helper.cs" />
     <Compile Include="PRM_PRF_DAC.cs" />
+<<<<<<< HEAD
     <Compile Include="ScreenDAC.cs" />
     <Compile Include="SysNoticeDAC.cs" />
+=======
+    <Compile Include="SelectDAC.cs" />
+>>>>>>> a1fc3fdcb883a1a30a79a41ab2c74e35746840c2
     <Compile Include="UserDAC.cs" />
     <Compile Include="UserGroupDAC.cs" />
   </ItemGroup>

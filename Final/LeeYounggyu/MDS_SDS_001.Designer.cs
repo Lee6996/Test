@@ -30,55 +30,72 @@ namespace Final.LeeYounggyu
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbLevel = new System.Windows.Forms.ComboBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.labelLevel = new System.Windows.Forms.Label();
+            this.nuPLbox = new System.Windows.Forms.NumericUpDown();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.nuBoxpcs = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.nuPCSqty = new System.Windows.Forms.NumericUpDown();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvItemLevel = new System.Windows.Forms.DataGridView();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblLevel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPLbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuBoxpcs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPCSqty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItemLevel)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbLevel);
+            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.numericUpDown2);
+            this.panel1.Controls.Add(this.labelLevel);
+            this.panel1.Controls.Add(this.nuPLbox);
+            this.panel1.Controls.Add(this.txtCode);
+            this.panel1.Controls.Add(this.nuBoxpcs);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.numericUpDown3);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.nuPCSqty);
             this.panel1.Location = new System.Drawing.Point(0, 615);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1340, 117);
             this.panel1.TabIndex = 102;
+            // 
+            // cbLevel
+            // 
+            this.cbLevel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbLevel.FormattingEnabled = true;
+            this.cbLevel.Location = new System.Drawing.Point(488, 27);
+            this.cbLevel.Name = "cbLevel";
+            this.cbLevel.Size = new System.Drawing.Size(101, 23);
+            this.cbLevel.TabIndex = 46;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtName.Location = new System.Drawing.Point(67, 28);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 23);
+            this.txtName.TabIndex = 45;
             // 
             // label4
             // 
@@ -128,15 +145,6 @@ namespace Final.LeeYounggyu
             this.button2.Text = "저장";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(492, 28);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(101, 23);
-            this.comboBox3.TabIndex = 44;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -149,39 +157,39 @@ namespace Final.LeeYounggyu
             this.label9.TabIndex = 33;
             this.label9.Text = "PCS당 소재량";
             // 
-            // label5
+            // labelLevel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(422, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 17);
-            this.label5.TabIndex = 43;
-            this.label5.Text = "품목코드";
+            this.labelLevel.AutoSize = true;
+            this.labelLevel.BackColor = System.Drawing.Color.White;
+            this.labelLevel.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelLevel.ForeColor = System.Drawing.Color.Black;
+            this.labelLevel.Location = new System.Drawing.Point(422, 30);
+            this.labelLevel.Name = "labelLevel";
+            this.labelLevel.Size = new System.Drawing.Size(40, 17);
+            this.labelLevel.TabIndex = 43;
+            this.labelLevel.Text = "Level";
             // 
-            // numericUpDown1
+            // nuPLbox
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(745, 30);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(99, 21);
-            this.numericUpDown1.TabIndex = 36;
+            this.nuPLbox.Location = new System.Drawing.Point(745, 30);
+            this.nuPLbox.Name = "nuPLbox";
+            this.nuPLbox.Size = new System.Drawing.Size(99, 21);
+            this.nuPLbox.TabIndex = 36;
             // 
-            // textBox3
+            // txtCode
             // 
-            this.textBox3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(276, 28);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 42;
+            this.txtCode.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCode.Location = new System.Drawing.Point(276, 28);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(100, 23);
+            this.txtCode.TabIndex = 42;
             // 
-            // numericUpDown2
+            // nuBoxpcs
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(983, 31);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(100, 21);
-            this.numericUpDown2.TabIndex = 37;
+            this.nuBoxpcs.Location = new System.Drawing.Point(983, 31);
+            this.nuBoxpcs.Name = "nuBoxpcs";
+            this.nuBoxpcs.Size = new System.Drawing.Size(100, 21);
+            this.nuBoxpcs.TabIndex = 37;
             // 
             // label3
             // 
@@ -195,21 +203,12 @@ namespace Final.LeeYounggyu
             this.label3.TabIndex = 41;
             this.label3.Text = "품목코드";
             // 
-            // numericUpDown3
+            // nuPCSqty
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(1221, 31);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(101, 21);
-            this.numericUpDown3.TabIndex = 38;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(67, 28);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(99, 23);
-            this.comboBox2.TabIndex = 40;
+            this.nuPCSqty.Location = new System.Drawing.Point(1221, 31);
+            this.nuPCSqty.Name = "nuPCSqty";
+            this.nuPCSqty.Size = new System.Drawing.Size(101, 21);
+            this.nuPCSqty.TabIndex = 38;
             // 
             // textBox4
             // 
@@ -231,25 +230,16 @@ namespace Final.LeeYounggyu
             this.textBox5.TabIndex = 101;
             this.textBox5.Text = "▶품목 설정";
             // 
-            // textBox2
+            // dgvItemLevel
             // 
-            this.textBox2.Location = new System.Drawing.Point(0, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(1341, 21);
-            this.textBox2.TabIndex = 99;
-            this.textBox2.Text = "                                                      GRID : 품목코드 / 품목명 / Level 1" +
-    " / Level 2 / Level 3 / Level 4 / Level 5 / Level 6 / P/L당 BOX 수량 / BOX당 PCS 수량 /" +
-    " PCS당 소재량";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1341, 483);
-            this.dataGridView1.TabIndex = 98;
+            this.dgvItemLevel.BackgroundColor = System.Drawing.Color.White;
+            this.dgvItemLevel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvItemLevel.Location = new System.Drawing.Point(0, 99);
+            this.dgvItemLevel.Name = "dgvItemLevel";
+            this.dgvItemLevel.RowTemplate.Height = 23;
+            this.dgvItemLevel.Size = new System.Drawing.Size(1340, 483);
+            this.dgvItemLevel.TabIndex = 98;
+            this.dgvItemLevel.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemLevel_CellDoubleClick);
             // 
             // splitter1
             // 
@@ -282,17 +272,18 @@ namespace Final.LeeYounggyu
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 104;
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(391, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 26);
-            this.button1.TabIndex = 107;
-            this.button1.Text = "조회";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.DimGray;
+            this.btnSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSearch.Location = new System.Drawing.Point(391, 21);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 26);
+            this.btnSearch.TabIndex = 107;
+            this.btnSearch.Text = "조회";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label2
             // 
@@ -314,30 +305,42 @@ namespace Final.LeeYounggyu
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 106;
             // 
+            // lblLevel
+            // 
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.BackColor = System.Drawing.Color.White;
+            this.lblLevel.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblLevel.ForeColor = System.Drawing.Color.Black;
+            this.lblLevel.Location = new System.Drawing.Point(277, 27);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(0, 17);
+            this.lblLevel.TabIndex = 108;
+            // 
             // MDS_SDS_001
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1341, 732);
+            this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvItemLevel);
             this.Controls.Add(this.splitter1);
             this.Name = "MDS_SDS_001";
             this.Text = "품묵 분류 정보";
+            this.Load += new System.EventHandler(this.MDS_SDS_001_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPLbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuBoxpcs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPCSqty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItemLevel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,24 +353,24 @@ namespace Final.LeeYounggyu
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label labelLevel;
+        private System.Windows.Forms.NumericUpDown nuPLbox;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.NumericUpDown nuBoxpcs;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.NumericUpDown nuPCSqty;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvItemLevel;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.ComboBox cbLevel;
+        private System.Windows.Forms.Label lblLevel;
     }
 }
