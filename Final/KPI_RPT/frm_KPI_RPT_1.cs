@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Final.Service;
+using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,20 +22,34 @@ namespace Final.KPI_RPT
 
         private void frm_KPI_RPT_1_Load(object sender, EventArgs e)
         {
+            DataLoad();
+        }
+        private void DataLoad()
+        {
             CommonUtil.SetInitGridView(dgv_KPI_DAY);
 
-            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "생산일자", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "근무인원", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "공정", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "작업장", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "제품명", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "실적", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "생산시간", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "시간당생산량", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "가스사용량", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "비가동시간", "", 120);
-        }
+            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "생산일자", "Prd_Date", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "근무인원", "User_ID", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "공정", "Process_Code", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "작업장", "Wc_Code", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "제품명", "Item_Name", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "실적", "Prd_Qty", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "생산시간", "WorkTime", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "시간당생산량", "PrdQty_Per_Hour", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "비가동시간", "Nop_Check_Time", 120);
 
+            GetData();
+        }
+        private void GetData()
+        {
+            WorkDayService service = new WorkDayService();
+
+            List<WorkDayVO> list = service.SelectWorkDay();
+
+            dgv_KPI_DAY.DataSource = null;
+            dgv_KPI_DAY.DataSource = list;
+
+        }
         private void btn_Process_Click(object sender, EventArgs e)
         {
             frm_KPI_RPT_P process = new frm_KPI_RPT_P();

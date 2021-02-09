@@ -221,6 +221,9 @@
     <Compile Include="LeeYounggyu\MDS_SDS_004_1.Designer.cs">
       <DependentUpon>MDS_SDS_004_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LeeYounggyu\service\Def_MaService.cs" />
+    <Compile Include="LeeYounggyu\service\Def_MiService.cs" />
+    <Compile Include="LeeYounggyu\UserStatic.cs" />
     <Compile Include="MDI_Parent\frm_MDIParent_1Grid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -384,6 +387,12 @@
     <Compile Include="PRM_PRF\frm_PRM_PRF_007.Designer.cs">
       <DependentUpon>frm_PRM_PRF_007.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_008.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_008.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_008.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRM_PRF\frm_PRM_PRF_009.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -396,6 +405,12 @@
     <Compile Include="PRM_PRF\frm_PRM_PRF_010.Designer.cs">
       <DependentUpon>frm_PRM_PRF_010.cs</DependentUpon>
     </Compile>
+    <Compile Include="PopUp\MainPop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\MainPop.Designer.cs">
+      <DependentUpon>MainPop.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -403,10 +418,63 @@
       <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="PRM_PRF\PRM_PRF_Service.cs" />
+<<<<<<< HEAD
+=======
+
+    <Compile Include="PRM_RPT\frm_PRM_RPT_1-1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_1-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_1-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_2-1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_2-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_2-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_2.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_3-1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_3-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_3-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_3.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_4-1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_4-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_4-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_4.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_4.cs</DependentUpon>
+    </Compile>
+>>>>>>> 3a7aa07683cf4215fcbab14f03e3ec439641006b
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ProcessService.cs" />
     <Compile Include="Service\WorkCenterService.cs" />
+    <Compile Include="Service\WorkDayService.cs" />
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -685,6 +753,9 @@
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_007.resx">
       <DependentUpon>frm_PRM_PRF_007.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_008.resx">
+      <DependentUpon>frm_PRM_PRF_008.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_009.resx">
       <DependentUpon>frm_PRM_PRF_009.cs</DependentUpon>
     </EmbeddedResource>
@@ -694,6 +765,38 @@
     <EmbeddedResource Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.resx">
       <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
+
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_1-1.resx">
+      <DependentUpon>frm_PRM_RPT_1-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_1.resx">
+      <DependentUpon>frm_PRM_RPT_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_2-1.resx">
+      <DependentUpon>frm_PRM_RPT_2-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_2.resx">
+      <DependentUpon>frm_PRM_RPT_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_3-1.resx">
+      <DependentUpon>frm_PRM_RPT_3-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_3.resx">
+      <DependentUpon>frm_PRM_RPT_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_4-1.resx">
+      <DependentUpon>frm_PRM_RPT_4-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_4.resx">
+      <DependentUpon>frm_PRM_RPT_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="PopUp\MainPop.resx">
+      <DependentUpon>MainPop.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 3a7aa07683cf4215fcbab14f03e3ec439641006b
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -779,6 +882,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EncLibrary\FinalEnc.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserCountrol\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\FinalDAC\FinalDAC.csproj">
       <Project>{55b68008-cbe4-4d16-a344-82ca9c47f6ee}</Project>
       <Name>FinalDAC</Name>
@@ -787,12 +896,6 @@
       <Project>{e0737b4c-95a5-4fb4-a26f-0f1edb71a8c3}</Project>
       <Name>FinalVO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="EncLibrary\FinalEnc.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserCountrol\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

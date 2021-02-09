@@ -1,10 +1,7 @@
 ﻿
-using System;
-using System.Windows.Forms;
-
 namespace Final.PRM_PRF
 {
-    partial class frm_PRM_PRF_001
+    partial class frm_PRM_PRF_008
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -32,7 +29,6 @@ namespace Final.PRM_PRF
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEdit = new System.Windows.Forms.Button();
             this.dgvPRM_PRF = new System.Windows.Forms.DataGridView();
             this.txtProcessDetail = new System.Windows.Forms.TextBox();
             this.btnProcess = new System.Windows.Forms.Button();
@@ -40,8 +36,8 @@ namespace Final.PRM_PRF
             this.label3 = new System.Windows.Forms.Label();
             this.txtWorkCenterDetail = new System.Windows.Forms.TextBox();
             this.btnWorkCenter = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtWorkCenter = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -59,61 +55,42 @@ namespace Final.PRM_PRF
             this.panel4.Controls.Add(this.btnWorkCenter);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.txtWorkCenter);
-            this.panel4.Controls.Add(this.btnEdit);
-            this.panel4.Controls.SetChildIndex(this.label2, 0);
-            this.panel4.Controls.SetChildIndex(this.dtpFrom, 0);
-            this.panel4.Controls.SetChildIndex(this.dtpTo, 0);
-            this.panel4.Controls.SetChildIndex(this.label4, 0);
-            this.panel4.Controls.SetChildIndex(this.btnTimeSearch, 0);
-            this.panel4.Controls.SetChildIndex(this.btnEdit, 0);
             this.panel4.Controls.SetChildIndex(this.txtWorkCenter, 0);
             this.panel4.Controls.SetChildIndex(this.label1, 0);
             this.panel4.Controls.SetChildIndex(this.btnWorkCenter, 0);
             this.panel4.Controls.SetChildIndex(this.txtWorkCenterDetail, 0);
+            this.panel4.Controls.SetChildIndex(this.label2, 0);
             this.panel4.Controls.SetChildIndex(this.label3, 0);
+            this.panel4.Controls.SetChildIndex(this.dtpFrom, 0);
             this.panel4.Controls.SetChildIndex(this.txtProcess, 0);
+            this.panel4.Controls.SetChildIndex(this.dtpTo, 0);
             this.panel4.Controls.SetChildIndex(this.btnProcess, 0);
+            this.panel4.Controls.SetChildIndex(this.label4, 0);
             this.panel4.Controls.SetChildIndex(this.txtProcessDetail, 0);
+            this.panel4.Controls.SetChildIndex(this.btnTimeSearch, 0);
             // 
             // btnTimeSearch
             // 
-            this.btnTimeSearch.Location = new System.Drawing.Point(388, 25);
             this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(278, 29);
             // 
             // dtpTo
             // 
-            this.dtpTo.Location = new System.Drawing.Point(296, 26);
-            this.dtpTo.Value = new System.DateTime(2021, 2, 8, 15, 7, 26, 423);
+            this.dtpTo.Value = new System.DateTime(2021, 2, 8, 14, 45, 7, 676);
             // 
             // dtpFrom
             // 
-            this.dtpFrom.Location = new System.Drawing.Point(190, 26);
-            this.dtpFrom.Value = new System.DateTime(2021, 2, 1, 15, 7, 26, 423);
+            this.dtpFrom.Value = new System.DateTime(2021, 2, 1, 14, 45, 7, 676);
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(171, 18);
-            this.label2.Text = "조회조건 : 작업지시일자";
+            this.label2.Size = new System.Drawing.Size(156, 18);
+            this.label2.Text = "조회조건 : 비가동일자";
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dgvPRM_PRF);
             this.panel5.Controls.SetChildIndex(this.panel6, 0);
             this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF, 0);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(1173, 22);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 25);
-            this.btnEdit.TabIndex = 9;
-            this.btnEdit.Text = "실적보정";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // dgvPRM_PRF
             // 
@@ -123,83 +100,80 @@ namespace Final.PRM_PRF
             this.dgvPRM_PRF.Name = "dgvPRM_PRF";
             this.dgvPRM_PRF.RowTemplate.Height = 23;
             this.dgvPRM_PRF.Size = new System.Drawing.Size(1248, 763);
-            this.dgvPRM_PRF.TabIndex = 2;
-            this.dgvPRM_PRF.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_CellClick);
+            this.dgvPRM_PRF.TabIndex = 31;
             // 
             // txtProcessDetail
             // 
-            this.txtProcessDetail.Location = new System.Drawing.Point(616, 28);
+            this.txtProcessDetail.Location = new System.Drawing.Point(662, 27);
             this.txtProcessDetail.Name = "txtProcessDetail";
             this.txtProcessDetail.Size = new System.Drawing.Size(100, 21);
-            this.txtProcessDetail.TabIndex = 40;
+            this.txtProcessDetail.TabIndex = 32;
             // 
             // btnProcess
             // 
-            this.btnProcess.Location = new System.Drawing.Point(586, 26);
+            this.btnProcess.Location = new System.Drawing.Point(632, 25);
             this.btnProcess.Name = "btnProcess";
             this.btnProcess.Size = new System.Drawing.Size(24, 23);
-            this.btnProcess.TabIndex = 39;
+            this.btnProcess.TabIndex = 30;
             this.btnProcess.Text = "...";
             this.btnProcess.UseVisualStyleBackColor = true;
-            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
             // 
             // txtProcess
             // 
-            this.txtProcess.Location = new System.Drawing.Point(511, 28);
+            this.txtProcess.Location = new System.Drawing.Point(557, 27);
             this.txtProcess.Name = "txtProcess";
             this.txtProcess.Size = new System.Drawing.Size(69, 21);
-            this.txtProcess.TabIndex = 38;
+            this.txtProcess.TabIndex = 29;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F);
-            this.label3.Location = new System.Drawing.Point(467, 28);
+            this.label3.Location = new System.Drawing.Point(513, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 18);
-            this.label3.TabIndex = 37;
+            this.label3.TabIndex = 28;
             this.label3.Text = "공정";
             // 
             // txtWorkCenterDetail
             // 
-            this.txtWorkCenterDetail.Location = new System.Drawing.Point(899, 28);
+            this.txtWorkCenterDetail.Location = new System.Drawing.Point(945, 27);
             this.txtWorkCenterDetail.Name = "txtWorkCenterDetail";
             this.txtWorkCenterDetail.Size = new System.Drawing.Size(100, 21);
-            this.txtWorkCenterDetail.TabIndex = 36;
+            this.txtWorkCenterDetail.TabIndex = 27;
             // 
             // btnWorkCenter
             // 
-            this.btnWorkCenter.Location = new System.Drawing.Point(869, 26);
+            this.btnWorkCenter.Location = new System.Drawing.Point(915, 25);
             this.btnWorkCenter.Name = "btnWorkCenter";
             this.btnWorkCenter.Size = new System.Drawing.Size(24, 23);
-            this.btnWorkCenter.TabIndex = 35;
+            this.btnWorkCenter.TabIndex = 26;
             this.btnWorkCenter.Text = "...";
             this.btnWorkCenter.UseVisualStyleBackColor = true;
-            this.btnWorkCenter.Click += new System.EventHandler(this.btnWorkCenter_Click);
+            // 
+            // txtWorkCenter
+            // 
+            this.txtWorkCenter.Location = new System.Drawing.Point(840, 27);
+            this.txtWorkCenter.Name = "txtWorkCenter";
+            this.txtWorkCenter.Size = new System.Drawing.Size(69, 21);
+            this.txtWorkCenter.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F);
-            this.label1.Location = new System.Drawing.Point(735, 30);
+            this.label1.Location = new System.Drawing.Point(781, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 18);
-            this.label1.TabIndex = 33;
+            this.label1.TabIndex = 24;
             this.label1.Text = "작업장";
             // 
-            // txtWorkCenter
-            // 
-            this.txtWorkCenter.Location = new System.Drawing.Point(794, 28);
-            this.txtWorkCenter.Name = "txtWorkCenter";
-            this.txtWorkCenter.Size = new System.Drawing.Size(69, 21);
-            this.txtWorkCenter.TabIndex = 34;
-            // 
-            // frm_PRM_PRF_001
+            // frm_PRM_PRF_008
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.ClientSize = new System.Drawing.Size(1266, 897);
-            this.Name = "frm_PRM_PRF_001";
-            this.Load += new System.EventHandler(this.frm_PRM_PRF_001_Load);
+            this.Name = "frm_PRM_PRF_008";
+            this.Load += new System.EventHandler(this.frm_PRM_PRF_008_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -212,19 +186,16 @@ namespace Final.PRM_PRF
 
         }
 
-
-
         #endregion
 
-        private System.Windows.Forms.Button btnEdit;
-        private DataGridView dgvPRM_PRF;
-        private TextBox txtProcessDetail;
-        private Button btnProcess;
-        private TextBox txtProcess;
-        private Label label3;
-        private TextBox txtWorkCenterDetail;
-        private Button btnWorkCenter;
-        private Label label1;
-        private TextBox txtWorkCenter;
+        private System.Windows.Forms.TextBox txtProcessDetail;
+        private System.Windows.Forms.Button btnProcess;
+        private System.Windows.Forms.TextBox txtProcess;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtWorkCenterDetail;
+        private System.Windows.Forms.Button btnWorkCenter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtWorkCenter;
+        private System.Windows.Forms.DataGridView dgvPRM_PRF;
     }
 }

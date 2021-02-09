@@ -40,16 +40,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceManagementVO.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="ForPopup.cs" />
+    <Compile Include="NOPVO.cs" />
+    <Compile Include="Def_MaVO.cs" />
+    <Compile Include="Def_MiVO.cs" />
+>>>>>>> 3a7aa07683cf4215fcbab14f03e3ec439641006b
     <Compile Include="ScreenVO.cs" />
     <Compile Include="SysNoticeVO.cs" />
     <Compile Include="GVHistoryVO.cs" />
     <Compile Include="GVStatusVO.cs" />
     <Compile Include="ItemInfoVO.cs" />
-    <Compile Include="ItemInfoVO.cs" />
     <Compile Include="ProcessVO.cs" />
     <Compile Include="Production_History_DayVO.cs" />
     <Compile Include="ReceivingListVO.cs" />
     <Compile Include="WorkCenterVO.cs" />
+    <Compile Include="WorkDayVO.cs" />
     <Compile Include="WorkHistoryVO.cs" />
     <Compile Include="GoodsInHistoryVO.cs" />
     <Compile Include="UserGroupVO.cs" />

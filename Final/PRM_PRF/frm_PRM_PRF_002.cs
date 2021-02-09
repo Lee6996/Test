@@ -13,7 +13,8 @@ namespace Final.PRM_PRF
     {
         List<WorkOrderVO> Wlist;
         List<GoodsInHistoryVO> Glist;
-        string workorderno;
+        UserVO user;
+        string workorderno, palletno;
 
         public frm_PRM_PRF_002()
         {
@@ -36,7 +37,29 @@ namespace Final.PRM_PRF
         private void dgvPRM_PRF_1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             workorderno = Wlist[e.RowIndex].Workorderno;
+            
             RefreshState_2();
+        }
+
+        private void dgvPRM_PRF_2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            palletno = Glist[e.RowIndex].Pallet_No;
+        }
+
+        private void btnWoEnd_Click(object sender, EventArgs e)
+        {
+            if (new PRM_PRF_Service().Update002_WO(workorderno, user))
+            {
+
+            }
+        }
+
+        private void btnPalletEnd_Click(object sender, EventArgs e)
+        {
+            if (new PRM_PRF_Service().Update002_Pallet(palletno, user))
+            {
+
+            }
         }
 
         #region MyMethod
@@ -45,7 +68,7 @@ namespace Final.PRM_PRF
         private void SetDgv_1(DataGridView dgv)
         {
             CommonUtil.SetInitGridView(dgv);
-            dgv.Columns.Add(new DataGridViewCheckBoxColumn());
+            //dgv.Columns.Add(new DataGridViewCheckBoxColumn());
             CommonUtil.AddGridTextColumn(dgv, "생산일자", "Prd_Date", 200);
             CommonUtil.AddGridTextColumn(dgv, "작업지시번호", "Workorderno", 200);
             CommonUtil.AddGridTextColumn(dgv, "작업지시상태", "Wo_Status", 200);
@@ -71,11 +94,11 @@ namespace Final.PRM_PRF
         private void SetDgv_2(DataGridView dgv)
         {
             CommonUtil.SetInitGridView(dgv);
-            dgv.Columns.Add(new DataGridViewCheckBoxColumn());
+            //dgv.Columns.Add(new DataGridViewCheckBoxColumn());
             CommonUtil.AddGridTextColumn(dgv, "팔렛트번호", "Pallet_No", 200);
             CommonUtil.AddGridTextColumn(dgv, "등급코드", "Grade_Detail_Code", 200);
-            CommonUtil.AddGridTextColumn(dgv, "포장등급코드", "Boxing_Grade_Code", 200);
             CommonUtil.AddGridTextColumn(dgv, "등급명", "Grade_Detail_Name", 200);
+            CommonUtil.AddGridTextColumn(dgv, "포장등급코드", "Boxing_Grade_Code", 200);
             CommonUtil.AddGridTextColumn(dgv, "포장등급명", "Boxing_Grade_Name", 200);
             CommonUtil.AddGridTextColumn(dgv, "생산수량", "In_Qty", 200);
         }
@@ -85,8 +108,8 @@ namespace Final.PRM_PRF
             Glist = new PRM_PRF_Service().GetGoodsInHistoryVOList(workorderno);
             dgvPRM_PRF_2.DataSource = Glist;
         }
-        #endregion
 
+        #endregion
         #endregion
 
 
