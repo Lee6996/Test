@@ -50,7 +50,7 @@ namespace Final.PRM_PRF
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(893, 35);
+            this.label2.Location = new System.Drawing.Point(986, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 27);
             this.label2.TabIndex = 1;
@@ -61,17 +61,17 @@ namespace Final.PRM_PRF
             this.panel1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.panel1.Location = new System.Drawing.Point(12, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(878, 891);
+            this.panel1.Size = new System.Drawing.Size(973, 891);
             this.panel1.TabIndex = 2;
             // 
             // dgvPRM_PRF
             // 
             this.dgvPRM_PRF.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPRM_PRF.Location = new System.Drawing.Point(896, 68);
+            this.dgvPRM_PRF.Location = new System.Drawing.Point(991, 68);
             this.dgvPRM_PRF.Name = "dgvPRM_PRF";
             this.dgvPRM_PRF.RowTemplate.Height = 23;
-            this.dgvPRM_PRF.Size = new System.Drawing.Size(361, 891);
+            this.dgvPRM_PRF.Size = new System.Drawing.Size(266, 891);
             this.dgvPRM_PRF.TabIndex = 24;
             // 
             // frm_PRM_PRF_007

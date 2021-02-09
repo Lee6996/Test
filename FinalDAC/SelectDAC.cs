@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace FinalDAC
     public class SelectDAC
     {
         #region Connection Open
-       static SqlConnection conn;
+        static SqlConnection conn;
         public SelectDAC()
         {
             conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
@@ -26,7 +27,7 @@ namespace FinalDAC
             string sql = "select * from View_WorkOrder where 1=1 and Plan_Date between @dtpFrom and @dtpTo";
             if (!string.IsNullOrEmpty(processCode)) sql += " AND Process_Code = @Process_Code";
             if (!string.IsNullOrEmpty(wcCode)) sql += " AND Wc_Code = @Wc_Code";
-            
+
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
@@ -93,11 +94,21 @@ namespace FinalDAC
         }
 
         //WorkHistory
-        public List<WorkHistoryVO> SelectWorkHistory()
+        public List<WorkHistoryVO> SelectWorkHistory(string dtpFrom, string dtpTo, string Wc_Name)
         {
-            string sql = "select * from View_WorkHistory";
+            string sql = "select * from View_WorkHistory where Work_Date between @dtpFrom and @dtpTo ";
+            if (!string.IsNullOrEmpty(Wc_Name))
+            {
+                sql += " where Wc_Name = @Wc_Name";
+            }
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                if (!string.IsNullOrEmpty(Wc_Name))
+                {
+                    cmd.Parameters.AddWithValue("@Wc_Name", Wc_Name);
+                }
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkHistoryVO> list = Helper.DataReaderMapToList<WorkHistoryVO>(reader);
 
@@ -107,11 +118,21 @@ namespace FinalDAC
         }
 
         //AttendanceManagement
-        public List<AttendanceManagementVO> SelectAttendanceManagement()
+        public List<AttendanceManagementVO> SelectAttendanceManagement(string dtpFrom, string dtpTo, string user_Name)
         {
-            string sql = "select * from View_AttendanceManagement";
+            string sql = "select * from View_AttendanceManagement where Work_Date between @dtpFrom and @dtpTo ";
+            if (!string.IsNullOrEmpty(user_Name))
+            {
+                sql += " where user_Name = @user_Name";
+            }
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
+                if (!string.IsNullOrEmpty(user_Name))
+                {
+                    cmd.Parameters.AddWithValue("@user_Name", user_Name);
+                }
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<AttendanceManagementVO> list = Helper.DataReaderMapToList<AttendanceManagementVO>(reader);
 
@@ -161,13 +182,22 @@ namespace FinalDAC
         }
 
         //GVHistory
-        public List<GVHistoryVO> SelectGVHistory(string dtpFrom, string dtpTo)
+        public List<GVHistoryVO> SelectGVHistory(string dtpFrom, string dtpTo, string GV_Code, string Item_Code)
         {
-            string sql = "select * from View_ReceivingList where Loading_date between @dtpFrom and @dtpTo";
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            string sQuery = "select * from View_GVHistory where Loading_date between @dtpFrom and @dtpTo";
+            if (!string.IsNullOrEmpty(GV_Code))
+                sQuery += " and GV_Code = @GV_Code ";
+            if (!string.IsNullOrEmpty(Item_Code))
+                sQuery += " and Item_Code Like @Item_Code ";
+
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
                 cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
                 cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                if (!string.IsNullOrEmpty(GV_Code))
+                    cmd.Parameters.AddWithValue("@GV_Code", GV_Code);
+                if (!string.IsNullOrEmpty(Item_Code))
+                    cmd.Parameters.AddWithValue("@Item_Code", Item_Code);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<GVHistoryVO> list = Helper.DataReaderMapToList<GVHistoryVO>(reader);
@@ -328,13 +358,26 @@ namespace FinalDAC
         }
 
         //NOP
-        public List<NOPVO> SelectNOP(string dtpFrom, string dtpTo)
+        public List<NOPVO> SelectNOP(string dtpFrom = null, string dtpTo = null, string WC_Code = null)
         {
-            string sql = "select * from View_NOP where Nop_Date between @dtpFrom and @dtpTo";
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            string sQuery = "select * from View_NOP";
+
+            if (!string.IsNullOrEmpty(dtpFrom) && !string.IsNullOrEmpty(dtpTo))
+                sQuery += " where Nop_Date between @dtpFrom and @dtpTo";
+
+            if (!string.IsNullOrEmpty(WC_Code))
+                sQuery += " and WC_Code Like @WC_Code ";
+
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
-                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
-                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                if (!string.IsNullOrEmpty(dtpFrom) && !string.IsNullOrEmpty(dtpTo))
+                {
+                    cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                    cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                }
+
+                if (!string.IsNullOrEmpty(WC_Code))
+                    cmd.Parameters.AddWithValue("@WC_Code", WC_Code);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<NOPVO> list = Helper.DataReaderMapToList<NOPVO>(reader);
@@ -348,7 +391,7 @@ namespace FinalDAC
         public List<T> SelectForPopup<T>(string type)
         {
             string sql;
-            switch(type)
+            switch (type)
             {
                 case "WC":
                     sql = "SELECT WC_Code,WC_Name FROM WorkCenter_Master"; break;
@@ -359,7 +402,7 @@ namespace FinalDAC
                 case "GVGroup":
                     sql = "SELECT GVGroup_Code,GVGroup_Name FROM GVGruop_Master"; break;
                 case "User":
-                    sql = "SELECT User_ID,User_Name FROM User_Master";break;
+                    sql = "SELECT User_ID,User_Name FROM User_Master"; break;
                 case "Process":
                     sql = "SELECT Process_ID, Process_Name FROM Process_Master"; break;
                 default: sql = null; break;

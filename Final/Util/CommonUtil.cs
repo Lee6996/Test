@@ -14,48 +14,6 @@ namespace Final
 {
     public class CommonUtil
     {
-        //public static void ComboBindingCategory(ComboBox cbo, List<ComboVO> list, string Category, bool blankItem = true, string blankText = "")
-        //{
-        //    //var codeList = (from item in list where item.Category.Equals(Category) select item).ToList();
-        //    var codeList = list.ToList();
-        //    if (blankItem)
-        //    {
-        //        ComboVO blank = new ComboVO
-        //        { Code = "", Category = blankText };
-        //        codeList.Insert(0, blank);
-        //    }
-        //    cbo.DisplayMember = "Category";
-        //    cbo.ValueMember = "Code";
-        //    cbo.DataSource = codeList;
-        //}
-        //public static void ComboBindingName(ComboBox cbo, List<ComboVO> list, string Category, bool blankItem = true, string blankText = "")
-        //{
-        //    //var codeList = (from item in list where item.Category.Equals(Category) select item).ToList();
-        //    var codeList = list.ToList();
-        //    if (blankItem)
-        //    {
-        //        ComboVO blank = new ComboVO
-        //        { Code = "", Name = blankText };
-        //        codeList.Insert(0, blank);
-        //    }
-        //    cbo.DisplayMember = "Name";
-        //    cbo.ValueMember = "Code";
-        //    cbo.DataSource = codeList;
-        //}
-        //public static void ComboBindingMeterials(ComboBox cbo, List<ComboVO> list, string Category, bool blankItem = true, string blankText = "")
-        //{
-        //    //var codeList = (from item in list where item.Category.Equals(Category) select item).ToList();
-        //    var codeList = list.ToList();
-        //    if (blankItem)
-        //    {
-        //        ComboVO blank = new ComboVO
-        //        { Code = "", Name = blankText };
-        //        codeList.Insert(0, blank);
-        //    }
-        //    cbo.DisplayMember = "Name";
-        //    cbo.ValueMember = "Code";
-        //    cbo.DataSource = codeList;
-        //}
         public static void BindingComboBox(ComboBox cbo, DataTable dt, string valueMember, string displayMember, bool blankItemAdd = true)
         {
             if (blankItemAdd)

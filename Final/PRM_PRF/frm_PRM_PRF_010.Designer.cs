@@ -29,348 +29,147 @@ namespace Final.PRM_PRF
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSearchWorker = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dgvPRM_PRF_010_2 = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtUser_Name = new System.Windows.Forms.TextBox();
+            this.btnUser = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dgvPRM_PRF_010_1 = new System.Windows.Forms.DataGridView();
+            this.txtUser_ID = new System.Windows.Forms.TextBox();
+            this.dgvPRM_PRF_1 = new System.Windows.Forms.DataGridView();
+            this.dgvPRM_PRF_2 = new System.Windows.Forms.DataGridView();
             this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_010_2)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_010_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnSearchWorker);
-            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.txtUser_Name);
+            this.panel4.Controls.Add(this.btnUser);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.txtUser_ID);
             this.panel4.Controls.SetChildIndex(this.label2, 0);
-            this.panel4.Controls.SetChildIndex(this.label3, 0);
-            this.panel4.Controls.SetChildIndex(this.dateTimePicker1, 0);
-            this.panel4.Controls.SetChildIndex(this.dateTimePicker2, 0);
+            this.panel4.Controls.SetChildIndex(this.dtpFrom, 0);
+            this.panel4.Controls.SetChildIndex(this.dtpTo, 0);
+            this.panel4.Controls.SetChildIndex(this.txtUser_ID, 0);
             this.panel4.Controls.SetChildIndex(this.label4, 0);
-            this.panel4.Controls.SetChildIndex(this.textBox1, 0);
-            this.panel4.Controls.SetChildIndex(this.button22, 0);
-            this.panel4.Controls.SetChildIndex(this.btn_WorkCenter, 0);
-            this.panel4.Controls.SetChildIndex(this.textBox2, 0);
-            this.panel4.Controls.SetChildIndex(this.btnSearchWorker, 0);
+            this.panel4.Controls.SetChildIndex(this.label1, 0);
+            this.panel4.Controls.SetChildIndex(this.btnTimeSearch, 0);
+            this.panel4.Controls.SetChildIndex(this.btnUser, 0);
+            this.panel4.Controls.SetChildIndex(this.txtUser_Name, 0);
+            // 
+            // btnTimeSearch
+            // 
+            this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.Value = new System.DateTime(2021, 2, 10, 6, 46, 11, 796);
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Value = new System.DateTime(2021, 2, 3, 6, 46, 11, 796);
             // 
             // label2
             // 
+            this.label2.Size = new System.Drawing.Size(141, 18);
             this.label2.Text = "조회조건 : 근무일자";
-            // 
-            // btn_WorkCenter
-            // 
-            this.btn_WorkCenter.Location = new System.Drawing.Point(714, 24);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(832, -27);
-            this.textBox6.Visible = false;
-            // 
-            // label16
-            // 
-            this.label16.Location = new System.Drawing.Point(1002, -22);
-            this.label16.Visible = false;
-            // 
-            // btn_Process
-            // 
-            this.btn_Process.Location = new System.Drawing.Point(950, -32);
-            this.btn_Process.Visible = false;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(346, 24);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(467, 24);
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(236, 28);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(254, 24);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(148, 24);
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(416, 24);
-            this.label3.Size = new System.Drawing.Size(53, 18);
-            this.label3.Text = "작업자";
-            // 
-            // btnSearchWorker
-            // 
-            this.btnSearchWorker.Location = new System.Drawing.Point(572, 24);
-            this.btnSearchWorker.Name = "btnSearchWorker";
-            this.btnSearchWorker.Size = new System.Drawing.Size(30, 23);
-            this.btnSearchWorker.TabIndex = 17;
-            this.btnSearchWorker.Text = "...";
-            this.btnSearchWorker.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(608, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 16;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel5.Controls.Add(this.panel1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 67);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1266, 739);
-            this.panel5.TabIndex = 22;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.dgvPRM_PRF_010_2);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.dgvPRM_PRF_010_1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1266, 739);
-            this.panel1.TabIndex = 22;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.SystemColors.Control;
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Controls.Add(this.panel11);
-            this.panel8.Controls.Add(this.label11);
-            this.panel8.Location = new System.Drawing.Point(6, 377);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(194, 26);
-            this.panel8.TabIndex = 5;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.SystemColors.Control;
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.label9);
-            this.panel9.Location = new System.Drawing.Point(-528, -120);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(194, 26);
-            this.panel9.TabIndex = 3;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label8);
-            this.panel10.Location = new System.Drawing.Point(-572, -229);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(194, 26);
-            this.panel10.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(34, 6);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 12);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "생산의뢰";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.Location = new System.Drawing.Point(34, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "조회내역";
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label10);
-            this.panel11.Location = new System.Drawing.Point(-572, -229);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(194, 26);
-            this.panel11.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(34, 6);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 12);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "생산의뢰";
+            this.panel5.Controls.Add(this.dgvPRM_PRF_1);
+            this.panel5.Controls.Add(this.dgvPRM_PRF_2);
+            this.panel5.Controls.SetChildIndex(this.panel6, 0);
+            this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_2, 0);
+            this.panel5.Controls.SetChildIndex(this.panel8, 0);
+            this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_1, 0);
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(34, 6);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 15);
-            this.label11.TabIndex = 0;
+            this.label11.Size = new System.Drawing.Size(51, 13);
             this.label11.Text = "상세내역";
             // 
-            // dgvPRM_PRF_010_2
+            // txtUser_Name
             // 
-            this.dgvPRM_PRF_010_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPRM_PRF_010_2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvPRM_PRF_010_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPRM_PRF_010_2.Location = new System.Drawing.Point(6, 409);
-            this.dgvPRM_PRF_010_2.Name = "dgvPRM_PRF_010_2";
-            this.dgvPRM_PRF_010_2.RowTemplate.Height = 23;
-            this.dgvPRM_PRF_010_2.Size = new System.Drawing.Size(1248, 298);
-            this.dgvPRM_PRF_010_2.TabIndex = 4;
-            this.dgvPRM_PRF_010_2.Tag = "";
+            this.txtUser_Name.Location = new System.Drawing.Point(667, 27);
+            this.txtUser_Name.Name = "txtUser_Name";
+            this.txtUser_Name.Size = new System.Drawing.Size(100, 21);
+            this.txtUser_Name.TabIndex = 39;
             // 
-            // panel6
+            // btnUser
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.Control;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.panel2);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(6, 13);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(194, 26);
-            this.panel6.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(-528, -120);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 26);
-            this.panel2.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(-572, -229);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(194, 26);
-            this.panel3.TabIndex = 2;
+            this.btnUser.Location = new System.Drawing.Point(637, 25);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(24, 23);
+            this.btnUser.TabIndex = 38;
+            this.btnUser.Text = "...";
+            this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 6);
+            this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F);
+            this.label1.Location = new System.Drawing.Point(503, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "생산의뢰";
+            this.label1.Size = new System.Drawing.Size(53, 18);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "작업자";
             // 
-            // label7
+            // txtUser_ID
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(34, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 15);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "조회내역";
+            this.txtUser_ID.Location = new System.Drawing.Point(562, 27);
+            this.txtUser_ID.Name = "txtUser_ID";
+            this.txtUser_ID.Size = new System.Drawing.Size(69, 21);
+            this.txtUser_ID.TabIndex = 37;
             // 
-            // panel7
+            // dgvPRM_PRF_1
             // 
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Location = new System.Drawing.Point(-572, -229);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(194, 26);
-            this.panel7.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "생산의뢰";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(34, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 15);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "조회내역";
-            // 
-            // dgvPRM_PRF_010_1
-            // 
-            this.dgvPRM_PRF_010_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvPRM_PRF_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPRM_PRF_010_1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvPRM_PRF_010_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPRM_PRF_010_1.Location = new System.Drawing.Point(6, 45);
-            this.dgvPRM_PRF_010_1.Name = "dgvPRM_PRF_010_1";
-            this.dgvPRM_PRF_010_1.RowTemplate.Height = 23;
-            this.dgvPRM_PRF_010_1.Size = new System.Drawing.Size(1248, 298);
-            this.dgvPRM_PRF_010_1.TabIndex = 1;
-            this.dgvPRM_PRF_010_1.Tag = "";
+            this.dgvPRM_PRF_1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvPRM_PRF_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPRM_PRF_1.Location = new System.Drawing.Point(6, 48);
+            this.dgvPRM_PRF_1.Name = "dgvPRM_PRF_1";
+            this.dgvPRM_PRF_1.RowTemplate.Height = 23;
+            this.dgvPRM_PRF_1.Size = new System.Drawing.Size(1248, 345);
+            this.dgvPRM_PRF_1.TabIndex = 40;
+            this.dgvPRM_PRF_1.Tag = "";
+            this.dgvPRM_PRF_1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_1_CellClick);
+            // 
+            // dgvPRM_PRF_2
+            // 
+            this.dgvPRM_PRF_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPRM_PRF_2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvPRM_PRF_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPRM_PRF_2.Location = new System.Drawing.Point(3, 431);
+            this.dgvPRM_PRF_2.Name = "dgvPRM_PRF_2";
+            this.dgvPRM_PRF_2.RowTemplate.Height = 23;
+            this.dgvPRM_PRF_2.Size = new System.Drawing.Size(1248, 405);
+            this.dgvPRM_PRF_2.TabIndex = 41;
+            this.dgvPRM_PRF_2.Tag = "";
             // 
             // frm_PRM_PRF_010
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(1266, 828);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.btn_Process);
-            this.Controls.Add(this.label16);
-            this.Location = new System.Drawing.Point(0, 0);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.ClientSize = new System.Drawing.Size(1266, 897);
             this.Name = "frm_PRM_PRF_010";
             this.Load += new System.EventHandler(this.frm_PRM_PRF_010_Load);
-            this.Controls.SetChildIndex(this.panel4, 0);
-            this.Controls.SetChildIndex(this.label16, 0);
-            this.Controls.SetChildIndex(this.btn_Process, 0);
-            this.Controls.SetChildIndex(this.textBox6, 0);
-            this.Controls.SetChildIndex(this.panel5, 0);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -379,43 +178,19 @@ namespace Final.PRM_PRF
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_010_2)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_010_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSearchWorker;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvPRM_PRF_010_1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dgvPRM_PRF_010_2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+
+        private System.Windows.Forms.TextBox txtUser_Name;
+        private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtUser_ID;
+        private System.Windows.Forms.DataGridView dgvPRM_PRF_1;
+        private System.Windows.Forms.DataGridView dgvPRM_PRF_2;
     }
 }
