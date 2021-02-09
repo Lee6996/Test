@@ -13,10 +13,17 @@ namespace Final.PRM_PRF
     {
         WorkHistoryVO vo;
         List<WorkHistoryVO> list;
+        UserVO user;
 
         public frm_PRM_PRF_009()
         {
             InitializeComponent();
+        }
+
+        public frm_PRM_PRF_009(UserVO user)
+        {
+            InitializeComponent();
+            this.user = user;
         }
 
         private void frm_PRM_PRF_009_Load(object sender, EventArgs e)

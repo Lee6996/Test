@@ -211,9 +211,6 @@ namespace Final.PRM_PRF
             this.ResumeLayout(false);
 
         }
-
-
-
         #endregion
 
         private System.Windows.Forms.Button btnEdit;

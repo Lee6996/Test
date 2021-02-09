@@ -1,7 +1,7 @@
 ﻿
 namespace Final.PRM_RPT
 {
-    partial class frm_PRM_RPT_4
+    partial class frm_PRM_RPT_004
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.

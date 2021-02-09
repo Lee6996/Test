@@ -79,11 +79,13 @@ namespace Final.PRM_PRF
             // dtpTo
             // 
             this.dtpTo.Location = new System.Drawing.Point(1118, 26);
+            this.dtpTo.Value = new System.DateTime(2021, 2, 9, 20, 27, 40, 115);
             this.dtpTo.Visible = false;
             // 
             // dtpFrom
             // 
             this.dtpFrom.Location = new System.Drawing.Point(1012, 26);
+            this.dtpFrom.Value = new System.DateTime(2021, 2, 2, 20, 27, 40, 115);
             this.dtpFrom.Visible = false;
             // 
             // label2
@@ -133,6 +135,7 @@ namespace Final.PRM_PRF
             this.btnGV.TabIndex = 11;
             this.btnGV.Text = "...";
             this.btnGV.UseVisualStyleBackColor = true;
+            this.btnGV.Click += new System.EventHandler(this.btnGV_Click);
             // 
             // txtGVGroupDetail
             // 
@@ -156,6 +159,7 @@ namespace Final.PRM_PRF
             this.btnItem.TabIndex = 14;
             this.btnItem.Text = "...";
             this.btnItem.UseVisualStyleBackColor = true;
+            this.btnItem.Click += new System.EventHandler(this.btnItem_Click);
             // 
             // txtItem
             // 

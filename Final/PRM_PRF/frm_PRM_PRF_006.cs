@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,17 @@ namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_006 : Final.MDI_Parent.frm_MDIParent_1Grid
     {
+        UserVO user;
+
         public frm_PRM_PRF_006()
         {
             InitializeComponent();
+        }
+
+        public frm_PRM_PRF_006(UserVO user)
+        {
+            InitializeComponent();
+            this.user = user;
         }
 
         private void frm_PRM_PRF_006_Load(object sender, EventArgs e)
@@ -24,6 +33,16 @@ namespace Final.PRM_PRF
         private void btnTimeSearch_Click(object sender, EventArgs e)
         {
             RefreshState();
+        }
+
+        private void btnGV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         #region MyMethod

@@ -1,7 +1,7 @@
 ﻿
 namespace Final.PRM_RPT
 {
-    partial class frm_PRM_RPT_1
+    partial class frm_PRM_RPT_002
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -30,8 +30,6 @@ namespace Final.PRM_RPT
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -39,7 +37,6 @@ namespace Final.PRM_RPT
             this.label5 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -50,24 +47,20 @@ namespace Final.PRM_RPT
             this.label2.Size = new System.Drawing.Size(68, 18);
             this.label2.Text = "생산일자";
             // 
-            // btn_WorkCenter
+            // button24
             // 
             this.btn_WorkCenter.Location = new System.Drawing.Point(1198, 21);
-            this.btn_WorkCenter.Text = "출력";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(868, 21);
             this.textBox6.Visible = false;
             // 
             // label16
             // 
-            this.label16.Location = new System.Drawing.Point(809, 24);
             this.label16.Visible = false;
             // 
-            // btn_Process
+            // button23
             // 
-            this.btn_Process.Location = new System.Drawing.Point(630, 22);
             this.btn_Process.Visible = false;
             // 
             // button22
@@ -76,17 +69,15 @@ namespace Final.PRM_RPT
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(693, 22);
             this.textBox1.Visible = false;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(850, 46);
-            this.label4.Visible = false;
+            this.label4.Location = new System.Drawing.Point(606, 4);
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(868, 43);
+            this.dateTimePicker2.Location = new System.Drawing.Point(624, 1);
             this.dateTimePicker2.Visible = false;
             // 
             // dateTimePicker1
@@ -95,37 +86,18 @@ namespace Final.PRM_RPT
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(584, 24);
             this.label3.Visible = false;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 67);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1266, 739);
-            this.panel5.TabIndex = 18;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.documentViewer1);
-            this.panel1.Location = new System.Drawing.Point(6, 48);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1257, 688);
-            this.panel1.TabIndex = 11;
-            // 
-            // documentViewer1
-            // 
-            this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.documentViewer1.IsMetric = true;
-            this.documentViewer1.Location = new System.Drawing.Point(0, 0);
-            this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(1257, 688);
-            this.documentViewer1.TabIndex = 0;
+            this.panel5.TabIndex = 19;
             // 
             // label1
             // 
@@ -135,7 +107,7 @@ namespace Final.PRM_RPT
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(332, 41);
             this.label1.TabIndex = 10;
-            this.label1.Text = "파일 양식 출력(건조)";
+            this.label1.Text = "파일 양식 출력(성형)";
             // 
             // panel6
             // 
@@ -174,20 +146,19 @@ namespace Final.PRM_RPT
             this.label5.TabIndex = 0;
             this.label5.Text = "조회내역";
             // 
-            // frm_PRM_RPT_1
+            // frm_PRM_RPT_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1266, 828);
             this.Controls.Add(this.panel5);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "frm_PRM_RPT_1";
+            this.Name = "frm_PRM_RPT_2";
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -205,7 +176,5 @@ namespace Final.PRM_RPT
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
     }
 }

@@ -42,7 +42,11 @@ namespace Final.PRM_PRF.PopUp
                     SettingDGV(dgvMainPop, type);
                     new SelectDAC().SelectForPopup<GV>(type);
                     break;
-
+                case "GVGroup":
+                    lblType.Text = "대차그룹 목록";
+                    SettingDGV(dgvMainPop, type);
+                    new SelectDAC().SelectForPopup<GVGroup>(type);
+                    break;
                 case "User":
                     lblType.Text = "작업자 목록";
                     SettingDGV(dgvMainPop);

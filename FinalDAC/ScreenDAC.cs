@@ -16,12 +16,12 @@ namespace FinalDAC
         SqlConnection conn;
         public ScreenDAC()
         {
-            conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
+            conn = new SqlConnection(new AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
             conn.Open();
         }
         public List<ScreenVO> SelectScreenInfo(string screen_Code)
         {
-            string sQuery = @"select Screen_Code, Screen_Name, Screen_Path,Type,  case when Use_YN='Y' then 1 else 0 end Use_YN, convert(char(19), Ins_Date, 21) Ins_Date , Ins_Emp, convert(char(19), Up_Date, 21) Up_Date, Up_Emp
+            string sQuery = @"select Screen_Code, Screen_Name, Screen_Path,Type, case when Use_YN='Y' then 1 else 0 end Use_YN, convert(char(19), Ins_Date, 21) Ins_Date , Ins_Emp, convert(char(19), Up_Date, 21) Up_Date, Up_Emp
                                 from ScreenItem_Master where 1 = 1 ";
 
             if (!string.IsNullOrEmpty(screen_Code))

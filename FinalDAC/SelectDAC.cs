@@ -68,13 +68,21 @@ namespace FinalDAC
         }
 
         //ReceivingListVO
-        public List<ReceivingListVO> SelectReceivingListVO(string dtpFrom, string dtpTo)
+        public List<ReceivingListVO> SelectReceivingListVO(string dtpFrom, string dtpTo, string itemCode = null)
         {
             string sql = "select * from View_ReceivingList where In_Date between @dtpFrom and @dtpTo";
+            if (!string.IsNullOrEmpty(itemCode))
+            {
+                sql += " where Item_Code = @Item_Code";
+            }
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
                 cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                if (!string.IsNullOrEmpty(itemCode))
+                {
+                    cmd.Parameters.AddWithValue("@Item_Code", itemCode);
+                }
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<ReceivingListVO> list = Helper.DataReaderMapToList<ReceivingListVO>(reader);
@@ -170,10 +178,16 @@ namespace FinalDAC
         }
 
         //GV
-        public List<GVStatusVO> SelectGVStatus()
+        public List<GVStatusVO> SelectGVStatus(string GV_GroupCode, string Item_Code)
         {
-            string sql = "select * from View_GVStatus";
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            string sQuery = "select * from View_GVStatus";
+
+            if (!string.IsNullOrEmpty(GV_GroupCode))
+                sQuery += " and GV_GroupCode Like @GV_GroupCode ";
+            if (!string.IsNullOrEmpty(Item_Code))
+                sQuery += " and Item_Code Like @Item_Code ";
+
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<GVStatusVO> list = Helper.DataReaderMapToList<GVStatusVO>(reader);
@@ -286,9 +300,9 @@ namespace FinalDAC
         }
 
         //Process
-        public List<ProcessVO> SelectProcess()
+        public List<ProcessVO> SelectProcess(string Prd_Date)
         {
-            string sql = " SELECT * from View_Process_Master";
+            string sql = " SELECT * from View_Process_Master where Prd_Date = @Prd_Date";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -300,9 +314,9 @@ namespace FinalDAC
         }
 
         //WorkCenter
-        public List<WorkCenterVO> SelectWorkCenter()
+        public List<WorkCenterVO> SelectWorkCenter(string Prd_Date)
         {
-            string sql = " SELECT * from View_WorkCenter_Master";
+            string sql = " SELECT * from View_WorkCenter_Master where Prd_Date = @Prd_Date";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -311,19 +325,6 @@ namespace FinalDAC
                 conn.Close();
                 return list;
             }
-        }
-        public List<WorkDayVO> SelectWorkDay()
-        {
-            string sql = " SELECT * from View_WorkDay";
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<WorkDayVO> list = Helper.DataReaderMapToList<WorkDayVO>(reader);
-
-                conn.Close();
-                return list;
-            }
-
         }
 
         //NOP
@@ -354,7 +355,9 @@ namespace FinalDAC
                 case "Item":
                     sql = "SELECT Item_Code,Item_Name FROM Item_Master"; break;
                 case "GV":
-                    sql = "SELECT WC_Code,WC_Name FROM GV_Master"; break;
+                    sql = "SELECT GV_Code,GV_Name FROM GV_Master"; break;
+                case "GVGroup":
+                    sql = "SELECT GVGroup_Code,GVGroup_Name FROM GVGruop_Master"; break;
                 case "User":
                     sql = "SELECT User_ID,User_Name FROM User_Master";break;
                 case "Process":
@@ -365,6 +368,48 @@ namespace FinalDAC
             {
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<T> list = Helper.DataReaderMapToList<T>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<WorkDayVO> SelectWorkDay(string Prd_Date)
+        {
+            string sql = " SELECT * from View_WorkDay where Prd_Date = @Prd_Date";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                cmd.Parameters.AddWithValue("@Prd_Date", Prd_Date);
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkDayVO> list = Helper.DataReaderMapToList<WorkDayVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<WorkItemVO> SelectWorkItem(string Prd_Date)
+        {
+            string sql = " SELECT * from View_WorkItem where Prd_Date = @Prd_Date";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                cmd.Parameters.AddWithValue("@Prd_Date", Prd_Date);
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkItemVO> list = Helper.DataReaderMapToList<WorkItemVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<WorkBoxingVO> SelectWorkBoxing(string Prd_Date)
+        {
+            string sql = " SELECT * from View_WorkBoxing where Prd_Date = @Prd_Date";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                cmd.Parameters.AddWithValue("@Prd_Date", Prd_Date);
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkBoxingVO> list = Helper.DataReaderMapToList<WorkBoxingVO>(reader);
 
                 conn.Close();
                 return list;

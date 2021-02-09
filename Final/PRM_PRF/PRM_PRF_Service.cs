@@ -32,23 +32,24 @@ namespace Final.PRM_PRF
             return new PRM_PRF_DAC().UpdateWorkorderStatus(workorderno, user);
         }
 
-        public bool Update002_Pallet(string workorderno, UserVO user)
+        public bool Update002_Pallet(string palletno, UserVO user)
         {
-            return new PRM_PRF_DAC().UpdatePalletStatus(workorderno, user);
+            return new PRM_PRF_DAC().UpdatePalletStatus(palletno, user);
         }
         #endregion
 
         #region 003
-        public List<ReceivingListVO> GetSelectReceivingListVOList(string dtpFrom, string dtpTo)
+        public List<ReceivingListVO> GetSelectReceivingListVOList(string dtpFrom, string dtpTo, string itemCode = null)
         {
-            return new SelectDAC().SelectReceivingListVO(dtpFrom, dtpTo);
+            return new SelectDAC().SelectReceivingListVO(dtpFrom, dtpTo, itemCode);
         }
         #endregion
 
         #region 005
-        public void BindDGV_005(DataGridView dgv)
+
+        public List<GVStatusVO> GetGVVOList(string GV_Group, string Item_Code)
         {
-            dgv.DataSource = new SelectDAC().SelectGVStatus();
+            return new SelectDAC().SelectGVStatus(GV_Group, Item_Code);
         }
         #endregion
 
@@ -79,6 +80,8 @@ namespace Final.PRM_PRF
         {
             return new SelectDAC().SelectAttendanceManagement();
         }
+
+        
         #endregion
     }
 }

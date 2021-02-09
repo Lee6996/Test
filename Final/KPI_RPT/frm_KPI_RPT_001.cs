@@ -1,4 +1,5 @@
-﻿using Final.Service;
+﻿using Final.PRM_PRF.PopUp;
+using Final.Service;
 using FinalVO;
 using System;
 using System.Collections.Generic;
@@ -44,7 +45,7 @@ namespace Final.KPI_RPT
         {
             WorkDayService service = new WorkDayService();
 
-            List<WorkDayVO> list = service.SelectWorkDay();
+            List<WorkDayVO> list = service.SelectWorkDay(dateTimePicker1.Text);
 
             dgv_KPI_DAY.DataSource = null;
             dgv_KPI_DAY.DataSource = list;
@@ -52,21 +53,27 @@ namespace Final.KPI_RPT
         }
         private void btn_Process_Click(object sender, EventArgs e)
         {
-            frm_KPI_RPT_P process = new frm_KPI_RPT_P();
-            if(process.ShowDialog() == DialogResult.OK)
+            MainPop frm = new MainPop("WC")
             {
-                this.txtPNameText = process.ResultCode;
-                txtPCodeText.Text = txtPNameText;
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtPCodeText.Text = frm.SCode;
             }
         }
-
         private void btn_WorkCenter_Click(object sender, EventArgs e)
         {
-            frm_KPI_RPT_W workcenter = new frm_KPI_RPT_W();
-            if (workcenter.ShowDialog() == DialogResult.OK)
+            MainPop frm = new MainPop("Process")
             {
-                this.txtWNameText = workcenter.ResultCode;
-                txtWCodeText.Text = txtWNameText;
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtWCodeText.Text = frm.SCode;
+
             }
         }
     }

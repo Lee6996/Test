@@ -45,31 +45,49 @@ namespace FinalDAC
                 else return true;
             }
         }
+
+
         #endregion
 
         #region 002
+        public bool UpdateWorkorderStatus(string workorderno, UserVO user)
+        {
+            string sql = "update WorkOrder set Wo_Status = 'End', Plan_Endtime = NOW(), Manager_CloseTime = NOW(),  Up_Date = NOW(), Up_Emp = @Up_Emp where Workorderno = @Workorderno";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Workorderno", workorderno);
+                cmd.Parameters.AddWithValue("@Up_Emp", user.User_ID);
+
+                int iResult = cmd.ExecuteNonQuery();
+                Debug.WriteLine(iResult.ToString());
+                conn.Close();
+                if (iResult <= 0) return false;
+                else return true;
+            }
+        }
+
+        public bool UpdatePalletStatus(string palletno, UserVO user)
+        {
+            string sql = "update Goods_In_History set Colsed_YN = 'Y', Closed_Time = NOW(),  Up_Date = NOW(), Up_Emp = @Up_Emp where Pallet_No = @Pallet_No";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Pallet_No", palletno);
+                cmd.Parameters.AddWithValue("@Up_Emp", user.User_ID);
+
+                int iResult = cmd.ExecuteNonQuery();
+                Debug.WriteLine(iResult.ToString());
+                conn.Close();
+                if (iResult <= 0) return false;
+                else return true;
+            }
+        }
 
         #endregion
 
         #region 003
-        public bool UpdateWorkorderStatus(string workorderno, UserVO user)
-        {
-            {
-                string sql = "update WorkOrder set Wo_Status = 'End', Plan_Endtime = NOW(), Manager_CloseTime = NOW(),  Up_Date = NOW(), Up_Emp = @Up_Emp where Workorderno = @Workorderno";
-
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Workorderno", workorderno);
-                    cmd.Parameters.AddWithValue("@Up_Emp", user.User_ID);
-
-                    int iResult = cmd.ExecuteNonQuery();
-                    Debug.WriteLine(iResult.ToString());
-                    conn.Close();
-                    if (iResult <= 0) return false;
-                    else return true;
-                }
-            }
-        }
+        
         #endregion
 
         #region 004

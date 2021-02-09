@@ -86,6 +86,7 @@ namespace Final.PRM_PRF
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
             this.Name = "frm_PRM_PRF_007";
             this.Text = "frm_PRM_PRF_007";
+            this.Load += new System.EventHandler(this.frm_PRM_PRF_007_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
