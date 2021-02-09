@@ -312,7 +312,6 @@ namespace FinalDAC
                 return list;
             }
         }
-<<<<<<< HEAD
         public List<WorkDayVO> SelectWorkDay()
         {
             string sql = " SELECT * from View_WorkDay";
@@ -320,7 +319,12 @@ namespace FinalDAC
             {
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkDayVO> list = Helper.DataReaderMapToList<WorkDayVO>(reader);
-=======
+
+                conn.Close();
+                return list;
+            }
+
+        }
 
         //NOP
         public List<NOPVO> SelectNOP(string dtpFrom, string dtpTo)
@@ -361,7 +365,6 @@ namespace FinalDAC
             {
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<T> list = Helper.DataReaderMapToList<T>(reader);
->>>>>>> aacc023ff085b83aa178b9fd702128a601e82f6b
 
                 conn.Close();
                 return list;
