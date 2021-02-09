@@ -1,4 +1,4 @@
-﻿using Final.LeeYounggyu.service;
+﻿using Final.MDS_SDS.service;
 using FinalVO;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final.LeeYounggyu
+namespace Final.MDS_SDS
 {
     public partial class frm_MDS_CDS_002 : Form
     {
@@ -59,7 +59,7 @@ namespace Final.LeeYounggyu
             dgvDefMaster.DataSource = Defmalist;
 
             defmilist = new List<Def_MiVO>();
-            defmilist = miservice.GetAllDef_Mi_Master();
+            //defmilist = miservice.GetAllDef_Mi_Master();
             dgvDefDetail.DataSource = defmilist;
         }
 
@@ -88,15 +88,15 @@ namespace Final.LeeYounggyu
                     Ins_Emp = UserStatic.User_Name
 
                 };
-                if (miservice.InsertUpdateDef_Mi_Master(additem))
-                {
-                    MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    GetAllUserGroup();                    
-                }
-                else
-                {
-                    MessageBox.Show("저장에 실패했습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                //if (miservice.InsertUpdateDef_Mi_Master(additem))
+                //{
+                //    MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    GetAllUserGroup();                    
+                //}
+                //else
+                //{
+                //    MessageBox.Show("저장에 실패했습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}
             }
             else
             {
@@ -120,18 +120,18 @@ namespace Final.LeeYounggyu
             try
             {
 
-                if (e.ColumnIndex == dgvDefDetail.Columns["btn"].Index)//눌러서 사용과 사용안함 변경
-                {
-                    if ((dgvDefDetail.SelectedRows[0].Cells[4].Value).ToString() == "Y") //사용안함
-                    {
-                        miservice.UsedDef_Mi_Master((dgvDefDetail.SelectedRows[0].Cells[0].Value).ToString(), "N");
-                    }
-                    else //사용함
-                    {
-                        miservice.UsedDef_Mi_Master((dgvDefDetail.SelectedRows[0].Cells[0].Value).ToString(), "Y");
-                    }
-                    GetAllUserGroup();
-                }
+                //if (e.ColumnIndex == dgvDefDetail.Columns["btn"].Index)//눌러서 사용과 사용안함 변경
+                //{
+                //    if ((dgvDefDetail.SelectedRows[0].Cells[4].Value).ToString() == "Y") //사용안함
+                //    {
+                //        miservice.UsedDef_Mi_Master((dgvDefDetail.SelectedRows[0].Cells[0].Value).ToString(), "N");
+                //    }
+                //    else //사용함
+                //    {
+                //        miservice.UsedDef_Mi_Master((dgvDefDetail.SelectedRows[0].Cells[0].Value).ToString(), "Y");
+                //    }
+                //    GetAllUserGroup();
+                //}
 
             }
             catch (Exception err)
@@ -143,17 +143,17 @@ namespace Final.LeeYounggyu
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgvDefMaster.Rows)
-            {
-                if (row.Cells[0].Value.ToString() == aBigTextBox_FindNameByCode1.txtCodeText)
-                {
-                    row.Selected = true;
-                }
-            }
-            if (row.Cells[0].Value.ToString().Contains(lblGroup.Text))
-            {
-                row.Cells[0].Selected = true;
-            }
+            //foreach (DataGridViewRow row in dgvDefMaster.Rows)
+            //{
+            //    if (row.Cells[0].Value.ToString() == aBigTextBox_FindNameByCode1.txtCodeText)
+            //    {
+            //        row.Selected = true;
+            //    }
+            //}
+            //if (row.Cells[0].Value.ToString().Contains(lblGroup.Text))
+            //{
+            //    row.Cells[0].Selected = true;
+            //}
         }
     }
 }

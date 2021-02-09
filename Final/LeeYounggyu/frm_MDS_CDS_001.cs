@@ -1,4 +1,4 @@
-﻿using Final.LeeYounggyu.service;
+﻿using Final.MDS_SDS.service;
 using FinalVO;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final.LeeYounggyu
+namespace Final.MDS_SDS
 {
     public partial class frm_MDS_CDS_001 : Form
     {
@@ -122,17 +122,17 @@ namespace Final.LeeYounggyu
                         Ins_Emp = UserStatic.User_Name
                     };
 
-                    if (Defservice.InsertUpdateDef_MaVO(additem))
-                    {
-                        MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        GetAllDefMa();
-                        ControlSetting();                        
+                    //if (Defservice.InsertUpdateDef_MaVO(additem))
+                    //{
+                    //    MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //    GetAllDefMa();
+                    //    ControlSetting();                        
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("저장실패", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("저장실패", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //}
 
                 }
                 else

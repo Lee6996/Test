@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final.LeeYounggyu
+namespace Final.MDS_SDS
 {
-    public partial class frm_MDS_SDS_003_1 : Form
+    public partial class frm_MDS_SDS_004 : Form
     {
-        public frm_MDS_SDS_003_1()
+        public frm_MDS_SDS_004()
         {
             InitializeComponent();
         }

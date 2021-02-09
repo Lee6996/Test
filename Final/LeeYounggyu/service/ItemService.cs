@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Final.LeeYounggyu.service
+namespace Final.MDS_SDS.service
 {
     public class ItemService
     {

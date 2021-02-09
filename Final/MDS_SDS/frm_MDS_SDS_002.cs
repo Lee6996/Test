@@ -1,4 +1,4 @@
-﻿using Final.LeeYounggyu.service;
+﻿using Final.MDS_SDS.service;
 using FinalVO;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final.LeeYounggyu
+namespace Final.MDS_SDS
 {
     public partial class frm_MDS_SDS_002 : Form
     {

@@ -1,4 +1,4 @@
-﻿using Final.LeeYounggyu.service;
+﻿using Final.MDS_SDS.service;
 using FinalVO;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final.LeeYounggyu
+namespace Final.MDS_SDS
 {
     public partial class frm_MDS_SDS_002_1 : Form
     {
@@ -93,7 +93,7 @@ namespace Final.LeeYounggyu
                         Item_Name = txtName.Text.Trim(),                        
                         Item_Type = cbType.Text.Trim(),
                         Item_Spec = txtSpec.Text.Trim(),
-                        Item_Unit = nuunit.Text.Trim(),
+                        Item_Unit = nuUnit.Text.Trim(),
                         Item_Stock = nuStock.Value,
                         PrdQty_Per_Hour = nuhour.Value,
                         PrdQTy_Per_Batch = nubatch.Value,

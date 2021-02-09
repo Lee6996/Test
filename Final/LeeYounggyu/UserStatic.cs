@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Final.LeeYounggyu
+namespace Final.MDS_SDS
 {
     public static class UserStatic
     {

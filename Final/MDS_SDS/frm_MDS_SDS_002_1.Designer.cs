@@ -1,5 +1,5 @@
 ﻿
-namespace Final.LeeYounggyu
+namespace Final.MDS_SDS
 {
     partial class frm_MDS_SDS_002_1
     {
