@@ -18,7 +18,7 @@ namespace FinalDAC
         #region Connection Open
         public PRM_PRF_DAC()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["team2"].ConnectionString);
+            conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
             conn.Open();
         }
         #endregion
@@ -52,6 +52,24 @@ namespace FinalDAC
         #endregion
 
         #region 003
+        public bool UpdateWorkorderStatus(string workorderno, UserVO user)
+        {
+            {
+                string sql = "update WorkOrder set Wo_Status = 'End', Plan_Endtime = NOW(), Manager_CloseTime = NOW(),  Up_Date = NOW(), Up_Emp = @Up_Emp where Workorderno = @Workorderno";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Workorderno", workorderno);
+                    cmd.Parameters.AddWithValue("@Up_Emp", user.User_ID);
+
+                    int iResult = cmd.ExecuteNonQuery();
+                    Debug.WriteLine(iResult.ToString());
+                    conn.Close();
+                    if (iResult <= 0) return false;
+                    else return true;
+                }
+            }
+        }
         #endregion
 
         #region 004
@@ -101,5 +119,7 @@ namespace FinalDAC
             }
         }
         #endregion
+
+
     }
 }

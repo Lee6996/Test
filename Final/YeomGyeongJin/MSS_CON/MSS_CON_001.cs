@@ -13,13 +13,11 @@ namespace Final.YeomGyeongJin.MSS_CON
 {
     public partial class MSS_CON_001 : Form
     {
-        UserGroupVO userGroupVO;
-        DataTable dt = null;
         public MSS_CON_001()
         {
             InitializeComponent();
         }
-
+        
         private void MSS_CON_001_Load(object sender, EventArgs e)
         {
             UserGroupService service = new UserGroupService();
@@ -28,9 +26,18 @@ namespace Final.YeomGyeongJin.MSS_CON
             CommonUtil.AddGridTextColumn(dgvUser, "사용자그룹코드", "UserGroup_Code", 220);
             CommonUtil.AddGridTextColumn(dgvUser, "사용자그룹명", "UserGroup_Name", 220);
             CommonUtil.AddGridTextColumn(dgvUser, "입력일자", "Ins_Date", 150);
-            CommonUtil.AddGridTextColumn(dgvUser, "사용여부", "Use_YN", 150);
+            CommonUtil.AddGridTextColumn(dgvUser, "사용여부", "Use_YN", 150, visibility:false);
 
-            
+            DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn(false);
+            col.Name = "chk";
+            col.HeaderText = "사용여부";
+            col.Width = 100;
+            col.TrueValue = 1;
+            col.FalseValue = 0;
+            col.DataPropertyName = "Use_YN";
+            this.dgvUser.Columns.Add(col);
+
+            //dgvUser.CellClick += dgvUser_CellClick;
 
             //콤보박스에 유저 그룹 정보 바인딩
             DataTable dtName = service.UserGroupNameSelectBinding();
@@ -47,6 +54,27 @@ namespace Final.YeomGyeongJin.MSS_CON
 
             DataLoad("");
         }
+
+        private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4)
+            {
+                //dgvUser.EndEdit();
+
+                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)dgvUser.Rows[e.RowIndex].Cells[4];
+                int useyn = (Convert.ToInt32(chk.Value) == 1) ? 0: 1;
+
+                UserGroupVO vo = new UserGroupVO
+                {
+                    UserGroup_Code = dgvUser.Rows[e.RowIndex].Cells[0].Value.ToString(),
+                    Use_YN = useyn
+                };
+
+                UserGroupService service = new UserGroupService();
+                service.UpdateUserGroup(vo);
+            }
+        }
+
         private void DataLoad(string groupName)
         {
             try
@@ -63,15 +91,15 @@ namespace Final.YeomGyeongJin.MSS_CON
                 MessageBox.Show(err.Message);
             }
         }
-
+        //조회 버튼
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            string name = txtUserGroup_Name.Text;
-            if (name.Length < 1)
-            {
-                MessageBox.Show("사용자 그룹명을 입력해주세요");
-                return;
-            }
+            string name = txtUserGroup_Code.Text;
+            //if (name.Length < 1)
+            //{
+            //    MessageBox.Show("사용자 그룹명을 입력해주세요");
+            //    return;
+            //}
 
             DataLoad(name);
         }
@@ -129,12 +157,14 @@ namespace Final.YeomGyeongJin.MSS_CON
 
         private void cboUserGroup_Name_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboUserGroup_Name.SelectedIndex < 1) return;
+            //if (cboUserGroup_Name.SelectedIndex < 1) return;
+            string txt;
+            if (cboUserGroup_Name.SelectedIndex < 1)
+                txt = "";
+            else
+            txt = cboUserGroup_Name.Text;
 
-            //int value = Convert.ToInt32(cboUserGroup_Name.SelectedValue);
-            string txt = cboUserGroup_Name.Text;
-
-            DataLoad(txt);
+            txtUserGroup_Code.Text = txt;
         }
     }
 }

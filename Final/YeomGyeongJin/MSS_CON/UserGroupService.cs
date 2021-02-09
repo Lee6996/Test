@@ -31,6 +31,13 @@ namespace Final.YeomGyeongJin.MSS_CON
         {
             return dac.InsertUserGroup(vo);
         }
+
+        public bool UpdateUserGroup(UserGroupVO vo)
+        {
+            return dac.UpdateUserGroup(vo);
+        }
+
+
         public DataTable UserGroupNameSelectBinding()
         {
             return dac.SelectUserGroupNameBinding();

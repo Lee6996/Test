@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace FinalVO
 {
-    /// <summary>
-    /// UserGroup VO
-    /// 2021_01_26 염경진
-    /// </summary>
-    public class UserGroupVO
+    public class ScreenVO
     {
-        //사용자 그룹 코드
-        public string UserGroup_Code { get; set; }
-        //사용자 그룹명
-        public string UserGroup_Name { get; set; }
-        //관리자권한 여부
-        public string Admin { get; set; }
+        //화면 코드
+        public string Screen_Code { get; set; }
+        //화면타입
+        public string Type { get; set; }
+        //화면경로
+        public string Screen_Path { get; set; }
         //사용여부
         public int Use_YN { get; set; }
         //최초입력일자

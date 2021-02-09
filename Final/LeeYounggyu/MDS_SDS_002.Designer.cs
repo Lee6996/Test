@@ -29,10 +29,9 @@ namespace Final.LeeYounggyu
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDS_SDS_002));
-            this.button3 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.rdoType = new System.Windows.Forms.RadioButton();
+            this.rdoName = new System.Windows.Forms.RadioButton();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -41,57 +40,66 @@ namespace Final.LeeYounggyu
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgvItemDetail = new System.Windows.Forms.DataGridView();
+            this.btnSearch2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbItem = new System.Windows.Forms.ComboBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.nudCavity = new System.Windows.Forms.NumericUpDown();
+            this.nuLine_Per_Qty = new System.Windows.Forms.NumericUpDown();
+            this.nuShot_Per_Qty = new System.Windows.Forms.NumericUpDown();
+            this.cbType = new System.Windows.Forms.ComboBox();
+            this.lblCode = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblupdateName = new System.Windows.Forms.Label();
+            this.lblupdateCode = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItemDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCavity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuLine_Per_Qty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuShot_Per_Qty)).BeginInit();
             this.SuspendLayout();
             // 
-            // button3
+            // btnSearch
             // 
-            this.button3.BackColor = System.Drawing.Color.DimGray;
-            this.button3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button3.Location = new System.Drawing.Point(618, 20);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 29);
-            this.button3.TabIndex = 134;
-            this.button3.Text = "조회";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.DimGray;
+            this.btnSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSearch.Location = new System.Drawing.Point(618, 20);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 29);
+            this.btnSearch.TabIndex = 134;
+            this.btnSearch.Text = "조회";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // radioButton2
+            // rdoType
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.radioButton2.Location = new System.Drawing.Point(776, 24);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(78, 21);
-            this.radioButton2.TabIndex = 133;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "품목유형";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoType.AutoSize = true;
+            this.rdoType.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rdoType.Location = new System.Drawing.Point(776, 24);
+            this.rdoType.Name = "rdoType";
+            this.rdoType.Size = new System.Drawing.Size(78, 21);
+            this.rdoType.TabIndex = 133;
+            this.rdoType.TabStop = true;
+            this.rdoType.Text = "품목유형";
+            this.rdoType.UseVisualStyleBackColor = true;
+            this.rdoType.CheckedChanged += new System.EventHandler(this.rdoType_CheckedChanged);
             // 
-            // radioButton1
+            // rdoName
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.radioButton1.Location = new System.Drawing.Point(237, 24);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 21);
-            this.radioButton1.TabIndex = 132;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "품목명";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoName.AutoSize = true;
+            this.rdoName.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rdoName.Location = new System.Drawing.Point(237, 24);
+            this.rdoName.Name = "rdoName";
+            this.rdoName.Size = new System.Drawing.Size(65, 21);
+            this.rdoName.TabIndex = 132;
+            this.rdoName.TabStop = true;
+            this.rdoName.Text = "품목명";
+            this.rdoName.UseVisualStyleBackColor = true;
+            this.rdoName.CheckedChanged += new System.EventHandler(this.rdoName_CheckedChanged);
             // 
             // textBox11
             // 
@@ -173,25 +181,18 @@ namespace Final.LeeYounggyu
             this.label7.TabIndex = 124;
             this.label7.Text = "품목코드";
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.BackColor = System.Drawing.Color.DimGray;
-            this.button2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(973, 693);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 29);
-            this.button2.TabIndex = 123;
-            this.button2.Text = "수정";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox6.Location = new System.Drawing.Point(849, 695);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 23);
-            this.textBox6.TabIndex = 122;
+            this.btnSave.BackColor = System.Drawing.Color.DimGray;
+            this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSave.Location = new System.Drawing.Point(973, 693);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 29);
+            this.btnSave.TabIndex = 123;
+            this.btnSave.Text = "수정";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label6
             // 
@@ -199,19 +200,11 @@ namespace Final.LeeYounggyu
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(753, 697);
+            this.label6.Location = new System.Drawing.Point(753, 698);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 17);
             this.label6.TabIndex = 121;
             this.label6.Text = "Shot당 PCS수";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox5.Location = new System.Drawing.Point(624, 695);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 23);
-            this.textBox5.TabIndex = 120;
             // 
             // label5
             // 
@@ -219,58 +212,35 @@ namespace Final.LeeYounggyu
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(512, 697);
+            this.label5.Location = new System.Drawing.Point(525, 697);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 17);
             this.label5.TabIndex = 119;
             this.label5.Text = "성형 줄당 PCS수";
             // 
-            // textBox3
+            // dgvItemDetail
             // 
-            this.textBox3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(860, 24);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 118;
+            this.dgvItemDetail.BackgroundColor = System.Drawing.Color.White;
+            this.dgvItemDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvItemDetail.Location = new System.Drawing.Point(0, 90);
+            this.dgvItemDetail.Name = "dgvItemDetail";
+            this.dgvItemDetail.RowTemplate.Height = 23;
+            this.dgvItemDetail.Size = new System.Drawing.Size(1341, 465);
+            this.dgvItemDetail.TabIndex = 116;
+            this.dgvItemDetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemDetail_CellDoubleClick);
             // 
-            // textBox2
+            // btnSearch2
             // 
-            this.textBox2.Location = new System.Drawing.Point(224, 143);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(867, 59);
-            this.textBox2.TabIndex = 117;
-            this.textBox2.Text = resources.GetString("textBox2.Text");
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 90);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1341, 465);
-            this.dataGridView1.TabIndex = 116;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(966, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
-            this.button1.TabIndex = 115;
-            this.button1.Text = "조회";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(379, 695);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 114;
+            this.btnSearch2.BackColor = System.Drawing.Color.DimGray;
+            this.btnSearch2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSearch2.Location = new System.Drawing.Point(987, 22);
+            this.btnSearch2.Name = "btnSearch2";
+            this.btnSearch2.Size = new System.Drawing.Size(75, 29);
+            this.btnSearch2.TabIndex = 115;
+            this.btnSearch2.Text = "조회";
+            this.btnSearch2.UseVisualStyleBackColor = false;
+            this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
             // 
             // label2
             // 
@@ -278,20 +248,21 @@ namespace Final.LeeYounggyu
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(313, 697);
+            this.label2.Location = new System.Drawing.Point(354, 698);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 113;
             this.label2.Text = "캐비티수";
             // 
-            // comboBox1
+            // cbItem
             // 
-            this.comboBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(308, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 112;
+            this.cbItem.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbItem.FormattingEnabled = true;
+            this.cbItem.Location = new System.Drawing.Point(308, 22);
+            this.cbItem.Name = "cbItem";
+            this.cbItem.Size = new System.Drawing.Size(121, 23);
+            this.cbItem.TabIndex = 112;
+            this.cbItem.SelectedIndexChanged += new System.EventHandler(this.cbItem_SelectedIndexChanged);
             // 
             // splitter1
             // 
@@ -303,14 +274,97 @@ namespace Final.LeeYounggyu
             this.splitter1.TabIndex = 111;
             this.splitter1.TabStop = false;
             // 
+            // nudCavity
+            // 
+            this.nudCavity.Location = new System.Drawing.Point(420, 697);
+            this.nudCavity.Name = "nudCavity";
+            this.nudCavity.Size = new System.Drawing.Size(99, 21);
+            this.nudCavity.TabIndex = 135;
+            // 
+            // nuLine_Per_Qty
+            // 
+            this.nuLine_Per_Qty.Location = new System.Drawing.Point(637, 698);
+            this.nuLine_Per_Qty.Name = "nuLine_Per_Qty";
+            this.nuLine_Per_Qty.Size = new System.Drawing.Size(99, 21);
+            this.nuLine_Per_Qty.TabIndex = 136;
+            // 
+            // nuShot_Per_Qty
+            // 
+            this.nuShot_Per_Qty.Location = new System.Drawing.Point(849, 697);
+            this.nuShot_Per_Qty.Name = "nuShot_Per_Qty";
+            this.nuShot_Per_Qty.Size = new System.Drawing.Size(99, 21);
+            this.nuShot_Per_Qty.TabIndex = 137;
+            // 
+            // cbType
+            // 
+            this.cbType.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbType.FormattingEnabled = true;
+            this.cbType.Location = new System.Drawing.Point(860, 24);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(121, 23);
+            this.cbType.TabIndex = 138;
+            // 
+            // lblCode
+            // 
+            this.lblCode.AutoSize = true;
+            this.lblCode.BackColor = System.Drawing.Color.White;
+            this.lblCode.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblCode.ForeColor = System.Drawing.Color.Black;
+            this.lblCode.Location = new System.Drawing.Point(516, 25);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(0, 17);
+            this.lblCode.TabIndex = 139;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(459, 644);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.TabIndex = 140;
+            // 
+            // lblupdateName
+            // 
+            this.lblupdateName.AutoSize = true;
+            this.lblupdateName.BackColor = System.Drawing.Color.White;
+            this.lblupdateName.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblupdateName.ForeColor = System.Drawing.Color.Black;
+            this.lblupdateName.Location = new System.Drawing.Point(757, 643);
+            this.lblupdateName.Name = "lblupdateName";
+            this.lblupdateName.Size = new System.Drawing.Size(0, 17);
+            this.lblupdateName.TabIndex = 141;
+            // 
+            // lblupdateCode
+            // 
+            this.lblupdateCode.AutoSize = true;
+            this.lblupdateCode.BackColor = System.Drawing.Color.White;
+            this.lblupdateCode.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblupdateCode.ForeColor = System.Drawing.Color.Black;
+            this.lblupdateCode.Location = new System.Drawing.Point(460, 644);
+            this.lblupdateCode.Name = "lblupdateCode";
+            this.lblupdateCode.Size = new System.Drawing.Size(0, 17);
+            this.lblupdateCode.TabIndex = 142;
+            // 
             // MDS_SDS_002
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1341, 732);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.lblupdateCode);
+            this.Controls.Add(this.lblupdateName);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCode);
+            this.Controls.Add(this.cbType);
+            this.Controls.Add(this.nuShot_Per_Qty);
+            this.Controls.Add(this.nuLine_Per_Qty);
+            this.Controls.Add(this.nudCavity);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.rdoType);
+            this.Controls.Add(this.rdoName);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.label9);
@@ -319,22 +373,21 @@ namespace Final.LeeYounggyu
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvItemDetail);
+            this.Controls.Add(this.btnSearch2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbItem);
             this.Controls.Add(this.splitter1);
             this.Name = "MDS_SDS_002";
             this.Text = "품목 정보";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.MDS_SDS_002_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItemDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCavity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuLine_Per_Qty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuShot_Per_Qty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,9 +395,9 @@ namespace Final.LeeYounggyu
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.RadioButton rdoType;
+        private System.Windows.Forms.RadioButton rdoName;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label9;
@@ -353,18 +406,21 @@ namespace Final.LeeYounggyu
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgvItemDetail;
+        private System.Windows.Forms.Button btnSearch2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbItem;
         private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.NumericUpDown nudCavity;
+        private System.Windows.Forms.NumericUpDown nuLine_Per_Qty;
+        private System.Windows.Forms.NumericUpDown nuShot_Per_Qty;
+        private System.Windows.Forms.ComboBox cbType;
+        private System.Windows.Forms.Label lblCode;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblupdateName;
+        private System.Windows.Forms.Label lblupdateCode;
     }
 }

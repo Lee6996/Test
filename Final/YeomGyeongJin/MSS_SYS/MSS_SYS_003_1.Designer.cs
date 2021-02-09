@@ -31,23 +31,28 @@ namespace Final
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tp_Sub_Menu = new System.Windows.Forms.TabPage();
+            this.btnInsert_Lower = new System.Windows.Forms.Button();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtScreen_Code = new System.Windows.Forms.TextBox();
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
             this.label10 = new System.Windows.Forms.Label();
             this.cbScreen_Name = new System.Windows.Forms.ComboBox();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtDate_Now = new System.Windows.Forms.TextBox();
+            this.txtLower_DateNow = new System.Windows.Forms.TextBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAdmin = new System.Windows.Forms.TextBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtUpper_Code = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbUpper_Code = new System.Windows.Forms.ComboBox();
+            this.cbUpper_Name = new System.Windows.Forms.ComboBox();
             this.tp_Upper_Menu = new System.Windows.Forms.TabPage();
+            this.btnCancle2 = new System.Windows.Forms.Button();
+            this.btnInsert_Upper = new System.Windows.Forms.Button();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.label5 = new System.Windows.Forms.Label();
             this.txtUpper_DateNow = new System.Windows.Forms.TextBox();
@@ -56,16 +61,16 @@ namespace Final
             this.txtUpper_Admin = new System.Windows.Forms.TextBox();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtMenu_Name = new System.Windows.Forms.TextBox();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnInsert_Lower = new System.Windows.Forms.Button();
+            this.txtMenu_Code = new System.Windows.Forms.TextBox();
             this.btnCancle = new System.Windows.Forms.Button();
-            this.btnInsert_Upper = new System.Windows.Forms.Button();
-            this.btnCancle2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tp_Sub_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
             this.splitContainer9.Panel1.SuspendLayout();
+            this.splitContainer9.Panel2.SuspendLayout();
             this.splitContainer9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
             this.splitContainer10.Panel1.SuspendLayout();
@@ -81,6 +86,7 @@ namespace Final
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -97,9 +103,11 @@ namespace Final
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.Panel1.SuspendLayout();
+            this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
             this.splitContainer8.Panel1.SuspendLayout();
+            this.splitContainer8.Panel2.SuspendLayout();
             this.splitContainer8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,6 +139,19 @@ namespace Final
             this.tp_Sub_Menu.TabIndex = 0;
             this.tp_Sub_Menu.Text = "하위메뉴등록";
             // 
+            // btnInsert_Lower
+            // 
+            this.btnInsert_Lower.BackColor = System.Drawing.Color.DimGray;
+            this.btnInsert_Lower.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnInsert_Lower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnInsert_Lower.Location = new System.Drawing.Point(75, 356);
+            this.btnInsert_Lower.Name = "btnInsert_Lower";
+            this.btnInsert_Lower.Size = new System.Drawing.Size(120, 40);
+            this.btnInsert_Lower.TabIndex = 101;
+            this.btnInsert_Lower.Text = "등록";
+            this.btnInsert_Lower.UseVisualStyleBackColor = false;
+            this.btnInsert_Lower.Click += new System.EventHandler(this.btnInsert_Lower_Click);
+            // 
             // splitContainer9
             // 
             this.splitContainer9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -141,6 +162,10 @@ namespace Final
             // 
             this.splitContainer9.Panel1.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer9.Panel1.Controls.Add(this.label9);
+            // 
+            // splitContainer9.Panel2
+            // 
+            this.splitContainer9.Panel2.Controls.Add(this.txtScreen_Code);
             this.splitContainer9.Size = new System.Drawing.Size(337, 40);
             this.splitContainer9.SplitterDistance = 126;
             this.splitContainer9.TabIndex = 7;
@@ -155,6 +180,14 @@ namespace Final
             this.label9.Size = new System.Drawing.Size(75, 18);
             this.label9.TabIndex = 2;
             this.label9.Text = "*화면코드";
+            // 
+            // txtScreen_Code
+            // 
+            this.txtScreen_Code.Location = new System.Drawing.Point(3, 6);
+            this.txtScreen_Code.Name = "txtScreen_Code";
+            this.txtScreen_Code.ReadOnly = true;
+            this.txtScreen_Code.Size = new System.Drawing.Size(198, 26);
+            this.txtScreen_Code.TabIndex = 1;
             // 
             // splitContainer10
             // 
@@ -187,6 +220,7 @@ namespace Final
             // 
             // cbScreen_Name
             // 
+            this.cbScreen_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbScreen_Name.FormattingEnabled = true;
             this.cbScreen_Name.Location = new System.Drawing.Point(4, 5);
             this.cbScreen_Name.Name = "cbScreen_Name";
@@ -206,7 +240,7 @@ namespace Final
             // 
             // splitContainer4.Panel2
             // 
-            this.splitContainer4.Panel2.Controls.Add(this.txtDate_Now);
+            this.splitContainer4.Panel2.Controls.Add(this.txtLower_DateNow);
             this.splitContainer4.Size = new System.Drawing.Size(337, 40);
             this.splitContainer4.SplitterDistance = 126;
             this.splitContainer4.TabIndex = 3;
@@ -222,12 +256,13 @@ namespace Final
             this.label4.TabIndex = 2;
             this.label4.Text = "입력날짜";
             // 
-            // txtDate_Now
+            // txtLower_DateNow
             // 
-            this.txtDate_Now.Location = new System.Drawing.Point(3, 6);
-            this.txtDate_Now.Name = "txtDate_Now";
-            this.txtDate_Now.Size = new System.Drawing.Size(198, 26);
-            this.txtDate_Now.TabIndex = 1;
+            this.txtLower_DateNow.Location = new System.Drawing.Point(3, 6);
+            this.txtLower_DateNow.Name = "txtLower_DateNow";
+            this.txtLower_DateNow.ReadOnly = true;
+            this.txtLower_DateNow.Size = new System.Drawing.Size(198, 26);
+            this.txtLower_DateNow.TabIndex = 1;
             // 
             // splitContainer3
             // 
@@ -275,6 +310,10 @@ namespace Final
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer2.Panel1.Controls.Add(this.label1);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.txtUpper_Code);
             this.splitContainer2.Size = new System.Drawing.Size(337, 40);
             this.splitContainer2.SplitterDistance = 126;
             this.splitContainer2.TabIndex = 1;
@@ -288,7 +327,15 @@ namespace Final
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 18);
             this.label1.TabIndex = 2;
-            this.label1.Text = "*상위메뉴이름";
+            this.label1.Text = "*상위메뉴코드";
+            // 
+            // txtUpper_Code
+            // 
+            this.txtUpper_Code.Location = new System.Drawing.Point(3, 6);
+            this.txtUpper_Code.Name = "txtUpper_Code";
+            this.txtUpper_Code.ReadOnly = true;
+            this.txtUpper_Code.Size = new System.Drawing.Size(198, 26);
+            this.txtUpper_Code.TabIndex = 1;
             // 
             // splitContainer1
             // 
@@ -303,7 +350,7 @@ namespace Final
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.cbUpper_Code);
+            this.splitContainer1.Panel2.Controls.Add(this.cbUpper_Name);
             this.splitContainer1.Size = new System.Drawing.Size(337, 40);
             this.splitContainer1.SplitterDistance = 126;
             this.splitContainer1.TabIndex = 0;
@@ -317,15 +364,16 @@ namespace Final
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "*상위메뉴코드";
+            this.label2.Text = "*상위메뉴이름";
             // 
-            // cbUpper_Code
+            // cbUpper_Name
             // 
-            this.cbUpper_Code.FormattingEnabled = true;
-            this.cbUpper_Code.Location = new System.Drawing.Point(4, 5);
-            this.cbUpper_Code.Name = "cbUpper_Code";
-            this.cbUpper_Code.Size = new System.Drawing.Size(197, 26);
-            this.cbUpper_Code.TabIndex = 0;
+            this.cbUpper_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUpper_Name.FormattingEnabled = true;
+            this.cbUpper_Name.Location = new System.Drawing.Point(4, 5);
+            this.cbUpper_Name.Name = "cbUpper_Name";
+            this.cbUpper_Name.Size = new System.Drawing.Size(197, 26);
+            this.cbUpper_Name.TabIndex = 0;
             // 
             // tp_Upper_Menu
             // 
@@ -342,6 +390,32 @@ namespace Final
             this.tp_Upper_Menu.TabIndex = 1;
             this.tp_Upper_Menu.Text = "상위메뉴등록";
             this.tp_Upper_Menu.UseVisualStyleBackColor = true;
+            // 
+            // btnCancle2
+            // 
+            this.btnCancle2.BackColor = System.Drawing.Color.DimGray;
+            this.btnCancle2.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCancle2.Location = new System.Drawing.Point(201, 308);
+            this.btnCancle2.Name = "btnCancle2";
+            this.btnCancle2.Size = new System.Drawing.Size(120, 40);
+            this.btnCancle2.TabIndex = 103;
+            this.btnCancle2.Text = "취소";
+            this.btnCancle2.UseVisualStyleBackColor = false;
+            this.btnCancle2.Click += new System.EventHandler(this.btnCancle2_Click);
+            // 
+            // btnInsert_Upper
+            // 
+            this.btnInsert_Upper.BackColor = System.Drawing.Color.DimGray;
+            this.btnInsert_Upper.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnInsert_Upper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnInsert_Upper.Location = new System.Drawing.Point(66, 308);
+            this.btnInsert_Upper.Name = "btnInsert_Upper";
+            this.btnInsert_Upper.Size = new System.Drawing.Size(120, 40);
+            this.btnInsert_Upper.TabIndex = 102;
+            this.btnInsert_Upper.Text = "등록";
+            this.btnInsert_Upper.UseVisualStyleBackColor = false;
+            this.btnInsert_Upper.Click += new System.EventHandler(this.btnInsert_Upper_Click);
             // 
             // splitContainer5
             // 
@@ -375,6 +449,7 @@ namespace Final
             // 
             this.txtUpper_DateNow.Location = new System.Drawing.Point(3, 6);
             this.txtUpper_DateNow.Name = "txtUpper_DateNow";
+            this.txtUpper_DateNow.ReadOnly = true;
             this.txtUpper_DateNow.Size = new System.Drawing.Size(198, 26);
             this.txtUpper_DateNow.TabIndex = 1;
             // 
@@ -423,6 +498,10 @@ namespace Final
             // 
             this.splitContainer7.Panel1.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer7.Panel1.Controls.Add(this.label7);
+            // 
+            // splitContainer7.Panel2
+            // 
+            this.splitContainer7.Panel2.Controls.Add(this.txtMenu_Name);
             this.splitContainer7.Size = new System.Drawing.Size(337, 40);
             this.splitContainer7.SplitterDistance = 126;
             this.splitContainer7.TabIndex = 7;
@@ -437,6 +516,13 @@ namespace Final
             this.label7.TabIndex = 2;
             this.label7.Text = "*메뉴명";
             // 
+            // txtMenu_Name
+            // 
+            this.txtMenu_Name.Location = new System.Drawing.Point(3, 6);
+            this.txtMenu_Name.Name = "txtMenu_Name";
+            this.txtMenu_Name.Size = new System.Drawing.Size(198, 26);
+            this.txtMenu_Name.TabIndex = 1;
+            // 
             // splitContainer8
             // 
             this.splitContainer8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -447,6 +533,10 @@ namespace Final
             // 
             this.splitContainer8.Panel1.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer8.Panel1.Controls.Add(this.label8);
+            // 
+            // splitContainer8.Panel2
+            // 
+            this.splitContainer8.Panel2.Controls.Add(this.txtMenu_Code);
             this.splitContainer8.Size = new System.Drawing.Size(337, 40);
             this.splitContainer8.SplitterDistance = 126;
             this.splitContainer8.TabIndex = 6;
@@ -461,53 +551,25 @@ namespace Final
             this.label8.TabIndex = 2;
             this.label8.Text = "*메뉴코드";
             // 
-            // btnInsert_Lower
+            // txtMenu_Code
             // 
-            this.btnInsert_Lower.BackColor = System.Drawing.Color.DimGray;
-            this.btnInsert_Lower.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnInsert_Lower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnInsert_Lower.Location = new System.Drawing.Point(75, 356);
-            this.btnInsert_Lower.Name = "btnInsert_Lower";
-            this.btnInsert_Lower.Size = new System.Drawing.Size(120, 40);
-            this.btnInsert_Lower.TabIndex = 101;
-            this.btnInsert_Lower.Text = "등록";
-            this.btnInsert_Lower.UseVisualStyleBackColor = false;
+            this.txtMenu_Code.Location = new System.Drawing.Point(3, 6);
+            this.txtMenu_Code.Name = "txtMenu_Code";
+            this.txtMenu_Code.Size = new System.Drawing.Size(198, 26);
+            this.txtMenu_Code.TabIndex = 1;
             // 
             // btnCancle
             // 
             this.btnCancle.BackColor = System.Drawing.Color.DimGray;
             this.btnCancle.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCancle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnCancle.Location = new System.Drawing.Point(210, 356);
+            this.btnCancle.Location = new System.Drawing.Point(218, 356);
             this.btnCancle.Name = "btnCancle";
             this.btnCancle.Size = new System.Drawing.Size(120, 40);
-            this.btnCancle.TabIndex = 102;
+            this.btnCancle.TabIndex = 104;
             this.btnCancle.Text = "취소";
             this.btnCancle.UseVisualStyleBackColor = false;
-            // 
-            // btnInsert_Upper
-            // 
-            this.btnInsert_Upper.BackColor = System.Drawing.Color.DimGray;
-            this.btnInsert_Upper.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnInsert_Upper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnInsert_Upper.Location = new System.Drawing.Point(66, 308);
-            this.btnInsert_Upper.Name = "btnInsert_Upper";
-            this.btnInsert_Upper.Size = new System.Drawing.Size(120, 40);
-            this.btnInsert_Upper.TabIndex = 102;
-            this.btnInsert_Upper.Text = "등록";
-            this.btnInsert_Upper.UseVisualStyleBackColor = false;
-            // 
-            // btnCancle2
-            // 
-            this.btnCancle2.BackColor = System.Drawing.Color.DimGray;
-            this.btnCancle2.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnCancle2.Location = new System.Drawing.Point(201, 308);
-            this.btnCancle2.Name = "btnCancle2";
-            this.btnCancle2.Size = new System.Drawing.Size(120, 40);
-            this.btnCancle2.TabIndex = 103;
-            this.btnCancle2.Text = "취소";
-            this.btnCancle2.UseVisualStyleBackColor = false;
+            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
             // frm_MSS_SYS_003_1
             // 
@@ -521,10 +583,13 @@ namespace Final
             this.Name = "frm_MSS_SYS_003_1";
             this.Tag = "메뉴추가";
             this.Text = "frm_MSS_SYS_003_1";
+            this.Load += new System.EventHandler(this.frm_MSS_SYS_003_1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tp_Sub_Menu.ResumeLayout(false);
             this.splitContainer9.Panel1.ResumeLayout(false);
             this.splitContainer9.Panel1.PerformLayout();
+            this.splitContainer9.Panel2.ResumeLayout(false);
+            this.splitContainer9.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
             this.splitContainer9.ResumeLayout(false);
             this.splitContainer10.Panel1.ResumeLayout(false);
@@ -546,6 +611,8 @@ namespace Final
             this.splitContainer3.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -568,10 +635,14 @@ namespace Final
             this.splitContainer6.ResumeLayout(false);
             this.splitContainer7.Panel1.ResumeLayout(false);
             this.splitContainer7.Panel1.PerformLayout();
+            this.splitContainer7.Panel2.ResumeLayout(false);
+            this.splitContainer7.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
             this.splitContainer8.Panel1.ResumeLayout(false);
             this.splitContainer8.Panel1.PerformLayout();
+            this.splitContainer8.Panel2.ResumeLayout(false);
+            this.splitContainer8.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
             this.splitContainer8.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -587,7 +658,7 @@ namespace Final
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDate_Now;
+        private System.Windows.Forms.TextBox txtLower_DateNow;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAdmin;
@@ -595,7 +666,6 @@ namespace Final
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtUpper_DateNow;
         private System.Windows.Forms.SplitContainer splitContainer6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtUpper_Admin;
@@ -608,10 +678,15 @@ namespace Final
         private System.Windows.Forms.SplitContainer splitContainer10;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbScreen_Name;
-        private System.Windows.Forms.ComboBox cbUpper_Code;
-        private System.Windows.Forms.Button btnCancle;
+        private System.Windows.Forms.ComboBox cbUpper_Name;
         private System.Windows.Forms.Button btnInsert_Lower;
         private System.Windows.Forms.Button btnInsert_Upper;
         private System.Windows.Forms.Button btnCancle2;
+        private System.Windows.Forms.TextBox txtScreen_Code;
+        private System.Windows.Forms.TextBox txtUpper_Code;
+        private System.Windows.Forms.TextBox txtMenu_Name;
+        private System.Windows.Forms.TextBox txtMenu_Code;
+        private System.Windows.Forms.TextBox txtUpper_DateNow;
+        private System.Windows.Forms.Button btnCancle;
     }
 }

@@ -12,22 +12,29 @@ namespace FinalDAC
     public class SelectDAC
     {
         #region Connection Open
-        SqlConnection conn;
+       static SqlConnection conn;
         public SelectDAC()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["team2"].ConnectionString);
+            conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
             conn.Open();
         }
         #endregion
 
         //WorkOrderVO
-        public List<WorkOrderVO> SelectWorkOrder(string dtpFrom, string dtpTo)
+        public List<WorkOrderVO> SelectWorkOrder(string dtpFrom, string dtpTo, string processCode, string wcCode)
         {
             string sql = "select * from View_WorkOrder where 1=1 and Plan_Date between @dtpFrom and @dtpTo";
+            if (!string.IsNullOrEmpty(processCode)) sql += " AND Process_Code = @Process_Code";
+            if (!string.IsNullOrEmpty(wcCode)) sql += " AND Wc_Code = @Wc_Code";
+            
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
                 cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                if (!string.IsNullOrEmpty(processCode))
+                    cmd.Parameters.AddWithValue("@Process_Code", processCode);
+                if (!string.IsNullOrEmpty(wcCode))
+                    cmd.Parameters.AddWithValue("@Wc_Code", wcCode);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkOrderVO> list = Helper.DataReaderMapToList<WorkOrderVO>(reader);
@@ -162,6 +169,7 @@ namespace FinalDAC
             }
         }
 
+        //GV
         public List<GVStatusVO> SelectGVStatus()
         {
             string sql = "select * from View_GVStatus";
@@ -188,7 +196,95 @@ namespace FinalDAC
                 return list;
             }
         }
-        
+        //GetAllItem
+        public static List<ItemInfoVO> GetAllItem_Level_Master()
+        {
+            List<ItemInfoVO> ItemGroup = null;
+            string sql = @"SELECT Level_Code
+                                      , Level_Name
+                                      , Item_lvl1
+                                      , Item_lvl2
+                                      , Item_lvl3
+                                      , Item_lvl4
+                                      , Item_lvl5
+                                      , Box_Qty
+                                      , Pcs_Qty
+                                      , Mat_Qty
+                                      , Use_YN
+                                      , Ins_Date
+                                      , Ins_Emp
+                                      , Up_Date
+                                      , Up_Emp
+                                  FROM Item_Level_Master";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ItemInfoVO> list = Helper.DataReaderMapToList<ItemInfoVO>(reader);
+
+                conn.Close();
+                return ItemGroup;
+            }
+        }
+        //GetAllItemMaster
+        public List<Item_MasterVO> GetAllItem_Master()
+        {
+            string sql = @"SELECT Item_Code
+                                            , Item_Name
+                                            , Item_Type
+                                            , Item_Spec
+                                            , Item_Unit
+                                            , Level_1
+                                            , Level_2
+                                            , Level_3
+                                            , Level_4
+                                            , Level_5
+                                            , Item_Stock
+                                            , Lead_Time
+                                            , LotSize
+                                            , PrdQty_Per_Hour
+                                            , PrdQTy_Per_Batch
+                                            , Cavity
+                                            , Line_Per_Qty
+                                            , Shot_Per_Qty
+                                            , Dry_GV_Qty                                           
+                                            , Remark
+                                            , Use_YN
+
+
+                                            FROM Item_Master";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<Item_MasterVO> list = Helper.DataReaderMapToList<Item_MasterVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        //GetAllDef_Ma_Master
+        public static List<Def_MaVO> GetAllDef_Ma_Master()
+        {
+            List<Def_MaVO> defMa = null;
+            string sql = @"SELECT Def_Ma_Code
+                                         ,Def_Ma_Name
+                                         ,Use_YN
+                                         ,Ins_Date
+                                         ,Ins_Emp
+                                         ,Up_Date
+                                         ,Up_Emp
+                                     FROM Def_Ma_Master";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<Def_MaVO> list = Helper.DataReaderMapToList<Def_MaVO>(reader);
+
+                conn.Close();
+                return defMa;
+            }
+        }
+
         //Process
         public List<ProcessVO> SelectProcess()
         {
@@ -202,6 +298,7 @@ namespace FinalDAC
                 return list;
             }
         }
+
         //WorkCenter
         public List<WorkCenterVO> SelectWorkCenter()
         {
@@ -215,6 +312,7 @@ namespace FinalDAC
                 return list;
             }
         }
+<<<<<<< HEAD
         public List<WorkDayVO> SelectWorkDay()
         {
             string sql = " SELECT * from View_WorkDay";
@@ -222,6 +320,48 @@ namespace FinalDAC
             {
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkDayVO> list = Helper.DataReaderMapToList<WorkDayVO>(reader);
+=======
+
+        //NOP
+        public List<NOPVO> SelectNOP(string dtpFrom, string dtpTo)
+        {
+            string sql = "select * from View_NOP where Nop_Date between @dtpFrom and @dtpTo";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<NOPVO> list = Helper.DataReaderMapToList<NOPVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+
+        //WC,ITEM,GV,User Code,Name Select
+        public List<T> SelectForPopup<T>(string type)
+        {
+            string sql;
+            switch(type)
+            {
+                case "WC":
+                    sql = "SELECT WC_Code,WC_Name FROM WorkCenter_Master"; break;
+                case "Item":
+                    sql = "SELECT Item_Code,Item_Name FROM Item_Master"; break;
+                case "GV":
+                    sql = "SELECT WC_Code,WC_Name FROM GV_Master"; break;
+                case "User":
+                    sql = "SELECT User_ID,User_Name FROM User_Master";break;
+                case "Process":
+                    sql = "SELECT Process_ID, Process_Name FROM Process_Master"; break;
+                default: sql = null; break;
+            }
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<T> list = Helper.DataReaderMapToList<T>(reader);
+>>>>>>> aacc023ff085b83aa178b9fd702128a601e82f6b
 
                 conn.Close();
                 return list;
