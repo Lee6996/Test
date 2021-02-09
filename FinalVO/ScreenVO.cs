@@ -12,6 +12,8 @@ namespace FinalVO
         public string Screen_Code { get; set; }
         //화면 이름
         public string Screen_Name { get; set; }
+        //화면 번호
+        public int TypeNo { get; set; }
         //화면타입
         public string Type { get; set; }
         //화면경로

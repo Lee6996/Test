@@ -42,7 +42,7 @@ namespace Final.MDS_ODS
             this.label1.Font = new System.Drawing.Font("나눔고딕", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 31);
+            this.label1.Size = new System.Drawing.Size(114, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "공정목록";
             // 
@@ -80,9 +80,10 @@ namespace Final.MDS_ODS
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            //this.Name = "frm_MDS_ODS_002_1";
+            
             this.Tag = "공정목록";
             this.Text = "frm_MDS_ODS_002_1";
+            this.Load += new System.EventHandler(this.frm_MDS_ODS_002_1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcess)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

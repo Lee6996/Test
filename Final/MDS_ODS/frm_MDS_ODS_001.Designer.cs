@@ -1,5 +1,5 @@
 ﻿
-namespace Final
+namespace Final.MDS_ODS
 {
     partial class frm_MDS_ODS_001
     {
