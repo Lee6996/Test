@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Final.KPI_RPT;
+using Final.MDI_Parent;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -107,8 +110,32 @@ namespace Final
 
         private void tv_Menu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            string frmName = "frm_" + e.Node.Name.ToString();
-            
+            //if (e.Node.Name.ToString().Length > 5)
+            //{
+            //    Form frm;
+            //    Assembly frmAssembly = Assembly.GetExecutingAssembly();
+            //    string frmName = string.Format($"Final.frm_{e.Node.Name}");
+            //    frm = (Form)frmAssembly.CreateInstance("Final.PRM_PRF.PRM_PRF_001");
+            //    new Final.PRM_PRF.frm_PRM_PRF_001().Show();
+
+            //    frm.MdiParent = this;
+
+            //    frm.WindowState = FormWindowState.Maximized;
+            //    frm.Tag = e.Node.Name;
+
+            //    TabPage newTab = new TabPage();
+            //    newTab.Text = e.Node.Text;
+
+            //    tabControl2.TabPages.Add(newTab);
+            //    tabControl2.SelectedTab = newTab;
+            //    frm.Show();
+            //}
+
+            Type p = Type.GetType("Final.PRM_PRF.frm_PRM_PRF_001");
+            var a = Activator.CreateInstance(p);
+            var form =  a as Form;
+            form.ShowDialog();
+
         }
     }
 }
