@@ -19,34 +19,22 @@ namespace FinalDAC
             conn.Open();
         }
         #endregion
-        public static List<ItemInfoVO> GetAllItem_Level_Master()
+        public bool Use_YNItem_Level_Master(string groupcode, string used)
         {
-            List<ItemInfoVO> ItemGroup = null;
-            string sql = @"SELECT Level_Code
-                                      , Level_Name
-                                      , Item_lvl1
-                                      , Item_lvl2
-                                      , Item_lvl3
-                                      , Item_lvl4
-                                      , Item_lvl5
-                                      , Box_Qty
-                                      , Pcs_Qty
-                                      , Mat_Qty
-                                      , Use_YN
-                                      , Ins_Date
-                                      , Ins_Emp
-                                      , Up_Date
-                                      , Up_Emp
-                                  FROM Item_Level_Master";
+            string sql = " update Def_Ma_Master set Use_YN = @Use_YN where Def_Ma_Code = @Def_Ma_Code";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
+                cmd.Parameters.AddWithValue("@Def_Ma_Code", groupcode);
+                cmd.Parameters.AddWithValue("@Use_YN", used);
 
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<ItemInfoVO> list = Helper.DataReaderMapToList<ItemInfoVO>(reader);
-
-                conn.Close();
-                return ItemGroup;
+                if (cmd.ExecuteNonQuery() > 0) return true;
+                else return false;
             }
+        }
+
+        public bool InsertAllDef_Master(Def_MaVO def)
+        {
+            throw new NotImplementedException();
         }
     }
 }

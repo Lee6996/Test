@@ -105,7 +105,7 @@ namespace Final.LeeYounggyu
 
         private void cbGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblGroup.Text = cbbGroup.SelectedValue.ToString();
+            lblGroup.Text = cbGroup.SelectedValue.ToString();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

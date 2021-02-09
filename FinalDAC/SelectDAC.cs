@@ -218,7 +218,7 @@ namespace FinalDAC
                 return ItemGroup;
             }
         }
-
+        //GetAllItemMaster
         public List<Item_MasterVO> GetAllItem_Master()
         {
             string sql = @"SELECT Item_Code
@@ -253,9 +253,29 @@ namespace FinalDAC
                 conn.Close();
                 return list;
             }
-
         }
+        //GetAllDef_Ma_Master
+        public static List<Def_MaVO> GetAllDef_Ma_Master()
+        {
+            List<Def_MaVO> defMa = null;
+            string sql = @"SELECT Def_Ma_Code
+                                         ,Def_Ma_Name
+                                         ,Use_YN
+                                         ,Ins_Date
+                                         ,Ins_Emp
+                                         ,Up_Date
+                                         ,Up_Emp
+                                     FROM Def_Ma_Master";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
 
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<Def_MaVO> list = Helper.DataReaderMapToList<Def_MaVO>(reader);
+
+                conn.Close();
+                return defMa;
+            }
+        }
 
         //Process
         public List<ProcessVO> SelectProcess()
