@@ -1,5 +1,5 @@
 ﻿
-namespace Final
+namespace Final.MDS_ODS
 {
     partial class frm_MDS_ODS_002
     {
@@ -63,9 +63,9 @@ namespace Final
             this.pnl.Controls.Add(this.groupBox1);
             this.pnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.pnl.Location = new System.Drawing.Point(225, 152);
+            this.pnl.Location = new System.Drawing.Point(0, 0);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(1357, 48);
+            this.pnl.Size = new System.Drawing.Size(1582, 48);
             this.pnl.TabIndex = 20;
             // 
             // groupBox1
@@ -84,7 +84,7 @@ namespace Final
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1357, 48);
+            this.groupBox1.Size = new System.Drawing.Size(1582, 48);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
@@ -102,7 +102,7 @@ namespace Final
             this.label4.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(877, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 19);
+            this.label4.Size = new System.Drawing.Size(69, 19);
             this.label4.TabIndex = 15;
             this.label4.Text = "작업장명";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -171,7 +171,7 @@ namespace Final
             this.label3.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(613, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 19);
+            this.label3.Size = new System.Drawing.Size(84, 19);
             this.label3.TabIndex = 8;
             this.label3.Text = "작업장코드";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -199,9 +199,9 @@ namespace Final
             this.panel4.Controls.Add(this.dgvWorkCenter);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(225, 200);
+            this.panel4.Location = new System.Drawing.Point(0, 48);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1357, 704);
+            this.panel4.Size = new System.Drawing.Size(1582, 856);
             this.panel4.TabIndex = 21;
             // 
             // dgvWorkCenter
@@ -270,15 +270,12 @@ namespace Final
             // 
             // frm_MDS_ODS_002
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1582, 904);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnl);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frm_MDS_ODS_002";
             this.Tag = "작업장정보";
-            this.Controls.SetChildIndex(this.pnl, 0);
-            this.Controls.SetChildIndex(this.panel4, 0);
+            this.Load += new System.EventHandler(this.frm_MDS_ODS_002_Load);
             this.pnl.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

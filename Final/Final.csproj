@@ -372,6 +372,7 @@
     <Compile Include="PRM_PRF\PRM_PRF_Service.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\MenuService.cs" />
     <Compile Include="Service\ProcessService.cs" />
     <Compile Include="Service\WorkCenterService.cs" />
     <Compile Include="Service\WorkDayService.cs" />

@@ -282,6 +282,7 @@ namespace Final.MDS_ODS
             this.Name = "frm_MDS_ODS_002_2";
             this.Tag = "작업장추가";
             this.Text = "frm_MDS_ODS_002_2";
+            this.Load += new System.EventHandler(this.frm_MDS_ODS_002_2_Load);
             this.splitContainer9.Panel1.ResumeLayout(false);
             this.splitContainer9.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
