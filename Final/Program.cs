@@ -1,12 +1,13 @@
 ﻿using Final.YeomGyeongJin.MSS_CON;
 using Final.YeomGyeongJin.MSS_SYS;
-﻿using Final.LeeYounggyu;
+﻿//using Final.LeeYounggyu;
 using Final.YeomGyeongJin.MSS_CON;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Final.PRM_PRF;
 
 namespace Final
 {
@@ -20,7 +21,7 @@ namespace Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDS_SDS_001());
+            Application.Run(new frm_PRM_PRF_003());
         }
     }
 }

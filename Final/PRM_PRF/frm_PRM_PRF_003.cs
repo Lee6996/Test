@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final.PRM_PRF.PopUp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,21 @@ namespace Final.PRM_PRF
             RefreshState();
         }
 
+        private void btnItem_Click(object sender, EventArgs e)
+        {
+            MainPop frm = new MainPop("Item")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtItem.Text = frm.SCode;
+                txtItemDetail.Text = frm.SName;
+                RefreshState();
+            }
+        }
+
         private void btnTimeSearch_Click(object sender, EventArgs e)
         {
             RefreshState();
@@ -49,8 +65,10 @@ namespace Final.PRM_PRF
 
         private void RefreshState()
         {
-            dgvPRM_PRF.DataSource = new PRM_PRF_Service().GetSelectReceivingListVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString());
+            dgvPRM_PRF.DataSource = new PRM_PRF_Service().GetSelectReceivingListVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(),txtItem.Text);
         }
         #endregion
+
+
     }
 }

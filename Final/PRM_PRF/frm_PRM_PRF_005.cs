@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Final.PRM_PRF.PopUp;
+using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +12,44 @@ namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_005 : Final.MDI_Parent.frm_MDIParent_1Grid
     {
+        List<GVStatusVO> list;
+
         public frm_PRM_PRF_005()
         {
             InitializeComponent();
         }
 
+        private void btnGV_Click(object sender, EventArgs e)
+        {
+            MainPop frm = new MainPop("GV")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtGVGroup.Text = frm.SCode;
+                txtGVGroupDetail.Text = frm.SName;
+                RefreshState();
+            }
+        }
+
+        private void btnItem_Click(object sender, EventArgs e)
+        {
+            MainPop frm = new MainPop("Item")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtItem.Text = frm.SCode;
+                txtItemDetail.Text = frm.SName;
+                RefreshState();
+            }
+        }
+
+        #region MyMethod
         private void frm_PRM_PRF_005_Load(object sender, EventArgs e)
         {
             CommonUtil.SetInitGridView(dgvPRM_PRF);
@@ -35,8 +70,14 @@ namespace Final.PRM_PRF
             CommonUtil.AddGridTextColumn(dgvPRM_PRF, "요입시간", "In_Time", 200);
             CommonUtil.AddGridTextColumn(dgvPRM_PRF, "중간시간", "Center_Time", 200);
             CommonUtil.AddGridTextColumn(dgvPRM_PRF, "요출시간", "Out_Time", 200);
-
-            new PRM_PRF_Service().BindDGV_005(dgvPRM_PRF);
         }
+
+        public void RefreshState()
+        {
+            list = new PRM_PRF_Service().GetGVVOList(txtGVGroup.Text, txtItem.Text);
+            dgvPRM_PRF.DataSource = list;
+        }
+        #endregion
+
     }
 }

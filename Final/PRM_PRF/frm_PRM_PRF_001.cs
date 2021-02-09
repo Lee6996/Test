@@ -53,6 +53,7 @@ namespace Final.PRM_PRF
             {
                 txtProcess.Text = frm.SCode;
                 txtProcessDetail.Text = frm.SName;
+                RefreshState();
             }
         }
 
@@ -67,6 +68,7 @@ namespace Final.PRM_PRF
             {
                 txtWorkCenter.Text = frm.SCode;
                 txtWorkCenterDetail.Text = frm.SName;
+                RefreshState();
             }
         }
 

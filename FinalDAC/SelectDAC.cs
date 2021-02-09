@@ -68,13 +68,21 @@ namespace FinalDAC
         }
 
         //ReceivingListVO
-        public List<ReceivingListVO> SelectReceivingListVO(string dtpFrom, string dtpTo)
+        public List<ReceivingListVO> SelectReceivingListVO(string dtpFrom, string dtpTo, string itemCode = null)
         {
             string sql = "select * from View_ReceivingList where In_Date between @dtpFrom and @dtpTo";
+            if (!string.IsNullOrEmpty(itemCode))
+            {
+                sql += " where Item_Code = @Item_Code";
+            }
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
                 cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                if (!string.IsNullOrEmpty(itemCode))
+                {
+                    cmd.Parameters.AddWithValue("@Item_Code", itemCode);
+                }
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<ReceivingListVO> list = Helper.DataReaderMapToList<ReceivingListVO>(reader);
@@ -170,10 +178,16 @@ namespace FinalDAC
         }
 
         //GV
-        public List<GVStatusVO> SelectGVStatus()
+        public List<GVStatusVO> SelectGVStatus(string GV_Group, string Item_Code)
         {
-            string sql = "select * from View_GVStatus";
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            string sQuery = "select * from View_GVStatus";
+
+            if (!string.IsNullOrEmpty(GV_Group))
+                sQuery += " and UserGroup_Name Like @groupName ";
+            if (!string.IsNullOrEmpty(Item_Code))
+                sQuery += " and UserGroup_Name Like @groupName ";
+
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<GVStatusVO> list = Helper.DataReaderMapToList<GVStatusVO>(reader);
