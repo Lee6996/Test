@@ -9,7 +9,7 @@ namespace Final.PRM_PRF
     class PRM_PRF_Service
     {
         #region 001
-        public List<WorkOrderVO> GetWorkOrderVOList(string dtpFrom, string dtpTo, string processCode, string wcCode)
+        public List<WorkOrderVO> GetWorkOrderVOList(string dtpFrom, string dtpTo, string processCode= null, string wcCode = null)
         {
             return new SelectDAC().SelectWorkOrder(dtpFrom, dtpTo, processCode, wcCode);
         }
@@ -25,6 +25,16 @@ namespace Final.PRM_PRF
         public List<GoodsInHistoryVO> GetGoodsInHistoryVOList(string workorderno)
         {
             return new SelectDAC().SelectGoodsInHistory(workorderno);
+        }
+
+        public bool Update002_WO(string workorderno, UserVO user)
+        {
+            return new PRM_PRF_DAC().UpdateWorkorderStatus(workorderno, user);
+        }
+
+        public bool Update002_Pallet(string workorderno, UserVO user)
+        {
+            return new PRM_PRF_DAC().UpdatePalletStatus(workorderno, user);
         }
         #endregion
 
@@ -63,11 +73,6 @@ namespace Final.PRM_PRF
         public List<WorkHistoryVO> GetWorkHistoryVOList()
         {
             return new SelectDAC().SelectWorkHistory();
-        }
-
-        public void BindDGV_010_1(DataGridView dgv, string Start_Date, string End_Date)
-        {
-            dgv.DataSource = new PRM_PRF_DAC().Select_010_1(Start_Date, End_Date);
         }
 
         public List<AttendanceManagementVO> GetAttendanceManagementVOList()

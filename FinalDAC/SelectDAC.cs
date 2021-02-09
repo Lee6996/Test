@@ -15,7 +15,8 @@ namespace FinalDAC
        static SqlConnection conn;
         public SelectDAC()
         {
-            new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString)).Open();
+            conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
+            conn.Open();
         }
         #endregion
 
