@@ -30,6 +30,102 @@ namespace Final
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinalMDIParent));
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("사용자 그룹 목록");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("사용자 그룹 관리");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("사용자 관리");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("화면관리");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("로그인 이력정보");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("메뉴관리");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("공지사항");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("시스템관리", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("공정 정보");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("작업장 정보");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("품목분류 정보");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("품목 정보");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("품질 규격 설정");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("공정 조건 설정");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("불량 현상 대분류");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("불량 현상 상세분류");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("비가동 대분류");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("비가동 상세분류");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("포장 등급 상세 정의");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("대차 정보");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("기준정보관리", new System.Windows.Forms.TreeNode[] {
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14,
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18,
+            treeNode19,
+            treeNode20});
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("성형 작업지시 생성");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("작업지시 마감관리");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("일단위 시간대별 실적조회");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("작업지시관리", new System.Windows.Forms.TreeNode[] {
+            treeNode22,
+            treeNode23,
+            treeNode24});
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("실적 조회");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("포장 팔렛트 마감");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("완제품 입고리스트");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("대차현황");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("대차이력 조회");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("대차현황모니터링");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("비가동 등록");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("근태정보 조회");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("근태 현황 분석");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("실적관리", new System.Windows.Forms.TreeNode[] {
+            treeNode26,
+            treeNode27,
+            treeNode28,
+            treeNode29,
+            treeNode30,
+            treeNode31,
+            treeNode32,
+            treeNode33,
+            treeNode34});
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("불량 이미지 등록");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("품질 측정값 등록");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("공정 조건 등록");
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("품질 측정값 조회");
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("공정 조건 조회");
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("원재료 LOT 관리");
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("품질관리", new System.Windows.Forms.TreeNode[] {
+            treeNode36,
+            treeNode37,
+            treeNode38,
+            treeNode39,
+            treeNode40,
+            treeNode41});
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("적재 작업 일지");
+            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("성형 작업 일지");
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("포장 작업 일지");
+            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("일지관리", new System.Windows.Forms.TreeNode[] {
+            treeNode43,
+            treeNode44,
+            treeNode45});
+            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("월간 포장 실적 현황");
+            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("월별 생산 현황");
+            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("분석관리", new System.Windows.Forms.TreeNode[] {
+            treeNode47,
+            treeNode48});
+            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("금형 정보 등록");
+            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("금형 사용 현황");
+            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("금형관리", new System.Windows.Forms.TreeNode[] {
+            treeNode50,
+            treeNode51});
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -52,16 +148,7 @@ namespace Final
             this.button8 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button16 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button14 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tv_Menu = new System.Windows.Forms.TreeView();
             this.button19 = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.panel1.SuspendLayout();
@@ -72,11 +159,6 @@ namespace Final
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -339,131 +421,133 @@ namespace Final
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button18);
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Controls.Add(this.button17);
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.button16);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.button15);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.button14);
-            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.tv_Menu);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 130);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(209, 774);
             this.panel3.TabIndex = 7;
             // 
-            // button18
+            // tv_Menu
             // 
-            this.button18.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button18.Location = new System.Drawing.Point(60, 246);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(134, 50);
-            this.button18.TabIndex = 9;
-            this.button18.Text = "button18";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(4, 246);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.UseWaitCursor = true;
-            // 
-            // button17
-            // 
-            this.button17.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button17.Location = new System.Drawing.Point(60, 190);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(134, 50);
-            this.button17.TabIndex = 7;
-            this.button17.Text = "button17";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 190);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.UseWaitCursor = true;
-            // 
-            // button16
-            // 
-            this.button16.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button16.Location = new System.Drawing.Point(60, 134);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(134, 50);
-            this.button16.TabIndex = 5;
-            this.button16.Text = "button16";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(4, 134);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.UseWaitCursor = true;
-            // 
-            // button15
-            // 
-            this.button15.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button15.Location = new System.Drawing.Point(60, 78);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(134, 50);
-            this.button15.TabIndex = 3;
-            this.button15.Text = "button15";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(4, 78);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.UseWaitCursor = true;
-            // 
-            // button14
-            // 
-            this.button14.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button14.Location = new System.Drawing.Point(60, 22);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(134, 50);
-            this.button14.TabIndex = 1;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
+            this.tv_Menu.Location = new System.Drawing.Point(4, 6);
+            this.tv_Menu.Name = "tv_Menu";
+            treeNode1.Name = "MSS_CON_001";
+            treeNode1.Text = "사용자 그룹 목록";
+            treeNode2.Name = "MSS_CON_002";
+            treeNode2.Text = "사용자 그룹 관리";
+            treeNode3.Name = "MSS_CON_003";
+            treeNode3.Text = "사용자 관리";
+            treeNode4.Name = "MSS_SYS_001";
+            treeNode4.Text = "화면관리";
+            treeNode5.Name = "MSS_SYS_002";
+            treeNode5.Text = "로그인 이력정보";
+            treeNode6.Name = "MSS_SYS_003";
+            treeNode6.Text = "메뉴관리";
+            treeNode7.Name = "MSS_SYS_004";
+            treeNode7.Text = "공지사항";
+            treeNode8.Name = "MSS";
+            treeNode8.Text = "시스템관리";
+            treeNode9.Name = "MDS_ODS_001";
+            treeNode9.Text = "공정 정보";
+            treeNode10.Name = "MDS_ODS_001";
+            treeNode10.Text = "작업장 정보";
+            treeNode11.Name = "MDS_SDS_001";
+            treeNode11.Text = "품목분류 정보";
+            treeNode12.Name = "MDS_SDS_002";
+            treeNode12.Text = "품목 정보";
+            treeNode13.Name = "MDS_SDS_003";
+            treeNode13.Text = "품질 규격 설정";
+            treeNode14.Name = "MDS_SDS_004";
+            treeNode14.Text = "공정 조건 설정";
+            treeNode15.Name = "MDS_CDS_001";
+            treeNode15.Text = "불량 현상 대분류";
+            treeNode16.Name = "MDS_CDS_002";
+            treeNode16.Text = "불량 현상 상세분류";
+            treeNode17.Name = "MDS_CDS_003";
+            treeNode17.Text = "비가동 대분류";
+            treeNode18.Name = "MDS_CDS_004";
+            treeNode18.Text = "비가동 상세분류";
+            treeNode19.Name = "MDS_CDS_005";
+            treeNode19.Text = "포장 등급 상세 정의";
+            treeNode20.Name = "MDS_CDS_006";
+            treeNode20.Text = "대차 정보";
+            treeNode21.Name = "MDS";
+            treeNode21.Text = "기준정보관리";
+            treeNode22.Name = "PPS_SCH_001";
+            treeNode22.Text = "성형 작업지시 생성";
+            treeNode23.Name = "PPS_SCH_002";
+            treeNode23.Text = "작업지시 마감관리";
+            treeNode24.Name = "PPS_SCH_003";
+            treeNode24.Text = "일단위 시간대별 실적조회";
+            treeNode25.Name = "PPS_SCH";
+            treeNode25.Text = "작업지시관리";
+            treeNode26.Name = "PRM_PRF_001";
+            treeNode26.Text = "실적 조회";
+            treeNode27.Name = "PRM_PRF_002";
+            treeNode27.Text = "포장 팔렛트 마감";
+            treeNode28.Name = "PRM_PRF_003";
+            treeNode28.Text = "완제품 입고리스트";
+            treeNode29.Name = "PRM_PRF_005";
+            treeNode29.Text = "대차현황";
+            treeNode30.Name = "PRM_PRF_006";
+            treeNode30.Text = "대차이력 조회";
+            treeNode31.Name = "PRM_PRF_007";
+            treeNode31.Text = "대차현황모니터링";
+            treeNode32.Name = "PRM_PRF_008";
+            treeNode32.Text = "비가동 등록";
+            treeNode33.Name = "PRM_PRF_009";
+            treeNode33.Text = "근태정보 조회";
+            treeNode34.Name = "PRM_PRF_010";
+            treeNode34.Text = "근태 현황 분석";
+            treeNode35.Name = "노드3";
+            treeNode35.Text = "실적관리";
+            treeNode36.Name = "노드53";
+            treeNode36.Text = "불량 이미지 등록";
+            treeNode37.Name = "노드58";
+            treeNode37.Text = "품질 측정값 등록";
+            treeNode38.Name = "노드55";
+            treeNode38.Text = "공정 조건 등록";
+            treeNode39.Name = "노드56";
+            treeNode39.Text = "품질 측정값 조회";
+            treeNode40.Name = "노드57";
+            treeNode40.Text = "공정 조건 조회";
+            treeNode41.Name = "노드59";
+            treeNode41.Text = "원재료 LOT 관리";
+            treeNode42.Name = "노드4";
+            treeNode42.Text = "품질관리";
+            treeNode43.Name = "PRM_RPT_001";
+            treeNode43.Text = "적재 작업 일지";
+            treeNode44.Name = "PRM_RPT_002";
+            treeNode44.Text = "성형 작업 일지";
+            treeNode45.Name = "PRM_RPT_003";
+            treeNode45.Text = "포장 작업 일지";
+            treeNode46.Name = "PRM_RPT";
+            treeNode46.Text = "일지관리";
+            treeNode47.Name = "KPI_PRT_001";
+            treeNode47.Text = "월간 포장 실적 현황";
+            treeNode48.Name = "KPI_PRT_002";
+            treeNode48.Text = "월별 생산 현황";
+            treeNode49.Name = "노드6";
+            treeNode49.Text = "분석관리";
+            treeNode50.Name = "PPS_MLD_001";
+            treeNode50.Text = "금형 정보 등록";
+            treeNode51.Name = "PPS_MLD_002";
+            treeNode51.Text = "금형 사용 현황";
+            treeNode52.Name = "노드7";
+            treeNode52.Text = "금형관리";
+            this.tv_Menu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode8,
+            treeNode21,
+            treeNode25,
+            treeNode35,
+            treeNode42,
+            treeNode46,
+            treeNode49,
+            treeNode52});
+            this.tv_Menu.Size = new System.Drawing.Size(202, 765);
+            this.tv_Menu.TabIndex = 0;
+            this.tv_Menu.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tv_Menu_NodeMouseClick);
             // 
             // button19
             // 
@@ -509,11 +593,6 @@ namespace Final
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -539,19 +618,10 @@ namespace Final
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TreeView tv_Menu;
     }
 }
 
