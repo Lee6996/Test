@@ -55,15 +55,10 @@
     <Compile Include="Helper.cs" />
     <Compile Include="ItemInfoDAC.cs" />
     <Compile Include="PRM_PRF_DAC.cs" />
-<<<<<<< HEAD
     <Compile Include="SelectDAC.cs" />
     <Compile Include="ScreenDAC.cs" />
     <Compile Include="SysNoticeDAC.cs" />
-=======
-    <Compile Include="ScreenDAC.cs" />
-    <Compile Include="SysNoticeDAC.cs" />
     <Compile Include="SelectDAC.cs" />
->>>>>>> 3a7aa07683cf4215fcbab14f03e3ec439641006b
     <Compile Include="UserDAC.cs" />
     <Compile Include="UserGroupDAC.cs" />
   </ItemGroup>
