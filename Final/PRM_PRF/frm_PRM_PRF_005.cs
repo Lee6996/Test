@@ -13,15 +13,22 @@ namespace Final.PRM_PRF
     public partial class frm_PRM_PRF_005 : Final.MDI_Parent.frm_MDIParent_1Grid
     {
         List<GVStatusVO> list;
+        UserVO user;
 
         public frm_PRM_PRF_005()
         {
             InitializeComponent();
         }
 
+        public frm_PRM_PRF_005(UserVO user)
+        {
+            InitializeComponent();
+            this.user = user;
+        }
+
         private void btnGV_Click(object sender, EventArgs e)
         {
-            MainPop frm = new MainPop("GV")
+            MainPop frm = new MainPop("GVGroup")
             {
                 StartPosition = FormStartPosition.CenterParent
             };

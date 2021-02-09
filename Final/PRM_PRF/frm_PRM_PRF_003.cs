@@ -1,4 +1,5 @@
 ﻿using Final.PRM_PRF.PopUp;
+using FinalVO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +12,17 @@ namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_003 : Final.MDI_Parent.frm_MDIParent_1Grid
     {
+        UserVO user;
+
         public frm_PRM_PRF_003()
         {
             InitializeComponent();
+        }
+
+        public frm_PRM_PRF_003(UserVO user)
+        {
+            InitializeComponent();
+            this.user = user;
         }
 
         private void dgvPRM_PRF_CellClick(object sender, DataGridViewCellEventArgs e)

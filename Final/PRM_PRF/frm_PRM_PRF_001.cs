@@ -13,11 +13,18 @@ namespace Final.PRM_PRF
     public partial class frm_PRM_PRF_001 : Final.MDI_Parent.frm_MDIParent_1Grid
     {
         WorkOrderVO vo;
+        UserVO user;
         List<WorkOrderVO> list; 
 
         public frm_PRM_PRF_001()
         {
             InitializeComponent();
+        }
+
+        public frm_PRM_PRF_001(UserVO user)
+        {
+            InitializeComponent();
+            this.user = user;
         }
 
         private void frm_PRM_PRF_001_Load(object sender, EventArgs e)
