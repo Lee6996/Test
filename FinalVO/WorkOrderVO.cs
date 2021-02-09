@@ -8,7 +8,7 @@ namespace FinalVO
 {
     public class WorkOrderVO
     {
-        public string Workorderno { get; set; }
+        public string Workorderno { get; set; }             
         public string Item_Code { get; set; }
         public string Wc_Code { get; set; }
         public int Plan_Qty { get; set; }
@@ -38,5 +38,6 @@ namespace FinalVO
         public string Up_Emp { get; set; }
         public string Wc_Name { get; set; }
         public string Item_Name { get; set; }
+        public string Process_Code { get; set; }
     }
 }

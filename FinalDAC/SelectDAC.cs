@@ -15,19 +15,26 @@ namespace FinalDAC
        static SqlConnection conn;
         public SelectDAC()
         {
-            conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["team2"].ConnectionString));
+            conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
             conn.Open();
         }
         #endregion
 
         //WorkOrderVO
-        public List<WorkOrderVO> SelectWorkOrder(string dtpFrom, string dtpTo)
+        public List<WorkOrderVO> SelectWorkOrder(string dtpFrom, string dtpTo, string processCode, string wcCode)
         {
             string sql = "select * from View_WorkOrder where 1=1 and Plan_Date between @dtpFrom and @dtpTo";
+            if (!string.IsNullOrEmpty(processCode)) sql += " AND Process_Code = @Process_Code";
+            if (!string.IsNullOrEmpty(wcCode)) sql += " AND Wc_Code = @Wc_Code";
+            
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
                 cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                if (!string.IsNullOrEmpty(processCode))
+                    cmd.Parameters.AddWithValue("@Process_Code", processCode);
+                if (!string.IsNullOrEmpty(wcCode))
+                    cmd.Parameters.AddWithValue("@Wc_Code", wcCode);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkOrderVO> list = Helper.DataReaderMapToList<WorkOrderVO>(reader);
@@ -162,6 +169,7 @@ namespace FinalDAC
             }
         }
 
+        //GV
         public List<GVStatusVO> SelectGVStatus()
         {
             string sql = "select * from View_GVStatus";
@@ -280,7 +288,7 @@ namespace FinalDAC
         //Process
         public List<ProcessVO> SelectProcess()
         {
-            string sql = " SELECT * from Process_Master";
+            string sql = " SELECT * from View_Process_Master";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -290,14 +298,70 @@ namespace FinalDAC
                 return list;
             }
         }
+
         //WorkCenter
         public List<WorkCenterVO> SelectWorkCenter()
         {
-            string sql = " SELECT * from WorkCenter_Master";
+            string sql = " SELECT * from View_WorkCenter_Master";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkCenterVO> list = Helper.DataReaderMapToList<WorkCenterVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+<<<<<<< HEAD
+        public List<WorkDayVO> SelectWorkDay()
+        {
+            string sql = " SELECT * from View_WorkDay";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkDayVO> list = Helper.DataReaderMapToList<WorkDayVO>(reader);
+=======
+
+        //NOP
+        public List<NOPVO> SelectNOP(string dtpFrom, string dtpTo)
+        {
+            string sql = "select * from View_NOP where Nop_Date between @dtpFrom and @dtpTo";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<NOPVO> list = Helper.DataReaderMapToList<NOPVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+
+        //WC,ITEM,GV,User Code,Name Select
+        public List<T> SelectForPopup<T>(string type)
+        {
+            string sql;
+            switch(type)
+            {
+                case "WC":
+                    sql = "SELECT WC_Code,WC_Name FROM WorkCenter_Master"; break;
+                case "Item":
+                    sql = "SELECT Item_Code,Item_Name FROM Item_Master"; break;
+                case "GV":
+                    sql = "SELECT WC_Code,WC_Name FROM GV_Master"; break;
+                case "User":
+                    sql = "SELECT User_ID,User_Name FROM User_Master";break;
+                case "Process":
+                    sql = "SELECT Process_ID, Process_Name FROM Process_Master"; break;
+                default: sql = null; break;
+            }
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<T> list = Helper.DataReaderMapToList<T>(reader);
+>>>>>>> aacc023ff085b83aa178b9fd702128a601e82f6b
 
                 conn.Close();
                 return list;

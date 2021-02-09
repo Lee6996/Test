@@ -31,6 +31,8 @@ namespace Final.PRM_PRF
         {
             this.dgvPRM_PRF_2 = new System.Windows.Forms.DataGridView();
             this.dgvPRM_PRF_1 = new System.Windows.Forms.DataGridView();
+            this.btnWoEnd = new System.Windows.Forms.Button();
+            this.btnPalletEnd = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -43,9 +45,29 @@ namespace Final.PRM_PRF
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_1)).BeginInit();
             this.SuspendLayout();
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnPalletEnd);
+            this.panel4.Controls.Add(this.btnWoEnd);
+            this.panel4.Controls.SetChildIndex(this.label2, 0);
+            this.panel4.Controls.SetChildIndex(this.dtpFrom, 0);
+            this.panel4.Controls.SetChildIndex(this.dtpTo, 0);
+            this.panel4.Controls.SetChildIndex(this.label4, 0);
+            this.panel4.Controls.SetChildIndex(this.btnTimeSearch, 0);
+            this.panel4.Controls.SetChildIndex(this.btnWoEnd, 0);
+            this.panel4.Controls.SetChildIndex(this.btnPalletEnd, 0);
+            // 
             // btnTimeSearch
             // 
             this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.Value = new System.DateTime(2021, 2, 8, 20, 57, 47, 970);
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Value = new System.DateTime(2021, 2, 1, 20, 57, 47, 970);
             // 
             // label2
             // 
@@ -80,6 +102,7 @@ namespace Final.PRM_PRF
             this.dgvPRM_PRF_2.Size = new System.Drawing.Size(1248, 405);
             this.dgvPRM_PRF_2.TabIndex = 24;
             this.dgvPRM_PRF_2.Tag = "";
+            this.dgvPRM_PRF_2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_2_CellDoubleClick);
             // 
             // dgvPRM_PRF_1
             // 
@@ -95,6 +118,26 @@ namespace Final.PRM_PRF
             this.dgvPRM_PRF_1.TabIndex = 23;
             this.dgvPRM_PRF_1.Tag = "";
             this.dgvPRM_PRF_1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_1_CellClick);
+            // 
+            // btnWoEnd
+            // 
+            this.btnWoEnd.Location = new System.Drawing.Point(1029, 27);
+            this.btnWoEnd.Name = "btnWoEnd";
+            this.btnWoEnd.Size = new System.Drawing.Size(92, 23);
+            this.btnWoEnd.TabIndex = 9;
+            this.btnWoEnd.Text = "작업지시 마감";
+            this.btnWoEnd.UseVisualStyleBackColor = true;
+            this.btnWoEnd.Click += new System.EventHandler(this.btnWoEnd_Click);
+            // 
+            // btnPalletEnd
+            // 
+            this.btnPalletEnd.Location = new System.Drawing.Point(1150, 27);
+            this.btnPalletEnd.Name = "btnPalletEnd";
+            this.btnPalletEnd.Size = new System.Drawing.Size(92, 23);
+            this.btnPalletEnd.TabIndex = 10;
+            this.btnPalletEnd.Text = "팔렛트 마감";
+            this.btnPalletEnd.UseVisualStyleBackColor = true;
+            this.btnPalletEnd.Click += new System.EventHandler(this.btnPalletEnd_Click);
             // 
             // frm_PRM_PRF_002
             // 
@@ -127,5 +170,7 @@ namespace Final.PRM_PRF
 
         private System.Windows.Forms.DataGridView dgvPRM_PRF_2;
         private System.Windows.Forms.DataGridView dgvPRM_PRF_1;
+        private System.Windows.Forms.Button btnWoEnd;
+        private System.Windows.Forms.Button btnPalletEnd;
     }
 }

@@ -387,6 +387,12 @@
     <Compile Include="PRM_PRF\frm_PRM_PRF_007.Designer.cs">
       <DependentUpon>frm_PRM_PRF_007.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_008.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_008.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_008.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRM_PRF\frm_PRM_PRF_009.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,6 +405,12 @@
     <Compile Include="PRM_PRF\frm_PRM_PRF_010.Designer.cs">
       <DependentUpon>frm_PRM_PRF_010.cs</DependentUpon>
     </Compile>
+    <Compile Include="PopUp\MainPop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\MainPop.Designer.cs">
+      <DependentUpon>MainPop.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -406,10 +418,62 @@
       <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="PRM_PRF\PRM_PRF_Service.cs" />
+<<<<<<< HEAD
+    <Compile Include="PRM_RPT\frm_PRM_RPT_1-1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_1-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_1-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_2-1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_2-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_2-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_2.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_3-1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_3-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_3-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_3.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_4-1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_4-1.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_4-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_RPT\frm_PRM_RPT_4.Designer.cs">
+      <DependentUpon>frm_PRM_RPT_4.cs</DependentUpon>
+    </Compile>
+=======
+>>>>>>> aacc023ff085b83aa178b9fd702128a601e82f6b
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ProcessService.cs" />
     <Compile Include="Service\WorkCenterService.cs" />
+    <Compile Include="Service\WorkDayService.cs" />
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -688,6 +752,9 @@
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_007.resx">
       <DependentUpon>frm_PRM_PRF_007.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_008.resx">
+      <DependentUpon>frm_PRM_PRF_008.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_009.resx">
       <DependentUpon>frm_PRM_PRF_009.cs</DependentUpon>
     </EmbeddedResource>
@@ -697,6 +764,37 @@
     <EmbeddedResource Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.resx">
       <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_1-1.resx">
+      <DependentUpon>frm_PRM_RPT_1-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_1.resx">
+      <DependentUpon>frm_PRM_RPT_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_2-1.resx">
+      <DependentUpon>frm_PRM_RPT_2-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_2.resx">
+      <DependentUpon>frm_PRM_RPT_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_3-1.resx">
+      <DependentUpon>frm_PRM_RPT_3-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_3.resx">
+      <DependentUpon>frm_PRM_RPT_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_4-1.resx">
+      <DependentUpon>frm_PRM_RPT_4-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_4.resx">
+      <DependentUpon>frm_PRM_RPT_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+=======
+    <EmbeddedResource Include="PopUp\MainPop.resx">
+      <DependentUpon>MainPop.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> aacc023ff085b83aa178b9fd702128a601e82f6b
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
