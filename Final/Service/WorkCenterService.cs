@@ -11,9 +11,9 @@ namespace Final.Service
     public class WorkCenterService
     {
         SelectDAC dac;
-        public List<WorkCenterVO> SelectWorkCenter()
+        public List<WorkCenterVO> SelectWorkCenter(string Prd_Date)
         {
-            return dac.SelectWorkCenter();
+            return dac.SelectWorkCenter(Prd_Date);
         }
     }
 }
