@@ -289,7 +289,7 @@ namespace Final.MDS_SDS
             this.panel1.Size = new System.Drawing.Size(496, 40);
             this.panel1.TabIndex = 160;
             // 
-            // MDS_SDS_003_1
+            // frm_MDS_SDS_003_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -318,8 +318,9 @@ namespace Final.MDS_SDS
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "MDS_SDS_003_1";
+            this.Name = "frm_MDS_SDS_003_1";
             this.Text = "MDS_SDS_003_1";
+            this.Load += new System.EventHandler(this.frm_MDS_SDS_003_1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();

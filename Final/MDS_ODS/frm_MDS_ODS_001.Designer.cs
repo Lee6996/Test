@@ -69,9 +69,9 @@ namespace Final
             this.pnl.Controls.Add(this.label2);
             this.pnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.pnl.Location = new System.Drawing.Point(225, 152);
+            this.pnl.Location = new System.Drawing.Point(0, 0);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(1357, 48);
+            this.pnl.Size = new System.Drawing.Size(1582, 48);
             this.pnl.TabIndex = 20;
             // 
             // cbProcess_Name
@@ -135,9 +135,9 @@ namespace Final
             this.panel4.Controls.Add(this.label5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.panel4.Location = new System.Drawing.Point(225, 787);
+            this.panel4.Location = new System.Drawing.Point(0, 787);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1357, 117);
+            this.panel4.Size = new System.Drawing.Size(1582, 117);
             this.panel4.TabIndex = 21;
             // 
             // txtRemark
@@ -215,9 +215,9 @@ namespace Final
             this.panel5.Controls.Add(this.label6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.panel5.Location = new System.Drawing.Point(225, 200);
+            this.panel5.Location = new System.Drawing.Point(0, 48);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1357, 587);
+            this.panel5.Size = new System.Drawing.Size(1582, 739);
             this.panel5.TabIndex = 22;
             // 
             // dgvProcess
@@ -297,17 +297,13 @@ namespace Final
             // 
             // frm_MDS_ODS_001
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1582, 904);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnl);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frm_MDS_ODS_001";
             this.Tag = "공정정보";
-            this.Controls.SetChildIndex(this.pnl, 0);
-            this.Controls.SetChildIndex(this.panel4, 0);
-            this.Controls.SetChildIndex(this.panel5, 0);
+            this.Load += new System.EventHandler(this.frm_MDS_ODS_001_Load);
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();
             this.panel4.ResumeLayout(false);

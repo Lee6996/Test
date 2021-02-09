@@ -161,7 +161,7 @@ namespace Final.MDS_SDS
             this.splitter1.TabIndex = 103;
             this.splitter1.TabStop = false;
             // 
-            // MDS_SDS_003
+            // frm_MDS_SDS_003
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -178,8 +178,9 @@ namespace Final.MDS_SDS
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
-            this.Name = "MDS_SDS_003";
+            this.Name = "frm_MDS_SDS_003";
             this.Text = "품질 규격 설정";
+            this.Load += new System.EventHandler(this.frm_MDS_SDS_003_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

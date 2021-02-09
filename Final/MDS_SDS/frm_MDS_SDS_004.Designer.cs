@@ -161,7 +161,7 @@ namespace Final.MDS_SDS
             this.splitter1.TabIndex = 118;
             this.splitter1.TabStop = false;
             // 
-            // MDS_SDS_004
+            // frm_MDS_SDS_004
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -178,8 +178,9 @@ namespace Final.MDS_SDS
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
-            this.Name = "MDS_SDS_004";
+            this.Name = "frm_MDS_SDS_004";
             this.Text = "공정조건 설정";
+            this.Load += new System.EventHandler(this.frm_MDS_SDS_004_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

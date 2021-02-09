@@ -14,5 +14,10 @@ namespace Final
         {
             InitializeComponent();
         }
+
+        private void frm_MDS_ODS_001_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

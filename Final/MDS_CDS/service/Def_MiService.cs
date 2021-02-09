@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Final.MDS_SDS.service
+namespace Final.MDS_CDS.service
 {
     public class Def_MiService
     {

@@ -16,5 +16,10 @@ namespace Final.MDS_SDS
         {
             InitializeComponent();
         }
+
+        private void frm_MDS_SDS_004_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
