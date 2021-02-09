@@ -1,7 +1,7 @@
 ﻿
 namespace Final.PRM_RPT
 {
-    partial class frm_PRM_RPT_2
+    partial class frm_PRM_RPT_003
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -53,14 +53,17 @@ namespace Final.PRM_RPT
             // 
             // textBox6
             // 
+            this.textBox6.Location = new System.Drawing.Point(908, 23);
             this.textBox6.Visible = false;
             // 
             // label16
             // 
+            this.label16.Location = new System.Drawing.Point(783, 26);
             this.label16.Visible = false;
             // 
             // button23
             // 
+            this.btn_Process.Location = new System.Drawing.Point(604, 24);
             this.btn_Process.Visible = false;
             // 
             // button22
@@ -69,15 +72,12 @@ namespace Final.PRM_RPT
             // 
             // textBox1
             // 
+            this.textBox1.Location = new System.Drawing.Point(667, 24);
             this.textBox1.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(606, 4);
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(624, 1);
+            this.dateTimePicker2.Location = new System.Drawing.Point(723, 41);
             this.dateTimePicker2.Visible = false;
             // 
             // dateTimePicker1
@@ -86,6 +86,7 @@ namespace Final.PRM_RPT
             // 
             // label3
             // 
+            this.label3.Location = new System.Drawing.Point(558, 26);
             this.label3.Visible = false;
             // 
             // panel5
@@ -97,7 +98,7 @@ namespace Final.PRM_RPT
             this.panel5.Location = new System.Drawing.Point(0, 67);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1266, 739);
-            this.panel5.TabIndex = 19;
+            this.panel5.TabIndex = 20;
             // 
             // label1
             // 
@@ -107,7 +108,7 @@ namespace Final.PRM_RPT
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(332, 41);
             this.label1.TabIndex = 10;
-            this.label1.Text = "파일 양식 출력(성형)";
+            this.label1.Text = "파일 양식 출력(포장)";
             // 
             // panel6
             // 
@@ -146,13 +147,13 @@ namespace Final.PRM_RPT
             this.label5.TabIndex = 0;
             this.label5.Text = "조회내역";
             // 
-            // frm_PRM_RPT_2
+            // frm_PRM_RPT_3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1266, 828);
             this.Controls.Add(this.panel5);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "frm_PRM_RPT_2";
+            this.Name = "frm_PRM_RPT_3";
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.panel4.ResumeLayout(false);

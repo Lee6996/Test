@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Final.PRM_RPT
 {
-    public partial class frm_PRM_RPT_4 : Final.KPI_RPT.KPI_RPT_MDIParent
+    public partial class frm_PRM_RPT_003 : Final.KPI_RPT.KPI_RPT_MDIParent
     {
-        public frm_PRM_RPT_4()
+        public frm_PRM_RPT_003()
         {
             InitializeComponent();
         }

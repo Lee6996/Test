@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final.PPS_SCH
+namespace Final.PRM_RPT
 {
-    public partial class frm_PPS_SCH_33 : Form
+    public partial class frm_PRM_RPT_004 : Final.KPI_RPT.KPI_RPT_MDIParent
     {
-        public frm_PPS_SCH_33()
+        public frm_PRM_RPT_004()
         {
             InitializeComponent();
         }

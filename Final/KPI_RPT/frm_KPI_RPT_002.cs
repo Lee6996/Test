@@ -1,4 +1,5 @@
-﻿using Final.Service;
+﻿using Final.PRM_PRF.PopUp;
+using Final.Service;
 using FinalVO;
 using System;
 using System.Collections.Generic;
@@ -10,39 +11,45 @@ using System.Windows.Forms;
 
 namespace Final.KPI_RPT
 {
-    public partial class frm_KPI_RPT_2 : Final.KPI_RPT.KPI_RPT_MDIParent
+    public partial class frm_KPI_RPT_002 : Final.KPI_RPT.KPI_RPT_MDIParent
     {
         public string txtPNameText { get { return txtPCodeText.Text; } set { txtPCodeText.Text = value; } }
         public string txtWNameText { get { return txtWCodeText.Text; } set { txtWCodeText.Text = value; } }
-        public frm_KPI_RPT_2()
+        public frm_KPI_RPT_002()
         {
             InitializeComponent();
-        }
-
-        private void btn_Process_Click(object sender, EventArgs e)
-        {
-            frm_KPI_RPT_P process = new frm_KPI_RPT_P();
-            if (process.ShowDialog() == DialogResult.OK)
-            {
-                this.txtPNameText = process.ResultCode;
-                txtPCodeText.Text = txtPNameText;
-            }
-        }
-
-        private void btn_WorkCenter_Click(object sender, EventArgs e)
-        {
-            frm_KPI_RPT_W workcenter = new frm_KPI_RPT_W();
-            if (workcenter.ShowDialog() == DialogResult.OK)
-            {
-                this.txtWNameText = workcenter.ResultCode;
-                txtWCodeText.Text = txtWNameText;
-            }
         }
 
         private void frm_KPI_RPT_2_Load(object sender, EventArgs e)
         {
             DataLoad();
         }
+        private void btn_Process_Click(object sender, EventArgs e)
+        {
+            MainPop frm = new MainPop("WC")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtPCodeText.Text = frm.SCode;
+            }
+        }
+        private void btn_WorkCenter_Click(object sender, EventArgs e)
+        {
+            MainPop frm = new MainPop("Process")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtWCodeText.Text = frm.SCode;
+
+            }
+        }
+
 
 
         private void DataLoad()
@@ -63,7 +70,7 @@ namespace Final.KPI_RPT
         {
             WorkDayService service = new WorkDayService();
 
-            List<WorkDayVO> list = service.SelectWorkDay();
+            List<WorkDayVO> list = service.SelectWorkDay(dateTimePicker1.Text);
 
             dgv_KPI_MONTH.DataSource = null;
             dgv_KPI_MONTH.DataSource = list;

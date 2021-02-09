@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final
+namespace Final.PPS_SCH
 {
-    public partial class frm_PPS_SCH_001 : Final.FinalMDIParent
+    public partial class frm_PPS_SCH_001 : Form
     {
         public frm_PPS_SCH_001()
         {

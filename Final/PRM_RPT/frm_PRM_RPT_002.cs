@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Final.PPS_MLD
+namespace Final.PRM_RPT
 {
-    public partial class frm_PPS_MLD_1 : Final.KPI_RPT.KPI_RPT_MDIParent
+    public partial class frm_PRM_RPT_002 : Final.KPI_RPT.KPI_RPT_MDIParent
     {
-        public frm_PPS_MLD_1()
+        public frm_PRM_RPT_002()
         {
             InitializeComponent();
         }

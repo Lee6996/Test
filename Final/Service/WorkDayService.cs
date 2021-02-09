@@ -11,9 +11,18 @@ namespace Final.Service
     public class WorkDayService
     {
         SelectDAC dac;
-        public List<WorkDayVO> SelectWorkDay()
+        public List<WorkDayVO> SelectWorkDay(string Prd_Date)
         {
-            return dac.SelectWorkDay();
+            return dac.SelectWorkDay(Prd_Date);
+        }
+        public List<WorkItemVO> SelectWorkItem(string Prd_Date)
+        {
+            return dac.SelectWorkItem(Prd_Date);
+        }
+
+        public List<WorkBoxingVO> SelectWorkBoxing(string Prd_Date)
+        {
+            return dac.SelectWorkBoxing(Prd_Date);
         }
     }
 

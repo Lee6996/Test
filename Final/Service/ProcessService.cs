@@ -11,9 +11,9 @@ namespace Final.Service
     public class ProcessService
     {
         SelectDAC dac;
-        public List<ProcessVO> SelectProcess()
+        public List<ProcessVO> SelectProcess(string Prd_Date)
         {
-            return dac.SelectProcess();
+            return dac.SelectProcess(Prd_Date);
         }
     }
 }

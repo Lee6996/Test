@@ -57,6 +57,7 @@
     <Compile Include="GoodsInHistoryVO.cs" />
     <Compile Include="UserGroupVO.cs" />
     <Compile Include="UserVO.cs" />
+    <Compile Include="WorkItemVO.cs" />
     <Compile Include="WorkOrderVO.cs" />
   </ItemGroup>
   <ItemGroup>

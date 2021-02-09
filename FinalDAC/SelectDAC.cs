@@ -286,9 +286,9 @@ namespace FinalDAC
         }
 
         //Process
-        public List<ProcessVO> SelectProcess()
+        public List<ProcessVO> SelectProcess(string Prd_Date)
         {
-            string sql = " SELECT * from View_Process_Master";
+            string sql = " SELECT * from View_Process_Master where Prd_Date = @Prd_Date";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -300,9 +300,9 @@ namespace FinalDAC
         }
 
         //WorkCenter
-        public List<WorkCenterVO> SelectWorkCenter()
+        public List<WorkCenterVO> SelectWorkCenter(string Prd_Date)
         {
-            string sql = " SELECT * from View_WorkCenter_Master";
+            string sql = " SELECT * from View_WorkCenter_Master where Prd_Date = @Prd_Date";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -357,13 +357,43 @@ namespace FinalDAC
                 return list;
             }
         }
-        public List<WorkDayVO> SelectWorkDay()
+        public List<WorkDayVO> SelectWorkDay(string Prd_Date)
         {
-            string sql = " SELECT * from View_WorkDay";
+            string sql = " SELECT * from View_WorkDay where Prd_Date = @Prd_Date";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
+
+                cmd.Parameters.AddWithValue("@Prd_Date", Prd_Date);
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkDayVO> list = Helper.DataReaderMapToList<WorkDayVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<WorkItemVO> SelectWorkItem(string Prd_Date)
+        {
+            string sql = " SELECT * from View_WorkItem where Prd_Date = @Prd_Date";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                cmd.Parameters.AddWithValue("@Prd_Date", Prd_Date);
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkItemVO> list = Helper.DataReaderMapToList<WorkItemVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<WorkBoxingVO> SelectWorkBoxing(string Prd_Date)
+        {
+            string sql = " SELECT * from View_WorkBoxing where Prd_Date = @Prd_Date";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                cmd.Parameters.AddWithValue("@Prd_Date", Prd_Date);
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkBoxingVO> list = Helper.DataReaderMapToList<WorkBoxingVO>(reader);
 
                 conn.Close();
                 return list;
