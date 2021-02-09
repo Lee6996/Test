@@ -101,128 +101,6 @@
     <Compile Include="KPI_RPT\frm_KPI_RPT_004.Designer.cs">
       <DependentUpon>frm_KPI_RPT_004.cs</DependentUpon>
     </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT_P.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT_P.Designer.cs">
-      <DependentUpon>frm_KPI_RPT_P.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT_W.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT_W.Designer.cs">
-      <DependentUpon>frm_KPI_RPT_W.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_002_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_002_1.Designer.cs">
-      <DependentUpon>MDS_CDS_002_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_ODS_001.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_ODS_001.Designer.cs">
-      <DependentUpon>MDS_ODS_001.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_ODS_002.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_ODS_002.Designer.cs">
-      <DependentUpon>MDS_ODS_002.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_ODS_001_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_ODS_001_1.Designer.cs">
-      <DependentUpon>MDS_ODS_001_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_ODS_002_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_ODS_002_1.Designer.cs">
-      <DependentUpon>MDS_ODS_002_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_001.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_001.Designer.cs">
-      <DependentUpon>MDS_CDS_001.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_002.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_002.Designer.cs">
-      <DependentUpon>MDS_CDS_002.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_003.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_003.Designer.cs">
-      <DependentUpon>MDS_CDS_003.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_004.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_004.Designer.cs">
-      <DependentUpon>MDS_CDS_004.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_005.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_005.Designer.cs">
-      <DependentUpon>MDS_CDS_005.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_006.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_CDS_006.Designer.cs">
-      <DependentUpon>MDS_CDS_006.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_001.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_001.Designer.cs">
-      <DependentUpon>MDS_SDS_001.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_002.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_002.Designer.cs">
-      <DependentUpon>MDS_SDS_002.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_002_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_002_1.Designer.cs">
-      <DependentUpon>MDS_SDS_002_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_003.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_003.Designer.cs">
-      <DependentUpon>MDS_SDS_003.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_003_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_003_1.Designer.cs">
-      <DependentUpon>MDS_SDS_003_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_004.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_004.Designer.cs">
-      <DependentUpon>MDS_SDS_004.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_004_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LeeYounggyu\MDS_SDS_004_1.Designer.cs">
-      <DependentUpon>MDS_SDS_004_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LeeYounggyu\service\Def_MaService.cs" />
-    <Compile Include="LeeYounggyu\UserStatic.cs" />
     <Compile Include="MDI_Parent\frm_MDIParent_1Grid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -380,54 +258,6 @@
       <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="PRM_PRF\PRM_PRF_Service.cs" />
-    <Compile Include="PRM_RPT\frm_PRM_RPT_1-1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_1-1.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_1-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_001.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_001.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_001.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_2-1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_2-1.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_2-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_002.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_002.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_002.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_3-1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_3-1.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_3-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_003.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_003.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_003.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_4-1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_4-1.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_4-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_004.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_RPT\frm_PRM_RPT_004.Designer.cs">
-      <DependentUpon>frm_PRM_RPT_004.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ProcessService.cs" />
@@ -606,31 +436,6 @@
     <EmbeddedResource Include="PopUp\MainPop.resx">
       <DependentUpon>MainPop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_1-1.resx">
-      <DependentUpon>frm_PRM_RPT_1-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_001.resx">
-      <DependentUpon>frm_PRM_RPT_001.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_2-1.resx">
-      <DependentUpon>frm_PRM_RPT_2-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_002.resx">
-      <DependentUpon>frm_PRM_RPT_002.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_3-1.resx">
-      <DependentUpon>frm_PRM_RPT_3-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_003.resx">
-      <DependentUpon>frm_PRM_RPT_003.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_4-1.resx">
-      <DependentUpon>frm_PRM_RPT_4-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_004.resx">
-      <DependentUpon>frm_PRM_RPT_004.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -698,7 +503,6 @@
     <Content Include="EncLibrary\FinalEnc.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="PRM_RPT\" />
     <Folder Include="UserCountrol\" />
   </ItemGroup>
   <ItemGroup>
