@@ -143,6 +143,8 @@
     <Compile Include="MDS_CDS\frm_MDS_CDS_006.Designer.cs">
       <DependentUpon>frm_MDS_CDS_006.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDS_CDS\service\Def_MaService.cs" />
+    <Compile Include="MDS_CDS\service\Def_MiService.cs" />
     <Compile Include="MDS_ODS\frm_MDS_ODS_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,9 +211,6 @@
     <Compile Include="MDS_SDS\frm_MDS_SDS_004_1.Designer.cs">
       <DependentUpon>frm_MDS_SDS_004_1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDS_ODS\service\Def_MaService.cs" />
-    <Compile Include="MDS_ODS\service\Def_MiService.cs" />
-    <Compile Include="MDS_ODS\service\ItemService.cs" />
     <Compile Include="MDS_ODS\UserStatic.cs" />
     <Compile Include="MDI_Parent\frm_MDIParent_1Grid.cs">
       <SubType>Form</SubType>
@@ -237,6 +236,7 @@
     <Compile Include="MDI_Parent\FinalMDIParent.Designer.cs">
       <DependentUpon>FinalMDIParent.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDS_SDS\service\ItemService.cs" />
     <Compile Include="PPS_MLD\frm_PPS_MLD_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -633,6 +633,7 @@
     <Content Include="EncLibrary\FinalEnc.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="MDS_ODS\service\" />
     <Folder Include="UserCountrol\" />
   </ItemGroup>
   <ItemGroup>
