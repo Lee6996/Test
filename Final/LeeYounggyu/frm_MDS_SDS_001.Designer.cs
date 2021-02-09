@@ -1,7 +1,7 @@
 ﻿
 namespace Final.LeeYounggyu
 {
-    partial class MDS_SDS_001
+    partial class frm_MDS_SDS_001
     {
         /// <summary>
         /// Required designer variable.
@@ -50,8 +50,6 @@ namespace Final.LeeYounggyu
             this.label1 = new System.Windows.Forms.Label();
             this.cbLevelGroup = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblLevel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPLbox)).BeginInit();
@@ -280,33 +278,13 @@ namespace Final.LeeYounggyu
             this.btnSearch.BackColor = System.Drawing.Color.DimGray;
             this.btnSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSearch.Location = new System.Drawing.Point(391, 21);
+            this.btnSearch.Location = new System.Drawing.Point(213, 22);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 26);
             this.btnSearch.TabIndex = 107;
             this.btnSearch.Text = "조회";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(211, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
-            this.label2.TabIndex = 105;
-            this.label2.Text = "품목코드";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(279, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 106;
             // 
             // lblLevel
             // 
@@ -328,8 +306,6 @@ namespace Final.LeeYounggyu
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbLevelGroup);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox5);
@@ -370,8 +346,6 @@ namespace Final.LeeYounggyu
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbLevelGroup;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ComboBox cbLevel;
         private System.Windows.Forms.Label lblLevel;

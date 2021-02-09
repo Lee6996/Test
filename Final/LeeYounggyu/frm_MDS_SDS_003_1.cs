@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Final.LeeYounggyu
 {
-    public partial class MDS_CDS_006 : Form
+    public partial class frm_MDS_SDS_003_1 : Form
     {
-        public MDS_CDS_006()
+        public frm_MDS_SDS_003_1()
         {
             InitializeComponent();
         }

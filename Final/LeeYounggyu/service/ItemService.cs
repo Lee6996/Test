@@ -2,6 +2,7 @@
 using FinalVO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace Final.LeeYounggyu.service
         {
             return new SelectDAC().SelectItemLevel();
         }
-             
+
 
         public bool UpdateItemInfo(ItemInfoVO item)
         {
@@ -45,6 +46,45 @@ namespace Final.LeeYounggyu.service
         public bool InsertAllItem_Master(Item_MasterVO item)
         {
             return new ItemInfoDAC().InsertAllitem_Master(item);
+        }
+
+        public DataTable ItemLevelBinding()
+        {
+            return new ItemInfoDAC().ItemLevelBinding();
+        }
+
+        public List<ItemInfoVO> ItemLevelGroupSelect(string groupName)
+        {
+            return new ItemInfoDAC().ItemLevelGroupSelect(groupName);
+        }
+
+        public bool InsertItemLevel(ItemInfoVO additem)
+        {
+            return new ItemInfoDAC().InsertItemLevel(additem);
+        }
+
+        public bool UpdateItemLevel(ItemInfoVO vo)
+        {
+            return new ItemInfoDAC().UpdateItemLevel(vo);
+        }
+
+        public DataTable ItemMasterBindingName()
+        {
+            return new ItemInfoDAC().ItemMasterBindingName();
+        }
+        public DataTable ItemMasterBindingType()
+        {
+            return new ItemInfoDAC().ItemMasterBindingType();
+        }
+
+        public List<Item_MasterVO> ItemMasterSelect(string data)
+        {
+            return new ItemInfoDAC().ItemMasterSelect(data);
+        }
+
+        public bool InsertItemMaster(Item_MasterVO additem)
+        {
+            return new ItemInfoDAC().InsertItemMaster(additem);
         }
     }
 }

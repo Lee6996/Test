@@ -1,7 +1,7 @@
 ﻿
 namespace Final.LeeYounggyu
 {
-    partial class MDS_SDS_002_1
+    partial class frm_MDS_SDS_002_1
     {
         /// <summary>
         /// Required designer variable.
@@ -42,12 +42,11 @@ namespace Final.LeeYounggyu
             this.nulinper = new System.Windows.Forms.NumericUpDown();
             this.nubatch = new System.Windows.Forms.NumericUpDown();
             this.nuhour = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.nuLotSize = new System.Windows.Forms.NumericUpDown();
+            this.nuLeadTime = new System.Windows.Forms.NumericUpDown();
             this.nuStock = new System.Windows.Forms.NumericUpDown();
             this.nucavity = new System.Windows.Forms.NumericUpDown();
             this.cbType = new System.Windows.Forms.ComboBox();
-            this.nuunit = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtSpec = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -74,16 +73,18 @@ namespace Final.LeeYounggyu
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblManager = new System.Windows.Forms.Label();
             this.lblDay = new System.Windows.Forms.Label();
+            this.nuUnit = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.nudrgdv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nushotper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nulinper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nubatch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuhour)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuLotSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuLeadTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nucavity)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuUnit)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -206,21 +207,21 @@ namespace Final.LeeYounggyu
             this.nuhour.Size = new System.Drawing.Size(121, 29);
             this.nuhour.TabIndex = 140;
             // 
-            // numericUpDown4
+            // nuLotSize
             // 
-            this.numericUpDown4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown4.Location = new System.Drawing.Point(106, 228);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 29);
-            this.numericUpDown4.TabIndex = 139;
+            this.nuLotSize.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nuLotSize.Location = new System.Drawing.Point(106, 228);
+            this.nuLotSize.Name = "nuLotSize";
+            this.nuLotSize.Size = new System.Drawing.Size(120, 29);
+            this.nuLotSize.TabIndex = 139;
             // 
-            // numericUpDown3
+            // nuLeadTime
             // 
-            this.numericUpDown3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown3.Location = new System.Drawing.Point(106, 193);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 29);
-            this.numericUpDown3.TabIndex = 138;
+            this.nuLeadTime.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nuLeadTime.Location = new System.Drawing.Point(106, 193);
+            this.nuLeadTime.Name = "nuLeadTime";
+            this.nuLeadTime.Size = new System.Drawing.Size(120, 29);
+            this.nuLeadTime.TabIndex = 138;
             // 
             // nuStock
             // 
@@ -246,14 +247,6 @@ namespace Final.LeeYounggyu
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(121, 29);
             this.cbType.TabIndex = 135;
-            // 
-            // nuunit
-            // 
-            this.nuunit.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.nuunit.Location = new System.Drawing.Point(406, 117);
-            this.nuunit.Name = "nuunit";
-            this.nuunit.Size = new System.Drawing.Size(120, 29);
-            this.nuunit.TabIndex = 134;
             // 
             // label21
             // 
@@ -511,12 +504,21 @@ namespace Final.LeeYounggyu
             this.lblDay.Size = new System.Drawing.Size(0, 21);
             this.lblDay.TabIndex = 154;
             // 
+            // nuUnit
+            // 
+            this.nuUnit.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nuUnit.Location = new System.Drawing.Point(407, 120);
+            this.nuUnit.Name = "nuUnit";
+            this.nuUnit.Size = new System.Drawing.Size(121, 29);
+            this.nuUnit.TabIndex = 154;
+            // 
             // MDS_SDS_002_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(534, 475);
+            this.Controls.Add(this.nuUnit);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label22);
@@ -530,12 +532,11 @@ namespace Final.LeeYounggyu
             this.Controls.Add(this.nulinper);
             this.Controls.Add(this.nubatch);
             this.Controls.Add(this.nuhour);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
+            this.Controls.Add(this.nuLotSize);
+            this.Controls.Add(this.nuLeadTime);
             this.Controls.Add(this.nuStock);
             this.Controls.Add(this.nucavity);
             this.Controls.Add(this.cbType);
-            this.Controls.Add(this.nuunit);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.txtSpec);
             this.Controls.Add(this.txtName);
@@ -567,12 +568,13 @@ namespace Final.LeeYounggyu
             ((System.ComponentModel.ISupportInitialize)(this.nulinper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nubatch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuhour)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuLotSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuLeadTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nucavity)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuUnit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -593,12 +595,11 @@ namespace Final.LeeYounggyu
         private System.Windows.Forms.NumericUpDown nulinper;
         private System.Windows.Forms.NumericUpDown nubatch;
         private System.Windows.Forms.NumericUpDown nuhour;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown nuLotSize;
+        private System.Windows.Forms.NumericUpDown nuLeadTime;
         private System.Windows.Forms.NumericUpDown nuStock;
         private System.Windows.Forms.NumericUpDown nucavity;
         private System.Windows.Forms.ComboBox cbType;
-        private System.Windows.Forms.TextBox nuunit;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtSpec;
         private System.Windows.Forms.TextBox txtName;
@@ -625,5 +626,6 @@ namespace Final.LeeYounggyu
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDay;
         private System.Windows.Forms.Label lblManager;
+        private System.Windows.Forms.NumericUpDown nuUnit;
     }
 }

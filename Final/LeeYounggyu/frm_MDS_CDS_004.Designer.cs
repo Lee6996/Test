@@ -1,7 +1,7 @@
 ﻿
 namespace Final.LeeYounggyu
 {
-    partial class MDS_CDS_004
+    partial class frm_MDS_CDS_004
     {
         /// <summary>
         /// Required designer variable.

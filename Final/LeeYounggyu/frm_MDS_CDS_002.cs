@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace Final.LeeYounggyu
 {
-    public partial class MDS_CDS_002 : Form
+    public partial class frm_MDS_CDS_002 : Form
     {
         List<Def_MaVO> Defmalist; //불량 대분류
         Def_MaService maservice = new Def_MaService();
 
         List<Def_MiVO> defmilist;//불량 상세
         Def_MiService miservice = new Def_MiService();
-        public MDS_CDS_002()
+        public frm_MDS_CDS_002()
         {
             InitializeComponent();
         }

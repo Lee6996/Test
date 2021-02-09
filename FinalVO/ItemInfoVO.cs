@@ -19,7 +19,7 @@ namespace FinalVO
         public int Box_Qty { get; set; }
         public int Pcs_Qty { get; set; }
         public decimal Mat_Qty { get; set; }
-        public string Use_YN { get; set; }
+        public int Use_YN { get; set; }
         public string Ins_Date { get; set; }
         public string Ins_Emp { get; set; }
         public string Up_Date { get; set; }

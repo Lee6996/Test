@@ -113,6 +113,118 @@
     <Compile Include="KPI_RPT\frm_KPI_RPT_W.Designer.cs">
       <DependentUpon>frm_KPI_RPT_W.cs</DependentUpon>
     </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_001.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_002.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_002_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_002_1.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_002_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_003.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_004.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_005.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_CDS_006.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_ODS_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_ODS_001.Designer.cs">
+      <DependentUpon>frm_MDS_ODS_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_ODS_001_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_ODS_001_1.Designer.cs">
+      <DependentUpon>frm_MDS_ODS_001_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_ODS_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_ODS_002.Designer.cs">
+      <DependentUpon>frm_MDS_ODS_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_ODS_002_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_ODS_002_1.Designer.cs">
+      <DependentUpon>frm_MDS_ODS_002_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_001.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_002.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_002_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_002_1.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_002_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_003.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_003_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_003_1.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_003_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_004.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_004_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeeYounggyu\frm_MDS_SDS_004_1.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_004_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeeYounggyu\service\Def_MaService.cs" />
+    <Compile Include="LeeYounggyu\service\Def_MiService.cs" />
+    <Compile Include="LeeYounggyu\service\ItemService.cs" />
+    <Compile Include="LeeYounggyu\UserStatic.cs" />
     <Compile Include="MDI_Parent\frm_MDIParent_1Grid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,7 +418,6 @@
       <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="PRM_PRF\PRM_PRF_Service.cs" />
-
     <Compile Include="PRM_RPT\frm_PRM_RPT_1-1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -502,6 +613,60 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_W.resx">
       <DependentUpon>frm_KPI_RPT_W.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_CDS_001.resx">
+      <DependentUpon>frm_MDS_CDS_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_CDS_002.resx">
+      <DependentUpon>frm_MDS_CDS_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_CDS_002_1.resx">
+      <DependentUpon>frm_MDS_CDS_002_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_CDS_003.resx">
+      <DependentUpon>frm_MDS_CDS_003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_CDS_004.resx">
+      <DependentUpon>frm_MDS_CDS_004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_CDS_005.resx">
+      <DependentUpon>frm_MDS_CDS_005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_CDS_006.resx">
+      <DependentUpon>frm_MDS_CDS_006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_ODS_001.resx">
+      <DependentUpon>frm_MDS_ODS_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_ODS_001_1.resx">
+      <DependentUpon>frm_MDS_ODS_001_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_ODS_002.resx">
+      <DependentUpon>frm_MDS_ODS_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_ODS_002_1.resx">
+      <DependentUpon>frm_MDS_ODS_002_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_SDS_001.resx">
+      <DependentUpon>frm_MDS_SDS_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_SDS_002.resx">
+      <DependentUpon>frm_MDS_SDS_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_SDS_002_1.resx">
+      <DependentUpon>frm_MDS_SDS_002_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_SDS_003.resx">
+      <DependentUpon>frm_MDS_SDS_003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_SDS_003_1.resx">
+      <DependentUpon>frm_MDS_SDS_003_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_SDS_004.resx">
+      <DependentUpon>frm_MDS_SDS_004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeeYounggyu\frm_MDS_SDS_004_1.resx">
+      <DependentUpon>frm_MDS_SDS_004_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI_Parent\frm_MDIParent_1Grid.resx">
       <DependentUpon>frm_MDIParent_1Grid.cs</DependentUpon>

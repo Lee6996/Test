@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace Final.LeeYounggyu
 {
-    public partial class MDS_SDS_002_1 : Form
+    public partial class frm_MDS_SDS_002_1 : Form
     {
         ItemService itemservice = new ItemService();
         List<ItemInfoVO> itemgrouplist;
-        public MDS_SDS_002_1()
+        public frm_MDS_SDS_002_1()
         {
             InitializeComponent();
         }

@@ -13,11 +13,11 @@ using System.Windows.Forms;
 namespace Final.LeeYounggyu
 {
 
-    public partial class MDS_SDS_001 : Form
+    public partial class frm_MDS_SDS_001 : Form
     {
         ItemService itemservice = new ItemService();
         List<ItemInfoVO> itemlist;
-        public MDS_SDS_001()
+        public frm_MDS_SDS_001()
         {
             InitializeComponent();
         }
@@ -30,36 +30,53 @@ namespace Final.LeeYounggyu
             CommonUtil.AddGridTextColumn(dgvItemLevel, "팔렛당박스수", "Box_Qty", 200);
             CommonUtil.AddGridTextColumn(dgvItemLevel, "박스당PCS수", "Pcs_Qty", 200);
             CommonUtil.AddGridTextColumn(dgvItemLevel, "PCS당소재량", "Mat_Qty", 200);
-            CommonUtil.AddGridTextColumn(dgvItemLevel, "사용여부", "Use_YN", 150);
+            CommonUtil.AddGridTextColumn(dgvItemLevel, "사용여부", "Use_YN", 150, visibility: false);                      
 
-
-            dgvItemLevel.DataSource = new ItemService().SelectItemLevel();
-
-            DataGridViewButtonColumn gridbtn = new DataGridViewButtonColumn();
+            DataGridViewCheckBoxColumn gridbtn = new DataGridViewCheckBoxColumn(false);
             gridbtn.HeaderText = "사용여부";
-            gridbtn.Text = "변경";
             gridbtn.Name = "btn";
             gridbtn.Width = 100;
-            gridbtn.FlatStyle = FlatStyle.Popup;
+            gridbtn.TrueValue = 1;
+            gridbtn.FalseValue = 0;
             gridbtn.DefaultCellStyle.BackColor = Color.White;
-            gridbtn.UseColumnTextForButtonValue = true;
+            gridbtn.DataPropertyName = "Use_YN";
             dgvItemLevel.Columns.Add(gridbtn);
 
-            GetAllItemGroup();
-            ControlSetting();
+            //콤보박스에 유저 그룹 정보 바인딩
+            DataTable dtName = itemservice.ItemLevelBinding();
+            //빈칸을 위해 한행 추가
+            DataRow dr = dtName.NewRow();
+            dr["Level_Code"] = "";
+            dr["Level_Name"] = "전체";
+            dtName.Rows.InsertAt(dr, 0);
+            dtName.AcceptChanges();
+
+            cbLevelGroup.DisplayMember = "Level_Name";
+            cbLevelGroup.ValueMember = "Level_Code";
+            cbLevelGroup.DataSource = dtName;
+
+            DataLoad("");
         }
 
-        private void GetAllItemGroup()
+        private void DataLoad(string groupName)
         {
-            itemlist = new List<ItemInfoVO>();
-            itemlist = itemservice.SelectItemLevel();
-            dgvItemLevel.DataSource = itemlist;
+            try
+            {
+                ItemService service = new ItemService();
+                List<ItemInfoVO> list = service.ItemLevelGroupSelect(groupName);
+
+                dgvItemLevel.DataSource = list;
+                dgvItemLevel.ClearSelection();
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void dgvItemLevel_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // if (btnSave.Text == "수정")
-            // {
+        {            
             var update = itemlist.Find(item => item.Level_Code == dgvItemLevel.SelectedRows[0].Cells[0].Value.ToString());
 
             txtCode.Text = update.Level_Code;
@@ -88,42 +105,29 @@ namespace Final.LeeYounggyu
             {
                 cbLevel.SelectedIndex = 4;
             }
-            
-            // }
+                       
         }
 
-        /// <summary>
-        /// 그리드뷰 버튼, 콤보박스세팅
-        /// </summary>
-        private void ControlSetting()
-        {
-            ///combobox
-            Dictionary<string, string> cbblist = itemlist.ToDictionary(item => item.Level_Code, item => item.Level_Name);
-            cbLevel.DisplayMember = "Value";
-            cbLevel.ValueMember = "Key";
-            cbLevel.DataSource = new BindingSource(cbblist, null);
-            lblLevel.Text = cbLevel.SelectedValue.ToString();
-            ///
-        }        
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-               foreach (DataGridViewRow row in dgvItemLevel.Rows)
-            {
-                if (row.Cells[0].Value.ToString().Contains(lblLevel.Text))
-                {
-                    row.Cells[0].Selected = true;
-                }
-            }
+            DataLoad(cbLevelGroup.Text);
         }
 
-        private void cbLevelGroup_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lblLevel.Text = cbLevelGroup.SelectedValue.ToString();
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (txtCode.Text.Length < 1)
+            {
+                MessageBox.Show("레벨코드 미입력");
+                return;
+            }
+            if (txtName.Text.Length < 1)
+            {
+                MessageBox.Show("레벨명 미입력");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(txtCode.Text.Trim()) && !string.IsNullOrEmpty(txtName.Text.Trim()))
             {
                 string level = null;
@@ -167,50 +171,63 @@ namespace Final.LeeYounggyu
                     Mat_Qty = nuPCSqty.Value,
                     Ins_Emp = UserStatic.User_Name,
                 };
+                try
+                {
+                    ItemService service = new ItemService();
+                    bool bFlag = service.InsertItemLevel(additem);
 
-                if (itemservice.UpdateItemInfo(additem))
-                {
-                    MessageBox.Show("저장 완료", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    GetAllItemGroup();
-                    ControlSetting();
-                   
+                    if (bFlag)
+                    {
+                        MessageBox.Show("추가되었습니다.");
+                        DataLoad("");
+                    }
+                    else
+                        MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
                 }
-                else
+                catch (Exception err)
                 {
-                    MessageBox.Show("db실패", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(err.Message);
                 }
+                RefreshControl();
             }
-            else
-            {
-                MessageBox.Show("필수 항목을 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+        }
+        private void RefreshControl()
+        {
+            txtCode.Text = txtName.Text = "";
+            txtCode.Focus();
+            nuBoxpcs.Value = nuPCSqty.Value = nuPLbox.Value = 0;
+
         }
 
         private void dgvItemLevel_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
 
-                if (e.ColumnIndex == dgvItemLevel.Columns["btn"].Index)//눌러서 사용과 사용안함 변경
+            if (e.ColumnIndex == 4)
+            {
+                //dgvUser.EndEdit();
+
+                DataGridViewCheckBoxCell dgv = (DataGridViewCheckBoxCell)dgvItemLevel.Rows[e.RowIndex].Cells[4];
+                int useyn = (Convert.ToInt32(dgv.Value) == 1) ? 0 : 1;
+
+                ItemInfoVO vo = new ItemInfoVO
                 {
-                    if ((dgvItemLevel.SelectedRows[0].Cells[5].Value).ToString() == "Y") //사용안함
-                    {
-                        itemservice.Use_YNItem_Level_Master((dgvItemLevel.SelectedRows[0].Cells[0].Value).ToString(), "N");
-                    }
-                    else //사용함
-                    {
-                        itemservice.Use_YNItem_Level_Master((dgvItemLevel.SelectedRows[0].Cells[0].Value).ToString(), "Y");
-                    }
-                    GetAllItemGroup();
-                }
+                    Level_Code = dgvItemLevel.Rows[e.RowIndex].Cells[0].Value.ToString(),
+                    Use_YN = useyn
+                };
 
+                ItemService service = new ItemService();
+                service.UpdateItemLevel(vo);
             }
-            catch (Exception err)
-            {
+        }
 
-                MessageBox.Show(err.Message);
-            }
+        private void cbLevelGroup_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cbtext;
+            if (cbLevelGroup.SelectedIndex < 1)
+                cbtext = "";
+            else
+                cbtext = cbLevelGroup.Text;
         }
     }
 }
-//부모폼에서 추가, 편집(컨트롤활성화) <기능은 구현> , 삭제 << 기능메서드 필요.
+
