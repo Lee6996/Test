@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-﻿using Final.LeeYounggyu;
-using Final.YeomGyeongJin.MSS_CON;
-using Final.YeomGyeongJin.MSS_SYS;
-﻿//using Final.LeeYounggyu;
-using Final.YeomGyeongJin.MSS_CON;
->>>>>>> 3a7aa07683cf4215fcbab14f03e3ec439641006b
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Final.PRM_PRF;
 
 namespace Final
 {
@@ -24,7 +13,9 @@ namespace Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_PRM_PRF_003());
+            //폴더 명 앞에 붙여서 위쪽에 유징문 안 생기게 해주세요. 이 부분에서 오류나는 경우 계속 생기네요
+            //안 쓰는 유징문 다 지워두겠습니다. -민주
+            Application.Run(new PRM_PRF.frm_PRM_PRF_003());
         }
     }
 }
