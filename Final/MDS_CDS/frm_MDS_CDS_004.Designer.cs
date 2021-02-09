@@ -1,5 +1,5 @@
 ﻿
-namespace Final.MDS_SDS
+namespace Final.MDS_CDS
 {
     partial class frm_MDS_CDS_004
     {
@@ -256,7 +256,7 @@ namespace Final.MDS_SDS
             this.button1.Text = "조회";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // MDS_CDS_004
+            // frm_MDS_CDS_004
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -281,8 +281,9 @@ namespace Final.MDS_SDS
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
-            this.Name = "MDS_CDS_004";
+            this.Name = "frm_MDS_CDS_004";
             this.Text = "비가동 상세분류";
+            this.Load += new System.EventHandler(this.frm_MDS_CDS_004_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -1,5 +1,5 @@
 ﻿
-namespace Final.MDS_SDS
+namespace Final.MDS_CDS
 {
     partial class frm_MDS_CDS_001
     {

@@ -207,6 +207,7 @@ namespace Final.KPI_RPT
             this.Name = "KPI_RPT_MDIParent";
             this.Text = "MDIParent1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.KPI_RPT_MDIParent_Load);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.panel4.ResumeLayout(false);

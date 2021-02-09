@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final.MDS_SDS
+namespace Final.MDS_CDS
 {
     public partial class frm_MDS_CDS_001 : Form
     {
@@ -119,7 +119,7 @@ namespace Final.MDS_SDS
                     {
                         Def_Ma_Code = txtCode.Text,
                         Def_Ma_Name = txtName.Text,
-                        Ins_Emp = UserStatic.User_Name
+                        //Ins_Emp = UserStatic.User_Name
                     };
 
                     //if (Defservice.InsertUpdateDef_MaVO(additem))

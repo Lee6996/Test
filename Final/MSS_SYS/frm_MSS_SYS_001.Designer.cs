@@ -1,5 +1,5 @@
 ﻿
-namespace Final.YeomGyeongJin.MSS_SYS
+namespace Final.MSS_SYS
 {
     partial class frm_MSS_SYS_001
     {

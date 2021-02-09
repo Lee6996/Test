@@ -109,5 +109,10 @@ namespace Final.KPI_RPT
         {
 
         }
+
+        private void KPI_RPT_MDIParent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

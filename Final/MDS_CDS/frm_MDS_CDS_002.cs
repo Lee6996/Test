@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final.MDS_SDS
+namespace Final.MDS_CDS
 {
     public partial class frm_MDS_CDS_002 : Form
     {
@@ -85,7 +85,7 @@ namespace Final.MDS_SDS
                     Def_Ma_Code = lblDefM.Text,
                     Def_Mi_Name = txtDef_Miname.Text,
                     Remark = txtRemark.Text,
-                    Ins_Emp = UserStatic.User_Name
+                    //Ins_Emp = UserStatic.User_Name
 
                 };
                 //if (miservice.InsertUpdateDef_Mi_Master(additem))

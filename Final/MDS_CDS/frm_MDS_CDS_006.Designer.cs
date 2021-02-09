@@ -1,5 +1,5 @@
 ﻿
-namespace Final.MDS_SDS
+namespace Final.MDS_CDS
 {
     partial class frm_MDS_CDS_006
     {
@@ -223,7 +223,7 @@ namespace Final.MDS_SDS
             this.label1.TabIndex = 134;
             this.label1.Text = "대차코드";
             // 
-            // MDS_CDS_008
+            // frm_MDS_CDS_006
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -244,8 +244,9 @@ namespace Final.MDS_SDS
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.splitter1);
-            this.Name = "MDS_CDS_008";
+            this.Name = "frm_MDS_CDS_006";
             this.Text = "대차정보";
+            this.Load += new System.EventHandler(this.frm_MDS_CDS_006_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

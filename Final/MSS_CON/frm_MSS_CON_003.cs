@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final.YeomGyeongJin.MSS_CON
+namespace Final.MSS_CON
 {
     public partial class frm_MSS_CON_003 : Form
     {

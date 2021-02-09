@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Final.YeomGyeongJin.MSS_CON
+namespace Final.MSS_CON
 {
     public class UserGroupService
     {

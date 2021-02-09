@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Final.YeomGyeongJin.MSS_SYS
+namespace Final.MSS_SYS
 {
     public class ScreenService
     {

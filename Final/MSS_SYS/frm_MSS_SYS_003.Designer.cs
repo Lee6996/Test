@@ -1,5 +1,5 @@
 ﻿
-namespace Final.YeomGyeongJin.MSS_SYS
+namespace Final.MSS_SYS
 {
     partial class frm_MSS_SYS_003
     {
@@ -99,7 +99,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.label6.TabIndex = 27;
             this.label6.Text = "▶메뉴모듈";
             // 
-            // MSS_SYS_003
+            // frm_MSS_SYS_003
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1344, 865);
@@ -110,9 +110,10 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.Controls.Add(this.dgvMenu_module);
             this.Controls.Add(this.label6);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Name = "MSS_SYS_003";
+            this.Name = "frm_MSS_SYS_003";
             this.Tag = "메뉴관리";
             this.Text = "MSS_SYS_003";
+            this.Load += new System.EventHandler(this.frm_MSS_SYS_003_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu_Under)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu_module)).EndInit();
             this.ResumeLayout(false);

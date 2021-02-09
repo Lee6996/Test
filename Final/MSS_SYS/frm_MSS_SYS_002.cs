@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final.YeomGyeongJin.MSS_SYS
+namespace Final.MSS_SYS
 {
     public partial class frm_MSS_SYS_002 : Form
     {
