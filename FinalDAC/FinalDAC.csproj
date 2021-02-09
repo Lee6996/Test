@@ -51,9 +51,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Def_MaDAC.cs" />
+    <Compile Include="Def_MiDAC.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="ItemInfoDAC.cs" />
     <Compile Include="PRM_PRF_DAC.cs" />
+    <Compile Include="SelectDAC.cs" />
+    <Compile Include="ScreenDAC.cs" />
+    <Compile Include="SysNoticeDAC.cs" />
     <Compile Include="ScreenDAC.cs" />
     <Compile Include="SysNoticeDAC.cs" />
     <Compile Include="SelectDAC.cs" />
@@ -61,13 +65,13 @@
     <Compile Include="UserGroupDAC.cs" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\FinalVO\FinalVO.csproj">
       <Project>{e0737b4c-95a5-4fb4-a26f-0f1edb71a8c3}</Project>
       <Name>FinalVO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

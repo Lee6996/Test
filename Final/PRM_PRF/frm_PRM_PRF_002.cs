@@ -21,6 +21,12 @@ namespace Final.PRM_PRF
             InitializeComponent();
         }
 
+        public frm_PRM_PRF_002(UserVO user)
+        {
+            InitializeComponent();
+            this.user = user;
+        }
+
         private void frm_PRM_PRF_002_Load(object sender, EventArgs e)
         {
             SetDgv_1(dgvPRM_PRF_1);

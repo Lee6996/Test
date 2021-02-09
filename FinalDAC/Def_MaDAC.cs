@@ -31,11 +31,22 @@ namespace FinalDAC
                 else return false;
             }
         }
-
         public bool InsertAllDef_Master(Def_MaVO def)
         {
-            throw new NotImplementedException();
-        }
+            string sql = $@"INSERT INTO Def_Ma_Master (Def_Ma_Code, Def_Ma_Name, Ins_Emp) values(@Def_Ma_Code, @Def_Ma_Name, @Ins_Emp)";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Def_Ma_Code", def.Def_Ma_Code);
+                cmd.Parameters.AddWithValue("@Def_Ma_Name", def.Def_Ma_Name);
+                cmd.Parameters.AddWithValue("@Ins_Emp", def.Ins_Emp);
+
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+        }      
     }
 }
 

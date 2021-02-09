@@ -2,6 +2,7 @@
 using FinalVO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,12 @@ namespace Final.YeomGyeongJin.MSS_SYS
         }
         public bool UpdateScreenUseYN(ScreenVO vo)
         {
+            dac = new ScreenDAC();
             return dac.UpdateScreenUseYN(vo);
+        }
+        public DataTable SelectScreenBinding()
+        {
+            return dac.SelectScreenBinding();
         }
     }
 }

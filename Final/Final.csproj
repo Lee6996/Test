@@ -101,6 +101,18 @@
     <Compile Include="KPI_RPT\frm_KPI_RPT_004.Designer.cs">
       <DependentUpon>frm_KPI_RPT_004.cs</DependentUpon>
     </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_P.Designer.cs">
+      <DependentUpon>frm_KPI_RPT_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_W.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_W.Designer.cs">
+      <DependentUpon>frm_KPI_RPT_W.cs</DependentUpon>
+    </Compile>
     <Compile Include="LeeYounggyu\MDS_CDS_002_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,7 +235,6 @@
     <Compile Include="MDI_Parent\frm_MDIParent_2Grid.Designer.cs">
       <DependentUpon>frm_MDIParent_2Grid.cs</DependentUpon>
     </Compile>
-    <Compile Include="LeeYounggyu\service\ItemService.cs" />
     <Compile Include="MDI_Parent\MID_MDIParent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,12 +313,6 @@
     <Compile Include="PPS_SCH\frm_PPS_SCH_004.Designer.cs">
       <DependentUpon>frm_PPS_SCH_004.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRM_PRF\frm_PRM_PRF_005.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRM_PRF\frm_PRM_PRF_005.Designer.cs">
-      <DependentUpon>frm_PRM_PRF_005.cs</DependentUpon>
-    </Compile>
     <Compile Include="PRM_PRF\frm_PRM_PRF_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +330,12 @@
     </Compile>
     <Compile Include="PRM_PRF\frm_PRM_PRF_003.Designer.cs">
       <DependentUpon>frm_PRM_PRF_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_005.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_005.cs</DependentUpon>
     </Compile>
     <Compile Include="PRM_PRF\frm_PRM_PRF_006.cs">
       <SubType>Form</SubType>
@@ -559,60 +570,6 @@
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_004.resx">
       <DependentUpon>frm_KPI_RPT_004.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_002_1.resx">
-      <DependentUpon>MDS_CDS_002_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_ODS_001.resx">
-      <DependentUpon>MDS_ODS_001.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_ODS_002.resx">
-      <DependentUpon>MDS_ODS_002.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_ODS_001_1.resx">
-      <DependentUpon>MDS_ODS_001_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_ODS_002_1.resx">
-      <DependentUpon>MDS_ODS_002_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_001.resx">
-      <DependentUpon>MDS_CDS_001.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_002.resx">
-      <DependentUpon>MDS_CDS_002.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_003.resx">
-      <DependentUpon>MDS_CDS_003.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_004.resx">
-      <DependentUpon>MDS_CDS_004.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_005.resx">
-      <DependentUpon>MDS_CDS_005.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_CDS_006.resx">
-      <DependentUpon>MDS_CDS_006.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_SDS_001.resx">
-      <DependentUpon>MDS_SDS_001.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_SDS_002.resx">
-      <DependentUpon>MDS_SDS_002.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_SDS_002_1.resx">
-      <DependentUpon>MDS_SDS_002_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_SDS_003.resx">
-      <DependentUpon>MDS_SDS_003.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_SDS_003_1.resx">
-      <DependentUpon>MDS_SDS_003_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_SDS_004.resx">
-      <DependentUpon>MDS_SDS_004.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LeeYounggyu\MDS_SDS_004_1.resx">
-      <DependentUpon>MDS_SDS_004_1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MDI_Parent\frm_MDIParent_1Grid.resx">
       <DependentUpon>frm_MDIParent_1Grid.cs</DependentUpon>
     </EmbeddedResource>
@@ -687,6 +644,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.resx">
       <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\MainPop.resx">
+      <DependentUpon>MainPop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRM_RPT\frm_PRM_RPT_1-1.resx">
       <DependentUpon>frm_PRM_RPT_1-1.cs</DependentUpon>
@@ -801,6 +761,7 @@
     <Content Include="EncLibrary\FinalEnc.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="PRM_RPT\" />
     <Folder Include="UserCountrol\" />
   </ItemGroup>
   <ItemGroup>

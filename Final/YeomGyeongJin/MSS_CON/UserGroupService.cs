@@ -18,10 +18,10 @@ namespace Final.YeomGyeongJin.MSS_CON
             dac = new UserGroupDAC();
         }
 
-        public List<UserGroupVO> UserGroupSelectInfo(string usergoup_Name)
+        public List<UserGroupVO> UserGroupSelectInfo(string usergoup_Code)
         {
             UserGroupDAC dac = new UserGroupDAC();
-            return dac.SelectUserGroupInfo(usergoup_Name);
+            return dac.SelectUserGroupInfo(usergoup_Code);
         }
         public List<UserGroupVO> UserGroupSelectCode_Name(string usergroup_Code, string usergroup_Name)
         {

@@ -61,6 +61,14 @@ namespace Final.PRM_PRF
             // 
             this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
             // 
+            // dtpTo
+            // 
+            this.dtpTo.Value = new System.DateTime(2021, 2, 9, 19, 37, 30, 739);
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Value = new System.DateTime(2021, 2, 2, 19, 37, 30, 739);
+            // 
             // label2
             // 
             this.label2.Size = new System.Drawing.Size(141, 18);
@@ -98,6 +106,7 @@ namespace Final.PRM_PRF
             this.btnItem.TabIndex = 18;
             this.btnItem.Text = "...";
             this.btnItem.UseVisualStyleBackColor = true;
+            this.btnItem.Click += new System.EventHandler(this.btnItem_Click);
             // 
             // txtItem
             // 

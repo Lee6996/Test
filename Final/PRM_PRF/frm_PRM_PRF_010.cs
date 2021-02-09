@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,17 @@ namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_010 : Final.KPI_RPT.KPI_RPT_MDIParent
     {
+        UserVO user;
+
         public frm_PRM_PRF_010()
         {
             InitializeComponent();
+        }
+
+        public frm_PRM_PRF_010(UserVO user)
+        {
+            InitializeComponent();
+            this.user = user;
         }
 
         private void frm_PRM_PRF_010_Load(object sender, EventArgs e)

@@ -43,24 +43,24 @@ namespace Final.YeomGyeongJin.MSS_CON
             DataTable dtName = service.UserGroupNameSelectBinding();
             //빈칸을 위해 한행 추가
             DataRow dr = dtName.NewRow();
-            dr["UserGroup_Code"] = "";
             dr["UserGroup_Name"] = "전체";
+            dr["UserGroup_Code"] = "";
+            
             dtName.Rows.InsertAt(dr, 0);
             dtName.AcceptChanges();
 
-            cboUserGroup_Name.DisplayMember = "UserGroup_Name";
-            cboUserGroup_Name.ValueMember = "UserGroup_Code";
-            cboUserGroup_Name.DataSource = dtName;
+            //콤보박스에 표시될 컬럼 바인딩
+            cbUserGroup_Name.DisplayMember = "UserGroup_Name";
+            cbUserGroup_Name.ValueMember = "UserGroup_Code";
+            cbUserGroup_Name.DataSource = dtName;
 
             DataLoad("");
         }
 
         private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 4)
-            {
-                //dgvUser.EndEdit();
-
+            if (e.ColumnIndex == 4 && e.RowIndex > -1)
+            { 
                 DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)dgvUser.Rows[e.RowIndex].Cells[4];
                 int useyn = (Convert.ToInt32(chk.Value) == 1) ? 0: 1;
 
@@ -75,12 +75,12 @@ namespace Final.YeomGyeongJin.MSS_CON
             }
         }
 
-        private void DataLoad(string groupName)
+        private void DataLoad(string groupCode)
         {
             try
             {
                 UserGroupService service = new UserGroupService();
-                List<UserGroupVO> list = service.UserGroupSelectInfo(groupName);
+                List<UserGroupVO> list = service.UserGroupSelectInfo(groupCode);
 
                 dgvUser.DataSource = list;
                 dgvUser.ClearSelection();
@@ -94,14 +94,14 @@ namespace Final.YeomGyeongJin.MSS_CON
         //조회 버튼
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            string name = txtUserGroup_Code.Text;
+            //string name = txtUserGroup_Code.Text;
             //if (name.Length < 1)
             //{
             //    MessageBox.Show("사용자 그룹명을 입력해주세요");
             //    return;
             //}
 
-            DataLoad(name);
+            DataLoad(cbUserGroup_Name.Text);
         }
 
         //저장하기 버튼
@@ -157,14 +157,13 @@ namespace Final.YeomGyeongJin.MSS_CON
 
         private void cboUserGroup_Name_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (cboUserGroup_Name.SelectedIndex < 1) return;
-            string txt;
-            if (cboUserGroup_Name.SelectedIndex < 1)
-                txt = "";
-            else
-            txt = cboUserGroup_Name.Text;
+            if (cbUserGroup_Name.SelectedIndex < 1) return;
 
-            txtUserGroup_Code.Text = txt;
+            if (cbUserGroup_Name.SelectedIndex < 1)
+                txtUserGroup_Code.Text = "";
+            else
+                txtUserGroup_Code.Text = cbUserGroup_Name.SelectedValue.ToString();
+
         }
     }
 }
