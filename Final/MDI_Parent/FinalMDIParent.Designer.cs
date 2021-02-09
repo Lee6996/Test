@@ -183,6 +183,7 @@ namespace Final
             this.label1.Size = new System.Drawing.Size(283, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "FFFFFFFFFinal PPPPPPPPPPProject";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button6
             // 
@@ -584,6 +585,7 @@ namespace Final
             this.ShowIcon = false;
             this.Text = "FinalMDIParent";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FinalMDIParent_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

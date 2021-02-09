@@ -57,6 +57,7 @@
     <Compile Include="PRM_PRF_DAC.cs" />
     <Compile Include="ScreenDAC.cs" />
     <Compile Include="SysNoticeDAC.cs" />
+    <Compile Include="SysNoticeDAC.cs" />
     <Compile Include="SelectDAC.cs" />
     <Compile Include="UserDAC.cs" />
     <Compile Include="UserGroupDAC.cs" />

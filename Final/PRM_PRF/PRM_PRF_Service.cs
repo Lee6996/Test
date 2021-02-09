@@ -64,7 +64,7 @@ namespace Final.PRM_PRF
         #endregion
 
         #region 008
-        internal object GetNOPVOList(string dtpFrom, string dtpTo)
+        public object GetNOPVOList(string dtpFrom, string dtpTo)
         {
             return new SelectDAC().SelectNOP(dtpFrom, dtpTo);
         }
@@ -75,13 +75,13 @@ namespace Final.PRM_PRF
         {
             return new SelectDAC().SelectWorkHistory();
         }
+        #endregion
 
+        #region 010
         public List<AttendanceManagementVO> GetAttendanceManagementVOList()
         {
             return new SelectDAC().SelectAttendanceManagement();
         }
-
-        
         #endregion
     }
 }

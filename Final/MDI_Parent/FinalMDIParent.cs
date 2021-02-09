@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Final.KPI_RPT;
+using Final.MDI_Parent;
+using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -107,8 +111,57 @@ namespace Final
 
         private void tv_Menu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            string frmName = "frm_" + e.Node.Name.ToString();
-            
+            //if (e.Node.Name.ToString().Length < 5)
+            //{
+            //    Form frm;
+            //    Assembly frmAssembly = Assembly.GetExecutingAssembly();
+            //    string frmName = string.Format($"Final.frm_{e.Node.Name}");
+            //    frm = (Form)frmAssembly.CreateInstance("Final.PRM_PRF.frm_PRM_PRF_001");
+
+
+
+            //    frm.WindowState = FormWindowState.Maximized;
+            //    frm.Tag = e.Node.Name;
+
+            //    TabPage newTab = new TabPage();
+            //    newTab.Text = e.Node.Text;
+
+            //    tabControl2.TabPages.Add(newTab);
+            //    tabControl2.SelectedTab = newTab;
+            //    frm.Show();
+            //}
+
+            if (e.Node.Name.Length == 11)
+            {
+                string frm1 = $"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}";
+                var frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}")))  as Form;
+                
+                frm.MdiParent = this;
+
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Tag = e.Node.Name;
+                TabPage newTab = new TabPage();
+                newTab.Text = e.Node.Text;
+
+                tabControl2.TabPages.Add(newTab);
+                tabControl2.SelectedTab = newTab;
+                frm.Show();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FinalMDIParent_Load(object sender, EventArgs e)
+        {
+            TreeNode mainNode = new TreeNode();
+            mainNode.Name = "product";
+            mainNode.Text = "Product Categories";
+
+            tv_Menu.Nodes.Add(mainNode);
+            List<ScreenVO> screen = new Service.MenuService().GetScreenVOList();
         }
     }
 }
