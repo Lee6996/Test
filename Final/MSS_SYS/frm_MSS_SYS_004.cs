@@ -23,7 +23,11 @@ namespace Final.MSS_SYS
         {
             SysNoticeService service = new SysNoticeService();
 
-            //날짜 사이의 between 쿼리문 작성
+            cbSysNotice.Items.Add("전체");
+            cbSysNotice.Items.Add("만료");
+            cbSysNotice.Items.Add("진행");
+            cbSysNotice.Items.Add("예정");
+            cbSysNotice.SelectedIndex = 0;
 
             service.Dispose();
         }
@@ -50,6 +54,12 @@ namespace Final.MSS_SYS
             frm_MSS_SYS_004_1 frm = new frm_MSS_SYS_004_1(sysNoticeVO);
             
             frm.ShowDialog();
+        }
+
+        //콤보박스 선택
+        private void cbSysNotice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

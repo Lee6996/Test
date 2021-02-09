@@ -22,7 +22,7 @@ namespace FinalDAC
         }
         public List<UserGroupVO> SelectUserGroupInfo(string usergoup_Code)
         {
-            string sQuery = @"select UserGroup_Code, UserGroup_Name, Admin, case when Use_YN='Y' then 1 else 0 end Use_YN, convert(char(19), Ins_Date, 21) Ins_Date , Ins_Emp, convert(char(19), Up_Date, 21) Up_Date, Up_Emp
+            string sQuery = @"select UserGroup_Code, UserGroup_Name, Admin, case when Use_YN='Y' then 1 else 0 end Use_YN, convert(char(23), Ins_Date, 21) Ins_Date , Ins_Emp, convert(char(23), Up_Date, 21) Up_Date, Up_Emp
                                 from UserGroup_Master where 1 = 1  ";
 
             if (!string.IsNullOrEmpty(usergoup_Code))
