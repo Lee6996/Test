@@ -38,7 +38,7 @@ namespace FinalDAC
             }
         }
         //전체
-        public List<SysNoticeVO> SelectAllNotice(string usergoup_Code)
+        public List<SysNoticeVO> SelectAllNoticeInfo(string usergoup_Code)
         {
             //애매한 부분 
             string sQuery = @"select Seq,convert(char(10), Notice_Date, 23) Notice_Date, convert(char(10), Notice_End, 23) Notice_End, Title, Description, Notice_Rtf, Email_Recipients, Email_Send_Code, 
