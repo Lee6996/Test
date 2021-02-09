@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceManagementVO.cs" />
+    <Compile Include="Def_MaVO.cs" />
     <Compile Include="ScreenVO.cs" />
     <Compile Include="SysNoticeVO.cs" />
     <Compile Include="GVHistoryVO.cs" />

@@ -239,8 +239,7 @@ namespace FinalDAC
                                             , Cavity
                                             , Line_Per_Qty
                                             , Shot_Per_Qty
-                                            , Dry_GV_Qty
-                                            , Heat_GV_Qty
+                                            , Dry_GV_Qty                                           
                                             , Remark
                                             , Use_YN
 
