@@ -70,7 +70,7 @@ namespace FinalDAC
                 else
                 {
                     sQuery = @"insert into UserGroup_Master (UserGroup_Code, UserGroup_Name, Admin, Use_YN, Ins_Date, Ins_Emp,Up_Date, Up_Emp)
-                                values(@groupCode, @groupName, 'Y', 'Y', sysdatetime(), convert(date, sysdatetime()),sysdatetime(), 'test') ";
+                                values(@groupCode, @groupName, 'Y', 'Y', getdate(), 'test' ,sysdatetime(), 'test') ";
                     cmd.CommandText = sQuery;
 
                     cmd.ExecuteNonQuery();
