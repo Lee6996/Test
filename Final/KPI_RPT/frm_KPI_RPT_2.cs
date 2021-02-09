@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Final.Service;
+using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,18 +41,33 @@ namespace Final.KPI_RPT
 
         private void frm_KPI_RPT_2_Load(object sender, EventArgs e)
         {
+            DataLoad();
+        }
+
+
+        private void DataLoad()
+        {
             CommonUtil.SetInitGridView(dgv_KPI_MONTH);
 
-            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "공정", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "작업장", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "품목", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "목표량", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "생산량", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "생산시간", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "달성율", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "달성율가동율", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "일일생산량", "", 120);
-            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "생산일수", "", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "공정", "Process_Code", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "작업장", "Wc_Code", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "품목", "Item_Name", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "전월생산량", "", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "전월생산시간", "", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "당월생산량", "", 120);
+            CommonUtil.AddGridTextColumn(dgv_KPI_MONTH, "당월생산시간", "", 120);
+
+            GetData();
+        }
+        private void GetData()
+        {
+            WorkDayService service = new WorkDayService();
+
+            List<WorkDayVO> list = service.SelectWorkDay();
+
+            dgv_KPI_MONTH.DataSource = null;
+            dgv_KPI_MONTH.DataSource = list;
+
         }
     }
 }

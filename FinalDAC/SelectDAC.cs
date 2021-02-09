@@ -192,7 +192,7 @@ namespace FinalDAC
         //Process
         public List<ProcessVO> SelectProcess()
         {
-            string sql = " SELECT * from Process_Master";
+            string sql = " SELECT * from View_Process_Master";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -205,11 +205,23 @@ namespace FinalDAC
         //WorkCenter
         public List<WorkCenterVO> SelectWorkCenter()
         {
-            string sql = " SELECT * from WorkCenter_Master";
+            string sql = " SELECT * from View_WorkCenter_Master";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkCenterVO> list = Helper.DataReaderMapToList<WorkCenterVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<WorkDayVO> SelectWorkDay()
+        {
+            string sql = " SELECT * from View_WorkDay";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkDayVO> list = Helper.DataReaderMapToList<WorkDayVO>(reader);
 
                 conn.Close();
                 return list;
