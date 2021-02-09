@@ -16,5 +16,11 @@ namespace Final.YeomGyeongJin.MSS_SYS
         {
             InitializeComponent();
         }
+
+        private void MSS_SYS_002_Load(object sender, EventArgs e)
+        {
+            CommonUtil.SetInitGridView(dgvLogin_History);
+            //CommonUtil.AddGridTextColumn(dgvLogin_History, "이름", )
+        }
     }
 }

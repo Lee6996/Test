@@ -40,10 +40,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceManagementVO.cs" />
+<<<<<<< HEAD
+=======
     <Compile Include="ForPopup.cs" />
     <Compile Include="NOPVO.cs" />
     <Compile Include="Def_MaVO.cs" />
     <Compile Include="Def_MiVO.cs" />
+>>>>>>> 3a7aa07683cf4215fcbab14f03e3ec439641006b
     <Compile Include="ScreenVO.cs" />
     <Compile Include="SysNoticeVO.cs" />
     <Compile Include="GVHistoryVO.cs" />
