@@ -55,9 +55,6 @@
     <Compile Include="Helper.cs" />
     <Compile Include="ItemInfoDAC.cs" />
     <Compile Include="PRM_PRF_DAC.cs" />
-    <Compile Include="SelectDAC.cs" />
-    <Compile Include="ScreenDAC.cs" />
-    <Compile Include="SysNoticeDAC.cs" />
     <Compile Include="ScreenDAC.cs" />
     <Compile Include="SysNoticeDAC.cs" />
     <Compile Include="SysNoticeDAC.cs" />

@@ -451,7 +451,7 @@ namespace Final
             treeNode8.Text = "시스템관리";
             treeNode9.Name = "MDS_ODS_001";
             treeNode9.Text = "공정 정보";
-            treeNode10.Name = "MDS_ODS_001";
+            treeNode10.Name = "MDS_ODS_002";
             treeNode10.Text = "작업장 정보";
             treeNode11.Name = "MDS_SDS_001";
             treeNode11.Text = "품목분류 정보";
@@ -501,7 +501,7 @@ namespace Final
             treeNode33.Text = "근태정보 조회";
             treeNode34.Name = "PRM_PRF_010";
             treeNode34.Text = "근태 현황 분석";
-            treeNode35.Name = "노드3";
+            treeNode35.Name = "PRM_PRF";
             treeNode35.Text = "실적관리";
             treeNode36.Name = "노드53";
             treeNode36.Text = "불량 이미지 등록";

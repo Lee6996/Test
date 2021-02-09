@@ -30,11 +30,12 @@ namespace Final.MSS_SYS
         private void InitializeComponent()
         {
             this.pnl = new System.Windows.Forms.Panel();
+            this.cbSysNotice = new System.Windows.Forms.ComboBox();
             this.btnNotice_Insert = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
             this.dgvNotice = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbScreen_Name = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotice)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +43,8 @@ namespace Final.MSS_SYS
             // pnl
             // 
             this.pnl.BackColor = System.Drawing.Color.White;
-            this.pnl.Controls.Add(this.cbScreen_Name);
+            this.pnl.Controls.Add(this.label2);
+            this.pnl.Controls.Add(this.cbSysNotice);
             this.pnl.Controls.Add(this.btnNotice_Insert);
             this.pnl.Controls.Add(this.btnSelect);
             this.pnl.Dock = System.Windows.Forms.DockStyle.Top;
@@ -50,6 +52,17 @@ namespace Final.MSS_SYS
             this.pnl.Name = "pnl";
             this.pnl.Size = new System.Drawing.Size(1344, 56);
             this.pnl.TabIndex = 18;
+            // 
+            // cbSysNotice
+            // 
+            this.cbSysNotice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSysNotice.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbSysNotice.FormattingEnabled = true;
+            this.cbSysNotice.Location = new System.Drawing.Point(324, 15);
+            this.cbSysNotice.Name = "cbSysNotice";
+            this.cbSysNotice.Size = new System.Drawing.Size(217, 26);
+            this.cbSysNotice.TabIndex = 114;
+            this.cbSysNotice.SelectedIndexChanged += new System.EventHandler(this.cbSysNotice_SelectedIndexChanged);
             // 
             // btnNotice_Insert
             // 
@@ -78,6 +91,9 @@ namespace Final.MSS_SYS
             // 
             // dgvNotice
             // 
+            this.dgvNotice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNotice.BackgroundColor = System.Drawing.Color.White;
             this.dgvNotice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotice.Location = new System.Drawing.Point(12, 105);
@@ -98,17 +114,18 @@ namespace Final.MSS_SYS
             this.label6.TabIndex = 22;
             this.label6.Text = "▶공지사항목록";
             // 
-            // cbScreen_Name
+            // label2
             // 
-            this.cbScreen_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbScreen_Name.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbScreen_Name.FormattingEnabled = true;
-            this.cbScreen_Name.Location = new System.Drawing.Point(324, 15);
-            this.cbScreen_Name.Name = "cbScreen_Name";
-            this.cbScreen_Name.Size = new System.Drawing.Size(217, 26);
-            this.cbScreen_Name.TabIndex = 114;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(170, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 18);
+            this.label2.TabIndex = 115;
+            this.label2.Text = "공지사항기간";
             // 
-            // MSS_SYS_004
+            // frm_MSS_SYS_004
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1344, 865);
@@ -116,11 +133,12 @@ namespace Final.MSS_SYS
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pnl);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Name = "MSS_SYS_004";
+            this.Name = "frm_MSS_SYS_004";
             this.Tag = "공지사항등록";
             this.Text = "MSS_SYS_004";
             this.Load += new System.EventHandler(this.MSS_SYS_004_Load);
             this.pnl.ResumeLayout(false);
+            this.pnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,6 +152,7 @@ namespace Final.MSS_SYS
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.DataGridView dgvNotice;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbScreen_Name;
+        private System.Windows.Forms.ComboBox cbSysNotice;
+        private System.Windows.Forms.Label label2;
     }
 }
