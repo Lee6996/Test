@@ -20,18 +20,18 @@ namespace FinalDAC
             conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
             conn.Open();
         }
-        public List<UserGroupVO> SelectUserGroupInfo(string usergroup_Name)
+        public List<UserGroupVO> SelectUserGroupInfo(string usergoup_Code)
         {
-            string sQuery = @"select UserGroup_Code, UserGroup_Name, Admin, case when Use_YN='Y' then 1 else 0 end Use_YN, Ins_Date, Ins_Emp, Up_Date, Up_Emp
+            string sQuery = @"select UserGroup_Code, UserGroup_Name, Admin, case when Use_YN='Y' then 1 else 0 end Use_YN, convert(char(19), Ins_Date, 21) Ins_Date , Ins_Emp, convert(char(19), Up_Date, 21) Up_Date, Up_Emp
                                 from UserGroup_Master where 1 = 1  ";
 
-            if (!string.IsNullOrEmpty(usergroup_Name))
+            if (!string.IsNullOrEmpty(usergoup_Code))
                 sQuery += " and UserGroup_Name Like @groupName ";
 
             using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
-                if (!string.IsNullOrEmpty(usergroup_Name))
-                    cmd.Parameters.AddWithValue("@groupName", "%" + usergroup_Name + "%"); //포함하는 문자열
+                if (!string.IsNullOrEmpty(usergoup_Code))
+                    cmd.Parameters.AddWithValue("@groupName", "%" + usergoup_Code + "%"); //포함하는 문자열
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<UserGroupVO> list = Helper.DataReaderMapToList<UserGroupVO>(reader);
@@ -99,7 +99,7 @@ namespace FinalDAC
         {
             
             DataTable dt = new DataTable();
-                string sql = "select UserGroup_Code, UserGroup_Name from UserGroup_Master";
+                string sql = "select UserGroup_Name, UserGroup_Code from UserGroup_Master";
                 using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
                 {
                     da.Fill(dt);

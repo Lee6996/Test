@@ -29,7 +29,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLogin_History = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,25 +45,25 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.cbScreen_Name = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogin_History)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvLogin_History
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvLogin_History.BackgroundColor = System.Drawing.Color.White;
+            this.dgvLogin_History.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLogin_History.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 105);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1317, 744);
-            this.dataGridView1.TabIndex = 22;
+            this.dgvLogin_History.Location = new System.Drawing.Point(12, 105);
+            this.dgvLogin_History.Name = "dgvLogin_History";
+            this.dgvLogin_History.RowTemplate.Height = 23;
+            this.dgvLogin_History.Size = new System.Drawing.Size(1317, 744);
+            this.dgvLogin_History.TabIndex = 22;
             // 
             // Column1
             // 
@@ -137,6 +137,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
             // 
             // cbUser_Name
             // 
+            this.cbUser_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUser_Name.FormattingEnabled = true;
             this.cbUser_Name.Location = new System.Drawing.Point(657, 14);
             this.cbUser_Name.Name = "cbUser_Name";
@@ -201,13 +202,14 @@ namespace Final.YeomGyeongJin.MSS_SYS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1344, 865);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvLogin_History);
             this.Controls.Add(this.label6);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "MSS_SYS_002";
             this.Tag = "로그인 이력정보";
             this.Text = "MSS_SYS_002";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.MSS_SYS_002_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogin_History)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -217,7 +219,7 @@ namespace Final.YeomGyeongJin.MSS_SYS
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLogin_History;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

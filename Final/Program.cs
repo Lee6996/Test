@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-﻿using Final.YeomGyeongJin.MSS_CON;
-using Final.YeomGyeongJin.MSS_SYS;
-=======
 ﻿using Final.LeeYounggyu;
 using Final.YeomGyeongJin.MSS_CON;
->>>>>>> a1fc3fdcb883a1a30a79a41ab2c74e35746840c2
+using Final.YeomGyeongJin.MSS_SYS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +19,7 @@ namespace Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDS_SDS_001());
+            Application.Run(new MSS_SYS_001());
         }
     }
 }
