@@ -104,5 +104,11 @@ namespace Final
         {
 
         }
+
+        private void tv_Menu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            string frmName = "frm_" + e.Node.Name.ToString();
+            
+        }
     }
 }
