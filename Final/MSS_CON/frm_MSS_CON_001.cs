@@ -159,11 +159,6 @@ namespace Final.MSS_CON
         {
             if (cbUserGroup_Name.SelectedIndex < 1) return;
 
-            if (cbUserGroup_Name.SelectedIndex < 1)
-                txtUserGroup_Code.Text = "";
-            else
-                txtUserGroup_Code.Text = cbUserGroup_Name.SelectedValue.ToString();
-
         }
     }
 }

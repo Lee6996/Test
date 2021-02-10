@@ -1,4 +1,5 @@
 ﻿using FinalDAC;
+using FinalVO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,10 @@ namespace Final.MSS_SYS
         {
             dac = new SysNoticeDAC();
         }
-
+        public bool InsertSysNotice(SysNoticeVO vo)
+        {
+            return dac.InsertSysNotice(vo);
+        }
 
         public void Dispose()
         {

@@ -29,7 +29,7 @@ namespace Final
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtRemark = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,6 +42,9 @@ namespace Final
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNotice_Rtf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -54,16 +57,20 @@ namespace Final
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtRemark
+            // txtDescription
             // 
-            this.txtRemark.Location = new System.Drawing.Point(12, 129);
-            this.txtRemark.Multiline = true;
-            this.txtRemark.Name = "txtRemark";
-            this.txtRemark.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txtRemark.Size = new System.Drawing.Size(480, 438);
-            this.txtRemark.TabIndex = 21;
+            this.txtDescription.Location = new System.Drawing.Point(12, 165);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txtDescription.Size = new System.Drawing.Size(480, 402);
+            this.txtDescription.TabIndex = 21;
             // 
             // splitContainer3
             // 
@@ -90,7 +97,7 @@ namespace Final
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(26, 6);
+            this.label7.Location = new System.Drawing.Point(16, 7);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 16);
             this.label7.TabIndex = 3;
@@ -108,6 +115,7 @@ namespace Final
             // 
             // dtpEnd
             // 
+            this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpEnd.Location = new System.Drawing.Point(4, 2);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(232, 26);
@@ -138,7 +146,7 @@ namespace Final
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(26, 6);
+            this.label3.Location = new System.Drawing.Point(16, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 2;
@@ -146,6 +154,7 @@ namespace Final
             // 
             // dtpStart
             // 
+            this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpStart.Location = new System.Drawing.Point(4, 2);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(232, 26);
@@ -175,7 +184,7 @@ namespace Final
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(26, 6);
+            this.label2.Location = new System.Drawing.Point(16, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 18);
             this.label2.TabIndex = 2;
@@ -200,6 +209,7 @@ namespace Final
             this.btnInsert.TabIndex = 99;
             this.btnInsert.Text = "저장";
             this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnExit
             // 
@@ -212,19 +222,59 @@ namespace Final
             this.btnExit.TabIndex = 100;
             this.btnExit.Text = "닫기";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.splitContainer4.Location = new System.Drawing.Point(12, 129);
+            this.splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.BackColor = System.Drawing.Color.LightGray;
+            this.splitContainer4.Panel1.Controls.Add(this.label1);
+            this.splitContainer4.Panel1.Padding = new System.Windows.Forms.Padding(2);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.txtNotice_Rtf);
+            this.splitContainer4.Size = new System.Drawing.Size(480, 30);
+            this.splitContainer4.SplitterDistance = 110;
+            this.splitContainer4.SplitterWidth = 2;
+            this.splitContainer4.TabIndex = 101;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(16, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 18);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "공지참조";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtNotice_Rtf
+            // 
+            this.txtNotice_Rtf.Location = new System.Drawing.Point(3, 1);
+            this.txtNotice_Rtf.Name = "txtNotice_Rtf";
+            this.txtNotice_Rtf.Size = new System.Drawing.Size(351, 26);
+            this.txtNotice_Rtf.TabIndex = 0;
             // 
             // frm_MSS_SYS_004_2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(505, 616);
+            this.Controls.Add(this.splitContainer4);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.txtRemark);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.splitContainer3);
             this.Controls.Add(this.splitContainer2);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frm_MSS_SYS_004_2";
             this.Tag = "공지사항추가";
             this.Text = "frm_MSS_SYS_004_2";
@@ -244,13 +294,19 @@ namespace Final
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel1.PerformLayout();
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            this.splitContainer4.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtRemark;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
@@ -263,5 +319,8 @@ namespace Final
         private System.Windows.Forms.DateTimePicker dtpStart;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNotice_Rtf;
     }
 }

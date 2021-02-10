@@ -110,11 +110,6 @@ namespace Final
 
         }
 
-        private void tv_Menu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
-        {
-
-        
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -125,6 +120,10 @@ namespace Final
             TreeNode mainNode = new TreeNode();
             mainNode.Name = "product";
             mainNode.Text = "Product Categories";
+            ImageList imgList = new ImageList();
+            this.tabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            CloseImage = Properties.Resources.x;
+            this.tabControl2.Padding = new Point(10, 0);
 
             tv_Menu.Nodes.Add(mainNode);
             List<ScreenVO> screen = new Service.MenuService().GetScreenVOList();
@@ -134,7 +133,6 @@ namespace Final
         { 
             if (e.Node.Name.Length == 11)
             {
-                string frm1 = $"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}";
                 var frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
 
                 frm.MdiParent = this;
@@ -152,14 +150,6 @@ namespace Final
                 
             }
         }
-        private void newForm(string formName, string formText)
-        {
-
-        }
-
-
-        private void label1_Click(object sender, EventArgs e)
-
         public void newForm(string formName,string folderName, string formText)
         {
             Form frm;
@@ -186,7 +176,7 @@ namespace Final
             CloseImage = Properties.Resources.x;
             this.tabControl2.Padding = new Point(10, 3);
 
-            tv_Menu.Nodes.Add(mainNode);
+           // tv_Menu.Nodes.Add(mainNode);
             List<ScreenVO> screen = new Service.MenuService().GetScreenVOList();
             tabControl2.SelectedTab = newTab; //새로연 메뉴의 화면 텝페이지 눌릴 수 있도록
             frm.Show();
@@ -197,7 +187,7 @@ namespace Final
             try
             {
                 var tabRect = this.tabControl2.GetTabRect(e.Index);
-                tabRect.Inflate(-2, -2);
+                //tabRect.Inflate(-2, -2);
                 var imageRect = new Rectangle(tabRect.Right - CloseImage.Width,
                                          tabRect.Top + (tabRect.Height - CloseImage.Height) / 2,
                                          CloseImage.Width,
@@ -245,7 +235,7 @@ namespace Final
                 if (imageRect.Contains(e.Location))
                 {
                     this.ActiveMdiChild.Close();
-                   tabControl2.TabPages.RemoveAt(i);                    
+                    tabControl2.TabPages.RemoveAt(i);                    
                     break;
                 }
             }
@@ -254,7 +244,7 @@ namespace Final
 
         private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl2.SelectedTab.Text != null && tabControl2.SelectedTab.Tag != null)
+            if (tabControl2.SelectedTab != null && tabControl2.SelectedTab.Tag != null)
             {
                 (tabControl2.SelectedTab.Tag as Form).Select();
             }

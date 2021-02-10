@@ -30,12 +30,12 @@ namespace Final.MSS_SYS
         private void InitializeComponent()
         {
             this.pnl = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbSysNotice = new System.Windows.Forms.ComboBox();
             this.btnNotice_Insert = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
             this.dgvNotice = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotice)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,17 @@ namespace Final.MSS_SYS
             this.pnl.Name = "pnl";
             this.pnl.Size = new System.Drawing.Size(1344, 56);
             this.pnl.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(170, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 18);
+            this.label2.TabIndex = 115;
+            this.label2.Text = "공지사항기간";
             // 
             // cbSysNotice
             // 
@@ -75,6 +86,7 @@ namespace Final.MSS_SYS
             this.btnNotice_Insert.TabIndex = 113;
             this.btnNotice_Insert.Text = "등록";
             this.btnNotice_Insert.UseVisualStyleBackColor = false;
+            this.btnNotice_Insert.Click += new System.EventHandler(this.btnNotice_Insert_Click);
             // 
             // btnSelect
             // 
@@ -113,17 +125,6 @@ namespace Final.MSS_SYS
             this.label6.Size = new System.Drawing.Size(113, 18);
             this.label6.TabIndex = 22;
             this.label6.Text = "▶공지사항목록";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(170, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 18);
-            this.label2.TabIndex = 115;
-            this.label2.Text = "공지사항기간";
             // 
             // frm_MSS_SYS_004
             // 
