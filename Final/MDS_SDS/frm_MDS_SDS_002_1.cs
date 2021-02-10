@@ -25,14 +25,14 @@ namespace Final.MDS_SDS
         {
             lblManager.Text = UserStatic.User_Name;
             lblDay.Text = DateTime.Now.ToShortDateString();
-            GetAllItemGroup();
-            ControlSetting();
+            //GetAllItemGroup();
+            //ControlSetting();
         }
 
         private void GetAllItemGroup()
         {
             itemgrouplist = new List<ItemInfoVO>();
-            itemgrouplist = itemservice.GetAllItem_Level_Master();
+          //  itemgrouplist = itemservice.GetAllItem_Level_Master();
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Final.MDS_SDS
                         Level_3 = cbLevel3.SelectedValue.ToString().Trim(),
                         Level_4 = cbLevel4.SelectedValue.ToString().Trim(),
                         Level_5 = cbLevel5.SelectedValue.ToString().Trim(),
-                        Ins_Date = Convert.ToDateTime(lblDay.Text.Trim()),
+                        Ins_Date = lblDay.Text.Trim(),
                         Ins_Emp = lblManager.Text.Trim(),
                     };
                     if (itemservice.InsertAllItem_Master(item))

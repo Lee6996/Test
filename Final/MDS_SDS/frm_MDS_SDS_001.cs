@@ -37,10 +37,9 @@ namespace Final.MDS_SDS
             gridbtn.Name = "btn";
             gridbtn.Width = 100;
             gridbtn.TrueValue = 1;
-            gridbtn.FalseValue = 0;
-            gridbtn.DefaultCellStyle.BackColor = Color.White;
+            gridbtn.FalseValue = 0;            
             gridbtn.DataPropertyName = "Use_YN";
-            dgvItemLevel.Columns.Add(gridbtn);
+            this.dgvItemLevel.Columns.Add(gridbtn);
 
             //콤보박스에 유저 그룹 정보 바인딩
             DataTable dtName = itemservice.ItemLevelBinding();
@@ -130,8 +129,7 @@ namespace Final.MDS_SDS
 
             if (!string.IsNullOrEmpty(txtCode.Text.Trim()) && !string.IsNullOrEmpty(txtName.Text.Trim()))
             {
-                string level = null;
-
+                string level;
                 if (cbLevel.Text == "Level1")
                 {
                     level = "YNNNN";
@@ -196,13 +194,12 @@ namespace Final.MDS_SDS
             txtCode.Text = txtName.Text = "";
             txtCode.Focus();
             nuBoxpcs.Value = nuPCSqty.Value = nuPLbox.Value = 0;
-
         }
 
         private void dgvItemLevel_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (e.ColumnIndex == 4)
+            if (e.ColumnIndex == 4 && e.RowIndex > -1)
             {
                 //dgvUser.EndEdit();
 
@@ -227,6 +224,11 @@ namespace Final.MDS_SDS
                 cbtext = "";
             else
                 cbtext = cbLevelGroup.Text;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshControl();
         }
     }
 }

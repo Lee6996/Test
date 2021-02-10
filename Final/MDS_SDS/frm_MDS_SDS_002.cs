@@ -15,7 +15,8 @@ namespace Final.MDS_SDS
     public partial class frm_MDS_SDS_002 : Form
     {
         ItemService itemservice = new ItemService();
-        List<Item_MasterVO> Itemlist;
+        List<Item_MasterVO> Itemlist;        
+
         Item_MasterVO upitem = new Item_MasterVO();
         public frm_MDS_SDS_002()
         {
@@ -69,18 +70,18 @@ namespace Final.MDS_SDS
             cbItem.ValueMember = "Item_Code";
             cbItem.DataSource = dtName;
 
-            //콤보박스에  정보 바인딩2
-            DataTable dtType = itemservice.ItemMasterBindingType();
-            //빈칸을 위해 한행 추가
-            DataRow dr2 = dtType.NewRow();
-            dr["Item_Code"] = "";
-            dr["Item_Type"] = "전체";
-            dtType.Rows.InsertAt(dr, 0);
-            dtType.AcceptChanges();
+            ////콤보박스에  정보 바인딩2
+            //DataTable dtType = itemservice.ItemMasterBindingType();
+            ////빈칸을 위해 한행 추가
+            //DataRow dr2 = dtType.NewRow();
+            //dr["Item_Code"] = "";
+            //dr["Item_Type"] = "전체";
+            //dtType.Rows.InsertAt(dr, 0);
+            //dtType.AcceptChanges();
 
-            cbType.DisplayMember = "Item_Type";
-            cbType.ValueMember = "Item_Code";
-            cbType.DataSource = dtType;
+            //cbType.DisplayMember = "Item_Type";
+            //cbType.ValueMember = "Item_Code";
+            //cbType.DataSource = dtType;
 
             DataLoad("");
 
@@ -125,35 +126,14 @@ namespace Final.MDS_SDS
         //    cbType.DisplayMember = "Value";
         //    cbType.ValueMember = "Key";
         //    cbType.DataSource = new BindingSource(cblisttype, null);
-
-        //}
-
-        private void rdoName_CheckedChanged(object sender, EventArgs e)
-        {
-            cbItem.Enabled = true;            
-            btnSearch.Enabled = true;
-
-            cbType.Enabled = false;
-            btnSearch2.Enabled = false;
-        }
-
-        private void rdoType_CheckedChanged(object sender, EventArgs e)
-        {
-            cbItem.Enabled = false;
-            btnSearch.Enabled = false;
-            cbType.Enabled = true;
-            btnSearch2.Enabled = true;
-        }
+                //}
+  
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             DataLoad(cbItem.Text);
         }
-
-        private void btnSearch2_Click(object sender, EventArgs e)
-        {
-            DataLoad(cbType.Text);
-        }
+     
         private void RefreshControl()
         {
             txtCode.Text = txtName.Text = "";
@@ -163,8 +143,8 @@ namespace Final.MDS_SDS
         }
 
         private void dgvItemDetail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            upitem = Itemlist.Find(item => item.Item_Code == dgvItemDetail.SelectedRows[0].Cells[0].Value.ToString());
+        {            
+            upitem = Itemlist.Find(item => item.Item_Code == dgvItemDetail[0, dgvItemDetail.CurrentRow.Index].Value.ToString());//수정하기
 
             txtCode.Text = upitem.Item_Code;
             txtName.Text = upitem.Item_Name;
@@ -206,7 +186,7 @@ namespace Final.MDS_SDS
                     Cavity = Convert.ToInt32(nuCavity.Value),
                     Line_Per_Qty = Convert.ToInt32(nuLine_Per_Qty.Value),
                     Shot_Per_Qty = Convert.ToInt32(nuShot_Per_Qty.Value),
-                    Up_Date = DateTime.Now,
+                    Up_Date = DateTime.Now.ToString(),
                     Up_Emp = UserStatic.User_Name                    
                 };
                 try
@@ -228,20 +208,17 @@ namespace Final.MDS_SDS
                 }
                 RefreshControl();
             }
-        }
-
-        private void cbType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string cbtext;
-            if (cbType.SelectedIndex < 1)
-            { cbtext = ""; }
-            else
-            { cbtext = cbType.Text; }
-        }
+        }      
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-
+            frm_MDS_SDS_002_1 frm = new frm_MDS_SDS_002_1()
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                Location = new Point(Location.X + Width, Location.Y)
+            };            
+            frm.Show();
+            
         }
     }
 }
