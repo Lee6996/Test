@@ -568,6 +568,8 @@ namespace Final
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(1357, 22);
             this.tabControl2.TabIndex = 9;
+            this.tabControl2.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl2_DrawItem);
+            this.tabControl2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl2_MouseClick);
             // 
             // FinalMDIParent
             // 
@@ -585,7 +587,9 @@ namespace Final
             this.ShowIcon = false;
             this.Text = "FinalMDIParent";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FinalMDIParent_FormClosed);
             this.Load += new System.EventHandler(this.FinalMDIParent_Load);
+            this.MdiChildActivate += new System.EventHandler(this.FinalMDIParent_MdiChildActivate);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

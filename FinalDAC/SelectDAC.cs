@@ -361,7 +361,7 @@ namespace FinalDAC
                 case "User":
                     sql = "SELECT User_ID,User_Name FROM User_Master";break;
                 case "Process":
-                    sql = "SELECT Process_ID, Process_Name FROM Process_Master"; break;
+                    sql = "SELECT Process_Code, Process_Name FROM Process_Master"; break;
                 default: sql = null; break;
             }
             using (SqlCommand cmd = new SqlCommand(sql, conn))

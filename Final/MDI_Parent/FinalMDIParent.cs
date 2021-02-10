@@ -17,7 +17,8 @@ namespace Final
     public partial class FinalMDIParent : Form
     {
         private int childFormNumber = 0;
-
+        Image CloseImage;
+        Form frm;
         public FinalMDIParent()
         {
             InitializeComponent();
@@ -111,43 +112,30 @@ namespace Final
 
         private void tv_Menu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            //if (e.Node.Name.ToString().Length < 5)
-            //{
-            //    Form frm;
-            //    Assembly frmAssembly = Assembly.GetExecutingAssembly();
-            //    string frmName = string.Format($"Final.frm_{e.Node.Name}");
-            //    frm = (Form)frmAssembly.CreateInstance("Final.PRM_PRF.frm_PRM_PRF_001");
-
-
-
-            //    frm.WindowState = FormWindowState.Maximized;
-            //    frm.Tag = e.Node.Name;
-
-            //    TabPage newTab = new TabPage();
-            //    newTab.Text = e.Node.Text;
-
-            //    tabControl2.TabPages.Add(newTab);
-            //    tabControl2.SelectedTab = newTab;
-            //    frm.Show();
-            //}
 
             if (e.Node.Name.Length == 11)
             {
-                string frm1 = $"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}";
-                var frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}")))  as Form;
-                
+
+                var frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
+
                 frm.MdiParent = this;
 
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Tag = e.Node.Name;
                 TabPage newTab = new TabPage();
                 newTab.Text = e.Node.Text;
-
+                newTab.Tag = e.Node.Name;
                 tabControl2.TabPages.Add(newTab);
                 tabControl2.SelectedTab = newTab;
                 frm.Show();
+
             }
         }
+        private void newForm(string formName, string formText)
+        {
+
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -160,8 +148,112 @@ namespace Final
             mainNode.Name = "product";
             mainNode.Text = "Product Categories";
 
+            ImageList imgList = new ImageList();
+
+            tv_Menu.ImageList = imgList;
+
+            this.tabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            CloseImage = Properties.Resources.x;
+            this.tabControl2.Padding = new Point(10, 3);
+
             tv_Menu.Nodes.Add(mainNode);
             List<ScreenVO> screen = new Service.MenuService().GetScreenVOList();
+        }
+
+        private void tabControl2_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            try
+            {
+                var tabRect = this.tabControl2.GetTabRect(e.Index);
+                tabRect.Inflate(-2, -2);
+                var imageRect = new Rectangle(tabRect.Right - CloseImage.Width,
+                                         tabRect.Top + (tabRect.Height - CloseImage.Height) / 2,
+                                         CloseImage.Width,
+                                         CloseImage.Height);
+
+                var sf = new StringFormat(StringFormat.GenericDefault);
+                if (this.tabControl2.RightToLeft == System.Windows.Forms.RightToLeft.Yes &&
+                    this.tabControl2.RightToLeftLayout == true)
+                {
+                    tabRect = GetRTLCoordinates(this.tabControl2.ClientRectangle, tabRect);
+                    imageRect = GetRTLCoordinates(this.tabControl2.ClientRectangle, imageRect);
+                    sf.FormatFlags |= StringFormatFlags.DirectionRightToLeft;
+                }
+
+                e.Graphics.FillRectangle(Brushes.Aquamarine, e.Bounds); //텝페이지 색
+                e.Graphics.DrawString(this.tabControl2.TabPages[e.Index].Text,
+                                      this.Font, Brushes.Black, tabRect, sf);//텝페이지 폰트랑 글자 색
+
+                e.Graphics.DrawImage(CloseImage, imageRect.Location); //텝페이지 취소이미지 생성
+
+            }
+            catch (Exception) { }
+        }
+        public static Rectangle GetRTLCoordinates(Rectangle container, Rectangle drawRectangle)
+        {
+            return new Rectangle(
+                container.Width - drawRectangle.Width - drawRectangle.X,
+                drawRectangle.Y,
+                drawRectangle.Width,
+                drawRectangle.Height);
+        }
+
+        private void tabControl2_MouseClick(object sender, MouseEventArgs e)
+        {
+            for (var i = 0; i < tabControl2.TabPages.Count; i++)
+            {
+                var tabRect = tabControl2.GetTabRect(i);
+                //tabRect.Inflate(-2, -2);
+                var closeImage = Properties.Resources.x;
+                var imageRect = new Rectangle(
+                    (tabRect.Right - closeImage.Width),
+                    tabRect.Top + (tabRect.Height - closeImage.Height) / 2,
+                    closeImage.Width,
+                    closeImage.Height);
+                if (imageRect.Contains(e.Location))
+                {
+                    this.ActiveMdiChild.Close();
+                   tabControl2.TabPages.RemoveAt(i);                    
+                    break;
+                }
+            }
+        
+        }
+
+        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl2.SelectedTab.Text != null && tabControl2.SelectedTab.Tag != null)
+            {
+                (tabControl2.SelectedTab.Tag as Form).Select();
+            }
+        }
+
+        private void FinalMDIParent_MdiChildActivate(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild == null)
+                tabControl2.Visible = false;
+            else
+            {
+                this.ActiveMdiChild.WindowState = FormWindowState.Maximized;
+
+                if (this.ActiveMdiChild.Tag == null)
+                {
+                    TabPage tp = new TabPage(this.ActiveMdiChild.Text + "    ");
+                    tp.Parent = tabControl2;
+                    tp.Tag = this.ActiveMdiChild;
+                    tabControl2.SelectedTab = tp;
+
+                    this.ActiveMdiChild.FormClosed += FinalMDIParent_FormClosed;
+                    this.ActiveMdiChild.Tag = tp;
+                }
+
+                if (!tabControl2.Visible) tabControl2.Visible = true;
+            }
+        }
+
+        private void FinalMDIParent_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ((sender as Form).Tag as TabPage).Dispose();
         }
     }
 }
