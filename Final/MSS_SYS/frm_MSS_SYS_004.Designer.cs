@@ -93,7 +93,7 @@ namespace Final.MSS_SYS
             this.btnSelect.BackColor = System.Drawing.Color.DimGray;
             this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSelect.Location = new System.Drawing.Point(568, 11);
+            this.btnSelect.Location = new System.Drawing.Point(581, 11);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(85, 35);
             this.btnSelect.TabIndex = 112;
@@ -114,6 +114,7 @@ namespace Final.MSS_SYS
             this.dgvNotice.Size = new System.Drawing.Size(1320, 748);
             this.dgvNotice.TabIndex = 23;
             this.dgvNotice.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotice_CellDoubleClick);
+            this.dgvNotice.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvNotice_ColumnHeaderMouseClick);
             // 
             // label6
             // 

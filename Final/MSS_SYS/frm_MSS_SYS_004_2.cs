@@ -49,7 +49,7 @@ namespace Final
                     Title = txtTitle.Text,
                     Description = txtDescription.Text,
                     Notice_Date = dtpStart.Value.ToString("yyyy-MM-dd"),
-                    Notice_End = dtpEnd.Value.ToString("YYYY-MM-dd"),
+                    Notice_End = dtpEnd.Value.ToString("yyyy-MM-dd"),
                     Notice_Rtf = txtNotice_Rtf.Text
                 };
                 bool bFlag = service.InsertSysNotice(vo);
@@ -61,6 +61,12 @@ namespace Final
             AutoClosingMessageBox.Show("공지사항이 등록되었습니다.", "1초 후 자동종료", 1000);
 
             Close();
+        }
+
+        private void frm_MSS_SYS_004_2_Load(object sender, EventArgs e)
+        {
+            dtpStart.Value = DateTime.Now;
+            dtpEnd.Value = DateTime.Now.AddDays(1);
         }
     }
 }

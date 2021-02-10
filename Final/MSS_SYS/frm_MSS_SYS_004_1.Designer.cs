@@ -33,10 +33,8 @@ namespace Final
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtNotice_End = new System.Windows.Forms.TextBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNotice_Date = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
@@ -44,6 +42,11 @@ namespace Final
             this.lbl = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.dtpStart = new System.Windows.Forms.DateTimePicker();
+            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNotice_Rtf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -56,21 +59,25 @@ namespace Final
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(12, 130);
+            this.txtDescription.Location = new System.Drawing.Point(12, 202);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txtDescription.Size = new System.Drawing.Size(480, 342);
+            this.txtDescription.Size = new System.Drawing.Size(480, 365);
             this.txtDescription.TabIndex = 13;
             // 
             // splitContainer3
             // 
             this.splitContainer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitContainer3.Location = new System.Drawing.Point(252, 94);
+            this.splitContainer3.Location = new System.Drawing.Point(12, 130);
             this.splitContainer3.Name = "splitContainer3";
             // 
             // splitContainer3.Panel1
@@ -78,14 +85,15 @@ namespace Final
             this.splitContainer3.Panel1.BackColor = System.Drawing.Color.LightGray;
             this.splitContainer3.Panel1.Controls.Add(this.label7);
             this.splitContainer3.Panel1.Controls.Add(this.label5);
-            this.splitContainer3.Panel1.Padding = new System.Windows.Forms.Padding(3);
+            this.splitContainer3.Panel1.Padding = new System.Windows.Forms.Padding(1);
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.txtNotice_End);
+            this.splitContainer3.Panel2.Controls.Add(this.dtpEnd);
             this.splitContainer3.Panel2.Padding = new System.Windows.Forms.Padding(1);
-            this.splitContainer3.Size = new System.Drawing.Size(240, 30);
-            this.splitContainer3.SplitterDistance = 111;
+            this.splitContainer3.Size = new System.Drawing.Size(480, 30);
+            this.splitContainer3.SplitterDistance = 110;
+            this.splitContainer3.SplitterWidth = 2;
             this.splitContainer3.TabIndex = 12;
             // 
             // label7
@@ -101,19 +109,11 @@ namespace Final
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(89, -16);
+            this.label5.Location = new System.Drawing.Point(87, -18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 2;
             this.label5.Text = "등록일";
-            // 
-            // txtNotice_End
-            // 
-            this.txtNotice_End.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNotice_End.Location = new System.Drawing.Point(1, 1);
-            this.txtNotice_End.Name = "txtNotice_End";
-            this.txtNotice_End.Size = new System.Drawing.Size(121, 26);
-            this.txtNotice_End.TabIndex = 0;
             // 
             // splitContainer2
             // 
@@ -129,10 +129,10 @@ namespace Final
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.txtNotice_Date);
+            this.splitContainer2.Panel2.Controls.Add(this.dtpStart);
             this.splitContainer2.Panel2.Padding = new System.Windows.Forms.Padding(1);
-            this.splitContainer2.Size = new System.Drawing.Size(240, 30);
-            this.splitContainer2.SplitterDistance = 111;
+            this.splitContainer2.Size = new System.Drawing.Size(480, 30);
+            this.splitContainer2.SplitterDistance = 110;
             this.splitContainer2.SplitterWidth = 2;
             this.splitContainer2.TabIndex = 11;
             // 
@@ -145,14 +145,6 @@ namespace Final
             this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "시작일";
-            // 
-            // txtNotice_Date
-            // 
-            this.txtNotice_Date.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNotice_Date.Location = new System.Drawing.Point(1, 1);
-            this.txtNotice_Date.Name = "txtNotice_Date";
-            this.txtNotice_Date.Size = new System.Drawing.Size(123, 26);
-            this.txtNotice_Date.TabIndex = 0;
             // 
             // splitContainer1
             // 
@@ -215,19 +207,20 @@ namespace Final
             this.btnUpdate.BackColor = System.Drawing.Color.DimGray;
             this.btnUpdate.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnUpdate.Location = new System.Drawing.Point(279, 478);
+            this.btnUpdate.Location = new System.Drawing.Point(299, 573);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(85, 35);
             this.btnUpdate.TabIndex = 100;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.DimGray;
             this.btnExit.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnExit.Location = new System.Drawing.Point(391, 478);
+            this.btnExit.Location = new System.Drawing.Point(394, 573);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(85, 35);
             this.btnExit.TabIndex = 101;
@@ -235,10 +228,66 @@ namespace Final
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // dtpStart
+            // 
+            this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpStart.Location = new System.Drawing.Point(4, 3);
+            this.dtpStart.Name = "dtpStart";
+            this.dtpStart.Size = new System.Drawing.Size(152, 26);
+            this.dtpStart.TabIndex = 1;
+            this.dtpStart.ValueChanged += new System.EventHandler(this.dtpStart_ValueChanged);
+            // 
+            // dtpEnd
+            // 
+            this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEnd.Location = new System.Drawing.Point(4, 2);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(152, 26);
+            this.dtpEnd.TabIndex = 2;
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.splitContainer4.Location = new System.Drawing.Point(12, 166);
+            this.splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.BackColor = System.Drawing.Color.LightGray;
+            this.splitContainer4.Panel1.Controls.Add(this.label1);
+            this.splitContainer4.Panel1.Padding = new System.Windows.Forms.Padding(2);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.txtNotice_Rtf);
+            this.splitContainer4.Size = new System.Drawing.Size(480, 30);
+            this.splitContainer4.SplitterDistance = 110;
+            this.splitContainer4.SplitterWidth = 2;
+            this.splitContainer4.TabIndex = 102;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(16, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 18);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "공지참조";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtNotice_Rtf
+            // 
+            this.txtNotice_Rtf.Location = new System.Drawing.Point(3, 1);
+            this.txtNotice_Rtf.Name = "txtNotice_Rtf";
+            this.txtNotice_Rtf.Size = new System.Drawing.Size(360, 26);
+            this.txtNotice_Rtf.TabIndex = 0;
+            // 
             // frm_MSS_SYS_004_1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(505, 520);
+            this.ClientSize = new System.Drawing.Size(505, 616);
+            this.Controls.Add(this.splitContainer4);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtDescription);
@@ -256,13 +305,11 @@ namespace Final
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
-            this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -271,6 +318,12 @@ namespace Final
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel1.PerformLayout();
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            this.splitContainer4.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,10 +334,8 @@ namespace Final
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNotice_End;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNotice_Date;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTitle;
@@ -292,5 +343,10 @@ namespace Final
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DateTimePicker dtpStart;
+        private System.Windows.Forms.DateTimePicker dtpEnd;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNotice_Rtf;
     }
 }

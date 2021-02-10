@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,27 @@ namespace FinalDAC
                     return true;
                 else
                     return false;
+            }
+        }
+        //공지사항 수정
+        public bool UpdateSysNotice(SysNoticeVO vo)
+        {
+            string sQuery = @"update Sys_Notice set Notice_Date = @noticeDate , Notice_End = @noticeEnd, Title = @title, Description =  @description, Up_Date= getdate() where Seq = @seq";
+
+            using(SqlCommand cmd = new SqlCommand(sQuery, conn))
+            {
+                cmd.Parameters.AddWithValue("@noticeDate", vo.Notice_Date);
+                cmd.Parameters.AddWithValue("@noticeEnd", vo.Notice_End);
+                cmd.Parameters.AddWithValue("@title", vo.Title);
+                cmd.Parameters.AddWithValue("@description", vo.Description);
+                cmd.Parameters.AddWithValue("@seq", vo.Seq);
+
+                int iResult = cmd.ExecuteNonQuery();
+                Debug.WriteLine(iResult.ToString());
+                conn.Close();
+                if (iResult <= 0) return false;
+                else
+                    return true;
             }
         }
 

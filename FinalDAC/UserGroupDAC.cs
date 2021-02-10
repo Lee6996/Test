@@ -26,7 +26,7 @@ namespace FinalDAC
                                 from UserGroup_Master where 1 = 1  ";
 
             if (!string.IsNullOrEmpty(usergoup_Code))
-                sQuery += " and UserGroup_Name Like @groupName ";
+                sQuery += " and UserGroup_Code Like @groupName ";
 
             using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {

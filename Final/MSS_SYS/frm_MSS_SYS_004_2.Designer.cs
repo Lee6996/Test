@@ -116,9 +116,9 @@ namespace Final
             // dtpEnd
             // 
             this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEnd.Location = new System.Drawing.Point(4, 2);
+            this.dtpEnd.Location = new System.Drawing.Point(4, 1);
             this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(232, 26);
+            this.dtpEnd.Size = new System.Drawing.Size(152, 26);
             this.dtpEnd.TabIndex = 1;
             // 
             // splitContainer2
@@ -155,9 +155,9 @@ namespace Final
             // dtpStart
             // 
             this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStart.Location = new System.Drawing.Point(4, 2);
+            this.dtpStart.Location = new System.Drawing.Point(4, 1);
             this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(232, 26);
+            this.dtpStart.Size = new System.Drawing.Size(152, 26);
             this.dtpStart.TabIndex = 0;
             // 
             // splitContainer1
@@ -195,7 +195,7 @@ namespace Final
             // 
             this.txtTitle.Location = new System.Drawing.Point(3, 1);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(351, 26);
+            this.txtTitle.Size = new System.Drawing.Size(360, 26);
             this.txtTitle.TabIndex = 0;
             // 
             // btnInsert
@@ -259,7 +259,7 @@ namespace Final
             // 
             this.txtNotice_Rtf.Location = new System.Drawing.Point(3, 1);
             this.txtNotice_Rtf.Name = "txtNotice_Rtf";
-            this.txtNotice_Rtf.Size = new System.Drawing.Size(351, 26);
+            this.txtNotice_Rtf.Size = new System.Drawing.Size(360, 26);
             this.txtNotice_Rtf.TabIndex = 0;
             // 
             // frm_MSS_SYS_004_2
@@ -278,6 +278,7 @@ namespace Final
             this.Name = "frm_MSS_SYS_004_2";
             this.Tag = "공지사항추가";
             this.Text = "frm_MSS_SYS_004_2";
+            this.Load += new System.EventHandler(this.frm_MSS_SYS_004_2_Load);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);

@@ -25,7 +25,7 @@ namespace Final.MSS_CON
 
             CommonUtil.AddGridTextColumn(dgvUser, "사용자그룹코드", "UserGroup_Code", 220);
             CommonUtil.AddGridTextColumn(dgvUser, "사용자그룹명", "UserGroup_Name", 220);
-            CommonUtil.AddGridTextColumn(dgvUser, "입력일자", "Ins_Date", 150);
+            CommonUtil.AddGridTextColumn(dgvUser, "입력일자", "Ins_Date", 250);
             CommonUtil.AddGridTextColumn(dgvUser, "사용여부", "Use_YN", 150, visibility:false);
 
             DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn(false);
@@ -36,6 +36,13 @@ namespace Final.MSS_CON
             col.FalseValue = 0;
             col.DataPropertyName = "Use_YN";
             this.dgvUser.Columns.Add(col);
+
+            //컬럼 왼쪽 정렬
+            dgvUser.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgvUser.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+
+            dgvUser.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             //dgvUser.CellClick += dgvUser_CellClick;
 
@@ -72,6 +79,15 @@ namespace Final.MSS_CON
 
                 UserGroupService service = new UserGroupService();
                 service.UpdateUserGroup(vo);
+
+            }
+            if (cbUserGroup_Name.Text == "전체")
+            {
+                DataLoad("");
+            }
+            else
+            {
+                DataLoad(cbUserGroup_Name.SelectedValue.ToString());
             }
         }
 
@@ -101,7 +117,7 @@ namespace Final.MSS_CON
             //    return;
             //}
 
-            DataLoad(cbUserGroup_Name.Text);
+            DataLoad(cbUserGroup_Name.SelectedValue.ToString());
         }
 
         //저장하기 버튼
@@ -157,8 +173,7 @@ namespace Final.MSS_CON
 
         private void cboUserGroup_Name_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbUserGroup_Name.SelectedIndex < 1) return;
-
+            if (cbUserGroup_Name.SelectedIndex < 0) return;
         }
     }
 }

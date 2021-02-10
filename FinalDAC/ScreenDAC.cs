@@ -16,7 +16,7 @@ namespace FinalDAC
         SqlConnection conn;
         public ScreenDAC()
         {
-            conn = new SqlConnection(new AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
+            conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
             conn.Open();
         }
         public List<ScreenVO> SelectScreenInfo(string screen_Code = null)

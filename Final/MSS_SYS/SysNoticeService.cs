@@ -19,6 +19,10 @@ namespace Final.MSS_SYS
         {
             return dac.InsertSysNotice(vo);
         }
+        public bool UpdateSysNotice(SysNoticeVO vo)
+        {
+            return dac.UpdateSysNotice(vo);
+        }
 
         public void Dispose()
         {
