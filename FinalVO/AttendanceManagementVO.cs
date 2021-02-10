@@ -17,5 +17,6 @@ namespace FinalVO
         public string Work_EndTime { get; set; }
         public int Prd_Qty { get; set; }
         public string User_Name { get; set; }
+        public string Work_Date { get; set; }
     }
 }

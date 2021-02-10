@@ -13,18 +13,11 @@ namespace Final.PRM_PRF
     {
         List<WorkOrderVO> Wlist;
         List<GoodsInHistoryVO> Glist;
-        UserVO user;
         string workorderno, palletno;
 
         public frm_PRM_PRF_002()
         {
             InitializeComponent();
-        }
-
-        public frm_PRM_PRF_002(UserVO user)
-        {
-            InitializeComponent();
-            this.user = user;
         }
 
         private void frm_PRM_PRF_002_Load(object sender, EventArgs e)
@@ -50,11 +43,12 @@ namespace Final.PRM_PRF
         private void dgvPRM_PRF_2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             palletno = Glist[e.RowIndex].Pallet_No;
+            //gVO = Glist.Find(palletno => palletno.Pallet_No == dgvPRM_PRF_2[0,dgvPRM_PRF_2.CurrentRow.Index].Value.ToString());
         }
 
         private void btnWoEnd_Click(object sender, EventArgs e)
         {
-            if (new PRM_PRF_Service().Update002_WO(workorderno, user))
+            if (new PRM_PRF_Service().Update002_WO(workorderno))
             {
 
             }
@@ -62,7 +56,7 @@ namespace Final.PRM_PRF
 
         private void btnPalletEnd_Click(object sender, EventArgs e)
         {
-            if (new PRM_PRF_Service().Update002_Pallet(palletno, user))
+            if (new PRM_PRF_Service().Update002_Pallet(palletno))
             {
 
             }

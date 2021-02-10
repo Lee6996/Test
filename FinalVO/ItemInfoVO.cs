@@ -106,10 +106,7 @@ namespace FinalVO
         /// 건조대차기본수량
         /// </summary>
         public int Dry_GV_Qty { get; set; }
-        /// <summary>
-        /// 소성대차기본수량
-        /// </summary>
-        public int Heat_GV_Qty { get; set; }
+  
         /// <summary>
         /// 비고
         /// </summary>
@@ -117,11 +114,11 @@ namespace FinalVO
         /// <summary>
         /// 사용유무
         /// </summary>
-        public string Use_YN { get; set; }
+        public int Use_YN { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public DateTime Ins_Date { get; set; }
+        public string Ins_Date { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -129,7 +126,7 @@ namespace FinalVO
         /// <summary>
         /// 
         /// </summary>
-        public DateTime Up_Date { get; set; }
+        public string Up_Date { get; set; }
         /// <summary>
         /// 
         /// </summary>

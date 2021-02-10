@@ -51,6 +51,7 @@ namespace Final.MDS_SDS
             this.cbLevelGroup = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblLevel = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPLbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBoxpcs)).BeginInit();
@@ -60,6 +61,7 @@ namespace Final.MDS_SDS
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.cbLevel);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label4);
@@ -82,6 +84,12 @@ namespace Final.MDS_SDS
             // 
             this.cbLevel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbLevel.FormattingEnabled = true;
+            this.cbLevel.Items.AddRange(new object[] {
+            "Level1",
+            "Level2",
+            "Level3",
+            "Level4",
+            "Level5"});
             this.cbLevel.Location = new System.Drawing.Point(488, 27);
             this.cbLevel.Name = "cbLevel";
             this.cbLevel.Size = new System.Drawing.Size(101, 23);
@@ -297,7 +305,20 @@ namespace Final.MDS_SDS
             this.lblLevel.Size = new System.Drawing.Size(0, 17);
             this.lblLevel.TabIndex = 108;
             // 
-            // MDS_SDS_001
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
+            this.btnRefresh.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnRefresh.Location = new System.Drawing.Point(1166, 77);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 29);
+            this.btnRefresh.TabIndex = 47;
+            this.btnRefresh.Text = "초기화";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // frm_MDS_SDS_001
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -311,7 +332,7 @@ namespace Final.MDS_SDS
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.dgvItemLevel);
             this.Controls.Add(this.splitter1);
-            this.Name = "MDS_SDS_001";
+            this.Name = "frm_MDS_SDS_001";
             this.Text = "품묵 분류 정보";
             this.Load += new System.EventHandler(this.MDS_SDS_001_Load);
             this.panel1.ResumeLayout(false);
@@ -349,5 +370,6 @@ namespace Final.MDS_SDS
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ComboBox cbLevel;
         private System.Windows.Forms.Label lblLevel;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

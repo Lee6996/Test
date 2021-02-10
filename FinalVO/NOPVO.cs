@@ -28,5 +28,13 @@ namespace FinalVO
         public string Remark { get; set; }
         //발생유형
         public string Nop_Type { get; set; }
+
+        public string Nop_Seq { get; set; }
+        public string Nop_Mi_Code { get; set; }
+        public string Ins_Date { get; set; }
+        public string Ins_Emp { get; set; }
+        public string Up_Date { get; set; }
+        public string Up_Emp { get; set; }
+
     }
 }

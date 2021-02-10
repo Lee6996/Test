@@ -165,7 +165,6 @@ namespace Final.MDI_Parent
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.IsMdiContainer = true;
             this.Name = "frm_MDIParent_1Grid";
             this.Text = "frm_MDIParent_PRM_PRF";
             this.Load += new System.EventHandler(this.frm_MDIParent_1Grid_Load);

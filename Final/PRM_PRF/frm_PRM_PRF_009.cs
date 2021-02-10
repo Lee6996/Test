@@ -1,4 +1,4 @@
-﻿using FinalVO;
+﻿using Final.PRM_PRF.PopUp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,36 +9,60 @@ using System.Windows.Forms;
 
 namespace Final.PRM_PRF
 {
-    public partial class frm_PRM_PRF_009 : Final.KPI_RPT.KPI_RPT_MDIParent
+    public partial class frm_PRM_PRF_009 : Final.MDI_Parent.frm_MDIParent_1Grid
     {
-        WorkHistoryVO vo;
-        List<WorkHistoryVO> list;
-        UserVO user;
-
         public frm_PRM_PRF_009()
         {
             InitializeComponent();
         }
 
-        public frm_PRM_PRF_009(UserVO user)
+        private void frm_PRM_PRF_09_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
-            this.user = user;
+            SettingDGV(dgvPRM_PRF);
+            RefreshState();
         }
 
-        private void frm_PRM_PRF_009_Load(object sender, EventArgs e)
+        private void btnTimeSearch_Click(object sender, EventArgs e)
         {
-            list = new PRM_PRF_Service().GetWorkHistoryVOList();
-
-            CommonUtil.SetInitGridView(dgvPRM_PRF_009);
-            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "근무일", "Work_Date", 200);
-            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "작업장", "Wc_Name", 200);
-            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "작업자", "User_Name", 200);
-            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "근무시작시간", "Work_StartTime", 200);
-            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "근무종료시간", "Work_EndTime", 200);
-            CommonUtil.AddGridTextColumn(dgvPRM_PRF_009, "근무시간", "Work_Time", 200);
-
-            dgvPRM_PRF_009.DataSource = list;
+            RefreshState();
         }
+
+        private void btnWorkCenter_Click(object sender, EventArgs e)
+        {
+            MainPop frm = new MainPop("WC")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtWorkCenter.Text = frm.SCode;
+                txtWorkCenterDetail.Text = frm.SName;
+                RefreshState();
+            }
+        }
+
+        #region MyMethod
+        private void SettingDGV(DataGridView dgv)
+        {
+            CommonUtil.SetInitGridView(dgv);
+            CommonUtil.AddGridTextColumn(dgv, "근무일", "Work_Date", 200);
+            CommonUtil.AddGridTextColumn(dgv, "작업장", "Wc_Name", 200);
+            CommonUtil.AddGridTextColumn(dgv, "작업자", "User_Name", 200);
+            CommonUtil.AddGridTextColumn(dgv, "근무시작시간", "Work_StartTime", 200);
+            CommonUtil.AddGridTextColumn(dgv, "근무종료시간", "Work_EndTime", 200);
+            CommonUtil.AddGridTextColumn(dgv, "근무시간", "Work_Time", 200);
+        }
+
+        private void RefreshState()
+        {
+            dgvPRM_PRF.DataSource = new PRM_PRF_Service().GetWorkHistoryVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), txtWorkCenterDetail.Text);
+        }
+
+
+
+        #endregion
+
+        
     }
 }
