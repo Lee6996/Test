@@ -1,5 +1,6 @@
 ﻿using Final.KPI_RPT;
 using Final.MDI_Parent;
+using FinalVO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -108,34 +109,66 @@ namespace Final
 
         }
 
-        private void tv_Menu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        
+
+        private void label1_Click(object sender, EventArgs e)
         {
-            //if (e.Node.Name.ToString().Length > 5)
-            //{
-            //    Form frm;
-            //    Assembly frmAssembly = Assembly.GetExecutingAssembly();
-            //    string frmName = string.Format($"Final.frm_{e.Node.Name}");
-            //    frm = (Form)frmAssembly.CreateInstance("Final.PRM_PRF.PRM_PRF_001");
-            //    new Final.PRM_PRF.frm_PRM_PRF_001().Show();
 
-            //    frm.MdiParent = this;
+        }
 
-            //    frm.WindowState = FormWindowState.Maximized;
-            //    frm.Tag = e.Node.Name;
+        private void FinalMDIParent_Load(object sender, EventArgs e)
+        {
+            TreeNode mainNode = new TreeNode();
+            mainNode.Name = "product";
+            mainNode.Text = "Product Categories";
 
-            //    TabPage newTab = new TabPage();
-            //    newTab.Text = e.Node.Text;
+            tv_Menu.Nodes.Add(mainNode);
+            List<ScreenVO> screen = new Service.MenuService().GetScreenVOList();
+        }
 
-            //    tabControl2.TabPages.Add(newTab);
-            //    tabControl2.SelectedTab = newTab;
-            //    frm.Show();
-            //}
+        private void tv_Menu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        { 
+            if (e.Node.Name.Length == 11)
+            {
+                string frm1 = $"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}";
+                var frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
 
-            Type p = Type.GetType("Final.PRM_PRF.frm_PRM_PRF_001");
-            var a = Activator.CreateInstance(p);
-            var form =  a as Form;
-            form.ShowDialog();
+                frm.MdiParent = this;
 
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Tag = e.Node.Name;
+                TabPage newTab = new TabPage();
+                newTab.Text = e.Node.Text;
+
+                tabControl2.TabPages.Add(newTab);
+                tabControl2.SelectedTab = newTab;
+
+                frm.Show();
+                
+            }
+        }
+
+
+        public void newForm(string formName,string folderName, string formText)
+        {
+            Form frm;
+            string nameSpace = "Final"; //네임스페이스 명
+            Assembly cuasm = Assembly.GetExecutingAssembly();
+            //string Format 의 따옴표와 마침표 주의!!
+            string childFormName = string.Format($"{nameSpace}.{folderName}.frm_{formName}");
+            frm = (Form)cuasm.CreateInstance(childFormName);
+
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Tag = formName;
+            TabPage newTab = new TabPage();
+            newTab.Tag = formName;
+            newTab.Text = formText;
+
+            tabControl2.TabPages.Add(newTab);
+
+            tabControl2.SelectedTab = newTab; //새로연 메뉴의 화면 텝페이지 눌릴 수 있도록
+            frm.Show();
         }
     }
 }

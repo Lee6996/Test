@@ -219,6 +219,8 @@ namespace Final.MSS_CON
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.CornflowerBlue;
@@ -230,8 +232,8 @@ namespace Final.MSS_CON
             // 
             // dgvUser
             // 
-            this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUser.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Location = new System.Drawing.Point(15, 103);
@@ -241,7 +243,7 @@ namespace Final.MSS_CON
             this.dgvUser.TabIndex = 108;
             this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
             // 
-            // MSS_CON_001
+            // frm_MSS_CON_001
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1344, 865);
@@ -251,7 +253,7 @@ namespace Final.MSS_CON
             this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.panel6);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Name = "MSS_CON_001";
+            this.Name = "frm_MSS_CON_001";
             this.Tag = "사용자 그룹 목록";
             this.Text = "MSS_CON_001";
             this.Load += new System.EventHandler(this.MSS_CON_001_Load);

@@ -1,4 +1,5 @@
-﻿using FinalVO;
+﻿using Final.PRM_PRF.PopUp;
+using FinalVO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,17 +12,9 @@ namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_008 : Final.MDI_Parent.frm_MDIParent_1Grid
     {
-        UserVO user;
-
         public frm_PRM_PRF_008()
         {
             InitializeComponent();
-        }
-
-        public frm_PRM_PRF_008(UserVO user)
-        {
-            InitializeComponent();
-            this.user = user;
         }
 
         private void frm_PRM_PRF_008_Load(object sender, EventArgs e)
@@ -33,6 +26,22 @@ namespace Final.PRM_PRF
         private void btnTimeSearch_Click(object sender, EventArgs e)
         {
             RefreshState();
+        }
+
+
+        private void btnWorkCenter_Click(object sender, EventArgs e)
+        {
+            MainPop frm = new MainPop("WC")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtWorkCenter.Text = frm.SCode;
+                txtWorkCenterDetail.Text = frm.SName;
+                RefreshState();
+            }
         }
 
         #region MyMethod
@@ -55,11 +64,16 @@ namespace Final.PRM_PRF
 
         private void RefreshState()
         {
-            dgvPRM_PRF.DataSource = new PRM_PRF_Service().GetNOPVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString());
+            dgvPRM_PRF.DataSource = new PRM_PRF_Service().GetNOPVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), txtWorkCenter.Text);
         }
+
+
 
         #endregion
 
-
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            new PopUp.frm_PRM_PRF_008_PopUp().ShowDialog();
+        }
     }
 }

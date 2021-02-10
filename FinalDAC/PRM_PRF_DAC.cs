@@ -28,15 +28,15 @@ namespace FinalDAC
 
         #region 001
 
-        public bool Update_001(WorkOrderVO vo, UserVO user)
+        public bool Update_001(WorkOrderVO vo)
         {
-            string sql = "update WorkOrder set Prd_Qty = @Prd_Qty, Up_Date = NOW(), Up_Emp = @Up_Emp where Workorderno = @Workorderno";
+            string sql = "update WorkOrder set Prd_Qty = @Prd_Qty, Up_Date = GETDATE(), Up_Emp = @Up_Emp where Workorderno = @Workorderno";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@Workorderno", vo.Workorderno);
                 cmd.Parameters.AddWithValue("@Prd_Qty", vo.Prd_Qty);
-                cmd.Parameters.AddWithValue("@Up_Emp", user.User_ID); 
+                cmd.Parameters.AddWithValue("@Up_Emp", LoginInfoVO.User_ID); 
 
                 int iResult = cmd.ExecuteNonQuery();
                 Debug.WriteLine(iResult.ToString());
@@ -50,14 +50,14 @@ namespace FinalDAC
         #endregion
 
         #region 002
-        public bool UpdateWorkorderStatus(string workorderno, UserVO user)
+        public bool UpdateWorkorderStatus(string workorderno)
         {
-            string sql = "update WorkOrder set Wo_Status = 'End', Plan_Endtime = NOW(), Manager_CloseTime = NOW(),  Up_Date = NOW(), Up_Emp = @Up_Emp where Workorderno = @Workorderno";
+            string sql = "update WorkOrder set Wo_Status = 'End', Plan_Endtime = GETDATE(), Manager_CloseTime = GETDATE(),  Up_Date = GETDATE(), Up_Emp = @Up_Emp where Workorderno = @Workorderno";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@Workorderno", workorderno);
-                cmd.Parameters.AddWithValue("@Up_Emp", user.User_ID);
+                cmd.Parameters.AddWithValue("@Up_Emp", LoginInfoVO.User_ID);
 
                 int iResult = cmd.ExecuteNonQuery();
                 Debug.WriteLine(iResult.ToString());
@@ -67,14 +67,14 @@ namespace FinalDAC
             }
         }
 
-        public bool UpdatePalletStatus(string palletno, UserVO user)
+        public bool UpdatePalletStatus(string palletno)
         {
-            string sql = "update Goods_In_History set Colsed_YN = 'Y', Closed_Time = NOW(),  Up_Date = NOW(), Up_Emp = @Up_Emp where Pallet_No = @Pallet_No";
+            string sql = "update Goods_In_History set Colsed_YN = 'Y', Closed_Time = GETDATE(),  Up_Date = GETDATE(), Up_Emp = @Up_Emp where Pallet_No = @Pallet_No";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@Pallet_No", palletno);
-                cmd.Parameters.AddWithValue("@Up_Emp", user.User_ID);
+                cmd.Parameters.AddWithValue("@Up_Emp", LoginInfoVO.User_ID);
 
                 int iResult = cmd.ExecuteNonQuery();
                 Debug.WriteLine(iResult.ToString());
@@ -87,7 +87,7 @@ namespace FinalDAC
         #endregion
 
         #region 003
-        
+
         #endregion
 
         #region 004
@@ -103,6 +103,28 @@ namespace FinalDAC
         #endregion
 
         #region 008
+        public void InsertNop_History(NOPVO vo)
+        {
+            string iQuery = @"insert into Nop_History
+                            (Nop_Date, Nop_Happentime, Nop_Canceltime, Wc_Code, Nop_Mi_Code, Nop_Type, Nop_Time, Remark, Ins_Date, Ins_Emp, Up_Date, Up_Emp)
+                             values
+                            (GETDATE(), GETDATE(), null, @Wc_Code, @Nop_Mi_Code, @Nop_Type, @Nop_Time, @Remark, GETDATE(), @Ins_Emp, GETDATE(), @Up_Emp)";
+            using (SqlCommand cmd = new SqlCommand(iQuery, conn))
+            {
+                cmd.Parameters.AddWithValue("Wc_Code", vo.Wc_Code);
+                cmd.Parameters.AddWithValue("Nop_Mi_Code", vo.Nop_Mi_Code);
+                cmd.Parameters.AddWithValue("Nop_Type", vo.Nop_Type);
+                cmd.Parameters.AddWithValue("Nop_Time", vo.Nop_Time); 
+                cmd.Parameters.AddWithValue("Remark", vo.Remark); 
+                cmd.Parameters.AddWithValue("Ins_Emp", LoginInfoVO.User_ID);
+                cmd.Parameters.AddWithValue("Up_Emp", LoginInfoVO.User_ID);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkHistoryVO> list = Helper.DataReaderMapToList<WorkHistoryVO>(reader);
+
+                conn.Close();
+            }
+        }
         #endregion
 
         #region 009
@@ -121,7 +143,7 @@ namespace FinalDAC
         #endregion
 
         #region 010
-        public DataTable Select_010_1(string Start_Date, string End_Date)
+        public DataTable SelectWorkHistoryPivot(string Start_Date, string End_Date)
         {
             using (SqlCommand cmd = new SqlCommand("sp_WorkHistory_Pivot", conn))
             {
@@ -137,7 +159,5 @@ namespace FinalDAC
             }
         }
         #endregion
-
-
     }
 }
