@@ -46,11 +46,8 @@ namespace Final.MDS_SDS
             this.nuCavity = new System.Windows.Forms.NumericUpDown();
             this.nuLine_Per_Qty = new System.Windows.Forms.NumericUpDown();
             this.nuShot_Per_Qty = new System.Windows.Forms.NumericUpDown();
-            this.rdoName = new System.Windows.Forms.RadioButton();
-            this.btnSearch2 = new System.Windows.Forms.Button();
-            this.cbType = new System.Windows.Forms.ComboBox();
-            this.rdoType = new System.Windows.Forms.RadioButton();
             this.btnInsert = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuCavity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuLine_Per_Qty)).BeginInit();
@@ -62,7 +59,7 @@ namespace Final.MDS_SDS
             this.btnSearch.BackColor = System.Drawing.Color.DimGray;
             this.btnSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSearch.Location = new System.Drawing.Point(533, 17);
+            this.btnSearch.Location = new System.Drawing.Point(201, 12);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 29);
             this.btnSearch.TabIndex = 134;
@@ -194,7 +191,7 @@ namespace Final.MDS_SDS
             // 
             this.cbItem.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbItem.FormattingEnabled = true;
-            this.cbItem.Location = new System.Drawing.Point(406, 21);
+            this.cbItem.Location = new System.Drawing.Point(74, 16);
             this.cbItem.Name = "cbItem";
             this.cbItem.Size = new System.Drawing.Size(121, 23);
             this.cbItem.TabIndex = 112;
@@ -231,55 +228,6 @@ namespace Final.MDS_SDS
             this.nuShot_Per_Qty.Size = new System.Drawing.Size(99, 21);
             this.nuShot_Per_Qty.TabIndex = 137;
             // 
-            // rdoName
-            // 
-            this.rdoName.AutoSize = true;
-            this.rdoName.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rdoName.Location = new System.Drawing.Point(326, 21);
-            this.rdoName.Name = "rdoName";
-            this.rdoName.Size = new System.Drawing.Size(65, 21);
-            this.rdoName.TabIndex = 132;
-            this.rdoName.TabStop = true;
-            this.rdoName.Text = "품목명";
-            this.rdoName.UseVisualStyleBackColor = true;
-            this.rdoName.CheckedChanged += new System.EventHandler(this.rdoName_CheckedChanged);
-            // 
-            // btnSearch2
-            // 
-            this.btnSearch2.BackColor = System.Drawing.Color.DimGray;
-            this.btnSearch2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSearch2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSearch2.Location = new System.Drawing.Point(851, 18);
-            this.btnSearch2.Name = "btnSearch2";
-            this.btnSearch2.Size = new System.Drawing.Size(75, 29);
-            this.btnSearch2.TabIndex = 115;
-            this.btnSearch2.Text = "조회";
-            this.btnSearch2.UseVisualStyleBackColor = false;
-            this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
-            // 
-            // cbType
-            // 
-            this.cbType.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbType.FormattingEnabled = true;
-            this.cbType.Location = new System.Drawing.Point(724, 20);
-            this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(121, 23);
-            this.cbType.TabIndex = 138;
-            this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
-            // 
-            // rdoType
-            // 
-            this.rdoType.AutoSize = true;
-            this.rdoType.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rdoType.Location = new System.Drawing.Point(640, 20);
-            this.rdoType.Name = "rdoType";
-            this.rdoType.Size = new System.Drawing.Size(78, 21);
-            this.rdoType.TabIndex = 133;
-            this.rdoType.TabStop = true;
-            this.rdoType.Text = "품목유형";
-            this.rdoType.UseVisualStyleBackColor = true;
-            this.rdoType.CheckedChanged += new System.EventHandler(this.rdoType_CheckedChanged);
-            // 
             // btnInsert
             // 
             this.btnInsert.BackColor = System.Drawing.Color.DimGray;
@@ -293,20 +241,30 @@ namespace Final.MDS_SDS
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // MDS_SDS_002
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.TabIndex = 140;
+            this.label1.Text = "품목명";
+            // 
+            // frm_MDS_SDS_002
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1341, 732);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.cbType);
             this.Controls.Add(this.nuShot_Per_Qty);
             this.Controls.Add(this.nuLine_Per_Qty);
             this.Controls.Add(this.nuCavity);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.rdoType);
-            this.Controls.Add(this.rdoName);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label9);
@@ -317,11 +275,10 @@ namespace Final.MDS_SDS
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvItemDetail);
-            this.Controls.Add(this.btnSearch2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbItem);
             this.Controls.Add(this.splitter1);
-            this.Name = "MDS_SDS_002";
+            this.Name = "frm_MDS_SDS_002";
             this.Text = "품목 정보";
             this.Load += new System.EventHandler(this.MDS_SDS_002_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemDetail)).EndInit();
@@ -352,10 +309,7 @@ namespace Final.MDS_SDS
         private System.Windows.Forms.NumericUpDown nuCavity;
         private System.Windows.Forms.NumericUpDown nuLine_Per_Qty;
         private System.Windows.Forms.NumericUpDown nuShot_Per_Qty;
-        private System.Windows.Forms.RadioButton rdoName;
-        private System.Windows.Forms.Button btnSearch2;
-        private System.Windows.Forms.ComboBox cbType;
-        private System.Windows.Forms.RadioButton rdoType;
         private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Label label1;
     }
 }

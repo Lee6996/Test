@@ -52,7 +52,7 @@ namespace Final.PRM_PRF.PopUp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            new PRM_PRF_Service().Correction(vo, user);
+            new PRM_PRF_Service().Correction(vo);
         }
     }
 }

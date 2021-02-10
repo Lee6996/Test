@@ -2,6 +2,7 @@
 using FinalVO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Final.PRM_PRF
@@ -14,9 +15,9 @@ namespace Final.PRM_PRF
             return new SelectDAC().SelectWorkOrder(dtpFrom, dtpTo, processCode, wcCode);
         }
 
-        public bool Correction(WorkOrderVO vo, UserVO user)
+        public bool Correction(WorkOrderVO vo)
         {
-           return new PRM_PRF_DAC().Update_001(vo, user);
+           return new PRM_PRF_DAC().Update_001(vo);
         }
         #endregion
 
@@ -27,14 +28,14 @@ namespace Final.PRM_PRF
             return new SelectDAC().SelectGoodsInHistory(workorderno);
         }
 
-        public bool Update002_WO(string workorderno, UserVO user)
+        public bool Update002_WO(string workorderno)
         {
-            return new PRM_PRF_DAC().UpdateWorkorderStatus(workorderno, user);
+            return new PRM_PRF_DAC().UpdateWorkorderStatus(workorderno);
         }
 
-        public bool Update002_Pallet(string palletno, UserVO user)
+        public bool Update002_Pallet(string palletno)
         {
-            return new PRM_PRF_DAC().UpdatePalletStatus(palletno, user);
+            return new PRM_PRF_DAC().UpdatePalletStatus(palletno);
         }
         #endregion
 
@@ -54,33 +55,61 @@ namespace Final.PRM_PRF
         #endregion
 
         #region 006
-        public List<GVHistoryVO> GetGVHistoryVOList(string dtpFrom, string dtpTo)
+        public List<GVHistoryVO> GetGVHistoryVOList(string dtpFrom, string dtpTo, string GV_Code, string Item_Code)
         {
-            return new SelectDAC().SelectGVHistory(dtpFrom, dtpTo);
+            return new SelectDAC().SelectGVHistory(dtpFrom, dtpTo, GV_Code, Item_Code);
         }
         #endregion
 
         #region 007
+        public List<GV> GetGV()
+        {
+            return new SelectDAC().SelectForPopup<GV>("GV");
+        }
         #endregion
 
         #region 008
-        public object GetNOPVOList(string dtpFrom, string dtpTo)
+        public object GetNOPVOList(string dtpFrom, string dtpTo, string WC_Code)
         {
-            return new SelectDAC().SelectNOP(dtpFrom, dtpTo);
+            return new SelectDAC().SelectNOP(dtpFrom, dtpTo, WC_Code);
+        }
+
+        public void BindCboWithNopVO(ComboBox cbo)
+        {
+            cbo.DisplayMember = "Nop_Mi_Name";
+            cbo.ValueMember = "Nop_Mi_Code";
+            cbo.DataSource = new SelectDAC().SelectNOP();
+        }
+
+        internal void BindCboWithWorkCenterVO(ComboBox cbo)
+        {
+            cbo.DisplayMember = "WC_Name";
+            cbo.ValueMember = "WC_Code";
+            cbo.DataSource = new SelectDAC().SelectForPopup<WC>("WC");
+        }
+
+        internal void Insert008(NOPVO vo)
+        {
+            new PRM_PRF_DAC().InsertNop_History(vo);
         }
         #endregion
 
         #region 009
-        public List<WorkHistoryVO> GetWorkHistoryVOList()
+        public List<WorkHistoryVO> GetWorkHistoryVOList(string dtpFrom, string dtpTo, string Wc_Name)
         {
-            return new SelectDAC().SelectWorkHistory();
+            return new SelectDAC().SelectWorkHistory(dtpFrom,dtpTo,Wc_Name);
         }
         #endregion
 
         #region 010
-        public List<AttendanceManagementVO> GetAttendanceManagementVOList()
+        public List<AttendanceManagementVO> GetAttendanceManagementVOList(string dtpFrom, string dtpTo, string user_ID)
         {
-            return new SelectDAC().SelectAttendanceManagement();
+            return new SelectDAC().SelectAttendanceManagement(dtpFrom, dtpTo, user_ID);
+        }
+
+        public DataTable SelectWorkHistoryPivot(string dtpFrom, string dtpTo)
+        {
+            return new PRM_PRF_DAC().SelectWorkHistoryPivot(dtpFrom, dtpTo);
         }
         #endregion
     }

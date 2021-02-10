@@ -1,4 +1,5 @@
-﻿using FinalVO;
+﻿using Final.PRM_PRF.PopUp;
+using FinalVO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,17 +12,9 @@ namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_006 : Final.MDI_Parent.frm_MDIParent_1Grid
     {
-        UserVO user;
-
         public frm_PRM_PRF_006()
         {
             InitializeComponent();
-        }
-
-        public frm_PRM_PRF_006(UserVO user)
-        {
-            InitializeComponent();
-            this.user = user;
         }
 
         private void frm_PRM_PRF_006_Load(object sender, EventArgs e)
@@ -37,12 +30,32 @@ namespace Final.PRM_PRF
 
         private void btnGV_Click(object sender, EventArgs e)
         {
+            MainPop frm = new MainPop("GV")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
 
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtGVCode.Text = frm.SCode;
+                txtGVDetail.Text = frm.SName;
+                RefreshState();
+            }
         }
 
         private void btnItem_Click(object sender, EventArgs e)
         {
+            MainPop frm = new MainPop("Item")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
 
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtItemCode.Text = frm.SCode;
+                txtItemDetail.Text = frm.SName;
+                RefreshState();
+            }
         }
 
         #region MyMethod
@@ -80,7 +93,7 @@ namespace Final.PRM_PRF
 
         private void RefreshState()
         {
-            dgvPRM_PRF.DataSource = new PRM_PRF_Service().GetGVHistoryVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString());
+            dgvPRM_PRF.DataSource = new PRM_PRF_Service().GetGVHistoryVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(),txtGVCode.Text, txtItemCode.Text);
         }
         #endregion
     }

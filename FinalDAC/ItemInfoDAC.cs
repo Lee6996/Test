@@ -144,7 +144,7 @@ VALUES
                                             , Shot_Per_Qty
                                             , Dry_GV_Qty                                           
                                             , Remark
-                                            ,case when Use_YN='Y' then 1 else 0 end Use_YN, Ins_Date, Ins_Emp, Up_Date, Up_Emp
+                                            ,case when Use_YN='Y' then 1 else 0 end Use_YN, CONVERT(char(10), Ins_Date, 23) Ins_Date, Ins_Emp, CONVERT(char(10), Up_Date, 23) Up_Date, Up_Emp
                                         from Item_Master where 1 = 1  ";
 
             if (!string.IsNullOrEmpty(data))
@@ -203,36 +203,36 @@ VALUES
                     return false;
                 else
                 {
-                    sQuery = @"INSERT INTO Item_Level_Master
-                                             (Level_Code
-                                             ,Level_Name
-                                             ,Item_lvl1
-                                             ,Item_lvl2
-                                             ,Item_lvl3
-                                             ,Item_lvl4
-                                             ,Item_lvl5
-                                             ,Box_Qty
-                                             ,Pcs_Qty
-                                             ,Mat_Qty
-                                             ,Use_YN
-                                             ,Ins_Date
-                                             ,Ins_Emp
-                                             ,Up_Date
-                                             ,Up_Emp)
-                                       VALUES
-                                             (@Level_Code ,@Level_Name, @Item_lvl1 ,Item_lvl2 ,Item_lvl3 ,Item_lvl4 ,Item_lvl5,Box_Qty ,Pcs_Qty ,Mat_Qty ,'Y'  ,sysdatetime(),'test', convert(date, sysdatetime(), 23), 'test') ";
+                    sQuery = @"insert into
+		Item_Level_Master
+                  (Level_Code
+                  ,Level_Name
+                  ,Item_lvl1
+                  ,Item_lvl2
+                  ,Item_lvl3
+                  ,Item_lvl4
+                  ,Item_lvl5
+                  ,Box_Qty
+                  ,Pcs_Qty
+                  ,Mat_Qty
+                  ,Use_YN
+                  ,Ins_Date
+                  ,Ins_Emp
+                  ,Up_Date
+                  ,Up_Emp)
+            VALUES
+                  (@Level_Code ,@Level_Name, @Item_lvl1 ,@Item_lvl2 ,@Item_lvl3 ,@Item_lvl4 ,@Item_lvl5, @Box_Qty , @Pcs_Qty , @Mat_Qty ,'Y'  , getdate(),'test', getdate(), 'test')";// test수정필요.
 
-                    cmd.Parameters.AddWithValue("@Level_Code", additem.Level_Code);
-                    cmd.Parameters.AddWithValue("@Level_Name", additem.Level_Name);
+                   
                     cmd.Parameters.AddWithValue("@Item_lvl1", additem.Item_lvl1);
                     cmd.Parameters.AddWithValue("@Item_lvl2", additem.Item_lvl2);
                     cmd.Parameters.AddWithValue("@Item_lvl3", additem.Item_lvl3);
                     cmd.Parameters.AddWithValue("@Item_lvl4", additem.Item_lvl4);
                     cmd.Parameters.AddWithValue("@Item_lvl5", additem.Item_lvl5);
                     cmd.Parameters.AddWithValue("@Box_Qty", additem.Box_Qty);
-                    cmd.Parameters.AddWithValue("@Pcs_Qty", additem.Pcs_Qty);
+                   cmd.Parameters.AddWithValue("@Pcs_Qty", additem.Pcs_Qty);
                     cmd.Parameters.AddWithValue("@Mat_Qty", additem.Mat_Qty);
-                    cmd.Parameters.AddWithValue("@Ins_Emp", additem.Ins_Emp);
+                    //cmd.Parameters.AddWithValue("@Ins_Emp", additem.Ins_Emp);
 
 
                     cmd.ExecuteNonQuery();
@@ -254,16 +254,16 @@ VALUES
                                               ,Box_Qty
                                               ,Pcs_Qty
                                               ,Mat_Qty,
-                                            case when Use_YN='Y' then 1 else 0 end Use_YN, Ins_Date, Ins_Emp, Up_Date, Up_Emp
+                                            case when Use_YN='Y' then 1 else 0 end Use_YN, CONVERT(char(10), Ins_Date, 23) Ins_Date, Ins_Emp, CONVERT(char(10), Up_Date, 23)  Up_Date, Up_Emp
                                         from Item_Level_Master where 1 = 1  ";
 
             if (!string.IsNullOrEmpty(groupName))
-                sQuery += " and Level_Name Like @groupName ";
+                sQuery += " and Level_Name Like @Level_Name ";
 
             using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
                 if (!string.IsNullOrEmpty(groupName))
-                    cmd.Parameters.AddWithValue("@groupName", "%" + groupName + "%"); //포함하는 문자열
+                    cmd.Parameters.AddWithValue("@Level_Name", "%" + groupName + "%"); //포함하는 문자열
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<ItemInfoVO> list = Helper.DataReaderMapToList<ItemInfoVO>(reader);
