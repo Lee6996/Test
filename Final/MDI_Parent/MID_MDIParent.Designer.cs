@@ -203,7 +203,6 @@ namespace Final.KPI_RPT
             this.ClientSize = new System.Drawing.Size(1266, 828);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.statusStrip);
-            this.IsMdiContainer = true;
             this.Name = "KPI_RPT_MDIParent";
             this.Text = "MDIParent1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
