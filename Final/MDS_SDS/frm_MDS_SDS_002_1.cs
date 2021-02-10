@@ -80,7 +80,7 @@ namespace Final.MDS_SDS
             ///
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e) // 수정필요
         {
             try
             {
@@ -101,15 +101,15 @@ namespace Final.MDS_SDS
                         Line_Per_Qty = int.Parse(nulinper.Value.ToString().Trim()),
                         Shot_Per_Qty = int.Parse(nushotper.Value.ToString().Trim()),
                         Dry_GV_Qty = int.Parse(nudrgdv.Value.ToString().Trim()),                       
-                        Level_1 = cbLevel1.SelectedValue.ToString().Trim(),
-                        Level_2 = cbLevel2.SelectedValue.ToString().Trim(),
-                        Level_3 = cbLevel3.SelectedValue.ToString().Trim(),
-                        Level_4 = cbLevel4.SelectedValue.ToString().Trim(),
-                        Level_5 = cbLevel5.SelectedValue.ToString().Trim(),
+                        Level_1 = cbLevel1.Text.ToString().Trim(),
+                        Level_2 = cbLevel2.Text.ToString().Trim(),
+                        Level_3 = cbLevel3.Text.ToString().Trim(),
+                        Level_4 = cbLevel4.Text.ToString().Trim(),
+                        Level_5 = cbLevel5.Text.ToString().Trim(),
                         Ins_Date = lblDay.Text.Trim(),
-                        Ins_Emp = lblManager.Text.Trim(),
+                       // Ins_Emp = lblManager.Text.Trim(),
                     };
-                    if (itemservice.InsertAllItem_Master(item))
+                    if (itemservice.InsertItemMaster(item))
                     {
                         this.Close();
                         this.DialogResult = DialogResult.OK;
