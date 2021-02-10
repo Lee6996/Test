@@ -29,7 +29,7 @@ namespace Final
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtRemark = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,14 +58,14 @@ namespace Final
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtRemark
+            // txtDescription
             // 
-            this.txtRemark.Location = new System.Drawing.Point(12, 130);
-            this.txtRemark.Multiline = true;
-            this.txtRemark.Name = "txtRemark";
-            this.txtRemark.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txtRemark.Size = new System.Drawing.Size(480, 342);
-            this.txtRemark.TabIndex = 13;
+            this.txtDescription.Location = new System.Drawing.Point(12, 130);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txtDescription.Size = new System.Drawing.Size(480, 342);
+            this.txtDescription.TabIndex = 13;
             // 
             // splitContainer3
             // 
@@ -233,6 +233,7 @@ namespace Final
             this.btnExit.TabIndex = 101;
             this.btnExit.Text = "닫기";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frm_MSS_SYS_004_1
             // 
@@ -240,17 +241,18 @@ namespace Final
             this.ClientSize = new System.Drawing.Size(505, 520);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.txtRemark);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.splitContainer3);
             this.Controls.Add(this.splitContainer2);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.lblNum);
             this.Controls.Add(this.lbl);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frm_MSS_SYS_004_1";
             this.Tag = "공지사항조회";
             this.Text = "frm_MSS_SYS_004_1";
+            this.Load += new System.EventHandler(this.frm_MSS_SYS_004_1_Load);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
@@ -275,7 +277,7 @@ namespace Final
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtRemark;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;

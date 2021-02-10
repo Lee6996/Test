@@ -39,10 +39,8 @@ namespace Final.MSS_CON
             this.label5 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.cbUserGroup_Name = new System.Windows.Forms.ComboBox();
             this.btnSelect = new System.Windows.Forms.Button();
-            this.txtUserGroup_Code = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -139,10 +137,8 @@ namespace Final.MSS_CON
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cbUserGroup_Name);
             this.panel1.Controls.Add(this.btnSelect);
-            this.panel1.Controls.Add(this.txtUserGroup_Code);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -150,17 +146,6 @@ namespace Final.MSS_CON
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1344, 57);
             this.panel1.TabIndex = 110;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(557, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 18);
-            this.label3.TabIndex = 112;
-            this.label3.Text = "사용자 그룹코드";
             // 
             // cbUserGroup_Name
             // 
@@ -178,21 +163,13 @@ namespace Final.MSS_CON
             this.btnSelect.BackColor = System.Drawing.Color.DimGray;
             this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSelect.Location = new System.Drawing.Point(969, 9);
+            this.btnSelect.Location = new System.Drawing.Point(627, 9);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(85, 35);
             this.btnSelect.TabIndex = 3;
             this.btnSelect.Text = "조회";
             this.btnSelect.UseVisualStyleBackColor = false;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
-            // 
-            // txtUserGroup_Code
-            // 
-            this.txtUserGroup_Code.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtUserGroup_Code.Location = new System.Drawing.Point(696, 14);
-            this.txtUserGroup_Code.Name = "txtUserGroup_Code";
-            this.txtUserGroup_Code.Size = new System.Drawing.Size(192, 26);
-            this.txtUserGroup_Code.TabIndex = 2;
             // 
             // label2
             // 
@@ -278,10 +255,8 @@ namespace Final.MSS_CON
         private System.Windows.Forms.TextBox txtUserGroup_Code_Insert;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbUserGroup_Name;
         private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.TextBox txtUserGroup_Code;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;

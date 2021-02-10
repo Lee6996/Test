@@ -415,5 +415,31 @@ namespace FinalDAC
                 return list;
             }
         }
+
+        //공지사항 전체 - SysNotice
+        public List<SysNoticeVO> SelectAllNoticeInfo(string sysnotice)
+        {
+            
+            string sQuery = @"select Seq, convert(char(10), Notice_Date, 23) Notice_Date, convert(char(10), Notice_End, 23) Notice_End, Title, Description, Notice_Rtf, Email_Recipients, Email_Send_Code, 
+                              case when Use_YN='Y' then 1 else 0 end Use_YN, Remark, convert(char(10), Ins_Date, 23) Ins_Date, Ins_Emp, convert(char(10), Up_Date, 23) Up_Date, Up_Emp
+                              from Sys_Notice where 1 = 1 ";
+
+            if (sysnotice == "만료")
+                sQuery += " and Notice_End < convert(char(10), getdate(),23) ";
+            if(sysnotice =="진행")
+                sQuery += " and Notice_Date <= convert(char(10), getdate(),23) and Notice_End >= convert(char(10), getdate(),23) ";
+            if (sysnotice == "예정")
+                sQuery += " and Notice_Date > convert(char(10), getdate(),23)";
+
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
+            {
+                //if (!string.IsNullOrEmpty(sysnotice))
+                //    cmd.Parameters.AddWithValue("@groupName", "%" + sysnotice + "%"); //포함하는 문자열
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<SysNoticeVO> list = Helper.DataReaderMapToList<SysNoticeVO>(reader);
+                return list;
+            }
+        }
     }
 }

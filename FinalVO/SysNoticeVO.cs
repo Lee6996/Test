@@ -25,7 +25,7 @@ namespace FinalVO
         //이메일 송부유형
         public string Email_Send_Code { get; set; }
         //사용여부
-        public string Use_YN { get; set; }
+        public int Use_YN { get; set; }
         //비고
         public string Remark { get; set; }
         //최초입력일자
