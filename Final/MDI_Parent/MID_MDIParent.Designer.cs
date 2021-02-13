@@ -45,6 +45,7 @@ namespace Final.KPI_RPT
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.statusStrip.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +54,7 @@ namespace Final.KPI_RPT
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 806);
+            this.statusStrip.Location = new System.Drawing.Point(0, 875);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
             this.statusStrip.Size = new System.Drawing.Size(1266, 22);
@@ -68,7 +69,8 @@ namespace Final.KPI_RPT
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.btn_WorkCenter);
             this.panel4.Controls.Add(this.textBox6);
             this.panel4.Controls.Add(this.label16);
@@ -81,18 +83,20 @@ namespace Final.KPI_RPT
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1266, 67);
+            this.panel4.Size = new System.Drawing.Size(1266, 57);
             this.panel4.TabIndex = 14;
             // 
             // btn_WorkCenter
             // 
-            this.btn_WorkCenter.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_WorkCenter.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_WorkCenter.Location = new System.Drawing.Point(719, 22);
+            this.btn_WorkCenter.BackColor = System.Drawing.Color.DimGray;
+            this.btn_WorkCenter.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_WorkCenter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_WorkCenter.Location = new System.Drawing.Point(983, 11);
             this.btn_WorkCenter.Name = "btn_WorkCenter";
-            this.btn_WorkCenter.Size = new System.Drawing.Size(44, 23);
+            this.btn_WorkCenter.Size = new System.Drawing.Size(85, 35);
             this.btn_WorkCenter.TabIndex = 12;
             this.btn_WorkCenter.Text = "검색";
             this.btn_WorkCenter.UseVisualStyleBackColor = false;
@@ -100,17 +104,17 @@ namespace Final.KPI_RPT
             // 
             // textBox6
             // 
-            this.textBox6.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox6.Location = new System.Drawing.Point(782, 22);
+            this.textBox6.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox6.Location = new System.Drawing.Point(1074, 16);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 21);
+            this.textBox6.Size = new System.Drawing.Size(100, 25);
             this.textBox6.TabIndex = 11;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label16.Location = new System.Drawing.Point(657, 25);
+            this.label16.Location = new System.Drawing.Point(924, 19);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(53, 18);
             this.label16.TabIndex = 10;
@@ -118,11 +122,12 @@ namespace Final.KPI_RPT
             // 
             // btn_Process
             // 
-            this.btn_Process.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_Process.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Process.Location = new System.Drawing.Point(478, 23);
+            this.btn_Process.BackColor = System.Drawing.Color.DimGray;
+            this.btn_Process.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_Process.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_Process.Location = new System.Drawing.Point(696, 11);
             this.btn_Process.Name = "btn_Process";
-            this.btn_Process.Size = new System.Drawing.Size(44, 23);
+            this.btn_Process.Size = new System.Drawing.Size(85, 35);
             this.btn_Process.TabIndex = 9;
             this.btn_Process.Text = "검색";
             this.btn_Process.UseVisualStyleBackColor = false;
@@ -130,11 +135,12 @@ namespace Final.KPI_RPT
             // 
             // button22
             // 
-            this.button22.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button22.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button22.Location = new System.Drawing.Point(365, 21);
+            this.button22.BackColor = System.Drawing.Color.DimGray;
+            this.button22.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button22.Location = new System.Drawing.Point(540, 11);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(44, 23);
+            this.button22.Size = new System.Drawing.Size(85, 35);
             this.button22.TabIndex = 8;
             this.button22.Text = "검색";
             this.button22.UseVisualStyleBackColor = false;
@@ -142,45 +148,45 @@ namespace Final.KPI_RPT
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(541, 23);
+            this.textBox1.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Location = new System.Drawing.Point(787, 16);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.Size = new System.Drawing.Size(100, 25);
             this.textBox1.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(255, 25);
+            this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(355, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 13);
+            this.label4.Size = new System.Drawing.Size(17, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "~";
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker2.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(273, 22);
+            this.dateTimePicker2.Location = new System.Drawing.Point(392, 16);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(86, 21);
+            this.dateTimePicker2.Size = new System.Drawing.Size(130, 25);
             this.dateTimePicker2.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(167, 22);
+            this.dateTimePicker1.Location = new System.Drawing.Point(204, 16);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(86, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(130, 25);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(432, 25);
+            this.label3.Location = new System.Drawing.Point(652, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 18);
             this.label3.TabIndex = 1;
@@ -190,19 +196,32 @@ namespace Final.KPI_RPT
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(6, 25);
+            this.label2.Location = new System.Drawing.Point(12, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(141, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "조회조건 : 생산일자";
             // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(0, 61);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(260, 26);
+            this.label5.TabIndex = 69;
+            this.label5.Text = "▶조회내역";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // KPI_RPT_MDIParent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 828);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1266, 897);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.statusStrip);
+            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "KPI_RPT_MDIParent";
             this.Text = "MDIParent1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -231,6 +250,7 @@ namespace Final.KPI_RPT
         public System.Windows.Forms.DateTimePicker dateTimePicker2;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         public System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }
 
