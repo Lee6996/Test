@@ -144,7 +144,6 @@ namespace Final.PRM_PRF
             this.Load += new System.EventHandler(this.frm_PRM_PRF_008_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF)).EndInit();
             this.ResumeLayout(false);
