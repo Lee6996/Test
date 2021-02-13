@@ -33,17 +33,37 @@ namespace Final.PRM_PRF
             this.dgvPRM_PRF_1 = new System.Windows.Forms.DataGridView();
             this.btnWoEnd = new System.Windows.Forms.Button();
             this.btnPalletEnd = new System.Windows.Forms.Button();
-            this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.dgvPRM_PRF_1);
+            this.panel5.Controls.Add(this.dgvPRM_PRF_2);
+            this.panel5.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.panel5.Size = new System.Drawing.Size(1266, 820);
+            this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_2, 0);
+            this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_1, 0);
+            // 
+            // label2
+            // 
+            this.label2.Size = new System.Drawing.Size(141, 18);
+            this.label2.Text = "조회조건 : 생산일자";
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Value = new System.DateTime(2021, 2, 1, 20, 57, 47, 970);
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.Value = new System.DateTime(2021, 2, 8, 20, 57, 47, 970);
+            // 
+            // btnTimeSearch
+            // 
+            this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
             // 
             // panel4
             // 
@@ -57,38 +77,6 @@ namespace Final.PRM_PRF
             this.panel4.Controls.SetChildIndex(this.btnWoEnd, 0);
             this.panel4.Controls.SetChildIndex(this.btnPalletEnd, 0);
             // 
-            // btnTimeSearch
-            // 
-            this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
-            // 
-            // dtpTo
-            // 
-            this.dtpTo.Value = new System.DateTime(2021, 2, 8, 20, 57, 47, 970);
-            // 
-            // dtpFrom
-            // 
-            this.dtpFrom.Value = new System.DateTime(2021, 2, 1, 20, 57, 47, 970);
-            // 
-            // label2
-            // 
-            this.label2.Size = new System.Drawing.Size(117, 20);
-            this.label2.Text = "조회조건 : 생산일자";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.dgvPRM_PRF_1);
-            this.panel5.Controls.Add(this.dgvPRM_PRF_2);
-            this.panel5.Size = new System.Drawing.Size(1266, 979);
-            this.panel5.Controls.SetChildIndex(this.panel8, 0);
-            this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_2, 0);
-            this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_1, 0);
-            this.panel5.Controls.SetChildIndex(this.panel6, 0);
-            // 
-            // label11
-            // 
-            this.label11.Size = new System.Drawing.Size(70, 15);
-            this.label11.Text = "팔렛트 목록";
-            // 
             // dgvPRM_PRF_2
             // 
             this.dgvPRM_PRF_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -96,10 +84,10 @@ namespace Final.PRM_PRF
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPRM_PRF_2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPRM_PRF_2.Location = new System.Drawing.Point(3, 431);
+            this.dgvPRM_PRF_2.Location = new System.Drawing.Point(3, 407);
             this.dgvPRM_PRF_2.Name = "dgvPRM_PRF_2";
             this.dgvPRM_PRF_2.RowTemplate.Height = 23;
-            this.dgvPRM_PRF_2.Size = new System.Drawing.Size(1248, 544);
+            this.dgvPRM_PRF_2.Size = new System.Drawing.Size(1258, 408);
             this.dgvPRM_PRF_2.TabIndex = 24;
             this.dgvPRM_PRF_2.Tag = "";
             this.dgvPRM_PRF_2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_2_CellDoubleClick);
@@ -111,55 +99,51 @@ namespace Final.PRM_PRF
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPRM_PRF_1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPRM_PRF_1.Location = new System.Drawing.Point(12, 58);
+            this.dgvPRM_PRF_1.Location = new System.Drawing.Point(3, 3);
             this.dgvPRM_PRF_1.Name = "dgvPRM_PRF_1";
             this.dgvPRM_PRF_1.RowTemplate.Height = 23;
-            this.dgvPRM_PRF_1.Size = new System.Drawing.Size(1248, 330);
+            this.dgvPRM_PRF_1.Size = new System.Drawing.Size(1258, 372);
             this.dgvPRM_PRF_1.TabIndex = 23;
             this.dgvPRM_PRF_1.Tag = "";
             this.dgvPRM_PRF_1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_1_CellClick);
             // 
             // btnWoEnd
             // 
-            this.btnWoEnd.Location = new System.Drawing.Point(1029, 31);
+            this.btnWoEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWoEnd.BackColor = System.Drawing.Color.DimGray;
+            this.btnWoEnd.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnWoEnd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnWoEnd.Location = new System.Drawing.Point(976, 11);
             this.btnWoEnd.Name = "btnWoEnd";
-            this.btnWoEnd.Size = new System.Drawing.Size(92, 27);
+            this.btnWoEnd.Size = new System.Drawing.Size(130, 35);
             this.btnWoEnd.TabIndex = 9;
             this.btnWoEnd.Text = "작업지시 마감";
-            this.btnWoEnd.UseVisualStyleBackColor = true;
+            this.btnWoEnd.UseVisualStyleBackColor = false;
             this.btnWoEnd.Click += new System.EventHandler(this.btnWoEnd_Click);
             // 
             // btnPalletEnd
             // 
-            this.btnPalletEnd.Location = new System.Drawing.Point(1150, 31);
+            this.btnPalletEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPalletEnd.BackColor = System.Drawing.Color.DimGray;
+            this.btnPalletEnd.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnPalletEnd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPalletEnd.Location = new System.Drawing.Point(1131, 11);
             this.btnPalletEnd.Name = "btnPalletEnd";
-            this.btnPalletEnd.Size = new System.Drawing.Size(92, 27);
+            this.btnPalletEnd.Size = new System.Drawing.Size(120, 35);
             this.btnPalletEnd.TabIndex = 10;
             this.btnPalletEnd.Text = "팔렛트 마감";
-            this.btnPalletEnd.UseVisualStyleBackColor = true;
+            this.btnPalletEnd.UseVisualStyleBackColor = false;
             this.btnPalletEnd.Click += new System.EventHandler(this.btnPalletEnd_Click);
             // 
             // frm_PRM_PRF_002
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.ClientSize = new System.Drawing.Size(1266, 1052);
+            this.ClientSize = new System.Drawing.Size(1266, 912);
+            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "frm_PRM_PRF_002";
             this.Load += new System.EventHandler(this.frm_PRM_PRF_002_Load);
+            this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF_1)).EndInit();
             this.ResumeLayout(false);

@@ -35,9 +35,7 @@ namespace Final.PRM_PRF
             this.label1 = new System.Windows.Forms.Label();
             this.txtWorkCenter = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,10 +55,6 @@ namespace Final.PRM_PRF
             this.panel4.Controls.SetChildIndex(this.txtWorkCenterDetail, 0);
             this.panel4.Controls.SetChildIndex(this.btnTimeSearch, 0);
             // 
-            // btnTimeSearch
-            // 
-            this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
-            // 
             // dtpTo
             // 
             this.dtpTo.Value = new System.DateTime(2021, 2, 10, 6, 21, 19, 656);
@@ -77,29 +71,34 @@ namespace Final.PRM_PRF
             // panel5
             // 
             this.panel5.Controls.Add(this.dgvPRM_PRF);
-            this.panel5.Controls.SetChildIndex(this.panel6, 0);
-            this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF, 0);
+            // 
+            // btnTimeSearch
+            // 
+            this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
             // 
             // dgvPRM_PRF
             // 
+            this.dgvPRM_PRF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPRM_PRF.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPRM_PRF.Location = new System.Drawing.Point(6, 49);
+            this.dgvPRM_PRF.Location = new System.Drawing.Point(3, 3);
             this.dgvPRM_PRF.Name = "dgvPRM_PRF";
             this.dgvPRM_PRF.RowTemplate.Height = 23;
-            this.dgvPRM_PRF.Size = new System.Drawing.Size(1248, 763);
+            this.dgvPRM_PRF.Size = new System.Drawing.Size(1258, 800);
             this.dgvPRM_PRF.TabIndex = 36;
             // 
             // txtWorkCenterDetail
             // 
-            this.txtWorkCenterDetail.Location = new System.Drawing.Point(661, 28);
+            this.txtWorkCenterDetail.Location = new System.Drawing.Point(816, 16);
             this.txtWorkCenterDetail.Name = "txtWorkCenterDetail";
-            this.txtWorkCenterDetail.Size = new System.Drawing.Size(100, 21);
+            this.txtWorkCenterDetail.Size = new System.Drawing.Size(100, 25);
             this.txtWorkCenterDetail.TabIndex = 35;
             // 
             // btnWorkCenter
             // 
-            this.btnWorkCenter.Location = new System.Drawing.Point(631, 26);
+            this.btnWorkCenter.Location = new System.Drawing.Point(786, 17);
             this.btnWorkCenter.Name = "btnWorkCenter";
             this.btnWorkCenter.Size = new System.Drawing.Size(24, 23);
             this.btnWorkCenter.TabIndex = 34;
@@ -111,7 +110,7 @@ namespace Final.PRM_PRF
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F);
-            this.label1.Location = new System.Drawing.Point(497, 30);
+            this.label1.Location = new System.Drawing.Point(652, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 18);
             this.label1.TabIndex = 32;
@@ -119,24 +118,19 @@ namespace Final.PRM_PRF
             // 
             // txtWorkCenter
             // 
-            this.txtWorkCenter.Location = new System.Drawing.Point(556, 28);
+            this.txtWorkCenter.Location = new System.Drawing.Point(711, 16);
             this.txtWorkCenter.Name = "txtWorkCenter";
-            this.txtWorkCenter.Size = new System.Drawing.Size(69, 21);
+            this.txtWorkCenter.Size = new System.Drawing.Size(69, 25);
             this.txtWorkCenter.TabIndex = 33;
             // 
             // frm_PRM_PRF_009
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.ClientSize = new System.Drawing.Size(1266, 897);
             this.Name = "frm_PRM_PRF_009";
             this.Load += new System.EventHandler(this.frm_PRM_PRF_09_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF)).EndInit();
             this.ResumeLayout(false);
 
