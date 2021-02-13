@@ -134,10 +134,8 @@ namespace Final
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
@@ -240,10 +238,8 @@ namespace Final
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.tabPage1.Controls.Add(this.button13);
-            this.tabPage1.Controls.Add(this.button12);
             this.tabPage1.Controls.Add(this.button11);
             this.tabPage1.Controls.Add(this.button10);
-            this.tabPage1.Controls.Add(this.button9);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -258,23 +254,11 @@ namespace Final
             this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
             this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.Location = new System.Drawing.Point(252, 0);
+            this.button13.Location = new System.Drawing.Point(86, 1);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(85, 74);
             this.button13.TabIndex = 7;
             this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.Location = new System.Drawing.Point(84, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(85, 74);
-            this.button12.TabIndex = 6;
-            this.button12.UseVisualStyleBackColor = false;
             // 
             // button11
             // 
@@ -282,7 +266,7 @@ namespace Final
             this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
             this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.Location = new System.Drawing.Point(420, 0);
+            this.button11.Location = new System.Drawing.Point(260, 0);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(85, 74);
             this.button11.TabIndex = 5;
@@ -294,23 +278,11 @@ namespace Final
             this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.Location = new System.Drawing.Point(336, 0);
+            this.button10.Location = new System.Drawing.Point(173, 1);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(85, 74);
             this.button10.TabIndex = 4;
             this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.Location = new System.Drawing.Point(168, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(85, 74);
-            this.button9.TabIndex = 3;
-            this.button9.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -573,14 +545,14 @@ namespace Final
             // 
             // FinalMDIParent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1582, 904);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "FinalMDIParent";
@@ -619,15 +591,13 @@ namespace Final
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TreeView tv_Menu;
+        public System.Windows.Forms.TabControl tabControl2;
     }
 }
 
