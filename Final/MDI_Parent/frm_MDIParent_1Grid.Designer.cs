@@ -101,7 +101,7 @@ namespace Final.MDI_Parent
             this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(12, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 18);
+            this.label2.Size = new System.Drawing.Size(99, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "조회조건 : Text";
             // 

@@ -14,7 +14,6 @@ namespace Final.PRM_PRF.PopUp
     public partial class frm_PRM_PRF_001_PopUp : Form
     {
         WorkOrderVO vo;
-        UserVO user;
 
         public frm_PRM_PRF_001_PopUp()
         {
@@ -52,7 +51,9 @@ namespace Final.PRM_PRF.PopUp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            vo.Prd_Qty = int.Parse(txtPrd_Qty.Text);
             new PRM_PRF_Service().Correction(vo);
+            this.Close();
         }
     }
 }

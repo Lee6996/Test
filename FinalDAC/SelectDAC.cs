@@ -74,7 +74,7 @@ namespace FinalDAC
             string sql = "select * from View_ReceivingList where In_Date between @dtpFrom and @dtpTo";
             if (!string.IsNullOrEmpty(itemCode))
             {
-                sql += " where Item_Code = @Item_Code";
+                sql += " and Item_Code = @Item_Code";
             }
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -208,17 +208,22 @@ namespace FinalDAC
         }
 
         //GV
-        public List<GVStatusVO> SelectGVStatus(string GV_GroupCode, string Item_Code)
+        public List<GVStatusVO> SelectGVStatus(string GVGroup_Code, string Item_Code)
         {
-            string sQuery = "select * from View_GVStatus";
+            string sQuery = "select * from View_GVStatus where 1=1 ";
 
-            if (!string.IsNullOrEmpty(GV_GroupCode))
-                sQuery += " and GV_GroupCode Like @GV_GroupCode ";
+            if (!string.IsNullOrEmpty(GVGroup_Code))
+                sQuery += " and GVGroup_Code Like @GVGroup_Code ";
             if (!string.IsNullOrEmpty(Item_Code))
                 sQuery += " and Item_Code Like @Item_Code ";
 
             using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
+                if (!string.IsNullOrEmpty(GVGroup_Code))
+                    cmd.Parameters.AddWithValue("@GVGroup_Code", GVGroup_Code);
+                if (!string.IsNullOrEmpty(Item_Code))
+                    cmd.Parameters.AddWithValue("@Item_Code", Item_Code);
+
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<GVStatusVO> list = Helper.DataReaderMapToList<GVStatusVO>(reader);
 

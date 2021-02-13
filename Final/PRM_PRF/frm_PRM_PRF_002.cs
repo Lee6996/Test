@@ -35,6 +35,7 @@ namespace Final.PRM_PRF
 
         private void dgvPRM_PRF_1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if(e.RowIndex >= 0)
             workorderno = Wlist[e.RowIndex].Workorderno;
             
             RefreshState_2();
@@ -42,23 +43,32 @@ namespace Final.PRM_PRF
 
         private void dgvPRM_PRF_2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            palletno = Glist[e.RowIndex].Pallet_No;
+            if (e.RowIndex >= 0)
+                palletno = Glist[e.RowIndex].Pallet_No;
             //gVO = Glist.Find(palletno => palletno.Pallet_No == dgvPRM_PRF_2[0,dgvPRM_PRF_2.CurrentRow.Index].Value.ToString());
         }
 
         private void btnWoEnd_Click(object sender, EventArgs e)
         {
-            if (new PRM_PRF_Service().Update002_WO(workorderno))
+            if (workorderno != null)
             {
-
+                if (new PRM_PRF_Service().Update002_WO(workorderno))
+                {
+                    AutoClosingMessageBox.Show("마감 완료", "마감완료", 1000);
+                    RefreshState();
+                }
             }
         }
 
         private void btnPalletEnd_Click(object sender, EventArgs e)
         {
-            if (new PRM_PRF_Service().Update002_Pallet(palletno))
+            if (palletno != null)
             {
-
+                if (new PRM_PRF_Service().Update002_Pallet(palletno))
+                {
+                    AutoClosingMessageBox.Show("마감 완료", "마감완료", 1000);
+                    RefreshState_2();
+                }
             }
         }
 

@@ -47,7 +47,8 @@ namespace Final.PRM_PRF
 
         private void dgvPRM_PRF_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            vo = list[e.RowIndex];
+            if (e.RowIndex >= 0)
+                vo = list[e.RowIndex];
         }
 
         private void btnProcess_Click(object sender, EventArgs e)
