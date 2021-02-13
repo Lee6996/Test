@@ -145,6 +145,7 @@ namespace Final
                 TabPage newTab = new TabPage();
                 newTab.Text = e.Node.Text;
                 newTab.Tag = e.Node.Name;
+                newTab.Font = new Font("나눔스퀘어OTF", 10);
                 tabControl2.TabPages.Add(newTab);
                 tabControl2.SelectedTab = newTab;
 
@@ -281,9 +282,14 @@ namespace Final
             //((sender as Form).Tag as TabPage).Dispose();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
