@@ -39,5 +39,6 @@ namespace FinalVO
         public string Wc_Name { get; set; }
         public string Item_Name { get; set; }
         public string Process_Code { get; set; }
+        public string Process_name { get; set; }
     }
 }

@@ -28,8 +28,16 @@ namespace Final.PRM_PRF
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            PopUp.frm_PRM_PRF_001_PopUp frm = new PopUp.frm_PRM_PRF_001_PopUp(vo);
-            frm.ShowDialog();
+            if(vo != null)
+            {
+                PopUp.frm_PRM_PRF_001_PopUp frm = new PopUp.frm_PRM_PRF_001_PopUp(vo);
+                frm.ShowDialog();
+            }
+            else
+            {
+                AutoClosingMessageBox.Show("수정하실 내용을 선택 후 버튼을 눌러주세요.", "3초후 종료...", 3000);
+            }
+
         }
 
         private void btnTimeSearch_Click(object sender, EventArgs e)
@@ -81,6 +89,7 @@ namespace Final.PRM_PRF
             CommonUtil.AddGridTextColumn(dgv, "작업지시상태", "Wo_Status", 150);
             CommonUtil.AddGridTextColumn(dgv, "품목코드", "Item_Code", 150);
             CommonUtil.AddGridTextColumn(dgv, "품목명", "Item_Name", 200);
+            CommonUtil.AddGridTextColumn(dgv, "공정명", "Process_name", 100);
             CommonUtil.AddGridTextColumn(dgv, "작업장", "Wc_Name", 150);
             CommonUtil.AddGridTextColumn(dgv, "투입수량", "In_Qty_Main", 150);
             CommonUtil.AddGridTextColumn(dgv, "산출수량", "Out_Qty_Main", 150);
@@ -89,7 +98,7 @@ namespace Final.PRM_PRF
 
         private void RefreshState()
         {
-            list = new PRM_PRF_Service().GetWorkOrderVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), txtProcess.Text, txtWorkCenterDetail.Text);
+            list = new PRM_PRF_Service().GetWorkOrderVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), txtProcess.Text, txtWorkCenter.Text);
             dgvPRM_PRF.DataSource = list;
         }
 

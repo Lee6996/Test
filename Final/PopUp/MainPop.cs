@@ -28,34 +28,34 @@ namespace Final.PRM_PRF.PopUp
                 case "WC":
                     lblType.Text = "작업장 목록";
                     SettingDGV(dgvMainPop, type);
-                    new SelectDAC().SelectForPopup<WC>(type);
+                    dgvMainPop.DataSource = new SelectDAC().SelectForPopup<WC>(type);
                     break;
 
                 case "Item":
                     lblType.Text = "품목 목록";
                     SettingDGV(dgvMainPop, type);
-                    new SelectDAC().SelectForPopup<Item>(type);
+                    dgvMainPop.DataSource = new SelectDAC().SelectForPopup<Item>(type);
                     break;
 
                 case "GV":
                     lblType.Text = "대차 목록";
                     SettingDGV(dgvMainPop, type);
-                    new SelectDAC().SelectForPopup<GV>(type);
+                    dgvMainPop.DataSource = new SelectDAC().SelectForPopup<GV>(type);
                     break;
                 case "GVGroup":
                     lblType.Text = "대차그룹 목록";
                     SettingDGV(dgvMainPop, type);
-                    new SelectDAC().SelectForPopup<GVGroup>(type);
+                    dgvMainPop.DataSource = new SelectDAC().SelectForPopup<GVGroup>(type);
                     break;
                 case "User":
                     lblType.Text = "작업자 목록";
                     SettingDGV(dgvMainPop);
-                    new SelectDAC().SelectForPopup<User>(type);
+                    dgvMainPop.DataSource = new SelectDAC().SelectForPopup<User>(type);
                     break;
                 case "Process":
                     lblType.Text = "공정 목록";
-                    SettingDGV(dgvMainPop);
-                    new SelectDAC().SelectForPopup<Process>(type);
+                    SettingDGV(dgvMainPop, type);
+                    dgvMainPop.DataSource = new SelectDAC().SelectForPopup<Process>(type);
                     break;
 
             }
@@ -90,6 +90,10 @@ namespace Final.PRM_PRF.PopUp
             if(SCode == null || SName == null)
             {
                 SCode = null; SName = null;
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
             }
         }
     }

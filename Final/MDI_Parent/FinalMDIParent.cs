@@ -117,6 +117,9 @@ namespace Final
 
         private void FinalMDIParent_Load(object sender, EventArgs e)
         {
+            LoginInfoVO.User_ID = "Test";
+            LoginInfoVO.User_Name = "Test";
+
             TreeNode mainNode = new TreeNode();
             mainNode.Name = "product";
             mainNode.Text = "Product Categories";
