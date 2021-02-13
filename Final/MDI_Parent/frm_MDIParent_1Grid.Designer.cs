@@ -63,7 +63,7 @@ namespace Final.MDI_Parent
             // btnTimeSearch
             // 
             this.btnTimeSearch.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnTimeSearch.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnTimeSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnTimeSearch.Location = new System.Drawing.Point(424, 25);
             this.btnTimeSearch.Name = "btnTimeSearch";
             this.btnTimeSearch.Size = new System.Drawing.Size(44, 25);
@@ -74,16 +74,16 @@ namespace Final.MDI_Parent
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(314, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 13);
+            this.label4.Size = new System.Drawing.Size(14, 15);
             this.label4.TabIndex = 4;
             this.label4.Text = "~";
             // 
             // dtpTo
             // 
-            this.dtpTo.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtpTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTo.Location = new System.Drawing.Point(332, 26);
             this.dtpTo.Name = "dtpTo";
@@ -92,7 +92,7 @@ namespace Final.MDI_Parent
             // 
             // dtpFrom
             // 
-            this.dtpFrom.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtpFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFrom.Location = new System.Drawing.Point(226, 26);
             this.dtpFrom.Name = "dtpFrom";
@@ -102,10 +102,10 @@ namespace Final.MDI_Parent
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(12, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 18);
+            this.label2.Size = new System.Drawing.Size(99, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "조회조건 : Text";
             // 
@@ -133,17 +133,17 @@ namespace Final.MDI_Parent
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(34, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 13);
+            this.label6.Size = new System.Drawing.Size(55, 15);
             this.label6.TabIndex = 0;
             this.label6.Text = "생산의뢰";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
-            this.label5.Location = new System.Drawing.Point(34, 7);
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label5.Location = new System.Drawing.Point(9, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.Size = new System.Drawing.Size(145, 22);
             this.label5.TabIndex = 0;
             this.label5.Text = "조회내역";
             // 
@@ -159,19 +159,18 @@ namespace Final.MDI_Parent
             // 
             // frm_MDIParent_1Grid
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1266, 897);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Name = "frm_MDIParent_1Grid";
             this.Text = "frm_MDIParent_PRM_PRF";
             this.Load += new System.EventHandler(this.frm_MDIParent_1Grid_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel5.ResumeLayout(false);

@@ -278,7 +278,12 @@ namespace Final
 
         private void FinalMDIParent_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ((sender as Form).Tag as TabPage).Dispose();
+            //((sender as Form).Tag as TabPage).Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

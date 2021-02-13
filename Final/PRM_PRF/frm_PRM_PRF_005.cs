@@ -70,6 +70,7 @@ namespace Final.PRM_PRF
             CommonUtil.AddGridTextColumn(dgvPRM_PRF, "요입시간", "In_Time", 200);
             CommonUtil.AddGridTextColumn(dgvPRM_PRF, "중간시간", "Center_Time", 200);
             CommonUtil.AddGridTextColumn(dgvPRM_PRF, "요출시간", "Out_Time", 200);
+            RefreshState();
         }
 
         public void RefreshState()

@@ -74,12 +74,13 @@ namespace Final.PRM_PRF
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(156, 18);
+            this.label2.Size = new System.Drawing.Size(129, 20);
             this.label2.Text = "조회조건 : 비가동일자";
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dgvPRM_PRF);
+            this.panel5.Size = new System.Drawing.Size(1266, 962);
             this.panel5.Controls.SetChildIndex(this.panel6, 0);
             this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF, 0);
             // 
@@ -87,24 +88,24 @@ namespace Final.PRM_PRF
             // 
             this.dgvPRM_PRF.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPRM_PRF.Location = new System.Drawing.Point(6, 49);
+            this.dgvPRM_PRF.Location = new System.Drawing.Point(6, 57);
             this.dgvPRM_PRF.Name = "dgvPRM_PRF";
             this.dgvPRM_PRF.RowTemplate.Height = 23;
-            this.dgvPRM_PRF.Size = new System.Drawing.Size(1248, 763);
+            this.dgvPRM_PRF.Size = new System.Drawing.Size(1248, 880);
             this.dgvPRM_PRF.TabIndex = 31;
             // 
             // txtWorkCenterDetail
             // 
-            this.txtWorkCenterDetail.Location = new System.Drawing.Point(664, 26);
+            this.txtWorkCenterDetail.Location = new System.Drawing.Point(664, 30);
             this.txtWorkCenterDetail.Name = "txtWorkCenterDetail";
             this.txtWorkCenterDetail.Size = new System.Drawing.Size(100, 21);
             this.txtWorkCenterDetail.TabIndex = 27;
             // 
             // btnWorkCenter
             // 
-            this.btnWorkCenter.Location = new System.Drawing.Point(634, 24);
+            this.btnWorkCenter.Location = new System.Drawing.Point(634, 28);
             this.btnWorkCenter.Name = "btnWorkCenter";
-            this.btnWorkCenter.Size = new System.Drawing.Size(24, 23);
+            this.btnWorkCenter.Size = new System.Drawing.Size(24, 27);
             this.btnWorkCenter.TabIndex = 26;
             this.btnWorkCenter.Text = "...";
             this.btnWorkCenter.UseVisualStyleBackColor = true;
@@ -112,7 +113,7 @@ namespace Final.PRM_PRF
             // 
             // txtWorkCenter
             // 
-            this.txtWorkCenter.Location = new System.Drawing.Point(559, 26);
+            this.txtWorkCenter.Location = new System.Drawing.Point(559, 30);
             this.txtWorkCenter.Name = "txtWorkCenter";
             this.txtWorkCenter.Size = new System.Drawing.Size(69, 21);
             this.txtWorkCenter.TabIndex = 25;
@@ -120,18 +121,18 @@ namespace Final.PRM_PRF
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F);
-            this.label1.Location = new System.Drawing.Point(500, 28);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(500, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 18);
+            this.label1.Size = new System.Drawing.Size(45, 20);
             this.label1.TabIndex = 24;
             this.label1.Text = "작업장";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(1179, 25);
+            this.btnAdd.Location = new System.Drawing.Point(1133, 26);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(121, 27);
             this.btnAdd.TabIndex = 33;
             this.btnAdd.Text = "비가동 등록";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -139,14 +140,13 @@ namespace Final.PRM_PRF
             // 
             // frm_PRM_PRF_008
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
-            this.ClientSize = new System.Drawing.Size(1266, 897);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.ClientSize = new System.Drawing.Size(1266, 1035);
             this.Name = "frm_PRM_PRF_008";
             this.Load += new System.EventHandler(this.frm_PRM_PRF_008_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

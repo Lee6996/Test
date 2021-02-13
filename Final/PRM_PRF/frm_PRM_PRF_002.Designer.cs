@@ -71,14 +71,14 @@ namespace Final.PRM_PRF
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(141, 18);
+            this.label2.Size = new System.Drawing.Size(117, 20);
             this.label2.Text = "조회조건 : 생산일자";
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dgvPRM_PRF_1);
             this.panel5.Controls.Add(this.dgvPRM_PRF_2);
-            this.panel5.Size = new System.Drawing.Size(1266, 839);
+            this.panel5.Size = new System.Drawing.Size(1266, 979);
             this.panel5.Controls.SetChildIndex(this.panel8, 0);
             this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_2, 0);
             this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_1, 0);
@@ -86,7 +86,7 @@ namespace Final.PRM_PRF
             // 
             // label11
             // 
-            this.label11.Size = new System.Drawing.Size(65, 13);
+            this.label11.Size = new System.Drawing.Size(70, 15);
             this.label11.Text = "팔렛트 목록";
             // 
             // dgvPRM_PRF_2
@@ -99,7 +99,7 @@ namespace Final.PRM_PRF
             this.dgvPRM_PRF_2.Location = new System.Drawing.Point(3, 431);
             this.dgvPRM_PRF_2.Name = "dgvPRM_PRF_2";
             this.dgvPRM_PRF_2.RowTemplate.Height = 23;
-            this.dgvPRM_PRF_2.Size = new System.Drawing.Size(1248, 405);
+            this.dgvPRM_PRF_2.Size = new System.Drawing.Size(1248, 544);
             this.dgvPRM_PRF_2.TabIndex = 24;
             this.dgvPRM_PRF_2.Tag = "";
             this.dgvPRM_PRF_2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_2_CellDoubleClick);
@@ -111,19 +111,19 @@ namespace Final.PRM_PRF
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPRM_PRF_1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPRM_PRF_1.Location = new System.Drawing.Point(6, 48);
+            this.dgvPRM_PRF_1.Location = new System.Drawing.Point(12, 58);
             this.dgvPRM_PRF_1.Name = "dgvPRM_PRF_1";
             this.dgvPRM_PRF_1.RowTemplate.Height = 23;
-            this.dgvPRM_PRF_1.Size = new System.Drawing.Size(1248, 345);
+            this.dgvPRM_PRF_1.Size = new System.Drawing.Size(1248, 330);
             this.dgvPRM_PRF_1.TabIndex = 23;
             this.dgvPRM_PRF_1.Tag = "";
             this.dgvPRM_PRF_1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_1_CellClick);
             // 
             // btnWoEnd
             // 
-            this.btnWoEnd.Location = new System.Drawing.Point(1029, 27);
+            this.btnWoEnd.Location = new System.Drawing.Point(1029, 31);
             this.btnWoEnd.Name = "btnWoEnd";
-            this.btnWoEnd.Size = new System.Drawing.Size(92, 23);
+            this.btnWoEnd.Size = new System.Drawing.Size(92, 27);
             this.btnWoEnd.TabIndex = 9;
             this.btnWoEnd.Text = "작업지시 마감";
             this.btnWoEnd.UseVisualStyleBackColor = true;
@@ -131,9 +131,9 @@ namespace Final.PRM_PRF
             // 
             // btnPalletEnd
             // 
-            this.btnPalletEnd.Location = new System.Drawing.Point(1150, 27);
+            this.btnPalletEnd.Location = new System.Drawing.Point(1150, 31);
             this.btnPalletEnd.Name = "btnPalletEnd";
-            this.btnPalletEnd.Size = new System.Drawing.Size(92, 23);
+            this.btnPalletEnd.Size = new System.Drawing.Size(92, 27);
             this.btnPalletEnd.TabIndex = 10;
             this.btnPalletEnd.Text = "팔렛트 마감";
             this.btnPalletEnd.UseVisualStyleBackColor = true;
@@ -141,8 +141,8 @@ namespace Final.PRM_PRF
             // 
             // frm_PRM_PRF_002
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
-            this.ClientSize = new System.Drawing.Size(1266, 912);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.ClientSize = new System.Drawing.Size(1266, 1052);
             this.Name = "frm_PRM_PRF_002";
             this.Load += new System.EventHandler(this.frm_PRM_PRF_002_Load);
             this.panel4.ResumeLayout(false);
