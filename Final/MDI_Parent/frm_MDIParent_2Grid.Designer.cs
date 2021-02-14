@@ -30,6 +30,7 @@ namespace Final.MDI_Parent
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
@@ -37,7 +38,6 @@ namespace Final.MDI_Parent
             this.btnTimeSearch = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,18 @@ namespace Final.MDI_Parent
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1266, 806);
             this.panel5.TabIndex = 21;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label11.Location = new System.Drawing.Point(0, 378);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(260, 26);
+            this.label11.TabIndex = 70;
+            this.label11.Text = "▶Text";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -88,7 +100,7 @@ namespace Final.MDI_Parent
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(353, 20);
+            this.label4.Location = new System.Drawing.Point(355, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 17);
             this.label4.TabIndex = 4;
@@ -133,18 +145,6 @@ namespace Final.MDI_Parent
             this.label5.TabIndex = 69;
             this.label5.Text = "▶조회내역";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label11.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(0, 378);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(260, 26);
-            this.label11.TabIndex = 70;
-            this.label11.Text = "▶Text";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frm_MDIParent_2Grid
             // 

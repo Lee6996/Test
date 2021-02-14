@@ -71,7 +71,7 @@ namespace Final.MDI_Parent
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(353, 20);
+            this.label4.Location = new System.Drawing.Point(355, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 17);
             this.label4.TabIndex = 4;
