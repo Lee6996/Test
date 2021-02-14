@@ -26,7 +26,7 @@ namespace Final.KPI_RPT
         }
         private void btn_Process_Click(object sender, EventArgs e)
         {
-            MainPop frm = new MainPop("WC")
+            MainPop frm = new MainPop("Process")
             {
                 StartPosition = FormStartPosition.CenterParent
             };
@@ -38,7 +38,7 @@ namespace Final.KPI_RPT
         }
         private void btn_WorkCenter_Click(object sender, EventArgs e)
         {
-            MainPop frm = new MainPop("Process")
+            MainPop frm = new MainPop("WC")
             {
                 StartPosition = FormStartPosition.CenterParent
             };
@@ -70,10 +70,10 @@ namespace Final.KPI_RPT
         {
             WorkDayService service = new WorkDayService();
 
-            List<WorkDayVO> list = service.SelectWorkDay(dateTimePicker1.Text);
+            //List<WorkDayVO> list = service.SelectWorkDay(dateTimePicker1.Text);
 
-            dgv_KPI_MONTH.DataSource = null;
-            dgv_KPI_MONTH.DataSource = list;
+            //dgv_KPI_MONTH.DataSource = null;
+            //dgv_KPI_MONTH.DataSource = list;
 
         }
     }

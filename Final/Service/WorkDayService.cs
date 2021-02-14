@@ -8,21 +8,25 @@ using System.Threading.Tasks;
 
 namespace Final.Service
 {
-    public class WorkDayService
+    class WorkDayService
     {
         SelectDAC dac;
-        public List<WorkDayVO> SelectWorkDay(string Prd_Date)
+        public WorkDayService()
         {
-            return dac.SelectWorkDay(Prd_Date);
+            dac = new SelectDAC();
         }
-        public List<WorkItemVO> SelectWorkItem(string Prd_Date)
+        public List<WorkDayVO> SelectWorkDay(string Prd_Date_from, string Prd_Date_to, string Pcode, string Wcode)
         {
-            return dac.SelectWorkItem(Prd_Date);
+            return dac.SelectWorkDay(Prd_Date_from, Prd_Date_to, Pcode, Wcode);
+        }
+        public List<WorkItemVO> SelectWorkItem(string Prd_Date_from, string Prd_Date_to,string Wcode)
+        {
+            return dac.SelectWorkItem(Prd_Date_from, Prd_Date_to, Wcode);
         }
 
-        public List<WorkBoxingVO> SelectWorkBoxing(string Prd_Date)
+        public List<WorkBoxingVO> SelectWorkBoxing(string Prd_Date_from, string Prd_Date_to, string Wcode)
         {
-            return dac.SelectWorkBoxing(Prd_Date);
+            return dac.SelectWorkBoxing(Prd_Date_from, Prd_Date_to, Wcode);
         }
     }
 
