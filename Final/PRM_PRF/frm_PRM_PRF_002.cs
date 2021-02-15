@@ -85,9 +85,9 @@ namespace Final.PRM_PRF
             CommonUtil.AddGridTextColumn(dgv, "품목코드", "Item_Code", 200);
             CommonUtil.AddGridTextColumn(dgv, "품목명", "Item_Name", 200);
             CommonUtil.AddGridTextColumn(dgv, "작업장", "Wc_Name", 200);
-            CommonUtil.AddGridTextColumn(dgv, "투입수량", "In_Qty_Main", 100, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
-            CommonUtil.AddGridTextColumn(dgv, "산출수량", "Out_Qty_Main", 100, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
-            CommonUtil.AddGridTextColumn(dgv, "생산수량", "Prd_Qty", 100, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
+            CommonUtil.AddGridTextColumn(dgv, "투입수량", "In_Qty_Main", 200);
+            CommonUtil.AddGridTextColumn(dgv, "산출수량", "Out_Qty_Main", 200);
+            CommonUtil.AddGridTextColumn(dgv, "생산수량", "Prd_Qty", 200);
         }
 
         private void RefreshState()
@@ -107,10 +107,10 @@ namespace Final.PRM_PRF
             //dgv.Columns.Add(new DataGridViewCheckBoxColumn());
             CommonUtil.AddGridTextColumn(dgv, "팔렛트번호", "Pallet_No", 200);
             CommonUtil.AddGridTextColumn(dgv, "등급코드", "Grade_Detail_Code", 200);
-            CommonUtil.AddGridTextColumn(dgv, "등급명", "Grade_Detail_Name", 250);
+            CommonUtil.AddGridTextColumn(dgv, "등급명", "Grade_Detail_Name", 200);
             CommonUtil.AddGridTextColumn(dgv, "포장등급코드", "Boxing_Grade_Code", 200);
             CommonUtil.AddGridTextColumn(dgv, "포장등급명", "Boxing_Grade_Name", 200);
-            CommonUtil.AddGridTextColumn(dgv, "생산수량", "In_Qty", 100, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
+            CommonUtil.AddGridTextColumn(dgv, "생산수량", "In_Qty", 200);
         }
 
         private void RefreshState_2()
