@@ -92,11 +92,11 @@ namespace Final.MDS_SDS
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(0, 9);
+            this.label6.Location = new System.Drawing.Point(3, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 18);
+            this.label6.Size = new System.Drawing.Size(87, 18);
             this.label6.TabIndex = 11;
-            this.label6.Text = "▶ 품목 등록";
+            this.label6.Text = "▶품목 등록";
             // 
             // panel1
             // 

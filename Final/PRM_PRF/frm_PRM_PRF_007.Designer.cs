@@ -66,9 +66,10 @@ namespace Final.PRM_PRF
             this.pnGVState.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnGVState.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pnGVState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnGVState.Location = new System.Drawing.Point(12, 68);
             this.pnGVState.Name = "pnGVState";
-            this.pnGVState.Size = new System.Drawing.Size(973, 891);
+            this.pnGVState.Size = new System.Drawing.Size(973, 899);
             this.pnGVState.TabIndex = 2;
             // 
             // dgvPRM_PRF
@@ -79,7 +80,7 @@ namespace Final.PRM_PRF
             this.dgvPRM_PRF.Location = new System.Drawing.Point(991, 68);
             this.dgvPRM_PRF.Name = "dgvPRM_PRF";
             this.dgvPRM_PRF.RowTemplate.Height = 23;
-            this.dgvPRM_PRF.Size = new System.Drawing.Size(266, 891);
+            this.dgvPRM_PRF.Size = new System.Drawing.Size(270, 899);
             this.dgvPRM_PRF.TabIndex = 24;
             // 
             // label3
@@ -87,9 +88,9 @@ namespace Final.PRM_PRF
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Brown;
-            this.label3.Location = new System.Drawing.Point(987, 16);
+            this.label3.Location = new System.Drawing.Point(930, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 13);
+            this.label3.Size = new System.Drawing.Size(238, 17);
             this.label3.TabIndex = 25;
             this.label3.Text = "10초마다 자동으로 새로고침 됩니다.";
             // 
@@ -102,11 +103,11 @@ namespace Final.PRM_PRF
             // 
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
-            this.btnRefresh.Font = new System.Drawing.Font("나눔스퀘어OTF", 10F);
+            this.btnRefresh.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRefresh.Location = new System.Drawing.Point(1180, 9);
+            this.btnRefresh.Location = new System.Drawing.Point(1174, 8);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(77, 27);
+            this.btnRefresh.Size = new System.Drawing.Size(80, 30);
             this.btnRefresh.TabIndex = 34;
             this.btnRefresh.Text = "새로고침";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -114,8 +115,7 @@ namespace Final.PRM_PRF
             // 
             // frm_PRM_PRF_007
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1266, 972);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label3);
@@ -123,7 +123,7 @@ namespace Final.PRM_PRF
             this.Controls.Add(this.pnGVState);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
+            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "frm_PRM_PRF_007";
             this.Text = "frm_PRM_PRF_007";
             this.Load += new System.EventHandler(this.frm_PRM_PRF_007_Load);
