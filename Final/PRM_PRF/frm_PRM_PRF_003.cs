@@ -60,13 +60,13 @@ namespace Final.PRM_PRF
             CommonUtil.AddGridTextColumn(dgv, "품목코드", "Item_Code", 230);
             CommonUtil.AddGridTextColumn(dgv, "품목명", "Item_Name", 230);
             CommonUtil.AddGridTextColumn(dgv, "팔렛트번호", "Pallet_No", 210);
-            CommonUtil.AddGridTextColumn(dgv, "입고수량", "In_Qty", 100,textAlign : DataGridViewContentAlignment.MiddleRight, headerAlign : DataGridViewContentAlignment.MiddleRight);
+            CommonUtil.AddGridTextColumn(dgv, "입고수량", "In_Qty", 100, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
             CommonUtil.AddGridTextColumn(dgv, "마감시간", "Closed_Time", 290);
         }
 
         private void RefreshState()
         {
-            dgvPRM_PRF.DataSource = new PRM_PRF_Service().GetSelectReceivingListVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(),txtItem.Text);
+            dgvPRM_PRF.DataSource = new PRM_PRF_Service().GetSelectReceivingListVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), txtItem.Text);
         }
         #endregion
 

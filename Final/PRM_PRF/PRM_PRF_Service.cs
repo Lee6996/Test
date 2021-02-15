@@ -48,7 +48,7 @@ namespace Final.PRM_PRF
 
         #region 005
 
-        public List<GVStatusVO> GetGVVOList(string GV_Group = null, string Item_Code = null)
+        public List<GVStatusVO> GetGVVOList(string GV_Group, string Item_Code)
         {
             return new SelectDAC().SelectGVStatus(GV_Group, Item_Code);
         }
