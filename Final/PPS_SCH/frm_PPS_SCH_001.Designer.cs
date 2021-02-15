@@ -30,8 +30,6 @@ namespace Final.PPS_SCH
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -109,8 +107,6 @@ namespace Final.PPS_SCH
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.dgv_WorkOrder);
             this.panel5.Controls.Add(this.dgv_Req);
@@ -121,27 +117,6 @@ namespace Final.PPS_SCH
             this.panel5.Size = new System.Drawing.Size(1335, 797);
             this.panel5.TabIndex = 16;
             this.panel5.Tag = "";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(29, 411);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(711, 13);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "생산의뢰번호 - 작업지시상태 - 작업지시번호 - 작업지시일자 - 품목코드 - 품목명 - 작업장명 - 계획수량 - 투입수량 - 산출수량 - 생상수량" +
-    " - 비고";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.Location = new System.Drawing.Point(29, 64);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(619, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "선택 - No - 생산의뢰번호 - 의뢰일자 - 품목코드 - 품목명 프로젝트명 - 거래처명 - 영업담당 - 생산의롸상태 - 생산완료예정일";
             // 
             // panel8
             // 
@@ -279,7 +254,6 @@ namespace Final.PPS_SCH
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -298,8 +272,6 @@ namespace Final.PPS_SCH
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label7;

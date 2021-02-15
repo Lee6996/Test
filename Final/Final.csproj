@@ -66,6 +66,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,6 +78,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DashBoard.Designer.cs">
+      <DependentUpon>frm_DashBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="KPI_RPT\frm_KPI_RPT_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +155,12 @@
     </Compile>
     <Compile Include="MDS_CDS\frm_MDS_CDS_005.Designer.cs">
       <DependentUpon>frm_MDS_CDS_005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_005_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_005_1.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_005_1.cs</DependentUpon>
     </Compile>
     <Compile Include="MDS_CDS\frm_MDS_CDS_006.cs">
       <SubType>Form</SubType>
@@ -291,12 +304,7 @@
     <Compile Include="PPS_SCH\frm_PPS_SCH_003.Designer.cs">
       <DependentUpon>frm_PPS_SCH_003.cs</DependentUpon>
     </Compile>
-    <Compile Include="PPS_SCH\frm_PPS_SCH_004.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PPS_SCH\frm_PPS_SCH_004.Designer.cs">
-      <DependentUpon>frm_PPS_SCH_004.cs</DependentUpon>
-    </Compile>
+    <Compile Include="PPS_SCH\MySqlConnection.cs" />
     <Compile Include="PRM_PRF\frm_PRM_PRF_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +383,7 @@
     <Compile Include="Service\MenuService.cs" />
     <Compile Include="Service\MoldService.cs" />
     <Compile Include="Service\ProcessService.cs" />
+    <Compile Include="Service\UserService.cs" />
     <Compile Include="Service\WorkCenterService.cs" />
     <Compile Include="Service\WorkDayService.cs" />
     <Compile Include="Service\WorkOrderService.cs" />
@@ -464,6 +473,9 @@
     </Compile>
     <Compile Include="MSS_SYS\ScreenService.cs" />
     <Compile Include="MSS_SYS\SysNoticeService.cs" />
+    <EmbeddedResource Include="frm_DashBoard.resx">
+      <DependentUpon>frm_DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_001.resx">
       <DependentUpon>frm_KPI_RPT_001.cs</DependentUpon>
     </EmbeddedResource>
@@ -488,6 +500,9 @@
       <DependentUpon>frm_MDS_CDS_004_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_005.resx" />
+    <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_005_1.resx">
+      <DependentUpon>frm_MDS_CDS_005_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_006.resx" />
     <EmbeddedResource Include="MDS_ODS\frm_MDS_ODS_001.resx" />
     <EmbeddedResource Include="MDS_ODS\frm_MDS_ODS_001_1.resx" />
@@ -529,9 +544,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PPS_SCH\frm_PPS_SCH_003.resx">
       <DependentUpon>frm_PPS_SCH_003.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PPS_SCH\frm_PPS_SCH_004.resx">
-      <DependentUpon>frm_PPS_SCH_004.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_001.resx">
       <DependentUpon>frm_PRM_PRF_001.cs</DependentUpon>

@@ -62,6 +62,8 @@ namespace Final.MDS_CDS
                 searchfrm.txtCodeText = dgvDef[0, dgvDef.CurrentRow.Index].Value.ToString();
                 searchfrm.txtNameText = dgvDef[1, dgvDef.CurrentRow.Index].Value.ToString();
             }
+            frm_MDS_CDS_002 search = new frm_MDS_CDS_002();
+            search.Search();
             this.Close();
         }
 

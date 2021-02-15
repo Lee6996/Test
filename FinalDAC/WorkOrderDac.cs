@@ -71,7 +71,7 @@ namespace FinalDAC
         }
         public List<WorkOrderVO> listWork(string dtpFrom, string dtpTo)
         {
-            string sql = " SELECT * from WorkOrder where Prd_Date between @dtpFrom and @dtpTo";
+            string sql = " SELECT * from View_WorkOrder where Prd_Date between @dtpFrom and @dtpTo";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -88,7 +88,7 @@ namespace FinalDAC
         }
         public List<WorkOrderVO> listWork(string dtpFrom, string dtpTo, string Wc_Code)
         {
-            string sql = " SELECT * from WorkOrder where Prd_Date between @dtpFrom and @dtpTo and Wc_Code = @Wc_Code";
+            string sql = " SELECT * from View_WorkOrder where Prd_Date between @dtpFrom and @dtpTo and Wc_Code = @Wc_Code";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -103,9 +103,29 @@ namespace FinalDAC
                 return list;
             }
         }
+        public List<WorkOrderVO> listWork(string dtpFrom, string dtpTo, string Wc_Code=null, string Status)
+        {
+            string sql = " SELECT * from View_WorkOrder where Prd_Date between @dtpFrom and @dtpTo and Status = @Status";
+
+            if (!string.IsNullOrEmpty(Wc_Code)) sql += " and Wc_Code = @Wc_Code";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                cmd.Parameters.AddWithValue("@Wc_Code", Wc_Code);
+                cmd.Parameters.AddWithValue("@Status", Status);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkOrderVO> list = Helper.DataReaderMapToList<WorkOrderVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
         public List<WorkReqVO> listReq(string dtpFrom, string dtpTo)
         {
-            string sql = " SELECT * from Wo_Req where Prd_Plan_Date between @dtpFrom and @dtpTo";
+            string sql = " SELECT * from View_Wo_Req where Prd_Plan_Date between @dtpFrom and @dtpTo";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {

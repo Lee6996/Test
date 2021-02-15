@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final.PPS_SCH
+namespace Final
 {
-    public partial class frm_PPS_SCH_004 : Final.KPI_RPT.KPI_RPT_MDIParent
+    public partial class frm_DashBoard : Form
     {
-        public frm_PPS_SCH_004()
+        public frm_DashBoard()
         {
             InitializeComponent();
         }
