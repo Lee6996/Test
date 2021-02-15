@@ -391,6 +391,12 @@
     <Compile Include="UserCountrol\PlaceholderTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserCountrol\ucGVCurrentState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCountrol\ucGVCurrentState.Designer.cs">
+      <DependentUpon>ucGVCurrentState.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\AutoClosingMessageBox.cs" />
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="MSS_CON\frm_MSS_CON_002_1.cs">
@@ -627,6 +633,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MSS_SYS\frm_MSS_SYS_004.resx">
       <DependentUpon>frm_MSS_SYS_004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCountrol\ucGVCurrentState.resx">
+      <DependentUpon>ucGVCurrentState.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
