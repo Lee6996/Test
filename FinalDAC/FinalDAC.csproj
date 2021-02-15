@@ -54,6 +54,7 @@
     <Compile Include="Def_MiDAC.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="ItemInfoDAC.cs" />
+    <Compile Include="MoldDAC.cs" />
     <Compile Include="PRM_PRF_DAC.cs" />
     <Compile Include="ScreenDAC.cs" />
     <Compile Include="SysNoticeDAC.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="SelectDAC.cs" />
     <Compile Include="UserDAC.cs" />
     <Compile Include="UserGroupDAC.cs" />
+    <Compile Include="WorkOrderDac.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

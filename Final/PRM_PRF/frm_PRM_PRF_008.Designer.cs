@@ -68,7 +68,7 @@ namespace Final.PRM_PRF
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(129, 20);
+            this.label2.Size = new System.Drawing.Size(156, 18);
             this.label2.Text = "조회조건 : 비가동일자";
             // 
             // panel5
@@ -81,6 +81,9 @@ namespace Final.PRM_PRF
             // 
             // dgvPRM_PRF
             // 
+            this.dgvPRM_PRF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPRM_PRF.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPRM_PRF.Location = new System.Drawing.Point(3, 3);
@@ -119,7 +122,7 @@ namespace Final.PRM_PRF
             this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F);
             this.label1.Location = new System.Drawing.Point(652, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 20);
+            this.label1.Size = new System.Drawing.Size(53, 18);
             this.label1.TabIndex = 24;
             this.label1.Text = "작업장";
             // 

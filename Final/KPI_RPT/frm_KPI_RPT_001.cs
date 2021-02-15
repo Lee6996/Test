@@ -11,17 +11,17 @@ using System.Windows.Forms;
 
 namespace Final.KPI_RPT
 {
-    public partial class frm_KPI_RPT_1 : Final.KPI_RPT.KPI_RPT_MDIParent
+    public partial class frm_KPI_RPT_001 : Final.KPI_RPT.KPI_RPT_MDIParent
     {
         public string txtPNameText { get { return txtPCodeText.Text; } set { txtPCodeText.Text = value; } }
         public string txtWNameText { get { return txtWCodeText.Text; } set { txtWCodeText.Text = value; } }
 
-        public frm_KPI_RPT_1()
+        public frm_KPI_RPT_001()
         {
             InitializeComponent();
         }
 
-        private void frm_KPI_RPT_1_Load(object sender, EventArgs e)
+        private void frm_KPI_RPT_001_Load(object sender, EventArgs e)
         {
             DataLoad();
         }
@@ -39,13 +39,13 @@ namespace Final.KPI_RPT
             CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "시간당생산량", "PrdQty_Per_Hour", 120);
             CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "비가동시간", "Nop_Check_Time", 120);
 
-            GetData();
+           // GetData();
         }
         private void GetData()
         {
             WorkDayService service = new WorkDayService();
 
-            List<WorkDayVO> list = service.SelectWorkDay(dateTimePicker1.Text);
+            List<WorkDayVO> list = service.SelectWorkDay(dateTimePicker1.Text, dateTimePicker2.Text, txtPCodeText.Text, txtWCodeText.Text);
 
             dgv_KPI_DAY.DataSource = null;
             dgv_KPI_DAY.DataSource = list;
@@ -53,7 +53,7 @@ namespace Final.KPI_RPT
         }
         private void btn_Process_Click(object sender, EventArgs e)
         {
-            MainPop frm = new MainPop("WC")
+            MainPop frm = new MainPop("Process")
             {
                 StartPosition = FormStartPosition.CenterParent
             };
@@ -65,7 +65,7 @@ namespace Final.KPI_RPT
         }
         private void btn_WorkCenter_Click(object sender, EventArgs e)
         {
-            MainPop frm = new MainPop("Process")
+            MainPop frm = new MainPop("WC")
             {
                 StartPosition = FormStartPosition.CenterParent
             };
@@ -75,6 +75,20 @@ namespace Final.KPI_RPT
                 txtWCodeText.Text = frm.SCode;
 
             }
+        }
+
+        private void txtWCodeText_TextChanged(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        private void txtPCodeText_TextChanged(object sender, EventArgs e)
+        {
+            GetData();
+        }
+        private void button22_Click(object sender, EventArgs e)
+        {
+            GetData();
         }
     }
 }

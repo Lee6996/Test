@@ -41,4 +41,9 @@ namespace FinalVO
         public string Process_Code { get; set; }
         public string Process_Name { get; set; }
     }
+    public class Mold
+    {
+        public string Mold_Code { get; set; }
+        public string Mold_Name { get; set; }
+    }
 }

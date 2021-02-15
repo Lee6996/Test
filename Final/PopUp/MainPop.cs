@@ -57,6 +57,11 @@ namespace Final.PRM_PRF.PopUp
                     SettingDGV(dgvMainPop, type);
                     dgvMainPop.DataSource = new SelectDAC().SelectForPopup<Process>(type);
                     break;
+                case "Mold":
+                    lblType.Text = "금형 목록";
+                    SettingDGV(dgvMainPop, type);
+                    dgvMainPop.DataSource = new SelectDAC().SelectForPopup<Mold>(type);
+                    break;
 
             }
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,20 @@ namespace Final
 {
     public class CommonUtil
     {
+        public static void ComboBindingMold(ComboBox cbo, List<MoldGroupVO> list, string Category, bool blankItem = true, string blankText = "")
+        {
+            //var codeList = (from item in list where item.Category.Equals(Category) select item).ToList();
+            var codeList = list.ToList();
+            if (blankItem)
+            {
+                MoldGroupVO blank = new MoldGroupVO
+                { Mold_Group = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "Mold_Group";
+            cbo.ValueMember = "Mold_Group";
+            cbo.DataSource = codeList;
+        }
         public static void BindingComboBox(ComboBox cbo, DataTable dt, string valueMember, string displayMember, bool blankItemAdd = true)
         {
             if (blankItemAdd)

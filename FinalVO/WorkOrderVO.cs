@@ -41,4 +41,21 @@ namespace FinalVO
         public string Process_Code { get; set; }
         public string Process_name { get; set; }
     }
+    public class WorkReqVO
+    {
+        public string Wo_Req_No { get; set; }
+        public int Req_Seq { get; set; }
+        public string Item_Code { get; set; }
+        public int Req_Qty { get; set; }
+        public string Prd_Plan_Date { get; set; }
+        public string Cust_Name { get; set; }
+        public string Project_Name { get; set; }
+        public string Sale_Emp { get; set; }
+        public string Req_Status { get; set; }
+        public string Ins_Date { get; set; }
+        public string Ins_Emp { get; set; }
+        public string Up_Date { get; set; }
+        public string Up_Emp { get; set; }
+
+    }
 }
