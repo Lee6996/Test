@@ -30,7 +30,6 @@ namespace Final.MDS_SDS
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.cbLevel = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,7 +51,7 @@ namespace Final.MDS_SDS
             this.cbLevelGroup = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblLevel = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPLbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBoxpcs)).BeginInit();
@@ -62,7 +61,6 @@ namespace Final.MDS_SDS
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.cbLevel);
             this.panel1.Controls.Add(this.txtName);
@@ -82,19 +80,6 @@ namespace Final.MDS_SDS
             this.panel1.Size = new System.Drawing.Size(1340, 117);
             this.panel1.TabIndex = 102;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
-            this.btnRefresh.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRefresh.Location = new System.Drawing.Point(1087, 77);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 29);
-            this.btnRefresh.TabIndex = 47;
-            this.btnRefresh.Text = "초기화";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // cbLevel
             // 
             this.cbLevel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -102,7 +87,9 @@ namespace Final.MDS_SDS
             this.cbLevel.Items.AddRange(new object[] {
             "Level1",
             "Level2",
-            "Level3"});
+            "Level3",
+            "Level4",
+            "Level5"});
             this.cbLevel.Location = new System.Drawing.Point(488, 27);
             this.cbLevel.Name = "cbLevel";
             this.cbLevel.Size = new System.Drawing.Size(101, 23);
@@ -157,7 +144,7 @@ namespace Final.MDS_SDS
             this.button2.BackColor = System.Drawing.Color.DimGray;
             this.button2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(1168, 77);
+            this.button2.Location = new System.Drawing.Point(1247, 77);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 29);
             this.button2.TabIndex = 35;
@@ -318,18 +305,18 @@ namespace Final.MDS_SDS
             this.lblLevel.Size = new System.Drawing.Size(0, 17);
             this.lblLevel.TabIndex = 108;
             // 
-            // btnUpdate
+            // btnRefresh
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.DimGray;
-            this.btnUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnUpdate.Location = new System.Drawing.Point(1254, 77);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 29);
-            this.btnUpdate.TabIndex = 48;
-            this.btnUpdate.Text = "수정";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
+            this.btnRefresh.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnRefresh.Location = new System.Drawing.Point(1166, 77);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 29);
+            this.btnRefresh.TabIndex = 47;
+            this.btnRefresh.Text = "초기화";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // frm_MDS_SDS_001
             // 
@@ -384,6 +371,5 @@ namespace Final.MDS_SDS
         private System.Windows.Forms.ComboBox cbLevel;
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button btnUpdate;
     }
 }

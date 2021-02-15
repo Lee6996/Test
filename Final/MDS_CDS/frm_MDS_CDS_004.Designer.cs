@@ -29,52 +29,50 @@ namespace Final.MDS_CDS
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnInsert = new System.Windows.Forms.Button();
-            this.txtRemark = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dgvNopMi = new System.Windows.Forms.DataGridView();
-            this.txtNopMiCode = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dgvNopMa = new System.Windows.Forms.DataGridView();
-            this.txtNopMaCode = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.txtNopMiName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btndotdotdot = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtCode = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNopMi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNopMa)).BeginInit();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnInsert
+            // button2
             // 
-            this.btnInsert.BackColor = System.Drawing.Color.DimGray;
-            this.btnInsert.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnInsert.Location = new System.Drawing.Point(1258, 697);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(75, 29);
-            this.btnInsert.TabIndex = 95;
-            this.btnInsert.Text = "저장";
-            this.btnInsert.UseVisualStyleBackColor = false;
+            this.button2.BackColor = System.Drawing.Color.DimGray;
+            this.button2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button2.Location = new System.Drawing.Point(1254, 697);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 29);
+            this.button2.TabIndex = 95;
+            this.button2.Text = "수정";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // txtRemark
+            // textBox3
             // 
-            this.txtRemark.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtRemark.Location = new System.Drawing.Point(937, 651);
-            this.txtRemark.Multiline = true;
-            this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(228, 75);
-            this.txtRemark.TabIndex = 94;
+            this.textBox3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox3.Location = new System.Drawing.Point(937, 651);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(159, 75);
+            this.textBox3.TabIndex = 94;
             // 
             // label3
             // 
@@ -88,6 +86,26 @@ namespace Final.MDS_CDS
             this.label3.TabIndex = 93;
             this.label3.Text = "비고";
             // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox8.Location = new System.Drawing.Point(544, 69);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(356, 33);
+            this.textBox8.TabIndex = 92;
+            this.textBox8.Text = "▶ 비가동 상세분류";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(896, 323);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(172, 63);
+            this.label4.TabIndex = 91;
+            this.label4.Text = "        GridView    \r\n \r\n위 항목 조회정보 출력";
+            // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(825, 135);
@@ -97,23 +115,33 @@ namespace Final.MDS_CDS
             this.textBox7.TabIndex = 90;
             this.textBox7.Text = "비가동 상세분류 코드 / 비가동 상세분류명 / 정렬순번 /비고";
             // 
-            // dgvNopMi
+            // dataGridView2
             // 
-            this.dgvNopMi.BackgroundColor = System.Drawing.Color.White;
-            this.dgvNopMi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNopMi.Location = new System.Drawing.Point(558, 85);
-            this.dgvNopMi.Name = "dgvNopMi";
-            this.dgvNopMi.RowTemplate.Height = 23;
-            this.dgvNopMi.Size = new System.Drawing.Size(783, 557);
-            this.dgvNopMi.TabIndex = 89;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(544, 103);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(797, 539);
+            this.dataGridView2.TabIndex = 89;
             // 
-            // txtNopMiCode
+            // textBox4
             // 
-            this.txtNopMiCode.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtNopMiCode.Location = new System.Drawing.Point(722, 677);
-            this.txtNopMiCode.Name = "txtNopMiCode";
-            this.txtNopMiCode.Size = new System.Drawing.Size(147, 23);
-            this.txtNopMiCode.TabIndex = 87;
+            this.textBox4.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox4.Location = new System.Drawing.Point(0, 69);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(356, 33);
+            this.textBox4.TabIndex = 88;
+            this.textBox4.Text = "▶ 비가동 대분류";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox5.Location = new System.Drawing.Point(722, 707);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 23);
+            this.textBox5.TabIndex = 87;
             // 
             // label5
             // 
@@ -121,11 +149,21 @@ namespace Final.MDS_CDS
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(573, 680);
+            this.label5.Location = new System.Drawing.Point(555, 709);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(135, 17);
             this.label5.TabIndex = 86;
             this.label5.Text = "비가동 상세분류 코드";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(139, 323);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(172, 63);
+            this.label8.TabIndex = 85;
+            this.label8.Text = "        GridView    \r\n \r\n위 항목 조회정보 출력";
             // 
             // textBox2
             // 
@@ -136,23 +174,23 @@ namespace Final.MDS_CDS
             this.textBox2.TabIndex = 84;
             this.textBox2.Text = "비가동 대분류 코드 / 비가동 대분류 명 / 비고 / 사용유무";
             // 
-            // dgvNopMa
+            // dataGridView1
             // 
-            this.dgvNopMa.BackgroundColor = System.Drawing.Color.White;
-            this.dgvNopMa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNopMa.Location = new System.Drawing.Point(0, 85);
-            this.dgvNopMa.Name = "dgvNopMa";
-            this.dgvNopMa.RowTemplate.Height = 23;
-            this.dgvNopMa.Size = new System.Drawing.Size(549, 645);
-            this.dgvNopMa.TabIndex = 83;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 103);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(527, 627);
+            this.dataGridView1.TabIndex = 83;
             // 
-            // txtNopMaCode
+            // textBox1
             // 
-            this.txtNopMaCode.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtNopMaCode.Location = new System.Drawing.Point(722, 650);
-            this.txtNopMaCode.Name = "txtNopMaCode";
-            this.txtNopMaCode.Size = new System.Drawing.Size(147, 23);
-            this.txtNopMaCode.TabIndex = 81;
+            this.textBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Location = new System.Drawing.Point(722, 652);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 81;
             // 
             // label2
             // 
@@ -160,7 +198,7 @@ namespace Final.MDS_CDS
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(573, 653);
+            this.label2.Location = new System.Drawing.Point(568, 654);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 17);
             this.label2.TabIndex = 80;
@@ -188,135 +226,68 @@ namespace Final.MDS_CDS
             this.splitter1.TabIndex = 77;
             this.splitter1.TabStop = false;
             // 
-            // textBox4
+            // button3
             // 
-            this.textBox4.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox4.Location = new System.Drawing.Point(0, 55);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(1341, 31);
-            this.textBox4.TabIndex = 131;
-            this.textBox4.Text = "▶ 비가동 대분류                                                                        " +
-    "              │▶ 비가동 상세분류\r\n ";
+            this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button3.Location = new System.Drawing.Point(228, 22);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(37, 24);
+            this.button3.TabIndex = 98;
+            this.button3.Text = "...";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // txtNopMiName
+            // textBox6
             // 
-            this.txtNopMiName.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtNopMiName.Location = new System.Drawing.Point(722, 704);
-            this.txtNopMiName.Name = "txtNopMiName";
-            this.txtNopMiName.Size = new System.Drawing.Size(147, 23);
-            this.txtNopMiName.TabIndex = 133;
+            this.textBox6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox6.Location = new System.Drawing.Point(122, 22);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 23);
+            this.textBox6.TabIndex = 97;
             // 
-            // label4
+            // button1
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(573, 707);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 17);
-            this.label4.TabIndex = 132;
-            this.label4.Text = "비가동 상세분류 명";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
-            this.btnRefresh.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRefresh.Location = new System.Drawing.Point(1177, 697);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 29);
-            this.btnRefresh.TabIndex = 135;
-            this.btnRefresh.Text = "초기화";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.DimGray;
-            this.btnUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnUpdate.Location = new System.Drawing.Point(1258, 663);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 29);
-            this.btnUpdate.TabIndex = 134;
-            this.btnUpdate.Text = "수정";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btndotdotdot
-            // 
-            this.btndotdotdot.BackColor = System.Drawing.Color.DimGray;
-            this.btndotdotdot.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btndotdotdot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btndotdotdot.Location = new System.Drawing.Point(178, 19);
-            this.btndotdotdot.Name = "btndotdotdot";
-            this.btndotdotdot.Size = new System.Drawing.Size(35, 29);
-            this.btndotdotdot.TabIndex = 139;
-            this.btndotdotdot.Text = "...";
-            this.btndotdotdot.UseVisualStyleBackColor = false;
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtName.Location = new System.Drawing.Point(219, 20);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(125, 26);
-            this.txtName.TabIndex = 138;
-            // 
-            // txtCode
-            // 
-            this.txtCode.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtCode.Location = new System.Drawing.Point(109, 20);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(63, 26);
-            this.txtCode.TabIndex = 137;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.DimGray;
-            this.btnSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSearch.Location = new System.Drawing.Point(348, 19);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 29);
-            this.btnSearch.TabIndex = 136;
-            this.btnSearch.Text = "조회";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.Location = new System.Drawing.Point(272, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 29);
+            this.button1.TabIndex = 96;
+            this.button1.Text = "조회";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frm_MDS_CDS_004
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1341, 732);
-            this.Controls.Add(this.btndotdotdot);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtCode);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.txtNopMiName);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.txtRemark);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.dgvNopMi);
-            this.Controls.Add(this.txtNopMiCode);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dgvNopMa);
-            this.Controls.Add(this.txtNopMaCode);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
             this.Name = "frm_MDS_CDS_004";
             this.Text = "비가동 상세분류";
             this.Load += new System.EventHandler(this.frm_MDS_CDS_004_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNopMi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNopMa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,27 +295,25 @@ namespace Final.MDS_CDS
 
         #endregion
 
-        private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.TextBox txtRemark;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DataGridView dgvNopMi;
-        private System.Windows.Forms.TextBox txtNopMiCode;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dgvNopMa;
-        private System.Windows.Forms.TextBox txtNopMaCode;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox txtNopMiName;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btndotdotdot;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtCode;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button1;
     }
 }
