@@ -66,6 +66,7 @@ namespace Final.MDS_CDS
             this.btnInsert.TabIndex = 95;
             this.btnInsert.Text = "저장";
             this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // txtRemark
             // 
@@ -106,6 +107,7 @@ namespace Final.MDS_CDS
             this.dgvNopMi.RowTemplate.Height = 23;
             this.dgvNopMi.Size = new System.Drawing.Size(783, 557);
             this.dgvNopMi.TabIndex = 89;
+            this.dgvNopMi.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNopMi_CellContentDoubleClick);
             // 
             // txtNopMiCode
             // 
@@ -243,6 +245,7 @@ namespace Final.MDS_CDS
             this.btnUpdate.TabIndex = 134;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btndotdotdot
             // 
@@ -255,6 +258,7 @@ namespace Final.MDS_CDS
             this.btndotdotdot.TabIndex = 139;
             this.btndotdotdot.Text = "...";
             this.btndotdotdot.UseVisualStyleBackColor = false;
+            this.btndotdotdot.Click += new System.EventHandler(this.btndotdotdot_Click);
             // 
             // txtName
             // 
@@ -283,6 +287,7 @@ namespace Final.MDS_CDS
             this.btnSearch.TabIndex = 136;
             this.btnSearch.Text = "조회";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // frm_MDS_CDS_004
             // 

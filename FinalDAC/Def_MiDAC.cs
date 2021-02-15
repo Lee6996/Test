@@ -87,12 +87,13 @@ namespace FinalDAC
                     return false;
                 else
                 {
-                    sQuery = @"NSERT INTO Def_Mi_Master
+                    sQuery = @"INSERT INTO Def_Mi_Master
            (Def_Mi_Code
            ,Def_Ma_Code
            ,Def_Mi_Name
-           ,Use_YN
+          
            ,Remark
+ ,Use_YN
            ,Ins_Date
            ,Ins_Emp
            ,Up_Date
@@ -103,7 +104,7 @@ namespace FinalDAC
            ,@Def_Mi_Name
            ,@Remark
            ,'Y'  , getdate(),'test', getdate(), 'test')";// test수정필요.
-                    cmd.Parameters.AddWithValue("@Def_Ma_Code", vo.Def_Mi_Code);
+                    cmd.Parameters.AddWithValue("@Def_Ma_Code", vo.Def_Ma_Code);
                     cmd.Parameters.AddWithValue("@Remark", vo.Remark);
 
 
