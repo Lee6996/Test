@@ -2,6 +2,7 @@
 using FinalVO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,10 +17,10 @@ namespace Final.MDS_CDS.service
         {
             DAC = new Def_MaDAC();
         }
-        public List<Def_MaVO> GetAllDef_Ma_Master()
-        {
-            return SelectDAC.GetAllDef_Ma_Master();
-        }
+        //public List<Def_MaVO> GetAllDef_Ma_Master()
+        //{
+        //    return SelectDAC.GetAllDef_Ma_Master();
+        //}
 
         public bool GetUpdateDef_Ma_Master(string groupcode, string used)
         {
@@ -30,5 +31,27 @@ namespace Final.MDS_CDS.service
         {
             return DAC.InsertAllDef_Master(def);
         }
+
+        public DataTable DefBinding()
+        {
+            return DAC.DefBinding();
+        }
+
+        public List<Def_MaVO> GetAllDef_Ma_Master(string def)
+        {
+            return DAC.GetAllDef_Ma_Master(def);
+        }
+
+        public bool InsertDef_Ma(Def_MaVO vo)
+        {
+            return new Def_MaDAC().InsertDef_Ma(vo);
+        }
+
+        public bool UpdateDef_Ma(Def_MaVO vo)
+        {
+            return new Def_MaDAC().UpdateDef_Ma(vo);
+        }
+
+       
     }
 }
