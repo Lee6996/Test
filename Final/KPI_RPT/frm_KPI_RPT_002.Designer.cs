@@ -91,9 +91,9 @@ namespace Final.KPI_RPT
             this.panel5.Controls.Add(this.dgv_KPI_MONTH);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 67);
+            this.panel5.Location = new System.Drawing.Point(0, 57);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1266, 739);
+            this.panel5.Size = new System.Drawing.Size(1266, 749);
             this.panel5.TabIndex = 16;
             // 
             // label15
@@ -101,7 +101,7 @@ namespace Final.KPI_RPT
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(29, 64);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(1047, 12);
+            this.label15.Size = new System.Drawing.Size(1198, 17);
             this.label15.TabIndex = 5;
             this.label15.Text = "공정 - 작업장 - 품목 - 당월(목표량/생산량/생산시간/달성율/달성율가동율/일일생산량/생산일수) - 전월(목표량/생산량/생산시간/달성율/달성율가" +
     "동률/일일생산량/생산일수/전월대비증감량)";
@@ -116,7 +116,7 @@ namespace Final.KPI_RPT
             this.dgv_KPI_MONTH.Location = new System.Drawing.Point(6, 45);
             this.dgv_KPI_MONTH.Name = "dgv_KPI_MONTH";
             this.dgv_KPI_MONTH.RowTemplate.Height = 23;
-            this.dgv_KPI_MONTH.Size = new System.Drawing.Size(1248, 682);
+            this.dgv_KPI_MONTH.Size = new System.Drawing.Size(1248, 692);
             this.dgv_KPI_MONTH.TabIndex = 1;
             // 
             // panel6
@@ -124,11 +124,11 @@ namespace Final.KPI_RPT
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.label5);
             this.panel6.Location = new System.Drawing.Point(6, 13);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(194, 26);
             this.panel6.TabIndex = 0;
+            this.panel6.Controls.SetChildIndex(this.panel7, 0);
             // 
             // panel7
             // 
@@ -143,7 +143,7 @@ namespace Final.KPI_RPT
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(34, 6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "생산의뢰";
             // 
@@ -160,23 +160,22 @@ namespace Final.KPI_RPT
             // 
             this.txtWCodeText.Location = new System.Drawing.Point(783, 22);
             this.txtWCodeText.Name = "txtWCodeText";
-            this.txtWCodeText.Size = new System.Drawing.Size(100, 21);
+            this.txtWCodeText.Size = new System.Drawing.Size(100, 25);
             this.txtWCodeText.TabIndex = 16;
             // 
             // txtPCodeText
             // 
             this.txtPCodeText.Location = new System.Drawing.Point(538, 23);
             this.txtPCodeText.Name = "txtPCodeText";
-            this.txtPCodeText.Size = new System.Drawing.Size(100, 21);
+            this.txtPCodeText.Size = new System.Drawing.Size(100, 25);
             this.txtPCodeText.TabIndex = 15;
             // 
-            // frm_KPI_RPT_2
+            // frm_KPI_RPT_002
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1266, 828);
             this.Controls.Add(this.panel5);
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "frm_KPI_RPT_2";
+            this.Name = "frm_KPI_RPT_002";
             this.Load += new System.EventHandler(this.frm_KPI_RPT_2_Load);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
@@ -186,7 +185,6 @@ namespace Final.KPI_RPT
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KPI_MONTH)).EndInit();
             this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);

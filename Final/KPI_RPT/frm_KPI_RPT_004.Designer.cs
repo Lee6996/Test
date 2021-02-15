@@ -182,13 +182,13 @@ namespace Final.KPI_RPT
             this.txtPCodeText.Size = new System.Drawing.Size(100, 21);
             this.txtPCodeText.TabIndex = 15;
             // 
-            // frm_KPI_RPT_4
+            // frm_KPI_RPT_004
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1266, 828);
             this.Controls.Add(this.panel5);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "frm_KPI_RPT_4";
+            this.Name = "frm_KPI_RPT_004";
             this.Load += new System.EventHandler(this.frm_KPI_RPT_4_Load);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
