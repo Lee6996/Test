@@ -78,6 +78,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DashBoard.Designer.cs">
+      <DependentUpon>frm_DashBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="KPI_RPT\frm_KPI_RPT_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="KPI_RPT\frm_KPI_RPT_004.Designer.cs">
       <DependentUpon>frm_KPI_RPT_004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="MDS_CDS\frm_MDS_CDS_001.cs">
       <SubType>Form</SubType>
@@ -132,11 +144,23 @@
     <Compile Include="MDS_CDS\frm_MDS_CDS_004.Designer.cs">
       <DependentUpon>frm_MDS_CDS_004.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_004_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_004_1.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_004_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDS_CDS\frm_MDS_CDS_005.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDS_CDS\frm_MDS_CDS_005.Designer.cs">
       <DependentUpon>frm_MDS_CDS_005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_005_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_005_1.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_005_1.cs</DependentUpon>
     </Compile>
     <Compile Include="MDS_CDS\frm_MDS_CDS_006.cs">
       <SubType>Form</SubType>
@@ -146,6 +170,8 @@
     </Compile>
     <Compile Include="MDS_CDS\service\Def_MaService.cs" />
     <Compile Include="MDS_CDS\service\Def_MiService.cs" />
+    <Compile Include="MDS_CDS\service\Nop_MaService.cs" />
+    <Compile Include="MDS_CDS\service\Nop_MiService.cs" />
     <Compile Include="MDS_ODS\frm_MDS_ODS_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +196,7 @@
     <Compile Include="MDS_ODS\frm_MDS_ODS_002_1.Designer.cs">
       <DependentUpon>frm_MDS_ODS_002_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDS_ODS\service\ProcessService.cs" />
     <Compile Include="MDS_SDS\frm_MDS_SDS_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,7 +264,10 @@
     <Compile Include="MDI_Parent\FinalMDIParent.Designer.cs">
       <DependentUpon>FinalMDIParent.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDS_SDS\service\Condition_Spec_MasterService.cs" />
     <Compile Include="MDS_SDS\service\ItemService.cs" />
+    <Compile Include="MDS_SDS\service\SpecService.cs" />
+    <Compile Include="MDS_SDS\service\WorkCenter_MasterService.cs" />
     <Compile Include="PPS_MLD\frm_PPS_MLD_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +383,7 @@
     <Compile Include="Service\MenuService.cs" />
     <Compile Include="Service\MoldService.cs" />
     <Compile Include="Service\ProcessService.cs" />
+    <Compile Include="Service\UserService.cs" />
     <Compile Include="Service\WorkCenterService.cs" />
     <Compile Include="Service\WorkDayService.cs" />
     <Compile Include="Service\WorkOrderService.cs" />
@@ -442,6 +473,9 @@
     </Compile>
     <Compile Include="MSS_SYS\ScreenService.cs" />
     <Compile Include="MSS_SYS\SysNoticeService.cs" />
+    <EmbeddedResource Include="frm_DashBoard.resx">
+      <DependentUpon>frm_DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_001.resx">
       <DependentUpon>frm_KPI_RPT_001.cs</DependentUpon>
     </EmbeddedResource>
@@ -454,12 +488,21 @@
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_004.resx">
       <DependentUpon>frm_KPI_RPT_004.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_001.resx" />
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_002.resx" />
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_002_1.resx" />
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_003.resx" />
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_004.resx" />
+    <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_004_1.resx">
+      <DependentUpon>frm_MDS_CDS_004_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_005.resx" />
+    <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_005_1.resx">
+      <DependentUpon>frm_MDS_CDS_005_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_006.resx" />
     <EmbeddedResource Include="MDS_ODS\frm_MDS_ODS_001.resx" />
     <EmbeddedResource Include="MDS_ODS\frm_MDS_ODS_001_1.resx" />
@@ -605,9 +648,7 @@
     <Content Include="EncLibrary\FinalEnc.dll" />
     <None Include="Resources\x.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MDS_ODS\service\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\FinalDAC\FinalDAC.csproj">
       <Project>{55b68008-cbe4-4d16-a344-82ca9c47f6ee}</Project>

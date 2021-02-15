@@ -101,6 +101,22 @@ namespace Final
             dgv.Columns.Add(col);
         }
 
+        public static void AddGridCheckBoxColumn(
+                            DataGridView dgv,
+                            int colWidth = 30,
+                            bool visibility = true
+                            )
+        {
+            DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn
+            {
+                Width = colWidth,
+                Visible = visibility,
+                ReadOnly = true
+            };
+            dgv.Columns.Add(col);
+        }
+
+
         public static bool IsMatchPwd(string pwd1, string pwd2)
         {
             if (pwd1 == pwd2)
@@ -145,8 +161,8 @@ namespace Final
         {
             foreach (Control ctrl in inputCtrl.Controls)
             {
-                if(ctrl.Enabled) 
-                ctrl.Enabled = false;
+                if (ctrl.Enabled)
+                    ctrl.Enabled = false;
                 else
                     ctrl.Enabled = true;
             }

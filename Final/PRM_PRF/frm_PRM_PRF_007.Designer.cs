@@ -31,7 +31,7 @@ namespace Final.PRM_PRF
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnGVState = new System.Windows.Forms.Panel();
             this.dgvPRM_PRF = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRM_PRF)).BeginInit();
             this.SuspendLayout();
@@ -56,13 +56,13 @@ namespace Final.PRM_PRF
             this.label2.TabIndex = 1;
             this.label2.Text = "빈 대차 현황";
             // 
-            // panel1
+            // pnGVState
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel1.Location = new System.Drawing.Point(12, 68);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(973, 891);
-            this.panel1.TabIndex = 2;
+            this.pnGVState.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pnGVState.Location = new System.Drawing.Point(12, 68);
+            this.pnGVState.Name = "pnGVState";
+            this.pnGVState.Size = new System.Drawing.Size(973, 891);
+            this.pnGVState.TabIndex = 2;
             // 
             // dgvPRM_PRF
             // 
@@ -80,7 +80,7 @@ namespace Final.PRM_PRF
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1266, 972);
             this.Controls.Add(this.dgvPRM_PRF);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnGVState);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
@@ -97,7 +97,7 @@ namespace Final.PRM_PRF
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnGVState;
         private System.Windows.Forms.DataGridView dgvPRM_PRF;
     }
 }

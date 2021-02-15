@@ -83,7 +83,6 @@ namespace Final.PRM_PRF
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(12, 17);
             this.label2.Size = new System.Drawing.Size(141, 18);
             this.label2.Text = "조회조건 : 대차그룹";
             // 
@@ -112,7 +111,7 @@ namespace Final.PRM_PRF
             // txtGVGroup
             // 
             this.txtGVGroup.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtGVGroup.Location = new System.Drawing.Point(159, 14);
+            this.txtGVGroup.Location = new System.Drawing.Point(159, 16);
             this.txtGVGroup.Name = "txtGVGroup";
             this.txtGVGroup.Size = new System.Drawing.Size(69, 25);
             this.txtGVGroup.TabIndex = 9;
@@ -121,7 +120,7 @@ namespace Final.PRM_PRF
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F);
-            this.label1.Location = new System.Drawing.Point(427, 17);
+            this.label1.Location = new System.Drawing.Point(427, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 18);
             this.label1.TabIndex = 10;
@@ -130,7 +129,7 @@ namespace Final.PRM_PRF
             // btnGV
             // 
             this.btnGV.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnGV.Location = new System.Drawing.Point(234, 15);
+            this.btnGV.Location = new System.Drawing.Point(234, 17);
             this.btnGV.Name = "btnGV";
             this.btnGV.Size = new System.Drawing.Size(24, 23);
             this.btnGV.TabIndex = 11;
@@ -141,7 +140,7 @@ namespace Final.PRM_PRF
             // txtGVGroupDetail
             // 
             this.txtGVGroupDetail.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtGVGroupDetail.Location = new System.Drawing.Point(264, 14);
+            this.txtGVGroupDetail.Location = new System.Drawing.Point(264, 16);
             this.txtGVGroupDetail.Name = "txtGVGroupDetail";
             this.txtGVGroupDetail.Size = new System.Drawing.Size(100, 25);
             this.txtGVGroupDetail.TabIndex = 12;
@@ -149,7 +148,7 @@ namespace Final.PRM_PRF
             // txtItemDetail
             // 
             this.txtItemDetail.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtItemDetail.Location = new System.Drawing.Point(576, 14);
+            this.txtItemDetail.Location = new System.Drawing.Point(576, 16);
             this.txtItemDetail.Name = "txtItemDetail";
             this.txtItemDetail.Size = new System.Drawing.Size(100, 25);
             this.txtItemDetail.TabIndex = 15;
@@ -157,7 +156,7 @@ namespace Final.PRM_PRF
             // btnItem
             // 
             this.btnItem.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnItem.Location = new System.Drawing.Point(546, 15);
+            this.btnItem.Location = new System.Drawing.Point(546, 17);
             this.btnItem.Name = "btnItem";
             this.btnItem.Size = new System.Drawing.Size(24, 23);
             this.btnItem.TabIndex = 14;
@@ -168,7 +167,7 @@ namespace Final.PRM_PRF
             // txtItem
             // 
             this.txtItem.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtItem.Location = new System.Drawing.Point(471, 14);
+            this.txtItem.Location = new System.Drawing.Point(471, 16);
             this.txtItem.Name = "txtItem";
             this.txtItem.Size = new System.Drawing.Size(69, 25);
             this.txtItem.TabIndex = 13;

@@ -50,18 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Condition_SpecDAC.cs" />
     <Compile Include="Def_MaDAC.cs" />
     <Compile Include="Def_MiDAC.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="ItemInfoDAC.cs" />
+    <Compile Include="ItemSpecDAC.cs" />
     <Compile Include="MoldDAC.cs" />
+    <Compile Include="Nop_MaDAC.cs" />
+    <Compile Include="Nop_MiDAC.cs" />
     <Compile Include="PRM_PRF_DAC.cs" />
+    <Compile Include="ProcessDAC.cs" />
     <Compile Include="ScreenDAC.cs" />
     <Compile Include="SysNoticeDAC.cs" />
     <Compile Include="SysNoticeDAC.cs" />
     <Compile Include="SelectDAC.cs" />
     <Compile Include="UserDAC.cs" />
     <Compile Include="UserGroupDAC.cs" />
+    <Compile Include="WorkCenter_MasterDAC.cs" />
     <Compile Include="WorkOrderDac.cs" />
   </ItemGroup>
   <ItemGroup>
