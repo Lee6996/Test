@@ -145,6 +145,8 @@
     </Compile>
     <Compile Include="MDS_CDS\service\Def_MaService.cs" />
     <Compile Include="MDS_CDS\service\Def_MiService.cs" />
+    <Compile Include="MDS_CDS\service\Nop_MaService.cs" />
+    <Compile Include="MDS_CDS\service\Nop_MiService.cs" />
     <Compile Include="MDS_ODS\frm_MDS_ODS_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +171,7 @@
     <Compile Include="MDS_ODS\frm_MDS_ODS_002_1.Designer.cs">
       <DependentUpon>frm_MDS_ODS_002_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDS_ODS\service\ProcessService.cs" />
     <Compile Include="MDS_SDS\frm_MDS_SDS_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,7 +239,10 @@
     <Compile Include="MDI_Parent\FinalMDIParent.Designer.cs">
       <DependentUpon>FinalMDIParent.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDS_SDS\service\Condition_Spec_MasterService.cs" />
     <Compile Include="MDS_SDS\service\ItemService.cs" />
+    <Compile Include="MDS_SDS\service\SpecService.cs" />
+    <Compile Include="MDS_SDS\service\WorkCenter_MasterService.cs" />
     <Compile Include="PPS_MLD\frm_PPS_MLD_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -612,9 +618,7 @@
     <Content Include="EncLibrary\FinalEnc.dll" />
     <None Include="Resources\x.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MDS_ODS\service\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\FinalDAC\FinalDAC.csproj">
       <Project>{55b68008-cbe4-4d16-a344-82ca9c47f6ee}</Project>
