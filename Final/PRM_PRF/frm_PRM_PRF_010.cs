@@ -53,11 +53,6 @@ namespace Final.PRM_PRF
         #region MyMethod
 
         #region DGV1
-        private void SetDgv_1(DataGridView dgv)
-        {
-            
-        }
-
         private void RefreshState()
         {
             dgvPRM_PRF_1.DataSource = new PRM_PRF_Service().SelectWorkHistoryPivot(dtpFrom.Value.ToString(), dtpTo.Value.ToString());
@@ -84,7 +79,7 @@ namespace Final.PRM_PRF
 
         private void RefreshState_2()
         {
-            dgvPRM_PRF_2.DataSource = new PRM_PRF_Service().GetAttendanceManagementVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), user_ID);
+            dgvPRM_PRF_2.DataSource = new PRM_PRF_Service().GetAttendanceManagementVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), txtUser_Name.Text);
         }
 
         #endregion

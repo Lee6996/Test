@@ -21,9 +21,23 @@ namespace Final.PRM_PRF
             InitializeComponent();
         }
 
+        private void tmRefresh_Tick(object sender, EventArgs e)
+        {
+            AutoClosingMessageBox.Show("", "", 500);
+            RefreshState();
+        }
+
         private void frm_PRM_PRF_007_Load(object sender, EventArgs e)
         {
             SettingDGV(dgvPRM_PRF);
+            tmRefresh.Start();
+            RefreshState();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            tmRefresh.Stop();
+            tmRefresh.Start();
             RefreshState();
         }
 
@@ -56,10 +70,12 @@ namespace Final.PRM_PRF
 
         public void RefreshState()
         {
+            
             list = new PRM_PRF_Service().GetGV();
             dgvPRM_PRF.DataSource = list;
             DrawGVState();
         }
+
         #endregion
     }
 }

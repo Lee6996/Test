@@ -95,7 +95,7 @@ namespace Final.PRM_PRF
         #endregion
 
         #region 009
-        public List<WorkOrderVO> GetWorkHistoryVOList(string dtpFrom, string dtpTo, string Wc_Name)
+        public List<WorkHistoryVO> GetWorkHistoryVOList(string dtpFrom, string dtpTo, string Wc_Name)
         {
             return new SelectDAC().SelectWorkHistory(dtpFrom, dtpTo, Wc_Name);
         }

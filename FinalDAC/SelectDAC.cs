@@ -94,12 +94,12 @@ namespace FinalDAC
         }
 
         //WorkHistory
-        public List<WorkOrderVO> SelectWorkHistory(string dtpFrom, string dtpTo, string Wc_Name)
+        public List<WorkHistoryVO> SelectWorkHistory(string dtpFrom, string dtpTo, string Wc_Name)
         {
             string sql = "select * from View_WorkHistory where Work_Date between @dtpFrom and @dtpTo ";
             if (!string.IsNullOrEmpty(Wc_Name))
             {
-                sql += " where Wc_Name = @Wc_Name";
+                sql += " and Wc_Name = @Wc_Name";
             }
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -110,7 +110,7 @@ namespace FinalDAC
                     cmd.Parameters.AddWithValue("@Wc_Name", Wc_Name);
                 }
                 SqlDataReader reader = cmd.ExecuteReader();
-                List<WorkOrderVO> list = Helper.DataReaderMapToList<WorkOrderVO>(reader);
+                List<WorkHistoryVO> list = Helper.DataReaderMapToList<WorkHistoryVO>(reader);
 
                 conn.Close();
                 return list;
@@ -123,7 +123,7 @@ namespace FinalDAC
             string sql = "select * from View_AttendanceManagement where Work_Date between @dtpFrom and @dtpTo ";
             if (!string.IsNullOrEmpty(user_Name))
             {
-                sql += " where user_Name = @user_Name";
+                sql += " and user_Name = @user_Name";
             }
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -365,10 +365,10 @@ namespace FinalDAC
         //NOP
         public List<NOPVO> SelectNOP(string dtpFrom = null, string dtpTo = null, string WC_Code = null)
         {
-            string sQuery = "select * from View_NOP";
+            string sQuery = "select * from View_NOP where 1=1 ";
 
             if (!string.IsNullOrEmpty(dtpFrom) && !string.IsNullOrEmpty(dtpTo))
-                sQuery += " where Nop_Date between @dtpFrom and @dtpTo";
+                sQuery += " and Nop_Date between @dtpFrom and @dtpTo";
 
             if (!string.IsNullOrEmpty(WC_Code))
                 sQuery += " and WC_Code Like @WC_Code ";
@@ -528,10 +528,10 @@ namespace FinalDAC
         }
         public List<MoldVO> SelectMoldCode(string Mold_Code=null, string Mold_Group = null)
         {
-            string sql = " SELECT * from View_Mold_Master";
+            string sql = " SELECT * from View_Mold_Master where 1=1 ";
 
             if (!string.IsNullOrEmpty(Mold_Code))
-                sql += " where Mold_Code = @Mold_Code";
+                sql += " and Mold_Code = @Mold_Code";
             if (!string.IsNullOrEmpty(Mold_Group))
                 sql += " and Mold_Group = @Mold_Group";
 
@@ -551,10 +551,10 @@ namespace FinalDAC
         }
         public List<MoldVO> SelectMoldGroup(string Mold_Code = null, string Mold_Group = null)
         {
-            string sql = " SELECT * from View_Mold_Master";
+            string sql = " SELECT * from View_Mold_Master where 1=1 ";
 
             if (!string.IsNullOrEmpty(Mold_Group))
-                sql += " where Mold_Group = @Mold_Group";
+                sql += " and Mold_Group = @Mold_Group";
             if (!string.IsNullOrEmpty(Mold_Code))
                 sql += " and Mold_Code = @Mold_Code";
 
