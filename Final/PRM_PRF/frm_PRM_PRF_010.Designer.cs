@@ -46,7 +46,8 @@ namespace Final.PRM_PRF
             this.panel5.Controls.Add(this.dgvPRM_PRF_1);
             this.panel5.Controls.Add(this.dgvPRM_PRF_2);
             this.panel5.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.panel5.Size = new System.Drawing.Size(1266, 821);
+            this.panel5.Size = new System.Drawing.Size(1676, 915);
+            this.panel5.Controls.SetChildIndex(this.label11, 0);
             this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_2, 0);
             this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_1, 0);
             // 
@@ -82,6 +83,13 @@ namespace Final.PRM_PRF
             this.panel4.Controls.SetChildIndex(this.btnTimeSearch, 0);
             this.panel4.Controls.SetChildIndex(this.btnUser, 0);
             this.panel4.Controls.SetChildIndex(this.txtUser_Name, 0);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label11.Location = new System.Drawing.Point(3, 428);
+            this.label11.Text = "▶상세내역";
             // 
             // txtUser_Name
             // 
@@ -127,7 +135,7 @@ namespace Final.PRM_PRF
             this.dgvPRM_PRF_1.Location = new System.Drawing.Point(3, 3);
             this.dgvPRM_PRF_1.Name = "dgvPRM_PRF_1";
             this.dgvPRM_PRF_1.RowTemplate.Height = 23;
-            this.dgvPRM_PRF_1.Size = new System.Drawing.Size(1258, 372);
+            this.dgvPRM_PRF_1.Size = new System.Drawing.Size(1668, 422);
             this.dgvPRM_PRF_1.TabIndex = 40;
             this.dgvPRM_PRF_1.Tag = "";
             this.dgvPRM_PRF_1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_1_CellClick);
@@ -139,16 +147,16 @@ namespace Final.PRM_PRF
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPRM_PRF_2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPRM_PRF_2.Location = new System.Drawing.Point(3, 407);
+            this.dgvPRM_PRF_2.Location = new System.Drawing.Point(3, 457);
             this.dgvPRM_PRF_2.Name = "dgvPRM_PRF_2";
             this.dgvPRM_PRF_2.RowTemplate.Height = 23;
-            this.dgvPRM_PRF_2.Size = new System.Drawing.Size(1258, 408);
+            this.dgvPRM_PRF_2.Size = new System.Drawing.Size(1668, 452);
             this.dgvPRM_PRF_2.TabIndex = 41;
             this.dgvPRM_PRF_2.Tag = "";
             // 
             // frm_PRM_PRF_010
             // 
-            this.ClientSize = new System.Drawing.Size(1266, 912);
+            this.ClientSize = new System.Drawing.Size(1676, 1006);
             this.Name = "frm_PRM_PRF_010";
             this.Load += new System.EventHandler(this.frm_PRM_PRF_010_Load);
             this.panel5.ResumeLayout(false);

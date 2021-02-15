@@ -53,7 +53,7 @@ namespace Final.MDI_Parent
             this.panel5.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
             this.panel5.Location = new System.Drawing.Point(0, 91);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1266, 806);
+            this.panel5.Size = new System.Drawing.Size(1676, 878);
             this.panel5.TabIndex = 21;
             // 
             // label11
@@ -131,7 +131,7 @@ namespace Final.MDI_Parent
             this.panel4.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1266, 57);
+            this.panel4.Size = new System.Drawing.Size(1676, 57);
             this.panel4.TabIndex = 15;
             // 
             // label5
@@ -149,7 +149,7 @@ namespace Final.MDI_Parent
             // frm_MDIParent_2Grid
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1266, 897);
+            this.ClientSize = new System.Drawing.Size(1676, 969);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -171,8 +171,8 @@ namespace Final.MDI_Parent
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Button btnTimeSearch;
         public System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label11;
     }
 }
 
