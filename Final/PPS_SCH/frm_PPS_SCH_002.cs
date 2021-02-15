@@ -130,5 +130,10 @@ namespace Final.PPS_SCH
 
             GetData();
         }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            GetData();
+        }
     }
 }

@@ -39,6 +39,10 @@ namespace Final.Service
         {
             return dac.UpdateWorkorder(Workorder);
         }
+        public List<WorkOrderVO> listWork(string dtpFrom, string dtpTo, string status, string Wcode = null)
+        {
+            return dac.listWork(dtpFrom, dtpTo, Wcode, status);
+        }
     }
 }
 

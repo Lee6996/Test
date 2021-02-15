@@ -66,6 +66,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -154,6 +155,12 @@
     </Compile>
     <Compile Include="MDS_CDS\frm_MDS_CDS_005.Designer.cs">
       <DependentUpon>frm_MDS_CDS_005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_005_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_005_1.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_005_1.cs</DependentUpon>
     </Compile>
     <Compile Include="MDS_CDS\frm_MDS_CDS_006.cs">
       <SubType>Form</SubType>
@@ -297,12 +304,7 @@
     <Compile Include="PPS_SCH\frm_PPS_SCH_003.Designer.cs">
       <DependentUpon>frm_PPS_SCH_003.cs</DependentUpon>
     </Compile>
-    <Compile Include="PPS_SCH\frm_PPS_SCH_004.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PPS_SCH\frm_PPS_SCH_004.Designer.cs">
-      <DependentUpon>frm_PPS_SCH_004.cs</DependentUpon>
-    </Compile>
+    <Compile Include="PPS_SCH\MySqlConnection.cs" />
     <Compile Include="PRM_PRF\frm_PRM_PRF_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -498,6 +500,9 @@
       <DependentUpon>frm_MDS_CDS_004_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_005.resx" />
+    <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_005_1.resx">
+      <DependentUpon>frm_MDS_CDS_005_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_006.resx" />
     <EmbeddedResource Include="MDS_ODS\frm_MDS_ODS_001.resx" />
     <EmbeddedResource Include="MDS_ODS\frm_MDS_ODS_001_1.resx" />
@@ -539,9 +544,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PPS_SCH\frm_PPS_SCH_003.resx">
       <DependentUpon>frm_PPS_SCH_003.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PPS_SCH\frm_PPS_SCH_004.resx">
-      <DependentUpon>frm_PPS_SCH_004.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_001.resx">
       <DependentUpon>frm_PRM_PRF_001.cs</DependentUpon>
