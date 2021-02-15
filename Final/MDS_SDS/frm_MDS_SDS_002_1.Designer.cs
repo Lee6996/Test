@@ -126,6 +126,10 @@ namespace Final.MDS_SDS
             // 
             this.cbLevel5.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbLevel5.FormattingEnabled = true;
+            this.cbLevel5.Items.AddRange(new object[] {
+            "성형",
+            "사출",
+            "박리"});
             this.cbLevel5.Location = new System.Drawing.Point(407, 365);
             this.cbLevel5.Name = "cbLevel5";
             this.cbLevel5.Size = new System.Drawing.Size(121, 29);
@@ -135,6 +139,10 @@ namespace Final.MDS_SDS
             // 
             this.cbLevel4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbLevel4.FormattingEnabled = true;
+            this.cbLevel4.Items.AddRange(new object[] {
+            "성형",
+            "사출",
+            "박리"});
             this.cbLevel4.Location = new System.Drawing.Point(407, 331);
             this.cbLevel4.Name = "cbLevel4";
             this.cbLevel4.Size = new System.Drawing.Size(121, 29);
@@ -144,6 +152,10 @@ namespace Final.MDS_SDS
             // 
             this.cbLevel3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbLevel3.FormattingEnabled = true;
+            this.cbLevel3.Items.AddRange(new object[] {
+            "성형",
+            "사출",
+            "박리"});
             this.cbLevel3.Location = new System.Drawing.Point(105, 368);
             this.cbLevel3.Name = "cbLevel3";
             this.cbLevel3.Size = new System.Drawing.Size(121, 29);
@@ -153,6 +165,10 @@ namespace Final.MDS_SDS
             // 
             this.cbLevel2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbLevel2.FormattingEnabled = true;
+            this.cbLevel2.Items.AddRange(new object[] {
+            "성형",
+            "사출",
+            "박리"});
             this.cbLevel2.Location = new System.Drawing.Point(105, 334);
             this.cbLevel2.Name = "cbLevel2";
             this.cbLevel2.Size = new System.Drawing.Size(121, 29);
@@ -162,6 +178,10 @@ namespace Final.MDS_SDS
             // 
             this.cbLevel1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbLevel1.FormattingEnabled = true;
+            this.cbLevel1.Items.AddRange(new object[] {
+            "성형",
+            "사출",
+            "박리"});
             this.cbLevel1.Location = new System.Drawing.Point(105, 300);
             this.cbLevel1.Name = "cbLevel1";
             this.cbLevel1.Size = new System.Drawing.Size(121, 29);
@@ -512,7 +532,7 @@ namespace Final.MDS_SDS
             this.nuUnit.Size = new System.Drawing.Size(121, 29);
             this.nuUnit.TabIndex = 154;
             // 
-            // MDS_SDS_002_1
+            // frm_MDS_SDS_002_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -560,7 +580,7 @@ namespace Final.MDS_SDS
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "MDS_SDS_002_1";
+            this.Name = "frm_MDS_SDS_002_1";
             this.Text = "MDS_SDS_002_1";
             this.Load += new System.EventHandler(this.MDS_SDS_002_1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudrgdv)).EndInit();
