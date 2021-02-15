@@ -30,102 +30,89 @@ namespace Final
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinalMDIParent));
-            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("사용자 그룹 목록");
-            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("사용자 그룹 관리");
-            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("사용자 관리");
-            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("화면관리");
-            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("로그인 이력정보");
-            System.Windows.Forms.TreeNode treeNode58 = new System.Windows.Forms.TreeNode("메뉴관리");
-            System.Windows.Forms.TreeNode treeNode59 = new System.Windows.Forms.TreeNode("공지사항");
-            System.Windows.Forms.TreeNode treeNode60 = new System.Windows.Forms.TreeNode("시스템관리", new System.Windows.Forms.TreeNode[] {
-            treeNode53,
-            treeNode54,
-            treeNode55,
-            treeNode56,
-            treeNode57,
-            treeNode58,
-            treeNode59});
-            System.Windows.Forms.TreeNode treeNode61 = new System.Windows.Forms.TreeNode("공정 정보");
-            System.Windows.Forms.TreeNode treeNode62 = new System.Windows.Forms.TreeNode("작업장 정보");
-            System.Windows.Forms.TreeNode treeNode63 = new System.Windows.Forms.TreeNode("품목분류 정보");
-            System.Windows.Forms.TreeNode treeNode64 = new System.Windows.Forms.TreeNode("품목 정보");
-            System.Windows.Forms.TreeNode treeNode65 = new System.Windows.Forms.TreeNode("품질 규격 설정");
-            System.Windows.Forms.TreeNode treeNode66 = new System.Windows.Forms.TreeNode("공정 조건 설정");
-            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("불량 현상 대분류");
-            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("불량 현상 상세분류");
-            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("비가동 대분류");
-            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("비가동 상세분류");
-            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("포장 등급 상세 정의");
-            System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("대차 정보");
-            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("기준정보관리", new System.Windows.Forms.TreeNode[] {
-            treeNode61,
-            treeNode62,
-            treeNode63,
-            treeNode64,
-            treeNode65,
-            treeNode66,
-            treeNode67,
-            treeNode68,
-            treeNode69,
-            treeNode70,
-            treeNode71,
-            treeNode72});
-            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("성형 작업지시 생성");
-            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("작업지시 마감관리");
-            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("일단위 시간대별 실적조회");
-            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("작업지시관리", new System.Windows.Forms.TreeNode[] {
-            treeNode74,
-            treeNode75,
-            treeNode76});
-            System.Windows.Forms.TreeNode treeNode78 = new System.Windows.Forms.TreeNode("실적 조회");
-            System.Windows.Forms.TreeNode treeNode79 = new System.Windows.Forms.TreeNode("포장 팔렛트 마감");
-            System.Windows.Forms.TreeNode treeNode80 = new System.Windows.Forms.TreeNode("완제품 입고리스트");
-            System.Windows.Forms.TreeNode treeNode81 = new System.Windows.Forms.TreeNode("대차현황");
-            System.Windows.Forms.TreeNode treeNode82 = new System.Windows.Forms.TreeNode("대차이력 조회");
-            System.Windows.Forms.TreeNode treeNode83 = new System.Windows.Forms.TreeNode("대차현황모니터링");
-            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("비가동 등록");
-            System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("근태정보 조회");
-            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("근태 현황 분석");
-            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("실적관리", new System.Windows.Forms.TreeNode[] {
-            treeNode78,
-            treeNode79,
-            treeNode80,
-            treeNode81,
-            treeNode82,
-            treeNode83,
-            treeNode84,
-            treeNode85,
-            treeNode86});
-            System.Windows.Forms.TreeNode treeNode88 = new System.Windows.Forms.TreeNode("불량 이미지 등록");
-            System.Windows.Forms.TreeNode treeNode89 = new System.Windows.Forms.TreeNode("품질 측정값 등록");
-            System.Windows.Forms.TreeNode treeNode90 = new System.Windows.Forms.TreeNode("공정 조건 등록");
-            System.Windows.Forms.TreeNode treeNode91 = new System.Windows.Forms.TreeNode("품질 측정값 조회");
-            System.Windows.Forms.TreeNode treeNode92 = new System.Windows.Forms.TreeNode("공정 조건 조회");
-            System.Windows.Forms.TreeNode treeNode93 = new System.Windows.Forms.TreeNode("원재료 LOT 관리");
-            System.Windows.Forms.TreeNode treeNode94 = new System.Windows.Forms.TreeNode("품질관리", new System.Windows.Forms.TreeNode[] {
-            treeNode88,
-            treeNode89,
-            treeNode90,
-            treeNode91,
-            treeNode92,
-            treeNode93});
-            System.Windows.Forms.TreeNode treeNode95 = new System.Windows.Forms.TreeNode("적재 작업 일지");
-            System.Windows.Forms.TreeNode treeNode96 = new System.Windows.Forms.TreeNode("성형 작업 일지");
-            System.Windows.Forms.TreeNode treeNode97 = new System.Windows.Forms.TreeNode("포장 작업 일지");
-            System.Windows.Forms.TreeNode treeNode98 = new System.Windows.Forms.TreeNode("일지관리", new System.Windows.Forms.TreeNode[] {
-            treeNode95,
-            treeNode96,
-            treeNode97});
-            System.Windows.Forms.TreeNode treeNode99 = new System.Windows.Forms.TreeNode("월간 포장 실적 현황");
-            System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("월별 생산 현황");
-            System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("분석관리", new System.Windows.Forms.TreeNode[] {
-            treeNode99,
-            treeNode100});
-            System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("금형 정보 등록");
-            System.Windows.Forms.TreeNode treeNode103 = new System.Windows.Forms.TreeNode("금형 사용 현황");
-            System.Windows.Forms.TreeNode treeNode104 = new System.Windows.Forms.TreeNode("금형관리", new System.Windows.Forms.TreeNode[] {
-            treeNode102,
-            treeNode103});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("사용자 그룹 목록");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("사용자 그룹 관리");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("사용자 관리");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("화면관리");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("로그인 이력정보");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("메뉴관리");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("공지사항");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("시스템관리", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("공정 정보");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("작업장 정보");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("품목분류 정보");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("품목 정보");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("품질 규격 설정");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("공정 조건 설정");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("불량 현상 대분류");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("불량 현상 상세분류");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("비가동 대분류");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("비가동 상세분류");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("포장 등급 상세 정의");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("대차 정보");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("기준정보관리", new System.Windows.Forms.TreeNode[] {
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14,
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18,
+            treeNode19,
+            treeNode20});
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("성형 작업지시 생성");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("작업지시 마감관리");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("일단위 시간대별 실적조회");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("작업지시관리", new System.Windows.Forms.TreeNode[] {
+            treeNode22,
+            treeNode23,
+            treeNode24});
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("실적 조회");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("포장 팔렛트 마감");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("완제품 입고리스트");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("대차현황");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("대차이력 조회");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("대차현황모니터링");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("비가동 등록");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("근태정보 조회");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("근태 현황 분석");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("실적관리", new System.Windows.Forms.TreeNode[] {
+            treeNode26,
+            treeNode27,
+            treeNode28,
+            treeNode29,
+            treeNode30,
+            treeNode31,
+            treeNode32,
+            treeNode33,
+            treeNode34});
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("적재 작업 일지");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("성형 작업 일지");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("포장 작업 일지");
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("일지관리", new System.Windows.Forms.TreeNode[] {
+            treeNode36,
+            treeNode37,
+            treeNode38});
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("월간 포장 실적 현황");
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("월별 생산 현황");
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("분석관리", new System.Windows.Forms.TreeNode[] {
+            treeNode40,
+            treeNode41});
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("금형 정보 등록");
+            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("금형 사용 현황");
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("금형관리", new System.Windows.Forms.TreeNode[] {
+            treeNode43,
+            treeNode44});
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -260,119 +247,104 @@ namespace Final
             this.tv_Menu.Font = new System.Drawing.Font("나눔스퀘어OTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tv_Menu.Location = new System.Drawing.Point(4, 26);
             this.tv_Menu.Name = "tv_Menu";
-            treeNode53.Name = "MSS_CON_001";
-            treeNode53.Text = "사용자 그룹 목록";
-            treeNode54.Name = "MSS_CON_002";
-            treeNode54.Text = "사용자 그룹 관리";
-            treeNode55.Name = "MSS_CON_003";
-            treeNode55.Text = "사용자 관리";
-            treeNode56.Name = "MSS_SYS_001";
-            treeNode56.Text = "화면관리";
-            treeNode57.Name = "MSS_SYS_002";
-            treeNode57.Text = "로그인 이력정보";
-            treeNode58.Name = "MSS_SYS_003";
-            treeNode58.Text = "메뉴관리";
-            treeNode59.Name = "MSS_SYS_004";
-            treeNode59.Text = "공지사항";
-            treeNode60.Name = "MSS";
-            treeNode60.Text = "시스템관리";
-            treeNode61.Name = "MDS_ODS_001";
-            treeNode61.Text = "공정 정보";
-            treeNode62.Name = "MDS_ODS_002";
-            treeNode62.Text = "작업장 정보";
-            treeNode63.Name = "MDS_SDS_001";
-            treeNode63.Text = "품목분류 정보";
-            treeNode64.Name = "MDS_SDS_002";
-            treeNode64.Text = "품목 정보";
-            treeNode65.Name = "MDS_SDS_003";
-            treeNode65.Text = "품질 규격 설정";
-            treeNode66.Name = "MDS_SDS_004";
-            treeNode66.Text = "공정 조건 설정";
-            treeNode67.Name = "MDS_CDS_001";
-            treeNode67.Text = "불량 현상 대분류";
-            treeNode68.Name = "MDS_CDS_002";
-            treeNode68.Text = "불량 현상 상세분류";
-            treeNode69.Name = "MDS_CDS_003";
-            treeNode69.Text = "비가동 대분류";
-            treeNode70.Name = "MDS_CDS_004";
-            treeNode70.Text = "비가동 상세분류";
-            treeNode71.Name = "MDS_CDS_005";
-            treeNode71.Text = "포장 등급 상세 정의";
-            treeNode72.Name = "MDS_CDS_006";
-            treeNode72.Text = "대차 정보";
-            treeNode73.Name = "MDS";
-            treeNode73.Text = "기준정보관리";
-            treeNode74.Name = "PPS_SCH_001";
-            treeNode74.Text = "성형 작업지시 생성";
-            treeNode75.Name = "PPS_SCH_002";
-            treeNode75.Text = "작업지시 마감관리";
-            treeNode76.Name = "PPS_SCH_003";
-            treeNode76.Text = "일단위 시간대별 실적조회";
-            treeNode77.Name = "PPS_SCH";
-            treeNode77.Text = "작업지시관리";
-            treeNode78.Name = "PRM_PRF_001";
-            treeNode78.Text = "실적 조회";
-            treeNode79.Name = "PRM_PRF_002";
-            treeNode79.Text = "포장 팔렛트 마감";
-            treeNode80.Name = "PRM_PRF_003";
-            treeNode80.Text = "완제품 입고리스트";
-            treeNode81.Name = "PRM_PRF_005";
-            treeNode81.Text = "대차현황";
-            treeNode82.Name = "PRM_PRF_006";
-            treeNode82.Text = "대차이력 조회";
-            treeNode83.Name = "PRM_PRF_007";
-            treeNode83.Text = "대차현황모니터링";
-            treeNode84.Name = "PRM_PRF_008";
-            treeNode84.Text = "비가동 등록";
-            treeNode85.Name = "PRM_PRF_009";
-            treeNode85.Text = "근태정보 조회";
-            treeNode86.Name = "PRM_PRF_010";
-            treeNode86.Text = "근태 현황 분석";
-            treeNode87.Name = "PRM_PRF";
-            treeNode87.Text = "실적관리";
-            treeNode88.Name = "노드53";
-            treeNode88.Text = "불량 이미지 등록";
-            treeNode89.Name = "노드58";
-            treeNode89.Text = "품질 측정값 등록";
-            treeNode90.Name = "노드55";
-            treeNode90.Text = "공정 조건 등록";
-            treeNode91.Name = "노드56";
-            treeNode91.Text = "품질 측정값 조회";
-            treeNode92.Name = "노드57";
-            treeNode92.Text = "공정 조건 조회";
-            treeNode93.Name = "노드59";
-            treeNode93.Text = "원재료 LOT 관리";
-            treeNode94.Name = "노드4";
-            treeNode94.Text = "품질관리";
-            treeNode95.Name = "PRM_RPT_001";
-            treeNode95.Text = "적재 작업 일지";
-            treeNode96.Name = "PRM_RPT_002";
-            treeNode96.Text = "성형 작업 일지";
-            treeNode97.Name = "PRM_RPT_003";
-            treeNode97.Text = "포장 작업 일지";
-            treeNode98.Name = "PRM_RPT";
-            treeNode98.Text = "일지관리";
-            treeNode99.Name = "KPI_PRT_001";
-            treeNode99.Text = "월간 포장 실적 현황";
-            treeNode100.Name = "KPI_PRT_002";
-            treeNode100.Text = "월별 생산 현황";
-            treeNode101.Name = "노드6";
-            treeNode101.Text = "분석관리";
-            treeNode102.Name = "PPS_MLD_001";
-            treeNode102.Text = "금형 정보 등록";
-            treeNode103.Name = "PPS_MLD_002";
-            treeNode103.Text = "금형 사용 현황";
-            treeNode104.Name = "노드7";
-            treeNode104.Text = "금형관리";
+            treeNode1.Name = "MSS_CON_001";
+            treeNode1.Text = "사용자 그룹 목록";
+            treeNode2.Name = "MSS_CON_002";
+            treeNode2.Text = "사용자 그룹 관리";
+            treeNode3.Name = "MSS_CON_003";
+            treeNode3.Text = "사용자 관리";
+            treeNode4.Name = "MSS_SYS_001";
+            treeNode4.Text = "화면관리";
+            treeNode5.Name = "MSS_SYS_002";
+            treeNode5.Text = "로그인 이력정보";
+            treeNode6.Name = "MSS_SYS_003";
+            treeNode6.Text = "메뉴관리";
+            treeNode7.Name = "MSS_SYS_004";
+            treeNode7.Text = "공지사항";
+            treeNode8.Name = "MSS";
+            treeNode8.Text = "시스템관리";
+            treeNode9.Name = "MDS_ODS_001";
+            treeNode9.Text = "공정 정보";
+            treeNode10.Name = "MDS_ODS_002";
+            treeNode10.Text = "작업장 정보";
+            treeNode11.Name = "MDS_SDS_001";
+            treeNode11.Text = "품목분류 정보";
+            treeNode12.Name = "MDS_SDS_002";
+            treeNode12.Text = "품목 정보";
+            treeNode13.Name = "MDS_SDS_003";
+            treeNode13.Text = "품질 규격 설정";
+            treeNode14.Name = "MDS_SDS_004";
+            treeNode14.Text = "공정 조건 설정";
+            treeNode15.Name = "MDS_CDS_001";
+            treeNode15.Text = "불량 현상 대분류";
+            treeNode16.Name = "MDS_CDS_002";
+            treeNode16.Text = "불량 현상 상세분류";
+            treeNode17.Name = "MDS_CDS_003";
+            treeNode17.Text = "비가동 대분류";
+            treeNode18.Name = "MDS_CDS_004";
+            treeNode18.Text = "비가동 상세분류";
+            treeNode19.Name = "MDS_CDS_005";
+            treeNode19.Text = "포장 등급 상세 정의";
+            treeNode20.Name = "MDS_CDS_006";
+            treeNode20.Text = "대차 정보";
+            treeNode21.Name = "MDS";
+            treeNode21.Text = "기준정보관리";
+            treeNode22.Name = "PPS_SCH_001";
+            treeNode22.Text = "성형 작업지시 생성";
+            treeNode23.Name = "PPS_SCH_002";
+            treeNode23.Text = "작업지시 마감관리";
+            treeNode24.Name = "PPS_SCH_003";
+            treeNode24.Text = "일단위 시간대별 실적조회";
+            treeNode25.Name = "PPS_SCH";
+            treeNode25.Text = "작업지시관리";
+            treeNode26.Name = "PRM_PRF_001";
+            treeNode26.Text = "실적 조회";
+            treeNode27.Name = "PRM_PRF_002";
+            treeNode27.Text = "포장 팔렛트 마감";
+            treeNode28.Name = "PRM_PRF_003";
+            treeNode28.Text = "완제품 입고리스트";
+            treeNode29.Name = "PRM_PRF_005";
+            treeNode29.Text = "대차현황";
+            treeNode30.Name = "PRM_PRF_006";
+            treeNode30.Text = "대차이력 조회";
+            treeNode31.Name = "PRM_PRF_007";
+            treeNode31.Text = "대차현황모니터링";
+            treeNode32.Name = "PRM_PRF_008";
+            treeNode32.Text = "비가동 등록";
+            treeNode33.Name = "PRM_PRF_009";
+            treeNode33.Text = "근태정보 조회";
+            treeNode34.Name = "PRM_PRF_010";
+            treeNode34.Text = "근태 현황 분석";
+            treeNode35.Name = "PRM_PRF";
+            treeNode35.Text = "실적관리";
+            treeNode36.Name = "PRM_RPT_001";
+            treeNode36.Text = "적재 작업 일지";
+            treeNode37.Name = "PRM_RPT_002";
+            treeNode37.Text = "성형 작업 일지";
+            treeNode38.Name = "PRM_RPT_003";
+            treeNode38.Text = "포장 작업 일지";
+            treeNode39.Name = "PRM_RPT";
+            treeNode39.Text = "일지관리";
+            treeNode40.Name = "KPI_PRT_001";
+            treeNode40.Text = "월간 포장 실적 현황";
+            treeNode41.Name = "KPI_PRT_002";
+            treeNode41.Text = "월별 생산 현황";
+            treeNode42.Name = "노드6";
+            treeNode42.Text = "분석관리";
+            treeNode43.Name = "PPS_MLD_001";
+            treeNode43.Text = "금형 정보 등록";
+            treeNode44.Name = "PPS_MLD_002";
+            treeNode44.Text = "금형 사용 현황";
+            treeNode45.Name = "노드7";
+            treeNode45.Text = "금형관리";
             this.tv_Menu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode60,
-            treeNode73,
-            treeNode77,
-            treeNode87,
-            treeNode94,
-            treeNode98,
-            treeNode101,
-            treeNode104});
+            treeNode8,
+            treeNode21,
+            treeNode25,
+            treeNode35,
+            treeNode39,
+            treeNode42,
+            treeNode45});
             this.tv_Menu.Size = new System.Drawing.Size(202, 852);
             this.tv_Menu.TabIndex = 0;
             this.tv_Menu.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tv_Menu_NodeMouseClick);
