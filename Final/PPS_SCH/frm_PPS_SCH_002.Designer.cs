@@ -30,7 +30,6 @@ namespace Final.PPS_SCH
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.button25 = new System.Windows.Forms.Button();
             this.nuPlanQty = new System.Windows.Forms.NumericUpDown();
@@ -108,6 +107,10 @@ namespace Final.PPS_SCH
             this.btn_Process.Location = new System.Drawing.Point(990, 10);
             this.btn_Process.Visible = false;
             // 
+            // button22
+            // 
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(975, 16);
@@ -121,7 +124,6 @@ namespace Final.PPS_SCH
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.panel10);
             this.panel5.Controls.Add(this.dgv_Work);
             this.panel5.Controls.Add(this.panel6);
@@ -131,16 +133,6 @@ namespace Final.PPS_SCH
             this.panel5.Size = new System.Drawing.Size(1333, 781);
             this.panel5.TabIndex = 16;
             this.panel5.Tag = "";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(29, 69);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(1278, 17);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "작업지시상태 - 작업지시번호 - 계획일자 - 계획수량 - 계획수량단위 - 품목코드 - 품목명 - 작업장명 - 작업일자 - 작업시작시간 - 작업종료" +
-    "시작- 투입시간 - 산출수량 - 생산수량 - 생산의뢰순번 - 프로젝트명";
             // 
             // panel10
             // 
@@ -391,7 +383,6 @@ namespace Final.PPS_SCH
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPlanQty)).EndInit();
@@ -411,7 +402,6 @@ namespace Final.PPS_SCH
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.NumericUpDown nuPlanQty;
