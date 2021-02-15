@@ -22,8 +22,8 @@ namespace Final.MSS_SYS
         //조회 버튼
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            string code = txtScreen_Code.Text;
-            DataLoad(code);
+            //string code = txtScreen_Code.Text;
+            DataLoad(cbScreen_Name.SelectedValue.ToString());
         }
 
         private void MSS_SYS_001_Load(object sender, EventArgs e)
@@ -64,6 +64,9 @@ namespace Final.MSS_SYS
             cbScreen_Name.DataSource = dtScreen;
 
             DataLoad("");
+
+            label3.Visible = false;
+            txtScreen_Code.Visible = false;
         }
 
         private void DataLoad(string screenCode)

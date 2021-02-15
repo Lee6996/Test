@@ -194,9 +194,9 @@ namespace Final.PPS_MLD
             this.panel10.Controls.Add(this.textBox3);
             this.panel10.Controls.Add(this.label9);
             this.panel10.Controls.Add(this.textBox2);
-            this.panel10.Location = new System.Drawing.Point(6, 608);
+            this.panel10.Location = new System.Drawing.Point(6, 610);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1253, 193);
+            this.panel10.Size = new System.Drawing.Size(1253, 191);
             this.panel10.TabIndex = 4;
             // 
             // button21
@@ -205,7 +205,7 @@ namespace Final.PPS_MLD
             this.button21.BackColor = System.Drawing.Color.DimGray;
             this.button21.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button21.Location = new System.Drawing.Point(1063, 133);
+            this.button21.Location = new System.Drawing.Point(1063, 132);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(85, 35);
             this.button21.TabIndex = 23;
@@ -218,7 +218,7 @@ namespace Final.PPS_MLD
             this.button20.BackColor = System.Drawing.Color.DimGray;
             this.button20.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button20.Location = new System.Drawing.Point(960, 134);
+            this.button20.Location = new System.Drawing.Point(960, 133);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(85, 35);
             this.button20.TabIndex = 14;
@@ -230,7 +230,7 @@ namespace Final.PPS_MLD
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.Location = new System.Drawing.Point(575, 149);
+            this.label13.Location = new System.Drawing.Point(575, 148);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(68, 18);
             this.label13.TabIndex = 21;
@@ -239,7 +239,7 @@ namespace Final.PPS_MLD
             // textBox8
             // 
             this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox8.Location = new System.Drawing.Point(676, 146);
+            this.textBox8.Location = new System.Drawing.Point(676, 145);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 25);
             this.textBox8.TabIndex = 22;
@@ -248,7 +248,7 @@ namespace Final.PPS_MLD
             // 
             this.dateTimePicker3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(676, 48);
+            this.dateTimePicker3.Location = new System.Drawing.Point(676, 47);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(130, 25);
             this.dateTimePicker3.TabIndex = 20;
@@ -258,7 +258,7 @@ namespace Final.PPS_MLD
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label18.Location = new System.Drawing.Point(575, 51);
+            this.label18.Location = new System.Drawing.Point(575, 50);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(98, 18);
             this.label18.TabIndex = 19;
@@ -269,7 +269,7 @@ namespace Final.PPS_MLD
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(351, 152);
+            this.label17.Location = new System.Drawing.Point(351, 151);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(68, 18);
             this.label17.TabIndex = 17;
@@ -278,7 +278,7 @@ namespace Final.PPS_MLD
             // textBox7
             // 
             this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox7.Location = new System.Drawing.Point(445, 149);
+            this.textBox7.Location = new System.Drawing.Point(445, 148);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 25);
             this.textBox7.TabIndex = 18;
@@ -288,7 +288,7 @@ namespace Final.PPS_MLD
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(351, 118);
+            this.label1.Location = new System.Drawing.Point(351, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 18);
             this.label1.TabIndex = 15;
@@ -297,7 +297,7 @@ namespace Final.PPS_MLD
             // textBox4
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(445, 115);
+            this.textBox4.Location = new System.Drawing.Point(445, 114);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 25);
             this.textBox4.TabIndex = 16;
@@ -306,7 +306,7 @@ namespace Final.PPS_MLD
             // 
             this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(445, 82);
+            this.comboBox2.Location = new System.Drawing.Point(445, 81);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(100, 25);
             this.comboBox2.TabIndex = 14;
@@ -315,7 +315,7 @@ namespace Final.PPS_MLD
             // 
             this.dateTimePicker4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(676, 14);
+            this.dateTimePicker4.Location = new System.Drawing.Point(676, 13);
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(130, 25);
             this.dateTimePicker4.TabIndex = 13;
@@ -325,7 +325,7 @@ namespace Final.PPS_MLD
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(575, 17);
+            this.label14.Location = new System.Drawing.Point(575, 16);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 18);
             this.label14.TabIndex = 12;
@@ -336,7 +336,7 @@ namespace Final.PPS_MLD
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label12.Location = new System.Drawing.Point(575, 85);
+            this.label12.Location = new System.Drawing.Point(575, 84);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 18);
             this.label12.TabIndex = 9;
@@ -345,7 +345,7 @@ namespace Final.PPS_MLD
             // textBox5
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Location = new System.Drawing.Point(676, 79);
+            this.textBox5.Location = new System.Drawing.Point(676, 78);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(192, 52);
@@ -356,7 +356,7 @@ namespace Final.PPS_MLD
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(351, 85);
+            this.label11.Location = new System.Drawing.Point(351, 84);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 18);
             this.label11.TabIndex = 7;
@@ -367,7 +367,7 @@ namespace Final.PPS_MLD
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(351, 51);
+            this.label10.Location = new System.Drawing.Point(351, 50);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 18);
             this.label10.TabIndex = 5;
@@ -376,7 +376,7 @@ namespace Final.PPS_MLD
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(445, 48);
+            this.textBox3.Location = new System.Drawing.Point(445, 47);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 25);
             this.textBox3.TabIndex = 6;
@@ -386,7 +386,7 @@ namespace Final.PPS_MLD
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.Location = new System.Drawing.Point(351, 17);
+            this.label9.Location = new System.Drawing.Point(351, 16);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 18);
             this.label9.TabIndex = 3;
@@ -395,7 +395,7 @@ namespace Final.PPS_MLD
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(445, 14);
+            this.textBox2.Location = new System.Drawing.Point(445, 13);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 25);
             this.textBox2.TabIndex = 4;
