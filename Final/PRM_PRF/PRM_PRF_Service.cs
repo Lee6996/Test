@@ -10,14 +10,14 @@ namespace Final.PRM_PRF
     class PRM_PRF_Service
     {
         #region 001
-        public List<WorkOrderVO> GetWorkOrderVOList(string dtpFrom, string dtpTo, string processCode= null, string wcCode = null)
+        public List<WorkOrderVO> GetWorkOrderVOList(string dtpFrom, string dtpTo, string processCode = null, string wcCode = null)
         {
             return new SelectDAC().SelectWorkOrder(dtpFrom, dtpTo, processCode, wcCode);
         }
 
         public bool Correction(WorkOrderVO vo)
         {
-           return new PRM_PRF_DAC().Update_001(vo);
+            return new PRM_PRF_DAC().Update_001(vo);
         }
         #endregion
 
@@ -48,7 +48,7 @@ namespace Final.PRM_PRF
 
         #region 005
 
-        public List<GVStatusVO> GetGVVOList(string GV_Group, string Item_Code)
+        public List<GVStatusVO> GetGVVOList(string GV_Group = null, string Item_Code = null)
         {
             return new SelectDAC().SelectGVStatus(GV_Group, Item_Code);
         }
@@ -97,7 +97,7 @@ namespace Final.PRM_PRF
         #region 009
         public List<WorkOrderVO> GetWorkHistoryVOList(string dtpFrom, string dtpTo, string Wc_Name)
         {
-            return new SelectDAC().SelectWorkHistory(dtpFrom,dtpTo,Wc_Name);
+            return new SelectDAC().SelectWorkHistory(dtpFrom, dtpTo, Wc_Name);
         }
         #endregion
 
