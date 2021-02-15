@@ -137,6 +137,12 @@
     <Compile Include="MDS_CDS\frm_MDS_CDS_004.Designer.cs">
       <DependentUpon>frm_MDS_CDS_004.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_004_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_004_1.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_004_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDS_CDS\frm_MDS_CDS_005.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,6 +484,9 @@
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_002_1.resx" />
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_003.resx" />
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_004.resx" />
+    <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_004_1.resx">
+      <DependentUpon>frm_MDS_CDS_004_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_005.resx" />
     <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_006.resx" />
     <EmbeddedResource Include="MDS_ODS\frm_MDS_ODS_001.resx" />
