@@ -77,6 +77,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DashBoard.Designer.cs">
+      <DependentUpon>frm_DashBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="KPI_RPT\frm_KPI_RPT_001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -381,6 +387,7 @@
     <Compile Include="Service\MenuService.cs" />
     <Compile Include="Service\MoldService.cs" />
     <Compile Include="Service\ProcessService.cs" />
+    <Compile Include="Service\UserService.cs" />
     <Compile Include="Service\WorkCenterService.cs" />
     <Compile Include="Service\WorkDayService.cs" />
     <Compile Include="Service\WorkOrderService.cs" />
@@ -470,6 +477,9 @@
     </Compile>
     <Compile Include="MSS_SYS\ScreenService.cs" />
     <Compile Include="MSS_SYS\SysNoticeService.cs" />
+    <EmbeddedResource Include="frm_DashBoard.resx">
+      <DependentUpon>frm_DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_001.resx">
       <DependentUpon>frm_KPI_RPT_001.cs</DependentUpon>
     </EmbeddedResource>
