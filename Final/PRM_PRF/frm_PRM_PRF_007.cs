@@ -14,7 +14,6 @@ namespace Final.PRM_PRF
     public partial class frm_PRM_PRF_007 : Form
     {
         List<GV> list;
-        List<GVStatusVO> gvStatusList;
         public frm_PRM_PRF_007()
         {
             InitializeComponent();
@@ -22,40 +21,22 @@ namespace Final.PRM_PRF
 
         private void frm_PRM_PRF_007_Load(object sender, EventArgs e)
         {
-            SettingDGV(dgvPRM_PRF);
-            RefreshState();
+
         }
 
         #region MyMethod
-        private void SettingDGV(DataGridView dgv)
+        private void frm_PRM_PRF_005_Load(object sender, EventArgs e)
         {
-            CommonUtil.SetInitGridView(dgv);
-            CommonUtil.AddGridTextColumn(dgv, "대차코드", "GV_Code", 200);
-            CommonUtil.AddGridTextColumn(dgv, "대차명", "GV_Name", 200);
+            CommonUtil.SetInitGridView(dgvPRM_PRF);
+            dgvPRM_PRF.Columns.Add(new DataGridViewCheckBoxColumn());
+            CommonUtil.AddGridTextColumn(dgvPRM_PRF, "대차코드", "GV_Code", 200);
+            CommonUtil.AddGridTextColumn(dgvPRM_PRF, "대차명", "GV_Name", 200);
         }
-
-        private void DrawGVState()
-        {
-            pnGVState.Controls.Clear();
-            Label lbl = new Label();
-            foreach(GVStatusVO gvStatus in gvStatusList)
-            {
-                lbl.Text = $"대차명: {gvStatus.GV_Name}\n대차상태: {gvStatus.GV_Status}\n작업지시번호: {gvStatus.Workorderno}\n품목코드: {gvStatus.Item_Code}\n품목명: {gvStatus.Item_Name }\n로딩시간: {gvStatus.Loading_time}";
-                lbl.Margin = new Padding(10);
-                lbl.TextAlign = ContentAlignment.MiddleCenter;
-                lbl.BorderStyle = BorderStyle.FixedSingle;
-                lbl.Font = new Font("나눔스퀘어OTF", 10.00F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(129)));
-                lbl.AutoSize = true;
-            }
-            pnGVState.Controls.Add(lbl);
-        }
-
 
         public void RefreshState()
         {
             list = new PRM_PRF_Service().GetGV();
             dgvPRM_PRF.DataSource = list;
-            DrawGVState();
         }
         #endregion
     }
