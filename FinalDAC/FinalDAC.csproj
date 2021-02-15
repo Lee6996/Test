@@ -58,6 +58,7 @@
     <Compile Include="ItemSpecDAC.cs" />
     <Compile Include="Nop_MaDAC.cs" />
     <Compile Include="Nop_MiDAC.cs" />
+    <Compile Include="MoldDAC.cs" />
     <Compile Include="PRM_PRF_DAC.cs" />
     <Compile Include="ProcessDAC.cs" />
     <Compile Include="ScreenDAC.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="UserDAC.cs" />
     <Compile Include="UserGroupDAC.cs" />
     <Compile Include="WorkCenter_MasterDAC.cs" />
+    <Compile Include="WorkOrderDac.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

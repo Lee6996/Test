@@ -31,17 +31,32 @@ namespace Final.PPS_MLD
         {
             this.panel5 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.dgv_Mold = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Mold)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btn_WorkCenter
+            // 
+            this.btn_WorkCenter.Click += new System.EventHandler(this.btn_WorkCenter_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            // 
+            // btn_Process
+            // 
+            this.btn_Process.Click += new System.EventHandler(this.btn_Process_Click);
+            // 
+            // button22
+            // 
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -49,14 +64,16 @@ namespace Final.PPS_MLD
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label15);
-            this.panel5.Controls.Add(this.dataGridView1);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 67);
+            this.panel5.Controls.Add(this.dgv_Mold);
+            this.panel5.Location = new System.Drawing.Point(0, 90);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1266, 739);
+            this.panel5.Size = new System.Drawing.Size(1266, 806);
             this.panel5.TabIndex = 19;
             // 
             // label15
@@ -70,47 +87,19 @@ namespace Final.PPS_MLD
             this.label15.Text = "생산일자 - 금형코드 - 금형명 - 작업지시번호 -품목코드 - 품목명 - 작업장코드 - 작업장명 - 금형타수 - 금형생산량 - 금형사용시작시간 -" +
     " 금형사용시작시간 - 금형사용시간";
             // 
-            // dataGridView1
+            // dgv_Mold
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_Mold.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 45);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1248, 682);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.Tag = "";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.Control;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(6, 13);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(194, 26);
-            this.panel6.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Location = new System.Drawing.Point(-572, -229);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(194, 26);
-            this.panel7.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "생산의뢰";
+            this.dgv_Mold.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dgv_Mold.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Mold.Location = new System.Drawing.Point(3, 3);
+            this.dgv_Mold.Name = "dgv_Mold";
+            this.dgv_Mold.RowTemplate.Height = 23;
+            this.dgv_Mold.Size = new System.Drawing.Size(1258, 798);
+            this.dgv_Mold.TabIndex = 1;
+            this.dgv_Mold.Tag = "";
             // 
             // label5
             // 
@@ -122,24 +111,20 @@ namespace Final.PPS_MLD
             this.label5.TabIndex = 0;
             this.label5.Text = "조회내역";
             // 
-            // frm_PPS_MLD_2
+            // frm_PPS_MLD_002
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(1266, 828);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1266, 897);
             this.Controls.Add(this.panel5);
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "frm_PPS_MLD_2";
+            this.Name = "frm_PPS_MLD_002";
+            this.Load += new System.EventHandler(this.frm_PPS_MLD_002_Load);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Mold)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,10 +134,7 @@ namespace Final.PPS_MLD
 
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dgv_Mold;
         private System.Windows.Forms.Label label5;
     }
 }

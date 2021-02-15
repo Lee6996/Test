@@ -65,11 +65,11 @@ namespace Final.MDS_SDS
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(3, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 21);
+            this.label6.Size = new System.Drawing.Size(118, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "▶ 공정 조건 등록";
             // 
@@ -80,14 +80,21 @@ namespace Final.MDS_SDS
             this.txtGroup.Name = "txtGroup";
             this.txtGroup.Size = new System.Drawing.Size(120, 29);
             this.txtGroup.TabIndex = 207;
+            this.textBox5.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox5.Location = new System.Drawing.Point(361, 182);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(120, 25);
+            this.textBox5.TabIndex = 207;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label11.Location = new System.Drawing.Point(26, 289);
+            this.label11.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label11.Location = new System.Drawing.Point(257, 186);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 21);
+            this.label11.Size = new System.Drawing.Size(68, 17);
             this.label11.TabIndex = 206;
             this.label11.Text = "조건 그룹";
             // 
@@ -99,14 +106,22 @@ namespace Final.MDS_SDS
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(193, 112);
             this.txtRemark.TabIndex = 205;
+            this.textBox3.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox3.Location = new System.Drawing.Point(119, 269);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(261, 112);
+            this.textBox3.TabIndex = 205;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.Location = new System.Drawing.Point(254, 213);
+            this.label5.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(58, 272);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 21);
+            this.label5.Size = new System.Drawing.Size(36, 17);
             this.label5.TabIndex = 204;
             this.label5.Text = "비고";
             // 
@@ -117,14 +132,21 @@ namespace Final.MDS_SDS
             this.txtConditionName.Name = "txtConditionName";
             this.txtConditionName.Size = new System.Drawing.Size(120, 29);
             this.txtConditionName.TabIndex = 203;
+            this.textBox1.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Location = new System.Drawing.Point(120, 182);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(120, 25);
+            this.textBox1.TabIndex = 203;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label10.Location = new System.Drawing.Point(48, 216);
+            this.label10.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.Location = new System.Drawing.Point(44, 186);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 21);
+            this.label10.Size = new System.Drawing.Size(50, 17);
             this.label10.TabIndex = 202;
             this.label10.Text = "항목명";
             // 
@@ -136,15 +158,22 @@ namespace Final.MDS_SDS
             this.cbItem.Name = "cbItem";
             this.cbItem.Size = new System.Drawing.Size(121, 29);
             this.cbItem.TabIndex = 201;
+            this.comboBox7.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(119, 50);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(121, 25);
+            this.comboBox7.TabIndex = 201;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DimGray;
-            this.button2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button2.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button2.Location = new System.Drawing.Point(362, 383);
+            this.button2.Location = new System.Drawing.Point(394, 397);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 35);
+            this.button2.Size = new System.Drawing.Size(85, 35);
             this.button2.TabIndex = 200;
             this.button2.Text = "취소";
             this.button2.UseVisualStyleBackColor = false;
@@ -161,6 +190,15 @@ namespace Final.MDS_SDS
             this.btnInsert.Text = "등록";
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.Location = new System.Drawing.Point(276, 397);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 35);
+            this.button1.TabIndex = 199;
+            this.button1.Text = "등록";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // nuLSL
             // 
@@ -169,6 +207,11 @@ namespace Final.MDS_SDS
             this.nuLSL.Name = "nuLSL";
             this.nuLSL.Size = new System.Drawing.Size(120, 29);
             this.nuLSL.TabIndex = 198;
+            this.numericUpDown4.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.numericUpDown4.Location = new System.Drawing.Point(361, 138);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(120, 25);
+            this.numericUpDown4.TabIndex = 198;
             // 
             // nuSL
             // 
@@ -177,6 +220,11 @@ namespace Final.MDS_SDS
             this.nuSL.Name = "nuSL";
             this.nuSL.Size = new System.Drawing.Size(120, 29);
             this.nuSL.TabIndex = 197;
+            this.numericUpDown3.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.numericUpDown3.Location = new System.Drawing.Point(361, 94);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(120, 25);
+            this.numericUpDown3.TabIndex = 197;
             // 
             // nuUSL
             // 
@@ -185,6 +233,11 @@ namespace Final.MDS_SDS
             this.nuUSL.Name = "nuUSL";
             this.nuUSL.Size = new System.Drawing.Size(120, 29);
             this.nuUSL.TabIndex = 196;
+            this.numericUpDown2.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.numericUpDown2.Location = new System.Drawing.Point(361, 50);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 25);
+            this.numericUpDown2.TabIndex = 196;
             // 
             // cbWC_Code
             // 
@@ -194,6 +247,12 @@ namespace Final.MDS_SDS
             this.cbWC_Code.Name = "cbWC_Code";
             this.cbWC_Code.Size = new System.Drawing.Size(121, 29);
             this.cbWC_Code.TabIndex = 195;
+            this.comboBox1.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(120, 94);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 25);
+            this.comboBox1.TabIndex = 195;
             // 
             // txtUnit
             // 
@@ -202,14 +261,21 @@ namespace Final.MDS_SDS
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Size = new System.Drawing.Size(120, 29);
             this.txtUnit.TabIndex = 194;
+            this.textBox4.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox4.Location = new System.Drawing.Point(119, 226);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(122, 25);
+            this.textBox4.TabIndex = 194;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label21.Location = new System.Drawing.Point(64, 251);
+            this.label21.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label21.Location = new System.Drawing.Point(58, 230);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(42, 21);
+            this.label21.Size = new System.Drawing.Size(36, 17);
             this.label21.TabIndex = 193;
             this.label21.Text = "단위";
             // 
@@ -220,14 +286,21 @@ namespace Final.MDS_SDS
             this.txtConditionCode.Name = "txtConditionCode";
             this.txtConditionCode.Size = new System.Drawing.Size(120, 29);
             this.txtConditionCode.TabIndex = 192;
+            this.textBox2.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox2.Location = new System.Drawing.Point(120, 138);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(120, 25);
+            this.textBox2.TabIndex = 192;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label9.Location = new System.Drawing.Point(313, 176);
+            this.label9.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.Location = new System.Drawing.Point(275, 142);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 21);
+            this.label9.Size = new System.Drawing.Size(50, 17);
             this.label9.TabIndex = 191;
             this.label9.Text = "하한값";
             // 
@@ -236,8 +309,10 @@ namespace Final.MDS_SDS
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.Location = new System.Drawing.Point(311, 137);
+            this.label8.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(275, 98);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 21);
+            this.label8.Size = new System.Drawing.Size(50, 17);
             this.label8.TabIndex = 190;
             this.label8.Text = "기준값";
             // 
@@ -246,8 +321,10 @@ namespace Final.MDS_SDS
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.Location = new System.Drawing.Point(311, 101);
+            this.label7.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(275, 54);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 21);
+            this.label7.Size = new System.Drawing.Size(50, 17);
             this.label7.TabIndex = 189;
             this.label7.Text = "상한값";
             // 
@@ -256,8 +333,10 @@ namespace Final.MDS_SDS
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(25, 141);
+            this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(16, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 21);
+            this.label3.Size = new System.Drawing.Size(78, 17);
             this.label3.TabIndex = 188;
             this.label3.Text = "작업장코드";
             // 
@@ -266,8 +345,10 @@ namespace Final.MDS_SDS
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(9, 178);
+            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(2, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 21);
+            this.label2.Size = new System.Drawing.Size(92, 17);
             this.label2.TabIndex = 187;
             this.label2.Text = "조건항목코드";
             // 
@@ -276,8 +357,10 @@ namespace Final.MDS_SDS
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(32, 101);
+            this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(30, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
+            this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 186;
             this.label1.Text = "품목코드";
             // 
@@ -285,11 +368,13 @@ namespace Final.MDS_SDS
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(508, 40);
+            this.panel1.Size = new System.Drawing.Size(496, 40);
             this.panel1.TabIndex = 185;
             // 
             // lblDay
@@ -322,14 +407,15 @@ namespace Final.MDS_SDS
             // 
             // frm_MDS_SDS_004_1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(508, 424);
             this.Controls.Add(this.lblDay);
             this.Controls.Add(this.lblManager);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtGroup);
+            this.ClientSize = new System.Drawing.Size(496, 452);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.label5);

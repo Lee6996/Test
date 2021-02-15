@@ -33,6 +33,7 @@ namespace Final.KPI_RPT
             this.label15 = new System.Windows.Forms.Label();
             this.dgv_KPI_BOXING = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@ namespace Final.KPI_RPT
             // 
             // btn_WorkCenter
             // 
+            this.btn_WorkCenter.Location = new System.Drawing.Point(710, 11);
             this.btn_WorkCenter.Visible = false;
             this.btn_WorkCenter.Click += new System.EventHandler(this.btn_WorkCenter_Click);
             // 
@@ -80,20 +82,23 @@ namespace Final.KPI_RPT
             // 
             // label16
             // 
+            this.label16.Location = new System.Drawing.Point(651, 19);
             this.label16.Visible = false;
             // 
             // btn_Process
             // 
+            this.btn_Process.Location = new System.Drawing.Point(1148, 16);
             this.btn_Process.Visible = false;
             this.btn_Process.Click += new System.EventHandler(this.btn_Process_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(922, 23);
+            this.textBox1.Location = new System.Drawing.Point(1072, 17);
             this.textBox1.Visible = false;
             // 
             // label3
             // 
+            this.label3.Location = new System.Drawing.Point(1095, 12);
             this.label3.Visible = false;
             // 
             // panel5
@@ -103,9 +108,9 @@ namespace Final.KPI_RPT
             this.panel5.Controls.Add(this.dgv_KPI_BOXING);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 67);
+            this.panel5.Location = new System.Drawing.Point(0, 57);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1266, 739);
+            this.panel5.Size = new System.Drawing.Size(1266, 749);
             this.panel5.TabIndex = 18;
             // 
             // label15
@@ -113,7 +118,7 @@ namespace Final.KPI_RPT
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(29, 64);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(303, 12);
+            this.label15.Size = new System.Drawing.Size(349, 17);
             this.label15.TabIndex = 5;
             this.label15.Text = "품목코드 - 품목명 - 누계포장량(1일부터) - 전일포장량";
             // 
@@ -127,7 +132,7 @@ namespace Final.KPI_RPT
             this.dgv_KPI_BOXING.Location = new System.Drawing.Point(6, 45);
             this.dgv_KPI_BOXING.Name = "dgv_KPI_BOXING";
             this.dgv_KPI_BOXING.RowTemplate.Height = 23;
-            this.dgv_KPI_BOXING.Size = new System.Drawing.Size(1248, 682);
+            this.dgv_KPI_BOXING.Size = new System.Drawing.Size(1248, 692);
             this.dgv_KPI_BOXING.TabIndex = 1;
             this.dgv_KPI_BOXING.Tag = "";
             // 
@@ -135,12 +140,21 @@ namespace Final.KPI_RPT
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.label5);
             this.panel6.Location = new System.Drawing.Point(6, 13);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(194, 26);
             this.panel6.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.TabIndex = 71;
+            this.label1.Text = "조회내역";
             // 
             // panel7
             // 
@@ -155,7 +169,7 @@ namespace Final.KPI_RPT
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(34, 6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "생산의뢰";
             // 
@@ -170,25 +184,25 @@ namespace Final.KPI_RPT
             // 
             // txtWCodeText
             // 
-            this.txtWCodeText.Location = new System.Drawing.Point(782, 22);
+            this.txtWCodeText.Enabled = false;
+            this.txtWCodeText.Location = new System.Drawing.Point(801, 16);
             this.txtWCodeText.Name = "txtWCodeText";
-            this.txtWCodeText.Size = new System.Drawing.Size(100, 21);
+            this.txtWCodeText.Size = new System.Drawing.Size(100, 25);
             this.txtWCodeText.TabIndex = 16;
             // 
             // txtPCodeText
             // 
-            this.txtPCodeText.Location = new System.Drawing.Point(537, 23);
+            this.txtPCodeText.Location = new System.Drawing.Point(1139, 22);
             this.txtPCodeText.Name = "txtPCodeText";
-            this.txtPCodeText.Size = new System.Drawing.Size(100, 21);
+            this.txtPCodeText.Size = new System.Drawing.Size(100, 25);
             this.txtPCodeText.TabIndex = 15;
+            this.txtPCodeText.Visible = false;
             // 
-            // frm_KPI_RPT_4
+            // frm_KPI_RPT_004
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1266, 828);
             this.Controls.Add(this.panel5);
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "frm_KPI_RPT_4";
+            this.Name = "frm_KPI_RPT_004";
             this.Load += new System.EventHandler(this.frm_KPI_RPT_4_Load);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
@@ -217,5 +231,6 @@ namespace Final.KPI_RPT
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtWCodeText;
         private System.Windows.Forms.TextBox txtPCodeText;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -33,8 +33,10 @@ namespace Final
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
+            this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
@@ -42,8 +44,6 @@ namespace Final
             this.lbl = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.dtpStart = new System.Windows.Forms.DateTimePicker();
-            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNotice_Rtf = new System.Windows.Forms.TextBox();
@@ -99,7 +99,7 @@ namespace Final
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(23, 5);
+            this.label7.Location = new System.Drawing.Point(16, 6);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 16);
             this.label7.TabIndex = 3;
@@ -114,6 +114,14 @@ namespace Final
             this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 2;
             this.label5.Text = "등록일";
+            // 
+            // dtpEnd
+            // 
+            this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEnd.Location = new System.Drawing.Point(4, 2);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(152, 25);
+            this.dtpEnd.TabIndex = 2;
             // 
             // splitContainer2
             // 
@@ -146,6 +154,15 @@ namespace Final
             this.label3.TabIndex = 2;
             this.label3.Text = "시작일";
             // 
+            // dtpStart
+            // 
+            this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpStart.Location = new System.Drawing.Point(4, 3);
+            this.dtpStart.Name = "dtpStart";
+            this.dtpStart.Size = new System.Drawing.Size(152, 25);
+            this.dtpStart.TabIndex = 1;
+            this.dtpStart.ValueChanged += new System.EventHandler(this.dtpStart_ValueChanged);
+            // 
             // splitContainer1
             // 
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -170,7 +187,7 @@ namespace Final
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(26, 6);
+            this.label2.Location = new System.Drawing.Point(16, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 18);
             this.label2.TabIndex = 2;
@@ -178,14 +195,15 @@ namespace Final
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(2, 3);
+            this.txtTitle.Location = new System.Drawing.Point(2, 2);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(361, 26);
+            this.txtTitle.Size = new System.Drawing.Size(361, 25);
             this.txtTitle.TabIndex = 0;
             // 
             // lblNum
             // 
             this.lblNum.AutoSize = true;
+            this.lblNum.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblNum.Location = new System.Drawing.Point(130, 20);
             this.lblNum.Name = "lblNum";
             this.lblNum.Size = new System.Drawing.Size(38, 18);
@@ -196,6 +214,7 @@ namespace Final
             // lbl
             // 
             this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbl.Location = new System.Drawing.Point(12, 20);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(111, 18);
@@ -228,23 +247,6 @@ namespace Final
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // dtpStart
-            // 
-            this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStart.Location = new System.Drawing.Point(4, 3);
-            this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(152, 26);
-            this.dtpStart.TabIndex = 1;
-            this.dtpStart.ValueChanged += new System.EventHandler(this.dtpStart_ValueChanged);
-            // 
-            // dtpEnd
-            // 
-            this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEnd.Location = new System.Drawing.Point(4, 2);
-            this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(152, 26);
-            this.dtpEnd.TabIndex = 2;
-            // 
             // splitContainer4
             // 
             this.splitContainer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -269,7 +271,7 @@ namespace Final
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(16, 5);
+            this.label1.Location = new System.Drawing.Point(16, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 18);
             this.label1.TabIndex = 2;
@@ -280,7 +282,7 @@ namespace Final
             // 
             this.txtNotice_Rtf.Location = new System.Drawing.Point(3, 1);
             this.txtNotice_Rtf.Name = "txtNotice_Rtf";
-            this.txtNotice_Rtf.Size = new System.Drawing.Size(360, 26);
+            this.txtNotice_Rtf.Size = new System.Drawing.Size(360, 25);
             this.txtNotice_Rtf.TabIndex = 0;
             // 
             // frm_MSS_SYS_004_1
@@ -296,7 +298,7 @@ namespace Final
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.lblNum);
             this.Controls.Add(this.lbl);
-            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frm_MSS_SYS_004_1";
             this.Tag = "공지사항조회";

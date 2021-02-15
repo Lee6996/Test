@@ -11,6 +11,10 @@ namespace Final.Service
     public class ProcessService
     {
         SelectDAC dac;
+        public ProcessService()
+        {
+            dac = new SelectDAC();
+        }
         public List<ProcessVO> SelectProcess(string Prd_Date)
         {
             return dac.SelectProcess(Prd_Date);
