@@ -96,36 +96,23 @@ namespace Final
             treeNode32,
             treeNode33,
             treeNode34});
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("불량 이미지 등록");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("품질 측정값 등록");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("공정 조건 등록");
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("품질 측정값 조회");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("공정 조건 조회");
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("원재료 LOT 관리");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("품질관리", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("적재 작업 일지");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("성형 작업 일지");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("포장 작업 일지");
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("일지관리", new System.Windows.Forms.TreeNode[] {
             treeNode36,
             treeNode37,
-            treeNode38,
-            treeNode39,
+            treeNode38});
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("월간 포장 실적 현황");
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("월별 생산 현황");
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("분석관리", new System.Windows.Forms.TreeNode[] {
             treeNode40,
             treeNode41});
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("적재 작업 일지");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("성형 작업 일지");
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("포장 작업 일지");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("일지관리", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("금형 정보 등록");
+            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("금형 사용 현황");
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("금형관리", new System.Windows.Forms.TreeNode[] {
             treeNode43,
-            treeNode44,
-            treeNode45});
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("월간 포장 실적 현황");
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("월별 생산 현황");
-            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("분석관리", new System.Windows.Forms.TreeNode[] {
-            treeNode47,
-            treeNode48});
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("금형 정보 등록");
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("금형 사용 현황");
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("금형관리", new System.Windows.Forms.TreeNode[] {
-            treeNode50,
-            treeNode51});
+            treeNode44});
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -258,8 +245,6 @@ namespace Final
             // tv_Menu
             // 
             this.tv_Menu.Font = new System.Drawing.Font("나눔스퀘어OTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tv_Menu.Indent = 19;
-            this.tv_Menu.ItemHeight = 30;
             this.tv_Menu.Location = new System.Drawing.Point(4, 26);
             this.tv_Menu.Name = "tv_Menu";
             treeNode1.Name = "MSS_CON_001";
@@ -332,49 +317,34 @@ namespace Final
             treeNode34.Text = "근태 현황 분석";
             treeNode35.Name = "PRM_PRF";
             treeNode35.Text = "실적관리";
-            treeNode36.Name = "노드53";
-            treeNode36.Text = "불량 이미지 등록";
-            treeNode37.Name = "노드58";
-            treeNode37.Text = "품질 측정값 등록";
-            treeNode38.Name = "노드55";
-            treeNode38.Text = "공정 조건 등록";
-            treeNode39.Name = "노드56";
-            treeNode39.Text = "품질 측정값 조회";
-            treeNode40.Name = "노드57";
-            treeNode40.Text = "공정 조건 조회";
-            treeNode41.Name = "노드59";
-            treeNode41.Text = "원재료 LOT 관리";
-            treeNode42.Name = "노드4";
-            treeNode42.Text = "품질관리";
-            treeNode43.Name = "PRM_RPT_001";
-            treeNode43.Text = "적재 작업 일지";
-            treeNode44.Name = "PRM_RPT_002";
-            treeNode44.Text = "성형 작업 일지";
-            treeNode45.Name = "PRM_RPT_003";
-            treeNode45.Text = "포장 작업 일지";
-            treeNode46.Name = "PRM_RPT";
-            treeNode46.Text = "일지관리";
-            treeNode47.Name = "KPI_PRT_001";
-            treeNode47.Text = "월간 포장 실적 현황";
-            treeNode48.Name = "KPI_PRT_002";
-            treeNode48.Text = "월별 생산 현황";
-            treeNode49.Name = "노드6";
-            treeNode49.Text = "분석관리";
-            treeNode50.Name = "PPS_MLD_001";
-            treeNode50.Text = "금형 정보 등록";
-            treeNode51.Name = "PPS_MLD_002";
-            treeNode51.Text = "금형 사용 현황";
-            treeNode52.Name = "노드7";
-            treeNode52.Text = "금형관리";
+            treeNode36.Name = "PRM_RPT_001";
+            treeNode36.Text = "적재 작업 일지";
+            treeNode37.Name = "PRM_RPT_002";
+            treeNode37.Text = "성형 작업 일지";
+            treeNode38.Name = "PRM_RPT_003";
+            treeNode38.Text = "포장 작업 일지";
+            treeNode39.Name = "PRM_RPT";
+            treeNode39.Text = "일지관리";
+            treeNode40.Name = "KPI_PRT_001";
+            treeNode40.Text = "월간 포장 실적 현황";
+            treeNode41.Name = "KPI_PRT_002";
+            treeNode41.Text = "월별 생산 현황";
+            treeNode42.Name = "노드6";
+            treeNode42.Text = "분석관리";
+            treeNode43.Name = "PPS_MLD_001";
+            treeNode43.Text = "금형 정보 등록";
+            treeNode44.Name = "PPS_MLD_002";
+            treeNode44.Text = "금형 사용 현황";
+            treeNode45.Name = "노드7";
+            treeNode45.Text = "금형관리";
             this.tv_Menu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode8,
             treeNode21,
             treeNode25,
             treeNode35,
+            treeNode39,
             treeNode42,
-            treeNode46,
-            treeNode49,
-            treeNode52});
+            treeNode45});
             this.tv_Menu.Size = new System.Drawing.Size(202, 852);
             this.tv_Menu.TabIndex = 0;
             this.tv_Menu.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tv_Menu_NodeMouseClick);
