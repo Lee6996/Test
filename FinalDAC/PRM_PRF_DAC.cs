@@ -120,7 +120,7 @@ namespace FinalDAC
                 cmd.Parameters.AddWithValue("Up_Emp", LoginInfoVO.User_ID);
 
                 SqlDataReader reader = cmd.ExecuteReader();
-                List<WorkHistoryVO> list = Helper.DataReaderMapToList<WorkHistoryVO>(reader);
+                List<WorkOrderVO> list = Helper.DataReaderMapToList<WorkOrderVO>(reader);
 
                 conn.Close();
             }
@@ -128,13 +128,13 @@ namespace FinalDAC
         #endregion
 
         #region 009
-        public List<WorkHistoryVO> Select_009()
+        public List<WorkOrderVO> Select_009()
         {
             string sql = "select * from View_WorkHistory";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
-                List<WorkHistoryVO> list = Helper.DataReaderMapToList<WorkHistoryVO>(reader);
+                List<WorkOrderVO> list = Helper.DataReaderMapToList<WorkOrderVO>(reader);
 
                 conn.Close();
                 return list;

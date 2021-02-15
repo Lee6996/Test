@@ -14,10 +14,13 @@ namespace Final.MDS_CDS
 {
     public partial class frm_MDS_CDS_002 : Form
     {
+        public string txtCodeText { get; set; }
+        public string txtNameText { get; set; }
+
         List<Def_MaVO> Defmalist; //불량 대분류
         Def_MaService maservice = new Def_MaService();
 
-        List<Def_MiVO> defmilist;//불량 상세
+        List<Def_MiVO> Defmilist;//불량 상세
         Def_MiService miservice = new Def_MiService();
         public frm_MDS_CDS_002()
         {
@@ -37,123 +40,160 @@ namespace Final.MDS_CDS
             CommonUtil.AddGridTextColumn(dgvDefDetail,  "불량현상상세분류 명", "Def_Mi_Name",210);
             CommonUtil.AddGridTextColumn(dgvDefDetail,  "비고", "Remark", 210);
             CommonUtil.AddGridTextColumn(dgvDefDetail, "입력일자", "Ins_Date", 210);
-            CommonUtil.AddGridTextColumn(dgvDefDetail, "사용여부", "Use_YN", 210);
+            CommonUtil.AddGridTextColumn(dgvDefDetail, "사용여부", "Use_YN", 210,visibility: false);
 
-            DataGridViewButtonColumn gridbtn = new DataGridViewButtonColumn();
-            gridbtn.HeaderText = "사용여부";
-            gridbtn.Text = "변경";
-            gridbtn.Name = "btn";
-            gridbtn.Width = 100;
-            gridbtn.FlatStyle = FlatStyle.Popup;
-            gridbtn.DefaultCellStyle.BackColor = Color.White;
-            gridbtn.UseColumnTextForButtonValue = true;
-            dgvDefDetail.Columns.Add(gridbtn);
+            DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn(false);
+            col.Name = "chk";
+            col.HeaderText = "사용여부";
+            col.Width = 100;
+            col.TrueValue = 1;
+            col.FalseValue = 0;
+            col.DataPropertyName = "Use_YN";
+            this.dgvDefDetail.Columns.Add(col);
 
-            GetAllUserGroup();
+            //컬럼 왼쪽 정렬
+            dgvDefDetail.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgvDefDetail.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            dgvDefDetail.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgvDefMaster.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgvDefMaster.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            dgvDefMaster.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
+            txtCode.Text = txtCodeText;
+            txtName.Text = txtNameText;
+            GetAllData("");
         }
 
-        private void GetAllUserGroup()
-        {
-            Defmalist = new List<Def_MaVO>();
-            Defmalist = maservice.GetAllDef_Ma_Master();
-            dgvDefMaster.DataSource = Defmalist;
+        private void GetAllData(string def)
+        {         
+            try
+            {
+                Defmalist = maservice.GetAllDef_Ma_Master(def);
+                dgvDefMaster.DataSource = Defmalist;
+                dgvDefMaster.ClearSelection();
 
-            defmilist = new List<Def_MiVO>();
-            //defmilist = miservice.GetAllDef_Mi_Master();
-            dgvDefDetail.DataSource = defmilist;
+                Defmilist = miservice.GetAllDef_Mi_Master(def);
+                dgvDefDetail.DataSource = Defmilist;
+                dgvDefDetail.ClearSelection();
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void dgvDefMaster_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dgvDefDetail.DataSource = null;
+        {          
+            var taget = Defmalist.Find(item => item.Def_Ma_Code == dgvDefDetail.SelectedRows[0].Cells[0].Value.ToString());
+            txtDef_Macode.Text = taget.Def_Ma_Name.ToString();            
+            txtDef_Micode.Text = taget.Def_Ma_Name.ToString();
+            txtDef_Miname.Text = taget.Def_Ma_Code.ToString();
 
-            dgvDefDetail.DataSource = defmilist.FindAll(item => item.Def_Ma_Code == dgvDefMaster.SelectedRows[0].Cells[0].Value.ToString());
-            lblDefM.Text = dgvDefMaster.SelectedRows[0].Cells[0].Value.ToString();
-            txtDef_Micode.Text = "";
-            txtDef_Miname.Text = "";
-            txtRemark.Text = "";
         }
-
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtDef_Micode.Text) && !string.IsNullOrEmpty(txtDef_Miname.Text))
+            try
             {
+                Def_MiVO additem = new Def_MiVO
+                {
+                    Def_Mi_Code = txtDef_Micode.Text,
+                    Def_Ma_Code = lblDefM.Text,
+                    Def_Mi_Name = txtDef_Miname.Text,
+                    Remark = txtRemark.Text, 
+                 };
 
-                Def_MiVO additem = new Def_MiVO()
+                Def_MiService service = new Def_MiService();
+                bool bFlag = service.InsertDef_Mi(additem);
+
+                if (bFlag)
+                {
+                    MessageBox.Show("저장되었습니다..");
+                    GetAllData("");
+                }
+                else
+                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            RefreshControl();
+        }
+        private void RefreshControl()
+        {
+            txtDef_Macode.Text = txtDef_Maname.Text = txtDef_Micode.Text = txtDef_Miname.Text = "";
+            txtCode.Focus();       
+
+        }     
+        public void Search()
+        {
+            txtCode.Text = txtCodeText;
+            txtName.Text = txtNameText;
+        }
+
+
+private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var taget = Defmilist.Find(item => item.Def_Ma_Code == dgvDefDetail.SelectedRows[0].Cells[0].Value.ToString());
+            txtName.Text = taget.Def_Mi_Name.ToString();
+            txtCode.Text = taget.Def_Mi_Code.ToString();
+        }
+      
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            GetAllData(txtName.Text);           
+        }
+
+        private void btndotdotdot_Click(object sender, EventArgs e)
+        {
+            frm_MDS_CDS_002_1 frm = new frm_MDS_CDS_002_1()
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                Location = new Point(Location.X + Width, Location.Y)
+            };
+            frm.Show();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshControl();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Def_MiVO additem = new Def_MiVO
                 {
                     Def_Mi_Code = txtDef_Micode.Text,
                     Def_Ma_Code = lblDefM.Text,
                     Def_Mi_Name = txtDef_Miname.Text,
                     Remark = txtRemark.Text,
-                    //Ins_Emp = UserStatic.User_Name
-
                 };
-                //if (miservice.InsertUpdateDef_Mi_Master(additem))
-                //{
-                //    MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    GetAllUserGroup();                    
-                //}
-                //else
-                //{
-                //    MessageBox.Show("저장에 실패했습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
-            }
-            else
-            {
-                MessageBox.Show("필수 항목을 입력하세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
 
-        private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (btnSave.Text.Equals("수정"))
-            {
+                Def_MiService service = new Def_MiService();
+                bool bFlag = service.UpdateDef_Mi(additem);
 
-                txtDef_Micode.Text = dgvDefDetail.SelectedRows[0].Cells[0].Value.ToString();
-                txtDef_Miname.Text = dgvDefDetail.SelectedRows[0].Cells[1].Value.ToString();
-                txtRemark.Text = dgvDefDetail.SelectedRows[0].Cells[2].Value.ToString();
-            }
-        }
-
-        private void dgvDefDetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-
-                //if (e.ColumnIndex == dgvDefDetail.Columns["btn"].Index)//눌러서 사용과 사용안함 변경
-                //{
-                //    if ((dgvDefDetail.SelectedRows[0].Cells[4].Value).ToString() == "Y") //사용안함
-                //    {
-                //        miservice.UsedDef_Mi_Master((dgvDefDetail.SelectedRows[0].Cells[0].Value).ToString(), "N");
-                //    }
-                //    else //사용함
-                //    {
-                //        miservice.UsedDef_Mi_Master((dgvDefDetail.SelectedRows[0].Cells[0].Value).ToString(), "Y");
-                //    }
-                //    GetAllUserGroup();
-                //}
-
+                if (bFlag)
+                {
+                    MessageBox.Show("수정되었습니다..");
+                    GetAllData("");
+                }
+                else
+                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
             }
             catch (Exception err)
             {
-
                 MessageBox.Show(err.Message);
             }
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            //foreach (DataGridViewRow row in dgvDefMaster.Rows)
-            //{
-            //    if (row.Cells[0].Value.ToString() == aBigTextBox_FindNameByCode1.txtCodeText)
-            //    {
-            //        row.Selected = true;
-            //    }
-            //}
-            //if (row.Cells[0].Value.ToString().Contains(lblGroup.Text))
-            //{
-            //    row.Cells[0].Selected = true;
-            //}
+            RefreshControl();
         }
     }
 }

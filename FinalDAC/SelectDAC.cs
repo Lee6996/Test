@@ -94,7 +94,7 @@ namespace FinalDAC
         }
 
         //WorkHistory
-        public List<WorkHistoryVO> SelectWorkHistory(string dtpFrom, string dtpTo, string Wc_Name)
+        public List<WorkOrderVO> SelectWorkHistory(string dtpFrom, string dtpTo, string Wc_Name)
         {
             string sql = "select * from View_WorkHistory where Work_Date between @dtpFrom and @dtpTo ";
             if (!string.IsNullOrEmpty(Wc_Name))
@@ -110,7 +110,7 @@ namespace FinalDAC
                     cmd.Parameters.AddWithValue("@Wc_Name", Wc_Name);
                 }
                 SqlDataReader reader = cmd.ExecuteReader();
-                List<WorkHistoryVO> list = Helper.DataReaderMapToList<WorkHistoryVO>(reader);
+                List<WorkOrderVO> list = Helper.DataReaderMapToList<WorkOrderVO>(reader);
 
                 conn.Close();
                 return list;
@@ -410,6 +410,8 @@ namespace FinalDAC
                     sql = "SELECT User_ID,User_Name FROM User_Master"; break;
                 case "Process":
                     sql = "SELECT Process_Code, Process_Name FROM Process_Master"; break;
+                case "Mold":
+                    sql = "SELECT Mold_Code, Mold_Name FROM Mold_Master"; break;
                 default: sql = null; break;
             }
 
@@ -422,13 +424,26 @@ namespace FinalDAC
                 return list;
             }
         }
-        public List<WorkDayVO> SelectWorkDay(string Prd_Date)
+        public List<WorkDayVO> SelectWorkDay(string Prd_Date_from, string Prd_Date_to, string Process_Code = null, string Wc_Code = null)
         {
-            string sql = " SELECT * from View_WorkDay where Prd_Date = @Prd_Date";
+            string sql = " SELECT * from View_WorkDay where Prd_Date between @Prd_Date_from and @Prd_Date_to ";
+
+            if (!string.IsNullOrEmpty(Process_Code))
+                sql += " and Process_Code = @Process_Code";
+
+            if (!string.IsNullOrEmpty(Wc_Code))
+                sql += " and Wc_Code = @Wc_Code ";
+
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
+                cmd.Parameters.AddWithValue("@Prd_Date_from", Prd_Date_from);
+                cmd.Parameters.AddWithValue("@Prd_Date_to", Prd_Date_to);
 
-                cmd.Parameters.AddWithValue("@Prd_Date", Prd_Date);
+                if (!string.IsNullOrEmpty(Process_Code))
+                    cmd.Parameters.AddWithValue("@Process_Code", Process_Code);
+                if (!string.IsNullOrEmpty(Wc_Code))
+                    cmd.Parameters.AddWithValue("@Wc_Code", Wc_Code);
+
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkDayVO> list = Helper.DataReaderMapToList<WorkDayVO>(reader);
 
@@ -436,13 +451,22 @@ namespace FinalDAC
                 return list;
             }
         }
-        public List<WorkItemVO> SelectWorkItem(string Prd_Date)
+        public List<WorkItemVO> SelectWorkItem(string Prd_Date_from, string Prd_Date_to, string Wc_Code = null)
         {
-            string sql = " SELECT * from View_WorkItem where Prd_Date = @Prd_Date";
+            string sql = " SELECT * from View_WorkItem where Prd_Date between @Prd_Date_from and @Prd_Date_to ";
+
+            if (!string.IsNullOrEmpty(Wc_Code))
+                sql += " and Wc_Code = @Wc_Code ";
+
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
 
-                cmd.Parameters.AddWithValue("@Prd_Date", Prd_Date);
+                cmd.Parameters.AddWithValue("@Prd_Date_from", Prd_Date_from);
+                cmd.Parameters.AddWithValue("@Prd_Date_to", Prd_Date_to);
+
+                if (!string.IsNullOrEmpty(Wc_Code))
+                    cmd.Parameters.AddWithValue("@Wc_Code", Wc_Code);
+
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkItemVO> list = Helper.DataReaderMapToList<WorkItemVO>(reader);
 
@@ -450,13 +474,23 @@ namespace FinalDAC
                 return list;
             }
         }
-        public List<WorkBoxingVO> SelectWorkBoxing(string Prd_Date)
+        public List<WorkBoxingVO> SelectWorkBoxing(string Prd_Date_from, string Prd_Date_to, string Wc_Code = null)
         {
-            string sql = " SELECT * from View_WorkBoxing where Prd_Date = @Prd_Date";
+            string sql = " SELECT * from View_WorkBoxing where Prd_Date between @Prd_Date_from and @Prd_Date_to";
+
+
+            if (!string.IsNullOrEmpty(Wc_Code))
+                sql += " and Wc_Code = @Wc_Code ";
+
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
 
-                cmd.Parameters.AddWithValue("@Prd_Date", Prd_Date);
+                cmd.Parameters.AddWithValue("@Prd_Date_from", Prd_Date_from);
+                cmd.Parameters.AddWithValue("@Prd_Date_to", Prd_Date_to);
+
+                if (!string.IsNullOrEmpty(Wc_Code))
+                    cmd.Parameters.AddWithValue("@Wc_Code", Wc_Code);
+
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<WorkBoxingVO> list = Helper.DataReaderMapToList<WorkBoxingVO>(reader);
 
@@ -464,7 +498,184 @@ namespace FinalDAC
                 return list;
             }
         }
+        public List<MoldVO> SelectMold( )
+        {
+            string sql = " SELECT * from View_Mold_Master";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<MoldVO> list = Helper.DataReaderMapToList<MoldVO>(reader);
 
+                conn.Close();
+                return list;
+            }
+        }
+        public List<MoldVO> SelectMolds(string Mold_Code = null, string Mold_Group = null)
+        {
+            string sql = " SELECT * from View_Mold_Master where Mold_Group = @Mold_Group and Mold_Code = @Mold_Code";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Mold_Code", Mold_Code);
+                cmd.Parameters.AddWithValue("@Mold_Group", Mold_Group);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<MoldVO> list = Helper.DataReaderMapToList<MoldVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<MoldVO> SelectMoldCode(string Mold_Code=null, string Mold_Group = null)
+        {
+            string sql = " SELECT * from View_Mold_Master";
+
+            if (!string.IsNullOrEmpty(Mold_Code))
+                sql += " where Mold_Code = @Mold_Code";
+            if (!string.IsNullOrEmpty(Mold_Group))
+                sql += " and Mold_Group = @Mold_Group";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                if (!string.IsNullOrEmpty(Mold_Code))
+                    cmd.Parameters.AddWithValue("@Mold_Code", Mold_Code);
+                if (!string.IsNullOrEmpty(Mold_Group))
+                    cmd.Parameters.AddWithValue("@Mold_Group", Mold_Group);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<MoldVO> list = Helper.DataReaderMapToList<MoldVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<MoldVO> SelectMoldGroup(string Mold_Code = null, string Mold_Group = null)
+        {
+            string sql = " SELECT * from View_Mold_Master";
+
+            if (!string.IsNullOrEmpty(Mold_Group))
+                sql += " where Mold_Group = @Mold_Group";
+            if (!string.IsNullOrEmpty(Mold_Code))
+                sql += " and Mold_Code = @Mold_Code";
+
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                if (!string.IsNullOrEmpty(Mold_Code))
+                    cmd.Parameters.AddWithValue("@Mold_Code", Mold_Code);
+                if (!string.IsNullOrEmpty(Mold_Group))
+                    cmd.Parameters.AddWithValue("@Mold_Group", Mold_Group);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<MoldVO> list = Helper.DataReaderMapToList<MoldVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<MoldGroupVO> GetMoldGroup()
+        {
+            string sql = " SELECT Mold_Group from Mold_Master";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<MoldGroupVO> list = Helper.DataReaderMapToList<MoldGroupVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<MoldUseVO> SelectMoldUse()
+        {
+            string sql = " SELECT * from View_MoldUse";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<MoldUseVO> list = Helper.DataReaderMapToList<MoldUseVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<MoldUseVO> SelectMoldUses(string dtpFrom, string dtpTo, string Item_Code = null, string Wc_Code = null)
+        {
+            string sql = " SELECT * from View_MoldUse where Prd_Date between @dtpFrom and @dtpTo";
+
+            if (!string.IsNullOrEmpty(Item_Code))
+                sql += " and Item_Code = @Item_Code";
+
+            if (!string.IsNullOrEmpty(Wc_Code))
+                sql += " and Wc_Code = @Wc_Code ";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                cmd.Parameters.AddWithValue("@Item_Code", Item_Code);
+                    cmd.Parameters.AddWithValue("@Wc_Code", Wc_Code);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<MoldUseVO> list = Helper.DataReaderMapToList<MoldUseVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<MoldUseVO> SelectMoldUseItem(string dtpFrom, string dtpTo, string Item_Code = null, string Wc_Code = null)
+        {
+            string sql = " SELECT * from View_MoldUse where Prd_Date between @dtpFrom and @dtpTo";
+
+            if (!string.IsNullOrEmpty(Wc_Code))
+                sql += " and Wc_Code = @Wc_Code";
+            if (!string.IsNullOrEmpty(Item_Code))
+                sql += " and Item_Code = @Item_Code";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                if (!string.IsNullOrEmpty(Item_Code))
+                    cmd.Parameters.AddWithValue("@Item_Code", Item_Code);
+                if (!string.IsNullOrEmpty(Wc_Code))
+                    cmd.Parameters.AddWithValue("@Wc_Code", Wc_Code);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<MoldUseVO> list = Helper.DataReaderMapToList<MoldUseVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+        public List<MoldUseVO> SelectMoldUseWc(string dtpFrom, string dtpTo, string Item_Code = null, string Wc_Code = null)
+        {
+            string sql = " SELECT * from View_MoldUse where Prd_Date between @dtpFrom and @dtpTo";
+
+            if (!string.IsNullOrEmpty(Wc_Code))
+                sql += " and Wc_Code = @Wc_Code";
+            if (!string.IsNullOrEmpty(Item_Code))
+                sql += " and Item_Code = @Item_Code";
+
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                if (!string.IsNullOrEmpty(Item_Code))
+                    cmd.Parameters.AddWithValue("@Item_Code", Item_Code);
+                if (!string.IsNullOrEmpty(Wc_Code))
+                    cmd.Parameters.AddWithValue("@Wc_Code", Wc_Code);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<MoldUseVO> list = Helper.DataReaderMapToList<MoldUseVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
         //공지사항 전체 - SysNotice
         public List<SysNoticeVO> SelectAllNoticeInfo(string sysnotice)
         {
