@@ -149,7 +149,7 @@ VALUES
                                         from Item_Master where 1 = 1  ";
 
             if (!string.IsNullOrEmpty(data))
-                sQuery += " and Item_Code Like @Item_Name ";
+                sQuery += " and Item_Name Like @Item_Name ";
 
             using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
@@ -174,41 +174,21 @@ VALUES
             return dt;
         }
 
-        public bool UpdateItemLevel(ItemInfoVO upitem)
+        public bool UpdateItemLevel(ItemInfoVO vo)
         {
-            string sql = $@"UPDATE Item_Level_Master
-   SET Item_lvl1 = @Item_lvl1
-      ,Item_lvl2 = @Item_lvl2
-      ,Item_lvl3 = @Item_lvl3
-      ,Item_lvl4 = @Item_lvl4
-      ,Item_lvl5 = @Item_lvl5
-      ,Box_Qty= @Box_Qty
-      ,Pcs_Qty = @Pcs_Qty
-      ,Mat_Qty = @Mat_Qty      
-     
-      ,Up_Date = convert(char(10), GetDATE(), 23),
-      ,Up_Emp = 'test1' 
- WHERE Level_Code = @Level_Code";
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            string sQuery = @"update Item_Level_Master set Use_YN = @Use_YN where Level_Code = @Level_Code";
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
-                cmd.Parameters.AddWithValue("@Level_Code", upitem.Level_Code);               
-                cmd.Parameters.AddWithValue("@Item_lvl1", upitem.Item_lvl1);
-                cmd.Parameters.AddWithValue("@Item_lvl2", upitem.Item_lvl2);
-                cmd.Parameters.AddWithValue("@Item_lvl3", upitem.Item_lvl3);
-                cmd.Parameters.AddWithValue("@Item_lvl4", upitem.Item_lvl4);
-                cmd.Parameters.AddWithValue("@Item_lvl5", upitem.Item_lvl5);
-                cmd.Parameters.AddWithValue("@Box_Qty", upitem.Box_Qty);
-                cmd.Parameters.AddWithValue("@Pcs_Qty", upitem.Pcs_Qty);
-                cmd.Parameters.AddWithValue("@Mat_Qty", upitem.Mat_Qty);
-               // cmd.Parameters.AddWithValue("@Up_Emp", upitem.Ins_Emp);
-               // cmd.Parameters.AddWithValue("@Up_Date", upitem.Ins_Emp);
-                
+                cmd.Parameters.AddWithValue("@Level_Code", vo.Level_Code);
+                cmd.Parameters.AddWithValue("@Use_YN", (vo.Use_YN == 1) ? "Y" : "N");
 
-
-                if (cmd.ExecuteNonQuery() > 0) return true;
-                else return false;
+                int iCnt = Convert.ToInt32(cmd.ExecuteScalar());
+                if (iCnt > 0)
+                    return true;
+                else
+                    return false;
             }
-        }        
+        }
 
         public bool InsertItemLevel(ItemInfoVO additem)
         {
@@ -360,7 +340,7 @@ VALUES
                 cmd.Parameters.AddWithValue("@Cavity", upitem.Cavity);
                 cmd.Parameters.AddWithValue("@Line_Per_Qty", upitem.Line_Per_Qty);
                 cmd.Parameters.AddWithValue("@Shot_Per_Qty", upitem.Shot_Per_Qty);                
-               // cmd.Parameters.AddWithValue("@Up_Emp", upitem.Up_Emp);
+                cmd.Parameters.AddWithValue("@Up_Emp", upitem.Up_Emp);
 
 
                 if (cmd.ExecuteNonQuery() > 0) return true;

@@ -104,7 +104,7 @@ namespace Final.MDS_SDS
             {
                 cbLevel.SelectedIndex = 4;
             }
-
+                       
         }
 
 
@@ -229,82 +229,6 @@ namespace Final.MDS_SDS
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             RefreshControl();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            if (txtCode.Text.Length < 1)
-            {
-                MessageBox.Show("레벨코드 미입력");
-                return;
-            }
-            if (txtName.Text.Length < 1)
-            {
-                MessageBox.Show("레벨명 미입력");
-                return;
-            }
-
-            if (!string.IsNullOrEmpty(txtCode.Text.Trim()) && !string.IsNullOrEmpty(txtName.Text.Trim()))
-            {
-                string level;
-                if (cbLevel.Text == "Level1")
-                {
-                    level = "YNNNN";
-                }
-                else if (cbLevel.Text == "Level2")
-                {
-                    level = "NYNNN";
-                }
-                else if (cbLevel.Text == "Level3")
-                {
-                    level = "NNYNN";
-                }
-                else if (cbLevel.Text == "Level4")
-                {
-                    level = "NNNYN";
-                }
-                else if (cbLevel.Text == "Level5")
-                {
-                    level = "NNNNY";
-                }
-                else
-                {
-                    level = "NNNNN";
-                }
-
-                ItemInfoVO additem = new ItemInfoVO()
-                {
-                    Level_Code = txtCode.Text.Trim(),
-                    Level_Name = txtName.Text.Trim(),
-                    Item_lvl1 = level[0].ToString().Trim(),
-                    Item_lvl2 = level[1].ToString().Trim(),
-                    Item_lvl3 = level[2].ToString().Trim(),
-                    Item_lvl4 = level[3].ToString().Trim(),
-                    Item_lvl5 = level[4].ToString().Trim(),
-                    Box_Qty = Convert.ToInt32(nuPLbox.Value),
-                    Pcs_Qty = Convert.ToInt32(nuBoxpcs.Value),
-                    Mat_Qty = nuPCSqty.Value,
-                    Ins_Emp = UserStatic.User_Name,
-                };
-                try
-                {
-                    ItemService service = new ItemService();
-                    bool bFlag = service.UpdateItemLevel(additem);
-
-                    if (bFlag)
-                    {
-                        MessageBox.Show("추가되었습니다.");
-                        DataLoad("");
-                    }
-                    else
-                        MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
-                }
-                catch (Exception err)
-                {
-                    MessageBox.Show(err.Message);
-                }
-                RefreshControl();
-            }
         }
     }
 }
