@@ -1,5 +1,4 @@
-﻿using FinalDAC;
-using FinalVO;
+﻿using FinalVO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +14,6 @@ namespace Final.PRM_PRF
     public partial class frm_PRM_PRF_007 : Form
     {
         List<GV> list;
-        List<GVStatusVO> gvStatusList;
         public frm_PRM_PRF_007()
         {
             InitializeComponent();
@@ -23,12 +21,11 @@ namespace Final.PRM_PRF
 
         private void frm_PRM_PRF_007_Load(object sender, EventArgs e)
         {
-            SettingDGV(dgvPRM_PRF);
-            RefreshState();
+
         }
 
         #region MyMethod
-        private void SettingDGV(DataGridView dgv)
+        private void frm_PRM_PRF_005_Load(object sender, EventArgs e)
         {
             CommonUtil.SetInitGridView(dgv);
             CommonUtil.AddGridTextColumn(dgv, "대차코드", "GV_Code", 133);
@@ -58,7 +55,6 @@ namespace Final.PRM_PRF
         {
             list = new PRM_PRF_Service().GetGV();
             dgvPRM_PRF.DataSource = list;
-            DrawGVState();
         }
         #endregion
     }
