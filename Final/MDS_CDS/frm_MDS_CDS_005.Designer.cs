@@ -174,7 +174,7 @@ namespace Final.MDS_CDS
             this.rdo6.Size = new System.Drawing.Size(81, 16);
             this.rdo6.TabIndex = 5;
             this.rdo6.TabStop = true;
-            this.rdo6.Tag = "BG_Pet_005";
+            this.rdo6.Tag = "BG_Cap_002";
             this.rdo6.Text = "포장등급 6";
             this.rdo6.UseVisualStyleBackColor = true;
             // 
@@ -186,7 +186,7 @@ namespace Final.MDS_CDS
             this.rdo5.Size = new System.Drawing.Size(81, 16);
             this.rdo5.TabIndex = 4;
             this.rdo5.TabStop = true;
-            this.rdo5.Tag = "BG_Pet_004";
+            this.rdo5.Tag = "BG_Cup_001";
             this.rdo5.Text = "포장등급 5";
             this.rdo5.UseVisualStyleBackColor = true;
             // 
@@ -198,7 +198,7 @@ namespace Final.MDS_CDS
             this.rdo4.Size = new System.Drawing.Size(81, 16);
             this.rdo4.TabIndex = 3;
             this.rdo4.TabStop = true;
-            this.rdo4.Tag = "BG_Pet_003";
+            this.rdo4.Tag = "BG_Spn_001";
             this.rdo4.Text = "포장등급 4";
             this.rdo4.UseVisualStyleBackColor = true;
             // 
@@ -210,7 +210,7 @@ namespace Final.MDS_CDS
             this.rdo3.Size = new System.Drawing.Size(81, 16);
             this.rdo3.TabIndex = 2;
             this.rdo3.TabStop = true;
-            this.rdo3.Tag = "BG_Pet_002";
+            this.rdo3.Tag = "BG_Bo_001";
             this.rdo3.Text = "포장등급 3";
             this.rdo3.UseVisualStyleBackColor = true;
             // 

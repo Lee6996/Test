@@ -38,7 +38,7 @@ namespace FinalDAC
               Pcs_Qty = @Pcs_Qty,
               Mat_Qty = @Mat_Qty,
               Up_Date = CONVERT(char(10), Up_Date, 23), Up_Emp = 'test1'
-              where Level_Code = @Level_Code";           
+              where Level_Code = @Level_Code";
 
 
             //Ins_Emp = @Ins_Emp
@@ -87,56 +87,45 @@ namespace FinalDAC
                     return true;
                 else
                     return false;
-            }        
+            }
         }
 
         public bool InsertUpdateItemInfo(ItemInfoVO additem)
         {
-            try
-            {
-                using (SqlCommand comm = new SqlCommand())
-                {
-                    comm.Connection = new SqlConnection(conn.ToString());
-                    comm.CommandText = @"IF NOT EXISTS(SELECT [Level_Code] FROM [Item_Level_Master] WHERE [Level_Code]=@[Level_Code])
+            string sql = $@"IF NOT EXISTS(SELECT [Level_Code] FROM [Item_Level_Master] WHERE [Level_Code]=@Level_Code)
    BEGIN
-		INSERT INTO [Item_Level_Master] (  [Level_Code],[Level_Name],[Item_lvl1],[Item_lvl2],[Item_lvl3],[Item_lvl4],[Item_lvl5],[Box_Qty],[Pcs_Qty],[Mat_Qty],[Use_YN]
-      ,[Ins_Date]
-      ,[Ins_Emp]) 
-VALUES(@Level_Code,@Level_Name,@Item_lvl1@,@Item_lvl2,@Item_lvl3,@Item_lvl4,@Item_lvl5,@Box_Qty,@Pcs_Qty,@Mat_Qty,'Y',GETDATE(),'test')
-   END
+		INSERT INTO [Item_Level_Master]([Level_Code],[Level_Name],[Item_lvl1],[Item_lvl2],[Item_lvl3],[Item_lvl4],[Item_lvl5],[Box_Qty],[Pcs_Qty],[Mat_Qty],[Use_YN],[Ins_Date],[Ins_Emp] )      
+		VALUES(@Level_Code,@Level_Name,@Item_lvl1,@Item_lvl2,@Item_lvl3,@Item_lvl4,@Item_lvl5,@Box_Qty,@Pcs_Qty,@Mat_Qty,'Y',GETDATE(),'TEST')
+		END
  ELSE
 	 BEGIN
 		UPDATE [Item_Level_Master] SET [Level_Name]=@Level_Name,[Item_lvl1]=@Item_lvl1,[Item_lvl2]=@Item_lvl2,[Item_lvl3]=@Item_lvl3,[Item_lvl4]=@Item_lvl4,[Item_lvl5]=@Item_lvl5,[Box_Qty]=@Box_Qty,[Pcs_Qty]=@Pcs_Qty,[Mat_Qty]=@Mat_Qty,Up_Date =GETDATE(), Up_Emp = 'test' 
 		where [Level_Code]=@Level_Code
-	   END";
+		  END";
 
-                    comm.CommandType = CommandType.Text;
-                    comm.Parameters.AddWithValue("@Level_Code", additem.Level_Code);
-                    comm.Parameters.AddWithValue("@Level_Name", additem.Level_Name);
-                    comm.Parameters.AddWithValue("@Item_lvl1", additem.Item_lvl1);
-                    comm.Parameters.AddWithValue("@Item_lvl2", additem.Item_lvl2);
-                    comm.Parameters.AddWithValue("@Item_lvl3", additem.Item_lvl3);
-                    comm.Parameters.AddWithValue("@Item_lvl4", additem.Item_lvl4);
-                    comm.Parameters.AddWithValue( "@Item_lvl5", additem.Item_lvl5);
-                    comm.Parameters.AddWithValue( "@Box_Qty", additem.Box_Qty);
-                    comm.Parameters.AddWithValue( "@Pcs_Qty", additem.Pcs_Qty);
-                    comm.Parameters.AddWithValue( "@Mat_Qty", additem.Mat_Qty);
 
-                    comm.Connection.Open();
-                    int result = Convert.ToInt32(comm.ExecuteNonQuery());
-                    comm.Connection.Close();
-
-                    if (result > 0)
-                        return true;
-                    return false;
-                }
-            }
-            catch (Exception)
+            //Ins_Emp = @Ins_Emp
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
+                cmd.Parameters.AddWithValue("@Level_Code", additem.Level_Code);
+                cmd.Parameters.AddWithValue("@Level_Name", additem.Level_Name);
+                cmd.Parameters.AddWithValue("@Item_lvl1", additem.Item_lvl1);
+                cmd.Parameters.AddWithValue("@Item_lvl2", additem.Item_lvl2);
+                cmd.Parameters.AddWithValue("@Item_lvl3", additem.Item_lvl3);
+                cmd.Parameters.AddWithValue("@Item_lvl4", additem.Item_lvl4);
+                cmd.Parameters.AddWithValue("@Item_lvl5", additem.Item_lvl5);
+                cmd.Parameters.AddWithValue("@Box_Qty", additem.Box_Qty);
+                cmd.Parameters.AddWithValue("@Pcs_Qty", additem.Pcs_Qty);
+                cmd.Parameters.AddWithValue("@Mat_Qty", additem.Mat_Qty);
 
-                throw;
+
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
             }
-        }
+        } 
 
         public bool InsertItemMaster(Item_MasterVO additem)
         {
