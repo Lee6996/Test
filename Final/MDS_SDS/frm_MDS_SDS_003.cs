@@ -91,10 +91,10 @@ namespace Final.MDS_SDS
             DataTable dtName2 = service3.ProcessBindingName();
             //빈칸을 위해 한행 추가
             DataRow dr2 = dtName2.NewRow();
-            dr["Process_Name"] = "전체";
-            dr["Process_code"] = "";
+            dr2["Process_Name"] = "전체";
+            dr2["Process_code"] = "";
 
-            dtName2.Rows.InsertAt(dr, 0);
+            dtName2.Rows.InsertAt(dr2, 0);
             dtName2.AcceptChanges();
 
             //콤보박스에 표시될 컬럼 바인딩

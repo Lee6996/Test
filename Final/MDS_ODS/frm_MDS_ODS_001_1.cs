@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Final.MDS_ODS
 {
-    public partial class frm_MDS_ODS_002_1 : Form
+    public partial class frm_MDS_ODS_001_1 : Form
     {
-        public frm_MDS_ODS_002_1()
+        public frm_MDS_ODS_001_1()
         {
             InitializeComponent();
         }
