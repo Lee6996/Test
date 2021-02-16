@@ -44,7 +44,7 @@ namespace Final.PRM_PRF
             this.panel5.Controls.Add(this.dgvPRM_PRF_1);
             this.panel5.Controls.Add(this.dgvPRM_PRF_2);
             this.panel5.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.panel5.Size = new System.Drawing.Size(1676, 914);
+            this.panel5.Size = new System.Drawing.Size(1676, 869);
             this.panel5.Controls.SetChildIndex(this.label11, 0);
             this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_2, 0);
             this.panel5.Controls.SetChildIndex(this.dgvPRM_PRF_1, 0);
@@ -78,40 +78,41 @@ namespace Final.PRM_PRF
             this.panel4.Controls.SetChildIndex(this.btnWoEnd, 0);
             this.panel4.Controls.SetChildIndex(this.btnPalletEnd, 0);
             // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(4, 60);
+            // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label11.Location = new System.Drawing.Point(3, 441);
+            this.label11.Location = new System.Drawing.Point(3, 432);
             this.label11.Size = new System.Drawing.Size(256, 26);
             this.label11.Text = "▶팔렛트내역";
             // 
             // dgvPRM_PRF_2
             // 
-            this.dgvPRM_PRF_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvPRM_PRF_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPRM_PRF_2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPRM_PRF_2.Location = new System.Drawing.Point(3, 470);
+            this.dgvPRM_PRF_2.Location = new System.Drawing.Point(3, 461);
             this.dgvPRM_PRF_2.Name = "dgvPRM_PRF_2";
             this.dgvPRM_PRF_2.RowTemplate.Height = 23;
-            this.dgvPRM_PRF_2.Size = new System.Drawing.Size(1668, 465);
+            this.dgvPRM_PRF_2.Size = new System.Drawing.Size(1668, 429);
             this.dgvPRM_PRF_2.TabIndex = 24;
             this.dgvPRM_PRF_2.Tag = "";
             this.dgvPRM_PRF_2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_2_CellDoubleClick);
             // 
             // dgvPRM_PRF_1
             // 
-            this.dgvPRM_PRF_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvPRM_PRF_1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPRM_PRF_1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPRM_PRF_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPRM_PRF_1.Location = new System.Drawing.Point(3, 3);
             this.dgvPRM_PRF_1.Name = "dgvPRM_PRF_1";
             this.dgvPRM_PRF_1.RowTemplate.Height = 23;
-            this.dgvPRM_PRF_1.Size = new System.Drawing.Size(1668, 435);
+            this.dgvPRM_PRF_1.Size = new System.Drawing.Size(1668, 426);
             this.dgvPRM_PRF_1.TabIndex = 23;
             this.dgvPRM_PRF_1.Tag = "";
             this.dgvPRM_PRF_1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPRM_PRF_1_CellClick);
@@ -146,7 +147,7 @@ namespace Final.PRM_PRF
             // 
             // frm_PRM_PRF_002
             // 
-            this.ClientSize = new System.Drawing.Size(1676, 1006);
+            this.ClientSize = new System.Drawing.Size(1676, 961);
             this.Name = "frm_PRM_PRF_002";
             this.Load += new System.EventHandler(this.frm_PRM_PRF_002_Load);
             this.panel5.ResumeLayout(false);

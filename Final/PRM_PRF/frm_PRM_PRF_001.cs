@@ -32,6 +32,7 @@ namespace Final.PRM_PRF
             {
                 PopUp.frm_PRM_PRF_001_PopUp frm = new PopUp.frm_PRM_PRF_001_PopUp(vo);
                 frm.ShowDialog();
+                RefreshState();
             }
             else
             {
@@ -85,16 +86,16 @@ namespace Final.PRM_PRF
         private void SettingDGV(DataGridView dgv)
         {
             CommonUtil.SetInitGridView(dgv);
-            CommonUtil.AddGridTextColumn(dgv, "작업지시번호", "Workorderno", 150);
-            CommonUtil.AddGridTextColumn(dgv, "작업지시일자", "Plan_Date", 150);
+            CommonUtil.AddGridTextColumn(dgv, "작업지시번호", "Workorderno", 250);
+            CommonUtil.AddGridTextColumn(dgv, "작업지시일자", "Plan_Date", 230);
             CommonUtil.AddGridTextColumn(dgv, "작업지시상태", "Wo_Status", 150);
-            CommonUtil.AddGridTextColumn(dgv, "품목코드", "Item_Code", 150);
+            CommonUtil.AddGridTextColumn(dgv, "품목코드", "Item_Code", 200);
             CommonUtil.AddGridTextColumn(dgv, "품목명", "Item_Name", 200);
-            CommonUtil.AddGridTextColumn(dgv, "공정명", "Process_name", 100);
-            CommonUtil.AddGridTextColumn(dgv, "작업장", "Wc_Name", 150);
-            CommonUtil.AddGridTextColumn(dgv, "투입수량", "In_Qty_Main", 150);
-            CommonUtil.AddGridTextColumn(dgv, "산출수량", "Out_Qty_Main", 150);
-            CommonUtil.AddGridTextColumn(dgv, "생산수량", "Prd_Qty", 150);
+            CommonUtil.AddGridTextColumn(dgv, "공정명", "Process_name", 175);
+            CommonUtil.AddGridTextColumn(dgv, "작업장", "Wc_Name", 175);
+            CommonUtil.AddGridTextColumn(dgv, "투입수량", "In_Qty_Main", 100, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
+            CommonUtil.AddGridTextColumn(dgv, "산출수량", "Out_Qty_Main", 100, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
+            CommonUtil.AddGridTextColumn(dgv, "생산수량", "Prd_Qty", 100, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
         }
 
         private void RefreshState()

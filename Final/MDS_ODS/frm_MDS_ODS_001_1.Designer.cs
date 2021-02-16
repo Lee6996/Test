@@ -117,7 +117,7 @@ namespace Final.MDS_ODS
             this.Controls.Add(this.dgvProcess);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frm_MDS_ODS_002_1";
+            //this.Name = "frm_MDS_ODS_002_1";
             this.Tag = "공정목록";
             this.Text = "frm_MDS_ODS_002_1";
             this.Load += new System.EventHandler(this.frm_MDS_ODS_002_1_Load);

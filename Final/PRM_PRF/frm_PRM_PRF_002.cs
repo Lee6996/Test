@@ -79,15 +79,15 @@ namespace Final.PRM_PRF
         {
             CommonUtil.SetInitGridView(dgv);
             //dgv.Columns.Add(new DataGridViewCheckBoxColumn());
-            CommonUtil.AddGridTextColumn(dgv, "생산일자", "Prd_Date", 200);
-            CommonUtil.AddGridTextColumn(dgv, "작업지시번호", "Workorderno", 200);
+            CommonUtil.AddGridTextColumn(dgv, "생산일자", "Prd_Date", 230);
+            CommonUtil.AddGridTextColumn(dgv, "작업지시번호", "Workorderno", 250);
             CommonUtil.AddGridTextColumn(dgv, "작업지시상태", "Wo_Status", 200);
-            CommonUtil.AddGridTextColumn(dgv, "품목코드", "Item_Code", 200);
-            CommonUtil.AddGridTextColumn(dgv, "품목명", "Item_Name", 200);
+            CommonUtil.AddGridTextColumn(dgv, "품목코드", "Item_Code", 250);
+            CommonUtil.AddGridTextColumn(dgv, "품목명", "Item_Name", 250);
             CommonUtil.AddGridTextColumn(dgv, "작업장", "Wc_Name", 200);
-            CommonUtil.AddGridTextColumn(dgv, "투입수량", "In_Qty_Main", 200);
-            CommonUtil.AddGridTextColumn(dgv, "산출수량", "Out_Qty_Main", 200);
-            CommonUtil.AddGridTextColumn(dgv, "생산수량", "Prd_Qty", 200);
+            CommonUtil.AddGridTextColumn(dgv, "투입수량", "In_Qty_Main", 100, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
+            CommonUtil.AddGridTextColumn(dgv, "산출수량", "Out_Qty_Main", 100, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
+            CommonUtil.AddGridTextColumn(dgv, "생산수량", "Prd_Qty", 100, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
         }
 
         private void RefreshState()

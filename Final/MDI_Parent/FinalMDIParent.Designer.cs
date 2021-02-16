@@ -926,6 +926,3 @@ namespace Final
         private System.Windows.Forms.ToolStripMenuItem QAM_SQC_006;
     }
 }
-
-
-
