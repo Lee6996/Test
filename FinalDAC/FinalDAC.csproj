@@ -50,9 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoxingGrade_Detail_MasterDAC.cs" />
     <Compile Include="Condition_SpecDAC.cs" />
     <Compile Include="Def_MaDAC.cs" />
     <Compile Include="Def_MiDAC.cs" />
+    <Compile Include="GV_MasterDAC.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="ItemInfoDAC.cs" />
     <Compile Include="ItemSpecDAC.cs" />

@@ -32,11 +32,9 @@ namespace Final.MDS_CDS
             this.btnInsert = new System.Windows.Forms.Button();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.dgvNopMi = new System.Windows.Forms.DataGridView();
             this.txtNopMiCode = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.dgvNopMa = new System.Windows.Forms.DataGridView();
             this.txtNopMaCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -89,15 +87,6 @@ namespace Final.MDS_CDS
             this.label3.TabIndex = 93;
             this.label3.Text = "비고";
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(825, 135);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(340, 23);
-            this.textBox7.TabIndex = 90;
-            this.textBox7.Text = "비가동 상세분류 코드 / 비가동 상세분류명 / 정렬순번 /비고";
-            // 
             // dgvNopMi
             // 
             this.dgvNopMi.BackgroundColor = System.Drawing.Color.White;
@@ -128,15 +117,6 @@ namespace Final.MDS_CDS
             this.label5.Size = new System.Drawing.Size(135, 17);
             this.label5.TabIndex = 86;
             this.label5.Text = "비가동 상세분류 코드";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(60, 135);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(356, 23);
-            this.textBox2.TabIndex = 84;
-            this.textBox2.Text = "비가동 대분류 코드 / 비가동 대분류 명 / 비고 / 사용유무";
             // 
             // dgvNopMa
             // 
@@ -307,11 +287,9 @@ namespace Final.MDS_CDS
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.dgvNopMi);
             this.Controls.Add(this.txtNopMiCode);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.dgvNopMa);
             this.Controls.Add(this.txtNopMaCode);
             this.Controls.Add(this.label2);
@@ -332,11 +310,9 @@ namespace Final.MDS_CDS
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.DataGridView dgvNopMi;
         private System.Windows.Forms.TextBox txtNopMiCode;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridView dgvNopMa;
         private System.Windows.Forms.TextBox txtNopMaCode;
         private System.Windows.Forms.Label label2;

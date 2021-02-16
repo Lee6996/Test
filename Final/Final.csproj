@@ -168,8 +168,10 @@
     <Compile Include="MDS_CDS\frm_MDS_CDS_006.Designer.cs">
       <DependentUpon>frm_MDS_CDS_006.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDS_CDS\service\BoxingGrade_Detail_MasterService.cs" />
     <Compile Include="MDS_CDS\service\Def_MaService.cs" />
     <Compile Include="MDS_CDS\service\Def_MiService.cs" />
+    <Compile Include="MDS_CDS\service\GV_MasterService.cs" />
     <Compile Include="MDS_CDS\service\Nop_MaService.cs" />
     <Compile Include="MDS_CDS\service\Nop_MiService.cs" />
     <Compile Include="MDS_ODS\frm_MDS_ODS_001.cs">
