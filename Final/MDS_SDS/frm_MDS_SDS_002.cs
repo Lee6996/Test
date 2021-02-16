@@ -32,8 +32,8 @@ namespace Final.MDS_SDS
             CommonUtil.AddGridTextColumn(dgvItemDetail, "규격", "Item_Spec", 130);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "단위", "Item_Unit", 65);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "안전재고", "Item_Stock", 75);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "리드타임", "Lead_Time", 75, visibility: false);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "로트크기", "Lot_Size", 75, visibility: false);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "리드타임", "Lead_Time", 75);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "로트크기", "Lot_Size", 75);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "시간당생산수", "PrdQty_Per_Hour");
             CommonUtil.AddGridTextColumn(dgvItemDetail, "배치당생산수", "PrdQTy_Per_Batch");
             CommonUtil.AddGridTextColumn(dgvItemDetail, "캐비티수", "Cavity", 75);
@@ -45,17 +45,17 @@ namespace Final.MDS_SDS
             CommonUtil.AddGridTextColumn(dgvItemDetail, "Level3", "Level_3", 80);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "Level4", "Level_4", 80);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "Level5", "Level_5", 80);
-            
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "사용여부", "Use_YN", 150, visibility: false);
+
             //-----------------------------------------------------------------------------------------
             DataGridViewCheckBoxColumn gridbtn = new DataGridViewCheckBoxColumn(false);
             gridbtn.HeaderText = "사용여부";
             gridbtn.Name = "btn";
             gridbtn.Width = 100;
             gridbtn.TrueValue = 1;
-            gridbtn.FalseValue = 0;
-            gridbtn.DefaultCellStyle.BackColor = Color.White;
+            gridbtn.FalseValue = 0;            
             gridbtn.DataPropertyName = "Use_YN";
-            dgvItemDetail.Columns.Add(gridbtn);
+            this.dgvItemDetail.Columns.Add(gridbtn);
 
             //콤보박스에  정보 바인딩1
             DataTable dtName = itemservice.ItemMasterBindingName();
@@ -70,19 +70,7 @@ namespace Final.MDS_SDS
             cbItem.ValueMember = "Item_Code";
             cbItem.DataSource = dtName;
 
-            ////콤보박스에  정보 바인딩2
-            //DataTable dtType = itemservice.ItemMasterBindingType();
-            ////빈칸을 위해 한행 추가
-            //DataRow dr2 = dtType.NewRow();
-            //dr["Item_Code"] = "";
-            //dr["Item_Type"] = "전체";
-            //dtType.Rows.InsertAt(dr, 0);
-            //dtType.AcceptChanges();
-
-            //cbType.DisplayMember = "Item_Type";
-            //cbType.ValueMember = "Item_Code";
-            //cbType.DataSource = dtType;
-
+            
             DataLoad("");
 
 
@@ -105,29 +93,6 @@ namespace Final.MDS_SDS
             }
         }
    
-
-        /// <summary>
-        ///  콤보박스세팅
-        /// </summary>
-        //private void ControlSetting()
-        //{
-        //    // combobox  품목명
-        //    List<Item_MasterVO> dictionname = Itemlist.GroupBy(name => name.Item_Code).Select(grp => grp.First()).ToList();
-
-        //    Dictionary<string, string> cblistname = dictionname.ToDictionary(code => code.Item_Code, name => name.Item_Name);
-        //    cbItem.DisplayMember = "Value";
-        //    cbItem.ValueMember = "Key";
-        //    cbItem.DataSource = new BindingSource(cblistname, null);
-        //    lblCode.Text = cbItem.SelectedValue.ToString();
-
-        //    List<Item_MasterVO> dictiontype = Itemlist.GroupBy(name => name.Item_Type).Select(grp => grp.First()).ToList();
-        //    // combobox  품목타입
-        //    Dictionary<string, string> cblisttype = dictiontype.ToDictionary(type => type.Item_Type, type => type.Item_Type);
-        //    cbType.DisplayMember = "Value";
-        //    cbType.ValueMember = "Key";
-        //    cbType.DataSource = new BindingSource(cblisttype, null);
-                //}
-  
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -219,6 +184,33 @@ namespace Final.MDS_SDS
             };            
             frm.Show();
             
+        }
+
+        private void dgvItemDetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4 && e.RowIndex > -1)
+            {
+                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)dgvItemDetail.Rows[e.RowIndex].Cells[4];
+                int useyn = (Convert.ToInt32(chk.Value) == 1) ? 0 : 1;
+
+                Item_MasterVO vo = new Item_MasterVO
+                {
+                    Item_Code = dgvItemDetail.Rows[e.RowIndex].Cells[0].Value.ToString(),
+                    Use_YN = useyn
+                };
+
+                ItemService service = new ItemService();
+                service.UpdateUSEYN(vo);
+
+            }
+            if (cbItem.Text == "전체")
+            {
+                DataLoad("");
+            }
+            else
+            {
+                DataLoad(cbItem.SelectedValue.ToString());
+            }
         }
     }
 }

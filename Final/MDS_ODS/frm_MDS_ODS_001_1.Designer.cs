@@ -1,7 +1,7 @@
 ﻿
 namespace Final.MDS_ODS
 {
-    partial class frm_MDS_ODS_002_1
+    partial class frm_MDS_ODS_001_1
     {
         /// <summary>
         /// Required designer variable.
@@ -108,7 +108,7 @@ namespace Final.MDS_ODS
             this.label6.TabIndex = 11;
             this.label6.Text = "▶공정 목록";
             // 
-            // frm_MDS_ODS_002_1
+            // frm_MDS_ODS_001_1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -117,9 +117,9 @@ namespace Final.MDS_ODS
             this.Controls.Add(this.dgvProcess);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            //this.Name = "frm_MDS_ODS_002_1";
+            
             this.Tag = "공정목록";
-            this.Text = "frm_MDS_ODS_002_1";
+            this.Text = "frm_MDS_ODS_001_1";
             this.Load += new System.EventHandler(this.frm_MDS_ODS_002_1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcess)).EndInit();
             this.panel1.ResumeLayout(false);
