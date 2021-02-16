@@ -30,8 +30,8 @@ namespace Final.MDS_CDS
         private void InitializeComponent()
         {
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dgvNop = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNop)).BeginInit();
+            this.dgvBox = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBox)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox4
@@ -44,16 +44,17 @@ namespace Final.MDS_CDS
             this.textBox4.TabIndex = 59;
             this.textBox4.Text = "▶ 포장 등급 목록";
             // 
-            // dgvNop
+            // dgvBox
             // 
-            this.dgvNop.BackgroundColor = System.Drawing.Color.White;
-            this.dgvNop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNop.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvNop.Location = new System.Drawing.Point(0, 35);
-            this.dgvNop.Name = "dgvNop";
-            this.dgvNop.RowTemplate.Height = 23;
-            this.dgvNop.Size = new System.Drawing.Size(305, 415);
-            this.dgvNop.TabIndex = 58;
+            this.dgvBox.BackgroundColor = System.Drawing.Color.White;
+            this.dgvBox.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvBox.Location = new System.Drawing.Point(0, 35);
+            this.dgvBox.Name = "dgvBox";
+            this.dgvBox.RowTemplate.Height = 23;
+            this.dgvBox.Size = new System.Drawing.Size(305, 415);
+            this.dgvBox.TabIndex = 58;
+            this.dgvBox.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBox_CellContentDoubleClick);
             // 
             // frm_MDS_CDS_005_1
             // 
@@ -61,10 +62,10 @@ namespace Final.MDS_CDS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 450);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.dgvNop);
+            this.Controls.Add(this.dgvBox);
             this.Name = "frm_MDS_CDS_005_1";
             this.Text = "frm_MDS_CDS_005_1";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,6 +74,6 @@ namespace Final.MDS_CDS
         #endregion
 
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dgvNop;
+        private System.Windows.Forms.DataGridView dgvBox;
     }
 }

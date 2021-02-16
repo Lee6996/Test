@@ -29,58 +29,53 @@ namespace Final.MDS_CDS
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.gboGV = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgvGV = new System.Windows.Forms.DataGridView();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cboGVName = new System.Windows.Forms.ComboBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.rdo3 = new System.Windows.Forms.RadioButton();
+            this.rdo2 = new System.Windows.Forms.RadioButton();
+            this.rdo1 = new System.Windows.Forms.RadioButton();
+            this.rdo4 = new System.Windows.Forms.RadioButton();
+            this.gboGV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.BackColor = System.Drawing.Color.DimGray;
-            this.button2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(987, 693);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 29);
-            this.button2.TabIndex = 129;
-            this.button2.Text = "저장";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.DimGray;
+            this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSave.Location = new System.Drawing.Point(1199, 688);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 29);
+            this.btnSave.TabIndex = 129;
+            this.btnSave.Text = "저장";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // textBox3
+            // gboGV
             // 
-            this.textBox3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(6, 20);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(285, 72);
-            this.textBox3.TabIndex = 113;
-            this.textBox3.Text = "해당 위치에 라디오버튼으로 대차그룹 체크 표시 예정";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Location = new System.Drawing.Point(664, 630);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(297, 100);
-            this.groupBox1.TabIndex = 133;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "대차그룹";
+            this.gboGV.Controls.Add(this.rdo4);
+            this.gboGV.Controls.Add(this.rdo3);
+            this.gboGV.Controls.Add(this.rdo2);
+            this.gboGV.Controls.Add(this.rdo1);
+            this.gboGV.Location = new System.Drawing.Point(655, 664);
+            this.gboGV.Name = "gboGV";
+            this.gboGV.Size = new System.Drawing.Size(422, 50);
+            this.gboGV.TabIndex = 133;
+            this.gboGV.TabStop = false;
+            this.gboGV.Text = "대차그룹";
             // 
             // textBox4
             // 
@@ -92,13 +87,13 @@ namespace Final.MDS_CDS
             this.textBox4.TabIndex = 128;
             this.textBox4.Text = "▶ 대차 목록";
             // 
-            // textBox5
+            // txtName
             // 
-            this.textBox5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox5.Location = new System.Drawing.Point(485, 686);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 23);
-            this.textBox5.TabIndex = 127;
+            this.txtName.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtName.Location = new System.Drawing.Point(485, 695);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 23);
+            this.txtName.TabIndex = 127;
             // 
             // label5
             // 
@@ -106,48 +101,30 @@ namespace Final.MDS_CDS
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(401, 688);
+            this.label5.Location = new System.Drawing.Point(401, 697);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 17);
             this.label5.TabIndex = 126;
             this.label5.Text = "대차명";
             // 
-            // label8
+            // dgvGV
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(564, 293);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 63);
-            this.label8.TabIndex = 125;
-            this.label8.Text = "        GridView    \r\n \r\n위 항목 조회정보 출력";
+            this.dgvGV.BackgroundColor = System.Drawing.Color.White;
+            this.dgvGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGV.Location = new System.Drawing.Point(0, 106);
+            this.dgvGV.Name = "dgvGV";
+            this.dgvGV.RowTemplate.Height = 23;
+            this.dgvGV.Size = new System.Drawing.Size(1341, 539);
+            this.dgvGV.TabIndex = 123;
+            this.dgvGV.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGV_CellContentDoubleClick);
             // 
-            // textBox2
+            // txtCode
             // 
-            this.textBox2.Location = new System.Drawing.Point(406, 178);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(470, 36);
-            this.textBox2.TabIndex = 124;
-            this.textBox2.Text = "대차코드 / 대차명 / 대차그룹 / 대차상태 / 언로딩작업장 / 최초 입력일자 / 사용여부";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 106);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1341, 517);
-            this.dataGridView1.TabIndex = 123;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(485, 651);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 122;
+            this.txtCode.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCode.Location = new System.Drawing.Point(485, 660);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(100, 23);
+            this.txtCode.TabIndex = 122;
             // 
             // label2
             // 
@@ -155,7 +132,7 @@ namespace Final.MDS_CDS
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(388, 652);
+            this.label2.Location = new System.Drawing.Point(388, 661);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 121;
@@ -171,86 +148,141 @@ namespace Final.MDS_CDS
             this.splitter1.TabIndex = 119;
             this.splitter1.TabStop = false;
             // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox7.Location = new System.Drawing.Point(406, 18);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 23);
-            this.textBox7.TabIndex = 138;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(588, 20);
+            this.label7.Location = new System.Drawing.Point(23, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 17);
             this.label7.TabIndex = 137;
             this.label7.Text = "대차명";
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(867, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
-            this.button1.TabIndex = 136;
-            this.button1.Text = "조회";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.DimGray;
+            this.btnSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSearch.Location = new System.Drawing.Point(302, 17);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 29);
+            this.btnSearch.TabIndex = 136;
+            this.btnSearch.Text = "조회";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // comboBox1
+            // cboGVName
             // 
-            this.comboBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(652, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 135;
+            this.cboGVName.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cboGVName.FormattingEnabled = true;
+            this.cboGVName.Location = new System.Drawing.Point(87, 20);
+            this.cboGVName.Name = "cboGVName";
+            this.cboGVName.Size = new System.Drawing.Size(121, 23);
+            this.cboGVName.TabIndex = 135;
+            this.cboGVName.SelectedIndexChanged += new System.EventHandler(this.cboGVName_SelectedIndexChanged);
             // 
-            // label1
+            // btnUpdate
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(331, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 17);
-            this.label1.TabIndex = 134;
-            this.label1.Text = "대차코드";
+            this.btnUpdate.BackColor = System.Drawing.Color.DimGray;
+            this.btnUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUpdate.Location = new System.Drawing.Point(1199, 651);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 29);
+            this.btnUpdate.TabIndex = 139;
+            this.btnUpdate.Text = "수정";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
+            this.btnRefresh.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnRefresh.Location = new System.Drawing.Point(1118, 686);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 29);
+            this.btnRefresh.TabIndex = 138;
+            this.btnRefresh.Text = "초기화";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // rdo3
+            // 
+            this.rdo3.AutoSize = true;
+            this.rdo3.Location = new System.Drawing.Point(210, 21);
+            this.rdo3.Name = "rdo3";
+            this.rdo3.Size = new System.Drawing.Size(95, 16);
+            this.rdo3.TabIndex = 8;
+            this.rdo3.TabStop = true;
+            this.rdo3.Tag = "GVG_03";
+            this.rdo3.Text = "성형작업대차";
+            this.rdo3.UseVisualStyleBackColor = true;
+            // 
+            // rdo2
+            // 
+            this.rdo2.AutoSize = true;
+            this.rdo2.Location = new System.Drawing.Point(107, 21);
+            this.rdo2.Name = "rdo2";
+            this.rdo2.Size = new System.Drawing.Size(95, 16);
+            this.rdo2.TabIndex = 7;
+            this.rdo2.TabStop = true;
+            this.rdo2.Tag = "GVG_02";
+            this.rdo2.Text = "건조작업대차";
+            this.rdo2.UseVisualStyleBackColor = true;
+            // 
+            // rdo1
+            // 
+            this.rdo1.AutoSize = true;
+            this.rdo1.Location = new System.Drawing.Point(6, 21);
+            this.rdo1.Name = "rdo1";
+            this.rdo1.Size = new System.Drawing.Size(95, 16);
+            this.rdo1.TabIndex = 6;
+            this.rdo1.TabStop = true;
+            this.rdo1.Tag = "GVG_01";
+            this.rdo1.Text = "사출작업대차";
+            this.rdo1.UseVisualStyleBackColor = true;
+            // 
+            // rdo4
+            // 
+            this.rdo4.AutoSize = true;
+            this.rdo4.Location = new System.Drawing.Point(311, 20);
+            this.rdo4.Name = "rdo4";
+            this.rdo4.Size = new System.Drawing.Size(95, 16);
+            this.rdo4.TabIndex = 9;
+            this.rdo4.TabStop = true;
+            this.rdo4.Tag = "GVG_04";
+            this.rdo4.Text = "포장작업대차";
+            this.rdo4.UseVisualStyleBackColor = true;
             // 
             // frm_MDS_CDS_006
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1341, 732);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.cboGVName);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.gboGV);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvGV);
+            this.Controls.Add(this.txtCode);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.splitter1);
             this.Name = "frm_MDS_CDS_006";
             this.Text = "대차정보";
             this.Load += new System.EventHandler(this.frm_MDS_CDS_006_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gboGV.ResumeLayout(false);
+            this.gboGV.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,22 +290,23 @@ namespace Final.MDS_CDS
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.GroupBox gboGV;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgvGV;
+        private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ComboBox cboGVName;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.RadioButton rdo3;
+        private System.Windows.Forms.RadioButton rdo2;
+        private System.Windows.Forms.RadioButton rdo1;
+        private System.Windows.Forms.RadioButton rdo4;
     }
 }

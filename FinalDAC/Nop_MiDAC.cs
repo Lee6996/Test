@@ -65,6 +65,8 @@ namespace FinalDAC
             }
         }
 
+       
+
         public bool UpdateNop_Mi(Nop_MiVO additem)
         {
             string sql = $@"UPDATE Nop_Mi_Master
