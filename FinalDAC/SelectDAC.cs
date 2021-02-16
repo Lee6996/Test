@@ -141,7 +141,7 @@ namespace FinalDAC
             }
         }
 
-        //UserGroup
+        //User 유저 정보
         public List<UserVO> SelectUserMasterInfo(string usergroup_Name)
         {
             string sQuery = @"select User_ID, User_Name, User_PW, Customer_Code, User_Type, Default_Screen_Code, Default_Process_Code, Monitoring_YN, Use_YN, Ins_Date, Ins_Emp, Up_Date, Up_Emp
@@ -154,6 +154,24 @@ namespace FinalDAC
             {
                 if (!string.IsNullOrEmpty(usergroup_Name))
                     cmd.Parameters.AddWithValue("@groupName", "%" + usergroup_Name + "%"); //포함하는 문자열
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<UserVO> list = Helper.DataReaderMapToList<UserVO>(reader);
+                return list;
+            }
+        }
+        public List<UserVO> SelectUserInfo(string user_Name)
+        {
+            string sQuery = @"select User_ID, User_Name, User_PW, Customer_Code, User_Type, Default_Screen_Code, Default_Process_Code, Monitoring_YN, Use_YN, convert(char(23), Ins_Date, 21) Ins_Date, Ins_Emp, convert(char(23), Up_Date, 21) Up_Date, Up_Emp
+                                from User_Master where 1=1 ";
+
+            if (!string.IsNullOrEmpty(user_Name))
+                sQuery += " and User_Name Like @userName ";
+
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
+            {
+                if (!string.IsNullOrEmpty(user_Name))
+                    cmd.Parameters.AddWithValue("@userName", "%" + user_Name + "%"); //포함하는 문자열
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<UserVO> list = Helper.DataReaderMapToList<UserVO>(reader);

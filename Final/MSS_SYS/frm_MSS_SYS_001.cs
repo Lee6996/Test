@@ -34,7 +34,7 @@ namespace Final.MSS_SYS
 
             CommonUtil.AddGridTextColumn(dgvScreen, "화면코드", "Screen_Code", 220);
             CommonUtil.AddGridTextColumn(dgvScreen, "화면명", "Screen_Name", 220);
-            CommonUtil.AddGridTextColumn(dgvScreen, "화면경로", "Screen_Path", 220);
+            CommonUtil.AddGridTextColumn(dgvScreen, "화면경로", "Screen_Path", 260);
             CommonUtil.AddGridTextColumn(dgvScreen, "수정일자", "Up_Date", 220);
             //CommonUtil.AddGridTextColumn(dgvScreen, "사용여부", "Screen_Code", 220);
 

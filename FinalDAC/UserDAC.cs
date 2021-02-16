@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -47,6 +48,20 @@ namespace FinalDAC
                 }
                 else return false;
             }
+        }
+
+        //사용자명 콤보박스 바인딩
+        public DataTable SelectUserNameBinding()
+        {
+
+            DataTable dt = new DataTable();
+            string sql = "select User_ID, User_Name from User_Master";
+            using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+            {
+                da.Fill(dt);
+            }
+
+            return dt;
         }
     }
 }

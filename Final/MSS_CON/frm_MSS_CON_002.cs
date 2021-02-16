@@ -22,27 +22,35 @@ namespace Final.MSS_CON
 
         private void MSS_CON_002_Load(object sender, EventArgs e)
         {
+            label1.Visible = false;
+            txtUserGroup_Name.Visible = false;
+
             UserGroupService service = new UserGroupService();
 
             CommonUtil.SetInitGridView(dgvUser_Group);
 
-            CommonUtil.AddGridTextColumn(dgvUser_Group, "사용자그룹명", "UserGroup_Name", 180);
-            CommonUtil.AddGridTextColumn(dgvUser_Group, "사용자그룹코드", "UserGroup_Code", 200);
-            CommonUtil.AddGridTextColumn(dgvUser_Group, "사용여부", "Use_YN", 100);
-            CommonUtil.AddGridTextColumn(dgvUser_Group, "관리자여부", "Admin", 100);
+            CommonUtil.AddGridTextColumn(dgvUser_Group, "사용자그룹명", "UserGroup_Name", 220);
+            CommonUtil.AddGridTextColumn(dgvUser_Group, "사용자그룹코드", "UserGroup_Code", 220);
+            
+            CommonUtil.AddGridTextColumn(dgvUser_Group, "관리자여부", "Admin", 150);
 
             //콤보박스에 유저 그룹 정보 바인딩
             DataTable dtName = service.UserGroupNameSelectBinding();
             //빈칸을 위해 한행 추가
             DataRow dr = dtName.NewRow();
-            dr["UserGroup_Code"] = "";
             dr["UserGroup_Name"] = "전체";
+            dr["UserGroup_Code"] = "";
+            
             dtName.Rows.InsertAt(dr, 0);
             dtName.AcceptChanges();
 
             cbUser_GroupName.DisplayMember = "UserGroup_Name";
             cbUser_GroupName.ValueMember = "UserGroup_Code";
             cbUser_GroupName.DataSource = dtName;
+
+            //컬럼 왼쪽정렬
+            dgvUser_Group.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgvUser_Group.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
 
             DataLoad("");
@@ -70,14 +78,12 @@ namespace Final.MSS_CON
             if (cbUser_GroupName.SelectedIndex < 1)
                 txtUserGroup_Name.Text = "";
             else
-                txtUserGroup_Name.Text = cbUser_GroupName.Text;
+                txtUserGroup_Name.Text = cbUser_GroupName.SelectedValue.ToString();
         }
         //조회버튼
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            string name = txtUserGroup_Name.Text;
-
-            DataLoad(name);
+            DataLoad(cbUser_GroupName.SelectedValue.ToString());
         }
     }
 }

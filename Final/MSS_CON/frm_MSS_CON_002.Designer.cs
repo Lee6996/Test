@@ -60,7 +60,7 @@ namespace Final.MSS_CON
             this.btnSelect.BackColor = System.Drawing.Color.DimGray;
             this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSelect.Location = new System.Drawing.Point(895, 13);
+            this.btnSelect.Location = new System.Drawing.Point(479, 11);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(85, 35);
             this.btnSelect.TabIndex = 54;
@@ -98,7 +98,7 @@ namespace Final.MSS_CON
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(477, 20);
+            this.label1.Location = new System.Drawing.Point(911, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 18);
             this.label1.TabIndex = 61;
@@ -107,7 +107,7 @@ namespace Final.MSS_CON
             // txtUserGroup_Name
             // 
             this.txtUserGroup_Name.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtUserGroup_Name.Location = new System.Drawing.Point(612, 17);
+            this.txtUserGroup_Name.Location = new System.Drawing.Point(1046, 11);
             this.txtUserGroup_Name.Name = "txtUserGroup_Name";
             this.txtUserGroup_Name.ReadOnly = true;
             this.txtUserGroup_Name.Size = new System.Drawing.Size(196, 26);

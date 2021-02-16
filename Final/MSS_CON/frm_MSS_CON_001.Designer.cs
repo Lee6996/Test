@@ -70,7 +70,7 @@ namespace Final.MSS_CON
             this.panel1.Font = new System.Drawing.Font("나눔스퀘어OTF", 11F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1275, 57);
+            this.panel1.Size = new System.Drawing.Size(1344, 57);
             this.panel1.TabIndex = 110;
             // 
             // cbUserGroup_Name
@@ -132,14 +132,14 @@ namespace Final.MSS_CON
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Location = new System.Drawing.Point(0, 91);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1275, 806);
+            this.panel5.Size = new System.Drawing.Size(1344, 774);
             this.panel5.TabIndex = 130;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBox1.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(-1, 668);
+            this.textBox1.Location = new System.Drawing.Point(-1, 636);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(260, 26);
@@ -156,7 +156,7 @@ namespace Final.MSS_CON
             this.dgvUser.Location = new System.Drawing.Point(3, 4);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowTemplate.Height = 23;
-            this.dgvUser.Size = new System.Drawing.Size(1267, 658);
+            this.dgvUser.Size = new System.Drawing.Size(1336, 626);
             this.dgvUser.TabIndex = 130;
             // 
             // panel6
@@ -172,9 +172,9 @@ namespace Final.MSS_CON
             this.panel6.Controls.Add(this.txtUserGroup_Code_Insert);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.panel6.Location = new System.Drawing.Point(3, 700);
+            this.panel6.Location = new System.Drawing.Point(3, 668);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1271, 101);
+            this.panel6.Size = new System.Drawing.Size(1336, 101);
             this.panel6.TabIndex = 129;
             // 
             // btnRefresh
@@ -183,7 +183,7 @@ namespace Final.MSS_CON
             this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
             this.btnRefresh.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRefresh.Location = new System.Drawing.Point(1114, 56);
+            this.btnRefresh.Location = new System.Drawing.Point(1179, 56);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(90, 35);
             this.btnRefresh.TabIndex = 7;
@@ -196,7 +196,7 @@ namespace Final.MSS_CON
             this.btnSave.BackColor = System.Drawing.Color.DimGray;
             this.btnSave.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSave.Location = new System.Drawing.Point(987, 56);
+            this.btnSave.Location = new System.Drawing.Point(1052, 56);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(85, 35);
             this.btnSave.TabIndex = 6;
@@ -242,7 +242,7 @@ namespace Final.MSS_CON
             // frm_MSS_CON_001
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1275, 897);
+            this.ClientSize = new System.Drawing.Size(1344, 865);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
