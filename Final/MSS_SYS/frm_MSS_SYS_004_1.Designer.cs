@@ -72,7 +72,8 @@ namespace Final
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtDescription.Size = new System.Drawing.Size(480, 365);
-            this.txtDescription.TabIndex = 13;
+            this.txtDescription.TabIndex = 4;
+            this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
             // 
             // splitContainer3
             // 
@@ -229,7 +230,7 @@ namespace Final
             this.btnUpdate.Location = new System.Drawing.Point(299, 573);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(85, 35);
-            this.btnUpdate.TabIndex = 100;
+            this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -242,7 +243,7 @@ namespace Final
             this.btnExit.Location = new System.Drawing.Point(394, 573);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(85, 35);
-            this.btnExit.TabIndex = 101;
+            this.btnExit.TabIndex = 6;
             this.btnExit.Text = "닫기";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -283,7 +284,7 @@ namespace Final
             this.txtNotice_Rtf.Location = new System.Drawing.Point(3, 1);
             this.txtNotice_Rtf.Name = "txtNotice_Rtf";
             this.txtNotice_Rtf.Size = new System.Drawing.Size(360, 25);
-            this.txtNotice_Rtf.TabIndex = 0;
+            this.txtNotice_Rtf.TabIndex = 3;
             // 
             // frm_MSS_SYS_004_1
             // 

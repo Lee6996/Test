@@ -59,6 +59,7 @@ namespace Final.MSS_CON
             this.dgvUserGroup.Size = new System.Drawing.Size(374, 765);
             this.dgvUserGroup.TabIndex = 66;
             this.dgvUserGroup.Tag = "사용자 관리";
+            this.dgvUserGroup.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserGroup_CellClick);
             // 
             // dgvUserGroup_User
             // 
