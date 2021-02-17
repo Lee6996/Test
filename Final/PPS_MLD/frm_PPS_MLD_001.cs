@@ -183,7 +183,7 @@ namespace Final.PPS_MLD
             };
             MoldService service = new MoldService();
             bool bFlag = service.UpdateMold(mold);
-            MessageBox.Show("추가가 완료되었습니다.");
+            MessageBox.Show("수정이 완료되었습니다.");
             clearControl();
         }
         private void clearControl()

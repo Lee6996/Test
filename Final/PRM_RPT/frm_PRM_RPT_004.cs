@@ -46,5 +46,36 @@ namespace Final.PRM_RPT
         {
             ReportBinding();
         }
+        private System.Drawing.Printing.PrintDocument docToPrint = new System.Drawing.Printing.PrintDocument();
+        private void btn_WorkCenter_Click(System.Object sender,
+                    System.EventArgs e)
+        {
+            printDialog1.AllowSomePages = true;
+
+            printDialog1.ShowHelp = true;
+
+            printDialog1.Document = docToPrint;
+
+            DialogResult result = printDialog1.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                docToPrint.Print();
+            }
+        }
+
+
+        private void document_PrintPage(object sender,
+            System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+            string text = "In document_PrintPage method.";
+            System.Drawing.Font printFont = new System.Drawing.Font
+                ("Arial", 35, System.Drawing.FontStyle.Regular);
+
+            // Draw the content.
+            e.Graphics.DrawString(text, printFont,
+                System.Drawing.Brushes.Black, 10, 10);
+        }
     }
 }
