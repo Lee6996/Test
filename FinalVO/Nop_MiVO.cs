@@ -12,7 +12,7 @@ namespace FinalVO
         public string Nop_Mi_Name { get; set; }       // 비가동상세분류명
         public string Nop_Ma_Code { get; set; }       // 비가동대분류코드
         public string Remark { get; set; }                // 비고
-        public string Use_YN { get; set; }
+        public int Use_YN { get; set; }
         public string Ins_Date { get; set; }
         public string Ins_Emp { get; set; }
         public string Up_Date { get; set; }

@@ -29,7 +29,7 @@ namespace Final.MDS_CDS
             CommonUtil.AddGridTextColumn(dgvNop, "비가동대분류 명", "Nop_Ma_Name", 210);
             CommonUtil.AddGridTextColumn(dgvNop, "입력일자", "Ins_Date", 210);
             CommonUtil.AddGridTextColumn(dgvNop, "사용여부", "Use_YN", 210, visibility: false);
-            
+
 
 
             DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn(false);
@@ -64,9 +64,9 @@ namespace Final.MDS_CDS
             cbNop.ValueMember = "Nop_Ma_Code";
             cbNop.DataSource = dtName;
 
-            
+
             GetAllNopMa("");
-           
+
         }
 
         private void GetAllNopMa(string nop)
@@ -87,7 +87,15 @@ namespace Final.MDS_CDS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            GetAllNopMa(cbNop.SelectedValue.ToString());
+            if (cbNop.Text == "전체")
+            {
+                GetAllNopMa("");
+            }
+            else
+            {
+                GetAllNopMa(cbNop.SelectedValue.ToString());
+            }
+
         }
 
         private void cbNop_SelectedIndexChanged(object sender, EventArgs e)
@@ -97,42 +105,43 @@ namespace Final.MDS_CDS
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (txtCode.Text.Length < 1)
-            {
-                MessageBox.Show("비가동코드를 입력해주세요");
-                return;
-            }
-            if (txtName.Text.Length < 1)
-            {
-                MessageBox.Show("비가동명을 입력해주세요");
-                return;
-            }
-
             try
             {
-                Nop_MaVO vo = new Nop_MaVO
-                {
-                    Nop_Ma_Code = txtCode.Text,
-                    Nop_Ma_Name = txtName.Text
-                };
 
-                Nop_MaService service = new Nop_MaService();
-                bool bFlag = service.InsertNop_Ma(vo);
-
-                if (bFlag)
+                if (!string.IsNullOrEmpty(txtName.Text) && !string.IsNullOrEmpty(txtCode.Text))
                 {
-                    MessageBox.Show("저장되었습니다..");
-                    GetAllNopMa("");
+                    Nop_MaVO vo = new Nop_MaVO
+                    {
+                        Nop_Ma_Code = txtCode.Text,
+                        Nop_Ma_Name = txtName.Text
+                    };
+
+                    if (Nopservice.InsertUpdateNop_MaVO(vo))
+                    {
+                        MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GetAllNopMa("");
+                    }
+                    else
+                    {
+                        MessageBox.Show("저장실패", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
                 else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
+                {
+                    MessageBox.Show("필수항목을 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message);
+
+                MessageBox.Show(err.Message, "db", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             RefreshControl();
         }
+
         private void RefreshControl()
         {
             txtCode.Text = txtName.Text = "";
@@ -141,9 +150,8 @@ namespace Final.MDS_CDS
 
         private void dgvNop_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var taget = Noplist.Find(item => item.Nop_Ma_Code == dgvNop.SelectedRows[0].Cells[0].Value.ToString());
-            txtName.Text = taget.Nop_Ma_Name.ToString();
-            txtCode.Text = taget.Nop_Ma_Code.ToString();
+            txtCode.Text = dgvNop[0, dgvNop.CurrentRow.Index].Value.ToString();
+            txtName.Text = dgvNop[1, dgvNop.CurrentRow.Index].Value.ToString();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -151,43 +159,22 @@ namespace Final.MDS_CDS
             RefreshControl();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void dgvNop_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (txtCode.Text.Length < 1)
+            if (e.ColumnIndex == 4 && e.RowIndex > -1)
             {
-                MessageBox.Show("비가동코드를 입력해주세요");
-                return;
-            }
-            if (txtName.Text.Length < 1)
-            {
-                MessageBox.Show("비가동명을 입력해주세요");
-                return;
-            }
+                DataGridViewCheckBoxCell dgv = (DataGridViewCheckBoxCell)dgvNop.Rows[e.RowIndex].Cells[4];
+                int useyn = (Convert.ToInt32(dgv.Value) == 1) ? 0 : 1;
 
-            try
-            {
                 Nop_MaVO vo = new Nop_MaVO
                 {
-                    Nop_Ma_Code = txtCode.Text,
-                    Nop_Ma_Name = txtName.Text
+                    Nop_Ma_Code = dgvNop.Rows[e.RowIndex].Cells[0].Value.ToString(),
+                    Use_YN = useyn
                 };
 
                 Nop_MaService service = new Nop_MaService();
-                bool bFlag = service.UpdateNop_Ma(vo);
-
-                if (bFlag)
-                {
-                    MessageBox.Show("저장되었습니다..");
-                    GetAllNopMa("");
-                }
-                else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
+                service.UpdateUseYN(vo);
             }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-            RefreshControl();
         }
     }
 }

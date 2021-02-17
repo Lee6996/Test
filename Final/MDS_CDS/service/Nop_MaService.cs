@@ -29,7 +29,16 @@ namespace Final.MDS_CDS.service
         public bool UpdateNop_Ma(Nop_MaVO vo)
         {
             return new Nop_MaDAC().UpdateNop_Ma(vo);
-        }      
-        
+        }
+
+        public bool InsertUpdateNop_MaVO(Nop_MaVO vo)
+        {
+            return new Nop_MaDAC().InsertUpdateNop_MaVO(vo);
+        }
+
+        public bool UpdateUseYN(Nop_MaVO vo)
+        {
+            return new Nop_MaDAC().UpdateUseYN(vo); ;
+        }
     }
 }
