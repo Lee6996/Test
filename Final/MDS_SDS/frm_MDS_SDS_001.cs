@@ -78,34 +78,34 @@ namespace Final.MDS_SDS
         private void dgvItemLevel_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
               //var update = itemlist.Find(item => item.Level_Code == dgvItemLevel[1, dgvItemLevel.CurrentRow.Index].Value.ToString());
-            if (e.RowIndex >= 0)
-                vo = list[e.RowIndex];
-            txtCode.Text = vo.Level_Code;
-            txtName.Text = vo.Level_Name;
-            nuPLbox.Value = vo.Box_Qty;
-            nuBoxpcs.Value = vo.Pcs_Qty;
-            nuPCSqty.Value = vo.Mat_Qty;
-           
-            if (vo.Item_lvl1 == "Y")
-            {
-                cbLevel.SelectedIndex = 0;
-            }
-            else if (vo.Item_lvl2 == "Y")
-            {
-                cbLevel.SelectedIndex = 1;
-            }
-            else if (vo.Item_lvl3 == "Y")
-            {
-                cbLevel.SelectedIndex = 2;
-            }
-            else if (vo.Item_lvl4 == "Y")
-            {
-                cbLevel.SelectedIndex = 3;
-            }
-            else if (vo.Item_lvl5 == "Y")
-            {
-                cbLevel.SelectedIndex = 4;
-            }
+            //if (e.RowIndex >= 0)
+            //    vo = list[e.RowIndex];
+            txtCode.Text =     dgvItemLevel[0, dgvItemLevel.CurrentRow.Index].Value.ToString();
+            txtName.Text = dgvItemLevel[1, dgvItemLevel.CurrentRow.Index].Value.ToString();            
+
+
+            //if (vo.Item_lvl1 == "Y")
+            //{
+            //    cbLevel.SelectedIndex = 0;
+            //}
+            //else if (vo.Item_lvl2 == "Y")
+            //{
+            //    cbLevel.SelectedIndex = 1;
+            //}
+            //else if (vo.Item_lvl3 == "Y")
+            //{
+            //    cbLevel.SelectedIndex = 2;
+            //}
+            //else if (vo.Item_lvl4 == "Y")
+            //{
+            //    cbLevel.SelectedIndex = 3;
+            //}
+            //else if (vo.Item_lvl5 == "Y")
+            //{
+            //    cbLevel.SelectedIndex = 4;
+            //}
+
+
 
         }
 
