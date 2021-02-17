@@ -32,12 +32,12 @@ namespace FinalDAC
   FROM Def_Mi_Master where 1 = 1    ";
 
                 if (!string.IsNullOrEmpty(def))
-                    sQuery += " and Def_Mi_Code Like @Def_Mi_Name ";
+                    sQuery += " and Def_Ma_Code Like @Def_Ma_Name ";
 
                 using (SqlCommand cmd = new SqlCommand(sQuery, conn))
                 {
                     if (!string.IsNullOrEmpty(def))
-                        cmd.Parameters.AddWithValue("@Def_Mi_Name", "%" + def + "%"); //포함하는 문자열
+                        cmd.Parameters.AddWithValue("@Def_Ma_Name", "%" + def + "%"); //포함하는 문자열
 
                     SqlDataReader reader = cmd.ExecuteReader();
                     List<Def_MiVO> list = Helper.DataReaderMapToList<Def_MiVO>(reader);              
