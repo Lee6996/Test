@@ -15,6 +15,7 @@ namespace Final.MDS_CDS
 {
     public partial class frm_MDS_CDS_002 : Form
     {
+        string def = null;
         public string txtCodeText { get; set; }
         public string txtNameText { get; set; }
 
@@ -66,8 +67,8 @@ namespace Final.MDS_CDS
 
             txtCode.Text = txtCodeText;
             txtName.Text = txtNameText;
-            GetAllData("");
-            GetAllData2("");
+            GetAllData(def);
+            GetAllData2(def);
         }
       
 
@@ -148,8 +149,9 @@ private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventAr
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 txtCode.Text = frm.SCode;
+                def = frm.SCode;
                 txtName.Text = frm.SName;
-                GetAllData("");
+                GetAllData(def);
             }
         }
 

@@ -49,18 +49,18 @@ namespace FinalVO
 
     public class Def
     {
-        public string Def_Code { get; set; }
-        public string Def_Name { get; set; }
+        public string Def_Ma_Code { get; set; }
+        public string Def_Ma_Name { get; set; }
     }
 
     public class Nop
     {
-        public string Nop_Code { get; set; }
-        public string Nop_Name { get; set; }
+        public string Nop_Ma_Code { get; set; }
+        public string Nop_Ma_Name { get; set; }
     }
     public class Boxing
     {
-        public string Boxing_Code { get; set; }
-        public string Boxing_Name { get; set; }
+        public string Boxing_Master_Code { get; set; }
+        public string Boxing_Master_Name { get; set; }
     }
 }
