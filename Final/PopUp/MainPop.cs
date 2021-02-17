@@ -62,17 +62,17 @@ namespace Final.PRM_PRF.PopUp
                     SettingDGV(dgvMainPop, type);
                     dgvMainPop.DataSource = new SelectDAC().SelectForPopup<Mold>(type);
                     break;
-                case "Def":
+                case "Def_Ma":
                     lblType.Text = "불량현상 대분류 목록";
                     SettingDGV(dgvMainPop, type);
                     dgvMainPop.DataSource = new SelectDAC().SelectForPopup<Def>(type);
                     break;
-                case "Nop":
+                case "Nop_Ma":
                     lblType.Text = "비가동 대분류 목록";
                     SettingDGV(dgvMainPop, type);
                     dgvMainPop.DataSource = new SelectDAC().SelectForPopup<Nop>(type);
                     break;
-                case "Boxing":
+                case "Boxing_Grade":
                     lblType.Text = "포장등급 목록";
                     SettingDGV(dgvMainPop, type);
                     dgvMainPop.DataSource = new SelectDAC().SelectForPopup<Boxing>(type);

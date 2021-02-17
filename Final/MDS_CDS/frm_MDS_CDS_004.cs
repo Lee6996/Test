@@ -96,7 +96,7 @@ namespace Final.MDS_CDS
 
         private void btndotdotdot_Click(object sender, EventArgs e)
         {
-            MainPop frm = new MainPop("Nop")
+            MainPop frm = new MainPop("Nop_Ma")
             {
                 StartPosition = FormStartPosition.CenterParent
             };

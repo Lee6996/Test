@@ -214,7 +214,7 @@ namespace Final.MDS_CDS
 
         private void btndotdotdot_Click(object sender, EventArgs e)
         {
-            MainPop frm = new MainPop("Boxing")
+            MainPop frm = new MainPop("Boxing_Grade")
             {
                 StartPosition = FormStartPosition.CenterParent
             };

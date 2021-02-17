@@ -359,6 +359,18 @@
     <Compile Include="PRM_PRF\PRM_PRF_Service.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QAM_SQC\frm_QAM_SQC_004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QAM_SQC\frm_QAM_SQC_004.Designer.cs">
+      <DependentUpon>frm_QAM_SQC_004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QAM_SQC\frm_QAM_SQC_005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QAM_SQC\frm_QAM_SQC_005.Designer.cs">
+      <DependentUpon>frm_QAM_SQC_005.cs</DependentUpon>
+    </Compile>
     <Compile Include="QAM_SQC\frm_QAM_SQC_006.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -567,6 +579,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QAM_SQC\frm_QAM_SQC_004.resx">
+      <DependentUpon>frm_QAM_SQC_004.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QAM_SQC\frm_QAM_SQC_006.resx">
       <DependentUpon>frm_QAM_SQC_006.cs</DependentUpon>
     </EmbeddedResource>

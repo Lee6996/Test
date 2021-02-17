@@ -154,7 +154,7 @@ private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventAr
 
         private void btndotdotdot_Click(object sender, EventArgs e)
         {
-            MainPop frm = new MainPop("Def")
+            MainPop frm = new MainPop("Def_Ma")
             {
                 StartPosition = FormStartPosition.CenterParent
             };
