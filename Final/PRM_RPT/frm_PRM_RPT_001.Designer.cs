@@ -37,6 +37,7 @@ namespace Final.PRM_RPT
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -58,6 +59,7 @@ namespace Final.PRM_RPT
             // 
             this.btn_WorkCenter.Location = new System.Drawing.Point(1174, 15);
             this.btn_WorkCenter.Text = "출력";
+            this.btn_WorkCenter.Click += new System.EventHandler(this.btn_WorkCenter_Click);
             // 
             // textBox6
             // 
@@ -183,6 +185,10 @@ namespace Final.PRM_RPT
             this.label5.TabIndex = 0;
             this.label5.Text = "조회내역";
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // frm_PRM_RPT_001
             // 
             this.ClientSize = new System.Drawing.Size(1272, 828);
@@ -214,5 +220,6 @@ namespace Final.PRM_RPT
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

@@ -69,7 +69,7 @@ namespace Final.PPS_MLD
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.dgv_Mold);
-            this.panel5.Location = new System.Drawing.Point(0, 90);
+            this.panel5.Location = new System.Drawing.Point(0, 91);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1266, 806);
             this.panel5.TabIndex = 19;
