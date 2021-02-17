@@ -679,6 +679,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="EncLibrary\FinalEnc.dll" />
+    <None Include="Resources\close-red.png" />
+    <None Include="Resources\close-grey.png" />
     <None Include="Resources\x.png" />
   </ItemGroup>
   <ItemGroup />

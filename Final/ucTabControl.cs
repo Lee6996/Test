@@ -47,11 +47,11 @@ namespace MDITabForm
                 //선택된 탭은 빨간색이미지, 선택이 안된 탭은 검정색이미지
                 Image img;
                 if (this.SelectedIndex == e.Index)
-                    img = Properties.Resources.close_red;
+                    img = Final.Properties.Resources.close_red;
                 else
-                    img = Properties.Resources.close_grey;
+                    img = Final.Properties.Resources.close_grey;
 
-                Point _imageLocation = new Point(18, 2);
+                Point _imageLocation = new Point(25, 2);
 
                 e.Graphics.DrawImage(img, new Point(r.X + this.GetTabRect(e.Index).Width - _imageLocation.X, _imageLocation.Y));
 

@@ -22,6 +22,7 @@ namespace Final.PPS_SCH
 
         private void frm_PPS_SCH_003_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Value = dateTimePicker2.Value.AddDays(-7);
             chartDate.Titles.Add("일별 생산 현황");
             chartDate.Legends.Clear();
             DataLoad();

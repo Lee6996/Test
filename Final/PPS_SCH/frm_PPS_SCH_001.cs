@@ -18,6 +18,7 @@ namespace Final.PPS_SCH
         }
         private void frm_PPS_SCH_001_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Value = dateTimePicker2.Value.AddDays(-7);
             DataLoad();
         }
         private void DataLoad()

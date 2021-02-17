@@ -23,7 +23,7 @@ namespace Final.KPI_RPT
 
         private void frm_KPI_RPT_3_Load(object sender, EventArgs e)
         {
-
+            dateTimePicker1.Value = dateTimePicker2.Value.AddDays(-7);
             DataLoad();
         }
         private void btn_Process_Click(object sender, EventArgs e)
