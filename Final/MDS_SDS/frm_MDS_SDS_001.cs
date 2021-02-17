@@ -30,14 +30,14 @@ namespace Final.MDS_SDS
             CommonUtil.AddGridTextColumn(dgvItemLevel, "팔렛당박스수", "Box_Qty", 200);
             CommonUtil.AddGridTextColumn(dgvItemLevel, "박스당PCS수", "Pcs_Qty", 200);
             CommonUtil.AddGridTextColumn(dgvItemLevel, "PCS당소재량", "Mat_Qty", 200);
-            CommonUtil.AddGridTextColumn(dgvItemLevel, "사용여부", "Use_YN", 150, visibility: false);                      
+            CommonUtil.AddGridTextColumn(dgvItemLevel, "사용여부", "Use_YN", 150, visibility: false);
 
             DataGridViewCheckBoxColumn gridbtn = new DataGridViewCheckBoxColumn(false);
             gridbtn.HeaderText = "사용여부";
             gridbtn.Name = "btn";
             gridbtn.Width = 100;
             gridbtn.TrueValue = 1;
-            gridbtn.FalseValue = 0;            
+            gridbtn.FalseValue = 0;
             gridbtn.DataPropertyName = "Use_YN";
             this.dgvItemLevel.Columns.Add(gridbtn);
 
@@ -75,15 +75,15 @@ namespace Final.MDS_SDS
         }
 
         private void dgvItemLevel_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {            
-            var update = itemlist.Find(item => item.Level_Code == dgvItemLevel.SelectedRows[0].Cells[0].Value.ToString());
+        {
+            var update = itemlist.Find(item => item.Level_Code == dgvItemLevel[1, dgvItemLevel.CurrentRow.Index].Value.ToString());
 
             txtCode.Text = update.Level_Code;
             txtName.Text = update.Level_Name;
             nuPLbox.Value = update.Box_Qty;
             nuBoxpcs.Value = update.Pcs_Qty;
             nuPCSqty.Value = update.Mat_Qty;
-
+           
             if (update.Item_lvl1 == "Y")
             {
                 cbLevel.SelectedIndex = 0;
@@ -113,82 +113,6 @@ namespace Final.MDS_SDS
             DataLoad(cbLevelGroup.Text);
         }
 
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (txtCode.Text.Length < 1)
-            {
-                MessageBox.Show("레벨코드 미입력");
-                return;
-            }
-            if (txtName.Text.Length < 1)
-            {
-                MessageBox.Show("레벨명 미입력");
-                return;
-            }
-
-            if (!string.IsNullOrEmpty(txtCode.Text.Trim()) && !string.IsNullOrEmpty(txtName.Text.Trim()))
-            {
-                string level;
-                if (cbLevel.Text == "Level1")
-                {
-                    level = "YNNNN";
-                }
-                else if (cbLevel.Text == "Level2")
-                {
-                    level = "NYNNN";
-                }
-                else if (cbLevel.Text == "Level3")
-                {
-                    level = "NNYNN";
-                }
-                else if (cbLevel.Text == "Level4")
-                {
-                    level = "NNNYN";
-                }
-                else if (cbLevel.Text == "Level5")
-                {
-                    level = "NNNNY";
-                }
-                else
-                {
-                    level = "NNNNN";
-                }
-
-                ItemInfoVO additem = new ItemInfoVO()
-                {
-                    Level_Code = txtCode.Text.Trim(),
-                    Level_Name = txtName.Text.Trim(),
-                    Item_lvl1 = level[0].ToString().Trim(),
-                    Item_lvl2 = level[1].ToString().Trim(),
-                    Item_lvl3 = level[2].ToString().Trim(),
-                    Item_lvl4 = level[3].ToString().Trim(),
-                    Item_lvl5 = level[4].ToString().Trim(),
-                    Box_Qty = Convert.ToInt32(nuPLbox.Value),
-                    Pcs_Qty = Convert.ToInt32(nuBoxpcs.Value),
-                    Mat_Qty = nuPCSqty.Value,
-                    Ins_Emp = UserStatic.User_Name,
-                };
-                try
-                {
-                    ItemService service = new ItemService();
-                    bool bFlag = service.InsertItemLevel(additem);
-
-                    if (bFlag)
-                    {
-                        MessageBox.Show("추가되었습니다.");
-                        DataLoad("");
-                    }
-                    else
-                        MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
-                }
-                catch (Exception err)
-                {
-                    MessageBox.Show(err.Message);
-                }
-                RefreshControl();
-            }
-        }
         private void RefreshControl()
         {
             txtCode.Text = txtName.Text = "";
@@ -199,11 +123,11 @@ namespace Final.MDS_SDS
         private void dgvItemLevel_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (e.ColumnIndex == 4 && e.RowIndex > -1)
+            if (e.ColumnIndex == 6 && e.RowIndex > -1)
             {
                 //dgvUser.EndEdit();
 
-                DataGridViewCheckBoxCell dgv = (DataGridViewCheckBoxCell)dgvItemLevel.Rows[e.RowIndex].Cells[4];
+                DataGridViewCheckBoxCell dgv = (DataGridViewCheckBoxCell)dgvItemLevel.Rows[e.RowIndex].Cells[6];
                 int useyn = (Convert.ToInt32(dgv.Value) == 1) ? 0 : 1;
 
                 ItemInfoVO vo = new ItemInfoVO
@@ -214,6 +138,14 @@ namespace Final.MDS_SDS
 
                 ItemService service = new ItemService();
                 service.UpdateItemLevel(vo);
+            }
+            if (cbLevelGroup.Text == "전체")
+            {
+                DataLoad("");
+            }
+            else
+            {
+                DataLoad(cbLevelGroup.SelectedValue.ToString());
             }
         }
 
@@ -233,16 +165,7 @@ namespace Final.MDS_SDS
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (txtCode.Text.Length < 1)
-            {
-                MessageBox.Show("레벨코드 미입력");
-                return;
-            }
-            if (txtName.Text.Length < 1)
-            {
-                MessageBox.Show("레벨명 미입력");
-                return;
-            }
+
 
             if (!string.IsNullOrEmpty(txtCode.Text.Trim()) && !string.IsNullOrEmpty(txtName.Text.Trim()))
             {
@@ -284,26 +207,23 @@ namespace Final.MDS_SDS
                     Box_Qty = Convert.ToInt32(nuPLbox.Value),
                     Pcs_Qty = Convert.ToInt32(nuBoxpcs.Value),
                     Mat_Qty = nuPCSqty.Value,
-                    Ins_Emp = UserStatic.User_Name,
+                    //Ins_Emp = UserStatic.User_Name,
                 };
-                try
-                {
-                    ItemService service = new ItemService();
-                    bool bFlag = service.UpdateItemLevel(additem);
 
-                    if (bFlag)
-                    {
-                        MessageBox.Show("추가되었습니다.");
-                        DataLoad("");
-                    }
-                    else
-                        MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
-                }
-                catch (Exception err)
+                if (itemservice.InsertUpdateItemInfo(additem))
                 {
-                    MessageBox.Show(err.Message);
+                    MessageBox.Show("저장 완료", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DataLoad("");
+                    RefreshControl();
                 }
-                RefreshControl();
+                else
+                {
+                    MessageBox.Show("db실패", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("필수 항목을 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

@@ -37,39 +37,68 @@ namespace Final
             LoginInfoVO.User_ID = "Test";
             LoginInfoVO.User_Name = "Test";
 
-            TreeNode mainNode = new TreeNode();
-            mainNode.Name = "product";
-            mainNode.Text = "Product Categories";
-            ImageList imgList = new ImageList();
-            this.tabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            CloseImage = Properties.Resources.x;
-            this.tabControl2.Padding = new Point(10, 0);
+            //TreeNode mainNode = new TreeNode();
+            //mainNode.Name = "product";
+            ////mainNode.Text = "Product Categories";
+            //ImageList imgList = new ImageList();
+            //this.tabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            //CloseImage = Properties.Resources.x;
+            //this.tabControl2.Padding = new Point(10, 0);
 
-            tv_Menu.Nodes.Add(mainNode);
-            List<ScreenVO> screen = new Service.MenuService().GetScreenVOList();
+            //tv_Menu.Nodes.Add(mainNode);
+            //List<ScreenVO> screen = new Service.MenuService().GetScreenVOList();
+        }
+
+        private void MenuClick(object sender, EventArgs e)
+        {
+            //string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))
+            openNewForm(sender: (ToolStripMenuItem)sender);
         }
 
         private void tv_Menu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
-        { 
+        {
             if (e.Node.Name.Length == 11)
             {
-               var frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
-
-                frm.MdiParent = this;
-
-                frm.WindowState = FormWindowState.Maximized;
-                frm.Tag = e.Node.Name;
-                TabPage newTab = new TabPage();
-                newTab.Text = e.Node.Text;
-                newTab.Tag = e.Node.Name;
-                newTab.Font = new Font("나눔스퀘어OTF", 10);
-                tabControl2.TabPages.Add(newTab);
-                tabControl2.SelectedTab = newTab;
-
-                frm.Show();
+                openNewForm(e);
             }
         }
-        public void newForm(string formName,string folderName, string formText)
+
+        private void openNewForm(TreeNodeMouseClickEventArgs e = null, ToolStripMenuItem sender = null)
+        {
+            Form frm;
+            if (e != null)
+            {
+                frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
+
+                frm.Tag = e.Node.Name;
+            }
+
+            else
+            {
+                frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{sender.Name.Substring(0, 7)}.frm_{sender.Name}"))) as Form;
+                frm.Tag = sender.Name;
+            }
+
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            TabPage newTab = new TabPage();
+            if (e != null)
+            {
+                newTab.Text = e.Node.Text;
+                newTab.Tag = e.Node.Name;
+            }
+            else
+            {
+                newTab.Text = sender.Text;
+                newTab.Tag = sender.Name;
+            }
+            newTab.Font = new Font("나눔스퀘어OTF", 10);
+            tabControl2.TabPages.Add(newTab);
+            tabControl2.SelectedTab = newTab;
+
+            frm.Show();
+        }
+        public void newForm(string formName, string folderName, string formText)
         {
             Form frm;
             string nameSpace = "Final"; //네임스페이스 명
@@ -95,7 +124,7 @@ namespace Final
             CloseImage = Properties.Resources.x;
             this.tabControl2.Padding = new Point(10, 3);
 
-           // tv_Menu.Nodes.Add(mainNode);
+            // tv_Menu.Nodes.Add(mainNode);
             List<ScreenVO> screen = new Service.MenuService().GetScreenVOList();
             tabControl2.SelectedTab = newTab; //새로연 메뉴의 화면 텝페이지 눌릴 수 있도록
             frm.Show();
@@ -154,11 +183,11 @@ namespace Final
                 if (imageRect.Contains(e.Location))
                 {
                     this.ActiveMdiChild.Close();
-                    tabControl2.TabPages.RemoveAt(i);                    
+                    tabControl2.TabPages.RemoveAt(i);
                     break;
                 }
             }
-        
+
         }
 
         private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)

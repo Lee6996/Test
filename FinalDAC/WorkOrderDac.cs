@@ -103,7 +103,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        public List<WorkOrderVO> listWork(string dtpFrom, string dtpTo, string Status, string Wc_Code=null)
+        public List<WorkOrderVO> listWork (string dtpFrom, string dtpTo, string Status, string Wc_Code = null)
         {
             string sql = " SELECT * from View_WorkOrder where Prd_Date between @dtpFrom and @dtpTo and Status = @Status";
 

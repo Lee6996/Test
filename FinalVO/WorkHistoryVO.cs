@@ -22,7 +22,7 @@ namespace FinalVO
         // 근무종료시간
         public string Work_EndTime { get; set; }
         // 근무시간
-        public string Work_Time { get; set; }
+        public decimal Work_Time { get; set; }
         // 휴무구분
         public string Work_Type { get; set; }
         // 비고
