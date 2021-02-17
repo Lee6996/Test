@@ -56,7 +56,7 @@ namespace FinalVO
         /// <summary>
         /// 리드타임
         /// </summary>
-        public string Lead_Time { get; set; }
+        public decimal Lead_Time { get; set; }
         /// <summary>
         /// LotSize
         /// </summary>
