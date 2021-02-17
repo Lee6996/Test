@@ -53,7 +53,7 @@ namespace Final.MDS_CDS
 
             dgvBox.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            GetAllBoxMa("dgv");
+            GetAllBoxMa(dgv);
         }
         private void GetAllBoxMa(string box)
         {
@@ -77,14 +77,9 @@ namespace Final.MDS_CDS
         }
         private void RefreshControl()
         {
-            txtDCode.Text = txtDName.Text =  "";
+            txtDCode.Text = txtDName.Text = txtCode.Text = txtName.Text = "";
             txtCode.Focus();
-        }
-        public void Search()
-        {
-            txtCode.Text = txtCodeText;
-            txtName.Text = txtNameText;
-        }
+        }        
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -201,7 +196,7 @@ namespace Final.MDS_CDS
                 if (bFlag)
                 {
                     MessageBox.Show("저장되었습니다..");
-                    GetAllBoxMa("dgv");
+                    GetAllBoxMa("");
                 }
                 else
                     MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
@@ -225,7 +220,7 @@ namespace Final.MDS_CDS
                 txtCode.Text = frm.SCode;
                 dgv = frm.SCode;
                 txtName.Text = frm.SName;
-                GetAllBoxMa("dgv");
+                GetAllBoxMa(dgv);
                 //여기에 dgv 초기화 코딩
             }
         }

@@ -24,11 +24,7 @@ namespace FinalDAC
             string sQuery = @"  SELECT [Grade_Detail_Code]
           ,[Grade_Detail_Name]
           ,[Boxing_Grade_Code]
-          ,[Use_YN]
-          ,[Ins_Date]
-          ,[Ins_Emp]
-          ,[Up_Date]
-          ,[Up_Emp]
+          ,case when Use_YN='Y' then 1 else 0 end Use_YN, CONVERT(char(10), Ins_Date, 23) Ins_Date, Ins_Emp, CONVERT(char(10), Up_Date, 23)  Up_Date, Up_Emp
       FROM [dbo].[BoxingGrade_Detail_Master] where 1 = 1  ";
 
             if (!string.IsNullOrEmpty(box))

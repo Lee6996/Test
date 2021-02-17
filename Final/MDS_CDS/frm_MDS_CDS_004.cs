@@ -137,7 +137,7 @@ namespace Final.MDS_CDS
 
         private void btnInsertUpdate_Click(object sender, EventArgs e)
         {
-           
+
             try
             {
 
@@ -175,7 +175,16 @@ namespace Final.MDS_CDS
             }
             RefreshControl();
         }
+        
+        private void dgvNopMa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNopMaCode.Text = dgvNopMa[0, dgvNopMa.CurrentRow.Index].Value.ToString();
+        }
 
-
-    }
+        private void dgvNopMi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNopMiCode.Text= dgvNopMi[2, dgvNopMi.CurrentRow.Index].Value.ToString();
+            txtNopMiName.Text = dgvNopMi[3, dgvNopMi.CurrentRow.Index].Value.ToString();
+        }
+    }                                     
 }

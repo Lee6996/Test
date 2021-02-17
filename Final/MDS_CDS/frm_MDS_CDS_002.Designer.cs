@@ -103,7 +103,7 @@ namespace Final.MDS_CDS
             this.dgvDefDetail.Location = new System.Drawing.Point(542, 85);
             this.dgvDefDetail.Name = "dgvDefDetail";
             this.dgvDefDetail.RowTemplate.Height = 23;
-            this.dgvDefDetail.Size = new System.Drawing.Size(799, 518);
+            this.dgvDefDetail.Size = new System.Drawing.Size(834, 518);
             this.dgvDefDetail.TabIndex = 94;
             this.dgvDefDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDefDetail_CellDoubleClick);
             this.dgvDefDetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDefDetail_CellDoubleClick);
@@ -190,7 +190,7 @@ namespace Final.MDS_CDS
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(1341, 57);
+            this.splitter1.Size = new System.Drawing.Size(1376, 57);
             this.splitter1.TabIndex = 83;
             this.splitter1.TabStop = false;
             // 
@@ -239,7 +239,7 @@ namespace Final.MDS_CDS
             this.btnInsertUpdate.BackColor = System.Drawing.Color.DimGray;
             this.btnInsertUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnInsertUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnInsertUpdate.Location = new System.Drawing.Point(1218, 697);
+            this.btnInsertUpdate.Location = new System.Drawing.Point(1256, 695);
             this.btnInsertUpdate.Name = "btnInsertUpdate";
             this.btnInsertUpdate.Size = new System.Drawing.Size(111, 29);
             this.btnInsertUpdate.TabIndex = 112;
@@ -252,7 +252,7 @@ namespace Final.MDS_CDS
             this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
             this.btnRefresh.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRefresh.Location = new System.Drawing.Point(1137, 697);
+            this.btnRefresh.Location = new System.Drawing.Point(1175, 695);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 29);
             this.btnRefresh.TabIndex = 113;
@@ -286,7 +286,7 @@ namespace Final.MDS_CDS
             this.textBox1.Location = new System.Drawing.Point(0, 54);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1341, 31);
+            this.textBox1.Size = new System.Drawing.Size(1376, 31);
             this.textBox1.TabIndex = 129;
             this.textBox1.Text = "▶ 불량현상 대분류                                                                       " +
     "          │▶ 불량현상 상세분류\r\n ";
@@ -296,7 +296,7 @@ namespace Final.MDS_CDS
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1341, 732);
+            this.ClientSize = new System.Drawing.Size(1376, 732);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtDef_Maname);
             this.Controls.Add(this.label1);

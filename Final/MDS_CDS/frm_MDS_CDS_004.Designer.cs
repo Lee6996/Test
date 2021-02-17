@@ -95,6 +95,7 @@ namespace Final.MDS_CDS
             this.dgvNopMi.RowTemplate.Height = 23;
             this.dgvNopMi.Size = new System.Drawing.Size(783, 557);
             this.dgvNopMi.TabIndex = 89;
+            this.dgvNopMi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNopMi_CellClick);
             this.dgvNopMi.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNopMi_CellContentDoubleClick);
             // 
             // txtNopMiCode
@@ -126,6 +127,7 @@ namespace Final.MDS_CDS
             this.dgvNopMa.RowTemplate.Height = 23;
             this.dgvNopMa.Size = new System.Drawing.Size(549, 645);
             this.dgvNopMa.TabIndex = 83;
+            this.dgvNopMa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNopMa_CellClick);
             // 
             // txtNopMaCode
             // 
