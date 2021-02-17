@@ -15,7 +15,6 @@ namespace Final.MDS_CDS
 {
     public partial class frm_MDS_CDS_004 : Form
     {
-        string nop = null;
         public string txtCodeText { get; set; }
         public string txtNameText { get; set; }
 
