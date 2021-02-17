@@ -119,7 +119,7 @@ namespace Final.MDS_SDS
                 MessageBox.Show(err.Message);
             }
         }
-        private void ItemSpecDataLoad(string Code)
+        public void ItemSpecDataLoad(string Code)
         {
             try
             {
@@ -137,12 +137,26 @@ namespace Final.MDS_SDS
 
         private void btnSearch1_Click(object sender, EventArgs e)
         {
-            ItemMaterDataLoad(cbItem.SelectedValue.ToString());
+            if (cbItem.Text == "전체")
+            {
+                ItemMaterDataLoad("");
+            }
+            else
+            {
+                ItemMaterDataLoad(cbItem.SelectedValue.ToString());
+            }
         }
 
         private void btnSearch2_Click(object sender, EventArgs e)
         {
-            ItemSpecDataLoad(cbProcess.SelectedValue.ToString());
+            if (cbProcess.Text == "전체")
+            {
+                ItemSpecDataLoad("");
+            }
+            else
+            {
+                ItemSpecDataLoad(cbProcess.SelectedValue.ToString());
+            }
         }
 
         private void btnInsert_Click(object sender, EventArgs e)

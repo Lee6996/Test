@@ -15,7 +15,7 @@ namespace Final.MDS_SDS
     public partial class frm_MDS_SDS_002 : Form
     {
         ItemService itemservice = new ItemService();
-        List<Item_MasterVO> Itemlist;        
+        List<Item_MasterVO> Itemlist;
 
         Item_MasterVO upitem = new Item_MasterVO();
         public frm_MDS_SDS_002()
@@ -40,20 +40,20 @@ namespace Final.MDS_SDS
             CommonUtil.AddGridTextColumn(dgvItemDetail, "리드타임", "Lead_Time", 75);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "안전재고", "Item_Stock");
             CommonUtil.AddGridTextColumn(dgvItemDetail, "시간당 생산수", "PrdQty_Per_Hour");
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "배치당 생산수", "PrdQTy_Per_Batch");           
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "배치당 생산수", "PrdQTy_Per_Batch");
             CommonUtil.AddGridTextColumn(dgvItemDetail, "캐비티수", "Cavity", 80);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "성형줄당갯수", "Line_Per_Qty", 80);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "포장샷당갯수", "Shot_Per_Qty", 80);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "건조대차수량", "Dry_GV_Qty", 80);            
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "사용여부", "Use_YN", 150, visibility: false);            
-            
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "건조대차수량", "Dry_GV_Qty", 80);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "사용여부", "Use_YN", 150, visibility: false);
+
             //-----------------------------------------------------------------------------------------
             DataGridViewCheckBoxColumn gridbtn = new DataGridViewCheckBoxColumn(false);
             gridbtn.HeaderText = "사용여부";
             gridbtn.Name = "btn";
             gridbtn.Width = 100;
             gridbtn.TrueValue = 1;
-            gridbtn.FalseValue = 0;            
+            gridbtn.FalseValue = 0;
             gridbtn.DataPropertyName = "Use_YN";
             this.dgvItemDetail.Columns.Add(gridbtn);
 
@@ -73,7 +73,7 @@ namespace Final.MDS_SDS
             DataLoad("");
         }
 
-        private void DataLoad(string groupName)
+        public void DataLoad(string groupName)
         {
             try
             {
@@ -88,13 +88,20 @@ namespace Final.MDS_SDS
                 MessageBox.Show(err.Message);
             }
         }
-   
+
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DataLoad(cbItem.Text);
+            if (cbItem.Text == "전체")
+            {
+                DataLoad("");
+            }
+            else
+            {
+                DataLoad(cbItem.SelectedValue.ToString());
+            }
         }
-     
+
         private void RefreshControl()
         {
             txtCode.Text = txtName.Text = "";
@@ -104,7 +111,7 @@ namespace Final.MDS_SDS
         }
 
         private void dgvItemDetail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {            
+        {
             upitem = Itemlist.Find(item => item.Item_Code == dgvItemDetail[0, dgvItemDetail.CurrentRow.Index].Value.ToString());//수정하기
 
             txtCode.Text = upitem.Item_Code;
@@ -118,7 +125,7 @@ namespace Final.MDS_SDS
         private void cbItem_SelectedIndexChanged(object sender, EventArgs e)
         {
             string cbtext;
-            
+
             if (cbItem.SelectedIndex < 1)
             { cbtext = ""; }
             else
@@ -127,49 +134,38 @@ namespace Final.MDS_SDS
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {    
-            if (txtCode.Text.Length < 1)
-            {
-                MessageBox.Show("코드 미입력");
-                return;
-            }
-            if (txtName.Text.Length < 1)
-            {
-                MessageBox.Show("이름 미입력");
-                return;
-            }
-
+        {
             if (!string.IsNullOrEmpty(txtCode.Text.Trim()) && !string.IsNullOrEmpty(txtName.Text.Trim()))
             {
 
                 Item_MasterVO additem = new Item_MasterVO()
-                {                    
+                {
                     Cavity = Convert.ToInt32(nuCavity.Value),
                     Line_Per_Qty = Convert.ToInt32(nuLine_Per_Qty.Value),
                     Shot_Per_Qty = Convert.ToInt32(nuShot_Per_Qty.Value),
-                    //Up_Date = DateTime.Now.ToString(),
+                    Item_Code = txtCode.Text,
+                    Item_Name = txtName.Text
+
                     //Up_Emp = UserStatic.User_Name                    
                 };
-                try
+                if (itemservice.UpdateMaster(additem))
                 {
-                    ItemService service = new ItemService();
-                    bool bFlag = service.UpdateAllItem_Master(additem);
-
-                    if (bFlag)
-                    {
-                        MessageBox.Show("수정되었습니다.");
-                        DataLoad("");
-                    }
-                    else
-                        MessageBox.Show("이미 가지고있는 항목입니다.");
+                    MessageBox.Show("저장 완료", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DataLoad("");
+                    RefreshControl();
                 }
-                catch (Exception err)
+                else
                 {
-                    MessageBox.Show(err.Message);
+                    MessageBox.Show("db실패", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                RefreshControl();
             }
-        }      
+            else
+            {
+                MessageBox.Show("필수 항목을 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            RefreshControl();
+        }
+
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
@@ -177,9 +173,9 @@ namespace Final.MDS_SDS
             {
                 StartPosition = FormStartPosition.CenterScreen,
                 Location = new Point(Location.X + Width, Location.Y)
-            };            
+            };
             frm.Show();
-            
+
         }
 
         private void dgvItemDetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -210,3 +206,4 @@ namespace Final.MDS_SDS
         }
     }
 }
+

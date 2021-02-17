@@ -246,6 +246,7 @@
     <Compile Include="MDS_SDS\service\ItemService.cs" />
     <Compile Include="MDS_SDS\service\SpecService.cs" />
     <Compile Include="MDS_SDS\service\WorkCenter_MasterService.cs" />
+    <Compile Include="MSS_CON\UserService.cs" />
     <Compile Include="PPS_MLD\frm_PPS_MLD_001.cs">
       <SubType>Form</SubType>
     </Compile>
