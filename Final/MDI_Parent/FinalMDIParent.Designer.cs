@@ -186,8 +186,7 @@ namespace Final
             this.panel3 = new System.Windows.Forms.Panel();
             this.tv_Menu = new System.Windows.Forms.TreeView();
             this.button19 = new System.Windows.Forms.Button();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.lblName = new System.Windows.Forms.TextBox();
+            this.tabControl2 = new MDITabForm.ucTabControl();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -858,14 +857,17 @@ namespace Final
             // tabControl2
             // 
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabControl2.Location = new System.Drawing.Point(225, 33);
+            this.tabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl2.ItemSize = new System.Drawing.Size(120, 30);
+            this.tabControl2.Location = new System.Drawing.Point(225, 62);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1357, 27);
-            this.tabControl2.TabIndex = 9;
-            this.tabControl2.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl2_DrawItem);
+            this.tabControl2.Size = new System.Drawing.Size(1357, 28);
+            this.tabControl2.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.tabControl2.TabIndex = 11;
             this.tabControl2.SelectedIndexChanged += new System.EventHandler(this.tabControl2_SelectedIndexChanged);
             this.tabControl2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl2_MouseClick);
+            this.tabControl2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl2_MouseDown);
             // 
             // lblName
             // 
@@ -877,7 +879,6 @@ namespace Final
             this.lblName.ReadOnly = true;
             this.lblName.Size = new System.Drawing.Size(224, 27);
             this.lblName.TabIndex = 108;
-            this.lblName.Text = "▶ ";
             // 
             // FinalMDIParent
             // 
@@ -919,7 +920,6 @@ namespace Final
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TreeView tv_Menu;
-        public System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 시스템관리ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MSS_CON_001;
@@ -973,6 +973,7 @@ namespace Final
         private System.Windows.Forms.ToolStripMenuItem QAM_SQC_006;
         private System.Windows.Forms.ToolStripMenuItem QAM_SQC_005;
         private System.Windows.Forms.ToolStripMenuItem QAM_SQC_004;
+        public MDITabForm.ucTabControl tabControl2;
         private System.Windows.Forms.TextBox lblName;
     }
 }

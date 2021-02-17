@@ -29,9 +29,9 @@ namespace Final.PPS_SCH
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgv_Work = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -72,7 +72,7 @@ namespace Final.PPS_SCH
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(81, 20);
+            this.label2.Size = new System.Drawing.Size(98, 18);
             this.label2.Text = "작업지시일자";
             // 
             // btn_WorkCenter
@@ -110,7 +110,7 @@ namespace Final.PPS_SCH
             // label3
             // 
             this.label3.Location = new System.Drawing.Point(1286, 15);
-            this.label3.Size = new System.Drawing.Size(45, 20);
+            this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.Text = "작업장";
             this.label3.Visible = false;
             // 
@@ -136,7 +136,7 @@ namespace Final.PPS_SCH
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Work.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgv_Work.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Work.Location = new System.Drawing.Point(4, 38);
+            this.dgv_Work.Location = new System.Drawing.Point(6, 44);
             this.dgv_Work.Name = "dgv_Work";
             this.dgv_Work.RowTemplate.Height = 23;
             this.dgv_Work.Size = new System.Drawing.Size(1452, 508);
@@ -182,17 +182,17 @@ namespace Final.PPS_SCH
             // 
             // chartDate
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartDate.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chartDate.ChartAreas.Add(chartArea1);
             this.chartDate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend2.Name = "Legend1";
-            this.chartDate.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.chartDate.Legends.Add(legend1);
             this.chartDate.Location = new System.Drawing.Point(0, 3);
             this.chartDate.Name = "chartDate";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartDate.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartDate.Series.Add(series1);
             this.chartDate.Size = new System.Drawing.Size(1448, 275);
             this.chartDate.TabIndex = 0;
             this.chartDate.Text = "chart1";

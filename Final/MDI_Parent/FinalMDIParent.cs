@@ -100,7 +100,7 @@ namespace Final
 
             if (e != null)
             {
-                newTab.Text = e.Node.Text;
+                newTab.Text = e.Node.Text + "              ";
                 newTab.Tag = frm;
             }
             else
@@ -185,27 +185,7 @@ namespace Final
 
         private void tabControl2_MouseClick(object sender, MouseEventArgs e)
         {
-            for (var i = 0; i < tabControl2.TabPages.Count; i++)
-            {
-                var tabRect = tabControl2.GetTabRect(i);
-                //tabRect.Inflate(-2, -2);
-                var closeImage = Properties.Resources.x;
-                var imageRect = new Rectangle(
-                    (tabRect.Right - closeImage.Width),
-                    tabRect.Top + (tabRect.Height - closeImage.Height) / 2,
-                    closeImage.Width,
-                    closeImage.Height);
-                if (imageRect.Contains(e.Location))
-                {
-                    this.ActiveMdiChild.Close();
-                    tabControl2.TabPages.RemoveAt(i);
-                    break;
-                }
-            }
-            if(tabControl2.TabPages.Count == 0)
-            {
-                openNewForm(dashOpen);
-            }
+
         }
 
         private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
@@ -253,6 +233,31 @@ namespace Final
         private void button19_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabControl2_MouseDown(object sender, MouseEventArgs e)
+        {
+            for (var i = 0; i < tabControl2.TabPages.Count; i++)
+            {
+                var tabRect = tabControl2.GetTabRect(i);
+                //tabRect.Inflate(-2, -2);
+                var closeImage = Properties.Resources.close_grey;
+                var imageRect = new Rectangle(
+                    (tabRect.Right - closeImage.Width),
+                    tabRect.Top + (tabRect.Height - closeImage.Height) / 2,
+                    closeImage.Width,
+                    closeImage.Height);
+                if (imageRect.Contains(e.Location))
+                {
+                    this.ActiveMdiChild.Close();
+                    tabControl2.TabPages.RemoveAt(i);
+                    break;
+                }
+            }
+            if (tabControl2.TabPages.Count == 0)
+            {
+                openNewForm(dashOpen);
+            }
         }
     }
 }
