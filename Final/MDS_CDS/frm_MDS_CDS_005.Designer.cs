@@ -106,7 +106,7 @@ namespace Final.MDS_CDS
             this.dgvBox.RowTemplate.Height = 23;
             this.dgvBox.Size = new System.Drawing.Size(1341, 517);
             this.dgvBox.TabIndex = 102;
-            this.dgvBox.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBox_CellClick);
+            //this.dgvBox.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBox_CellClick);
             this.dgvBox.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBox_CellContentDoubleClick);
             // 
             // txtDCode
