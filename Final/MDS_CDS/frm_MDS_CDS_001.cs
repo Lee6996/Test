@@ -154,8 +154,8 @@ namespace Final.MDS_CDS
                 {
                     Def_MaVO additem = new Def_MaVO()
                     {
-                        Def_Ma_Code = txtName.Text,
-                        Def_Ma_Name = txtCode.Text,
+                        Def_Ma_Code = txtCode.Text,
+                        Def_Ma_Name = txtName.Text,
                        // Ins_Emp = UserInfo.User_Name
                     };
 

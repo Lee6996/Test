@@ -81,7 +81,11 @@ namespace Final.MDS_SDS
             //if (e.RowIndex >= 0)
             //    vo = list[e.RowIndex];
             txtCode.Text =     dgvItemLevel[0, dgvItemLevel.CurrentRow.Index].Value.ToString();
-            txtName.Text = dgvItemLevel[1, dgvItemLevel.CurrentRow.Index].Value.ToString();            
+            txtName.Text = dgvItemLevel[1, dgvItemLevel.CurrentRow.Index].Value.ToString();        
+            nuPLbox.Text = dgvItemLevel[2, dgvItemLevel.CurrentRow.Index].Value.ToString();
+            nuBoxpcs.Text = dgvItemLevel[3, dgvItemLevel.CurrentRow.Index].Value.ToString();
+            nuPCSqty.Text = dgvItemLevel[4, dgvItemLevel.CurrentRow.Index].Value.ToString();
+
 
 
             //if (vo.Item_lvl1 == "Y")
