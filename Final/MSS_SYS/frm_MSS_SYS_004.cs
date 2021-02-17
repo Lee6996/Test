@@ -78,11 +78,13 @@ namespace Final.MSS_SYS
                     Title = dgvNotice.Rows[e.RowIndex].Cells[3].Value.ToString(),
                     Notice_Date = dgvNotice.Rows[e.RowIndex].Cells[1].Value.ToString(),
                     Notice_End = dgvNotice.Rows[e.RowIndex].Cells[2].Value.ToString(),
-                    Notice_Rtf = dgvNotice.Rows[e.RowIndex].Cells[4].Value.ToString(),
+                    Notice_Rtf = dgvNotice.Rows[e.RowIndex].Cells[4].Value.ToString(), //공지참조
                     Description = dgvNotice.Rows[e.RowIndex].Cells[5].Value.ToString()
                 };
                 frm_MSS_SYS_004_1 frm = new frm_MSS_SYS_004_1(sysNoticeVO);
 
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                
                 frm.ShowDialog();
 
                 DataLoad("");
@@ -110,5 +112,6 @@ namespace Final.MSS_SYS
         {
 
         }
+
     }
 }

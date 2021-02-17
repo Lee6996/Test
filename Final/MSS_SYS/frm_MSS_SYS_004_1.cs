@@ -75,5 +75,10 @@ namespace Final
         {
             
         }
+
+        private void txtDescription_TextChanged(object sender, EventArgs e)
+        {
+            txtDescription.ScrollBars = ScrollBars.Both;
+        }
     }
 }

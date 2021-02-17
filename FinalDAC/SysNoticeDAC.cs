@@ -44,7 +44,7 @@ namespace FinalDAC
         //공지사항 수정
         public bool UpdateSysNotice(SysNoticeVO vo)
         {
-            string sQuery = @"update Sys_Notice set Notice_Date = @noticeDate , Notice_End = @noticeEnd, Title = @title, Description =  @description, Up_Date= getdate() where Seq = @seq";
+            string sQuery = @"update Sys_Notice set Notice_Date = @noticeDate , Notice_End = @noticeEnd, Title = @title, Description =  @description, Notice_Rtf = @notice_Rtf, Up_Date= getdate() where Seq = @seq";
 
             using(SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
@@ -52,6 +52,7 @@ namespace FinalDAC
                 cmd.Parameters.AddWithValue("@noticeEnd", vo.Notice_End);
                 cmd.Parameters.AddWithValue("@title", vo.Title);
                 cmd.Parameters.AddWithValue("@description", vo.Description);
+                cmd.Parameters.AddWithValue("@notice_Rtf", vo.Notice_Rtf);
                 cmd.Parameters.AddWithValue("@seq", vo.Seq);
 
                 int iResult = cmd.ExecuteNonQuery();
