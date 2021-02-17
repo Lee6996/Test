@@ -35,6 +35,14 @@ namespace Final.MDS_CDS.service
             return new Def_MiDAC().UpdateDef_Ma(additem);
         }
 
-       
+        public bool InsertUpdateDef_MiVO(Def_MiVO additem)
+        {
+            return new Def_MiDAC().InsertUpdateDef_MiVO(additem);
+        }
+
+        public bool UpdateUseYN(Def_MiVO vo)
+        {
+            return new Def_MiDAC().UpdateUseYN(vo);
+        }
     }
 }
