@@ -62,7 +62,7 @@ namespace Final.Login
             this.btnLogin.Location = new System.Drawing.Point(151, 113);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(85, 35);
-            this.btnLogin.TabIndex = 4;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "로그인";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -73,7 +73,7 @@ namespace Final.Login
             this.txtID.Name = "txtID";
             this.txtID.PlaceholderText = "ID";
             this.txtID.Size = new System.Drawing.Size(230, 25);
-            this.txtID.TabIndex = 7;
+            this.txtID.TabIndex = 0;
             // 
             // txtPwd
             // 
@@ -81,7 +81,7 @@ namespace Final.Login
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PlaceholderText = "PWD";
             this.txtPwd.Size = new System.Drawing.Size(230, 25);
-            this.txtPwd.TabIndex = 8;
+            this.txtPwd.TabIndex = 1;
             this.txtPwd.TextChanged += new System.EventHandler(this.txtPwd_TextChanged);
             // 
             // frmLogin

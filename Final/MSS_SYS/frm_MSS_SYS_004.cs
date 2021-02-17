@@ -68,7 +68,25 @@ namespace Final.MSS_SYS
         //셀 더블 클릭시 공지사항폼 쇼다이얼로그
         private void dgvNotice_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex > -1)
+            {
+                int seq = Convert.ToInt32(dgvNotice.Rows[e.RowIndex].Cells[0].Value);
 
+                SysNoticeVO sysNoticeVO = new SysNoticeVO
+                {
+                    Seq = seq,
+                    Title = dgvNotice.Rows[e.RowIndex].Cells[3].Value.ToString(),
+                    Notice_Date = dgvNotice.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                    Notice_End = dgvNotice.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                    Notice_Rtf = dgvNotice.Rows[e.RowIndex].Cells[4].Value.ToString(),
+                    Description = dgvNotice.Rows[e.RowIndex].Cells[5].Value.ToString()
+                };
+                frm_MSS_SYS_004_1 frm = new frm_MSS_SYS_004_1(sysNoticeVO);
+                frm.StartPosition = FormStartPosition.CenterParent;
+                frm.ShowDialog();
+
+                DataLoad("");
+            }
         }
 
         //콤보박스 선택
