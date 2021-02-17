@@ -53,7 +53,7 @@ namespace Final
         { 
             if (e.Node.Name.Length == 11)
             {
-                var frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
+               var frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
 
                 frm.MdiParent = this;
 

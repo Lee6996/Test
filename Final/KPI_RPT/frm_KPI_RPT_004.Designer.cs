@@ -30,7 +30,6 @@ namespace Final.KPI_RPT
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
             this.dgv_KPI_BOXING = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,7 +71,6 @@ namespace Final.KPI_RPT
             // btn_WorkCenter
             // 
             this.btn_WorkCenter.Location = new System.Drawing.Point(710, 11);
-            this.btn_WorkCenter.Visible = false;
             this.btn_WorkCenter.Click += new System.EventHandler(this.btn_WorkCenter_Click);
             // 
             // textBox6
@@ -83,7 +81,6 @@ namespace Final.KPI_RPT
             // label16
             // 
             this.label16.Location = new System.Drawing.Point(651, 19);
-            this.label16.Visible = false;
             // 
             // btn_Process
             // 
@@ -104,7 +101,6 @@ namespace Final.KPI_RPT
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.dgv_KPI_BOXING);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -112,15 +108,6 @@ namespace Final.KPI_RPT
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1266, 749);
             this.panel5.TabIndex = 18;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(29, 64);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(349, 17);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "품목코드 - 품목명 - 누계포장량(1일부터) - 전일포장량";
             // 
             // dgv_KPI_BOXING
             // 
@@ -209,7 +196,6 @@ namespace Final.KPI_RPT
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KPI_BOXING)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -223,7 +209,6 @@ namespace Final.KPI_RPT
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dgv_KPI_BOXING;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
