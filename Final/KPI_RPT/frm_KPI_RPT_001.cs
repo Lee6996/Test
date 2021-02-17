@@ -39,7 +39,7 @@ namespace Final.KPI_RPT
             CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "시간당생산량", "PrdQty_Per_Hour", 120);
             CommonUtil.AddGridTextColumn(dgv_KPI_DAY, "비가동시간", "Nop_Check_Time", 120);
 
-           // GetData();
+            GetData();
         }
         private void GetData()
         {

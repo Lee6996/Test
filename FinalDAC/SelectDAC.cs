@@ -509,13 +509,13 @@ namespace FinalDAC
         //List<WorkDayVO>
         public List<WorkDayVO> SelectWorkDay(string Prd_Date_from, string Prd_Date_to, string Process_Code = null, string Wc_Code = null)
         {
-            string sql = " SELECT * from View_WorkDay where Prd_Date between @Prd_Date_from and @Prd_Date_to ";
+            string sql = " SELECT * from View_WorkDay where Prd_Date >= @Prd_Date_from and Prd_Date<= @Prd_Date_to ";
 
             if (!string.IsNullOrEmpty(Process_Code))
                 sql += " and Process_Code = @Process_Code";
 
             if (!string.IsNullOrEmpty(Wc_Code))
-                sql += " and Wc_Code = @Wc_Code ";
+                sql += " and Wc_Code = @Wc_Code";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {

@@ -53,7 +53,7 @@ namespace Final.PPS_MLD
             CommonUtil.AddGridTextColumn(dgv_Mold, "최종장착일시", "Last_Setup_Time", 120);
             CommonUtil.AddGridTextColumn(dgv_Mold, "비고", "Remark", 120);
             CommonUtil.AddGridTextColumn(dgv_Mold, "사용유무", "Use_YN", 120);
-
+            MoldGroupComboT();
             GetData();
             MoldGroupCombo();
         }
@@ -119,9 +119,17 @@ namespace Final.PPS_MLD
         private void cbMoldGroupT_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChangeGetData();
+
         }
         private void btnNewMold_Click(object sender, EventArgs e)
-        {
+        { 
+            txtMoldCode.Clear();
+            txtMoldName.Clear();
+            txtMoldGuarCnt.Clear();
+            txtMoldAmt.Clear();
+            txtMoldRemark.Clear();
+            MoldGroupCombo();
+            btnMoldInsert.Visible = true;
             panel10.Enabled = true;
             txtMoldGuarCnt.Enabled = true;
             btnMoldUpdate.Visible = false;
@@ -142,16 +150,21 @@ namespace Final.PPS_MLD
             panel10.Enabled = true;
             txtMoldGuarCnt.Enabled = false;
             btnMoldInsert.Visible = false;
+            btnMoldUpdate.Visible = true;
         }
         private void MoldGroupCombo()
         {
             MoldService service = new MoldService();
             List<MoldGroupVO> List = service.GetMoldGroup();
-            CommonUtil.ComboBindingMold(cbMoldGroupT, List, "", true, "선택");
             CommonUtil.ComboBindingMold(cbMoldGroupB, List, "", true, "선택");
         }
-
-        private void btnMoldInsert_Click(object sender, EventArgs e)
+        private void MoldGroupComboT()
+        {
+            MoldService service = new MoldService();
+            List<MoldGroupVO> List = service.GetMoldGroup();
+            CommonUtil.ComboBindingMold(cbMoldGroupT, List, "", true, "선택");
+        }
+            private void btnMoldInsert_Click(object sender, EventArgs e)
         {
             MoldVO mold = new MoldVO
             {
@@ -194,6 +207,9 @@ namespace Final.PPS_MLD
             txtMoldAmt.Clear();
             txtMoldRemark.Clear();
             MoldGroupCombo();
+            panel10.Enabled = false;
+            btnMoldUpdate.Visible = true;
+            btnMoldInsert.Visible = true;
 
         }
     }

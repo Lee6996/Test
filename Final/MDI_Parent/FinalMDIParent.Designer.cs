@@ -267,54 +267,54 @@ namespace Final
             // MSS_CON_001
             // 
             this.MSS_CON_001.Name = "MSS_CON_001";
-            this.MSS_CON_001.Size = new System.Drawing.Size(180, 22);
+            this.MSS_CON_001.Size = new System.Drawing.Size(166, 22);
             this.MSS_CON_001.Text = "사용자 그룹 목록";
             this.MSS_CON_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_CON_002
             // 
             this.MSS_CON_002.Name = "MSS_CON_002";
-            this.MSS_CON_002.Size = new System.Drawing.Size(180, 22);
+            this.MSS_CON_002.Size = new System.Drawing.Size(166, 22);
             this.MSS_CON_002.Text = "사용자 그룹 관리";
             this.MSS_CON_002.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_CON_003
             // 
             this.MSS_CON_003.Name = "MSS_CON_003";
-            this.MSS_CON_003.Size = new System.Drawing.Size(180, 22);
+            this.MSS_CON_003.Size = new System.Drawing.Size(166, 22);
             this.MSS_CON_003.Text = "사용자 관리";
             this.MSS_CON_003.Click += new System.EventHandler(this.MenuClick);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(163, 6);
             // 
             // MSS_SYS_001
             // 
             this.MSS_SYS_001.Name = "MSS_SYS_001";
-            this.MSS_SYS_001.Size = new System.Drawing.Size(180, 22);
+            this.MSS_SYS_001.Size = new System.Drawing.Size(166, 22);
             this.MSS_SYS_001.Text = "화면관리";
             this.MSS_SYS_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_SYS_002
             // 
             this.MSS_SYS_002.Name = "MSS_SYS_002";
-            this.MSS_SYS_002.Size = new System.Drawing.Size(180, 22);
+            this.MSS_SYS_002.Size = new System.Drawing.Size(166, 22);
             this.MSS_SYS_002.Text = "로그인 이력 정보";
             this.MSS_SYS_002.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_SYS_003
             // 
             this.MSS_SYS_003.Name = "MSS_SYS_003";
-            this.MSS_SYS_003.Size = new System.Drawing.Size(180, 22);
+            this.MSS_SYS_003.Size = new System.Drawing.Size(166, 22);
             this.MSS_SYS_003.Text = "메뉴 관리";
             this.MSS_SYS_003.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_SYS_004
             // 
             this.MSS_SYS_004.Name = "MSS_SYS_004";
-            this.MSS_SYS_004.Size = new System.Drawing.Size(180, 22);
+            this.MSS_SYS_004.Size = new System.Drawing.Size(166, 22);
             this.MSS_SYS_004.Text = "공지사항";
             this.MSS_SYS_004.Click += new System.EventHandler(this.MenuClick);
             // 
@@ -806,11 +806,11 @@ namespace Final
             treeNode38.Text = "포장 작업 일지";
             treeNode39.Name = "PRM_RPT";
             treeNode39.Text = "일지관리";
-            treeNode40.Name = "KPI_PRT_001";
+            treeNode40.Name = "KPI_RPT_001";
             treeNode40.Text = "일별 실적 현황";
-            treeNode41.Name = "KPI_PRT_003";
+            treeNode41.Name = "KPI_RPT_003";
             treeNode41.Text = "품목별 생산 현황";
-            treeNode42.Name = "KPI_PRT_004";
+            treeNode42.Name = "KPI_RPT_004";
             treeNode42.Text = "품목별 포장 현황";
             treeNode43.Name = "노드6";
             treeNode43.Text = "분석관리";
