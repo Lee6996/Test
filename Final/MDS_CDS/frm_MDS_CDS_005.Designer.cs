@@ -275,6 +275,7 @@ namespace Final.MDS_CDS
             this.btndotdotdot.TabIndex = 143;
             this.btndotdotdot.Text = "...";
             this.btndotdotdot.UseVisualStyleBackColor = false;
+            this.btndotdotdot.Click += new System.EventHandler(this.btndotdotdot_Click);
             // 
             // txtName
             // 

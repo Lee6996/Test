@@ -1,4 +1,5 @@
 ﻿using Final.MDS_CDS.service;
+using Final.PRM_PRF.PopUp;
 using FinalVO;
 using System;
 using System.Collections.Generic;
@@ -153,12 +154,17 @@ private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventAr
 
         private void btndotdotdot_Click(object sender, EventArgs e)
         {
-            frm_MDS_CDS_002_1 frm = new frm_MDS_CDS_002_1()
+            MainPop frm = new MainPop("Def")
             {
-                StartPosition = FormStartPosition.CenterScreen,
-                Location = new Point(Location.X + Width, Location.Y)
+                StartPosition = FormStartPosition.CenterParent
             };
-            frm.Show();
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtCode.Text = frm.SCode;
+                txtName.Text = frm.SName;
+                //여기에 dgv 초기화 코딩
+            }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
