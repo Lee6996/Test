@@ -37,8 +37,9 @@ namespace Final.MDS_CDS
 
             CommonUtil.SetInitGridView(dgvDefDetail);
             CommonUtil.AddGridTextColumn(dgvDefDetail,  "불량현상상세분류코드", "Def_Mi_Code", 210);
-            CommonUtil.AddGridTextColumn(dgvDefDetail,  "불량현상상세분류 명", "Def_Mi_Name",210);
-            CommonUtil.AddGridTextColumn(dgvDefDetail,  "비고", "Remark", 210);
+            CommonUtil.AddGridTextColumn(dgvDefDetail, "불량현상대분류코드", "Def_Ma_Code", 210);
+            CommonUtil.AddGridTextColumn(dgvDefDetail,  "불량현상상세분류 명", "Def_Mi_Name",210);            
+            //CommonUtil.AddGridTextColumn(dgvDefDetail,  "비고", "Remark", 210);
             CommonUtil.AddGridTextColumn(dgvDefDetail, "입력일자", "Ins_Date", 210);
             CommonUtil.AddGridTextColumn(dgvDefDetail, "사용여부", "Use_YN", 210,visibility: false);
 
@@ -65,8 +66,7 @@ namespace Final.MDS_CDS
 
             txtCode.Text = txtCodeText;
             txtName.Text = txtNameText;
-            GetAllData(def);
-            GetAllData2(def);
+            GetAllData(def);           
         }
       
 
@@ -76,7 +76,11 @@ namespace Final.MDS_CDS
             {
                 Defmalist = new Def_MaService().GetAllDef_Ma_Master(def);
                 dgvDefMaster.DataSource = Defmalist;
-                dgvDefMaster.ClearSelection();               
+                dgvDefMaster.ClearSelection();
+
+                Defmilist = new Def_MiService().GetAllDef_Mi_Master(def);
+                dgvDefDetail.DataSource = Defmilist;
+                dgvDefDetail.ClearSelection();
             }
             catch (Exception err)
             {
@@ -107,7 +111,7 @@ namespace Final.MDS_CDS
         
         private void RefreshControl()
         {
-            txtDef_Macode.Text = txtDef_Maname.Text = txtDef_Micode.Text = txtDef_Miname.Text = "";
+            txtDef_Macode.Text = txtDef_Maname.Text = txtDef_Micode.Text = txtDef_Miname.Text = txtCode.Text = txtName.Text = "";
             txtCode.Focus();       
 
         }     
@@ -127,13 +131,13 @@ private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventAr
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtCode.Text == "" || txtName.Text =="")
+            if (txtCode.Text == "" && txtName.Text =="")
             {
                 GetAllData("");
             }
             else
             {
-                GetAllData2(txtCode.Text);
+                GetAllData(txtCode.Text);                
             }                  
         }
 
@@ -177,8 +181,7 @@ private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventAr
                     if (new Def_MiService().InsertUpdateDef_MiVO(additem))
                     {
                         MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        GetAllData("");
-                        GetAllData2("");
+                        GetAllData("");                       
                     }
                     else
                     {

@@ -24,5 +24,10 @@ namespace Final.MDS_CDS.service
         {
             return new Nop_MiDAC().UpdateNop_Mi(additem);
         }
+
+        public bool InsertUpdateNop_MiVO(Nop_MiVO additem)
+        {
+            return new Nop_MiDAC().InsertUpdateNop_MiVO(additem);
+        }
     }
 }

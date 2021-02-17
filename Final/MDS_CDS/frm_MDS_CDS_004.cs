@@ -129,69 +129,54 @@ namespace Final.MDS_CDS
             txtCode.Text = taget.Nop_Mi_Code.ToString();
         }
 
-        private void btnInsert_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Nop_MiVO additem = new Nop_MiVO
-                {
-                    Nop_Mi_Code = txtNopMiCode.Text,
-                    Nop_Ma_Code = txtNopMaCode.Text,
-                    Nop_Mi_Name = txtNopMiName.Text,
-                    Remark = txtRemark.Text,
-                };
 
-                Nop_MiService service = new Nop_MiService();
-                bool bFlag = service.InsertNop_Mi(additem);
-
-                if (bFlag)
-                {
-                    MessageBox.Show("저장되었습니다..");
-                    GetAllData("");
-                }
-                else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-            RefreshControl();
-        }
         public void Search()
         {
             txtCode.Text = txtCodeText;
             txtName.Text = txtNameText;
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnInsertUpdate_Click(object sender, EventArgs e)
         {
+           
             try
             {
-                Nop_MiVO additem = new Nop_MiVO
-                {
-                    Nop_Mi_Code = txtNopMiCode.Text,
-                    Nop_Ma_Code = txtNopMaCode.Text,
-                    Nop_Mi_Name = txtNopMiName.Text,
-                    Remark = txtRemark.Text,
-                };
 
-                Nop_MiService service = new Nop_MiService();
-                bool bFlag = service.UpdateNop_Mi(additem);
-
-                if (bFlag)
+                if (!string.IsNullOrEmpty(txtNopMaCode.Text) && !string.IsNullOrEmpty(txtNopMiCode.Text) && !string.IsNullOrEmpty(txtNopMiName.Text))
                 {
-                    MessageBox.Show("수정되었습니다..");
-                    GetAllData("");
+                    Nop_MiVO additem = new Nop_MiVO
+                    {
+                        Nop_Mi_Code = txtNopMiCode.Text,
+                        Nop_Ma_Code = txtNopMaCode.Text,
+                        Nop_Mi_Name = txtNopMiName.Text,
+                        Remark = txtRemark.Text,
+                    };
+
+                    if (new Nop_MiService().InsertUpdateNop_MiVO(additem))
+                    {
+                        MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GetAllData("");
+                    }
+                    else
+                    {
+                        MessageBox.Show("저장실패", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
                 else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
+                {
+                    MessageBox.Show("필수항목을 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message);
+
+                MessageBox.Show(err.Message, "db", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             RefreshControl();
         }
+
+
     }
 }
