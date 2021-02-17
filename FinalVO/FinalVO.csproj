@@ -45,6 +45,7 @@
     <Compile Include="ForPopup.cs" />
     <Compile Include="GVMasterVO.cs" />
     <Compile Include="ItemSpecVO.cs" />
+    <Compile Include="Item_MasterVO.cs" />
     <Compile Include="LoginInfoVO.cs" />
     <Compile Include="LOTVO.cs" />
     <Compile Include="MoldVO.cs" />

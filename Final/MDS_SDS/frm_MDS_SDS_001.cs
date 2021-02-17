@@ -16,7 +16,8 @@ namespace Final.MDS_SDS
     public partial class frm_MDS_SDS_001 : Form
     {
         ItemService itemservice = new ItemService();
-        List<ItemInfoVO> itemlist;
+        List<ItemInfoVO> list;
+        ItemInfoVO vo;
         public frm_MDS_SDS_001()
         {
             InitializeComponent();
@@ -76,31 +77,32 @@ namespace Final.MDS_SDS
 
         private void dgvItemLevel_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var update = itemlist.Find(item => item.Level_Code == dgvItemLevel[1, dgvItemLevel.CurrentRow.Index].Value.ToString());
-
-            txtCode.Text = update.Level_Code;
-            txtName.Text = update.Level_Name;
-            nuPLbox.Value = update.Box_Qty;
-            nuBoxpcs.Value = update.Pcs_Qty;
-            nuPCSqty.Value = update.Mat_Qty;
+              //var update = itemlist.Find(item => item.Level_Code == dgvItemLevel[1, dgvItemLevel.CurrentRow.Index].Value.ToString());
+            if (e.RowIndex >= 0)
+                vo = list[e.RowIndex];
+            txtCode.Text = vo.Level_Code;
+            txtName.Text = vo.Level_Name;
+            nuPLbox.Value = vo.Box_Qty;
+            nuBoxpcs.Value = vo.Pcs_Qty;
+            nuPCSqty.Value = vo.Mat_Qty;
            
-            if (update.Item_lvl1 == "Y")
+            if (vo.Item_lvl1 == "Y")
             {
                 cbLevel.SelectedIndex = 0;
             }
-            else if (update.Item_lvl2 == "Y")
+            else if (vo.Item_lvl2 == "Y")
             {
                 cbLevel.SelectedIndex = 1;
             }
-            else if (update.Item_lvl3 == "Y")
+            else if (vo.Item_lvl3 == "Y")
             {
                 cbLevel.SelectedIndex = 2;
             }
-            else if (update.Item_lvl4 == "Y")
+            else if (vo.Item_lvl4 == "Y")
             {
                 cbLevel.SelectedIndex = 3;
             }
-            else if (update.Item_lvl5 == "Y")
+            else if (vo.Item_lvl5 == "Y")
             {
                 cbLevel.SelectedIndex = 4;
             }

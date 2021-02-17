@@ -125,7 +125,7 @@ namespace FinalDAC
                 else
                     return false;
             }
-        } 
+        }
 
         public bool InsertItemMaster(Item_MasterVO additem)
         {
@@ -147,7 +147,7 @@ namespace FinalDAC
 VALUES
       (@Item_Code@, @Item_Name , @Item_Type, @Item_Spec , @Item_Unit , @Level_1 , @Level_2, @Level_3 , @Level_4, @Level_5 , @Item_Stock , @PrdQty_Per_Hour , @PrdQTy_Per_Batch , @Cavity , @Line_Per_Qty ,@Shot_Per_Qty ,@Dry_GV_Qty ,convert(char(10), GetDATE(), 23) Ins_Date , 'test', convert(char(10), GetDATE(), 23) Up_Date, 'test' ) ";
 
-                    
+
                     cmd.Parameters.AddWithValue("@Item_Type", additem.Item_Type);
                     cmd.Parameters.AddWithValue("@Item_Spec", additem.Item_Spec);
                     cmd.Parameters.AddWithValue("@Item_Unit", additem.Item_Unit);
@@ -175,47 +175,50 @@ VALUES
                 }
             }
         }
-         
 
 
-    public List<Item_MasterVO> ItemMasterSelect(string data) 
+
+        public List<Item_MasterVO> ItemMasterSelect(string groupName)
         {
-            string sQuery = @"SELECT Item_Code
-                                            , Item_Name
-                                            , Item_Type
-                                            , Item_Spec
-                                            , Item_Unit
-                                            , Level_1
-                                            , Level_2
-                                            , Level_3
-                                            , Level_4
-                                            , Level_5
-                                            , Item_Stock
-                                            , Lead_Time
-                                            , LotSize
-                                            , PrdQty_Per_Hour
-                                            , PrdQTy_Per_Batch
-                                            , Cavity
-                                            , Line_Per_Qty
-                                            , Shot_Per_Qty
-                                            , Dry_GV_Qty                                           
-                                            , Remark
-                                            ,case when Use_YN='Y' then 1 else 0 end Use_YN, CONVERT(char(10), Ins_Date, 23) Ins_Date, Ins_Emp, CONVERT(char(10), Up_Date, 23) Up_Date, Up_Emp
-                                        from Item_Master where 1 = 1  ";
+            string sQuery = @"SELECT
+                                               [Item_Code]
+                                              ,[Item_Name]
+                                              ,[Item_Type]
+                                              ,[Item_Spec]
+                                              ,[Item_Unit]
+                                              ,[Level_1]
+                                              ,[Level_2]
+                                              ,[Level_3]
+                                              ,[Level_4]
+                                              ,[Level_5]
+                                              ,[LotSize]
+                                              ,[Lead_Time]
+                                              ,[Item_Stock]
+                                              ,[PrdQty_Per_Hour]
+                                              ,[PrdQTy_Per_Batch]
+                                              ,[Cavity]
+                                              ,[Line_Per_Qty]
+                                              ,[Shot_Per_Qty]
+                                              ,[Dry_GV_Qty]
+                                              ,[Remark]
+                                                , case when Use_YN='Y' then 1 else 0 end Use_YN, CONVERT(char(10), Ins_Date, 23) Ins_Date, Ins_Emp, CONVERT(char(10), Up_Date, 23)  Up_Date, Up_Emp
+                                                 from [TEAM2].[dbo].[Item_Master] where 1 = 1  ";
 
-            if (!string.IsNullOrEmpty(data))
-                sQuery += " and Item_Code Like @Item_Name ";
+
+            if (!string.IsNullOrEmpty(groupName))
+                sQuery += " and Item_Code Like @groupName ";
 
             using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
-                if (!string.IsNullOrEmpty(data))
-                    cmd.Parameters.AddWithValue("@Item_Name", "%" + data + "%"); //포함하는 문자열
+                if (!string.IsNullOrEmpty(groupName))
+                    cmd.Parameters.AddWithValue("@groupName", "%" + groupName + "%"); //포함하는 문자열
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<Item_MasterVO> list = Helper.DataReaderMapToList<Item_MasterVO>(reader);
                 return list;
             }
         }
+ 
 
         public DataTable ItemMasterBindingType()
         {
