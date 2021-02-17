@@ -19,6 +19,7 @@ namespace FinalDAC
             conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
             conn.Open();
         }
+
         public List<ScreenVO> SelectScreenInfo(string screen_Code = null)
         {
             string sQuery = @"select Screen_Code, Screen_Name, TypeNo, Type, Screen_Path, case when Use_YN='Y' then 1 else 0 end Use_YN, convert(char(10), Ins_Date, 23) Ins_Date , Ins_Emp, convert(char(10), Up_Date, 23) Up_Date, Up_Emp

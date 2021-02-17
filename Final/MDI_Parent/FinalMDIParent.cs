@@ -1,4 +1,5 @@
 ﻿using Final.KPI_RPT;
+using Final.Login;
 using Final.MDI_Parent;
 using FinalVO;
 using System;
@@ -19,10 +20,18 @@ namespace Final
         private int childFormNumber = 0;
         Image CloseImage;
         TreeNodeMouseClickEventArgs dashOpen;
+        public frmLogin Login { get; set; }
 
         public FinalMDIParent()
         {
             InitializeComponent();
+        }
+
+        public FinalMDIParent(frmLogin Login)
+        {
+            InitializeComponent();
+            this.Login = Login;
+            lblName.Text = $"▶ 로그인정보 : {LoginInfoVO.User_Name} 님";
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -35,8 +44,6 @@ namespace Final
 
         private void FinalMDIParent_Load(object sender, EventArgs e)
         {
-            LoginInfoVO.User_ID = "Test";
-            LoginInfoVO.User_Name = "Test";
             dashOpen = new TreeNodeMouseClickEventArgs(tv_Menu.Nodes[0], MouseButtons.Left, 1, 58, 13);
             openNewForm(dashOpen);
 
@@ -239,6 +246,7 @@ namespace Final
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            Login.Show();
             this.Close();
         }
 

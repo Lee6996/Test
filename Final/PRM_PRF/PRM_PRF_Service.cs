@@ -7,6 +7,11 @@ using System.Windows.Forms;
 
 namespace Final.PRM_PRF
 {
+    /// <summary>
+    /// PRM_PRF
+    /// 실적관리
+    /// 개발자 : 홍민주
+    /// </summary>
     class PRM_PRF_Service
     {
         #region 001

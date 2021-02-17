@@ -65,7 +65,7 @@ namespace FinalVO
     }
     public class Boxing
     {
-        public string Boxing_Master_Code { get; set; }
-        public string Boxing_Master_Name { get; set; }
+        public string Boxing_Grade_Code { get; set; }
+        public string Boxing_Grade_Name { get; set; }
     }
 }

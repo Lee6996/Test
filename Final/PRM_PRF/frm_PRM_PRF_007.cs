@@ -10,6 +10,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// 대차현황 모니터링
+/// 현재 사용하고 있거나 빈대차를 확인할 수 있는 실시간 모니터링 가능
+/// </summary>
 namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_007 : Form

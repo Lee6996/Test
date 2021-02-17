@@ -8,6 +8,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+/// <summary>
+/// 비가동등록
+/// 작업장을 비가동 시키고 해제할 수 있고 조회 가능
+/// </summary>
 namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_008 : Final.MDI_Parent.frm_MDIParent_1Grid
@@ -44,6 +48,12 @@ namespace Final.PRM_PRF
             }
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (new PopUp.frm_PRM_PRF_008_PopUp().ShowDialog() == DialogResult.OK)
+                RefreshState();
+        }
+
         #region MyMethod
         private void SettingDGV(DataGridView dgv)
         {
@@ -66,14 +76,6 @@ namespace Final.PRM_PRF
         {
             dgvPRM_PRF.DataSource = new PRM_PRF_Service().GetNOPVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), txtWorkCenter.Text);
         }
-
-
-
         #endregion
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            new PopUp.frm_PRM_PRF_008_PopUp().ShowDialog();
-        }
     }
 }

@@ -41,7 +41,7 @@ namespace FinalDAC
                 cmd.Parameters.AddWithValue("@User_ID", User_ID);
                 cmd.Parameters.AddWithValue("@User_PW", User_PW);
 
-                if (cmd.ExecuteNonQuery() == 1)
+                if (Convert.ToInt32(cmd.ExecuteScalar()) == 1)
                 {
                     SetLoginInfoVO(User_ID);
                     return true;

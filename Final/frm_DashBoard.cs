@@ -2,12 +2,6 @@
 using FinalVO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -44,6 +38,60 @@ namespace Final
         private void frm_DashBoard_Load(object sender, EventArgs e)
         {
             ChartLoad();
+            SetDGV(dgv1, 1);
+            SetDGV(dgv2, 2);
+            SetDGV(dgv3, 3);
+            BindDGV(dgv1, 1);
+            BindDGV(dgv2, 2);
+            BindDGV(dgv3, 3);
+        }
+
+        private void SetDGV(DataGridView dgv, int no)
+        {
+            switch (no)
+            {
+                case 1:
+                    CommonUtil.SetInitGridView(dgv);
+                    CommonUtil.AddGridTextColumn(dgv, "대차코드", "GV_Code", 135);
+                    CommonUtil.AddGridTextColumn(dgv, "대차명", "GV_Name", 135);
+                    CommonUtil.AddGridTextColumn(dgv, "작업지시번호", "Workorderno", 150);
+                    CommonUtil.AddGridTextColumn(dgv, "품목명", "Item_Name", 150);
+                    CommonUtil.AddGridTextColumn(dgv, "대차상태", "GV_Status", 140);
+                    CommonUtil.AddGridTextColumn(dgv, "로딩일자", "Loading_date", 144);
+                    break;
+                case 2:
+                    CommonUtil.SetInitGridView(dgv);
+                    CommonUtil.AddGridTextColumn(dgv, "작업지시번호", "Workorderno", 140);
+                    CommonUtil.AddGridTextColumn(dgv, "작업지시일자", "Plan_Date", 144);
+                    CommonUtil.AddGridTextColumn(dgv, "작업지시상태", "Wo_Status", 132);
+                    CommonUtil.AddGridTextColumn(dgv, "품목명", "Item_Name", 150);
+                    CommonUtil.AddGridTextColumn(dgv, "공정명", "Process_name", 125);
+                    CommonUtil.AddGridTextColumn(dgv, "작업장", "Wc_Name", 135);
+                    break;
+                case 3:
+                    CommonUtil.SetInitGridView(dgv);
+
+                    CommonUtil.AddGridTextColumn(dgv, "화면코드", "Screen_Code", 200);
+                    CommonUtil.AddGridTextColumn(dgv, "화면명", "Screen_Name", 200);
+                    CommonUtil.AddGridTextColumn(dgv, "화면경로", "Screen_Path", 230);
+                    CommonUtil.AddGridTextColumn(dgv, "수정일자", "Up_Date", 178);
+                    break;
+            }
+        }
+        private void BindDGV(DataGridView dgv, int no)
+        {
+            switch (no)
+            {
+                case 1:
+                    dgv.DataSource = new DashBoardService().GetDashBoardGV();
+                    break;
+                case 2:
+                    dgv.DataSource = new DashBoardService().GetDashBoardWorkOrder();
+                    break;
+                case 3:
+                    dgv.DataSource = new DashBoardService().GetScreenVOList();
+                    break;
+            }
         }
     }
 }

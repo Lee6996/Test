@@ -8,6 +8,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+/// <summary>
+/// 대차 이력 조회
+/// 사용한 대차의 이력을 확인하고 조회 가능
+/// </summary>
 namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_006 : Final.MDI_Parent.frm_MDIParent_1Grid

@@ -7,6 +7,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+/// <summary>
+/// 근태정보조회
+/// 근무자의 모든 근태 정보를 확인하고 조회가능
+/// </summary>
 namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_009 : Final.MDI_Parent.frm_MDIParent_1Grid

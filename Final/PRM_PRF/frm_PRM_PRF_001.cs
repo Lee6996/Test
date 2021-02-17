@@ -8,6 +8,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+/// <summary>
+/// 실적관리 -> 실적조회
+/// 모든 작업지시를 확인하고 작업지시의 생산수량을 변경할 수 있고 조회가능
+/// </summary>
 namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_001 : Final.MDI_Parent.frm_MDIParent_1Grid

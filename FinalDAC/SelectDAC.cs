@@ -8,6 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// Select 쿼리문을 모아놓은 DAC단
+/// 개발자 : 전원
+/// </summary>
+
 namespace FinalDAC
 {
     public class SelectDAC
@@ -23,7 +28,7 @@ namespace FinalDAC
         }
         #endregion
 
-        //List<InspecVo>
+        //List<InspecVo> - 민주
         public List<InspecVo> GetInspecVoList(string dtpFrom, string dtpTo, string processCode, string wcCode)
         {
             string sql = "select * from View_Inspect where 1=1 and Prd_Date between @dtpFrom and @dtpTo";
@@ -47,7 +52,7 @@ namespace FinalDAC
             }
         }
 
-        //List<ConditionVO>
+        //List<ConditionVO> - 민주
         public List<ConditionVO> GetConditionVoList(string dtpFrom, string dtpTo, string processCode, string wcCode)
         {
             string sql = "select * from View_Condition where 1=1 and Prd_Date between @dtpFrom and @dtpTo";
@@ -71,18 +76,21 @@ namespace FinalDAC
             }
         }
 
-        //WorkOrderVO
-        public List<WorkOrderVO> SelectWorkOrder(string dtpFrom, string dtpTo, string processCode, string wcCode)
+        //WorkOrderVO - 민주
+        public List<WorkOrderVO> SelectWorkOrder(string dtpFrom = null, string dtpTo = null, string processCode = null, string wcCode = null)
         {
-            string sql = "select * from View_WorkOrder where 1=1 and Plan_Date between @dtpFrom and @dtpTo";
+            string sql = "select * from View_WorkOrder where 1=1";
+            if(!string.IsNullOrEmpty(dtpFrom) || !string.IsNullOrEmpty(dtpTo)) sql += " and Plan_Date between @dtpFrom and @dtpTo ";
             if (!string.IsNullOrEmpty(processCode)) sql += " AND Process_Code = @Process_Code";
             if (!string.IsNullOrEmpty(wcCode)) sql += " AND Wc_Code = @Wc_Code";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
-                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
-                if (!string.IsNullOrEmpty(processCode))
+                if (!string.IsNullOrEmpty(dtpFrom) || !string.IsNullOrEmpty(dtpTo))
+                {
+                    cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                    cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                } if (!string.IsNullOrEmpty(processCode))
                     cmd.Parameters.AddWithValue("@Process_Code", processCode);
                 if (!string.IsNullOrEmpty(wcCode))
                     cmd.Parameters.AddWithValue("@Wc_Code", wcCode);
@@ -95,7 +103,7 @@ namespace FinalDAC
             }
         }
 
-        //GoodsInHistory
+        //GoodsInHistory - 민주
         public List<GoodsInHistoryVO> SelectGoodsInHistory(string workorderno)
         {
             string sql = "select * from View_Pallet";
@@ -118,7 +126,7 @@ namespace FinalDAC
             }
         }
 
-        //ReceivingListVO
+        //ReceivingListVO - 민주
         public List<ReceivingListVO> SelectReceivingListVO(string dtpFrom, string dtpTo, string itemCode = null)
         {
             string sql = "select * from View_ReceivingList where In_Date between @dtpFrom and @dtpTo";
@@ -143,7 +151,7 @@ namespace FinalDAC
             }
         }
 
-        //WorkHistory
+        //WorkHistory - 민주
         public List<WorkHistoryVO> SelectWorkHistory(string dtpFrom, string dtpTo, string Wc_Name)
         {
             string sql = "select * from View_WorkHistory where Work_Date between @dtpFrom and @dtpTo ";
@@ -167,7 +175,7 @@ namespace FinalDAC
             }
         }
 
-        //AttendanceManagement
+        //AttendanceManagement - 민주
         public List<AttendanceManagementVO> SelectAttendanceManagement(string dtpFrom, string dtpTo, string user_Name)
         {
             string sql = "select * from View_AttendanceManagement where Work_Date between @dtpFrom and @dtpTo ";
@@ -191,7 +199,7 @@ namespace FinalDAC
             }
         }
 
-        //User 유저 정보
+        //User 유저 정보 - 경진
         public List<UserVO> SelectUserMasterInfo(string usergroup_Name)
         {
             string sQuery = @"select User_ID, User_Name, User_PW, Customer_Code, User_Type, Default_Screen_Code, Default_Process_Code, Monitoring_YN, Use_YN, Ins_Date, Ins_Emp, Up_Date, Up_Emp
@@ -210,7 +218,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<UserVO>
+        //List<UserVO> - 경진
         public List<UserVO> SelectUserInfo(string user_Name)
         {
             string sQuery = @"select User_ID, User_Name, User_PW, Customer_Code, User_Type, Default_Screen_Code, Default_Process_Code, Monitoring_YN, Use_YN, convert(char(23), Ins_Date, 21) Ins_Date, Ins_Emp, convert(char(23), Up_Date, 21) Up_Date, Up_Emp
@@ -230,7 +238,7 @@ namespace FinalDAC
             }
         }
 
-        //UserGroup
+        //UserGroup - 경진
         public List<UserGroupVO> SelectUserGroup(string usergroup_Name)
         {
             string sQuery = @"select UserGroup_Code, UserGroup_Name, Admin, Use_YN, Ins_Date, Ins_Emp, Up_Date, Up_Emp 
@@ -250,7 +258,7 @@ namespace FinalDAC
             }
         }
 
-        //GVHistory
+        //GVHistory - 민주
         public List<GVHistoryVO> SelectGVHistory(string dtpFrom, string dtpTo, string GV_Code, string Item_Code)
         {
             string sQuery = "select * from View_GVHistory where Loading_date between @dtpFrom and @dtpTo";
@@ -276,8 +284,8 @@ namespace FinalDAC
             }
         }
 
-        //GV
-        public List<GVStatusVO> SelectGVStatus(string GVGroup_Code, string Item_Code)
+        //GV - 민주
+        public List<GVStatusVO> SelectGVStatus(string GVGroup_Code =null, string Item_Code = null)
         {
             string sQuery = "select * from View_GVStatus where 1=1 ";
 
@@ -301,7 +309,7 @@ namespace FinalDAC
             }
         }
 
-        //ItemLevelInfo
+        //ItemLevelInfo - 영규
         public List<ItemInfoVO> SelectItemLevel()
         {
             string sql = "SELECT Level_Code, Level_Name, Item_lvl1, Item_lvl2, Item_lvl3, Item_lvl4, Item_lvl5, Box_Qty, Pcs_Qty, Mat_Qty, Use_YN   FROM Item_Level_Master";
@@ -314,7 +322,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //GetAllItem
+        //GetAllItem - 영규
         public static List<ItemInfoVO> GetAllItem_Level_Master()
         {
             List<ItemInfoVO> ItemGroup = null;
@@ -344,7 +352,7 @@ namespace FinalDAC
                 return ItemGroup;
             }
         }
-        //GetAllItemMaster
+        //GetAllItemMaster - 영규
         public List<Item_MasterVO> GetAllItem_Master()
         {
             string sql = @"SELECT Item_Code
@@ -380,7 +388,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //GetAllDef_Ma_Master
+        //GetAllDef_Ma_Master - 영규
         public static List<Def_MaVO> GetAllDef_Ma_Master()
         {
             List<Def_MaVO> defMa = null;
@@ -403,7 +411,7 @@ namespace FinalDAC
             }
         }
 
-        //Process
+        //Process - 미사용
         public List<ProcessVO> SelectProcess(string Prd_Date)
         {
             string sql = " SELECT * from View_Process_Master where Prd_Date = @Prd_Date";
@@ -417,7 +425,7 @@ namespace FinalDAC
             }
         }
 
-        //WorkCenter
+        //WorkCenter - 미사용
         public List<WorkCenterVO> SelectWorkCenter(string Prd_Date)
         {
             string sql = " SELECT * from View_WorkCenter_Master where Prd_Date = @Prd_Date";
@@ -431,7 +439,7 @@ namespace FinalDAC
             }
         }
 
-        //NOP
+        //NOP - 민주
         public List<NOPVO> SelectNOP(string dtpFrom = null, string dtpTo = null, string WC_Code = null)
         {
             string sQuery = "select * from View_NOP where 1=1 ";
@@ -461,7 +469,7 @@ namespace FinalDAC
             }
         }
 
-        //WC,ITEM,GV,User Code,Name Select
+        //MainPopUp용 Select 문 - 민주
         public List<T> SelectForPopup<T>(string type, string checkExist = null)
         {
             string sql;
@@ -506,7 +514,7 @@ namespace FinalDAC
             }
         }
 
-        //List<WorkDayVO>
+        //List<WorkDayVO>  - 성재
         public List<WorkDayVO> SelectWorkDay(string Prd_Date_from, string Prd_Date_to, string Process_Code = null, string Wc_Code = null)
         {
             string sql = " SELECT * from View_WorkDay where Prd_Date >= @Prd_Date_from and Prd_Date<= @Prd_Date_to ";
@@ -534,7 +542,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<WorkItemVO>
+        //List<WorkItemVO> - 성재
         public List<WorkItemVO> SelectWorkItem(string Prd_Date_from, string Prd_Date_to, string Wc_Code = null)
         {
             string sql = " SELECT * from View_WorkItem where Prd_Date between @Prd_Date_from and @Prd_Date_to ";
@@ -558,7 +566,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<WorkBoxingVO>
+        //List<WorkBoxingVO> - 
         public List<WorkBoxingVO> SelectWorkBoxing(string Prd_Date_from, string Prd_Date_to, string Wc_Code = null)
         {
             string sql = " SELECT * from View_WorkBoxing where Prd_Date between @Prd_Date_from and @Prd_Date_to";
@@ -583,7 +591,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        // List<MoldVO>
+        // List<MoldVO> - 성재
         public List<MoldVO> SelectMold( )
         {
             string sql = " SELECT * from View_Mold_Master";
@@ -596,7 +604,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<MoldVO>
+        //List<MoldVO> - 성재
         public List<MoldVO> SelectMolds(string Mold_Code = null, string Mold_Group = null)
         {
             string sql = " SELECT * from View_Mold_Master where Mold_Group = @Mold_Group and Mold_Code = @Mold_Code";
@@ -613,7 +621,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<MoldVO>
+        //List<MoldVO> - 성재
         public List<MoldVO> SelectMoldCode(string Mold_Code=null, string Mold_Group = null)
         {
             string sql = " SELECT * from View_Mold_Master where 1=1 ";
@@ -637,7 +645,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<MoldVO>
+        //List<MoldVO> - 성재
         public List<MoldVO> SelectMoldGroup(string Mold_Code = null, string Mold_Group = null)
         {
             string sql = " SELECT * from View_Mold_Master where 1=1 ";
@@ -662,7 +670,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<MoldGroupVO>
+        //List<MoldGroupVO> - 성재
         public List<MoldGroupVO> GetMoldGroup()
         {
             string sql = " SELECT Mold_Group from Mold_Master";
@@ -677,7 +685,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<MoldUseVO>
+        //List<MoldUseVO> - 성재
         public List<MoldUseVO> SelectMoldUse()
         {
             string sql = " SELECT * from View_MoldUse";
@@ -692,7 +700,8 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<MoldUseVO>
+
+        //List<MoldUseVO> - 성재
         public List<MoldUseVO> SelectMoldUses(string dtpFrom, string dtpTo, string Item_Code = null, string Wc_Code = null)
         {
             string sql = " SELECT * from View_MoldUse where Prd_Date between @dtpFrom and @dtpTo";
@@ -717,7 +726,8 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<MoldUseVO>
+
+        //List<MoldUseVO> - 성재
         public List<MoldUseVO> SelectMoldUseItem(string dtpFrom, string dtpTo, string Item_Code = null, string Wc_Code = null)
         {
             string sql = " SELECT * from View_MoldUse where Prd_Date between @dtpFrom and @dtpTo";
@@ -743,7 +753,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<MoldUseVO>
+        //List<MoldUseVO> - 성재
         public List<MoldUseVO> SelectMoldUseWc(string dtpFrom, string dtpTo, string Item_Code = null, string Wc_Code = null)
         {
             string sql = " SELECT * from View_MoldUse where Prd_Date between @dtpFrom and @dtpTo";
@@ -770,7 +780,7 @@ namespace FinalDAC
                 return list;
             }
         }
-        //공지사항 전체 - SysNotice
+        //공지사항 전체 - SysNotice - 경진
         public List<SysNoticeVO> SelectAllNoticeInfo(string sysnotice)
         {
             
@@ -795,7 +805,8 @@ namespace FinalDAC
                 return list;
             }
         }
-        //List<LOTVO>
+
+        //List<LOTVO> - 민주
         public List<LOTVO> GetLotVOList(string YYYY)
         {
             string sQuery = " SELECT * from View_Lot where 1 = 1";

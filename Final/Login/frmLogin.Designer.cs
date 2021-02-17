@@ -82,6 +82,7 @@ namespace Final.Login
             this.txtPwd.PlaceholderText = "PWD";
             this.txtPwd.Size = new System.Drawing.Size(230, 25);
             this.txtPwd.TabIndex = 8;
+            this.txtPwd.TextChanged += new System.EventHandler(this.txtPwd_TextChanged);
             // 
             // frmLogin
             // 
@@ -96,6 +97,7 @@ namespace Final.Login
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "frmLogin";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

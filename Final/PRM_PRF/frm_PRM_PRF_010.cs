@@ -8,6 +8,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+/// <summary>
+/// 근태현황분석
+/// 근무자의 근태를 상세하게 확인하고 조회가능
+/// </summary>
 namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_010 : Final.MDI_Parent.frm_MDIParent_2Grid

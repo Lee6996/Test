@@ -7,6 +7,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+/// <summary>
+/// 실적관리 -> 팔렛트 마감
+/// 작업지시와 팔렛트를 마감할 수 있고 조회가능
+/// </summary>
+
 namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_002 : MDI_Parent.frm_MDIParent_2Grid

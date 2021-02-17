@@ -30,8 +30,17 @@ namespace Final.PRM_PRF.PopUp
                 Remark = txtRemark.Text
             };
             if (new PRM_PRF_Service().Insert008(vo))
+            {
                 AutoClosingMessageBox.Show("저장 성공", "저장성공", 1000);
-            else AutoClosingMessageBox.Show("저장 실패", "저장실패", 1000);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                AutoClosingMessageBox.Show("저장 실패", "저장실패", 1000);
+                this.DialogResult = DialogResult.None;
+            }
+
         }
 
         private void frm_PRM_PRF_008_PopUp_Load(object sender, EventArgs e)

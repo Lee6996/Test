@@ -8,6 +8,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+/// <summary>
+/// 완제품 입고리스트
+/// 모든 작업이 끝난 품목을 확인하여 완제품 리스트를 확인하고 조회가능
+/// </summary>
 namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_003 : Final.MDI_Parent.frm_MDIParent_1Grid

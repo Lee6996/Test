@@ -15,9 +15,5 @@ namespace Final.Service
         {
             dac = new SelectDAC();
         }
-        public List<WorkCenterVO> SelectWorkCenter(string Prd_Date)
-        {
-            return dac.SelectWorkCenter(Prd_Date);
-        }
     }
 }

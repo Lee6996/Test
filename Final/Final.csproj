@@ -374,6 +374,7 @@
       <DependentUpon>frm_QAM_SQC_006.cs</DependentUpon>
     </Compile>
     <Compile Include="QAM_SQC\QAM_SQC_Service.cs" />
+    <Compile Include="Service\DashBoardService.cs" />
     <Compile Include="Service\MenuService.cs" />
     <Compile Include="Service\MoldService.cs" />
     <Compile Include="Service\ProcessService.cs" />

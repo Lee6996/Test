@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FinalVO;
 
+/// <summary>
+/// PRM_PRF 실적조회 폼에 들어가는 코드
+/// 개발자 : 홍민주
+/// </summary>
 namespace FinalDAC
 {
     public class PRM_PRF_DAC

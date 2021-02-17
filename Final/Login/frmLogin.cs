@@ -12,13 +12,30 @@ namespace Final.Login
             InitializeComponent();
         }
 
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPwd_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPwd.Text.Length == 0)
+            {
+                txtPwd.PasswordChar = (char)0;
+            }
+            else
+                txtPwd.PasswordChar = (char)42;
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             id = txtID.Text;
             pwd = txtPwd.Text;
+            
             if(new UserService().CheckLoginAble(id,pwd))//로그인 성공
             {
-                new FinalMDIParent().Show();
+                new FinalMDIParent(this).Show();
+                this.Hide();
             }
             else
             {
