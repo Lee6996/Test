@@ -27,6 +27,7 @@ namespace Final.MDS_SDS
 
         private void frm_MDS_SDS_003_1_Load(object sender, EventArgs e)
         {
+            
             GetAllItem();
             lblManager.Text = UserStatic.User_Name;
             lblDay.Text = DateTime.Now.ToShortDateString();
@@ -51,10 +52,10 @@ namespace Final.MDS_SDS
             DataTable dtName2 = processservice.ProcessBindingName();
             //빈칸을 위해 한행 추가
             DataRow dr2 = dtName2.NewRow();
-            dr["Process_Name"] = "전체";
-            dr["Process_code"] = "";
+            dr2["Process_Name"] = "전체";
+            dr2["Process_code"] = "";
 
-            dtName2.Rows.InsertAt(dr, 0);
+            dtName2.Rows.InsertAt(dr2, 0);
             dtName2.AcceptChanges();
 
             //콤보박스에 표시될 컬럼 바인딩
@@ -94,8 +95,8 @@ namespace Final.MDS_SDS
 
                     ItemSpecVO inspect = new ItemSpecVO
                     {
-                        Item_Code = cbItem.SelectedIndex.ToString().Trim(),
-                        Process_code = cbProcess.SelectedIndex.ToString().Trim(),
+                        Item_Code = cbItem.SelectedValue.ToString().Trim(),
+                        Process_code = cbProcess.SelectedValue.ToString().Trim(),
                         Inspect_code = txtCode.Text.Trim(),
                         Inspect_name = txtName.Text.Trim(),
                         USL = nuUSL.Value,
@@ -110,6 +111,9 @@ namespace Final.MDS_SDS
                     
                     if (bFlag)
                     {
+                        MessageBox.Show("저장 완료.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frm_MDS_SDS_003 frm = new frm_MDS_SDS_003();
+                        frm.ItemSpecDataLoad("");
                         this.DialogResult = DialogResult.OK;
                         this.Close();
                     }

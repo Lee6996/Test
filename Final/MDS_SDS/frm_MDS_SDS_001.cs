@@ -112,7 +112,14 @@ namespace Final.MDS_SDS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DataLoad(cbLevelGroup.Text);
+            if (cbLevelGroup.Text == "전체")
+            {
+                DataLoad("");
+            }
+            else
+            {
+                DataLoad(cbLevelGroup.SelectedValue.ToString());
+            }
         }
 
         private void RefreshControl()
@@ -140,15 +147,7 @@ namespace Final.MDS_SDS
 
                 ItemService service = new ItemService();
                 service.UpdateItemLevel(vo);
-            }
-            if (cbLevelGroup.Text == "전체")
-            {
-                DataLoad("");
-            }
-            else
-            {
-                DataLoad(cbLevelGroup.SelectedValue.ToString());
-            }
+            }            
         }
 
         private void cbLevelGroup_SelectedIndexChanged(object sender, EventArgs e)

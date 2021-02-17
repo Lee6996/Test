@@ -90,6 +90,37 @@ namespace FinalDAC
             }
         }
 
+        public bool UpdateMaster(Item_MasterVO additem)
+        {
+            string sql = $@"UPDATE Item_Master
+
+                                         SET
+                                            Item_Name = @Item_Name,
+                                            Cavity = @Cavity,
+                                            Line_Per_Qty = @Line_Per_Qty,
+                                            Shot_Per_Qty = @Shot_Per_Qty,
+                                            Up_Date = convert(char(10), GetDATE(), 23),
+                                            Up_Emp = 'LYG'
+
+                                         WHERE Item_Code = @Item_Code";
+
+
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Item_Code", additem.Item_Code);
+                cmd.Parameters.AddWithValue("@Item_Name", additem.Item_Name);
+                cmd.Parameters.AddWithValue("@Cavity", additem.Cavity);
+                cmd.Parameters.AddWithValue("@Line_Per_Qty", additem.Line_Per_Qty);
+                cmd.Parameters.AddWithValue("@Shot_Per_Qty", additem.Shot_Per_Qty);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
         public bool InsertUpdateItemInfo(ItemInfoVO additem)
         {
             string sql = $@"IF NOT EXISTS(SELECT [Level_Code] FROM [Item_Level_Master] WHERE [Level_Code]=@Level_Code)
@@ -129,50 +160,37 @@ namespace FinalDAC
 
         public bool InsertItemMaster(Item_MasterVO additem)
         {
-            string sQuery = @"select count(*) 
-                              from Item_Master where 1 = 1 and Item_Code = @Item_Code and Item_Name = @Item_Name ";
-            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
-            {
-                cmd.Parameters.AddWithValue("@Item_Code", additem.Item_Code);
-                cmd.Parameters.AddWithValue("@Item_Name", additem.Item_Name);
-
-                int iCnt = Convert.ToInt32(cmd.ExecuteScalar());
-                if (iCnt > 0)
-                    return false;
-                else
-                {
-                    sQuery = @"INSERT INTO Item_Master
-       (Item_Code ,Item_Name ,Item_Type ,Item_Spec,Item_Unit ,Level_1, Level_2, Level_3 ,Level_4 ,Level_5                      
-      ,Item_Stock,PrdQty_Per_Hour,PrdQTy_Per_Batch ,Cavity ,Line_Per_Qty ,Shot_Per_Qty ,Dry_GV_Qty ,Ins_Date ,Ins_Emp, Up_Date, Up_Emp)
+            string sql = $@"INSERT INTO Item_Master
+       (Item_Code ,Item_Name ,Item_Type ,Item_Spec,Item_Unit ,Level_1, Level_2, Level_3 ,Level_4 ,Level_5 ,Item_Stock,PrdQty_Per_Hour,PrdQTy_Per_Batch ,Cavity ,Line_Per_Qty ,Shot_Per_Qty ,Dry_GV_Qty , Use_YN, Ins_Date ,Ins_Emp, Up_Date, Up_Emp)
 VALUES
-      (@Item_Code@, @Item_Name , @Item_Type, @Item_Spec , @Item_Unit , @Level_1 , @Level_2, @Level_3 , @Level_4, @Level_5 , @Item_Stock , @PrdQty_Per_Hour , @PrdQTy_Per_Batch , @Cavity , @Line_Per_Qty ,@Shot_Per_Qty ,@Dry_GV_Qty ,convert(char(10), GetDATE(), 23) Ins_Date , 'test', convert(char(10), GetDATE(), 23) Up_Date, 'test' ) ";
+      (@Item_Code, @Item_Name , @Item_Type, @Item_Spec , @Item_Unit , @Level_1 , @Level_2, @Level_3 , @Level_4, @Level_5 , @Item_Stock , @PrdQty_Per_Hour , @PrdQTy_Per_Batch , @Cavity , @Line_Per_Qty ,@Shot_Per_Qty ,@Dry_GV_Qty, 'Y' ,convert(char(10), GetDATE(), 23) , 'test', convert(char(10), GetDATE(), 23), 'test' )";
 
 
-                    cmd.Parameters.AddWithValue("@Item_Type", additem.Item_Type);
-                    cmd.Parameters.AddWithValue("@Item_Spec", additem.Item_Spec);
-                    cmd.Parameters.AddWithValue("@Item_Unit", additem.Item_Unit);
-                    cmd.Parameters.AddWithValue("@Level_1", additem.Level_1);
-                    cmd.Parameters.AddWithValue("@Level_2", additem.Level_2);
-                    cmd.Parameters.AddWithValue("@Level_3", additem.Level_3);
-                    cmd.Parameters.AddWithValue("@Level_4", additem.Level_4);
-                    cmd.Parameters.AddWithValue("@Level_5", additem.Level_5);
-                    cmd.Parameters.AddWithValue("@Item_Stock", additem.Item_Stock);
-                    cmd.Parameters.AddWithValue("@PrdQty_Per_Hour", additem.PrdQty_Per_Hour);
-                    cmd.Parameters.AddWithValue("@PrdQTy_Per_Batch", additem.PrdQTy_Per_Batch);
-                    cmd.Parameters.AddWithValue("@Cavity", additem.Cavity);
-                    cmd.Parameters.AddWithValue("@Line_Per_Qty", additem.Line_Per_Qty);
-                    cmd.Parameters.AddWithValue("@Shot_Per_Qty", additem.Shot_Per_Qty);
-                    cmd.Parameters.AddWithValue("@Dry_GV_Qty", additem.Dry_GV_Qty);
-                    //cmd.Parameters.AddWithValue("@Ins_Date", additem.Ins_Date);
-                    //cmd.Parameters.AddWithValue("@Up_Date", item.Up_Date);
-                    //cmd.Parameters.AddWithValue("@Ins_Emp", additem.Ins_Emp);
-                    // cmd.Parameters.AddWithValue("@Up_Emp", additem.Up_Emp);
 
-                    if (cmd.ExecuteNonQuery() > 0)
-                        return true;
-                    else
-                        return false;
-                }
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Item_Name", additem.Item_Name);
+                cmd.Parameters.AddWithValue("@Item_Code", additem.Item_Code);
+                cmd.Parameters.AddWithValue("@Item_Type", additem.Item_Type);
+                cmd.Parameters.AddWithValue("@Item_Spec", additem.Item_Spec);
+                cmd.Parameters.AddWithValue("@Item_Unit", additem.Item_Unit);
+                cmd.Parameters.AddWithValue("@Level_1", additem.Level_1);
+                cmd.Parameters.AddWithValue("@Level_2", additem.Level_2);
+                cmd.Parameters.AddWithValue("@Level_3", additem.Level_3);
+                cmd.Parameters.AddWithValue("@Level_4", additem.Level_4);
+                cmd.Parameters.AddWithValue("@Level_5", additem.Level_5);
+                cmd.Parameters.AddWithValue("@Item_Stock", additem.Item_Stock);
+                cmd.Parameters.AddWithValue("@PrdQty_Per_Hour", additem.PrdQty_Per_Hour);
+                cmd.Parameters.AddWithValue("@PrdQTy_Per_Batch", additem.PrdQTy_Per_Batch);
+                cmd.Parameters.AddWithValue("@Cavity", additem.Cavity);
+                cmd.Parameters.AddWithValue("@Line_Per_Qty", additem.Line_Per_Qty);
+                cmd.Parameters.AddWithValue("@Shot_Per_Qty", additem.Shot_Per_Qty);
+                cmd.Parameters.AddWithValue("@Dry_GV_Qty", additem.Dry_GV_Qty);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
             }
         }
 
@@ -218,7 +236,7 @@ VALUES
                 return list;
             }
         }
- 
+
 
         public DataTable ItemMasterBindingType()
         {
@@ -282,14 +300,14 @@ VALUES
             VALUES
                   (@Level_Code ,@Level_Name, @Item_lvl1 ,@Item_lvl2 ,@Item_lvl3 ,@Item_lvl4 ,@Item_lvl5, @Box_Qty , @Pcs_Qty , @Mat_Qty ,'Y'  , getdate(),'test', getdate(), 'test')";// test수정필요.
 
-                   
+
                     cmd.Parameters.AddWithValue("@Item_lvl1", additem.Item_lvl1);
                     cmd.Parameters.AddWithValue("@Item_lvl2", additem.Item_lvl2);
                     cmd.Parameters.AddWithValue("@Item_lvl3", additem.Item_lvl3);
                     cmd.Parameters.AddWithValue("@Item_lvl4", additem.Item_lvl4);
                     cmd.Parameters.AddWithValue("@Item_lvl5", additem.Item_lvl5);
                     cmd.Parameters.AddWithValue("@Box_Qty", additem.Box_Qty);
-                   cmd.Parameters.AddWithValue("@Pcs_Qty", additem.Pcs_Qty);
+                    cmd.Parameters.AddWithValue("@Pcs_Qty", additem.Pcs_Qty);
                     cmd.Parameters.AddWithValue("@Mat_Qty", additem.Mat_Qty);
                     //cmd.Parameters.AddWithValue("@Ins_Emp", additem.Ins_Emp);
 
@@ -394,10 +412,10 @@ VALUES
 	                                     WHERE Item_Code = @Item_Code";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("@Item_Code", upitem.Item_Code);                
+                cmd.Parameters.AddWithValue("@Item_Code", upitem.Item_Code);
                 cmd.Parameters.AddWithValue("@Cavity", upitem.Cavity);
                 cmd.Parameters.AddWithValue("@Line_Per_Qty", upitem.Line_Per_Qty);
-                cmd.Parameters.AddWithValue("@Shot_Per_Qty", upitem.Shot_Per_Qty);                
+                cmd.Parameters.AddWithValue("@Shot_Per_Qty", upitem.Shot_Per_Qty);
                 //cmd.Parameters.AddWithValue("@Up_Emp", upitem.Up_Emp);
 
 

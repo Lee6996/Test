@@ -33,15 +33,10 @@ namespace Final.MDS_SDS
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblManager = new System.Windows.Forms.Label();
             this.lblDay = new System.Windows.Forms.Label();
-            this.nuUnit = new System.Windows.Forms.NumericUpDown();
             this.button2 = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
-            this.cbLevel5 = new System.Windows.Forms.ComboBox();
-            this.cbLevel4 = new System.Windows.Forms.ComboBox();
-            this.cbLevel3 = new System.Windows.Forms.ComboBox();
-            this.cbLevel2 = new System.Windows.Forms.ComboBox();
-            this.cbLevel1 = new System.Windows.Forms.ComboBox();
+            this.cbLevel = new System.Windows.Forms.ComboBox();
             this.nudrgdv = new System.Windows.Forms.NumericUpDown();
             this.nushotper = new System.Windows.Forms.NumericUpDown();
             this.nulinper = new System.Windows.Forms.NumericUpDown();
@@ -57,10 +52,6 @@ namespace Final.MDS_SDS
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -74,8 +65,8 @@ namespace Final.MDS_SDS
             this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.txtUnit = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nuUnit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudrgdv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nushotper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nulinper)).BeginInit();
@@ -130,14 +121,6 @@ namespace Final.MDS_SDS
             this.lblDay.Size = new System.Drawing.Size(0, 21);
             this.lblDay.TabIndex = 154;
             // 
-            // nuUnit
-            // 
-            this.nuUnit.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.nuUnit.Location = new System.Drawing.Point(385, 126);
-            this.nuUnit.Name = "nuUnit";
-            this.nuUnit.Size = new System.Drawing.Size(121, 25);
-            this.nuUnit.TabIndex = 197;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DimGray;
@@ -173,50 +156,20 @@ namespace Final.MDS_SDS
             this.label22.TabIndex = 194;
             this.label22.Text = "* PR:완제품PT:자재SA:반제품";
             // 
-            // cbLevel5
+            // cbLevel
             // 
-            this.cbLevel5.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbLevel5.FormattingEnabled = true;
-            this.cbLevel5.Location = new System.Drawing.Point(385, 385);
-            this.cbLevel5.Name = "cbLevel5";
-            this.cbLevel5.Size = new System.Drawing.Size(121, 25);
-            this.cbLevel5.TabIndex = 193;
-            // 
-            // cbLevel4
-            // 
-            this.cbLevel4.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbLevel4.FormattingEnabled = true;
-            this.cbLevel4.Location = new System.Drawing.Point(385, 348);
-            this.cbLevel4.Name = "cbLevel4";
-            this.cbLevel4.Size = new System.Drawing.Size(121, 25);
-            this.cbLevel4.TabIndex = 192;
-            // 
-            // cbLevel3
-            // 
-            this.cbLevel3.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbLevel3.FormattingEnabled = true;
-            this.cbLevel3.Location = new System.Drawing.Point(98, 385);
-            this.cbLevel3.Name = "cbLevel3";
-            this.cbLevel3.Size = new System.Drawing.Size(121, 25);
-            this.cbLevel3.TabIndex = 191;
-            // 
-            // cbLevel2
-            // 
-            this.cbLevel2.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbLevel2.FormattingEnabled = true;
-            this.cbLevel2.Location = new System.Drawing.Point(98, 348);
-            this.cbLevel2.Name = "cbLevel2";
-            this.cbLevel2.Size = new System.Drawing.Size(121, 25);
-            this.cbLevel2.TabIndex = 190;
-            // 
-            // cbLevel1
-            // 
-            this.cbLevel1.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbLevel1.FormattingEnabled = true;
-            this.cbLevel1.Location = new System.Drawing.Point(98, 311);
-            this.cbLevel1.Name = "cbLevel1";
-            this.cbLevel1.Size = new System.Drawing.Size(121, 25);
-            this.cbLevel1.TabIndex = 189;
+            this.cbLevel.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbLevel.FormattingEnabled = true;
+            this.cbLevel.Items.AddRange(new object[] {
+            "Level1",
+            "Level2",
+            "Level3",
+            "Level4",
+            "Level5"});
+            this.cbLevel.Location = new System.Drawing.Point(98, 311);
+            this.cbLevel.Name = "cbLevel";
+            this.cbLevel.Size = new System.Drawing.Size(121, 25);
+            this.cbLevel.TabIndex = 189;
             // 
             // nudrgdv
             // 
@@ -294,6 +247,10 @@ namespace Final.MDS_SDS
             // 
             this.cbType.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbType.FormattingEnabled = true;
+            this.cbType.Items.AddRange(new object[] {
+            "PR",
+            "PT",
+            "SA"});
             this.cbType.Location = new System.Drawing.Point(99, 89);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(121, 25);
@@ -343,55 +300,15 @@ namespace Final.MDS_SDS
             this.label20.TabIndex = 174;
             this.label20.Text = "시간당 생산수";
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(312, 389);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(52, 17);
-            this.label19.TabIndex = 173;
-            this.label19.Text = "Level5";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label18.Location = new System.Drawing.Point(313, 352);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(52, 17);
-            this.label18.TabIndex = 172;
-            this.label18.Text = "Level4";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(24, 389);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 17);
-            this.label17.TabIndex = 171;
-            this.label17.Text = "Level3";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label16.Location = new System.Drawing.Point(24, 352);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 17);
-            this.label16.TabIndex = 170;
-            this.label16.Text = "Level2";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label15.Location = new System.Drawing.Point(24, 315);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 17);
+            this.label15.Size = new System.Drawing.Size(43, 17);
             this.label15.TabIndex = 169;
-            this.label15.Text = "Level1";
+            this.label15.Text = "Level";
             // 
             // label13
             // 
@@ -513,20 +430,24 @@ namespace Final.MDS_SDS
             this.label23.TabIndex = 157;
             this.label23.Text = "품목코드";
             // 
+            // txtUnit
+            // 
+            this.txtUnit.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtUnit.Location = new System.Drawing.Point(385, 128);
+            this.txtUnit.Name = "txtUnit";
+            this.txtUnit.Size = new System.Drawing.Size(121, 25);
+            this.txtUnit.TabIndex = 197;
+            // 
             // frm_MDS_SDS_002_1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(534, 493);
-            this.Controls.Add(this.nuUnit);
+            this.Controls.Add(this.txtUnit);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.cbLevel5);
-            this.Controls.Add(this.cbLevel4);
-            this.Controls.Add(this.cbLevel3);
-            this.Controls.Add(this.cbLevel2);
-            this.Controls.Add(this.cbLevel1);
+            this.Controls.Add(this.cbLevel);
             this.Controls.Add(this.nudrgdv);
             this.Controls.Add(this.nushotper);
             this.Controls.Add(this.nulinper);
@@ -542,10 +463,6 @@ namespace Final.MDS_SDS
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -566,7 +483,6 @@ namespace Final.MDS_SDS
             this.Load += new System.EventHandler(this.MDS_SDS_002_1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nuUnit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudrgdv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nushotper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nulinper)).EndInit();
@@ -586,15 +502,10 @@ namespace Final.MDS_SDS
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDay;
         private System.Windows.Forms.Label lblManager;
-        private System.Windows.Forms.NumericUpDown nuUnit;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox cbLevel5;
-        private System.Windows.Forms.ComboBox cbLevel4;
-        private System.Windows.Forms.ComboBox cbLevel3;
-        private System.Windows.Forms.ComboBox cbLevel2;
-        private System.Windows.Forms.ComboBox cbLevel1;
+        private System.Windows.Forms.ComboBox cbLevel;
         private System.Windows.Forms.NumericUpDown nudrgdv;
         private System.Windows.Forms.NumericUpDown nushotper;
         private System.Windows.Forms.NumericUpDown nulinper;
@@ -610,10 +521,6 @@ namespace Final.MDS_SDS
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -627,5 +534,6 @@ namespace Final.MDS_SDS
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txtUnit;
     }
 }

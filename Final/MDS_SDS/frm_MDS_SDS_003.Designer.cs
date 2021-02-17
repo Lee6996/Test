@@ -33,6 +33,8 @@ namespace Final.MDS_SDS
             this.dgvItemInfo = new System.Windows.Forms.DataGridView();
             this.btnInsert = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSearch2 = new System.Windows.Forms.Button();
+            this.btnSearch1 = new System.Windows.Forms.Button();
             this.cbProcess = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbItem = new System.Windows.Forms.ComboBox();
@@ -40,8 +42,6 @@ namespace Final.MDS_SDS
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSearch1 = new System.Windows.Forms.Button();
-            this.btnSearch2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSpec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemInfo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -103,6 +103,32 @@ namespace Final.MDS_SDS
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1341, 57);
             this.panel2.TabIndex = 143;
+            // 
+            // btnSearch2
+            // 
+            this.btnSearch2.BackColor = System.Drawing.Color.DimGray;
+            this.btnSearch2.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSearch2.Location = new System.Drawing.Point(613, 11);
+            this.btnSearch2.Name = "btnSearch2";
+            this.btnSearch2.Size = new System.Drawing.Size(85, 35);
+            this.btnSearch2.TabIndex = 138;
+            this.btnSearch2.Text = "조회";
+            this.btnSearch2.UseVisualStyleBackColor = false;
+            this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
+            // 
+            // btnSearch1
+            // 
+            this.btnSearch1.BackColor = System.Drawing.Color.DimGray;
+            this.btnSearch1.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSearch1.Location = new System.Drawing.Point(272, 11);
+            this.btnSearch1.Name = "btnSearch1";
+            this.btnSearch1.Size = new System.Drawing.Size(85, 35);
+            this.btnSearch1.TabIndex = 137;
+            this.btnSearch1.Text = "조회";
+            this.btnSearch1.UseVisualStyleBackColor = false;
+            this.btnSearch1.Click += new System.EventHandler(this.btnSearch1_Click);
             // 
             // cbProcess
             // 
@@ -186,30 +212,6 @@ namespace Final.MDS_SDS
             this.label2.TabIndex = 148;
             this.label2.Text = "▶품질 규격 설정";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnSearch1
-            // 
-            this.btnSearch1.BackColor = System.Drawing.Color.DimGray;
-            this.btnSearch1.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSearch1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSearch1.Location = new System.Drawing.Point(272, 11);
-            this.btnSearch1.Name = "btnSearch1";
-            this.btnSearch1.Size = new System.Drawing.Size(85, 35);
-            this.btnSearch1.TabIndex = 137;
-            this.btnSearch1.Text = "조회";
-            this.btnSearch1.UseVisualStyleBackColor = false;
-            // 
-            // btnSearch2
-            // 
-            this.btnSearch2.BackColor = System.Drawing.Color.DimGray;
-            this.btnSearch2.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSearch2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSearch2.Location = new System.Drawing.Point(613, 11);
-            this.btnSearch2.Name = "btnSearch2";
-            this.btnSearch2.Size = new System.Drawing.Size(85, 35);
-            this.btnSearch2.TabIndex = 138;
-            this.btnSearch2.Text = "조회";
-            this.btnSearch2.UseVisualStyleBackColor = false;
             // 
             // frm_MDS_SDS_003
             // 
