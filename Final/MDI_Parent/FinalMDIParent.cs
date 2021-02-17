@@ -68,49 +68,56 @@ namespace Final
 
         private void openNewForm(TreeNodeMouseClickEventArgs e = null, ToolStripMenuItem sender = null)
         {
-            Form frm;
-            
-            if (e != null)
+            try
             {
-                if (e.Node.Name != "ndDashBoard")
-                {
-                    frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
+                Form frm;
 
+                if (e != null)
+                {
+                    if (e.Node.Name != "ndDashBoard")
+                    {
+                        frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
+
+                        frm.Tag = frm;
+                    }
+                    else
+                    {
+                        frm = Activator.CreateInstance(Type.GetType("Final.frm_DashBoard")) as Form;
+                        frm.Tag = frm;
+                    }
+                }
+
+                else
+                {
+                    frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{sender.Name.Substring(0, 7)}.frm_{sender.Name}"))) as Form;
                     frm.Tag = frm;
+                }
+
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                TabPage newTab = new TabPage();
+                newTab.Font = new Font("나눔스퀘어OTF", 8);
+                tabControl2.TabPages.Add(newTab);
+                tabControl2.SelectedTab = newTab;
+
+                if (e != null)
+                {
+                    newTab.Text = e.Node.Text + "              ";
+                    newTab.Tag = frm;
                 }
                 else
                 {
-                    frm = Activator.CreateInstance(Type.GetType("Final.frm_DashBoard")) as Form;
-                    frm.Tag = frm;
+                    newTab.Text = sender.Text;
+                    newTab.Tag = frm;
                 }
-            }
 
-            else
+
+                frm.Show();
+            }
+            catch
             {
-                frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{sender.Name.Substring(0, 7)}.frm_{sender.Name}"))) as Form;
-                frm.Tag = frm;
-            }
 
-            frm.MdiParent = this;
-            frm.WindowState = FormWindowState.Maximized;
-            TabPage newTab = new TabPage();
-            newTab.Font = new Font("나눔스퀘어OTF", 8);
-            tabControl2.TabPages.Add(newTab);
-            tabControl2.SelectedTab = newTab;
-
-            if (e != null)
-            {
-                newTab.Text = e.Node.Text + "              ";
-                newTab.Tag = frm;
             }
-            else
-            {
-                newTab.Text = sender.Text;
-                newTab.Tag = frm;
-            }
-            
-
-            frm.Show();
         }
 
         public void newForm(string formName, string folderName, string formText)
@@ -224,12 +231,6 @@ namespace Final
             //((sender as Form).Tag as TabPage).Dispose();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Login.Show();
-            this.Close();
-        }
-
         private void button19_Click(object sender, EventArgs e)
         {
 
@@ -258,6 +259,12 @@ namespace Final
             {
                 openNewForm(dashOpen);
             }
+        }
+
+        private void FrmClose(object sender, EventArgs e)
+        {
+            Login.Show();
+            this.Close();
         }
     }
 }

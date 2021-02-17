@@ -98,6 +98,7 @@ namespace Final.Login
             this.Name = "frmLogin";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmLogin_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

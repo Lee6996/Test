@@ -27,6 +27,14 @@ namespace Final.Login
                 txtPwd.PasswordChar = (char)42;
         }
 
+        private void frmLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             id = txtID.Text;
