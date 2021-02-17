@@ -29,9 +29,9 @@ namespace Final.PPS_SCH
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgv_Work = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -72,12 +72,12 @@ namespace Final.PPS_SCH
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(98, 18);
+            this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.Text = "작업지시일자";
             // 
             // btn_WorkCenter
             // 
-            this.btn_WorkCenter.Location = new System.Drawing.Point(696, 11);
+            this.btn_WorkCenter.Location = new System.Drawing.Point(1345, 7);
             this.btn_WorkCenter.Visible = false;
             this.btn_WorkCenter.Click += new System.EventHandler(this.btn_WorkCenter_Click);
             // 
@@ -86,23 +86,33 @@ namespace Final.PPS_SCH
             this.textBox6.Location = new System.Drawing.Point(1294, 25);
             this.textBox6.Visible = false;
             // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(1376, 21);
+            this.label16.Visible = false;
+            // 
             // btn_Process
             // 
             this.btn_Process.Location = new System.Drawing.Point(1318, 11);
+            this.btn_Process.Visible = false;
             // 
             // button22
             // 
+            this.button22.Location = new System.Drawing.Point(550, 8);
             this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // textBox1
             // 
+            this.textBox1.Location = new System.Drawing.Point(1239, 18);
+            this.textBox1.Visible = false;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(637, 19);
-            this.label3.Size = new System.Drawing.Size(53, 18);
+            this.label3.Location = new System.Drawing.Point(1286, 15);
+            this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.Text = "작업장";
+            this.label3.Visible = false;
             // 
             // panel5
             // 
@@ -113,7 +123,7 @@ namespace Final.PPS_SCH
             this.panel5.Controls.Add(this.dgv_Work);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.panel10);
-            this.panel5.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel5.Location = new System.Drawing.Point(0, 57);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1468, 844);
@@ -155,7 +165,7 @@ namespace Final.PPS_SCH
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(34, 6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 13);
+            this.label6.Size = new System.Drawing.Size(55, 15);
             this.label6.TabIndex = 0;
             this.label6.Text = "생산의뢰";
             // 
@@ -172,17 +182,17 @@ namespace Final.PPS_SCH
             // 
             // chartDate
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartDate.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.chartDate.ChartAreas.Add(chartArea2);
             this.chartDate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend4.Name = "Legend1";
-            this.chartDate.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.chartDate.Legends.Add(legend2);
             this.chartDate.Location = new System.Drawing.Point(0, 3);
             this.chartDate.Name = "chartDate";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartDate.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartDate.Series.Add(series2);
             this.chartDate.Size = new System.Drawing.Size(1448, 275);
             this.chartDate.TabIndex = 0;
             this.chartDate.Text = "chart1";
@@ -198,28 +208,31 @@ namespace Final.PPS_SCH
             // 
             // cbWorkStatus
             // 
-            this.cbWorkStatus.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbWorkStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbWorkStatus.FormattingEnabled = true;
-            this.cbWorkStatus.Location = new System.Drawing.Point(1024, 17);
+            this.cbWorkStatus.Location = new System.Drawing.Point(1317, 17);
             this.cbWorkStatus.Name = "cbWorkStatus";
-            this.cbWorkStatus.Size = new System.Drawing.Size(121, 21);
+            this.cbWorkStatus.Size = new System.Drawing.Size(121, 23);
             this.cbWorkStatus.TabIndex = 16;
+            this.cbWorkStatus.Visible = false;
             this.cbWorkStatus.SelectedIndexChanged += new System.EventHandler(this.cbWorkStatus_SelectedIndexChanged);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(904, 19);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label17.Location = new System.Drawing.Point(1356, 21);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(98, 18);
+            this.label17.Size = new System.Drawing.Size(81, 20);
             this.label17.TabIndex = 15;
             this.label17.Text = "작업지시상태";
+            this.label17.Visible = false;
             // 
             // frm_PPS_SCH_003
             // 
             this.ClientSize = new System.Drawing.Size(1468, 923);
             this.Controls.Add(this.panel5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frm_PPS_SCH_003";
             this.Load += new System.EventHandler(this.frm_PPS_SCH_003_Load);
             this.Controls.SetChildIndex(this.panel4, 0);

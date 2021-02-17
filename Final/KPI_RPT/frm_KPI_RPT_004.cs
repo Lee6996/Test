@@ -72,5 +72,9 @@ namespace Final.KPI_RPT
 
         }
 
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

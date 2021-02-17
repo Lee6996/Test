@@ -24,6 +24,7 @@ namespace Final.PPS_SCH
         {
             chartDate.Titles.Add("일별 생산 현황");
             chartDate.Legends.Clear();
+            DataLoad();
         }
         private void DataLoad()
         {
@@ -54,15 +55,18 @@ namespace Final.PPS_SCH
             dgv_Work.DataSource = null;
             dgv_Work.DataSource = listWork;
         }
-
         private void ChartLoad()
         {
+            WorkOrderService service = new WorkOrderService();
+
+            List<WorkChartVO> chartWorks = service.ChartWork(dateTimePicker1.Text, dateTimePicker2.Text);
+
             chartDate.Series.Clear();
             chartDate.Series.Add("생산량");
             chartDate.Series["생산량"].ChartType = SeriesChartType.Column;
             chartDate.Series["생산량"].IsValueShownAsLabel = true;
             int i = 0;
-            foreach (var item in listWork)
+            foreach (var item in chartWorks)
             {
                 if (i < 16)
                 {

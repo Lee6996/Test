@@ -32,7 +32,6 @@ namespace Final.PPS_MLD
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnNewMold = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.cbMoldUse = new System.Windows.Forms.ComboBox();
             this.btnMoldUpdate = new System.Windows.Forms.Button();
@@ -81,7 +80,7 @@ namespace Final.PPS_MLD
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(81, 18);
+            this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.Text = "조회조건 : ";
             // 
             // btn_WorkCenter
@@ -97,7 +96,7 @@ namespace Final.PPS_MLD
             // label16
             // 
             this.label16.Location = new System.Drawing.Point(384, 18);
-            this.label16.Size = new System.Drawing.Size(68, 18);
+            this.label16.Size = new System.Drawing.Size(57, 20);
             this.label16.Text = "금형그룹";
             // 
             // btn_Process
@@ -136,7 +135,7 @@ namespace Final.PPS_MLD
             // label3
             // 
             this.label3.Location = new System.Drawing.Point(93, 19);
-            this.label3.Size = new System.Drawing.Size(53, 18);
+            this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.Text = "금형명";
             // 
             // panel5
@@ -148,7 +147,6 @@ namespace Final.PPS_MLD
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.btnNewMold);
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.panel10);
             this.panel5.Controls.Add(this.dgv_Mold);
             this.panel5.Location = new System.Drawing.Point(0, 91);
@@ -160,7 +158,7 @@ namespace Final.PPS_MLD
             // 
             this.btnNewMold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNewMold.BackColor = System.Drawing.Color.DimGray;
-            this.btnNewMold.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnNewMold.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnNewMold.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnNewMold.Location = new System.Drawing.Point(1168, 577);
             this.btnNewMold.Name = "btnNewMold";
@@ -175,24 +173,13 @@ namespace Final.PPS_MLD
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(0, 581);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(260, 26);
             this.label6.TabIndex = 70;
             this.label6.Text = "▶입력정보";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label15.Location = new System.Drawing.Point(29, 64);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(796, 13);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "금형코드 - 금형명 - 금형그룹 - 금형상태 - 금형누적타수 - 금형누적생산량 - 금형누적사용시간 - 보장타수 - 구입금액 -입고일자 - 최종장착" +
-    "일시 - 비고 - 사용유무";
             // 
             // panel10
             // 
@@ -234,14 +221,14 @@ namespace Final.PPS_MLD
             "N"});
             this.cbMoldUse.Location = new System.Drawing.Point(676, 147);
             this.cbMoldUse.Name = "cbMoldUse";
-            this.cbMoldUse.Size = new System.Drawing.Size(121, 25);
+            this.cbMoldUse.Size = new System.Drawing.Size(121, 26);
             this.cbMoldUse.TabIndex = 12;
             // 
             // btnMoldUpdate
             // 
             this.btnMoldUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMoldUpdate.BackColor = System.Drawing.Color.DimGray;
-            this.btnMoldUpdate.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMoldUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMoldUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMoldUpdate.Location = new System.Drawing.Point(1152, 147);
             this.btnMoldUpdate.Name = "btnMoldUpdate";
@@ -255,7 +242,7 @@ namespace Final.PPS_MLD
             // 
             this.btnMoldInsert.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMoldInsert.BackColor = System.Drawing.Color.DimGray;
-            this.btnMoldInsert.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMoldInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMoldInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMoldInsert.Location = new System.Drawing.Point(1049, 148);
             this.btnMoldInsert.Name = "btnMoldInsert";
@@ -269,10 +256,10 @@ namespace Final.PPS_MLD
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label13.Location = new System.Drawing.Point(575, 149);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 18);
+            this.label13.Size = new System.Drawing.Size(57, 20);
             this.label13.TabIndex = 21;
             this.label13.Text = "사용유무";
             // 
@@ -282,17 +269,17 @@ namespace Final.PPS_MLD
             this.dtpLastSetup.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpLastSetup.Location = new System.Drawing.Point(676, 48);
             this.dtpLastSetup.Name = "dtpLastSetup";
-            this.dtpLastSetup.Size = new System.Drawing.Size(130, 25);
+            this.dtpLastSetup.Size = new System.Drawing.Size(130, 24);
             this.dtpLastSetup.TabIndex = 10;
             // 
             // label18
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label18.Location = new System.Drawing.Point(575, 51);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 18);
+            this.label18.Size = new System.Drawing.Size(81, 20);
             this.label18.TabIndex = 19;
             this.label18.Text = "최종장착일시";
             // 
@@ -300,10 +287,10 @@ namespace Final.PPS_MLD
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label17.Location = new System.Drawing.Point(351, 152);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(68, 18);
+            this.label17.Size = new System.Drawing.Size(57, 20);
             this.label17.TabIndex = 17;
             this.label17.Text = "구입금액";
             // 
@@ -312,17 +299,17 @@ namespace Final.PPS_MLD
             this.txtMoldAmt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMoldAmt.Location = new System.Drawing.Point(445, 149);
             this.txtMoldAmt.Name = "txtMoldAmt";
-            this.txtMoldAmt.Size = new System.Drawing.Size(100, 25);
+            this.txtMoldAmt.Size = new System.Drawing.Size(100, 24);
             this.txtMoldAmt.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(351, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 18);
+            this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 15;
             this.label1.Text = "보장타수";
             // 
@@ -331,7 +318,7 @@ namespace Final.PPS_MLD
             this.txtMoldGuarCnt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMoldGuarCnt.Location = new System.Drawing.Point(445, 115);
             this.txtMoldGuarCnt.Name = "txtMoldGuarCnt";
-            this.txtMoldGuarCnt.Size = new System.Drawing.Size(100, 25);
+            this.txtMoldGuarCnt.Size = new System.Drawing.Size(100, 24);
             this.txtMoldGuarCnt.TabIndex = 7;
             // 
             // cbMoldGroupB
@@ -340,7 +327,7 @@ namespace Final.PPS_MLD
             this.cbMoldGroupB.FormattingEnabled = true;
             this.cbMoldGroupB.Location = new System.Drawing.Point(445, 82);
             this.cbMoldGroupB.Name = "cbMoldGroupB";
-            this.cbMoldGroupB.Size = new System.Drawing.Size(100, 25);
+            this.cbMoldGroupB.Size = new System.Drawing.Size(100, 26);
             this.cbMoldGroupB.TabIndex = 6;
             // 
             // dtpInDate
@@ -349,17 +336,17 @@ namespace Final.PPS_MLD
             this.dtpInDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpInDate.Location = new System.Drawing.Point(676, 14);
             this.dtpInDate.Name = "dtpInDate";
-            this.dtpInDate.Size = new System.Drawing.Size(130, 25);
+            this.dtpInDate.Size = new System.Drawing.Size(130, 24);
             this.dtpInDate.TabIndex = 9;
             // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label14.Location = new System.Drawing.Point(575, 17);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 18);
+            this.label14.Size = new System.Drawing.Size(57, 20);
             this.label14.TabIndex = 12;
             this.label14.Text = "입고일자";
             // 
@@ -367,10 +354,10 @@ namespace Final.PPS_MLD
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label12.Location = new System.Drawing.Point(575, 85);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 18);
+            this.label12.Size = new System.Drawing.Size(33, 20);
             this.label12.TabIndex = 9;
             this.label12.Text = "비고";
             // 
@@ -387,10 +374,10 @@ namespace Final.PPS_MLD
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label11.Location = new System.Drawing.Point(351, 85);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 18);
+            this.label11.Size = new System.Drawing.Size(57, 20);
             this.label11.TabIndex = 7;
             this.label11.Text = "금형그룹";
             // 
@@ -398,10 +385,10 @@ namespace Final.PPS_MLD
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label10.Location = new System.Drawing.Point(351, 51);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 18);
+            this.label10.Size = new System.Drawing.Size(45, 20);
             this.label10.TabIndex = 5;
             this.label10.Text = "금형명";
             // 
@@ -410,17 +397,17 @@ namespace Final.PPS_MLD
             this.txtMoldName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMoldName.Location = new System.Drawing.Point(445, 48);
             this.txtMoldName.Name = "txtMoldName";
-            this.txtMoldName.Size = new System.Drawing.Size(100, 25);
+            this.txtMoldName.Size = new System.Drawing.Size(100, 24);
             this.txtMoldName.TabIndex = 5;
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label9.Location = new System.Drawing.Point(351, 17);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 18);
+            this.label9.Size = new System.Drawing.Size(57, 20);
             this.label9.TabIndex = 3;
             this.label9.Text = "금형코드";
             // 
@@ -429,7 +416,7 @@ namespace Final.PPS_MLD
             this.txtMoldCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMoldCode.Location = new System.Drawing.Point(445, 14);
             this.txtMoldCode.Name = "txtMoldCode";
-            this.txtMoldCode.Size = new System.Drawing.Size(100, 25);
+            this.txtMoldCode.Size = new System.Drawing.Size(100, 24);
             this.txtMoldCode.TabIndex = 4;
             // 
             // dgv_Mold
@@ -449,7 +436,7 @@ namespace Final.PPS_MLD
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.Location = new System.Drawing.Point(34, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
@@ -461,7 +448,7 @@ namespace Final.PPS_MLD
             this.cbMoldGroupT.FormattingEnabled = true;
             this.cbMoldGroupT.Location = new System.Drawing.Point(478, 15);
             this.cbMoldGroupT.Name = "cbMoldGroupT";
-            this.cbMoldGroupT.Size = new System.Drawing.Size(121, 25);
+            this.cbMoldGroupT.Size = new System.Drawing.Size(121, 26);
             this.cbMoldGroupT.TabIndex = 3;
             this.cbMoldGroupT.SelectedIndexChanged += new System.EventHandler(this.cbMoldGroupT_SelectedIndexChanged);
             // 
@@ -477,7 +464,6 @@ namespace Final.PPS_MLD
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Mold)).EndInit();
@@ -489,7 +475,6 @@ namespace Final.PPS_MLD
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnMoldUpdate;
         private System.Windows.Forms.Button btnMoldInsert;

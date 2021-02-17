@@ -85,7 +85,7 @@ namespace Final.PPS_SCH
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(98, 18);
+            this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.Text = "작업지시일자";
             // 
             // btn_WorkCenter
@@ -173,8 +173,13 @@ namespace Final.PPS_SCH
             // 
             this.nuPlanQty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nuPlanQty.Location = new System.Drawing.Point(798, 99);
+            this.nuPlanQty.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
             this.nuPlanQty.Name = "nuPlanQty";
-            this.nuPlanQty.Size = new System.Drawing.Size(100, 25);
+            this.nuPlanQty.Size = new System.Drawing.Size(100, 24);
             this.nuPlanQty.TabIndex = 14;
             this.nuPlanQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -184,7 +189,7 @@ namespace Final.PPS_SCH
             this.dtpPlanDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpPlanDate.Location = new System.Drawing.Point(798, 52);
             this.dtpPlanDate.Name = "dtpPlanDate";
-            this.dtpPlanDate.Size = new System.Drawing.Size(100, 25);
+            this.dtpPlanDate.Size = new System.Drawing.Size(100, 24);
             this.dtpPlanDate.TabIndex = 13;
             // 
             // label14
@@ -193,7 +198,7 @@ namespace Final.PPS_SCH
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(697, 59);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(64, 17);
+            this.label14.Size = new System.Drawing.Size(60, 18);
             this.label14.TabIndex = 12;
             this.label14.Text = "계획일자";
             // 
@@ -203,7 +208,7 @@ namespace Final.PPS_SCH
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(697, 108);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 17);
+            this.label13.Size = new System.Drawing.Size(60, 18);
             this.label13.TabIndex = 11;
             this.label13.Text = "계획수량";
             // 
@@ -213,7 +218,7 @@ namespace Final.PPS_SCH
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(697, 153);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 17);
+            this.label12.Size = new System.Drawing.Size(86, 18);
             this.label12.TabIndex = 9;
             this.label12.Text = "계획수량단위";
             // 
@@ -222,7 +227,7 @@ namespace Final.PPS_SCH
             this.txtPlanUnit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPlanUnit.Location = new System.Drawing.Point(798, 143);
             this.txtPlanUnit.Name = "txtPlanUnit";
-            this.txtPlanUnit.Size = new System.Drawing.Size(100, 25);
+            this.txtPlanUnit.Size = new System.Drawing.Size(100, 24);
             this.txtPlanUnit.TabIndex = 10;
             // 
             // label10
@@ -231,7 +236,7 @@ namespace Final.PPS_SCH
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(472, 108);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 17);
+            this.label10.Size = new System.Drawing.Size(60, 18);
             this.label10.TabIndex = 5;
             this.label10.Text = "품목코드";
             // 
@@ -240,7 +245,7 @@ namespace Final.PPS_SCH
             this.txtItem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtItem.Location = new System.Drawing.Point(567, 99);
             this.txtItem.Name = "txtItem";
-            this.txtItem.Size = new System.Drawing.Size(100, 25);
+            this.txtItem.Size = new System.Drawing.Size(100, 24);
             this.txtItem.TabIndex = 6;
             // 
             // label9
@@ -249,7 +254,7 @@ namespace Final.PPS_SCH
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(472, 62);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 17);
+            this.label9.Size = new System.Drawing.Size(86, 18);
             this.label9.TabIndex = 3;
             this.label9.Text = "작업지시번호";
             // 
@@ -258,7 +263,7 @@ namespace Final.PPS_SCH
             this.txtWorkorder.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtWorkorder.Location = new System.Drawing.Point(567, 52);
             this.txtWorkorder.Name = "txtWorkorder";
-            this.txtWorkorder.Size = new System.Drawing.Size(100, 25);
+            this.txtWorkorder.Size = new System.Drawing.Size(100, 24);
             this.txtWorkorder.TabIndex = 4;
             // 
             // panel8
@@ -285,7 +290,7 @@ namespace Final.PPS_SCH
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(34, 7);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.Size = new System.Drawing.Size(60, 18);
             this.label7.TabIndex = 0;
             this.label7.Text = "생산의뢰";
             // 
@@ -294,7 +299,7 @@ namespace Final.PPS_SCH
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(34, 7);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 17);
+            this.label8.Size = new System.Drawing.Size(60, 18);
             this.label8.TabIndex = 0;
             this.label8.Text = "입력정보";
             // 
@@ -335,7 +340,7 @@ namespace Final.PPS_SCH
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(34, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 17);
+            this.label6.Size = new System.Drawing.Size(60, 18);
             this.label6.TabIndex = 0;
             this.label6.Text = "생산의뢰";
             // 
@@ -358,6 +363,7 @@ namespace Final.PPS_SCH
             this.button21.TabIndex = 14;
             this.button21.Text = "작업지시 마감취소";
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Visible = false;
             this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button20
@@ -370,12 +376,14 @@ namespace Final.PPS_SCH
             this.button20.TabIndex = 13;
             this.button20.Text = "작업지시 마감";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Visible = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // frm_PPS_SCH_002
             // 
             this.ClientSize = new System.Drawing.Size(1333, 860);
             this.Controls.Add(this.panel5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frm_PPS_SCH_002";
             this.Load += new System.EventHandler(this.frm_PPS_SCH_002_Load);
             this.Controls.SetChildIndex(this.panel4, 0);

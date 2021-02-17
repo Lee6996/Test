@@ -36,7 +36,7 @@ namespace Final.PPS_SCH
             CommonUtil.AddGridTextColumn(dgv_Work, "품목코드 ", "Item_Code", 160);
             CommonUtil.AddGridTextColumn(dgv_Work, "작업장코드 ", "Wc_Code", 120);
             CommonUtil.AddGridTextColumn(dgv_Work, "작업시작시간 ", "Prd_Starttime", 140);
-            CommonUtil.AddGridTextColumn(dgv_Work, "작업종료시작 ", "Prd_Endtime", 160);
+            CommonUtil.AddGridTextColumn(dgv_Work, "작업종료시간 ", "Prd_Endtime", 160);
             CommonUtil.AddGridTextColumn(dgv_Work, "산출수량  ", "Out_Qty_Main", 120);
             CommonUtil.AddGridTextColumn(dgv_Work, "생산수량 ", "Prd_Qty", 120);
             CommonUtil.AddGridTextColumn(dgv_Work, "생산의뢰순번  ", "Wo_Req_No", 120);
@@ -105,9 +105,18 @@ namespace Final.PPS_SCH
         {
             string Workorder = dgv_Work[1, dgv_Work.CurrentRow.Index].Value.ToString();
 
+            work = new WorkOrderVO()
+            {
+                Workorderno = txtWorkorder.Text,
+                Item_Code = txtItem.Text,
+                Plan_Date = dtpPlanDate.Text,
+                Plan_Qty = Convert.ToInt32(nuPlanQty.Value),
+                Plan_Unit = txtPlanUnit.Text
+            };
+
             WorkOrderService service = new WorkOrderService();
 
-            bool bFlag = service.UpdateWorkorder(Workorder);
+            bool bFlag = service.UpdateWorkorder(work);
 
             GetData();
             panel10.Enabled = false;
