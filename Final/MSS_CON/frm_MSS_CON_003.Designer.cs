@@ -31,10 +31,6 @@ namespace Final.MSS_CON
         {
             this.dgvUserGroup = new System.Windows.Forms.DataGridView();
             this.dgvUserGroup_User = new System.Windows.Forms.DataGridView();
-            this.Check = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Used = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUser = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboUser_Name = new System.Windows.Forms.ComboBox();
@@ -71,39 +67,11 @@ namespace Final.MSS_CON
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUserGroup_User.BackgroundColor = System.Drawing.Color.White;
             this.dgvUserGroup_User.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUserGroup_User.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Check,
-            this.UserID,
-            this.UserName,
-            this.Used});
             this.dgvUserGroup_User.Location = new System.Drawing.Point(751, 3);
             this.dgvUserGroup_User.Name = "dgvUserGroup_User";
             this.dgvUserGroup_User.RowTemplate.Height = 23;
             this.dgvUserGroup_User.Size = new System.Drawing.Size(588, 765);
             this.dgvUserGroup_User.TabIndex = 67;
-            // 
-            // Check
-            // 
-            this.Check.HeaderText = "선택";
-            this.Check.Name = "Check";
-            // 
-            // UserID
-            // 
-            this.UserID.HeaderText = "아이디";
-            this.UserID.Name = "UserID";
-            this.UserID.Width = 130;
-            // 
-            // UserName
-            // 
-            this.UserName.HeaderText = "이름";
-            this.UserName.Name = "UserName";
-            this.UserName.Width = 130;
-            // 
-            // Used
-            // 
-            this.Used.HeaderText = "사용유무";
-            this.Used.Name = "Used";
-            this.Used.Width = 130;
             // 
             // dgvUser
             // 
@@ -242,10 +210,6 @@ namespace Final.MSS_CON
         #endregion
         private System.Windows.Forms.DataGridView dgvUserGroup;
         private System.Windows.Forms.DataGridView dgvUserGroup_User;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Check;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Used;
         private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cboUser_Name;

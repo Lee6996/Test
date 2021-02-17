@@ -34,6 +34,8 @@ namespace Final.MSS_CON
             CommonUtil.AddGridTextColumn(dgvUserGroup_User, "아이디", "User_ID", 220);
             CommonUtil.AddGridTextColumn(dgvUserGroup_User, "이름", "User_Name", 220);
 
+            
+
             //콤보박스에 유저 정보 바인딩
             DataTable dtName = service.UserNameSelectBinding();
 
