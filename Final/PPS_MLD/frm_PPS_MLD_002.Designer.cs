@@ -30,7 +30,6 @@ namespace Final.PPS_MLD
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
             this.dgv_Mold = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
@@ -69,23 +68,11 @@ namespace Final.PPS_MLD
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.dgv_Mold);
             this.panel5.Location = new System.Drawing.Point(0, 90);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1266, 806);
             this.panel5.TabIndex = 19;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label15.Location = new System.Drawing.Point(29, 64);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(840, 13);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "생산일자 - 금형코드 - 금형명 - 작업지시번호 -품목코드 - 품목명 - 작업장코드 - 작업장명 - 금형타수 - 금형생산량 - 금형사용시작시간 -" +
-    " 금형사용시작시간 - 금형사용시간";
             // 
             // dgv_Mold
             // 
@@ -104,7 +91,7 @@ namespace Final.PPS_MLD
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.Location = new System.Drawing.Point(34, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
@@ -123,7 +110,6 @@ namespace Final.PPS_MLD
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Mold)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,7 +119,6 @@ namespace Final.PPS_MLD
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dgv_Mold;
         private System.Windows.Forms.Label label5;
     }

@@ -88,13 +88,13 @@ namespace Final
             {
                 frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
 
-                frm.Tag = e.Node.Name;
+                frm.Tag = frm;
             }
 
             else
             {
                 frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{sender.Name.Substring(0, 7)}.frm_{sender.Name}"))) as Form;
-                frm.Tag = sender.Name;
+                frm.Tag = frm;
             }
 
             frm.MdiParent = this;
@@ -103,12 +103,12 @@ namespace Final
             if (e != null)
             {
                 newTab.Text = e.Node.Text;
-                newTab.Tag = e.Node.Name;
+                newTab.Tag = frm;
             }
             else
             {
                 newTab.Text = sender.Text;
-                newTab.Tag = sender.Name;
+                newTab.Tag = frm;
             }
             newTab.Font = new Font("나눔스퀘어OTF", 10);
             tabControl2.TabPages.Add(newTab);

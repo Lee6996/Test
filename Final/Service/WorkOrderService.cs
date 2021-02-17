@@ -18,7 +18,15 @@ namespace Final.Service
         public bool InsertWorkOrder(WorkOrderVO work)
         {
             return dac.InsertWorkOrder(work);
-        }        
+        }
+        public List<WorkNumVO> getWorkNum()
+        {
+            return dac.getWorkNum();
+        }
+        public List<WorkChartVO> ChartWork(string dtpFrom, string dtpTo)
+        {
+            return dac.ChartWork(dtpFrom, dtpTo);
+        }
         public List<WorkOrderVO> listWork(string dtpFrom, string dtpTo)
         {
             return dac.listWork(dtpFrom,dtpTo);
@@ -35,9 +43,9 @@ namespace Final.Service
         {
             return dac.UpdateWorkorder(vo, Status);
         }
-        public bool UpdateWorkorder(string Workorder)
+        public bool UpdateWorkorder(WorkOrderVO vo)
         {
-            return dac.UpdateWorkorder(Workorder);
+            return dac.UpdateWorkorder(vo);
         }
         public List<WorkOrderVO> listWork(string dtpFrom, string dtpTo, string status, string Wcode = null)
         {

@@ -26,4 +26,18 @@ namespace FinalVO
         public string Out_Time { get; set; }
         public string GVGroup_Code { get; set; }
     }
+    public class GVReportVO
+    {
+        public string Status_Seq { get; set; }
+        public string GV_Code { get; set; }
+        public string Workorderno { get; set; }
+        public int GV_Qty { get; set; }
+        public string Loading_date { get; set; }
+        public string Loading_time { get; set; }
+        public string Unloading_date { get; set; }
+        public string Unloading_time { get; set; }
+        public string Unloading_Wc { get; set; }
+        public string Up_Date { get; set; }
+        public string Up_Emp { get; set; }
+    }
 }

@@ -39,7 +39,7 @@ namespace Final.PPS_SCH
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "생산의뢰번호 ", "Wo_Req_No", 120);
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "작업지시상태 ", "Wo_Status", 120);
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "작업지시번호 ", "Workorderno", 120);
-            CommonUtil.AddGridTextColumn(dgv_WorkOrder, "작업지시일자 ", "Plan_Date", 120);
+            CommonUtil.AddGridTextColumn(dgv_WorkOrder, "작업지시일자 ", "Prd_Date", 120);
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "품목코드 ", "Item_Code", 120);
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "작업장코드  ", "Wc_Code", 140);
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "계획수량 ", "Plan_Qty", 160);
