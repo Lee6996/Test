@@ -30,7 +30,6 @@ namespace Final.KPI_RPT
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
             this.dgv_KPI_MONTH = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -103,7 +102,6 @@ namespace Final.KPI_RPT
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.dgv_KPI_MONTH);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -111,15 +109,6 @@ namespace Final.KPI_RPT
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1266, 749);
             this.panel5.TabIndex = 17;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(29, 64);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(334, 17);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "품목군 - 품목구분 - 품목명 - 시간당 생산량 - 생산량";
             // 
             // dgv_KPI_MONTH
             // 
@@ -208,7 +197,6 @@ namespace Final.KPI_RPT
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KPI_MONTH)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -222,7 +210,6 @@ namespace Final.KPI_RPT
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dgv_KPI_MONTH;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
