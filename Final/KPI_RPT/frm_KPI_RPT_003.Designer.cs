@@ -66,7 +66,7 @@ namespace Final.KPI_RPT
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(126, 18);
+            this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.Text = "조회조건 : 생산월";
             // 
             // btn_WorkCenter
@@ -140,7 +140,7 @@ namespace Final.KPI_RPT
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(64, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.Size = new System.Drawing.Size(60, 18);
             this.label1.TabIndex = 71;
             this.label1.Text = "조회내역";
             // 
@@ -157,7 +157,7 @@ namespace Final.KPI_RPT
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(34, 6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 17);
+            this.label6.Size = new System.Drawing.Size(60, 18);
             this.label6.TabIndex = 0;
             this.label6.Text = "생산의뢰";
             // 
@@ -175,14 +175,14 @@ namespace Final.KPI_RPT
             this.txtWCodeText.Enabled = false;
             this.txtWCodeText.Location = new System.Drawing.Point(795, 16);
             this.txtWCodeText.Name = "txtWCodeText";
-            this.txtWCodeText.Size = new System.Drawing.Size(100, 25);
+            this.txtWCodeText.Size = new System.Drawing.Size(100, 24);
             this.txtWCodeText.TabIndex = 19;
             // 
             // txtPCodeText
             // 
             this.txtPCodeText.Location = new System.Drawing.Point(1001, 25);
             this.txtPCodeText.Name = "txtPCodeText";
-            this.txtPCodeText.Size = new System.Drawing.Size(100, 25);
+            this.txtPCodeText.Size = new System.Drawing.Size(100, 24);
             this.txtPCodeText.TabIndex = 18;
             this.txtPCodeText.Visible = false;
             // 
@@ -190,6 +190,7 @@ namespace Final.KPI_RPT
             // 
             this.ClientSize = new System.Drawing.Size(1266, 828);
             this.Controls.Add(this.panel5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frm_KPI_RPT_003";
             this.Load += new System.EventHandler(this.frm_KPI_RPT_3_Load);
             this.Controls.SetChildIndex(this.panel4, 0);

@@ -41,12 +41,27 @@ namespace FinalDAC
         //        else return true;
         //    }
         //}
+        public List<WorkNumVO> getWorkNum()
+        {
+            string sql = " select MAX(Workorderno) as Workorderno from WorkOrder";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkNumVO> list = Helper.DataReaderMapToList<WorkNumVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
         public bool InsertWorkOrder(WorkOrderVO vo)
         {
-            string iQuery = @"insert into WorkOrder (Req_Seq, Wo_Req_No, Item_Code, Wc_Code, Plan_Date, Plan_Qty, Plan_Unit, Remark, Ins_Date, Ins_Emp, Up_Date, Up_Emp)
-                             values (@Req_Seq, @Wo_Req_No, @Item_Code, @Wc_Code, @Plan_Date, @Plan_Qty, @Plan_Unit, @Remark, GetDate(), @Ins_Emp, GETDATE(), @Up_Emp)";
+            string iQuery = @"insert into WorkOrder (Workorderno, Req_Seq, Wo_Req_No, Item_Code, Wc_Code, Plan_Date, Plan_Qty, Plan_Unit, Remark, Ins_Date, Ins_Emp, Up_Date, Up_Emp)
+                             values (@Workorderno, @Req_Seq, @Wo_Req_No, @Item_Code, @Wc_Code, @Plan_Date, @Plan_Qty, @Plan_Unit, @Remark, GetDate(), @Ins_Emp, GETDATE(), @Up_Emp)";
             using (SqlCommand cmd = new SqlCommand(iQuery, conn))
             {
+                cmd.Parameters.AddWithValue("Workorderno", vo.Workorderno);
                 cmd.Parameters.AddWithValue("Req_Seq", vo.Req_Seq);
                 cmd.Parameters.AddWithValue("Wo_Req_No", vo.Wo_Req_No);
                 cmd.Parameters.AddWithValue("Item_Code", vo.Item_Code);
@@ -58,9 +73,6 @@ namespace FinalDAC
                 cmd.Parameters.AddWithValue("Ins_Emp", LoginInfoVO.User_ID);
                 cmd.Parameters.AddWithValue("Up_Emp", LoginInfoVO.User_ID);
 
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<WorkOrderVO> list = Helper.DataReaderMapToList<WorkOrderVO>(reader);
-
                 int iResult = cmd.ExecuteNonQuery();
                 Debug.WriteLine(iResult.ToString());
                 conn.Close();
@@ -69,9 +81,26 @@ namespace FinalDAC
                 else return true;
             }
         }
+        public List<WorkChartVO> ChartWork(string dtpFrom, string dtpTo)
+        {
+            string sql = " SELECT Prd_Date, sum(Prd_Qty) as Prd_Qty from View_WorkOrder where Prd_Date >= @dtpFrom and Prd_Date <= @dtpTo group by Prd_Date";
+            
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkChartVO> list = Helper.DataReaderMapToList<WorkChartVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
         public List<WorkOrderVO> listWork(string dtpFrom, string dtpTo)
         {
-            string sql = " SELECT * from View_WorkOrder where Prd_Date between @dtpFrom and @dtpTo";
+            string sql = " SELECT * from View_WorkOrder where Prd_Date >= @dtpFrom and Prd_Date <= @dtpTo";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -141,7 +170,7 @@ namespace FinalDAC
         }
         public bool UpdateWorkorder(WorkOrderVO vo, string Status)
         {
-            string sql = "update Mold_Master set Item_Code = @Item_Code, Plan_Date = @Plan_Date, Plan_Qty = @Plan_Qty, Plan_Unit= @Plan_Unit, Up_Date = Getdate(), Up_Emp=@Up_Emp, Req_Status = '작업지시마감' where Workorderno = @Workorderno";
+            string sql = "update WorkOrder set Item_Code = @Item_Code, Plan_Date = @Plan_Date, Plan_Qty = @Plan_Qty, Plan_Unit= @Plan_Unit, Up_Date = Getdate(), Up_Emp=@Up_Emp, Req_Status = '작업지시마감' where Workorderno = @Workorderno";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -160,13 +189,17 @@ namespace FinalDAC
                 else return true;
             }
         }
-        public bool UpdateWorkorder(string Workorderno)
+        public bool UpdateWorkorder(WorkOrderVO vo)
         {
-            string sql = "update Mold_Master set Workorderno = @Workorderno, Up_Date = GetDate(), Up_Emp = @Up_Emp";
+            string sql = "update WorkOrder set Plan_Date = @Plan_Date, Plan_Qty = @Plan_Qty, Plan_Unit = @Plan_Unit, Up_Date = GetDate(), Up_Emp = @Up_Emp where Workorderno = @Workorderno";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("@Workorderno", Workorderno);
+                cmd.Parameters.AddWithValue("@Workorderno", vo.Workorderno);
+                cmd.Parameters.AddWithValue("@Item_Code", vo.Item_Code);
+                cmd.Parameters.AddWithValue("@Plan_Date", vo.Plan_Date);
+                cmd.Parameters.AddWithValue("@Plan_Qty", vo.Plan_Qty);
+                cmd.Parameters.AddWithValue("@Plan_Unit", vo.Plan_Unit);
 
                 cmd.Parameters.AddWithValue("@Up_Emp", LoginInfoVO.User_ID);
 
