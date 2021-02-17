@@ -36,17 +36,31 @@ namespace Final
         {
             LoginInfoVO.User_ID = "Test";
             LoginInfoVO.User_Name = "Test";
+            OpenDashBoard();
 
             //TreeNode mainNode = new TreeNode();
             //mainNode.Name = "product";
             ////mainNode.Text = "Product Categories";
-            //ImageList imgList = new ImageList();
-            //this.tabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            //CloseImage = Properties.Resources.x;
-            //this.tabControl2.Padding = new Point(10, 0);
+            ImageList imgList = new ImageList();
+            this.tabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            CloseImage = Properties.Resources.x;
+            this.tabControl2.Padding = new Point(10, 0);
 
             //tv_Menu.Nodes.Add(mainNode);
             //List<ScreenVO> screen = new Service.MenuService().GetScreenVOList();
+        }
+
+        private void OpenDashBoard()
+        {
+            frm_DashBoard frm = new frm_DashBoard();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void mnDashBoard_Click(object sender, EventArgs e)
+        {
+            OpenDashBoard();
         }
 
         private void MenuClick(object sender, EventArgs e)
@@ -60,6 +74,10 @@ namespace Final
             if (e.Node.Name.Length == 11)
             {
                 openNewForm(e);
+            }
+            else if (e.Node.Name == "DashBoard")
+            {
+                OpenDashBoard();
             }
         }
 
@@ -98,6 +116,7 @@ namespace Final
 
             frm.Show();
         }
+
         public void newForm(string formName, string folderName, string formText)
         {
             Form frm;
@@ -187,7 +206,10 @@ namespace Final
                     break;
                 }
             }
-
+            if(tabControl2.TabPages.Count == 0)
+            {
+                OpenDashBoard();
+            }
         }
 
         private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
@@ -235,5 +257,7 @@ namespace Final
         {
 
         }
+
+
     }
 }
