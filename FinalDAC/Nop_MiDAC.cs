@@ -65,7 +65,32 @@ namespace FinalDAC
             }
         }
 
-       
+        public bool InsertUpdateNop_MiVO(Nop_MiVO additem)
+        {
+            string sql = $@"IF NOT EXISTS(SELECT [Nop_Mi_Code] FROM [Nop_Mi_Master] WHERE [Nop_Mi_Code]=@Nop_Mi_Code)
+   BEGIN
+		INSERT INTO [Nop_Mi_Master] ([Nop_Mi_Code],[Nop_Mi_Name],[Nop_Ma_Code],[Remark],[Use_YN],[Ins_Date],[Ins_Emp] )      
+		VALUES(@Nop_Mi_Code,@Nop_Mi_Name,@Nop_Ma_Code,@Remark,'Y',GETDATE(),'TEST')
+		END
+ ELSE
+	 BEGIN
+		UPDATE [Nop_Mi_Master] SET [Nop_Mi_Name]=@Nop_Mi_Name, [Remark] = @Remark, Up_Date =GETDATE(), Up_Emp = 'test' 
+		where [Nop_Mi_Code]=@Nop_Mi_Code
+		  END";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Nop_Ma_Code", additem.Nop_Ma_Code);
+                cmd.Parameters.AddWithValue("@Nop_Mi_Name", additem.Nop_Mi_Name);
+                cmd.Parameters.AddWithValue("@Nop_Mi_Code", additem.Nop_Mi_Code);
+                cmd.Parameters.AddWithValue("@Remark", additem.Remark);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+        }
 
         public bool UpdateNop_Mi(Nop_MiVO additem)
         {
@@ -97,12 +122,8 @@ namespace FinalDAC
                 string sQuery = @"SELECT Nop_Mi_Code
       ,Nop_Mi_Name
       ,Nop_Ma_Code
-      ,Use_YN
-      ,Remark
-      ,Ins_Date
-      ,Ins_Emp
-      ,Up_Date
-      ,Up_Emp
+       ,Remark,
+     case when Use_YN='Y' then 1 else 0 end Use_YN, CONVERT(char(10), Ins_Date, 23) Ins_Date, Ins_Emp, CONVERT(char(10), Up_Date, 23)  Up_Date, Up_Emp
   FROM Nop_Mi_Master where 1 = 1  ";
 
                 if (!string.IsNullOrEmpty(nop))
