@@ -20,10 +20,8 @@ namespace Final.MDS_CDS
         public string txtNameText { get; set; }
 
         List<Def_MaVO> Defmalist; //불량 대분류
-        Def_MaService maservice = new Def_MaService();
 
         List<Def_MiVO> Defmilist;//불량 상세
-        Def_MiService miservice = new Def_MiService();
         public frm_MDS_CDS_002()
         {
             InitializeComponent();
@@ -76,7 +74,7 @@ namespace Final.MDS_CDS
         {         
             try
             {
-                Defmalist = maservice.GetAllDef_Ma_Master(def);
+                Defmalist = new Def_MaService().GetAllDef_Ma_Master(def);
                 dgvDefMaster.DataSource = Defmalist;
                 dgvDefMaster.ClearSelection();               
             }
@@ -89,7 +87,7 @@ namespace Final.MDS_CDS
         {
             try
             {
-                Defmilist = miservice.GetAllDef_Mi_Master(def);
+                Defmilist = new Def_MiService().GetAllDef_Mi_Master(def);
                 dgvDefDetail.DataSource = Defmilist;
                 dgvDefDetail.ClearSelection();
             }
@@ -176,7 +174,7 @@ private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventAr
                         Remark = txtRemark.Text
                     };
 
-                    if (miservice.InsertUpdateDef_MiVO(additem))
+                    if (new Def_MiService().InsertUpdateDef_MiVO(additem))
                     {
                         MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         GetAllData("");
