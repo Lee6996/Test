@@ -1,7 +1,7 @@
 ﻿
 namespace Final.MDS_ODS
 {
-    partial class frm_MDS_ODS_002_2
+    partial class frm_MDS_ODS_002_1
     {
         /// <summary>
         /// Required designer variable.
@@ -36,9 +36,9 @@ namespace Final.MDS_ODS
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,6 +120,17 @@ namespace Final.MDS_ODS
             this.panel1.Size = new System.Drawing.Size(496, 40);
             this.panel1.TabIndex = 16;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(3, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 18);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "▶작업장 등록";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -139,18 +150,7 @@ namespace Final.MDS_ODS
             this.textBox1.Size = new System.Drawing.Size(260, 112);
             this.textBox1.TabIndex = 0;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(3, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 18);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "▶작업장 등록";
-            // 
-            // frm_MDS_ODS_002_2
+            // frm_MDS_ODS_002_1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -165,9 +165,9 @@ namespace Final.MDS_ODS
             this.Controls.Add(this.btnCancle);
             this.Controls.Add(this.btnInsert);
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Name = "frm_MDS_ODS_002_2";
+            this.Name = "frm_MDS_ODS_002_1";
             this.Tag = "작업장추가";
-            this.Text = "frm_MDS_ODS_002_2";
+            this.Text = "frm_MDS_ODS_002_1";
             this.Load += new System.EventHandler(this.frm_MDS_ODS_002_2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
