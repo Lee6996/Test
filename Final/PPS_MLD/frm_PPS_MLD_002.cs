@@ -23,6 +23,8 @@ namespace Final.PPS_MLD
 
         private void frm_PPS_MLD_002_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Value = dateTimePicker2.Value.AddDays(-7);
+
             CommonUtil.SetInitGridView(dgv_Mold);
 
             CommonUtil.AddGridTextColumn(dgv_Mold, "생산일자", "Prd_Date", 120);
