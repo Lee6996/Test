@@ -134,11 +134,7 @@ private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventAr
             if (txtCode.Text == "" && txtName.Text =="")
             {
                 GetAllData("");
-            }
-            else
-            {
-                GetAllData(txtCode.Text);                
-            }                  
+            }                    
         }
 
         private void btndotdotdot_Click(object sender, EventArgs e)
@@ -154,6 +150,7 @@ private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventAr
                 def = frm.SCode;
                 txtName.Text = frm.SName;
                 GetAllData(def);
+                GetAllData2(def);
             }
         }
 
