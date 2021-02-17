@@ -94,7 +94,7 @@ namespace Final.PRM_PRF
             // 
             // btnTimeSearch
             // 
-            this.btnTimeSearch.Location = new System.Drawing.Point(540, 11);
+            this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
             // 
             // btnEdit
             // 

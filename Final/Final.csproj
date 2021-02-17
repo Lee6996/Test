@@ -582,6 +582,9 @@
     <EmbeddedResource Include="QAM_SQC\frm_QAM_SQC_004.resx">
       <DependentUpon>frm_QAM_SQC_004.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QAM_SQC\frm_QAM_SQC_005.resx">
+      <DependentUpon>frm_QAM_SQC_005.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QAM_SQC\frm_QAM_SQC_006.resx">
       <DependentUpon>frm_QAM_SQC_006.cs</DependentUpon>
     </EmbeddedResource>

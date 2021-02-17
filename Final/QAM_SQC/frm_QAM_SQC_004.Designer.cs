@@ -79,6 +79,10 @@ namespace Final.QAM_SQC
             // 
             this.panel5.Controls.Add(this.dgvQAM_SQC);
             // 
+            // btnTimeSearch
+            // 
+            this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
+            // 
             // dgvQAM_SQC
             // 
             this.dgvQAM_SQC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -108,6 +112,7 @@ namespace Final.QAM_SQC
             this.btnProcess.TabIndex = 75;
             this.btnProcess.Text = "...";
             this.btnProcess.UseVisualStyleBackColor = true;
+            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
             // 
             // txtProcess
             // 
@@ -143,6 +148,7 @@ namespace Final.QAM_SQC
             this.btnWorkCenter.TabIndex = 71;
             this.btnWorkCenter.Text = "...";
             this.btnWorkCenter.UseVisualStyleBackColor = true;
+            this.btnWorkCenter.Click += new System.EventHandler(this.btnWorkCenter_Click);
             // 
             // label1
             // 

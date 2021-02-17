@@ -79,10 +79,14 @@ namespace Final.QAM_SQC
             // 
             this.panel5.Controls.Add(this.dgvQAM_SQC);
             // 
+            // btnTimeSearch
+            // 
+            this.btnTimeSearch.Click += new System.EventHandler(this.btnTimeSearch_Click);
+            // 
             // dgvQAM_SQC
             // 
-            this.dgvQAM_SQC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvQAM_SQC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvQAM_SQC.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvQAM_SQC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -108,6 +112,7 @@ namespace Final.QAM_SQC
             this.btnProcess.TabIndex = 75;
             this.btnProcess.Text = "...";
             this.btnProcess.UseVisualStyleBackColor = true;
+            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
             // 
             // txtProcess
             // 
@@ -143,6 +148,7 @@ namespace Final.QAM_SQC
             this.btnWorkCenter.TabIndex = 71;
             this.btnWorkCenter.Text = "...";
             this.btnWorkCenter.UseVisualStyleBackColor = true;
+            this.btnWorkCenter.Click += new System.EventHandler(this.btnWorkCenter_Click);
             // 
             // label1
             // 
@@ -162,10 +168,11 @@ namespace Final.QAM_SQC
             this.txtWorkCenter.Size = new System.Drawing.Size(69, 25);
             this.txtWorkCenter.TabIndex = 70;
             // 
-            // frm_QAM_SQC_004
+            // frm_QAM_SQC_005
             // 
             this.ClientSize = new System.Drawing.Size(1266, 897);
-            this.Name = "frm_QAM_SQC_004";
+            this.Name = "frm_QAM_SQC_005";
+            this.Load += new System.EventHandler(this.frm_QAM_SQC_005_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);

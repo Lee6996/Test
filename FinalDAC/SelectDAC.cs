@@ -23,6 +23,54 @@ namespace FinalDAC
         }
         #endregion
 
+        //List<InspecVo>
+        public List<InspecVo> GetInspecVoList(string dtpFrom, string dtpTo, string processCode, string wcCode)
+        {
+            string sql = "select * from View_Inspect where 1=1 and Prd_Date between @dtpFrom and @dtpTo";
+            if (!string.IsNullOrEmpty(processCode)) sql += " AND Process_Code = @Process_Code";
+            if (!string.IsNullOrEmpty(wcCode)) sql += " AND Wc_Code = @Wc_Code";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                if (!string.IsNullOrEmpty(processCode))
+                    cmd.Parameters.AddWithValue("@Process_Code", processCode);
+                if (!string.IsNullOrEmpty(wcCode))
+                    cmd.Parameters.AddWithValue("@Wc_Code", wcCode);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<InspecVo> list = Helper.DataReaderMapToList<InspecVo>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+
+        //List<ConditionVO>
+        public List<ConditionVO> GetConditionVoList(string dtpFrom, string dtpTo, string processCode, string wcCode)
+        {
+            string sql = "select * from View_Condition where 1=1 and Prd_Date between @dtpFrom and @dtpTo";
+            if (!string.IsNullOrEmpty(processCode)) sql += " AND Process_Code = @Process_Code";
+            if (!string.IsNullOrEmpty(wcCode)) sql += " AND Wc_Code = @Wc_Code";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
+                cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
+                if (!string.IsNullOrEmpty(processCode))
+                    cmd.Parameters.AddWithValue("@Process_Code", processCode);
+                if (!string.IsNullOrEmpty(wcCode))
+                    cmd.Parameters.AddWithValue("@Wc_Code", wcCode);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ConditionVO> list = Helper.DataReaderMapToList<ConditionVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
+
         //WorkOrderVO
         public List<WorkOrderVO> SelectWorkOrder(string dtpFrom, string dtpTo, string processCode, string wcCode)
         {
@@ -162,6 +210,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<UserVO>
         public List<UserVO> SelectUserInfo(string user_Name)
         {
             string sQuery = @"select User_ID, User_Name, User_PW, Customer_Code, User_Type, Default_Screen_Code, Default_Process_Code, Monitoring_YN, Use_YN, convert(char(23), Ins_Date, 21) Ins_Date, Ins_Emp, convert(char(23), Up_Date, 21) Up_Date, Up_Emp
@@ -451,6 +500,8 @@ namespace FinalDAC
                 return list;
             }
         }
+
+        //List<WorkDayVO>
         public List<WorkDayVO> SelectWorkDay(string Prd_Date_from, string Prd_Date_to, string Process_Code = null, string Wc_Code = null)
         {
             string sql = " SELECT * from View_WorkDay where Prd_Date between @Prd_Date_from and @Prd_Date_to ";
@@ -478,6 +529,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<WorkItemVO>
         public List<WorkItemVO> SelectWorkItem(string Prd_Date_from, string Prd_Date_to, string Wc_Code = null)
         {
             string sql = " SELECT * from View_WorkItem where Prd_Date between @Prd_Date_from and @Prd_Date_to ";
@@ -501,6 +553,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<WorkBoxingVO>
         public List<WorkBoxingVO> SelectWorkBoxing(string Prd_Date_from, string Prd_Date_to, string Wc_Code = null)
         {
             string sql = " SELECT * from View_WorkBoxing where Prd_Date between @Prd_Date_from and @Prd_Date_to";
@@ -525,6 +578,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        // List<MoldVO>
         public List<MoldVO> SelectMold( )
         {
             string sql = " SELECT * from View_Mold_Master";
@@ -537,6 +591,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<MoldVO>
         public List<MoldVO> SelectMolds(string Mold_Code = null, string Mold_Group = null)
         {
             string sql = " SELECT * from View_Mold_Master where Mold_Group = @Mold_Group and Mold_Code = @Mold_Code";
@@ -553,6 +608,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<MoldVO>
         public List<MoldVO> SelectMoldCode(string Mold_Code=null, string Mold_Group = null)
         {
             string sql = " SELECT * from View_Mold_Master where 1=1 ";
@@ -576,6 +632,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<MoldVO>
         public List<MoldVO> SelectMoldGroup(string Mold_Code = null, string Mold_Group = null)
         {
             string sql = " SELECT * from View_Mold_Master where 1=1 ";
@@ -600,6 +657,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<MoldGroupVO>
         public List<MoldGroupVO> GetMoldGroup()
         {
             string sql = " SELECT Mold_Group from Mold_Master";
@@ -614,6 +672,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<MoldUseVO>
         public List<MoldUseVO> SelectMoldUse()
         {
             string sql = " SELECT * from View_MoldUse";
@@ -628,6 +687,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<MoldUseVO>
         public List<MoldUseVO> SelectMoldUses(string dtpFrom, string dtpTo, string Item_Code = null, string Wc_Code = null)
         {
             string sql = " SELECT * from View_MoldUse where Prd_Date between @dtpFrom and @dtpTo";
@@ -652,6 +712,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<MoldUseVO>
         public List<MoldUseVO> SelectMoldUseItem(string dtpFrom, string dtpTo, string Item_Code = null, string Wc_Code = null)
         {
             string sql = " SELECT * from View_MoldUse where Prd_Date between @dtpFrom and @dtpTo";
@@ -677,6 +738,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<MoldUseVO>
         public List<MoldUseVO> SelectMoldUseWc(string dtpFrom, string dtpTo, string Item_Code = null, string Wc_Code = null)
         {
             string sql = " SELECT * from View_MoldUse where Prd_Date between @dtpFrom and @dtpTo";
@@ -728,6 +790,7 @@ namespace FinalDAC
                 return list;
             }
         }
+        //List<LOTVO>
         public List<LOTVO> GetLotVOList(string YYYY)
         {
             string sQuery = " SELECT * from View_Lot where 1 = 1";

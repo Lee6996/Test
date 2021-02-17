@@ -113,9 +113,13 @@ namespace Final
             System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("금형관리", new System.Windows.Forms.TreeNode[] {
             treeNode43,
             treeNode44});
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("원재료 LOT관리");
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("품질관리", new System.Windows.Forms.TreeNode[] {
-            treeNode46});
+            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("품질측정값 조회");
+            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("공정조건 조회");
+            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("원재료 LOT관리");
+            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("품질관리", new System.Windows.Forms.TreeNode[] {
+            treeNode46,
+            treeNode47,
+            treeNode48});
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -180,6 +184,8 @@ namespace Final
             this.tv_Menu = new System.Windows.Forms.TreeView();
             this.button19 = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.QAM_SQC_005 = new System.Windows.Forms.ToolStripMenuItem();
+            this.QAM_SQC_004 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -616,6 +622,8 @@ namespace Final
             // 품질관리ToolStripMenuItem
             // 
             this.품질관리ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.QAM_SQC_005,
+            this.QAM_SQC_004,
             this.QAM_SQC_006});
             this.품질관리ToolStripMenuItem.Name = "품질관리ToolStripMenuItem";
             this.품질관리ToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
@@ -624,7 +632,7 @@ namespace Final
             // QAM_SQC_006
             // 
             this.QAM_SQC_006.Name = "QAM_SQC_006";
-            this.QAM_SQC_006.Size = new System.Drawing.Size(159, 22);
+            this.QAM_SQC_006.Size = new System.Drawing.Size(180, 22);
             this.QAM_SQC_006.Text = "원재료 LOT관리";
             this.QAM_SQC_006.Click += new System.EventHandler(this.MenuClick);
             // 
@@ -795,10 +803,14 @@ namespace Final
             treeNode44.Text = "금형 사용 현황";
             treeNode45.Name = "노드7";
             treeNode45.Text = "금형관리";
-            treeNode46.Name = "QAM_SQC_006";
-            treeNode46.Text = "원재료 LOT관리";
-            treeNode47.Name = "노드0";
-            treeNode47.Text = "품질관리";
+            treeNode46.Name = "QAM_SQC_004";
+            treeNode46.Text = "품질측정값 조회";
+            treeNode47.Name = "QAM_SQC_005";
+            treeNode47.Text = "공정조건 조회";
+            treeNode48.Name = "QAM_SQC_006";
+            treeNode48.Text = "원재료 LOT관리";
+            treeNode49.Name = "노드0";
+            treeNode49.Text = "품질관리";
             this.tv_Menu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode8,
             treeNode21,
@@ -807,7 +819,7 @@ namespace Final
             treeNode39,
             treeNode42,
             treeNode45,
-            treeNode47});
+            treeNode49});
             this.tv_Menu.Size = new System.Drawing.Size(202, 852);
             this.tv_Menu.TabIndex = 0;
             this.tv_Menu.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tv_Menu_NodeMouseClick);
@@ -833,6 +845,20 @@ namespace Final
             this.tabControl2.TabIndex = 9;
             this.tabControl2.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl2_DrawItem);
             this.tabControl2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl2_MouseClick);
+            // 
+            // QAM_SQC_005
+            // 
+            this.QAM_SQC_005.Name = "QAM_SQC_005";
+            this.QAM_SQC_005.Size = new System.Drawing.Size(180, 22);
+            this.QAM_SQC_005.Text = "공정조건 조회";
+            this.QAM_SQC_005.Click += new System.EventHandler(this.MenuClick);
+            // 
+            // QAM_SQC_004
+            // 
+            this.QAM_SQC_004.Name = "QAM_SQC_004";
+            this.QAM_SQC_004.Size = new System.Drawing.Size(180, 22);
+            this.QAM_SQC_004.Text = "품질 측정값 조회";
+            this.QAM_SQC_004.Click += new System.EventHandler(this.MenuClick);
             // 
             // FinalMDIParent
             // 
@@ -926,5 +952,7 @@ namespace Final
         private System.Windows.Forms.ToolStripMenuItem PPS_MLD_002;
         private System.Windows.Forms.ToolStripMenuItem 품질관리ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem QAM_SQC_006;
+        private System.Windows.Forms.ToolStripMenuItem QAM_SQC_005;
+        private System.Windows.Forms.ToolStripMenuItem QAM_SQC_004;
     }
 }
