@@ -52,6 +52,14 @@ namespace Final.MDS_CDS.service
             return new Def_MaDAC().UpdateDef_Ma(vo);
         }
 
-       
+        public bool UpdateUseYN(Def_MaVO vo)
+        {
+            return new Def_MaDAC().UpdateUseYN(vo);
+        }
+
+        public bool InsertUpdateDef_MaVO(Def_MaVO additem)
+        {
+            return new Def_MaDAC().InsertUpdateDef_MaVO(additem);
+        }
     }
 }

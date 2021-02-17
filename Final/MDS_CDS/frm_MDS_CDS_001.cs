@@ -92,107 +92,97 @@ namespace Final.MDS_CDS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            GetAllDefMa(cbGroup.SelectedValue.ToString());
+            if (cbGroup.Text == "전체")
+            {
+                GetAllDefMa("");
+            }
+            else
+            {
+                GetAllDefMa(cbGroup.SelectedValue.ToString());
+            }           
         }
 
         private void cbGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbGroup.SelectedIndex < 0) return;
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (txtCode.Text.Length < 1)
-            {
-                MessageBox.Show("불량현상코드를 입력해주세요");
-                return;
-            }
-            if (txtName.Text.Length < 1)
-            {
-                MessageBox.Show("불량현상명을 입력해주세요");
-                return;
-            }
-
-            try
-            {
-                Def_MaVO vo = new Def_MaVO
-                {
-                    Def_Ma_Code = txtCode.Text,
-                    Def_Ma_Name = txtName.Text
-                };
-
-                Def_MaService service = new Def_MaService();
-                bool bFlag = service.InsertDef_Ma(vo);
-
-                if (bFlag)
-                {
-                    MessageBox.Show("저장되었습니다..");
-                    GetAllDefMa("");
-                }
-                else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-            RefreshControl();
-        }
+        
         private void RefreshControl()
         {
-            txtCode.Text = txtName.Text = "";
-            txtCode.Focus();
+            txtName.Text = txtCode.Text = "";
+            txtName.Focus();
         }
 
         private void dgvDef_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {           
                 var taget = Defmalist.Find(item => item.Def_Ma_Code == dgvDef.SelectedRows[0].Cells[0].Value.ToString());
-                txtName.Text = taget.Def_Ma_Name.ToString();
-                txtCode.Text = taget.Def_Ma_Code.ToString();            
+                txtCode.Text = taget.Def_Ma_Name.ToString();
+                txtName.Text = taget.Def_Ma_Code.ToString();            
         }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            if (txtCode.Text.Length < 1)
-            {
-                MessageBox.Show("불량현상코드를 입력해주세요");
-                return;
-            }
-            if (txtName.Text.Length < 1)
-            {
-                MessageBox.Show("불량현상명을 입력해주세요");
-                return;
-            }
-
-            try
-            {
-                Def_MaVO vo = new Def_MaVO
-                {
-                    Def_Ma_Code = txtCode.Text,
-                    Def_Ma_Name = txtName.Text
-                };
-
-                Def_MaService service = new Def_MaService();
-                bool bFlag = service.UpdateDef_Ma(vo);
-
-                if (bFlag)
-                {
-                    MessageBox.Show("수정되었습니다..");
-                    GetAllDefMa("");
-                }
-                else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-            RefreshControl();
-        }
+        
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             RefreshControl();
+        }
+
+        private void dgvDef_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4 && e.RowIndex > -1)
+            {
+               
+
+                DataGridViewCheckBoxCell dgv = (DataGridViewCheckBoxCell)dgvDef.Rows[e.RowIndex].Cells[4];
+                int useyn = (Convert.ToInt32(dgv.Value) == 1) ? 0 : 1;
+
+                Def_MaVO vo = new Def_MaVO
+                {
+                    Def_Ma_Code = dgvDef.Rows[e.RowIndex].Cells[0].Value.ToString(),
+                    Use_YN = useyn
+                };
+
+                Def_MaService service = new Def_MaService();
+                service.UpdateUseYN(vo);
+            }
+        }
+
+        private void btnInsertUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (!string.IsNullOrEmpty(txtName.Text) && !string.IsNullOrEmpty(txtCode.Text))
+                {
+                    Def_MaVO additem = new Def_MaVO()
+                    {
+                        Def_Ma_Code = txtName.Text,
+                        Def_Ma_Name = txtCode.Text,
+                       // Ins_Emp = UserInfo.User_Name
+                    };
+
+                    if (Defservice.InsertUpdateDef_MaVO(additem))
+                    {
+                        MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GetAllDefMa("");  
+                    }
+                    else
+                    {
+                        MessageBox.Show("저장실패", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("필수항목을 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+
+            }
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message, "db", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

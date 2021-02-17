@@ -36,12 +36,8 @@ namespace FinalDAC
         public List<Def_MaVO> GetAllDef_Ma_Master(string def)
         {
             string sQuery = @"SELECT Def_Ma_Code
-      ,Def_Ma_Name
-      ,Use_YN
-      ,Ins_Date
-      ,Ins_Emp
-      ,Up_Date
-      ,Up_Emp
+      ,Def_Ma_Name,
+      case when Use_YN='Y' then 1 else 0 end Use_YN, CONVERT(char(10), Ins_Date, 23) Ins_Date, Ins_Emp, CONVERT(char(10), Up_Date, 23)  Up_Date, Up_Emp
   FROM Def_Ma_Master where 1 = 1  ";
 
             if (!string.IsNullOrEmpty(def))
@@ -55,6 +51,47 @@ namespace FinalDAC
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<Def_MaVO> list = Helper.DataReaderMapToList<Def_MaVO>(reader);
                 return list;
+            }
+        }
+
+        public bool InsertUpdateDef_MaVO(Def_MaVO additem)
+        {
+            string sql = $@"IF NOT EXISTS(SELECT [Def_Ma_Code] FROM [Def_Ma_Master] WHERE [Def_Ma_Code]=@Def_Ma_Code)
+   BEGIN
+		INSERT INTO [Def_Ma_Master] ([Def_Ma_Code],[Def_Ma_Name],[Use_YN],[Ins_Date],[Ins_Emp] )      
+		VALUES(@Def_Ma_Code,@Def_Ma_Name,'Y',GETDATE(),'TEST')
+		END
+ ELSE
+	 BEGIN
+		UPDATE [Def_Ma_Master] SET [Def_Ma_Name]=@Def_Ma_Name,Up_Date =GETDATE(), Up_Emp = 'test' 
+		where [Def_Ma_Code]=@Def_Ma_Code
+		  END";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Def_Ma_Code", additem.Def_Ma_Code);
+                cmd.Parameters.AddWithValue("@Def_Ma_Name", additem.Def_Ma_Name);       
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        public bool UpdateUseYN(Def_MaVO vo)
+        {
+            string sQuery = @"update Def_Ma_Master set Use_YN = @Use_YN where Def_Ma_Code = @Def_Ma_Code";
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
+            {
+                cmd.Parameters.AddWithValue("@Def_Ma_Code", vo.Def_Ma_Code);
+                cmd.Parameters.AddWithValue("@Use_YN", (vo.Use_YN == 1) ? "Y" : "N");
+
+                int iCnt = Convert.ToInt32(cmd.ExecuteScalar());
+                if (iCnt > 0)
+                    return true;
+                else
+                    return false;
             }
         }
 
