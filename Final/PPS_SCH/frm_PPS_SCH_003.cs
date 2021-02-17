@@ -54,6 +54,7 @@ namespace Final.PPS_SCH
             dgv_Work.DataSource = null;
             dgv_Work.DataSource = listWork;
         }
+
         private void ChartLoad()
         {
             chartDate.Series.Clear();
