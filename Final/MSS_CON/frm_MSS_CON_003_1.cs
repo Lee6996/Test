@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Final.MSS_CON;
+using FinalVO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace Final
 {
     public partial class frm_MSS_CON_003_1 : Form
     {
+        UserService service;
         public frm_MSS_CON_003_1()
         {
             InitializeComponent();
@@ -25,6 +28,27 @@ namespace Final
 
         private void frm_MSS_CON_003_1_Load(object sender, EventArgs e)
         {
+            service = new UserService();
+
+            lblDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+
+
+
+            //기본공정 바인딩
+            DataTable dtProcessCode = service.DefaultProcessCodeSelectBinding();
+            //빈칸을 위해 한행 추가
+            DataRow dr = dtProcessCode.NewRow();
+            dr["Process_name"] = "전체";
+            dr["Default_Process_Code"] = "";
+
+            dtProcessCode.Rows.InsertAt(dr, 0);
+            dtProcessCode.AcceptChanges();
+
+            cbDefault_ProcessCode.DisplayMember = "Process_name";
+            cbDefault_ProcessCode.ValueMember = "Default_Process_Code";
+            cbDefault_ProcessCode.DataSource = dtProcessCode;
+
+
 
         }
         //저장버튼
@@ -49,6 +73,30 @@ namespace Final
             {
                 AutoClosingMessageBox.Show("기본공정코드를 선택해주세요.", "1초 후 자동종료", 1000);
                 return;
+            }
+
+            try
+            {
+                UserVO vo = new UserVO
+                {
+                    User_ID = txtUser_ID.Text,
+                    User_Name = txtUser_Name.Text,
+                    User_PW=txtUser_Pwd.Text,
+                    Default_Process_Code = cbDefault_ProcessCode.ValueMember
+                };
+
+                bool bFlag = service.InsertUser(vo);
+
+                if (bFlag)
+                {
+                    AutoClosingMessageBox.Show("사용자가 추가되었습니다.", "1초 후 자동종료", 1000);
+                }
+                else
+                    AutoClosingMessageBox.Show("이미 등록된 사용자아이디입니다.", "1초 후 자동종료", 1000);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
             }
 
         }

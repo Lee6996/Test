@@ -31,7 +31,7 @@ namespace Final.MSS_SYS
             CommonUtil.AddGridTextColumn(dgvNotice, "공지사항번호", "Seq", 180);
             CommonUtil.AddGridTextColumn(dgvNotice, "공지사항시작일자", "Notice_Date", 160);
             CommonUtil.AddGridTextColumn(dgvNotice, "공지사항종료일자", "Notice_End", 160);
-            CommonUtil.AddGridTextColumn(dgvNotice, "제목", "Title", 220);
+            CommonUtil.AddGridTextColumn(dgvNotice, "제목", "Title", 300);
             CommonUtil.AddGridTextColumn(dgvNotice, "공지참조", "Notice_Rtf", 300);
             CommonUtil.AddGridTextColumn(dgvNotice, "공지내역", "Description", 300);
 
@@ -68,27 +68,7 @@ namespace Final.MSS_SYS
         //셀 더블 클릭시 공지사항폼 쇼다이얼로그
         private void dgvNotice_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1)
-            {
-                int seq = Convert.ToInt32(dgvNotice.Rows[e.RowIndex].Cells[0].Value);
 
-                SysNoticeVO sysNoticeVO = new SysNoticeVO
-                {
-                    Seq = seq,
-                    Title = dgvNotice.Rows[e.RowIndex].Cells[3].Value.ToString(),
-                    Notice_Date = dgvNotice.Rows[e.RowIndex].Cells[1].Value.ToString(),
-                    Notice_End = dgvNotice.Rows[e.RowIndex].Cells[2].Value.ToString(),
-                    Notice_Rtf = dgvNotice.Rows[e.RowIndex].Cells[4].Value.ToString(), //공지참조
-                    Description = dgvNotice.Rows[e.RowIndex].Cells[5].Value.ToString()
-                };
-                frm_MSS_SYS_004_1 frm = new frm_MSS_SYS_004_1(sysNoticeVO);
-
-                frm.StartPosition = FormStartPosition.CenterScreen;
-                
-                frm.ShowDialog();
-
-                DataLoad("");
-            }
         }
 
         //콤보박스 선택
