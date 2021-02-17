@@ -29,9 +29,9 @@ namespace Final
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.chartDate = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -45,7 +45,8 @@ namespace Final
             // 
             // splitContainer2
             // 
-            this.splitContainer2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.splitContainer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer2.Location = new System.Drawing.Point(2, 2);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Size = new System.Drawing.Size(1266, 460);
@@ -54,7 +55,8 @@ namespace Final
             // 
             // splitContainer3
             // 
-            this.splitContainer3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.splitContainer3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer3.Location = new System.Drawing.Point(2, 475);
             this.splitContainer3.Name = "splitContainer3";
             // 
@@ -67,17 +69,17 @@ namespace Final
             // 
             // chartDate
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartDate.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chartDate.ChartAreas.Add(chartArea2);
             this.chartDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartDate.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.chartDate.Legends.Add(legend2);
             this.chartDate.Location = new System.Drawing.Point(0, 0);
             this.chartDate.Name = "chartDate";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartDate.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartDate.Series.Add(series2);
             this.chartDate.Size = new System.Drawing.Size(641, 460);
             this.chartDate.TabIndex = 1;
             this.chartDate.Text = "chart1";

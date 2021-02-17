@@ -15,6 +15,7 @@ namespace Final.MDS_CDS
 {
     public partial class frm_MDS_CDS_004 : Form
     {
+        string nop = null;
         public string txtCodeText { get; set; }
         public string txtNameText { get; set; }
 
@@ -111,7 +112,14 @@ namespace Final.MDS_CDS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            GetAllData(txtName.Text);
+            if (txtCode.Text == "" || txtName.Text == "")
+            {
+                GetAllData("");
+            }
+            else
+            {
+                GetAllData(txtCode.Text);
+            }
         }
 
         private void dgvNopMi_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
