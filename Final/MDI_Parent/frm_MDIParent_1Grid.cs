@@ -34,7 +34,7 @@ namespace Final.MDI_Parent
 
         private void frm_MDIParent_1Grid_Load(object sender, EventArgs e)
         {
-            dtpFrom.Value = DateTime.Now.AddDays(-7);
+            dtpFrom.Value = DateTime.Now.AddDays(-6);
             dtpTo.Value = DateTime.Now;
         }
     }

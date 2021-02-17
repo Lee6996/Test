@@ -48,18 +48,18 @@ namespace Final.PRM_PRF
         private void SettingDGV(DataGridView dgv)
         {
             CommonUtil.SetInitGridView(dgv);
-            dgvPRM_PRF.Columns.Add(new DataGridViewCheckBoxColumn());
-            CommonUtil.AddGridTextColumn(dgv, "비가동일자", "Nop_Date", 200);
-            CommonUtil.AddGridTextColumn(dgv, "작업장코드", "Wc_Code", 200);
-            CommonUtil.AddGridTextColumn(dgv, "작업장명", "Wc_Name", 200);
-            CommonUtil.AddGridTextColumn(dgv, "비가동대분류", "Nop_Mi_Name", 200);
-            CommonUtil.AddGridTextColumn(dgv, "비가동상세분류", "Nop_Ma_Name", 200);
+            CommonUtil.AddGridCheckBoxColumn(dgv);
+            CommonUtil.AddGridTextColumn(dgv, "비가동일자", "Nop_Date", 150);
+            CommonUtil.AddGridTextColumn(dgv, "작업장코드", "Wc_Code", 130);
+            CommonUtil.AddGridTextColumn(dgv, "작업장명", "Wc_Name", 130);
+            CommonUtil.AddGridTextColumn(dgv, "비가동대분류", "Nop_Mi_Name", 180);
+            CommonUtil.AddGridTextColumn(dgv, "비가동상세분류", "Nop_Ma_Name", 150);
 
-            CommonUtil.AddGridTextColumn(dgv, "비가동발생시각", "Nop_Happentime", 200);
-            CommonUtil.AddGridTextColumn(dgv, "비가동종료시간", "Nop_Canceltime", 200);
-            CommonUtil.AddGridTextColumn(dgv, "비가동시간", "Nop_Time", 200);
+            CommonUtil.AddGridTextColumn(dgv, "비가동발생시각", "Nop_Happentime", 220);
+            CommonUtil.AddGridTextColumn(dgv, "비가동종료시간", "Nop_Canceltime", 220);
+            CommonUtil.AddGridTextColumn(dgv, "비가동시간", "Nop_Time", 120, textAlign: DataGridViewContentAlignment.MiddleRight, headerAlign: DataGridViewContentAlignment.MiddleRight);
             CommonUtil.AddGridTextColumn(dgv, "비고", "Remark", 200);
-            CommonUtil.AddGridTextColumn(dgv, "발생유형", "Nop_Type", 200);
+            CommonUtil.AddGridTextColumn(dgv, "발생유형", "Nop_Type", 150);
         }
 
         private void RefreshState()

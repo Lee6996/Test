@@ -12,7 +12,7 @@ namespace Final.PRM_PRF
 {
     public partial class frm_PRM_PRF_010 : Final.MDI_Parent.frm_MDIParent_2Grid
     {
-        string user_ID;
+        string user_Name;
         public frm_PRM_PRF_010()
         {
             InitializeComponent();
@@ -40,22 +40,29 @@ namespace Final.PRM_PRF
 
         private void frm_PRM_PRF_010_Load(object sender, EventArgs e)
         {
-            RefreshState();
+            SetDgv_1(dgvPRM_PRF_1);
             SetDgv_2(dgvPRM_PRF_2);
+            RefreshState();
         }
 
         private void dgvPRM_PRF_1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            user_ID = dgvPRM_PRF_1[0, dgvPRM_PRF_1.CurrentRow.Index].Value.ToString();
-            RefreshState_2();
+            user_Name = dgvPRM_PRF_1["user_Name", dgvPRM_PRF_1.CurrentRow.Index].Value.ToString();
+            RefreshState_2(user_Name);
         }
 
         #region MyMethod
 
         #region DGV1
+        private void SetDgv_1(DataGridView dgv)
+        {
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.RowHeadersVisible = false;
+            dgv.ReadOnly = true;
+        }
         private void RefreshState()
         {
-            dgvPRM_PRF_1.DataSource = new PRM_PRF_Service().SelectWorkHistoryPivot(dtpFrom.Value.ToString(), dtpTo.Value.ToString());
+            dgvPRM_PRF_1.DataSource = new PRM_PRF_Service().SelectWorkHistoryPivot(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), txtUser_ID.Text);
             dgvPRM_PRF_2.DataSource = null;
         }
 
@@ -77,9 +84,9 @@ namespace Final.PRM_PRF
             CommonUtil.AddGridTextColumn(dgv, "할당작업자", "User_Name", 200);
         }
 
-        private void RefreshState_2()
+        private void RefreshState_2(string user_Name)
         {
-            dgvPRM_PRF_2.DataSource = new PRM_PRF_Service().GetAttendanceManagementVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), txtUser_Name.Text);
+            dgvPRM_PRF_2.DataSource = new PRM_PRF_Service().GetAttendanceManagementVOList(dtpFrom.Value.ToString(), dtpTo.Value.ToString(), user_Name);
         }
 
         #endregion

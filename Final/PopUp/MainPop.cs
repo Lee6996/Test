@@ -70,7 +70,7 @@ namespace Final.PRM_PRF.PopUp
                 case "Nop_Ma":
                     lblType.Text = "비가동 대분류 목록";
                     SettingDGV(dgvMainPop, type);
-                    dgvMainPop.DataSource = new SelectDAC().SelectForPopup<Nop>(type);
+                    dgvMainPop.DataSource = new SelectDAC().SelectForPopup<Nop_Ma>(type);
                     break;
                 case "Boxing_Grade":
                     lblType.Text = "포장등급 목록";

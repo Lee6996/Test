@@ -462,7 +462,7 @@ namespace FinalDAC
         }
 
         //WC,ITEM,GV,User Code,Name Select
-        public List<T> SelectForPopup<T>(string type)
+        public List<T> SelectForPopup<T>(string type, string checkExist = null)
         {
             string sql;
             switch (type)
@@ -472,7 +472,10 @@ namespace FinalDAC
                 case "Item":
                     sql = "SELECT Item_Code,Item_Name FROM Item_Master"; break;
                 case "GV":
-                    sql = "SELECT GV_Code,GV_Name FROM GV_Master"; break;
+                    sql = "SELECT GV_Code,GV_Name FROM GV_Master";
+                    if (!string.IsNullOrEmpty(checkExist))
+                        sql += " where GV_Status = 'Rest'";
+                    break;
                 case "GVGroup":
                     sql = "SELECT GVGroup_Code,GVGroup_Name FROM GVGruop_Master"; break;
                 case "User":
@@ -483,6 +486,8 @@ namespace FinalDAC
                     sql = "SELECT Mold_Code, Mold_Name FROM Mold_Master"; break;
                 case "Nop_Ma":
                     sql = "SELECT Nop_Ma_Code, Nop_Ma_Name FROM Nop_Ma_Master"; break;
+                case "Nop_Mi":
+                    sql = "SELECT Nop_Mi_Code, Nop_Mi_Name FROM Nop_Mi_Master"; break;
                 case "Def_Ma":
                     sql = "SELECT Def_Ma_Code, Def_Ma_Name FROM Def_Ma_Master"; break;
                 case "Boxing_Grade":

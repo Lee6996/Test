@@ -63,32 +63,32 @@ namespace Final.PRM_PRF
         {
             CommonUtil.SetInitGridView(dgv);
             dgvPRM_PRF.Columns.Add(new DataGridViewCheckBoxColumn());
-            CommonUtil.AddGridTextColumn(dgv, "대차코드", "GV_Code", 200);
-            CommonUtil.AddGridTextColumn(dgv, "대차명", "GV_Name", 200);
-            CommonUtil.AddGridTextColumn(dgv, "작업지시번호", "Workorderno", 200);
-            CommonUtil.AddGridTextColumn(dgv, "품목코드", "Item_Code", 200);
-            CommonUtil.AddGridTextColumn(dgv, "품목명", "Item_Name", 200);
+            CommonUtil.AddGridTextColumn(dgv, "대차코드", "GV_Code", 150);
+            CommonUtil.AddGridTextColumn(dgv, "대차명", "GV_Name", 150);
+            CommonUtil.AddGridTextColumn(dgv, "작업지시번호", "Workorderno", 150);
+            CommonUtil.AddGridTextColumn(dgv, "품목코드", "Item_Code", 150);
+            CommonUtil.AddGridTextColumn(dgv, "품목명", "Item_Name", 150);
 
-            CommonUtil.AddGridTextColumn(dgv, "로딩일자", "Loading_date", 200);
-            CommonUtil.AddGridTextColumn(dgv, "로딩수량", "Loading_Qty", 200);
-            CommonUtil.AddGridTextColumn(dgv, "로딩시간", "Loading_Datetime", 200);
-            CommonUtil.AddGridTextColumn(dgv, "로딩작업장", "Loading_Wc", 200);
-            CommonUtil.AddGridTextColumn(dgv, "요입시간", "In_Time", 200);
-            CommonUtil.AddGridTextColumn(dgv, "중간시간", "Center_Time", 200);
-            CommonUtil.AddGridTextColumn(dgv, "요출시간", "Out_Time", 200);
+            CommonUtil.AddGridTextColumn(dgv, "로딩일자", "Loading_date", 150);
+            CommonUtil.AddGridTextColumn(dgv, "로딩수량", "Loading_Qty", 150);
+            CommonUtil.AddGridTextColumn(dgv, "로딩시간", "Loading_Datetime", 150);
+            CommonUtil.AddGridTextColumn(dgv, "로딩작업장", "Loading_Wc", 150);
+            CommonUtil.AddGridTextColumn(dgv, "요입시간", "In_Time", 150);
+            CommonUtil.AddGridTextColumn(dgv, "중간시간", "Center_Time", 150);
+            CommonUtil.AddGridTextColumn(dgv, "요출시간", "Out_Time", 150);
 
-            CommonUtil.AddGridTextColumn(dgv, "언로딩일자", "Unloading_Date", 200);
-            CommonUtil.AddGridTextColumn(dgv, "언로딩수량", "Unloading_Qty", 200);
-            CommonUtil.AddGridTextColumn(dgv, "언로딩시간", "Unloading_Datetime", 200);
-            CommonUtil.AddGridTextColumn(dgv, "언로딩작업장", "Unloading_wc", 200);
+            CommonUtil.AddGridTextColumn(dgv, "언로딩일자", "Unloading_Date", 150);
+            CommonUtil.AddGridTextColumn(dgv, "언로딩수량", "Unloading_Qty", 150);
+            CommonUtil.AddGridTextColumn(dgv, "언로딩시간", "Unloading_Datetime", 150);
+            CommonUtil.AddGridTextColumn(dgv, "언로딩작업장", "Unloading_wc", 150);
 
-            CommonUtil.AddGridTextColumn(dgv, "대상대차", "Target_GV", 200);
-            CommonUtil.AddGridTextColumn(dgv, "대차비우기일자", "Clear_Date", 200);
-            CommonUtil.AddGridTextColumn(dgv, "대차비우기일시", "Clear_Datetime", 200);
-            CommonUtil.AddGridTextColumn(dgv, "대차비우기수량", "Clear_Qty", 200);
-            CommonUtil.AddGridTextColumn(dgv, "대차비우기원인", "Clear_Cause", 200);
-            CommonUtil.AddGridTextColumn(dgv, "대상작업장", "Clear_wc", 200);
-            CommonUtil.AddGridTextColumn(dgv, "대상작업장품목", "Clear_Item", 200);
+            CommonUtil.AddGridTextColumn(dgv, "대상대차", "Target_GV", 150);
+            CommonUtil.AddGridTextColumn(dgv, "대차비우기일자", "Clear_Date", 150);
+            CommonUtil.AddGridTextColumn(dgv, "대차비우기일시", "Clear_Datetime", 150);
+            CommonUtil.AddGridTextColumn(dgv, "대차비우기수량", "Clear_Qty", 150);
+            CommonUtil.AddGridTextColumn(dgv, "대차비우기원인", "Clear_Cause", 150);
+            CommonUtil.AddGridTextColumn(dgv, "대상작업장", "Clear_wc", 150);
+            CommonUtil.AddGridTextColumn(dgv, "대상작업장품목", "Clear_Item", 150);
         }
 
         private void RefreshState()

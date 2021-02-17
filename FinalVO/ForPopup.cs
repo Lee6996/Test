@@ -53,10 +53,15 @@ namespace FinalVO
         public string Def_Ma_Name { get; set; }
     }
 
-    public class Nop
+    public class Nop_Ma
     {
         public string Nop_Ma_Code { get; set; }
         public string Nop_Ma_Name { get; set; }
+    }
+    public class Nop_Mi
+    {
+        public string Nop_Mi_Code { get; set; }
+        public string Nop_Mi_Name { get; set; }
     }
     public class Boxing
     {

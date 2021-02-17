@@ -29,7 +29,9 @@ namespace Final.PRM_PRF.PopUp
                 Nop_Time = nuNop_Time.Value,
                 Remark = txtRemark.Text
             };
-            new PRM_PRF_Service().Insert008(vo);
+            if (new PRM_PRF_Service().Insert008(vo))
+                AutoClosingMessageBox.Show("저장 성공", "저장성공", 1000);
+            else AutoClosingMessageBox.Show("저장 실패", "저장실패", 1000);
         }
 
         private void frm_PRM_PRF_008_PopUp_Load(object sender, EventArgs e)

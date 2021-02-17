@@ -62,9 +62,9 @@ namespace Final.PRM_PRF
         #endregion
 
         #region 007
-        public List<GV> GetGV()
+        public List<GV> GetGV(string checkExist = null)
         {
-            return new SelectDAC().SelectForPopup<GV>("GV");
+            return new SelectDAC().SelectForPopup<GV>("GV", checkExist);
         }
         #endregion
 
@@ -78,7 +78,7 @@ namespace Final.PRM_PRF
         {
             cbo.DisplayMember = "Nop_Mi_Name";
             cbo.ValueMember = "Nop_Mi_Code";
-            cbo.DataSource = new SelectDAC().SelectNOP();
+            cbo.DataSource = new SelectDAC().SelectForPopup<Nop_Mi>("Nop_Mi");
         }
 
         internal void BindCboWithWorkCenterVO(ComboBox cbo)
@@ -88,9 +88,9 @@ namespace Final.PRM_PRF
             cbo.DataSource = new SelectDAC().SelectForPopup<WC>("WC");
         }
 
-        internal void Insert008(NOPVO vo)
+        internal bool Insert008(NOPVO vo)
         {
-            new PRM_PRF_DAC().InsertNop_History(vo);
+            return new PRM_PRF_DAC().InsertNop_History(vo);
         }
         #endregion
 
@@ -107,9 +107,9 @@ namespace Final.PRM_PRF
             return new SelectDAC().SelectAttendanceManagement(dtpFrom, dtpTo, user_ID);
         }
 
-        public DataTable SelectWorkHistoryPivot(string dtpFrom, string dtpTo)
+        public DataTable SelectWorkHistoryPivot(string dtpFrom, string dtpTo, string User_ID)
         {
-            return new PRM_PRF_DAC().SelectWorkHistoryPivot(dtpFrom, dtpTo);
+            return new PRM_PRF_DAC().SelectWorkHistoryPivot(dtpFrom, dtpTo, User_ID);
         }
         #endregion
     }

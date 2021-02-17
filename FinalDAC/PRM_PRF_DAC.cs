@@ -103,7 +103,7 @@ namespace FinalDAC
         #endregion
 
         #region 008
-        public void InsertNop_History(NOPVO vo)
+        public bool InsertNop_History(NOPVO vo)
         {
             string iQuery = @"insert into Nop_History
                             (Nop_Date, Nop_Happentime, Nop_Canceltime, Wc_Code, Nop_Mi_Code, Nop_Type, Nop_Time, Remark, Ins_Date, Ins_Emp, Up_Date, Up_Emp)
@@ -119,10 +119,9 @@ namespace FinalDAC
                 cmd.Parameters.AddWithValue("Ins_Emp", LoginInfoVO.User_ID);
                 cmd.Parameters.AddWithValue("Up_Emp", LoginInfoVO.User_ID);
 
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<WorkOrderVO> list = Helper.DataReaderMapToList<WorkOrderVO>(reader);
-
-                conn.Close();
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else return false;
             }
         }
         #endregion
@@ -143,7 +142,7 @@ namespace FinalDAC
         #endregion
 
         #region 010
-        public DataTable SelectWorkHistoryPivot(string Start_Date, string End_Date)
+        public DataTable SelectWorkHistoryPivot(string Start_Date, string End_Date, string User_ID)
         {
             using (SqlCommand cmd = new SqlCommand("sp_WorkHistory_Pivot", conn))
             {
@@ -151,6 +150,7 @@ namespace FinalDAC
 
                 cmd.Parameters.AddWithValue("@Start_Date", Start_Date);
                 cmd.Parameters.AddWithValue("@End_Date", End_Date);
+                cmd.Parameters.AddWithValue("@User_ID", "'"+ User_ID + "'");
 
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
