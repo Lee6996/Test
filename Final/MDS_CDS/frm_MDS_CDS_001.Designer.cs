@@ -29,34 +29,20 @@ namespace Final.MDS_CDS
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvDef = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.txtCode = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbGroup = new System.Windows.Forms.ComboBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnInsertUpdate = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDef)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.DimGray;
-            this.btnUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnUpdate.Location = new System.Drawing.Point(1173, 697);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 29);
-            this.btnUpdate.TabIndex = 66;
-            this.btnUpdate.Text = "수정";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // textBox4
             // 
@@ -80,13 +66,13 @@ namespace Final.MDS_CDS
             this.label7.TabIndex = 63;
             this.label7.Text = "불량현상 대분류 명";
             // 
-            // txtName
+            // txtCode
             // 
-            this.txtName.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtName.Location = new System.Drawing.Point(521, 701);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 23);
-            this.txtName.TabIndex = 62;
+            this.txtCode.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCode.Location = new System.Drawing.Point(153, 695);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(100, 23);
+            this.txtCode.TabIndex = 62;
             // 
             // label5
             // 
@@ -94,7 +80,7 @@ namespace Final.MDS_CDS
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(651, 705);
+            this.label5.Location = new System.Drawing.Point(283, 699);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 17);
             this.label5.TabIndex = 61;
@@ -109,6 +95,7 @@ namespace Final.MDS_CDS
             this.dgvDef.RowTemplate.Height = 23;
             this.dgvDef.Size = new System.Drawing.Size(1341, 589);
             this.dgvDef.TabIndex = 59;
+            this.dgvDef.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDef_CellClick);
             this.dgvDef.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDef_CellDoubleClick);
             // 
             // btnSearch
@@ -124,13 +111,13 @@ namespace Final.MDS_CDS
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtCode
+            // txtName
             // 
-            this.txtCode.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtCode.Location = new System.Drawing.Point(779, 701);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(100, 23);
-            this.txtCode.TabIndex = 57;
+            this.txtName.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtName.Location = new System.Drawing.Point(411, 695);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 23);
+            this.txtName.TabIndex = 57;
             // 
             // label2
             // 
@@ -138,7 +125,7 @@ namespace Final.MDS_CDS
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(380, 703);
+            this.label2.Location = new System.Drawing.Point(12, 697);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 17);
             this.label2.TabIndex = 56;
@@ -164,25 +151,25 @@ namespace Final.MDS_CDS
             this.splitter1.TabIndex = 53;
             this.splitter1.TabStop = false;
             // 
-            // btnSave
+            // btnInsertUpdate
             // 
-            this.btnSave.BackColor = System.Drawing.Color.DimGray;
-            this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSave.Location = new System.Drawing.Point(1254, 697);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 29);
-            this.btnSave.TabIndex = 67;
-            this.btnSave.Text = "저장";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnInsertUpdate.BackColor = System.Drawing.Color.DimGray;
+            this.btnInsertUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnInsertUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnInsertUpdate.Location = new System.Drawing.Point(1211, 697);
+            this.btnInsertUpdate.Name = "btnInsertUpdate";
+            this.btnInsertUpdate.Size = new System.Drawing.Size(118, 29);
+            this.btnInsertUpdate.TabIndex = 67;
+            this.btnInsertUpdate.Text = "수정 및 저장";
+            this.btnInsertUpdate.UseVisualStyleBackColor = false;
+            this.btnInsertUpdate.Click += new System.EventHandler(this.btnInsertUpdate_Click);
             // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
             this.btnRefresh.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRefresh.Location = new System.Drawing.Point(1092, 698);
+            this.btnRefresh.Location = new System.Drawing.Point(1130, 698);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 29);
             this.btnRefresh.TabIndex = 68;
@@ -194,17 +181,17 @@ namespace Final.MDS_CDS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1341, 732);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnInsertUpdate);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtCode);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvDef);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbGroup);
             this.Controls.Add(this.splitter1);
@@ -218,19 +205,17 @@ namespace Final.MDS_CDS
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvDef;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbGroup;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnInsertUpdate;
         private System.Windows.Forms.Button btnRefresh;
     }
 }
