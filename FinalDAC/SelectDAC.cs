@@ -432,7 +432,14 @@ namespace FinalDAC
                     sql = "SELECT Process_Code, Process_Name FROM Process_Master"; break;
                 case "Mold":
                     sql = "SELECT Mold_Code, Mold_Name FROM Mold_Master"; break;
+                case "Nop_Ma":
+                    sql = "SELECT Nop_Ma_Code, Nop_Ma_Name FROM Mold_Master"; break;
+                case "Def_Ma":
+                    sql = "SELECT Def_Ma_Code, Def_Ma_Name FROM Mold_Master"; break;
+                case "Boxing_Grade":
+                    sql = "SELECT Boxing_Grade_Code, Boxing_Grade_Name FROM Mold_Master"; break;
                 default: sql = null; break;
+                
             }
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
