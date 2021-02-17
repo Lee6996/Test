@@ -25,12 +25,8 @@ namespace FinalDAC
         {
             string sQuery = @"SELECT Nop_Ma_Code
       ,Nop_Ma_Name
-      ,Use_YN
-      ,Ins_Date
-      ,Ins_Emp
-      ,Up_Date
-      ,Up_Emp
-  FROM Nop_Ma_Master where 1 = 1  ";
+     ,case when Use_YN='Y' then 1 else 0 end Use_YN, CONVERT(char(10), Ins_Date, 23) Ins_Date, Ins_Emp, CONVERT(char(10), Up_Date, 23)  Up_Date, Up_Emp  
+   FROM Nop_Ma_Master where 1 = 1  ";
 
             if (!string.IsNullOrEmpty(nop))
                 sQuery += " and Nop_Ma_Code Like @Nop_Ma_Name ";
@@ -43,6 +39,47 @@ namespace FinalDAC
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<Nop_MaVO> list = Helper.DataReaderMapToList<Nop_MaVO>(reader);
                 return list;
+            }
+        }
+
+        public bool UpdateUseYN(Nop_MaVO vo)
+        {
+            string sQuery = @"update Nop_Ma_Master set Use_YN = @Use_YN where Nop_Ma_Code = @Nop_Ma_Code";
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
+            {
+                cmd.Parameters.AddWithValue("@Nop_Ma_Code", vo.Nop_Ma_Code);
+                cmd.Parameters.AddWithValue("@Use_YN", (vo.Use_YN == 1) ? "Y" : "N");
+
+                int iCnt = Convert.ToInt32(cmd.ExecuteScalar());
+                if (iCnt > 0)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        public bool InsertUpdateNop_MaVO(Nop_MaVO vo)
+        {
+            string sql = $@"IF NOT EXISTS(SELECT [Nop_Ma_Code] FROM [Nop_Ma_Master] WHERE [Nop_Ma_Code]=@Nop_Ma_Code)
+   BEGIN
+		INSERT INTO [Nop_Ma_Master] ([Nop_Ma_Code],[Nop_Ma_Name],[Use_YN],[Ins_Date],[Ins_Emp] )      
+		VALUES(@Nop_Ma_Code,@Nop_Ma_Name,'Y',GETDATE(),'TEST')
+		END
+ ELSE
+	 BEGIN
+		UPDATE [Nop_Ma_Master] SET [Nop_Ma_Name]=@Nop_Ma_Name,Up_Date =GETDATE(), Up_Emp = 'test' 
+		where [Nop_Ma_Code]=@Nop_Ma_Code
+		  END";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Nop_Ma_Code", vo.Nop_Ma_Code);
+                cmd.Parameters.AddWithValue("@Nop_Ma_Name", vo.Nop_Ma_Name);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
             }
         }
 
