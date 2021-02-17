@@ -21,10 +21,24 @@ namespace Final.MSS_CON
         {
             return dac.SelectUserInfo(user_name);
         }
+        //유저이름 바인딩
         public DataTable UserNameSelectBinding()
         {
             UserDAC dac = new UserDAC();
             return dac.SelectUserNameBinding();
+        }
+        //공정정보 바인딩
+        public DataTable DefaultProcessCodeSelectBinding()
+        {
+            UserDAC dac = new UserDAC();
+            return dac.SelectDefaultProcessCodeBinding();
+        }
+
+        //사용자등록
+        public bool InsertUser(UserVO vo)
+        {
+            UserDAC dac = new UserDAC();
+            return dac.InsertUser(vo);
         }
     }
 }

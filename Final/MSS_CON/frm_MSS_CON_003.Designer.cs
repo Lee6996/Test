@@ -40,6 +40,7 @@ namespace Final.MSS_CON
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnInsert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserGroup_User)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
@@ -90,6 +91,7 @@ namespace Final.MSS_CON
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnInsert);
             this.panel1.Controls.Add(this.cboUser_Name);
             this.panel1.Controls.Add(this.btnSelect);
             this.panel1.Controls.Add(this.label2);
@@ -184,6 +186,19 @@ namespace Final.MSS_CON
             this.panel5.Size = new System.Drawing.Size(1344, 774);
             this.panel5.TabIndex = 133;
             // 
+            // btnInsert
+            // 
+            this.btnInsert.BackColor = System.Drawing.Color.DimGray;
+            this.btnInsert.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnInsert.Location = new System.Drawing.Point(611, 11);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(85, 35);
+            this.btnInsert.TabIndex = 112;
+            this.btnInsert.Text = "등록";
+            this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
             // frm_MSS_CON_003
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -220,5 +235,6 @@ namespace Final.MSS_CON
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnInsert;
     }
 }

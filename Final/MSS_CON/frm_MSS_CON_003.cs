@@ -32,10 +32,10 @@ namespace Final.MSS_CON
             CommonUtil.AddGridTextColumn(dgvUserGroup, "사용자그룹명", "UserGroup_Name", 185);
 
             CommonUtil.SetInitGridView(dgvUserGroup_User);
+            CommonUtil.AddGridCheckBoxColumn(dgvUserGroup_User);
             CommonUtil.AddGridTextColumn(dgvUserGroup_User, "아이디", "User_ID", 220);
             CommonUtil.AddGridTextColumn(dgvUserGroup_User, "이름", "User_Name", 220);
-            CommonUtil.AddGridCheckBoxColumn(dgvUserGroup_User);
-
+            
 
             //콤보박스에 유저 정보 바인딩
             DataTable dtName = service.UserNameSelectBinding();
@@ -114,9 +114,17 @@ namespace Final.MSS_CON
 
         private void dgvUserGroup_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-
             UserGroupUserDataLoad("");
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            frm_MSS_CON_003_1 frm = new frm_MSS_CON_003_1();
+            frm.StartPosition = FormStartPosition.CenterParent;
+
+            frm.ShowDialog();
+
+            UserDataLoad("");
         }
     }
 }

@@ -189,6 +189,7 @@ namespace Final.MSS_CON
             this.btnRefresh.TabIndex = 7;
             this.btnRefresh.Text = "초기화";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnSave
             // 
@@ -202,6 +203,7 @@ namespace Final.MSS_CON
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtUserGroup_Name_Insert
             // 
