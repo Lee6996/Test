@@ -44,6 +44,10 @@ namespace Final.PRM_RPT
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
+            // panel4
+            // 
+            this.panel4.Size = new System.Drawing.Size(1272, 57);
+            // 
             // label2
             // 
             this.label2.Location = new System.Drawing.Point(46, 30);
@@ -52,7 +56,7 @@ namespace Final.PRM_RPT
             // 
             // btn_WorkCenter
             // 
-            this.btn_WorkCenter.Location = new System.Drawing.Point(1198, 21);
+            this.btn_WorkCenter.Location = new System.Drawing.Point(1174, 15);
             this.btn_WorkCenter.Text = "출력";
             // 
             // textBox6
@@ -105,9 +109,9 @@ namespace Final.PRM_RPT
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 67);
+            this.panel5.Location = new System.Drawing.Point(0, 57);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1266, 739);
+            this.panel5.Size = new System.Drawing.Size(1272, 749);
             this.panel5.TabIndex = 18;
             // 
             // panel1
@@ -142,11 +146,11 @@ namespace Final.PRM_RPT
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.label5);
             this.panel6.Location = new System.Drawing.Point(6, 14);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(194, 28);
             this.panel6.TabIndex = 0;
+            this.panel6.Controls.SetChildIndex(this.panel7, 0);
             // 
             // panel7
             // 
@@ -161,7 +165,7 @@ namespace Final.PRM_RPT
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(34, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "생산의뢰";
             // 
@@ -174,13 +178,11 @@ namespace Final.PRM_RPT
             this.label5.TabIndex = 0;
             this.label5.Text = "조회내역";
             // 
-            // frm_PRM_RPT_1
+            // frm_PRM_RPT_001
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(1266, 828);
+            this.ClientSize = new System.Drawing.Size(1272, 828);
             this.Controls.Add(this.panel5);
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "frm_PRM_RPT_1";
+            this.Name = "frm_PRM_RPT_001";
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.panel4.ResumeLayout(false);
@@ -189,7 +191,6 @@ namespace Final.PRM_RPT
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);

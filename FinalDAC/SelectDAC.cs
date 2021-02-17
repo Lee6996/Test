@@ -14,6 +14,8 @@ namespace FinalDAC
     {
         #region Connection Open
         static SqlConnection conn;
+
+
         public SelectDAC()
         {
             conn = new SqlConnection(new FinalEnc.AESEnc().AESDecrypt256(ConfigurationManager.ConnectionStrings["Team2"].ConnectionString));
@@ -716,6 +718,23 @@ namespace FinalDAC
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<SysNoticeVO> list = Helper.DataReaderMapToList<SysNoticeVO>(reader);
+                return list;
+            }
+        }
+        public List<LOTVO> GetLotVOList(string YYYY)
+        {
+            string sQuery = " SELECT * from View_Lot where 1 = 1";
+
+            if (!string.IsNullOrEmpty(YYYY))
+                sQuery += " and YYYY = @YYYY";
+
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
+            {
+                if (!string.IsNullOrEmpty(YYYY))
+                    cmd.Parameters.AddWithValue("YYYY", YYYY); //포함하는 문자열
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<LOTVO> list = Helper.DataReaderMapToList<LOTVO>(reader);
                 return list;
             }
         }

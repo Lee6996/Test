@@ -310,6 +310,7 @@ namespace Final.MDS_SDS
             this.dgvItemDetail.RowTemplate.Height = 23;
             this.dgvItemDetail.Size = new System.Drawing.Size(1333, 502);
             this.dgvItemDetail.TabIndex = 116;
+            this.dgvItemDetail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemDetail_CellContentClick);
             this.dgvItemDetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemDetail_CellDoubleClick);
             // 
             // frm_MDS_SDS_002

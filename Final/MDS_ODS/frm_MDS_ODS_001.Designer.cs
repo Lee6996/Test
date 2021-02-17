@@ -33,10 +33,7 @@ namespace Final.MDS_ODS
             this.cbProcess_Name = new System.Windows.Forms.ComboBox();
             this.btnSelect = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtProcess_Code = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.dgvProcess = new System.Windows.Forms.DataGridView();
             this.ProcessCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProcessName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +50,7 @@ namespace Final.MDS_ODS
             this.btnSave = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtProcess_Code_Insert = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnl.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcess)).BeginInit();
@@ -66,8 +64,6 @@ namespace Final.MDS_ODS
             this.pnl.Controls.Add(this.cbProcess_Name);
             this.pnl.Controls.Add(this.btnSelect);
             this.pnl.Controls.Add(this.label3);
-            this.pnl.Controls.Add(this.txtProcess_Code);
-            this.pnl.Controls.Add(this.label2);
             this.pnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.pnl.Location = new System.Drawing.Point(0, 0);
@@ -79,7 +75,7 @@ namespace Final.MDS_ODS
             // 
             this.cbProcess_Name.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbProcess_Name.FormattingEnabled = true;
-            this.cbProcess_Name.Location = new System.Drawing.Point(497, 17);
+            this.cbProcess_Name.Location = new System.Drawing.Point(81, 16);
             this.cbProcess_Name.Name = "cbProcess_Name";
             this.cbProcess_Name.Size = new System.Drawing.Size(152, 25);
             this.cbProcess_Name.TabIndex = 5;
@@ -90,7 +86,7 @@ namespace Final.MDS_ODS
             this.btnSelect.BackColor = System.Drawing.Color.DimGray;
             this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSelect.Location = new System.Drawing.Point(668, 12);
+            this.btnSelect.Location = new System.Drawing.Point(252, 11);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(85, 35);
             this.btnSelect.TabIndex = 4;
@@ -100,28 +96,11 @@ namespace Final.MDS_ODS
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(427, 20);
+            this.label3.Location = new System.Drawing.Point(11, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "공정명";
-            // 
-            // txtProcess_Code
-            // 
-            this.txtProcess_Code.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtProcess_Code.Location = new System.Drawing.Point(166, 17);
-            this.txtProcess_Code.Name = "txtProcess_Code";
-            this.txtProcess_Code.Size = new System.Drawing.Size(187, 25);
-            this.txtProcess_Code.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(12, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "조회조건 : 공정 코드";
             // 
             // panel5
             // 
@@ -138,18 +117,6 @@ namespace Final.MDS_ODS
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1341, 645);
             this.panel5.TabIndex = 22;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(0, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(260, 26);
-            this.label5.TabIndex = 150;
-            this.label5.Text = "▶공정목록";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dgvProcess
             // 
@@ -253,7 +220,7 @@ namespace Final.MDS_ODS
             // 
             // txtRemark
             // 
-            this.txtRemark.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtRemark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtRemark.Location = new System.Drawing.Point(829, 11);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
@@ -272,7 +239,7 @@ namespace Final.MDS_ODS
             // 
             // txtProcess_Name_Insert
             // 
-            this.txtProcess_Name_Insert.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtProcess_Name_Insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtProcess_Name_Insert.Location = new System.Drawing.Point(497, 11);
             this.txtProcess_Name_Insert.Name = "txtProcess_Name_Insert";
             this.txtProcess_Name_Insert.Size = new System.Drawing.Size(187, 26);
@@ -304,11 +271,23 @@ namespace Final.MDS_ODS
             // 
             // txtProcess_Code_Insert
             // 
-            this.txtProcess_Code_Insert.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtProcess_Code_Insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtProcess_Code_Insert.Location = new System.Drawing.Point(88, 16);
             this.txtProcess_Code_Insert.Name = "txtProcess_Code_Insert";
             this.txtProcess_Code_Insert.Size = new System.Drawing.Size(187, 26);
             this.txtProcess_Code_Insert.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(0, 61);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(260, 26);
+            this.label5.TabIndex = 150;
+            this.label5.Text = "▶공정목록";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frm_MDS_ODS_001
             // 
@@ -336,8 +315,6 @@ namespace Final.MDS_ODS
         private System.Windows.Forms.ComboBox cbProcess_Name;
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtProcess_Code;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dgvProcess;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProcessCode;

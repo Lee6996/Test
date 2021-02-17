@@ -36,13 +36,13 @@ namespace Final.MDS_SDS
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.cbLevel = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.labelLevel = new System.Windows.Forms.Label();
             this.nuPLbox = new System.Windows.Forms.NumericUpDown();
@@ -52,7 +52,6 @@ namespace Final.MDS_SDS
             this.nuPCSqty = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvItemLevel = new System.Windows.Forms.DataGridView();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.pnl.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -148,7 +147,6 @@ namespace Final.MDS_SDS
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.labelLevel);
             this.panel1.Controls.Add(this.nuPLbox);
@@ -161,13 +159,27 @@ namespace Final.MDS_SDS
             this.panel1.Size = new System.Drawing.Size(1333, 101);
             this.panel1.TabIndex = 136;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnUpdate.BackColor = System.Drawing.Color.DimGray;
+            this.btnUpdate.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUpdate.Location = new System.Drawing.Point(1165, 56);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(147, 35);
+            this.btnUpdate.TabIndex = 48;
+            this.btnUpdate.Text = "저장 및 수정";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // btnRefresh
             // 
             this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
             this.btnRefresh.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRefresh.Location = new System.Drawing.Point(974, 56);
+            this.btnRefresh.Location = new System.Drawing.Point(1074, 56);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(85, 35);
             this.btnRefresh.TabIndex = 47;
@@ -233,20 +245,6 @@ namespace Final.MDS_SDS
             this.label10.Size = new System.Drawing.Size(109, 17);
             this.label10.TabIndex = 31;
             this.label10.Text = "박스당 PCS수량";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSave.BackColor = System.Drawing.Color.DimGray;
-            this.btnSave.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSave.Location = new System.Drawing.Point(1103, 56);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(85, 35);
-            this.btnSave.TabIndex = 35;
-            this.btnSave.Text = "저장";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label9
             // 
@@ -341,20 +339,8 @@ namespace Final.MDS_SDS
             this.dgvItemLevel.RowTemplate.Height = 23;
             this.dgvItemLevel.Size = new System.Drawing.Size(1333, 502);
             this.dgvItemLevel.TabIndex = 99;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnUpdate.BackColor = System.Drawing.Color.DimGray;
-            this.btnUpdate.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnUpdate.Location = new System.Drawing.Point(1227, 56);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(85, 35);
-            this.btnUpdate.TabIndex = 48;
-            this.btnUpdate.Text = "수정";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.dgvItemLevel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemLevel_CellClick);
+            this.dgvItemLevel.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemLevel_CellDoubleClick);
             // 
             // frm_MDS_SDS_001
             // 
@@ -395,7 +381,6 @@ namespace Final.MDS_SDS
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label labelLevel;
         private System.Windows.Forms.NumericUpDown nuPLbox;

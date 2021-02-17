@@ -92,10 +92,10 @@ namespace Final.MDS_SDS
             DataTable dtName2 = workcenterservice.WorkCenterBinding();
             //빈칸을 위해 한행 추가
             DataRow dr2 = dtName2.NewRow();
-            dr["WC_Name"] = "전체";
-            dr["WC_Code"] = "";
+            dr2["WC_Name"] = "전체";
+            dr2["WC_Code"] = "";
 
-            dtName2.Rows.InsertAt(dr, 0);
+            dtName2.Rows.InsertAt(dr2, 0);
             dtName2.AcceptChanges();
 
             //콤보박스에 표시될 컬럼 바인딩

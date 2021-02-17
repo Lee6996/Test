@@ -30,7 +30,6 @@ namespace Final.KPI_RPT
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
             this.dgv_KPI_DAY = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -90,7 +89,6 @@ namespace Final.KPI_RPT
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.dgv_KPI_DAY);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -98,15 +96,6 @@ namespace Final.KPI_RPT
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1266, 749);
             this.panel5.TabIndex = 16;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(29, 64);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(662, 17);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "생산일자 - 근무인원 - 공정- 작업장 - 제품명 - 실적 - 생산시간 - 시간당생산량 - 가스사용량 - 비가동시간";
             // 
             // dgv_KPI_DAY
             // 
@@ -135,10 +124,10 @@ namespace Final.KPI_RPT
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 4);
+            this.label1.Location = new System.Drawing.Point(64, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 17);
-            this.label1.TabIndex = 70;
+            this.label1.TabIndex = 71;
             this.label1.Text = "조회내역";
             // 
             // panel7
@@ -187,6 +176,7 @@ namespace Final.KPI_RPT
             // 
             // frm_KPI_RPT_001
             // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1266, 828);
             this.Controls.Add(this.panel5);
             this.Name = "frm_KPI_RPT_001";
@@ -196,7 +186,6 @@ namespace Final.KPI_RPT
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KPI_DAY)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -210,7 +199,6 @@ namespace Final.KPI_RPT
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dgv_KPI_DAY;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;

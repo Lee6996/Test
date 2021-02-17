@@ -36,13 +36,13 @@ namespace Final.MDS_CDS
             CommonUtil.AddGridTextColumn(dgvNopMa, "입력일자", "Ins_Date", 210);
             CommonUtil.AddGridTextColumn(dgvNopMa, "사용여부", "Use_YN", 210, visibility: false);
 
-            CommonUtil.SetInitGridView(dgvNopMa);
-            CommonUtil.AddGridTextColumn(dgvNopMa, "비가동대분류코드", "Nop_Ma_Code", 210);
-            CommonUtil.AddGridTextColumn(dgvNopMa, "비가동상세코드", "Nop_Mi_Code", 210);
-            CommonUtil.AddGridTextColumn(dgvNopMa, "비가동상세 명", "Nop_Mi_Name", 210);
-            CommonUtil.AddGridTextColumn(dgvNopMa, "입력일자", "Ins_Date", 210);
-            CommonUtil.AddGridTextColumn(dgvNopMa, "비고", "Remark", 210);
-            CommonUtil.AddGridTextColumn(dgvNopMa, "사용여부", "Use_YN", 210, visibility: false);
+            CommonUtil.SetInitGridView(dgvNopMi);
+            CommonUtil.AddGridTextColumn(dgvNopMi, "비가동대분류코드", "Nop_Ma_Code", 210);
+            CommonUtil.AddGridTextColumn(dgvNopMi, "비가동상세코드", "Nop_Mi_Code", 210);
+            CommonUtil.AddGridTextColumn(dgvNopMi, "비가동상세 명", "Nop_Mi_Name", 210);
+            CommonUtil.AddGridTextColumn(dgvNopMi, "입력일자", "Ins_Date", 210);
+            CommonUtil.AddGridTextColumn(dgvNopMi, "비고", "Remark", 210);
+            CommonUtil.AddGridTextColumn(dgvNopMi, "사용여부", "Use_YN", 210, visibility: false);
 
             DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn(false);
             col.Name = "chk";

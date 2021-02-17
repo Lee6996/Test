@@ -76,15 +76,25 @@ namespace Final.MDS_SDS.service
         {
             return new ItemInfoDAC().ItemMasterBindingType();
         }
-
-        public List<Item_MasterVO> ItemMasterSelect(string data)
+        //string groupName
+        public List<Item_MasterVO> ItemMasterSelect(string groupName)
         {
-            return new ItemInfoDAC().ItemMasterSelect(data);
+            return new ItemInfoDAC().ItemMasterSelect(groupName);
         }
 
         public bool InsertItemMaster(Item_MasterVO additem)
         {
             return new ItemInfoDAC().InsertItemMaster(additem);
+        }
+
+        public bool UpdateUSEYN(Item_MasterVO vo)
+        {
+            return new ItemInfoDAC().UpdateUSEYN(vo);
+        }
+
+        public bool InsertUpdateItemInfo(ItemInfoVO additem)
+        {
+            return new ItemInfoDAC().InsertUpdateItemInfo(additem);
         }
     }
 }

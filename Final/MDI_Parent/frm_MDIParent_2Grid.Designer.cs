@@ -44,8 +44,8 @@ namespace Final.MDI_Parent
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -53,7 +53,7 @@ namespace Final.MDI_Parent
             this.panel5.Font = new System.Drawing.Font("나눔스퀘어OTF", 9F);
             this.panel5.Location = new System.Drawing.Point(0, 91);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1676, 878);
+            this.panel5.Size = new System.Drawing.Size(1676, 860);
             this.panel5.TabIndex = 21;
             // 
             // label11
@@ -61,7 +61,7 @@ namespace Final.MDI_Parent
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label11.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(0, 378);
+            this.label11.Location = new System.Drawing.Point(-1, 367);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(260, 26);
             this.label11.TabIndex = 70;
@@ -149,7 +149,7 @@ namespace Final.MDI_Parent
             // frm_MDIParent_2Grid
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1676, 969);
+            this.ClientSize = new System.Drawing.Size(1676, 951);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);

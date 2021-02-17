@@ -23,7 +23,6 @@ namespace Final.PRM_PRF
 
         private void tmRefresh_Tick(object sender, EventArgs e)
         {
-            AutoClosingMessageBox.Show("", "", 500);
             RefreshState();
         }
 
