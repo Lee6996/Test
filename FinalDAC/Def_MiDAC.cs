@@ -26,14 +26,10 @@ namespace FinalDAC
                 string sQuery = @"SELECT
        Def_Mi_Code
       ,Def_Ma_Code
-      ,Def_Mi_Name
-      ,Use_YN
-      ,Remark
-      ,Ins_Date
-      ,Ins_Emp
-      ,Up_Date
-      ,Up_Emp
-  FROM Def_Mi_Master where 1 = 1  ";
+      ,Def_Mi_Name     
+      ,Remark,
+     case when Use_YN='Y' then 1 else 0 end Use_YN, CONVERT(char(10), Ins_Date, 23) Ins_Date, Ins_Emp, CONVERT(char(10), Up_Date, 23)  Up_Date, Up_Emp
+  FROM Def_Mi_Master where 1 = 1    ";
 
                 if (!string.IsNullOrEmpty(def))
                     sQuery += " and Def_Mi_Code Like @Def_Mi_Name ";
@@ -48,6 +44,49 @@ namespace FinalDAC
                     return list;
                 }
             }
+
+        public bool UpdateUseYN(Def_MiVO vo)
+        {
+            string sQuery = @"update Def_Mi_Master set Use_YN = @Use_YN where Def_Mi_Code = @Def_Mi_Code";
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
+            {
+                cmd.Parameters.AddWithValue("@Def_Mi_Code", vo.Def_Mi_Code);
+                cmd.Parameters.AddWithValue("@Use_YN", (vo.Use_YN == 1) ? "Y" : "N");
+
+                int iCnt = Convert.ToInt32(cmd.ExecuteScalar());
+                if (iCnt > 0)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        public bool InsertUpdateDef_MiVO(Def_MiVO additem)
+        {
+            string sql = $@"IF NOT EXISTS(SELECT [Def_Mi_Code] FROM [Def_Mi_Master] WHERE [Def_Mi_Code]=@Def_Mi_Code)
+   BEGIN
+		INSERT INTO [Def_Mi_Master] ([Def_Mi_Code],[Def_Mi_Name],[Def_Ma_Code],[Remark],[Use_YN],[Ins_Date],[Ins_Emp] )      
+		VALUES(@Def_Mi_Code,@Def_Mi_Name,@Def_Ma_Code,@Remark,'Y',GETDATE(),'TEST')
+		END
+ ELSE
+	 BEGIN
+		UPDATE [Def_Mi_Master] SET [Def_Mi_Name]=@Def_Mi_Name, [Remark] = @Remark, Up_Date =GETDATE(), Up_Emp = 'test' 
+		where [Def_Mi_Code]=@Def_Mi_Code
+		  END";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Def_Ma_Code", additem.Def_Ma_Code);
+                cmd.Parameters.AddWithValue("@Def_Mi_Name", additem.Def_Mi_Name);
+                cmd.Parameters.AddWithValue("@Def_Mi_Code", additem.Def_Mi_Code);
+                cmd.Parameters.AddWithValue("@Remark", additem.Remark);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+        }
 
         public bool UpdateDef_Ma(Def_MiVO additem)
         {

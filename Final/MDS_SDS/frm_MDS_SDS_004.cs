@@ -15,13 +15,13 @@ namespace Final.MDS_SDS
     public partial class frm_MDS_SDS_004 : Form
     {
         ItemService itemservice = new ItemService();
-        List<Item_MasterVO> Itemlist; //품목
+        //품목
 
         WorkCenter_MasterService workcenterservice = new WorkCenter_MasterService();
-        List<WorkCenterVO> workcenterlist; //작업장
+         //작업장
 
         Condition_Spec_MasterService Conditionservice = new Condition_Spec_MasterService();
-        List<ConditionSpecVO> Conditionlist; //공정조건
+         //공정조건
         public frm_MDS_SDS_004()
         {
             InitializeComponent();
@@ -103,17 +103,19 @@ namespace Final.MDS_SDS
             cbWorkCenter.ValueMember = "WC_Code";
             cbWorkCenter.DataSource = dtName2;
 
-            ItemMaterDataLoad("");
+
+            btnSearch1.PerformClick();
             Condition_SpecDataLoad("");
         }
 
-        private void Condition_SpecDataLoad(string Code)
+        public void Condition_SpecDataLoad(string Code)
         {
             try
             {
-                List<ConditionSpecVO> list = Conditionservice.ConditionSelect(Code);
-                dgvItem.DataSource = list;
-                dgvItem.ClearSelection();
+                Condition_Spec_MasterService service = new Condition_Spec_MasterService();
+                List<ConditionSpecVO> list = service.ConditionSelect(Code);
+                dgvWork.DataSource = list;
+                dgvWork.ClearSelection();
 
             }
             catch (Exception err)
@@ -126,7 +128,8 @@ namespace Final.MDS_SDS
         {
             try
             {
-                List<Item_MasterVO> list = itemservice.ItemMasterSelect(Code);
+                ItemService service = new ItemService();
+                List<Item_MasterVO> list = service.ItemMasterSelect(Code);
                 dgvItem.DataSource = list;
                 dgvItem.ClearSelection();
 
@@ -139,17 +142,31 @@ namespace Final.MDS_SDS
 
         private void btnSearch1_Click(object sender, EventArgs e)
         {
-            ItemMaterDataLoad(cbItem.SelectedValue.ToString());
+            if (cbItem.Text == "전체")
+            {
+                ItemMaterDataLoad("");
+            }
+            else
+            {
+                ItemMaterDataLoad(cbItem.SelectedValue.ToString());
+            }         
         }
 
         private void btnSearch2_Click(object sender, EventArgs e)
         {
-            Condition_SpecDataLoad(cbWorkCenter.SelectedValue.ToString());
+            if (cbWorkCenter.Text == "전체")
+            {
+                Condition_SpecDataLoad("");
+            }
+            else
+            {
+                Condition_SpecDataLoad(cbWorkCenter.SelectedValue.ToString());
+            }
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            frm_MDS_SDS_004 frm = new frm_MDS_SDS_004()
+            frm_MDS_SDS_004_1 frm = new frm_MDS_SDS_004_1()
             {
                 StartPosition = FormStartPosition.CenterScreen,
                 Location = new Point(Location.X + Width, Location.Y)

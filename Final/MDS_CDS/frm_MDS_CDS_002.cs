@@ -1,4 +1,5 @@
 ﻿using Final.MDS_CDS.service;
+using Final.PRM_PRF.PopUp;
 using FinalVO;
 using System;
 using System.Collections.Generic;
@@ -88,43 +89,13 @@ namespace Final.MDS_CDS
         }
 
         private void dgvDefMaster_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {          
-            var taget = Defmalist.Find(item => item.Def_Ma_Code == dgvDefDetail.SelectedRows[0].Cells[0].Value.ToString());
-            txtDef_Macode.Text = taget.Def_Ma_Name.ToString();            
-            txtDef_Micode.Text = taget.Def_Ma_Name.ToString();
-            txtDef_Miname.Text = taget.Def_Ma_Code.ToString();
-
+        {                    
+            txtDef_Macode.Text = dgvDefMaster[0, dgvDefMaster.CurrentRow.Index].Value.ToString();
+            txtDef_Maname.Text = dgvDefMaster[1, dgvDefMaster.CurrentRow.Index].Value.ToString();
+           
         }
         
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Def_MiVO additem = new Def_MiVO
-                {
-                    Def_Mi_Code = txtDef_Micode.Text,
-                    Def_Ma_Code = lblDefM.Text,
-                    Def_Mi_Name = txtDef_Miname.Text,
-                    Remark = txtRemark.Text, 
-                 };
-
-                Def_MiService service = new Def_MiService();
-                bool bFlag = service.InsertDef_Mi(additem);
-
-                if (bFlag)
-                {
-                    MessageBox.Show("저장되었습니다..");
-                    GetAllData("");
-                }
-                else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-            RefreshControl();
-        }
+        
         private void RefreshControl()
         {
             txtDef_Macode.Text = txtDef_Maname.Text = txtDef_Micode.Text = txtDef_Miname.Text = "";
@@ -139,59 +110,81 @@ namespace Final.MDS_CDS
 
 
 private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var taget = Defmilist.Find(item => item.Def_Ma_Code == dgvDefDetail.SelectedRows[0].Cells[0].Value.ToString());
-            txtName.Text = taget.Def_Mi_Name.ToString();
-            txtCode.Text = taget.Def_Mi_Code.ToString();
+        {           
+            txtDef_Micode.Text = dgvDefDetail[0, dgvDefDetail.CurrentRow.Index].Value.ToString();
+            txtDef_Miname.Text = dgvDefDetail[1, dgvDefDetail.CurrentRow.Index].Value.ToString();
         }
       
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            GetAllData(txtName.Text);           
+            if (txtCode.Text == "" || txtName.Text =="")
+            {
+                GetAllData("");
+            }
+            else
+            {
+                GetAllData(txtCode.Text);
+            }                  
         }
 
         private void btndotdotdot_Click(object sender, EventArgs e)
         {
-            frm_MDS_CDS_002_1 frm = new frm_MDS_CDS_002_1()
+            MainPop frm = new MainPop("Def_Ma")
             {
-                StartPosition = FormStartPosition.CenterScreen,
-                Location = new Point(Location.X + Width, Location.Y)
+                StartPosition = FormStartPosition.CenterParent
             };
-            frm.Show();
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtCode.Text = frm.SCode;
+                txtName.Text = frm.SName;
+                GetAllData("");
+            }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             RefreshControl();
         }
+        
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnInsertUpdate_Click(object sender, EventArgs e)
         {
             try
             {
-                Def_MiVO additem = new Def_MiVO
-                {
-                    Def_Mi_Code = txtDef_Micode.Text,
-                    Def_Ma_Code = lblDefM.Text,
-                    Def_Mi_Name = txtDef_Miname.Text,
-                    Remark = txtRemark.Text,
-                };
 
-                Def_MiService service = new Def_MiService();
-                bool bFlag = service.UpdateDef_Mi(additem);
-
-                if (bFlag)
+                if (!string.IsNullOrEmpty(txtDef_Macode.Text) && !string.IsNullOrEmpty(txtDef_Micode.Text) && !string.IsNullOrEmpty(txtDef_Miname.Text) )
                 {
-                    MessageBox.Show("수정되었습니다..");
-                    GetAllData("");
+                    Def_MiVO additem = new Def_MiVO()
+                    {
+                        Def_Mi_Code = txtDef_Micode.Text,
+                        Def_Ma_Code = txtDef_Macode.Text,
+                        Def_Mi_Name = txtDef_Miname.Text,
+                        Remark = txtRemark.Text
+                    };
+
+                    if (miservice.InsertUpdateDef_MiVO(additem))
+                    {
+                        MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GetAllData("");
+                    }
+                    else
+                    {
+                        MessageBox.Show("저장실패", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
                 else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
+                {
+                    MessageBox.Show("필수항목을 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message);
+
+                MessageBox.Show(err.Message, "db", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             RefreshControl();
         }

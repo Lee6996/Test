@@ -96,5 +96,10 @@ namespace Final.MDS_SDS.service
         {
             return new ItemInfoDAC().InsertUpdateItemInfo(additem);
         }
+
+        public bool UpdateMaster(Item_MasterVO additem)
+        {
+            return new ItemInfoDAC().UpdateMaster(additem);
+        }
     }
 }

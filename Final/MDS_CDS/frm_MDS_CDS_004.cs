@@ -1,4 +1,5 @@
 ﻿using Final.MDS_CDS.service;
+using Final.PRM_PRF.PopUp;
 using FinalVO;
 using System;
 using System.Collections.Generic;
@@ -95,12 +96,17 @@ namespace Final.MDS_CDS
 
         private void btndotdotdot_Click(object sender, EventArgs e)
         {
-            frm_MDS_CDS_004_1 frm = new frm_MDS_CDS_004_1()
+            MainPop frm = new MainPop("Nop_Ma")
             {
-                StartPosition = FormStartPosition.CenterScreen,
-                Location = new Point(Location.X + Width, Location.Y)
+                StartPosition = FormStartPosition.CenterParent
             };
-            frm.Show();
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtCode.Text = frm.SCode;
+                txtName.Text = frm.SName;
+                //여기에 dgv 초기화 코딩
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

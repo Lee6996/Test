@@ -31,7 +31,6 @@ namespace Final.MDS_CDS
         {
             this.txtDef_Miname = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvDefDetail = new System.Windows.Forms.DataGridView();
@@ -47,7 +46,7 @@ namespace Final.MDS_CDS
             this.btndotdotdot = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnInsertUpdate = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.txtDef_Maname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -75,19 +74,6 @@ namespace Final.MDS_CDS
             this.label7.Size = new System.Drawing.Size(135, 17);
             this.label7.TabIndex = 105;
             this.label7.Text = "불량현상 상세분류 명";
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.DimGray;
-            this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSave.Location = new System.Drawing.Point(1254, 697);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 29);
-            this.btnSave.TabIndex = 100;
-            this.btnSave.Text = "저장";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtRemark
             // 
@@ -119,6 +105,7 @@ namespace Final.MDS_CDS
             this.dgvDefDetail.RowTemplate.Height = 23;
             this.dgvDefDetail.Size = new System.Drawing.Size(799, 518);
             this.dgvDefDetail.TabIndex = 94;
+            this.dgvDefDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDefDetail_CellDoubleClick);
             this.dgvDefDetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDefDetail_CellDoubleClick);
             // 
             // txtDef_Micode
@@ -247,25 +234,25 @@ namespace Final.MDS_CDS
             this.txtCode.Size = new System.Drawing.Size(63, 26);
             this.txtCode.TabIndex = 109;
             // 
-            // btnUpdate
+            // btnInsertUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.DimGray;
-            this.btnUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnUpdate.Location = new System.Drawing.Point(1254, 663);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 29);
-            this.btnUpdate.TabIndex = 112;
-            this.btnUpdate.Text = "수정";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnInsertUpdate.BackColor = System.Drawing.Color.DimGray;
+            this.btnInsertUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnInsertUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnInsertUpdate.Location = new System.Drawing.Point(1218, 697);
+            this.btnInsertUpdate.Name = "btnInsertUpdate";
+            this.btnInsertUpdate.Size = new System.Drawing.Size(111, 29);
+            this.btnInsertUpdate.TabIndex = 112;
+            this.btnInsertUpdate.Text = "수정 및 저장";
+            this.btnInsertUpdate.UseVisualStyleBackColor = false;
+            this.btnInsertUpdate.Click += new System.EventHandler(this.btnInsertUpdate_Click);
             // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
             this.btnRefresh.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRefresh.Location = new System.Drawing.Point(1173, 697);
+            this.btnRefresh.Location = new System.Drawing.Point(1137, 697);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 29);
             this.btnRefresh.TabIndex = 113;
@@ -314,14 +301,13 @@ namespace Final.MDS_CDS
             this.Controls.Add(this.txtDef_Maname);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnInsertUpdate);
             this.Controls.Add(this.btndotdotdot);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.lblDefM);
             this.Controls.Add(this.txtDef_Miname);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvDefDetail);
@@ -347,7 +333,6 @@ namespace Final.MDS_CDS
 
         private System.Windows.Forms.TextBox txtDef_Miname;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvDefDetail;
@@ -363,7 +348,7 @@ namespace Final.MDS_CDS
         private System.Windows.Forms.Button btndotdotdot;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtCode;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnInsertUpdate;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.TextBox txtDef_Maname;
         private System.Windows.Forms.Label label1;

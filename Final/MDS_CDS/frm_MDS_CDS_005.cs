@@ -1,4 +1,5 @@
 ﻿using Final.MDS_CDS.service;
+using Final.PRM_PRF.PopUp;
 using FinalVO;
 using System;
 using System.Collections.Generic;
@@ -209,6 +210,21 @@ namespace Final.MDS_CDS
                 MessageBox.Show(err.Message);
             }
             RefreshControl();
+        }
+
+        private void btndotdotdot_Click(object sender, EventArgs e)
+        {
+            MainPop frm = new MainPop("Boxing_Grade")
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtCode.Text = frm.SCode;
+                txtName.Text = frm.SName;
+                //여기에 dgv 초기화 코딩
+            }
         }
     }
 }

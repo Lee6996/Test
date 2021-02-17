@@ -21,19 +21,7 @@ namespace FinalDAC
 
         public bool InsertSpec(ItemSpecVO additem)
         {
-            string sQuery = @"select count(*) 
-                              from Inspect_Spec_Master where 1 = 1 and Inspect_code = @Inspect_code and Inspect_name = @Inspect_name  ";
-            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
-            {
-                cmd.Parameters.AddWithValue("@Inspect_code", additem.Inspect_code);
-                cmd.Parameters.AddWithValue("@Inspect_name", additem.Inspect_name);
-
-                int iCnt = Convert.ToInt32(cmd.ExecuteScalar());
-                if (iCnt > 0)
-                    return false;
-                else
-                {
-                    sQuery = @"INSERT INTO Inspect_Spec_Master
+            string sql = $@"INSERT INTO Inspect_Spec_Master
            (Item_Code
            ,Process_code
            ,Inspect_code
@@ -59,30 +47,28 @@ namespace FinalDAC
            ,@LSL
            ,@Sample_size
            ,@Inspect_Unit
-           ,'Y'  , getdate(),'test', getdate(), 'test' ) ";
+           , 'Y',@Remark ,convert(char(10), GetDATE(), 23) , 'test', convert(char(10), GetDATE(), 23), 'test' )";
 
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
 
-                    cmd.Parameters.AddWithValue("@Item_Code", additem.Item_Code);
-                    cmd.Parameters.AddWithValue("@Process_code", additem.Process_code);
-                    cmd.Parameters.AddWithValue("@Inspect_code", additem.Inspect_code);
-                    cmd.Parameters.AddWithValue("@Inspect_name", additem.Inspect_name);
-                    cmd.Parameters.AddWithValue("@USL", additem.USL);
-                    cmd.Parameters.AddWithValue("@SL", additem.SL);
-                    cmd.Parameters.AddWithValue("@LSL", additem.LSL);
-                    cmd.Parameters.AddWithValue("@Sample_size", additem.Sample_size);
-                    cmd.Parameters.AddWithValue("@Inspect_Unit", additem.Inspect_Unit);
-                                        
-                    //cmd.Parameters.AddWithValue("@Ins_Date", additem.Ins_Date);
-                    //cmd.Parameters.AddWithValue("@Up_Date", item.Up_Date);
-                    //cmd.Parameters.AddWithValue("@Ins_Emp", additem.Ins_Emp);
-                    // cmd.Parameters.AddWithValue("@Up_Emp", additem.Up_Emp);
+                cmd.Parameters.AddWithValue("@Item_Code", additem.Item_Code);
+                cmd.Parameters.AddWithValue("@Process_code", additem.Process_code);
+                cmd.Parameters.AddWithValue("@Inspect_code", additem.Inspect_code);
+                cmd.Parameters.AddWithValue("@Inspect_name", additem.Inspect_name);
+                cmd.Parameters.AddWithValue("@USL", additem.USL);
+                cmd.Parameters.AddWithValue("@SL", additem.SL);
+                cmd.Parameters.AddWithValue("@LSL", additem.LSL);
+                cmd.Parameters.AddWithValue("@Sample_size", additem.Sample_size);
+                cmd.Parameters.AddWithValue("@Inspect_Unit", additem.Inspect_Unit);
+                cmd.Parameters.AddWithValue("@Remark", additem.Remark);
 
-                    if (cmd.ExecuteNonQuery() > 0)
-                        return true;
-                    else
-                        return false;
-                }
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
             }
+
         }
 
         public List<ItemSpecVO> ItemSpecSelect(string data)
