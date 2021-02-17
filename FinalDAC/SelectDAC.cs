@@ -482,11 +482,11 @@ namespace FinalDAC
                 case "Mold":
                     sql = "SELECT Mold_Code, Mold_Name FROM Mold_Master"; break;
                 case "Nop_Ma":
-                    sql = "SELECT Nop_Ma_Code, Nop_Ma_Name FROM Mold_Master"; break;
+                    sql = "SELECT Nop_Ma_Code, Nop_Ma_Name FROM Nop_Ma_Master"; break;
                 case "Def_Ma":
-                    sql = "SELECT Def_Ma_Code, Def_Ma_Name FROM Mold_Master"; break;
+                    sql = "SELECT Def_Ma_Code, Def_Ma_Name FROM Def_Ma_Master"; break;
                 case "Boxing_Grade":
-                    sql = "SELECT Boxing_Grade_Code, Boxing_Grade_Name FROM Mold_Master"; break;
+                    sql = "SELECT Boxing_Grade_Code, Boxing_Grade_Name FROM BoxingGrade_Master"; break;
                 default: sql = null; break;
                 
             }

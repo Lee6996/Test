@@ -40,7 +40,7 @@ namespace FinalDAC
                         cmd.Parameters.AddWithValue("@Def_Mi_Name", "%" + def + "%"); //포함하는 문자열
 
                     SqlDataReader reader = cmd.ExecuteReader();
-                    List<Def_MiVO> list = Helper.DataReaderMapToList<Def_MiVO>(reader);
+                    List<Def_MiVO> list = Helper.DataReaderMapToList<Def_MiVO>(reader);              
                     return list;
                 }
             }
@@ -80,11 +80,11 @@ namespace FinalDAC
                 cmd.Parameters.AddWithValue("@Def_Mi_Name", additem.Def_Mi_Name);
                 cmd.Parameters.AddWithValue("@Def_Mi_Code", additem.Def_Mi_Code);
                 cmd.Parameters.AddWithValue("@Remark", additem.Remark);
-
-                if (cmd.ExecuteNonQuery() > 0)
-                    return true;
+                
+                if (cmd.ExecuteNonQuery() > 0)                                
+                    return true;               
                 else
-                    return false;
+                    return false;               
             }
         }
 

@@ -67,7 +67,9 @@ namespace Final.MDS_CDS
             txtCode.Text = txtCodeText;
             txtName.Text = txtNameText;
             GetAllData("");
+            GetAllData2("");
         }
+      
 
         private void GetAllData(string def)
         {         
@@ -75,12 +77,20 @@ namespace Final.MDS_CDS
             {
                 Defmalist = maservice.GetAllDef_Ma_Master(def);
                 dgvDefMaster.DataSource = Defmalist;
-                dgvDefMaster.ClearSelection();
-
+                dgvDefMaster.ClearSelection();               
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+        private void GetAllData2(string def)
+        {
+            try
+            {
                 Defmilist = miservice.GetAllDef_Mi_Master(def);
                 dgvDefDetail.DataSource = Defmilist;
                 dgvDefDetail.ClearSelection();
-
             }
             catch (Exception err)
             {
@@ -124,7 +134,7 @@ private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventAr
             }
             else
             {
-                GetAllData(txtCode.Text);
+                GetAllData2(txtCode.Text);
             }                  
         }
 
@@ -168,6 +178,7 @@ private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventAr
                     {
                         MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         GetAllData("");
+                        GetAllData2("");
                     }
                     else
                     {
