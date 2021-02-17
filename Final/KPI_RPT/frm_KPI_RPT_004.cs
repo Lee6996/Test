@@ -22,7 +22,7 @@ namespace Final.KPI_RPT
 
         private void frm_KPI_RPT_4_Load(object sender, EventArgs e)
         {
-            
+            DataLoad();
         }
         private void btn_Process_Click(object sender, EventArgs e)
         {

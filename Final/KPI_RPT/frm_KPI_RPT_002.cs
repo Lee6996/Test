@@ -70,10 +70,10 @@ namespace Final.KPI_RPT
         {
             WorkDayService service = new WorkDayService();
 
-            //List<WorkDayVO> list = service.SelectWorkDay(dateTimePicker1.Text);
+            List<WorkDayVO> list = service.SelectWorkDay(dateTimePicker1.Text);
 
-            //dgv_KPI_MONTH.DataSource = null;
-            //dgv_KPI_MONTH.DataSource = list;
+           dgv_KPI_MONTH.DataSource = null;
+            dgv_KPI_MONTH.DataSource = list;
 
         }
     }

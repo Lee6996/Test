@@ -31,22 +31,22 @@ namespace Final.MDS_SDS
             CommonUtil.AddGridTextColumn(dgvItemDetail, "유형", "Item_Type", 65);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "규격", "Item_Spec", 130);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "단위", "Item_Unit", 65);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "안전재고", "Item_Stock", 75);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "Level1", "Level_1", 75);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "Level2", "Level_2", 75);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "Level3", "Level_3", 75);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "Level4", "Level_4");
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "Level5", "Level_5");
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "로트크기", "LotSize", 75);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "리드타임", "Lead_Time", 75);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "로트크기", "Lot_Size", 75);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "시간당생산수", "PrdQty_Per_Hour");
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "배치당생산수", "PrdQTy_Per_Batch");
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "캐비티수", "Cavity", 75);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "성형줄당갯수", "Line_Per_Qty");
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "포장샷당갯수", "Shot_Per_Qty");
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "건조대차수량", "Dry_GV_Qty");           
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "Level1", "Level_1", 80);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "Level2", "Level_2", 80);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "Level3", "Level_3", 80);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "Level4", "Level_4", 80);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "Level5", "Level_5", 80);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "사용여부", "Use_YN", 150, visibility: false);
-
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "안전재고", "Item_Stock");
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "시간당 생산수", "PrdQty_Per_Hour");
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "배치당 생산수", "PrdQTy_Per_Batch");           
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "캐비티수", "Cavity", 80);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "성형줄당갯수", "Line_Per_Qty", 80);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "포장샷당갯수", "Shot_Per_Qty", 80);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "건조대차수량", "Dry_GV_Qty", 80);            
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "사용여부", "Use_YN", 150, visibility: false);            
+            
             //-----------------------------------------------------------------------------------------
             DataGridViewCheckBoxColumn gridbtn = new DataGridViewCheckBoxColumn(false);
             gridbtn.HeaderText = "사용여부";
@@ -70,22 +70,18 @@ namespace Final.MDS_SDS
             cbItem.ValueMember = "Item_Code";
             cbItem.DataSource = dtName;
 
-            
             DataLoad("");
-
-
         }
 
-        private void DataLoad(string data)
+        private void DataLoad(string groupName)
         {
             try
             {
                 ItemService service = new ItemService();
-                List<Item_MasterVO> list = service.ItemMasterSelect(data);
+                List<Item_MasterVO> list = service.ItemMasterSelect(groupName);
 
                 dgvItemDetail.DataSource = list;
                 dgvItemDetail.ClearSelection();
-
             }
             catch (Exception err)
             {
@@ -151,8 +147,8 @@ namespace Final.MDS_SDS
                     Cavity = Convert.ToInt32(nuCavity.Value),
                     Line_Per_Qty = Convert.ToInt32(nuLine_Per_Qty.Value),
                     Shot_Per_Qty = Convert.ToInt32(nuShot_Per_Qty.Value),
-                    Up_Date = DateTime.Now.ToString(),
-                    Up_Emp = UserStatic.User_Name                    
+                    //Up_Date = DateTime.Now.ToString(),
+                    //Up_Emp = UserStatic.User_Name                    
                 };
                 try
                 {
@@ -188,9 +184,9 @@ namespace Final.MDS_SDS
 
         private void dgvItemDetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 4 && e.RowIndex > -1)
+            if (e.ColumnIndex == 20 && e.RowIndex > -1)
             {
-                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)dgvItemDetail.Rows[e.RowIndex].Cells[4];
+                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)dgvItemDetail.Rows[e.RowIndex].Cells[20];
                 int useyn = (Convert.ToInt32(chk.Value) == 1) ? 0 : 1;
 
                 Item_MasterVO vo = new Item_MasterVO
