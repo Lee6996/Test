@@ -24,8 +24,12 @@ namespace FinalDAC
 
         public List<GVMasterVO> GetAllGV_Master(string gv)
         {
-            string sQuery = @"SELECT  GV_Code,GV_Name,ggm.GVGroup_Code, ggm.GVGroup_Name, GV_Status  ,ggm.Use_YN ,ggm.Ins_Date ,ggm.Ins_Emp ,ggm.Up_Date ,ggm.Up_Emp
-  FROM GV_Master gm inner join GVGruop_Master ggm on gm.GVGroup_Code = ggm.GVGroup_Code where 1 = 1  ";
+            string sQuery = @"SELECT [GV_Code]
+      ,[GV_Name]
+      ,[GVGroup_Code]
+      ,[GV_Status]
+      ,case when Use_YN='Y' then 1 else 0 end Use_YN, CONVERT(char(10), Ins_Date, 23) Ins_Date, Ins_Emp, CONVERT(char(10), Up_Date, 23)  Up_Date, Up_Emp
+  FROM [dbo].[GV_Master]  where 1 = 1 ";
 
             if (!string.IsNullOrEmpty(gv))
                 sQuery += " and GV_Code Like @GV_Name ";
@@ -38,6 +42,49 @@ namespace FinalDAC
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<GVMasterVO> list = Helper.DataReaderMapToList<GVMasterVO>(reader);
                 return list;
+            }
+        }
+
+        public bool InsertUpdateGV_Ma(GVMasterVO vo)
+        {
+            string sql = $@"IF NOT EXISTS(SELECT [GV_Code] FROM [GV_Master] WHERE [GV_Code]=@GV_Code)
+   BEGIN
+		INSERT INTO [GV_Master] ([GV_Code],[GV_Name], [GVGroup_Code], [GV_Status] ,[Use_YN],[Ins_Date],[Ins_Emp] )      
+		VALUES(@GV_Code, @GV_Name, @GVGroup_Code, @GV_Status, 'Y',GETDATE(),'TEST')
+		END
+ ELSE
+	 BEGIN
+		UPDATE [GV_Master] SET [GV_Name]=@GV_Name, [GVGroup_Code] = @GVGroup_Code, [GV_Status] = @GV_Status, Up_Date =GETDATE(), Up_Emp = 'test' 
+		where [GV_Code]=@GV_Code
+		  END";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@GV_Code", vo.GV_Code);
+                cmd.Parameters.AddWithValue("@GV_Name", vo.GV_Name);
+                cmd.Parameters.AddWithValue("@GVGroup_Code", vo.GVGroup_Code);
+                cmd.Parameters.AddWithValue("@GV_Status", vo.GV_Status);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        public bool UpdateUseYN(GVMasterVO vo)
+        {
+            string sQuery = @"update GV_Master set Use_YN = @Use_YN where GV_Code = @GV_Code";
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
+            {
+                cmd.Parameters.AddWithValue("@GV_Code", vo.GV_Code);
+                cmd.Parameters.AddWithValue("@Use_YN", (vo.Use_YN == 1) ? "Y" : "N");
+
+                int iCnt = Convert.ToInt32(cmd.ExecuteScalar());
+                if (iCnt > 0)
+                    return true;
+                else
+                    return false;
             }
         }
 
@@ -55,7 +102,7 @@ namespace FinalDAC
             {
                 cmd.Parameters.AddWithValue("@GV_Code", vo.GV_Code);
                 cmd.Parameters.AddWithValue("@GV_Name", vo.GV_Name);
-                cmd.Parameters.AddWithValue("@GVGroup_Code", vo.GV_GroupCode);
+                cmd.Parameters.AddWithValue("@GVGroup_Code", vo.GVGroup_Code);
 
                 //cmd.Parameters.AddWithValue("@Up_Emp", vo.Up_Emp);
 
@@ -104,7 +151,7 @@ namespace FinalDAC
            ,@GV_Name
            ,@GVGroup_Code 
            ,'Y'  , getdate(),'test', getdate(), 'test')";// test수정필요.
-                    cmd.Parameters.AddWithValue("@GVGroup_Code", vo.GV_GroupCode);
+                    cmd.Parameters.AddWithValue("@GVGroup_Code", vo.GVGroup_Code);
                     //cmd.Parameters.AddWithValue("@Ins_Emp", additem.Ins_Date);
                     //cmd.Parameters.AddWithValue("@Ins_Emp", additem.Ins_Emp);
                     //cmd.Parameters.AddWithValue("@Ins_Emp", additem.Up_Date);

@@ -105,7 +105,7 @@ namespace Final.MDS_CDS
             this.dgvDefDetail.RowTemplate.Height = 23;
             this.dgvDefDetail.Size = new System.Drawing.Size(834, 518);
             this.dgvDefDetail.TabIndex = 94;
-            this.dgvDefDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDefDetail_CellDoubleClick);
+            this.dgvDefDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDefDetail_CellClick);
             this.dgvDefDetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDefDetail_CellDoubleClick);
             // 
             // txtDef_Micode

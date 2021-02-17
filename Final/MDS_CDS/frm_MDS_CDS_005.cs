@@ -83,7 +83,7 @@ namespace Final.MDS_CDS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            GetAllBoxMa(txtName.Text);
+            GetAllBoxMa(txtCode.Text);
         }
 
         private void dgvBox_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -138,79 +138,48 @@ namespace Final.MDS_CDS
                     }
                 }
 
+                if (!string.IsNullOrEmpty(txtDCode.Text) && !string.IsNullOrEmpty(txtDName.Text))
+                {        
+                    BoxingGrade_Detail_MasterVO additem = new BoxingGrade_Detail_MasterVO
+                    {
+                        Grade_Detail_Code = txtDCode.Text,
+                        Grade_Detail_Name = txtDName.Text,
+                        Boxing_Grade_Code = targetBoxing
+                    };
 
-                BoxingGrade_Detail_MasterVO additem = new BoxingGrade_Detail_MasterVO
-                {
-                    Grade_Detail_Code = txtDCode.Text,
-                    Grade_Detail_Name = txtDName.Text,
-                    Boxing_Grade_Code = targetBoxing
-                };
+                    if (new BoxingGrade_Detail_MasterService().InsertUpdateBox_DetailVO(additem))
+                    {
+                        MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GetAllBoxMa("");
+                    }
+                    else
+                    {
+                        MessageBox.Show("저장실패", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
 
-                BoxingGrade_Detail_MasterService service = new BoxingGrade_Detail_MasterService();
-                bool bFlag = service.InsertBox_Detail(additem);
-
-                if (bFlag)
-                {
-                    MessageBox.Show("저장되었습니다..");
-                    GetAllBoxMa("dgv");
                 }
                 else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
+                {
+                    MessageBox.Show("필수항목을 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message);
+
+                MessageBox.Show(err.Message, "db", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             RefreshControl();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string targetBoxing = "";
-                foreach (Control ctrl in gboGrade.Controls)
-                {
-                    if (ctrl is RadioButton)
-                    {
-                        RadioButton rdo = (RadioButton)ctrl;
-                        if (rdo.Checked)
-                        {
-                            targetBoxing = rdo.Tag.ToString();
-                            break;
-                        }
-                    }
-                }
-
-
-                BoxingGrade_Detail_MasterVO additem = new BoxingGrade_Detail_MasterVO
-                {
-                    Grade_Detail_Code = txtDCode.Text,
-                    Grade_Detail_Name = txtDName.Text,
-                    Boxing_Grade_Code = targetBoxing
-                };
-
-                BoxingGrade_Detail_MasterService service = new BoxingGrade_Detail_MasterService();
-                bool bFlag = service.UpdateBox_Detail(additem);
-
-                if (bFlag)
-                {
-                    MessageBox.Show("저장되었습니다..");
-                    GetAllBoxMa("");
-                }
-                else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-            RefreshControl();
+           
         }
 
         private void btndotdotdot_Click(object sender, EventArgs e)
         {
-            MainPop frm = new MainPop("Boxing_Grade")
+            MainPop frm = new MainPop("BoxingGrade")
             {
                 StartPosition = FormStartPosition.CenterParent
             };
@@ -223,6 +192,12 @@ namespace Final.MDS_CDS
                 GetAllBoxMa(dgv);
                 //여기에 dgv 초기화 코딩
             }
+        }
+
+        private void dgvBox_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtDCode.Text = dgvBox[1, dgvBox.CurrentRow.Index].Value.ToString();
+            txtDName.Text = dgvBox[2, dgvBox.CurrentRow.Index].Value.ToString();
         }
     }
 }

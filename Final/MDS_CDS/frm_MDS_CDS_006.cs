@@ -25,12 +25,11 @@ namespace Final.MDS_CDS
         {
             CommonUtil.SetInitGridView(dgvGV);
             CommonUtil.AddGridTextColumn(dgvGV, "대차코드", "GV_Code", 210);
-            CommonUtil.AddGridTextColumn(dgvGV, "대차명", "GV_Name", 210);            
-            CommonUtil.AddGridTextColumn(dgvGV, "대차그룹코드", "GV_GroupCode", 210);
-            CommonUtil.AddGridTextColumn(dgvGV, "대차그룹명", "GV_GroupName", 210);
-            CommonUtil.AddGridTextColumn(dgvGV, "대차상태", "GV_Status", 210);            
+            CommonUtil.AddGridTextColumn(dgvGV, "대차명", "GV_Name", 210);
+            CommonUtil.AddGridTextColumn(dgvGV, "대차그룹코드", "GVGroup_Code", 210);
+            CommonUtil.AddGridTextColumn(dgvGV, "대차상태", "GV_Status", 210);
             CommonUtil.AddGridTextColumn(dgvGV, "입력일자", "Ins_Date", 210);
-            CommonUtil.AddGridTextColumn(dgvGV, "사용여부", "Use_YN", 210, visibility: false);            
+            CommonUtil.AddGridTextColumn(dgvGV, "사용여부", "Use_YN", 210, visibility: false);
 
             DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn(false);
             col.Name = "chk";
@@ -64,8 +63,8 @@ namespace Final.MDS_CDS
             cboGVName.ValueMember = "GV_Code";
             cboGVName.DataSource = dtName;
 
-            
-            GetAllGVMa("");         
+
+            GetAllGVMa("");
         }
         private void GetAllGVMa(string gv)
         {
@@ -85,7 +84,14 @@ namespace Final.MDS_CDS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            GetAllGVMa(cboGVName.SelectedValue.ToString());
+            if (cboGVName.Text == "전체")
+            {
+                GetAllGVMa("");
+            }
+            else
+            {
+                GetAllGVMa(cboGVName.SelectedValue.ToString());
+            }
         }
 
         private void cboGVName_SelectedIndexChanged(object sender, EventArgs e)
@@ -106,53 +112,51 @@ namespace Final.MDS_CDS
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtCode.Text.Length < 1)
-            {
-                MessageBox.Show("대차코드를 입력해주세요");
-                return;
-            }
-            if (txtName.Text.Length < 1)
-            {
-                MessageBox.Show("대차명을 입력해주세요");
-                return;
-            }
-
             try
             {
-                string targetBoxing = "";
-                foreach (Control ctrl in gboGV.Controls)
+                if (!string.IsNullOrEmpty(txtName.Text) && !string.IsNullOrEmpty(txtCode.Text))
                 {
-                    if (ctrl is RadioButton)
+
+                    string targetBoxing = "";
+                    foreach (Control ctrl in gboGV.Controls)
                     {
-                        RadioButton rdo = (RadioButton)ctrl;
-                        if (rdo.Checked)
+                        if (ctrl is RadioButton)
                         {
-                            targetBoxing = rdo.Tag.ToString();
-                            break;
+                            RadioButton rdo = (RadioButton)ctrl;
+                            if (rdo.Checked)
+                            {
+                                targetBoxing = rdo.Tag.ToString();
+                                break;
+                            }
                         }
                     }
-                }
-                GVMasterVO vo = new GVMasterVO
-                {
-                    GV_Code = txtCode.Text,
-                    GV_Name = txtName.Text,
-                    GV_GroupCode = targetBoxing
-                };
+                    GVMasterVO vo = new GVMasterVO
+                    {
+                        GV_Code = txtCode.Text,
+                        GV_Name = txtName.Text,
+                        GVGroup_Code = targetBoxing,
+                        GV_Status = cbStatus.SelectedItem.ToString()
+                    };
 
-                GV_MasterService service = new GV_MasterService();
-                bool bFlag = service.InsertGV_Master(vo);
-
-                if (bFlag)
-                {
-                    MessageBox.Show("저장되었습니다..");
-                    GetAllGVMa("");
+                    if (GVservice.InsertUpdateGV_Ma(vo))
+                    {
+                        MessageBox.Show("저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GetAllGVMa("");
+                    }
+                    else
+                    {
+                        MessageBox.Show("저장실패", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
+                {
+                    MessageBox.Show("필수항목을 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message);
+
+                MessageBox.Show(err.Message, "db", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             RefreshControl();
         }
@@ -163,75 +167,43 @@ namespace Final.MDS_CDS
             txtName.Text = taget.GV_Name.ToString();
             txtCode.Text = taget.GV_Code.ToString();
 
-            if (taget.GV_GroupCode.Equals("사출작업대차"))
+            if (taget.GVGroup_Code.Equals("사출작업대차"))
             {
                 rdo1.Checked = true;
             }
-            else if (taget.GV_GroupCode.Equals("건조작업대차"))
+            else if (taget.GVGroup_Code.Equals("건조작업대차"))
             {
                 rdo2.Checked = true;
             }
-            else if (taget.GV_GroupCode.Equals("성형작업대차"))
+            else if (taget.GVGroup_Code.Equals("성형작업대차"))
             {
                 rdo3.Checked = true;
             }
-            else if (taget.GV_GroupCode.Equals("포장작업대차"))
+            else if (taget.GVGroup_Code.Equals("포장작업대차"))
             {
                 rdo4.Checked = true;
             }
+
+            txtCode.Text = dgvGV[0, dgvGV.CurrentRow.Index].Value.ToString();
+            txtName.Text = dgvGV[1, dgvGV.CurrentRow.Index].Value.ToString();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void dgvGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (txtCode.Text.Length < 1)
+            if (e.ColumnIndex == 6 && e.RowIndex > -1)
             {
-                MessageBox.Show("대차코드를 입력해주세요");
-                return;
-            }
-            if (txtName.Text.Length < 1)
-            {
-                MessageBox.Show("대차명을 입력해주세요");
-                return;
-            }
+                DataGridViewCheckBoxCell dgv = (DataGridViewCheckBoxCell)dgvGV.Rows[e.RowIndex].Cells[6];
+                int useyn = (Convert.ToInt32(dgv.Value) == 1) ? 0 : 1;
 
-            try
-            {
-                string targetBoxing = "";
-                foreach (Control ctrl in gboGV.Controls)
-                {
-                    if (ctrl is RadioButton)
-                    {
-                        RadioButton rdo = (RadioButton)ctrl;
-                        if (rdo.Checked)
-                        {
-                            targetBoxing = rdo.Tag.ToString();
-                            break;
-                        }
-                    }
-                }
                 GVMasterVO vo = new GVMasterVO
                 {
-                    GV_Code = txtCode.Text,
-                    GV_Name = txtName.Text,
-                    GV_GroupCode = targetBoxing
+                    GV_Code = dgvGV.Rows[e.RowIndex].Cells[0].Value.ToString(),
+                    Use_YN = useyn
                 };
 
                 GV_MasterService service = new GV_MasterService();
-                bool bFlag = service.UpdateGV_Master(vo);
-
-                if (bFlag)
-                {
-                    MessageBox.Show("저장되었습니다..");
-                    GetAllGVMa("");
-                }
-                else
-                    MessageBox.Show("이미 등록된 그룹코드이거나 그룹명입니다.");
+                service.UpdateUseYN(vo);
             }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-            RefreshControl();
         }
     }
 }

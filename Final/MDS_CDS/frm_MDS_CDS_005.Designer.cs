@@ -45,7 +45,6 @@ namespace Final.MDS_CDS
             this.rdo3 = new System.Windows.Forms.RadioButton();
             this.rdo2 = new System.Windows.Forms.RadioButton();
             this.rdo1 = new System.Windows.Forms.RadioButton();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btndotdotdot = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -60,7 +59,7 @@ namespace Final.MDS_CDS
             this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
             this.btnRefresh.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRefresh.Location = new System.Drawing.Point(1173, 686);
+            this.btnRefresh.Location = new System.Drawing.Point(1121, 686);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 29);
             this.btnRefresh.TabIndex = 114;
@@ -107,6 +106,7 @@ namespace Final.MDS_CDS
             this.dgvBox.RowTemplate.Height = 23;
             this.dgvBox.Size = new System.Drawing.Size(1341, 517);
             this.dgvBox.TabIndex = 102;
+            this.dgvBox.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBox_CellClick);
             this.dgvBox.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBox_CellContentDoubleClick);
             // 
             // txtDCode
@@ -238,29 +238,16 @@ namespace Final.MDS_CDS
             this.rdo1.Text = "포장등급 1";
             this.rdo1.UseVisualStyleBackColor = true;
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.DimGray;
-            this.btnUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnUpdate.Location = new System.Drawing.Point(1254, 651);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 29);
-            this.btnUpdate.TabIndex = 119;
-            this.btnUpdate.Text = "수정";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.DimGray;
             this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSave.Location = new System.Drawing.Point(1254, 686);
+            this.btnSave.Location = new System.Drawing.Point(1202, 686);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 29);
+            this.btnSave.Size = new System.Drawing.Size(127, 29);
             this.btnSave.TabIndex = 120;
-            this.btnSave.Text = "저장";
+            this.btnSave.Text = "수정 및 저장";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -317,7 +304,6 @@ namespace Final.MDS_CDS
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.gboGrade);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.textBox4);
@@ -357,7 +343,6 @@ namespace Final.MDS_CDS
         private System.Windows.Forms.RadioButton rdo3;
         private System.Windows.Forms.RadioButton rdo2;
         private System.Windows.Forms.RadioButton rdo1;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btndotdotdot;
         private System.Windows.Forms.TextBox txtName;

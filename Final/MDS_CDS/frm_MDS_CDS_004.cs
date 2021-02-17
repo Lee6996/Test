@@ -17,6 +17,7 @@ namespace Final.MDS_CDS
     {
         public string txtCodeText { get; set; }
         public string txtNameText { get; set; }
+        string dgv = null;
 
         List<Nop_MaVO> NopMalist; //비가동 대분류
         Nop_MaService MApservice = new Nop_MaService();
@@ -64,7 +65,7 @@ namespace Final.MDS_CDS
 
             dgvNopMi.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            GetAllData("");
+            GetAllData(dgv);
         }
         private void GetAllData(string nop)
         {
@@ -104,7 +105,9 @@ namespace Final.MDS_CDS
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 txtCode.Text = frm.SCode;
+                dgv = frm.SCode;
                 txtName.Text = frm.SName;
+                GetAllData(dgv);
                 //여기에 dgv 초기화 코딩
             }
         }
@@ -123,9 +126,8 @@ namespace Final.MDS_CDS
 
         private void dgvNopMi_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var taget = NopMilist.Find(item => item.Nop_Ma_Code == dgvNopMi.SelectedRows[0].Cells[0].Value.ToString());
-            txtName.Text = taget.Nop_Mi_Name.ToString();
-            txtCode.Text = taget.Nop_Mi_Code.ToString();
+            txtNopMiCode.Text = dgvNopMi[1, dgvNopMi.CurrentRow.Index].Value.ToString();
+            txtNopMiName.Text = dgvNopMi[2, dgvNopMi.CurrentRow.Index].Value.ToString();
         }
 
 
@@ -183,8 +185,22 @@ namespace Final.MDS_CDS
 
         private void dgvNopMi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtNopMiCode.Text= dgvNopMi[2, dgvNopMi.CurrentRow.Index].Value.ToString();
-            txtNopMiName.Text = dgvNopMi[3, dgvNopMi.CurrentRow.Index].Value.ToString();
+            if (e.ColumnIndex == 6 && e.RowIndex > -1)
+            {
+
+
+                DataGridViewCheckBoxCell dgv = (DataGridViewCheckBoxCell)dgvNopMi.Rows[e.RowIndex].Cells[6];
+                int useyn = (Convert.ToInt32(dgv.Value) == 1) ? 0 : 1;
+
+                Nop_MiVO vo = new Nop_MiVO
+                {
+                    Nop_Mi_Code = dgvNopMi.Rows[e.RowIndex].Cells[0].Value.ToString(),
+                    Use_YN = useyn
+                };
+
+                Nop_MiService service = new Nop_MiService();
+                service.UpdateUseYN(vo);
+            }
         }
     }                                     
 }

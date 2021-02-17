@@ -199,5 +199,25 @@ private void dgvDefDetail_CellDoubleClick(object sender, DataGridViewCellEventAr
             }
             RefreshControl();
         }
+
+        private void dgvDefDetail_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5 && e.RowIndex > -1)
+            {
+
+
+                DataGridViewCheckBoxCell dgv = (DataGridViewCheckBoxCell)dgvDefDetail.Rows[e.RowIndex].Cells[5];
+                int useyn = (Convert.ToInt32(dgv.Value) == 1) ? 0 : 1;
+
+                Def_MiVO vo = new Def_MiVO
+                {
+                    Def_Mi_Code = dgvDefDetail.Rows[e.RowIndex].Cells[0].Value.ToString(),
+                    Use_YN = useyn
+                };
+
+                Def_MiService service = new Def_MiService();
+                service.UpdateUseYN(vo);
+            }
+        }
     }
 }

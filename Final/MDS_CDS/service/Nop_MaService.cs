@@ -38,7 +38,7 @@ namespace Final.MDS_CDS.service
 
         public bool UpdateUseYN(Nop_MaVO vo)
         {
-            return new Nop_MaDAC().UpdateUseYN(vo); ;
+            return new Nop_MaDAC().UpdateUseYN(vo) ;
         }
     }
 }
