@@ -29,5 +29,10 @@ namespace Final.MDS_CDS.service
         {
             return new Nop_MiDAC().InsertUpdateNop_MiVO(additem);
         }
+
+        public bool UpdateUseYN(Nop_MiVO vo)
+        {
+            return new Nop_MiDAC().UpdateUseYN(vo);
+        }
     }
 }

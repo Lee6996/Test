@@ -65,6 +65,22 @@ namespace FinalDAC
             }
         }
 
+        public bool UpdateUseYN(Nop_MiVO vo)
+        {
+            string sQuery = @"update Nop_Mi_Master set Use_YN = @Use_YN where Nop_Mi_Code = @Nop_Mi_Code";
+            using (SqlCommand cmd = new SqlCommand(sQuery, conn))
+            {
+                cmd.Parameters.AddWithValue("@Nop_Mi_Code", vo.Nop_Mi_Code);
+                cmd.Parameters.AddWithValue("@Use_YN", (vo.Use_YN == 1) ? "Y" : "N");
+
+                int iCnt = Convert.ToInt32(cmd.ExecuteScalar());
+                if (iCnt > 0)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
         public bool InsertUpdateNop_MiVO(Nop_MiVO additem)
         {
             string sql = $@"IF NOT EXISTS(SELECT [Nop_Mi_Code] FROM [Nop_Mi_Master] WHERE [Nop_Mi_Code]=@Nop_Mi_Code)
@@ -127,7 +143,7 @@ namespace FinalDAC
   FROM Nop_Mi_Master where 1 = 1  ";
 
                 if (!string.IsNullOrEmpty(nop))
-                    sQuery += " and Nop_Mi_Code Like @Nop_Mi_Name ";
+                    sQuery += " and Nop_Ma_Code Like @Nop_Mi_Name ";
 
                 using (SqlCommand cmd = new SqlCommand(sQuery, conn))
                 {

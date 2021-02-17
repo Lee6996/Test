@@ -498,7 +498,7 @@ namespace FinalDAC
                     sql = "SELECT Nop_Mi_Code, Nop_Mi_Name FROM Nop_Mi_Master"; break;
                 case "Def_Ma":
                     sql = "SELECT Def_Ma_Code, Def_Ma_Name FROM Def_Ma_Master"; break;
-                case "Boxing_Grade":
+                case "BoxingGrade":
                     sql = "SELECT Boxing_Grade_Code, Boxing_Grade_Name FROM BoxingGrade_Master"; break;
                 default: sql = null; break;
                 

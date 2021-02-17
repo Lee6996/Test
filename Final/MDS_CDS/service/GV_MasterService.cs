@@ -30,5 +30,15 @@ namespace Final.MDS_CDS.service
         {
             return new GV_MasterDAC().UpdateGV_Master(vo);
         }
+
+        public bool UpdateUseYN(GVMasterVO vo)
+        {
+            return new GV_MasterDAC().UpdateUseYN(vo);
+        }
+
+        public bool InsertUpdateGV_Ma(GVMasterVO vo)
+        {
+            return new GV_MasterDAC().InsertUpdateGV_Ma(vo);
+        }
     }
 }

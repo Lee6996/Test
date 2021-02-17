@@ -28,7 +28,7 @@ namespace FinalDAC
       FROM [dbo].[BoxingGrade_Detail_Master] where 1 = 1  ";
 
             if (!string.IsNullOrEmpty(box))
-                sQuery += " and Grade_Detail_Code Like @Grade_Detail_Name ";
+                sQuery += " and Boxing_Grade_Code Like @Grade_Detail_Name ";
 
             using (SqlCommand cmd = new SqlCommand(sQuery, conn))
             {
@@ -38,6 +38,32 @@ namespace FinalDAC
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<BoxingGrade_Detail_MasterVO> list = Helper.DataReaderMapToList<BoxingGrade_Detail_MasterVO>(reader);
                 return list;
+            }
+        }
+
+        public bool InsertUpdateBox_DetailVO(BoxingGrade_Detail_MasterVO additem)
+        {
+            string sql = $@"IF NOT EXISTS(SELECT [Grade_Detail_Code] FROM [BoxingGrade_Detail_Master] WHERE [Grade_Detail_Code]=@Grade_Detail_Code)
+   BEGIN
+		INSERT INTO [BoxingGrade_Detail_Master] ([Grade_Detail_Code],[Grade_Detail_Name],[Boxing_Grade_Code],[Use_YN],[Ins_Date],[Ins_Emp] )      
+		VALUES(@Grade_Detail_Code,@Grade_Detail_Name,@Boxing_Grade_Code,'Y',GETDATE(),'TEST')
+		END
+ ELSE
+	 BEGIN
+		UPDATE [BoxingGrade_Detail_Master] SET [Grade_Detail_Name]=@Grade_Detail_Name, Up_Date =GETDATE(), Up_Emp = 'test' 
+		where [Grade_Detail_Code]=@Grade_Detail_Code
+		  END";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Grade_Detail_Code", additem.Grade_Detail_Code);
+                cmd.Parameters.AddWithValue("@Grade_Detail_Name", additem.Grade_Detail_Name);
+                cmd.Parameters.AddWithValue("@Boxing_Grade_Code", additem.Boxing_Grade_Code);                
+
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
             }
         }
 

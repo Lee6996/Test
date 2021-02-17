@@ -29,5 +29,10 @@ namespace Final.MDS_CDS.service
         {
             return new BoxingGrade_Detail_MasterDAC().GetAllBoxMa(box);
         }
+
+        public bool InsertUpdateBox_DetailVO(BoxingGrade_Detail_MasterVO additem)
+        {
+            return new BoxingGrade_Detail_MasterDAC().InsertUpdateBox_DetailVO(additem);
+        }
     }
 }
