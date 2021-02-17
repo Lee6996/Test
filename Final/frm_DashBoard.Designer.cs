@@ -49,21 +49,24 @@ namespace Final
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer2.Location = new System.Drawing.Point(2, 2);
             this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Size = new System.Drawing.Size(1266, 460);
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.splitContainer2.Size = new System.Drawing.Size(1266, 370);
             this.splitContainer2.SplitterDistance = 642;
             this.splitContainer2.TabIndex = 2;
             // 
             // splitContainer3
             // 
-            this.splitContainer3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer3.Location = new System.Drawing.Point(2, 475);
+            this.splitContainer3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer3.Location = new System.Drawing.Point(3, 376);
             this.splitContainer3.Name = "splitContainer3";
             // 
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.Controls.Add(this.chartDate);
-            this.splitContainer3.Size = new System.Drawing.Size(1266, 460);
+            this.splitContainer3.Size = new System.Drawing.Size(1266, 370);
             this.splitContainer3.SplitterDistance = 641;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -80,7 +83,7 @@ namespace Final
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chartDate.Series.Add(series2);
-            this.chartDate.Size = new System.Drawing.Size(641, 460);
+            this.chartDate.Size = new System.Drawing.Size(641, 370);
             this.chartDate.TabIndex = 1;
             this.chartDate.Text = "chart1";
             // 
@@ -88,7 +91,7 @@ namespace Final
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 951);
+            this.ClientSize = new System.Drawing.Size(1266, 761);
             this.Controls.Add(this.splitContainer3);
             this.Controls.Add(this.splitContainer2);
             this.Name = "frm_DashBoard";

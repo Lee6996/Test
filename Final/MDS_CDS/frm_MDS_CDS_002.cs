@@ -20,8 +20,8 @@ namespace Final.MDS_CDS
         public string txtNameText { get; set; }
 
         List<Def_MaVO> Defmalist; //불량 대분류
-
         List<Def_MiVO> Defmilist;//불량 상세
+
         public frm_MDS_CDS_002()
         {
             InitializeComponent();

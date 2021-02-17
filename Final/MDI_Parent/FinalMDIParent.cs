@@ -55,12 +55,8 @@ namespace Final
             frm_DashBoard frm = new frm_DashBoard();
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
-            frm.Show();
-        }
 
-        private void mnDashBoard_Click(object sender, EventArgs e)
-        {
-            OpenDashBoard();
+            frm.Show();
         }
 
         private void MenuClick(object sender, EventArgs e)
@@ -75,20 +71,25 @@ namespace Final
             {
                 openNewForm(e);
             }
-            else if (e.Node.Name == "DashBoard")
-            {
-                OpenDashBoard();
-            }
         }
 
         private void openNewForm(TreeNodeMouseClickEventArgs e = null, ToolStripMenuItem sender = null)
         {
             Form frm;
+            
             if (e != null)
             {
-                frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
+                if (e.Node.Name != "ndDashBoard")
+                {
+                    frm = Activator.CreateInstance(Type.GetType(string.Format($"Final.{e.Node.Name.Substring(0, 7)}.frm_{e.Node.Name}"))) as Form;
 
-                frm.Tag = frm;
+                    frm.Tag = frm;
+                }
+                else
+                {
+                    frm = Activator.CreateInstance(Type.GetType("Final.frm_DashBoard")) as Form;
+                    frm.Tag = frm;
+                }
             }
 
             else
@@ -100,6 +101,10 @@ namespace Final
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             TabPage newTab = new TabPage();
+            newTab.Font = new Font("나눔스퀘어OTF", 8);
+            tabControl2.TabPages.Add(newTab);
+            tabControl2.SelectedTab = newTab;
+
             if (e != null)
             {
                 newTab.Text = e.Node.Text;
@@ -110,9 +115,7 @@ namespace Final
                 newTab.Text = sender.Text;
                 newTab.Tag = frm;
             }
-            newTab.Font = new Font("나눔스퀘어OTF", 10);
-            tabControl2.TabPages.Add(newTab);
-            tabControl2.SelectedTab = newTab;
+            
 
             frm.Show();
         }

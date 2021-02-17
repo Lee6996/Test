@@ -125,7 +125,6 @@ namespace Final
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mnDashBoard = new System.Windows.Forms.ToolStripMenuItem();
             this.시스템관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MSS_CON_001 = new System.Windows.Forms.ToolStripMenuItem();
             this.MSS_CON_002 = new System.Windows.Forms.ToolStripMenuItem();
@@ -236,7 +235,6 @@ namespace Final
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnDashBoard,
             this.시스템관리ToolStripMenuItem,
             this.기준정보관리ToolStripMenuItem,
             this.작업지시관리ToolStripMenuItem,
@@ -250,13 +248,6 @@ namespace Final
             this.menuStrip1.Size = new System.Drawing.Size(1582, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // mnDashBoard
-            // 
-            this.mnDashBoard.Name = "mnDashBoard";
-            this.mnDashBoard.Size = new System.Drawing.Size(67, 20);
-            this.mnDashBoard.Text = "대쉬보드";
-            this.mnDashBoard.Click += new System.EventHandler(this.mnDashBoard_Click);
             // 
             // 시스템관리ToolStripMenuItem
             // 
@@ -276,54 +267,54 @@ namespace Final
             // MSS_CON_001
             // 
             this.MSS_CON_001.Name = "MSS_CON_001";
-            this.MSS_CON_001.Size = new System.Drawing.Size(166, 22);
+            this.MSS_CON_001.Size = new System.Drawing.Size(180, 22);
             this.MSS_CON_001.Text = "사용자 그룹 목록";
             this.MSS_CON_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_CON_002
             // 
             this.MSS_CON_002.Name = "MSS_CON_002";
-            this.MSS_CON_002.Size = new System.Drawing.Size(166, 22);
+            this.MSS_CON_002.Size = new System.Drawing.Size(180, 22);
             this.MSS_CON_002.Text = "사용자 그룹 관리";
             this.MSS_CON_002.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_CON_003
             // 
             this.MSS_CON_003.Name = "MSS_CON_003";
-            this.MSS_CON_003.Size = new System.Drawing.Size(166, 22);
+            this.MSS_CON_003.Size = new System.Drawing.Size(180, 22);
             this.MSS_CON_003.Text = "사용자 관리";
             this.MSS_CON_003.Click += new System.EventHandler(this.MenuClick);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(163, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // MSS_SYS_001
             // 
             this.MSS_SYS_001.Name = "MSS_SYS_001";
-            this.MSS_SYS_001.Size = new System.Drawing.Size(166, 22);
+            this.MSS_SYS_001.Size = new System.Drawing.Size(180, 22);
             this.MSS_SYS_001.Text = "화면관리";
             this.MSS_SYS_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_SYS_002
             // 
             this.MSS_SYS_002.Name = "MSS_SYS_002";
-            this.MSS_SYS_002.Size = new System.Drawing.Size(166, 22);
+            this.MSS_SYS_002.Size = new System.Drawing.Size(180, 22);
             this.MSS_SYS_002.Text = "로그인 이력 정보";
             this.MSS_SYS_002.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_SYS_003
             // 
             this.MSS_SYS_003.Name = "MSS_SYS_003";
-            this.MSS_SYS_003.Size = new System.Drawing.Size(166, 22);
+            this.MSS_SYS_003.Size = new System.Drawing.Size(180, 22);
             this.MSS_SYS_003.Text = "메뉴 관리";
             this.MSS_SYS_003.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_SYS_004
             // 
             this.MSS_SYS_004.Name = "MSS_SYS_004";
-            this.MSS_SYS_004.Size = new System.Drawing.Size(166, 22);
+            this.MSS_SYS_004.Size = new System.Drawing.Size(180, 22);
             this.MSS_SYS_004.Text = "공지사항";
             this.MSS_SYS_004.Click += new System.EventHandler(this.MenuClick);
             // 
@@ -737,7 +728,7 @@ namespace Final
             this.tv_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tv_Menu.Location = new System.Drawing.Point(4, 26);
             this.tv_Menu.Name = "tv_Menu";
-            treeNode1.Name = "DashBoard";
+            treeNode1.Name = "ndDashBoard";
             treeNode1.Text = "대쉬보드";
             treeNode2.Name = "MSS_CON_001";
             treeNode2.Text = "사용자 그룹 목록";
@@ -968,6 +959,5 @@ namespace Final
         private System.Windows.Forms.ToolStripMenuItem QAM_SQC_006;
         private System.Windows.Forms.ToolStripMenuItem QAM_SQC_005;
         private System.Windows.Forms.ToolStripMenuItem QAM_SQC_004;
-        private System.Windows.Forms.ToolStripMenuItem mnDashBoard;
     }
 }
