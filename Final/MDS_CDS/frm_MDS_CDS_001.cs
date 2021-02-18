@@ -114,11 +114,10 @@ namespace Final.MDS_CDS
         }
 
         private void dgvDef_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {           
-                var taget = Defmalist.Find(item => item.Def_Ma_Code == dgvDef.SelectedRows[0].Cells[0].Value.ToString());
-                txtCode.Text = taget.Def_Ma_Name.ToString();
-                txtName.Text = taget.Def_Ma_Code.ToString();            
-        }
+        {
+         txtCode.Text =   dgvDef[0, dgvDef.CurrentRow.Index].Value.ToString();
+         txtName.Text =   dgvDef[1, dgvDef.CurrentRow.Index].Value.ToString();
+         }
         
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -155,8 +154,8 @@ namespace Final.MDS_CDS
                 {
                     Def_MaVO additem = new Def_MaVO()
                     {
-                        Def_Ma_Code = txtName.Text,
-                        Def_Ma_Name = txtCode.Text,
+                        Def_Ma_Code = txtCode.Text,
+                        Def_Ma_Name = txtName.Text,
                        // Ins_Emp = UserInfo.User_Name
                     };
 

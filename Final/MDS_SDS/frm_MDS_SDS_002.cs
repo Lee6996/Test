@@ -26,8 +26,8 @@ namespace Final.MDS_SDS
         private void MDS_SDS_002_Load(object sender, EventArgs e)
         {
             CommonUtil.SetInitGridView(dgvItemDetail);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "품목코드", "Item_Code", 75);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "품목명", "Item_Name", 150);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "품목코드", "Item_Code", 75);   
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "품목명", "Item_Name", 150);    
             CommonUtil.AddGridTextColumn(dgvItemDetail, "유형", "Item_Type", 65);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "규격", "Item_Spec", 130);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "단위", "Item_Unit", 65);
@@ -41,9 +41,9 @@ namespace Final.MDS_SDS
             CommonUtil.AddGridTextColumn(dgvItemDetail, "안전재고", "Item_Stock");
             CommonUtil.AddGridTextColumn(dgvItemDetail, "시간당 생산수", "PrdQty_Per_Hour");
             CommonUtil.AddGridTextColumn(dgvItemDetail, "배치당 생산수", "PrdQTy_Per_Batch");
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "캐비티수", "Cavity", 80);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "성형줄당갯수", "Line_Per_Qty", 80);
-            CommonUtil.AddGridTextColumn(dgvItemDetail, "포장샷당갯수", "Shot_Per_Qty", 80);
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "캐비티수", "Cavity", 80);    
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "성형줄당갯수", "Line_Per_Qty", 80);   
+            CommonUtil.AddGridTextColumn(dgvItemDetail, "포장샷당갯수", "Shot_Per_Qty", 80);   
             CommonUtil.AddGridTextColumn(dgvItemDetail, "건조대차수량", "Dry_GV_Qty", 80);
             CommonUtil.AddGridTextColumn(dgvItemDetail, "사용여부", "Use_YN", 150, visibility: false);
 
@@ -112,14 +112,13 @@ namespace Final.MDS_SDS
 
         private void dgvItemDetail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            upitem = Itemlist.Find(item => item.Item_Code == dgvItemDetail[0, dgvItemDetail.CurrentRow.Index].Value.ToString());//수정하기
 
-            txtCode.Text = upitem.Item_Code;
-            txtName.Text = upitem.Item_Name;
-            nuCavity.Text = (upitem.Cavity).ToString();
-
-            nuLine_Per_Qty.Text = upitem.Line_Per_Qty.ToString();
-            nuShot_Per_Qty.Text = upitem.Shot_Per_Qty.ToString();
+            txtCode.Text = dgvItemDetail[0, dgvItemDetail.CurrentRow.Index].Value.ToString();
+            txtName.Text = dgvItemDetail[1, dgvItemDetail.CurrentRow.Index].Value.ToString();
+            nuCavity.Text = dgvItemDetail[15, dgvItemDetail.CurrentRow.Index].Value.ToString();
+            nuLine_Per_Qty.Text = dgvItemDetail[16, dgvItemDetail.CurrentRow.Index].Value.ToString();
+            nuShot_Per_Qty.Text = dgvItemDetail[17, dgvItemDetail.CurrentRow.Index].Value.ToString();
+                      
         }
 
         private void cbItem_SelectedIndexChanged(object sender, EventArgs e)

@@ -34,9 +34,6 @@ namespace Final.PPS_SCH
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgv_Work = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.chartDate = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,8 +42,6 @@ namespace Final.PPS_SCH
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Work)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDate)).BeginInit();
             this.SuspendLayout();
@@ -120,13 +115,13 @@ namespace Final.PPS_SCH
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.dgv_Work);
-            this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.panel10);
             this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.panel5.Location = new System.Drawing.Point(0, 57);
+            this.panel5.Location = new System.Drawing.Point(0, 91);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1468, 844);
+            this.panel5.Size = new System.Drawing.Size(1468, 811);
             this.panel5.TabIndex = 16;
             // 
             // dgv_Work
@@ -136,38 +131,11 @@ namespace Final.PPS_SCH
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Work.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgv_Work.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Work.Location = new System.Drawing.Point(6, 44);
+            this.dgv_Work.Location = new System.Drawing.Point(3, 3);
             this.dgv_Work.Name = "dgv_Work";
             this.dgv_Work.RowTemplate.Height = 23;
-            this.dgv_Work.Size = new System.Drawing.Size(1452, 508);
+            this.dgv_Work.Size = new System.Drawing.Size(1460, 508);
             this.dgv_Work.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.Control;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(6, 13);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(194, 26);
-            this.panel6.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Location = new System.Drawing.Point(-572, -229);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(194, 26);
-            this.panel7.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 15);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "생산의뢰";
             // 
             // panel10
             // 
@@ -175,25 +143,27 @@ namespace Final.PPS_SCH
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.Controls.Add(this.chartDate);
-            this.panel10.Location = new System.Drawing.Point(6, 552);
+            this.panel10.Location = new System.Drawing.Point(3, 517);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1450, 280);
+            this.panel10.Size = new System.Drawing.Size(1460, 289);
             this.panel10.TabIndex = 4;
             // 
             // chartDate
             // 
+            this.chartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea1";
             this.chartDate.ChartAreas.Add(chartArea1);
-            this.chartDate.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend1.Name = "Legend1";
             this.chartDate.Legends.Add(legend1);
-            this.chartDate.Location = new System.Drawing.Point(0, 3);
+            this.chartDate.Location = new System.Drawing.Point(3, 3);
             this.chartDate.Name = "chartDate";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartDate.Series.Add(series1);
-            this.chartDate.Size = new System.Drawing.Size(1448, 275);
+            this.chartDate.Size = new System.Drawing.Size(1448, 284);
             this.chartDate.TabIndex = 0;
             this.chartDate.Text = "chart1";
             // 
@@ -241,9 +211,6 @@ namespace Final.PPS_SCH
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Work)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartDate)).EndInit();
             this.ResumeLayout(false);
@@ -256,9 +223,6 @@ namespace Final.PPS_SCH
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.DataGridView dgv_Work;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbWorkStatus;
         private System.Windows.Forms.Label label17;

@@ -200,6 +200,7 @@ namespace Final
             // frm_MSS_CON_003_1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(384, 482);
             this.Controls.Add(this.txtUser_Pwd);
             this.Controls.Add(this.txtUser_ID);
@@ -215,7 +216,6 @@ namespace Final
             this.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "frm_MSS_CON_003_1";
             this.Tag = "사용자 등록";
-            this.Text = "사용자등록";
             this.Load += new System.EventHandler(this.frm_MSS_CON_003_1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
