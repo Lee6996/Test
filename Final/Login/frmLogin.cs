@@ -43,6 +43,7 @@ namespace Final.Login
             if(new UserService().CheckLoginAble(id,pwd))//로그인 성공
             {
                 new FinalMDIParent().Show();
+                this.Hide();
             }
             else
             {
