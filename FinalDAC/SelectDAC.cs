@@ -730,7 +730,9 @@ namespace FinalDAC
             {
                 cmd.Parameters.AddWithValue("@dtpFrom", dtpFrom);
                 cmd.Parameters.AddWithValue("@dtpTo", dtpTo);
-                cmd.Parameters.AddWithValue("@Item_Code", Item_Code);
+                if (!string.IsNullOrEmpty(Item_Code))
+                    cmd.Parameters.AddWithValue("@Item_Code", Item_Code);
+                if (!string.IsNullOrEmpty(Wc_Code))
                     cmd.Parameters.AddWithValue("@Wc_Code", Wc_Code);
 
                 SqlDataReader reader = cmd.ExecuteReader();
