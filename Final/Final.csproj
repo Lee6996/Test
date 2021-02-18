@@ -85,12 +85,6 @@
     <Compile Include="KPI_RPT\frm_KPI_RPT_001.Designer.cs">
       <DependentUpon>frm_KPI_RPT_001.cs</DependentUpon>
     </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT_002.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KPI_RPT\frm_KPI_RPT_002.Designer.cs">
-      <DependentUpon>frm_KPI_RPT_002.cs</DependentUpon>
-    </Compile>
     <Compile Include="KPI_RPT\frm_KPI_RPT_003.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -503,9 +497,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_001.resx">
       <DependentUpon>frm_KPI_RPT_001.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_002.resx">
-      <DependentUpon>frm_KPI_RPT_002.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_003.resx">
       <DependentUpon>frm_KPI_RPT_003.cs</DependentUpon>

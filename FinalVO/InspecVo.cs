@@ -20,7 +20,7 @@ namespace FinalVO
         public decimal LSL { get; set; }
         public string Inspect_datetime { get; set; }
         public string Item_code { get; set; }
-        public string Inspect_measure_seq { get; set; }
+        public int Inspect_measure_seq { get; set; }
         public decimal Inspect_val { get; set; }
     }
 }
