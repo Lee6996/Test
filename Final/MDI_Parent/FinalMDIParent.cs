@@ -25,6 +25,7 @@ namespace Final
         public FinalMDIParent()
         {
             InitializeComponent();
+            
         }
 
         public FinalMDIParent(frmLogin Login)
@@ -263,8 +264,23 @@ namespace Final
 
         private void FrmClose(object sender, EventArgs e)
         {
-            Login.Show();
             this.Close();
+            Login.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmClose(sender, e);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FrmClose(sender, e);
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

@@ -83,17 +83,18 @@ namespace Final.PRM_PRF.PopUp
         #region MyMethod
         private void SettingDGV(DataGridView dgv, string type)
         {
+            
             //WC, Item, GV
             CommonUtil.SetInitGridView(dgv);
-            CommonUtil.AddGridTextColumn(dgv, "Code", $"{type}_Code", 150);
-            CommonUtil.AddGridTextColumn(dgv, "Name", $"{type}_Name", 150);
+            CommonUtil.AddGridTextColumn(dgv, "Code", $"{type}_Code", 196);
+            CommonUtil.AddGridTextColumn(dgv, "Name", $"{type}_Name", 196);
         }
         private void SettingDGV(DataGridView dgv)
         {
             //User
             CommonUtil.SetInitGridView(dgv);
-            CommonUtil.AddGridTextColumn(dgv, "Code", "User_ID", 150);
-            CommonUtil.AddGridTextColumn(dgv, "Name", "User_Name", 150);
+            CommonUtil.AddGridTextColumn(dgv, "Code", "User_ID", 196);
+            CommonUtil.AddGridTextColumn(dgv, "Name", "User_Name", 196);
         }
         #endregion
 
