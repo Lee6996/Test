@@ -16,7 +16,7 @@ namespace Final.MDS_SDS.service
             return new WorkCenter_MasterDAC().WorkCenterBinding();
         }
 
-        public List<WorkCenterVO> WorkCenterSelect(string code)
+        public List<WorkCenter_Master2VO> WorkCenterSelect(string code)
         {
             return new WorkCenter_MasterDAC().WorkCenterSelect(code);
         }
@@ -24,6 +24,16 @@ namespace Final.MDS_SDS.service
         public List<WorkCenterVO> GetAllWorkCenter()
         {
             return new WorkCenter_MasterDAC().GetAllWorkCenter();
+        }
+
+        public bool UpdateUseYN(WorkCenter_Master2VO vo)
+        {
+            return new WorkCenter_MasterDAC().UpdateUseYN(vo);
+        }
+
+        public bool InsertUpdateWC_Ma2VO(WorkCenterVO additem)
+        {
+            return new WorkCenter_MasterDAC().InsertUpdateWC_Ma2VO(additem);
         }
     }
 }
