@@ -161,6 +161,7 @@
     <Compile Include="MDS_ODS\frm_MDS_ODS_002_1.Designer.cs">
       <DependentUpon>frm_MDS_ODS_002_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDS_ODS\ProcessService.cs" />
     <Compile Include="MDS_ODS\service\ProcessService.cs" />
     <Compile Include="MDS_SDS\frm_MDS_SDS_001.cs">
       <SubType>Form</SubType>

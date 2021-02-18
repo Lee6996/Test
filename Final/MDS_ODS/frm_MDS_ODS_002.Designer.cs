@@ -31,30 +31,28 @@ namespace Final.MDS_ODS
         {
             this.pnl = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtWorkCenter_Code = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtProcess_Name = new System.Windows.Forms.TextBox();
-            this.btnProcessSearch = new System.Windows.Forms.Button();
-            this.rdoWorkshop = new System.Windows.Forms.RadioButton();
-            this.rdoProcess = new System.Windows.Forms.RadioButton();
             this.cbWorkCenter_Name = new System.Windows.Forms.ComboBox();
             this.btnSelect = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtProcess_Code = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dgvWorkCenter = new System.Windows.Forms.DataGridView();
-            this.ProcessCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProcessName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Process_Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Use = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnUse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvWork = new System.Windows.Forms.DataGridView();
+            this.btnInsertUpdate = new System.Windows.Forms.Button();
+            this.txtWCCode = new System.Windows.Forms.TextBox();
+            this.txtWCName = new System.Windows.Forms.TextBox();
+            this.txtPRCode = new System.Windows.Forms.TextBox();
+            this.txtWCgroup = new System.Windows.Forms.TextBox();
+            this.txtRemark = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.pnl.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkCenter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl
@@ -71,17 +69,9 @@ namespace Final.MDS_ODS
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rdoProcess);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtWorkCenter_Code);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtProcess_Name);
-            this.groupBox1.Controls.Add(this.btnProcessSearch);
-            this.groupBox1.Controls.Add(this.rdoWorkshop);
             this.groupBox1.Controls.Add(this.cbWorkCenter_Name);
             this.groupBox1.Controls.Add(this.btnSelect);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtProcess_Code);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -89,68 +79,22 @@ namespace Final.MDS_ODS
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // txtWorkCenter_Code
-            // 
-            this.txtWorkCenter_Code.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtWorkCenter_Code.Location = new System.Drawing.Point(612, 17);
-            this.txtWorkCenter_Code.Name = "txtWorkCenter_Code";
-            this.txtWorkCenter_Code.Size = new System.Drawing.Size(148, 25);
-            this.txtWorkCenter_Code.TabIndex = 16;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(878, 19);
+            this.label4.Location = new System.Drawing.Point(3, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 18);
             this.label4.TabIndex = 15;
             this.label4.Text = "작업장명";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtProcess_Name
-            // 
-            this.txtProcess_Name.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtProcess_Name.Location = new System.Drawing.Point(280, 16);
-            this.txtProcess_Name.Name = "txtProcess_Name";
-            this.txtProcess_Name.Size = new System.Drawing.Size(100, 25);
-            this.txtProcess_Name.TabIndex = 14;
-            // 
-            // btnProcessSearch
-            // 
-            this.btnProcessSearch.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnProcessSearch.Location = new System.Drawing.Point(250, 17);
-            this.btnProcessSearch.Name = "btnProcessSearch";
-            this.btnProcessSearch.Size = new System.Drawing.Size(24, 23);
-            this.btnProcessSearch.TabIndex = 13;
-            this.btnProcessSearch.Text = "...";
-            this.btnProcessSearch.UseVisualStyleBackColor = true;
-            // 
-            // rdoWorkshop
-            // 
-            this.rdoWorkshop.AutoSize = true;
-            this.rdoWorkshop.Location = new System.Drawing.Point(491, 23);
-            this.rdoWorkshop.Name = "rdoWorkshop";
-            this.rdoWorkshop.Size = new System.Drawing.Size(14, 13);
-            this.rdoWorkshop.TabIndex = 12;
-            this.rdoWorkshop.TabStop = true;
-            this.rdoWorkshop.UseVisualStyleBackColor = true;
-            // 
-            // rdoProcess
-            // 
-            this.rdoProcess.AutoSize = true;
-            this.rdoProcess.Location = new System.Drawing.Point(88, 22);
-            this.rdoProcess.Name = "rdoProcess";
-            this.rdoProcess.Size = new System.Drawing.Size(14, 13);
-            this.rdoProcess.TabIndex = 11;
-            this.rdoProcess.TabStop = true;
-            this.rdoProcess.UseVisualStyleBackColor = true;
-            // 
             // cbWorkCenter_Name
             // 
             this.cbWorkCenter_Name.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbWorkCenter_Name.FormattingEnabled = true;
-            this.cbWorkCenter_Name.Location = new System.Drawing.Point(963, 16);
+            this.cbWorkCenter_Name.Location = new System.Drawing.Point(77, 18);
             this.cbWorkCenter_Name.Name = "cbWorkCenter_Name";
             this.cbWorkCenter_Name.Size = new System.Drawing.Size(152, 25);
             this.cbWorkCenter_Name.TabIndex = 10;
@@ -161,104 +105,35 @@ namespace Final.MDS_ODS
             this.btnSelect.BackColor = System.Drawing.Color.DimGray;
             this.btnSelect.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSelect.Location = new System.Drawing.Point(1193, 11);
+            this.btnSelect.Location = new System.Drawing.Point(246, 12);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(85, 35);
             this.btnSelect.TabIndex = 9;
             this.btnSelect.Text = "조회";
             this.btnSelect.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(511, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 18);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "작업장코드";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtProcess_Code
-            // 
-            this.txtProcess_Code.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtProcess_Code.Location = new System.Drawing.Point(175, 16);
-            this.txtProcess_Code.Name = "txtProcess_Code";
-            this.txtProcess_Code.Size = new System.Drawing.Size(69, 25);
-            this.txtProcess_Code.TabIndex = 7;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.dgvWorkCenter);
+            this.panel4.Controls.Add(this.btnRefresh);
+            this.panel4.Controls.Add(this.txtWCCode);
+            this.panel4.Controls.Add(this.txtWCName);
+            this.panel4.Controls.Add(this.txtPRCode);
+            this.panel4.Controls.Add(this.txtWCgroup);
+            this.panel4.Controls.Add(this.txtRemark);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.btnInsertUpdate);
+            this.panel4.Controls.Add(this.dgvWork);
             this.panel4.Location = new System.Drawing.Point(0, 91);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1582, 813);
             this.panel4.TabIndex = 21;
-            // 
-            // dgvWorkCenter
-            // 
-            this.dgvWorkCenter.BackgroundColor = System.Drawing.Color.White;
-            this.dgvWorkCenter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWorkCenter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProcessCode,
-            this.ProcessName,
-            this.Process_Remarks,
-            this.Date,
-            this.Use,
-            this.btnUse});
-            this.dgvWorkCenter.Location = new System.Drawing.Point(3, 3);
-            this.dgvWorkCenter.Name = "dgvWorkCenter";
-            this.dgvWorkCenter.RowTemplate.Height = 23;
-            this.dgvWorkCenter.Size = new System.Drawing.Size(1574, 805);
-            this.dgvWorkCenter.TabIndex = 24;
-            // 
-            // ProcessCode
-            // 
-            this.ProcessCode.HeaderText = "공정코드";
-            this.ProcessCode.Name = "ProcessCode";
-            this.ProcessCode.Width = 180;
-            // 
-            // ProcessName
-            // 
-            this.ProcessName.HeaderText = "공정이름";
-            this.ProcessName.Name = "ProcessName";
-            this.ProcessName.Width = 180;
-            // 
-            // Process_Remarks
-            // 
-            this.Process_Remarks.HeaderText = "비고란";
-            this.Process_Remarks.Name = "Process_Remarks";
-            this.Process_Remarks.Width = 180;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "입력일자";
-            this.Date.Name = "Date";
-            this.Date.Width = 180;
-            // 
-            // Use
-            // 
-            this.Use.HeaderText = "사용여부";
-            this.Use.Name = "Use";
-            this.Use.Width = 140;
-            // 
-            // btnUse
-            // 
-            this.btnUse.HeaderText = "사용여부";
-            this.btnUse.Name = "btnUse";
-            this.btnUse.Width = 120;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(12, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 18);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "조회조건 :     생산일자";
             // 
             // label1
             // 
@@ -271,6 +146,140 @@ namespace Final.MDS_ODS
             this.label1.TabIndex = 143;
             this.label1.Text = "▶작업장목록";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dgvWork
+            // 
+            this.dgvWork.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvWork.BackgroundColor = System.Drawing.Color.White;
+            this.dgvWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWork.Location = new System.Drawing.Point(0, -1);
+            this.dgvWork.Name = "dgvWork";
+            this.dgvWork.RowTemplate.Height = 23;
+            this.dgvWork.Size = new System.Drawing.Size(1580, 663);
+            this.dgvWork.TabIndex = 0;
+            this.dgvWork.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWork_CellClick);
+            this.dgvWork.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWork_CellDoubleClick);
+            // 
+            // btnInsertUpdate
+            // 
+            this.btnInsertUpdate.AutoSize = true;
+            this.btnInsertUpdate.BackColor = System.Drawing.Color.DimGray;
+            this.btnInsertUpdate.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnInsertUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnInsertUpdate.Location = new System.Drawing.Point(1420, 766);
+            this.btnInsertUpdate.Name = "btnInsertUpdate";
+            this.btnInsertUpdate.Size = new System.Drawing.Size(153, 35);
+            this.btnInsertUpdate.TabIndex = 10;
+            this.btnInsertUpdate.Text = "수정 및 저장";
+            this.btnInsertUpdate.UseVisualStyleBackColor = false;
+            this.btnInsertUpdate.Click += new System.EventHandler(this.btnInsertUpdate_Click);
+            // 
+            // txtWCCode
+            // 
+            this.txtWCCode.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtWCCode.Location = new System.Drawing.Point(577, 762);
+            this.txtWCCode.Name = "txtWCCode";
+            this.txtWCCode.Size = new System.Drawing.Size(260, 25);
+            this.txtWCCode.TabIndex = 30;
+            // 
+            // txtWCName
+            // 
+            this.txtWCName.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtWCName.Location = new System.Drawing.Point(577, 718);
+            this.txtWCName.Name = "txtWCName";
+            this.txtWCName.Size = new System.Drawing.Size(260, 25);
+            this.txtWCName.TabIndex = 29;
+            // 
+            // txtPRCode
+            // 
+            this.txtPRCode.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtPRCode.Location = new System.Drawing.Point(200, 718);
+            this.txtPRCode.Name = "txtPRCode";
+            this.txtPRCode.Size = new System.Drawing.Size(260, 25);
+            this.txtPRCode.TabIndex = 28;
+            // 
+            // txtWCgroup
+            // 
+            this.txtWCgroup.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtWCgroup.Location = new System.Drawing.Point(200, 762);
+            this.txtWCgroup.Name = "txtWCgroup";
+            this.txtWCgroup.Size = new System.Drawing.Size(260, 25);
+            this.txtWCgroup.TabIndex = 27;
+            // 
+            // txtRemark
+            // 
+            this.txtRemark.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtRemark.Location = new System.Drawing.Point(916, 683);
+            this.txtRemark.Multiline = true;
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Size = new System.Drawing.Size(260, 112);
+            this.txtRemark.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(856, 686);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 17);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "비고";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.Location = new System.Drawing.Point(475, 765);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 17);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "작업장코드";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.Location = new System.Drawing.Point(489, 721);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 17);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "작업장명";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(112, 721);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 17);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "공정코드";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(94, 765);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 17);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "작업장 그룹";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
+            this.btnRefresh.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnRefresh.Location = new System.Drawing.Point(1340, 767);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(77, 34);
+            this.btnRefresh.TabIndex = 31;
+            this.btnRefresh.Text = "초기화";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // frm_MDS_ODS_002
             // 
@@ -287,7 +296,8 @@ namespace Final.MDS_ODS
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkCenter)).EndInit();
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,25 +306,23 @@ namespace Final.MDS_ODS
 
         private System.Windows.Forms.Panel pnl;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtWorkCenter_Code;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtProcess_Name;
-        private System.Windows.Forms.Button btnProcessSearch;
-        private System.Windows.Forms.RadioButton rdoWorkshop;
-        private System.Windows.Forms.RadioButton rdoProcess;
         private System.Windows.Forms.ComboBox cbWorkCenter_Name;
         private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtProcess_Code;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dgvWorkCenter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProcessCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProcessName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Process_Remarks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Use;
-        private System.Windows.Forms.DataGridViewTextBoxColumn btnUse;
-        public System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvWork;
+        private System.Windows.Forms.Button btnInsertUpdate;
+        private System.Windows.Forms.TextBox txtWCCode;
+        private System.Windows.Forms.TextBox txtWCName;
+        private System.Windows.Forms.TextBox txtPRCode;
+        private System.Windows.Forms.TextBox txtWCgroup;
+        private System.Windows.Forms.TextBox txtRemark;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

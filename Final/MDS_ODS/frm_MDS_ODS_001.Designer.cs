@@ -34,27 +34,24 @@ namespace Final.MDS_ODS
             this.btnSelect = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dgvProcess = new System.Windows.Forms.DataGridView();
-            this.ProcessCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProcessName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Process_Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Use = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnUse = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtProcess_Name_Insert = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnInsertUpdate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtProcess_Code_Insert = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.dgvProcess = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.txtGroup = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnl.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProcess)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProcess)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl
@@ -92,6 +89,7 @@ namespace Final.MDS_ODS
             this.btnSelect.TabIndex = 4;
             this.btnSelect.Text = "조회";
             this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // label3
             // 
@@ -118,62 +116,6 @@ namespace Final.MDS_ODS
             this.panel5.Size = new System.Drawing.Size(1341, 645);
             this.panel5.TabIndex = 22;
             // 
-            // dgvProcess
-            // 
-            this.dgvProcess.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvProcess.BackgroundColor = System.Drawing.Color.White;
-            this.dgvProcess.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProcess.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProcessCode,
-            this.ProcessName,
-            this.Process_Remarks,
-            this.Date,
-            this.Use,
-            this.btnUse});
-            this.dgvProcess.Location = new System.Drawing.Point(3, 3);
-            this.dgvProcess.Name = "dgvProcess";
-            this.dgvProcess.RowTemplate.Height = 23;
-            this.dgvProcess.Size = new System.Drawing.Size(1333, 489);
-            this.dgvProcess.TabIndex = 147;
-            // 
-            // ProcessCode
-            // 
-            this.ProcessCode.HeaderText = "공정코드";
-            this.ProcessCode.Name = "ProcessCode";
-            this.ProcessCode.Width = 180;
-            // 
-            // ProcessName
-            // 
-            this.ProcessName.HeaderText = "공정이름";
-            this.ProcessName.Name = "ProcessName";
-            this.ProcessName.Width = 180;
-            // 
-            // Process_Remarks
-            // 
-            this.Process_Remarks.HeaderText = "비고란";
-            this.Process_Remarks.Name = "Process_Remarks";
-            this.Process_Remarks.Width = 180;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "입력일자";
-            this.Date.Name = "Date";
-            this.Date.Width = 180;
-            // 
-            // Use
-            // 
-            this.Use.HeaderText = "사용여부";
-            this.Use.Name = "Use";
-            this.Use.Width = 140;
-            // 
-            // btnUse
-            // 
-            this.btnUse.HeaderText = "사용여부";
-            this.btnUse.Name = "btnUse";
-            this.btnUse.Width = 120;
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -193,11 +135,14 @@ namespace Final.MDS_ODS
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.txtGroup);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.btnRefresh);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.txtRemark);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.txtProcess_Name_Insert);
-            this.panel4.Controls.Add(this.btnSave);
+            this.panel4.Controls.Add(this.btnInsertUpdate);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.txtProcess_Code_Insert);
             this.panel4.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -221,7 +166,7 @@ namespace Final.MDS_ODS
             // txtRemark
             // 
             this.txtRemark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtRemark.Location = new System.Drawing.Point(829, 11);
+            this.txtRemark.Location = new System.Drawing.Point(642, 8);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(304, 100);
@@ -230,7 +175,7 @@ namespace Final.MDS_ODS
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(747, 15);
+            this.label8.Location = new System.Drawing.Point(560, 8);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 19);
             this.label8.TabIndex = 6;
@@ -240,29 +185,30 @@ namespace Final.MDS_ODS
             // txtProcess_Name_Insert
             // 
             this.txtProcess_Name_Insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtProcess_Name_Insert.Location = new System.Drawing.Point(497, 11);
+            this.txtProcess_Name_Insert.Location = new System.Drawing.Point(88, 69);
             this.txtProcess_Name_Insert.Name = "txtProcess_Name_Insert";
             this.txtProcess_Name_Insert.Size = new System.Drawing.Size(187, 26);
             this.txtProcess_Name_Insert.TabIndex = 5;
             // 
-            // btnSave
+            // btnInsertUpdate
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.AutoSize = true;
-            this.btnSave.BackColor = System.Drawing.Color.DimGray;
-            this.btnSave.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSave.Location = new System.Drawing.Point(1239, 69);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(85, 35);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "저장";
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnInsertUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInsertUpdate.AutoSize = true;
+            this.btnInsertUpdate.BackColor = System.Drawing.Color.DimGray;
+            this.btnInsertUpdate.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnInsertUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnInsertUpdate.Location = new System.Drawing.Point(1147, 66);
+            this.btnInsertUpdate.Name = "btnInsertUpdate";
+            this.btnInsertUpdate.Size = new System.Drawing.Size(177, 35);
+            this.btnInsertUpdate.TabIndex = 4;
+            this.btnInsertUpdate.Text = "수정 및 저장";
+            this.btnInsertUpdate.UseVisualStyleBackColor = false;
+            this.btnInsertUpdate.Click += new System.EventHandler(this.btnInsertUpdate_Click);
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(380, 15);
+            this.label4.Location = new System.Drawing.Point(-1, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 19);
             this.label4.TabIndex = 2;
@@ -289,6 +235,54 @@ namespace Final.MDS_ODS
             this.label5.Text = "▶공정목록";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // dgvProcess
+            // 
+            this.dgvProcess.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvProcess.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProcess.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProcess.Location = new System.Drawing.Point(-1, -1);
+            this.dgvProcess.Name = "dgvProcess";
+            this.dgvProcess.RowTemplate.Height = 23;
+            this.dgvProcess.Size = new System.Drawing.Size(1341, 522);
+            this.dgvProcess.TabIndex = 149;
+            this.dgvProcess.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcess_CellClick);
+            this.dgvProcess.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcess_CellDoubleClick);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
+            this.btnRefresh.Font = new System.Drawing.Font("나눔스퀘어OTF Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnRefresh.Location = new System.Drawing.Point(1056, 66);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(85, 35);
+            this.btnRefresh.TabIndex = 145;
+            this.btnRefresh.Text = "초기화";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // txtGroup
+            // 
+            this.txtGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtGroup.Location = new System.Drawing.Point(420, 66);
+            this.txtGroup.Name = "txtGroup";
+            this.txtGroup.Size = new System.Drawing.Size(187, 26);
+            this.txtGroup.TabIndex = 147;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("나눔스퀘어OTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(313, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 19);
+            this.label2.TabIndex = 146;
+            this.label2.Text = "공정그룹코드";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frm_MDS_ODS_001
             // 
             this.ClientSize = new System.Drawing.Size(1341, 732);
@@ -302,9 +296,9 @@ namespace Final.MDS_ODS
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProcess)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProcess)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,22 +310,19 @@ namespace Final.MDS_ODS
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridView dgvProcess;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProcessCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProcessName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Process_Remarks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Use;
-        private System.Windows.Forms.DataGridViewTextBoxColumn btnUse;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtProcess_Name_Insert;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnInsertUpdate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtProcess_Code_Insert;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dgvProcess;
+        private System.Windows.Forms.TextBox txtGroup;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

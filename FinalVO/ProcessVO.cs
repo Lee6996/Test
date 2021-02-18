@@ -16,7 +16,7 @@ namespace FinalVO
         // 공정그룹
         public string Process_Group { get; set; }
         // 사용여부
-        public string UseYN { get; set; }
+        public int Use_YN { get; set; }
         // 비고
         public string Remark { get; set; }
         // 최초입력일자
