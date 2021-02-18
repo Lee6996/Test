@@ -63,6 +63,13 @@ namespace Final
             int num = Convert.ToInt32(orderNum.Substring(3));
             num = num + 1;
             WorkorderNum = orderNum.Substring(0, 3) + Convert.ToString(num);
+            WorkCenterCombo();
+        }
+        private void WorkCenterCombo()
+        {
+            WorkCenterService service = new WorkCenterService();
+            List<WorkCenterVO> List = service.SelectWorkCenter();
+            CommonUtil.ComboBindingWorkCenter(cbWcCode, List, "", true, "선택");
         }
     }
 }

@@ -28,10 +28,11 @@ namespace FinalVO
         // 비가동자동발생여부
         public string Nop_Auto_YN { get; set; }
         // 비가동자동발생시간
-        public int Nop_Check_Time { get; set; }
+        public string Nop_Check_Time { get; set; }
         // 최종실적처리시간
         public string Last_Cnt_Time { get; set; }
-        
+        // Gas사용여부
+        public string Gas_UseYN { get; set; }
         // 실적등록유형
         public string Prd_Req_Type { get; set; }
         // 팔렛생성여부
@@ -43,7 +44,7 @@ namespace FinalVO
         // 금형장착여부
         public string Mold_Setup_YN { get; set; }
         // 투입수량자동처리여부
-        public string In_Qty_Auto_YN { get; set; }        
+        public string In_Qty_Auto_YN { get; set; }
         // 사용여부
         public string Use_YN { get; set; }
         // 비고

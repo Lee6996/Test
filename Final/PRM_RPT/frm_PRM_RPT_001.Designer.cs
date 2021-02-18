@@ -51,13 +51,14 @@ namespace Final.PRM_RPT
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(45, 25);
+            this.label2.Location = new System.Drawing.Point(31, 26);
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.Text = "생산일자";
             // 
             // btn_WorkCenter
             // 
-            this.btn_WorkCenter.Location = new System.Drawing.Point(1174, 15);
+            this.btn_WorkCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_WorkCenter.Location = new System.Drawing.Point(1170, 15);
             this.btn_WorkCenter.Text = "출력";
             this.btn_WorkCenter.Click += new System.EventHandler(this.btn_WorkCenter_Click);
             // 
@@ -78,7 +79,7 @@ namespace Final.PRM_RPT
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(267, 17);
+            this.button22.Location = new System.Drawing.Point(271, 11);
             this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // textBox1
@@ -98,7 +99,7 @@ namespace Final.PRM_RPT
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(119, 22);
+            this.dateTimePicker1.Location = new System.Drawing.Point(107, 22);
             // 
             // label3
             // 
@@ -112,9 +113,9 @@ namespace Final.PRM_RPT
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 57);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1272, 749);
+            this.panel5.Size = new System.Drawing.Size(1272, 828);
             this.panel5.TabIndex = 18;
             // 
             // panel1
@@ -123,9 +124,9 @@ namespace Final.PRM_RPT
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.documentViewer1);
-            this.panel1.Location = new System.Drawing.Point(6, 48);
+            this.panel1.Location = new System.Drawing.Point(0, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1257, 688);
+            this.panel1.Size = new System.Drawing.Size(1263, 758);
             this.panel1.TabIndex = 11;
             // 
             // documentViewer1
@@ -134,9 +135,9 @@ namespace Final.PRM_RPT
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.documentViewer1.IsMetric = true;
-            this.documentViewer1.Location = new System.Drawing.Point(0, 0);
+            this.documentViewer1.Location = new System.Drawing.Point(0, 33);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(1257, 688);
+            this.documentViewer1.Size = new System.Drawing.Size(1272, 722);
             this.documentViewer1.TabIndex = 0;
             // 
             // label1
@@ -195,8 +196,8 @@ namespace Final.PRM_RPT
             this.Controls.Add(this.panel5);
             this.Name = "frm_PRM_RPT_001";
             this.Activated += new System.EventHandler(this.frm_PRM_RPT_001_Activated);
-            this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
+            this.Controls.SetChildIndex(this.panel4, 0);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);

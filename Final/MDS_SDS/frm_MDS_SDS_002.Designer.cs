@@ -129,7 +129,7 @@ namespace Final.MDS_SDS
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.dgvItemDetail);
-            this.panel5.Location = new System.Drawing.Point(0, 90);
+            this.panel5.Location = new System.Drawing.Point(0, 91);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1341, 643);
             this.panel5.TabIndex = 144;

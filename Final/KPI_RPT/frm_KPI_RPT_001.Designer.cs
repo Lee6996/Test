@@ -72,7 +72,6 @@ namespace Final.KPI_RPT
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(528, 11);
             this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // textBox1
@@ -120,7 +119,7 @@ namespace Final.KPI_RPT
             this.txtPCodeText.Enabled = false;
             this.txtPCodeText.Location = new System.Drawing.Point(787, 17);
             this.txtPCodeText.Name = "txtPCodeText";
-            this.txtPCodeText.Size = new System.Drawing.Size(100, 25);
+            this.txtPCodeText.Size = new System.Drawing.Size(100, 24);
             this.txtPCodeText.TabIndex = 13;
             this.txtPCodeText.TextChanged += new System.EventHandler(this.txtPCodeText_TextChanged);
             // 
@@ -129,7 +128,7 @@ namespace Final.KPI_RPT
             this.txtWCodeText.Enabled = false;
             this.txtWCodeText.Location = new System.Drawing.Point(1074, 16);
             this.txtWCodeText.Name = "txtWCodeText";
-            this.txtWCodeText.Size = new System.Drawing.Size(100, 25);
+            this.txtWCodeText.Size = new System.Drawing.Size(100, 24);
             this.txtWCodeText.TabIndex = 14;
             this.txtWCodeText.TextChanged += new System.EventHandler(this.txtWCodeText_TextChanged);
             // 

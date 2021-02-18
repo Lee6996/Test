@@ -140,6 +140,7 @@ namespace Final.MSS_SYS
             this.dgvNotice.RowTemplate.Height = 23;
             this.dgvNotice.Size = new System.Drawing.Size(1336, 765);
             this.dgvNotice.TabIndex = 24;
+            this.dgvNotice.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotice_CellDoubleClick);
             // 
             // frm_MSS_SYS_004
             // 

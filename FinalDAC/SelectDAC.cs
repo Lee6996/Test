@@ -605,6 +605,19 @@ namespace FinalDAC
                 return list;
             }
         }
+        // List<WorkCenterVO> - 성재
+        public List<WorkCenterVO> SelectWorkCenter()
+        {
+            string sql = " SELECT * from View_WorkCenter";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<WorkCenterVO> list = Helper.DataReaderMapToList<WorkCenterVO>(reader);
+
+                conn.Close();
+                return list;
+            }
+        }
         //List<MoldVO> - 성재
         public List<MoldVO> SelectMolds(string Mold_Code = null, string Mold_Group = null)
         {
