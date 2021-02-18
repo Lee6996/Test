@@ -36,10 +36,6 @@ namespace Final.PPS_SCH
             this.label7 = new System.Windows.Forms.Label();
             this.dgv_WorkOrder = new System.Windows.Forms.DataGridView();
             this.dgv_Req = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnWorkAdd = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
@@ -48,8 +44,6 @@ namespace Final.PPS_SCH
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Req)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -110,35 +104,34 @@ namespace Final.PPS_SCH
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.dgv_WorkOrder);
             this.panel5.Controls.Add(this.dgv_Req);
-            this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 57);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1335, 797);
+            this.panel5.Size = new System.Drawing.Size(1335, 876);
             this.panel5.TabIndex = 16;
             this.panel5.Tag = "";
             // 
             // panel8
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel8.BackColor = System.Drawing.SystemColors.Control;
+            this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label8);
             this.panel8.Controls.Add(this.panel9);
-            this.panel8.Location = new System.Drawing.Point(6, 346);
+            this.panel8.Location = new System.Drawing.Point(6, 425);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(194, 26);
+            this.panel8.Size = new System.Drawing.Size(254, 26);
             this.panel8.TabIndex = 3;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(71, 6);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(-1, 3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 15);
+            this.label8.Size = new System.Drawing.Size(72, 18);
             this.label8.TabIndex = 3;
-            this.label8.Text = "작업지시";
+            this.label8.Text = "▶작업지시";
             // 
             // panel9
             // 
@@ -163,7 +156,7 @@ namespace Final.PPS_SCH
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_WorkOrder.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgv_WorkOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_WorkOrder.Location = new System.Drawing.Point(6, 378);
+            this.dgv_WorkOrder.Location = new System.Drawing.Point(6, 457);
             this.dgv_WorkOrder.Name = "dgv_WorkOrder";
             this.dgv_WorkOrder.RowTemplate.Height = 23;
             this.dgv_WorkOrder.Size = new System.Drawing.Size(1317, 407);
@@ -176,49 +169,11 @@ namespace Final.PPS_SCH
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Req.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgv_Req.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Req.Location = new System.Drawing.Point(6, 45);
+            this.dgv_Req.Location = new System.Drawing.Point(6, 90);
             this.dgv_Req.Name = "dgv_Req";
             this.dgv_Req.RowTemplate.Height = 23;
-            this.dgv_Req.Size = new System.Drawing.Size(1317, 274);
+            this.dgv_Req.Size = new System.Drawing.Size(1317, 308);
             this.dgv_Req.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.Control;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(6, 13);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(194, 26);
-            this.panel6.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(71, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "생산의뢰";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Location = new System.Drawing.Point(-572, -229);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(194, 26);
-            this.panel7.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 18);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "생산의뢰";
             // 
             // label5
             // 
@@ -250,8 +205,8 @@ namespace Final.PPS_SCH
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frm_PPS_SCH_001";
             this.Load += new System.EventHandler(this.frm_PPS_SCH_001_Load);
-            this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
+            this.Controls.SetChildIndex(this.panel4, 0);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -261,10 +216,6 @@ namespace Final.PPS_SCH
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Req)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,12 +229,8 @@ namespace Final.PPS_SCH
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgv_WorkOrder;
         private System.Windows.Forms.DataGridView dgv_Req;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnWorkAdd;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label1;
     }
 }

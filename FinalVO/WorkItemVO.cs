@@ -8,18 +8,18 @@ namespace FinalVO
 {
     public class WorkItemVO
     {
-        string Item_Type;
-        string Item_Code;
-        string Item_Name;
-        decimal PrdQty_Per_Hour;
-        int Prd_Qty;
+        public string Item_Type { get; set; }
+        public string Item_Code { get; set; }
+        public string Item_Name { get; set; }
+        public decimal PrdQty_Per_Hour { get; set; }
+        public int Prd_Qty { get; set; }
     }
     public class WorkBoxingVO
     {
-        string Item_Code;
-        string Item_Name;
-        string Prd_Date;
-        int In_Qty;
+        public string Item_Code { get; set; }
+        public string Item_Name { get; set; }
+        public string Prd_Date { get; set; }
+        public int In_Qty { get; set; }
     }
 
 }

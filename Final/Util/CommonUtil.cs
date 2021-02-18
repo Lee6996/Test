@@ -29,6 +29,20 @@ namespace Final
             cbo.ValueMember = "Mold_Group";
             cbo.DataSource = codeList;
         }
+        public static void ComboBindingWorkCenter(ComboBox cbo, List<WorkCenterVO> list, string Category, bool blankItem = true, string blankText = "")
+        {
+            //var codeList = (from item in list where item.Category.Equals(Category) select item).ToList();
+            var codeList = list.ToList();
+            if (blankItem)
+            {
+                WorkCenterVO blank = new WorkCenterVO
+                { Wc_Code = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "Wc_Code";
+            cbo.ValueMember = "Wc_Code";
+            cbo.DataSource = codeList;
+        }
         public static void BindingComboBox(ComboBox cbo, DataTable dt, string valueMember, string displayMember, bool blankItemAdd = true)
         {
             if (blankItemAdd)

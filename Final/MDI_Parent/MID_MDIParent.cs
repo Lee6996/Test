@@ -114,5 +114,10 @@ namespace Final.KPI_RPT
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
