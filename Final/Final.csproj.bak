@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CE8412D-E99D-4082-9B6C-1D3E9476280A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Final</RootNamespace>
+    <AssemblyName>Final</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FinalEnc, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\FinalEnc\bin\Debug\FinalEnc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm_DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DashBoard.Designer.cs">
+      <DependentUpon>frm_DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_001.Designer.cs">
+      <DependentUpon>frm_KPI_RPT_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_003.Designer.cs">
+      <DependentUpon>frm_KPI_RPT_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI_RPT\frm_KPI_RPT_004.Designer.cs">
+      <DependentUpon>frm_KPI_RPT_004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_001.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_002.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_003.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_004.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_005.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_CDS\frm_MDS_CDS_006.Designer.cs">
+      <DependentUpon>frm_MDS_CDS_006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_CDS\service\BoxingGrade_Detail_MasterService.cs" />
+    <Compile Include="MDS_CDS\service\Def_MaService.cs" />
+    <Compile Include="MDS_CDS\service\Def_MiService.cs" />
+    <Compile Include="MDS_CDS\service\GV_MasterService.cs" />
+    <Compile Include="MDS_CDS\service\Nop_MaService.cs" />
+    <Compile Include="MDS_CDS\service\Nop_MiService.cs" />
+    <Compile Include="MDS_ODS\frm_MDS_ODS_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_ODS\frm_MDS_ODS_001.Designer.cs">
+      <DependentUpon>frm_MDS_ODS_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_ODS\frm_MDS_ODS_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_ODS\frm_MDS_ODS_002.Designer.cs">
+      <DependentUpon>frm_MDS_ODS_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_ODS\frm_MDS_ODS_002_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_ODS\frm_MDS_ODS_002_1.Designer.cs">
+      <DependentUpon>frm_MDS_ODS_002_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_ODS\service\ProcessService.cs" />
+    <Compile Include="MDS_SDS\frm_MDS_SDS_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_001.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_002.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_002_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_002_1.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_002_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_003.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_003_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_003_1.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_003_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_004.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_004_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_SDS\frm_MDS_SDS_004_1.Designer.cs">
+      <DependentUpon>frm_MDS_SDS_004_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_ODS\UserStatic.cs" />
+    <Compile Include="MDI_Parent\frm_MDIParent_1Grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Parent\frm_MDIParent_1Grid.Designer.cs">
+      <DependentUpon>frm_MDIParent_1Grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI_Parent\frm_MDIParent_2Grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Parent\frm_MDIParent_2Grid.Designer.cs">
+      <DependentUpon>frm_MDIParent_2Grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI_Parent\MID_MDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Parent\MID_MDIParent.Designer.cs">
+      <DependentUpon>MID_MDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI_Parent\FinalMDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Parent\FinalMDIParent.Designer.cs">
+      <DependentUpon>FinalMDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_SDS\service\Condition_Spec_MasterService.cs" />
+    <Compile Include="MDS_SDS\service\ItemService.cs" />
+    <Compile Include="MDS_SDS\service\SpecService.cs" />
+    <Compile Include="MDS_SDS\service\WorkCenter_MasterService.cs" />
+    <Compile Include="MSS_CON\UserService.cs" />
+    <Compile Include="PPS_MLD\frm_PPS_MLD_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPS_MLD\frm_PPS_MLD_001.Designer.cs">
+      <DependentUpon>frm_PPS_MLD_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPS_MLD\frm_PPS_MLD_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPS_MLD\frm_PPS_MLD_002.Designer.cs">
+      <DependentUpon>frm_PPS_MLD_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPS_SCH\frm_PPS_SCH_001-1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPS_SCH\frm_PPS_SCH_001-1.Designer.cs">
+      <DependentUpon>frm_PPS_SCH_001-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPS_SCH\frm_PPS_SCH_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPS_SCH\frm_PPS_SCH_001.Designer.cs">
+      <DependentUpon>frm_PPS_SCH_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPS_SCH\frm_PPS_SCH_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPS_SCH\frm_PPS_SCH_002.Designer.cs">
+      <DependentUpon>frm_PPS_SCH_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPS_SCH\frm_PPS_SCH_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPS_SCH\frm_PPS_SCH_003.Designer.cs">
+      <DependentUpon>frm_PPS_SCH_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPS_SCH\MySqlConnection.cs" />
+    <Compile Include="PRM_PRF\frm_PRM_PRF_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_001.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_002.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_003.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_005.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_006.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_007.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_007.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_008.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_008.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_008.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\MainPop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\MainPop.Designer.cs">
+      <DependentUpon>MainPop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_009.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_009.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_009.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\frm_PRM_PRF_010.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\PopUp\frm_PRM_PRF_008_PopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRM_PRF\PopUp\frm_PRM_PRF_008_PopUp.Designer.cs">
+      <DependentUpon>frm_PRM_PRF_008_PopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRM_PRF\PRM_PRF_Service.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QAM_SQC\frm_QAM_SQC_004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QAM_SQC\frm_QAM_SQC_004.Designer.cs">
+      <DependentUpon>frm_QAM_SQC_004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QAM_SQC\frm_QAM_SQC_005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QAM_SQC\frm_QAM_SQC_005.Designer.cs">
+      <DependentUpon>frm_QAM_SQC_005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QAM_SQC\frm_QAM_SQC_006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QAM_SQC\frm_QAM_SQC_006.Designer.cs">
+      <DependentUpon>frm_QAM_SQC_006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QAM_SQC\QAM_SQC_Service.cs" />
+    <Compile Include="Service\DashBoardService.cs" />
+    <Compile Include="Service\MenuService.cs" />
+    <Compile Include="Service\MoldService.cs" />
+    <Compile Include="Service\ProcessService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="Service\WorkCenterService.cs" />
+    <Compile Include="Service\WorkDayService.cs" />
+    <Compile Include="Service\WorkOrderService.cs" />
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucTabControl.Designer.cs">
+      <DependentUpon>ucTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCountrol\PlaceholderTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\AutoClosingMessageBox.cs" />
+    <Compile Include="Util\CommonUtil.cs" />
+    <Compile Include="MSS_CON\frm_MSS_CON_002_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_CON\frm_MSS_CON_002_1.Designer.cs">
+      <DependentUpon>frm_MSS_CON_002_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_CON\frm_MSS_CON_003_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_CON\frm_MSS_CON_003_1.Designer.cs">
+      <DependentUpon>frm_MSS_CON_003_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_CON\frm_MSS_CON_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_CON\frm_MSS_CON_001.Designer.cs">
+      <DependentUpon>frm_MSS_CON_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_CON\frm_MSS_CON_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_CON\frm_MSS_CON_002.Designer.cs">
+      <DependentUpon>frm_MSS_CON_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_CON\frm_MSS_CON_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_CON\frm_MSS_CON_003.Designer.cs">
+      <DependentUpon>frm_MSS_CON_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_CON\UserGroupService.cs" />
+    <Compile Include="MSS_SYS\frm_MSS_SYS_003_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_003_1.Designer.cs">
+      <DependentUpon>frm_MSS_SYS_003_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_004_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_004_1.Designer.cs">
+      <DependentUpon>frm_MSS_SYS_004_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_004_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_004_2.Designer.cs">
+      <DependentUpon>frm_MSS_SYS_004_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_001.Designer.cs">
+      <DependentUpon>frm_MSS_SYS_001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_002.Designer.cs">
+      <DependentUpon>frm_MSS_SYS_002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_003.Designer.cs">
+      <DependentUpon>frm_MSS_SYS_003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSS_SYS\frm_MSS_SYS_004.Designer.cs">
+      <DependentUpon>frm_MSS_SYS_004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSS_SYS\ScreenService.cs" />
+    <Compile Include="MSS_SYS\SysNoticeService.cs" />
+    <EmbeddedResource Include="frm_DashBoard.resx">
+      <DependentUpon>frm_DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_001.resx">
+      <DependentUpon>frm_KPI_RPT_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_003.resx">
+      <DependentUpon>frm_KPI_RPT_003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KPI_RPT\frm_KPI_RPT_004.resx">
+      <DependentUpon>frm_KPI_RPT_004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_001.resx" />
+    <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_002.resx" />
+    <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_003.resx" />
+    <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_004.resx" />
+    <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_005.resx" />
+    <EmbeddedResource Include="MDS_CDS\frm_MDS_CDS_006.resx" />
+    <EmbeddedResource Include="MDS_ODS\frm_MDS_ODS_001.resx" />
+    <EmbeddedResource Include="MDS_ODS\frm_MDS_ODS_002.resx" />
+    <EmbeddedResource Include="MDS_ODS\frm_MDS_ODS_002_1.resx" />
+    <EmbeddedResource Include="MDS_SDS\frm_MDS_SDS_001.resx" />
+    <EmbeddedResource Include="MDS_SDS\frm_MDS_SDS_002.resx" />
+    <EmbeddedResource Include="MDS_SDS\frm_MDS_SDS_002_1.resx" />
+    <EmbeddedResource Include="MDS_SDS\frm_MDS_SDS_003.resx" />
+    <EmbeddedResource Include="MDS_SDS\frm_MDS_SDS_003_1.resx" />
+    <EmbeddedResource Include="MDS_SDS\frm_MDS_SDS_004.resx" />
+    <EmbeddedResource Include="MDS_SDS\frm_MDS_SDS_004_1.resx" />
+    <EmbeddedResource Include="MDI_Parent\frm_MDIParent_1Grid.resx">
+      <DependentUpon>frm_MDIParent_1Grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI_Parent\frm_MDIParent_2Grid.resx">
+      <DependentUpon>frm_MDIParent_2Grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI_Parent\MID_MDIParent.resx">
+      <DependentUpon>MID_MDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI_Parent\FinalMDIParent.resx">
+      <DependentUpon>FinalMDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPS_MLD\frm_PPS_MLD_001.resx">
+      <DependentUpon>frm_PPS_MLD_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPS_MLD\frm_PPS_MLD_002.resx">
+      <DependentUpon>frm_PPS_MLD_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPS_SCH\frm_PPS_SCH_001-1.resx">
+      <DependentUpon>frm_PPS_SCH_001-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPS_SCH\frm_PPS_SCH_001.resx">
+      <DependentUpon>frm_PPS_SCH_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPS_SCH\frm_PPS_SCH_002.resx">
+      <DependentUpon>frm_PPS_SCH_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPS_SCH\frm_PPS_SCH_003.resx">
+      <DependentUpon>frm_PPS_SCH_003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_001.resx">
+      <DependentUpon>frm_PRM_PRF_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_002.resx">
+      <DependentUpon>frm_PRM_PRF_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_003.resx">
+      <DependentUpon>frm_PRM_PRF_003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_005.resx">
+      <DependentUpon>frm_PRM_PRF_005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_006.resx">
+      <DependentUpon>frm_PRM_PRF_006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_007.resx">
+      <DependentUpon>frm_PRM_PRF_007.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_008.resx">
+      <DependentUpon>frm_PRM_PRF_008.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_009.resx">
+      <DependentUpon>frm_PRM_PRF_009.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\frm_PRM_PRF_010.resx">
+      <DependentUpon>frm_PRM_PRF_010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\PopUp\frm_PRM_PRF_001_PopUp.resx">
+      <DependentUpon>frm_PRM_PRF_001_PopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\MainPop.resx">
+      <DependentUpon>MainPop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRM_PRF\PopUp\frm_PRM_PRF_008_PopUp.resx">
+      <DependentUpon>frm_PRM_PRF_008_PopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QAM_SQC\frm_QAM_SQC_004.resx">
+      <DependentUpon>frm_QAM_SQC_004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QAM_SQC\frm_QAM_SQC_005.resx">
+      <DependentUpon>frm_QAM_SQC_005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QAM_SQC\frm_QAM_SQC_006.resx">
+      <DependentUpon>frm_QAM_SQC_006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_CON\frm_MSS_CON_002_1.resx">
+      <DependentUpon>frm_MSS_CON_002_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_CON\frm_MSS_CON_003_1.resx">
+      <DependentUpon>frm_MSS_CON_003_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_CON\frm_MSS_CON_001.resx">
+      <DependentUpon>frm_MSS_CON_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_CON\frm_MSS_CON_002.resx">
+      <DependentUpon>frm_MSS_CON_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_CON\frm_MSS_CON_003.resx">
+      <DependentUpon>frm_MSS_CON_003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_SYS\frm_MSS_SYS_003_1.resx">
+      <DependentUpon>frm_MSS_SYS_003_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_SYS\frm_MSS_SYS_004_1.resx">
+      <DependentUpon>frm_MSS_SYS_004_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_SYS\frm_MSS_SYS_004_2.resx">
+      <DependentUpon>frm_MSS_SYS_004_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_SYS\frm_MSS_SYS_001.resx">
+      <DependentUpon>frm_MSS_SYS_001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_SYS\frm_MSS_SYS_002.resx">
+      <DependentUpon>frm_MSS_SYS_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_SYS\frm_MSS_SYS_003.resx">
+      <DependentUpon>frm_MSS_SYS_003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSS_SYS\frm_MSS_SYS_004.resx">
+      <DependentUpon>frm_MSS_SYS_004.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\NanumSquareB.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EncLibrary\FinalEnc.dll" />
+    <None Include="Resources\close-red.png" />
+    <None Include="Resources\close-grey.png" />
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FinalDAC\FinalDAC.csproj">
+      <Project>{55b68008-cbe4-4d16-a344-82ca9c47f6ee}</Project>
+      <Name>FinalDAC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinalVO\FinalVO.csproj">
+      <Project>{e0737b4c-95a5-4fb4-a26f-0f1edb71a8c3}</Project>
+      <Name>FinalVO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

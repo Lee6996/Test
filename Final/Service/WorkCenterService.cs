@@ -15,5 +15,9 @@ namespace Final.Service
         {
             dac = new SelectDAC();
         }
+        public List<WorkCenterVO> SelectWorkCenter()
+        {
+            return dac.SelectWorkCenter();
+        }
     }
 }

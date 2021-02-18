@@ -123,6 +123,8 @@ namespace Final
             treeNode49});
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.시스템관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MSS_CON_001 = new System.Windows.Forms.ToolStripMenuItem();
@@ -164,11 +166,10 @@ namespace Final
             this.PRM_PRF_010 = new System.Windows.Forms.ToolStripMenuItem();
             this.일지관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PRM_RPT_001 = new System.Windows.Forms.ToolStripMenuItem();
-            this.PRM_RPT_002 = new System.Windows.Forms.ToolStripMenuItem();
-            this.PRM_RPT_003 = new System.Windows.Forms.ToolStripMenuItem();
+            this.PRM_RPT_004 = new System.Windows.Forms.ToolStripMenuItem();
             this.분석관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.KPI_PRT_002 = new System.Windows.Forms.ToolStripMenuItem();
-            this.KPI_PRT_001 = new System.Windows.Forms.ToolStripMenuItem();
+            this.KPI_PRT_003 = new System.Windows.Forms.ToolStripMenuItem();
+            this.KPI_PRT_004 = new System.Windows.Forms.ToolStripMenuItem();
             this.금형관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PPS_MLD_001 = new System.Windows.Forms.ToolStripMenuItem();
             this.PPS_MLD_002 = new System.Windows.Forms.ToolStripMenuItem();
@@ -188,6 +189,7 @@ namespace Final
             this.tv_Menu = new System.Windows.Forms.TreeView();
             this.button19 = new System.Windows.Forms.Button();
             this.tabControl2 = new MDITabForm.ucTabControl();
+            this.KPI_PRT_001 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -205,6 +207,32 @@ namespace Final
             this.panel1.TabIndex = 4;
             // 
             // lblName
+            // 
+            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblName.Location = new System.Drawing.Point(1183, 3);
+            this.lblName.Multiline = true;
+            this.lblName.Name = "lblName";
+            this.lblName.ReadOnly = true;
+            this.lblName.Size = new System.Drawing.Size(339, 25);
+            this.lblName.TabIndex = 108;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button6.Location = new System.Drawing.Point(1528, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(22, 22);
+            this.button6.TabIndex = 6;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.FrmClose);
+            // 
+            // button1
             // 
             this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblName.Font = new System.Drawing.Font("나눔스퀘어OTF", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -251,54 +279,54 @@ namespace Final
             // MSS_CON_001
             // 
             this.MSS_CON_001.Name = "MSS_CON_001";
-            this.MSS_CON_001.Size = new System.Drawing.Size(166, 22);
+            this.MSS_CON_001.Size = new System.Drawing.Size(180, 22);
             this.MSS_CON_001.Text = "사용자 그룹 목록";
             this.MSS_CON_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_CON_002
             // 
             this.MSS_CON_002.Name = "MSS_CON_002";
-            this.MSS_CON_002.Size = new System.Drawing.Size(166, 22);
+            this.MSS_CON_002.Size = new System.Drawing.Size(180, 22);
             this.MSS_CON_002.Text = "사용자 그룹 관리";
             this.MSS_CON_002.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_CON_003
             // 
             this.MSS_CON_003.Name = "MSS_CON_003";
-            this.MSS_CON_003.Size = new System.Drawing.Size(166, 22);
+            this.MSS_CON_003.Size = new System.Drawing.Size(180, 22);
             this.MSS_CON_003.Text = "사용자 관리";
             this.MSS_CON_003.Click += new System.EventHandler(this.MenuClick);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(163, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // MSS_SYS_001
             // 
             this.MSS_SYS_001.Name = "MSS_SYS_001";
-            this.MSS_SYS_001.Size = new System.Drawing.Size(166, 22);
+            this.MSS_SYS_001.Size = new System.Drawing.Size(180, 22);
             this.MSS_SYS_001.Text = "화면관리";
             this.MSS_SYS_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_SYS_002
             // 
             this.MSS_SYS_002.Name = "MSS_SYS_002";
-            this.MSS_SYS_002.Size = new System.Drawing.Size(166, 22);
+            this.MSS_SYS_002.Size = new System.Drawing.Size(180, 22);
             this.MSS_SYS_002.Text = "로그인 이력 정보";
             this.MSS_SYS_002.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_SYS_003
             // 
             this.MSS_SYS_003.Name = "MSS_SYS_003";
-            this.MSS_SYS_003.Size = new System.Drawing.Size(166, 22);
+            this.MSS_SYS_003.Size = new System.Drawing.Size(180, 22);
             this.MSS_SYS_003.Text = "메뉴 관리";
             this.MSS_SYS_003.Click += new System.EventHandler(this.MenuClick);
             // 
             // MSS_SYS_004
             // 
             this.MSS_SYS_004.Name = "MSS_SYS_004";
-            this.MSS_SYS_004.Size = new System.Drawing.Size(166, 22);
+            this.MSS_SYS_004.Size = new System.Drawing.Size(180, 22);
             this.MSS_SYS_004.Text = "공지사항";
             this.MSS_SYS_004.Click += new System.EventHandler(this.MenuClick);
             // 
@@ -326,94 +354,94 @@ namespace Final
             // MDS_ODS_001
             // 
             this.MDS_ODS_001.Name = "MDS_ODS_001";
-            this.MDS_ODS_001.Size = new System.Drawing.Size(178, 22);
+            this.MDS_ODS_001.Size = new System.Drawing.Size(180, 22);
             this.MDS_ODS_001.Text = "공정 정보";
             this.MDS_ODS_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // MDS_ODS_002
             // 
             this.MDS_ODS_002.Name = "MDS_ODS_002";
-            this.MDS_ODS_002.Size = new System.Drawing.Size(178, 22);
+            this.MDS_ODS_002.Size = new System.Drawing.Size(180, 22);
             this.MDS_ODS_002.Text = "작업장 정보";
             this.MDS_ODS_002.Click += new System.EventHandler(this.MenuClick);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(175, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // MDS_SDS_001
             // 
             this.MDS_SDS_001.Name = "MDS_SDS_001";
-            this.MDS_SDS_001.Size = new System.Drawing.Size(178, 22);
+            this.MDS_SDS_001.Size = new System.Drawing.Size(180, 22);
             this.MDS_SDS_001.Text = "품목분류 정보";
             this.MDS_SDS_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // MDS_SDS_002
             // 
             this.MDS_SDS_002.Name = "MDS_SDS_002";
-            this.MDS_SDS_002.Size = new System.Drawing.Size(178, 22);
+            this.MDS_SDS_002.Size = new System.Drawing.Size(180, 22);
             this.MDS_SDS_002.Text = "품목 정보";
             this.MDS_SDS_002.Click += new System.EventHandler(this.MenuClick);
             // 
             // MDS_SDS_003
             // 
             this.MDS_SDS_003.Name = "MDS_SDS_003";
-            this.MDS_SDS_003.Size = new System.Drawing.Size(178, 22);
+            this.MDS_SDS_003.Size = new System.Drawing.Size(180, 22);
             this.MDS_SDS_003.Text = "품질 규격 설정";
             this.MDS_SDS_003.Click += new System.EventHandler(this.MenuClick);
             // 
             // MDS_SDS_004
             // 
             this.MDS_SDS_004.Name = "MDS_SDS_004";
-            this.MDS_SDS_004.Size = new System.Drawing.Size(178, 22);
+            this.MDS_SDS_004.Size = new System.Drawing.Size(180, 22);
             this.MDS_SDS_004.Text = "공정 조건 설정";
             this.MDS_SDS_004.Click += new System.EventHandler(this.MenuClick);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(175, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // MDS_CDS_001
             // 
             this.MDS_CDS_001.Name = "MDS_CDS_001";
-            this.MDS_CDS_001.Size = new System.Drawing.Size(178, 22);
+            this.MDS_CDS_001.Size = new System.Drawing.Size(180, 22);
             this.MDS_CDS_001.Text = "불량현상 대분류";
             this.MDS_CDS_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // MDS_CDS_002
             // 
             this.MDS_CDS_002.Name = "MDS_CDS_002";
-            this.MDS_CDS_002.Size = new System.Drawing.Size(178, 22);
+            this.MDS_CDS_002.Size = new System.Drawing.Size(180, 22);
             this.MDS_CDS_002.Text = "불량현상 상세분류";
             this.MDS_CDS_002.Click += new System.EventHandler(this.MenuClick);
             // 
             // MDS_CDS_003
             // 
             this.MDS_CDS_003.Name = "MDS_CDS_003";
-            this.MDS_CDS_003.Size = new System.Drawing.Size(178, 22);
+            this.MDS_CDS_003.Size = new System.Drawing.Size(180, 22);
             this.MDS_CDS_003.Text = "비가동 대분류";
             this.MDS_CDS_003.Click += new System.EventHandler(this.MenuClick);
             // 
             // MDS_CDS_004
             // 
             this.MDS_CDS_004.Name = "MDS_CDS_004";
-            this.MDS_CDS_004.Size = new System.Drawing.Size(178, 22);
+            this.MDS_CDS_004.Size = new System.Drawing.Size(180, 22);
             this.MDS_CDS_004.Text = "비가동 상세분류";
             this.MDS_CDS_004.Click += new System.EventHandler(this.MenuClick);
             // 
             // MDS_CDS_005
             // 
             this.MDS_CDS_005.Name = "MDS_CDS_005";
-            this.MDS_CDS_005.Size = new System.Drawing.Size(178, 22);
+            this.MDS_CDS_005.Size = new System.Drawing.Size(180, 22);
             this.MDS_CDS_005.Text = "포장등급 상세 정의";
             this.MDS_CDS_005.Click += new System.EventHandler(this.MenuClick);
             // 
             // MDS_CDS_006
             // 
             this.MDS_CDS_006.Name = "MDS_CDS_006";
-            this.MDS_CDS_006.Size = new System.Drawing.Size(178, 22);
+            this.MDS_CDS_006.Size = new System.Drawing.Size(180, 22);
             this.MDS_CDS_006.Text = "대차 정보";
             this.MDS_CDS_006.Click += new System.EventHandler(this.MenuClick);
             // 
@@ -430,22 +458,22 @@ namespace Final
             // PPS_SCH_001
             // 
             this.PPS_SCH_001.Name = "PPS_SCH_001";
-            this.PPS_SCH_001.Size = new System.Drawing.Size(214, 22);
-            this.PPS_SCH_001.Text = "성형 작업지시 생성";
+            this.PPS_SCH_001.Size = new System.Drawing.Size(180, 22);
+            this.PPS_SCH_001.Text = "작업지시 생성";
             this.PPS_SCH_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // PPS_SCH_002
             // 
             this.PPS_SCH_002.Name = "PPS_SCH_002";
-            this.PPS_SCH_002.Size = new System.Drawing.Size(214, 22);
-            this.PPS_SCH_002.Text = "작업지시 마감관리";
+            this.PPS_SCH_002.Size = new System.Drawing.Size(180, 22);
+            this.PPS_SCH_002.Text = "작업지시 관리";
             this.PPS_SCH_002.Click += new System.EventHandler(this.MenuClick);
             // 
             // PPS_SCH_003
             // 
             this.PPS_SCH_003.Name = "PPS_SCH_003";
-            this.PPS_SCH_003.Size = new System.Drawing.Size(214, 22);
-            this.PPS_SCH_003.Text = "일단위 시간대별 실적조회";
+            this.PPS_SCH_003.Size = new System.Drawing.Size(180, 22);
+            this.PPS_SCH_003.Text = "일단위 실적조회";
             this.PPS_SCH_003.Click += new System.EventHandler(this.MenuClick);
             // 
             // 실적관리ToolStripMenuItem
@@ -467,63 +495,63 @@ namespace Final
             // PRM_PRF_001
             // 
             this.PRM_PRF_001.Name = "PRM_PRF_001";
-            this.PRM_PRF_001.Size = new System.Drawing.Size(174, 22);
+            this.PRM_PRF_001.Size = new System.Drawing.Size(180, 22);
             this.PRM_PRF_001.Text = "실적 조회";
             this.PRM_PRF_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // PRM_PRF_002
             // 
             this.PRM_PRF_002.Name = "PRM_PRF_002";
-            this.PRM_PRF_002.Size = new System.Drawing.Size(174, 22);
+            this.PRM_PRF_002.Size = new System.Drawing.Size(180, 22);
             this.PRM_PRF_002.Text = "포장 팔렛트 마감";
             this.PRM_PRF_002.Click += new System.EventHandler(this.MenuClick);
             // 
             // PRM_PRF_003
             // 
             this.PRM_PRF_003.Name = "PRM_PRF_003";
-            this.PRM_PRF_003.Size = new System.Drawing.Size(174, 22);
+            this.PRM_PRF_003.Size = new System.Drawing.Size(180, 22);
             this.PRM_PRF_003.Text = "완제품 입고리스트";
             this.PRM_PRF_003.Click += new System.EventHandler(this.MenuClick);
             // 
             // PRM_PRF_005
             // 
             this.PRM_PRF_005.Name = "PRM_PRF_005";
-            this.PRM_PRF_005.Size = new System.Drawing.Size(174, 22);
+            this.PRM_PRF_005.Size = new System.Drawing.Size(180, 22);
             this.PRM_PRF_005.Text = "대차 현황";
             this.PRM_PRF_005.Click += new System.EventHandler(this.MenuClick);
             // 
             // PRM_PRF_006
             // 
             this.PRM_PRF_006.Name = "PRM_PRF_006";
-            this.PRM_PRF_006.Size = new System.Drawing.Size(174, 22);
+            this.PRM_PRF_006.Size = new System.Drawing.Size(180, 22);
             this.PRM_PRF_006.Text = "대차이력 조회";
             this.PRM_PRF_006.Click += new System.EventHandler(this.MenuClick);
             // 
             // PRM_PRF_007
             // 
             this.PRM_PRF_007.Name = "PRM_PRF_007";
-            this.PRM_PRF_007.Size = new System.Drawing.Size(174, 22);
+            this.PRM_PRF_007.Size = new System.Drawing.Size(180, 22);
             this.PRM_PRF_007.Text = "대차현황 모니터링";
             this.PRM_PRF_007.Click += new System.EventHandler(this.MenuClick);
             // 
             // PRM_PRF_008
             // 
             this.PRM_PRF_008.Name = "PRM_PRF_008";
-            this.PRM_PRF_008.Size = new System.Drawing.Size(174, 22);
+            this.PRM_PRF_008.Size = new System.Drawing.Size(180, 22);
             this.PRM_PRF_008.Text = "비가동 등록";
             this.PRM_PRF_008.Click += new System.EventHandler(this.MenuClick);
             // 
             // PRM_PRF_009
             // 
             this.PRM_PRF_009.Name = "PRM_PRF_009";
-            this.PRM_PRF_009.Size = new System.Drawing.Size(174, 22);
+            this.PRM_PRF_009.Size = new System.Drawing.Size(180, 22);
             this.PRM_PRF_009.Text = "근태정보 조회";
             this.PRM_PRF_009.Click += new System.EventHandler(this.MenuClick);
             // 
             // PRM_PRF_010
             // 
             this.PRM_PRF_010.Name = "PRM_PRF_010";
-            this.PRM_PRF_010.Size = new System.Drawing.Size(174, 22);
+            this.PRM_PRF_010.Size = new System.Drawing.Size(180, 22);
             this.PRM_PRF_010.Text = "근태현황 분석";
             this.PRM_PRF_010.Click += new System.EventHandler(this.MenuClick);
             // 
@@ -531,8 +559,7 @@ namespace Final
             // 
             this.일지관리ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PRM_RPT_001,
-            this.PRM_RPT_002,
-            this.PRM_RPT_003});
+            this.PRM_RPT_004});
             this.일지관리ToolStripMenuItem.Name = "일지관리ToolStripMenuItem";
             this.일지관리ToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.일지관리ToolStripMenuItem.Text = "일지 관리";
@@ -540,46 +567,40 @@ namespace Final
             // PRM_RPT_001
             // 
             this.PRM_RPT_001.Name = "PRM_RPT_001";
-            this.PRM_RPT_001.Size = new System.Drawing.Size(154, 22);
+            this.PRM_RPT_001.Size = new System.Drawing.Size(180, 22);
             this.PRM_RPT_001.Text = "적재 작업 일지";
             this.PRM_RPT_001.Click += new System.EventHandler(this.MenuClick);
             // 
-            // PRM_RPT_002
+            // PRM_RPT_004
             // 
-            this.PRM_RPT_002.Name = "PRM_RPT_002";
-            this.PRM_RPT_002.Size = new System.Drawing.Size(154, 22);
-            this.PRM_RPT_002.Text = "성형 작업 일지";
-            this.PRM_RPT_002.Click += new System.EventHandler(this.MenuClick);
-            // 
-            // PRM_RPT_003
-            // 
-            this.PRM_RPT_003.Name = "PRM_RPT_003";
-            this.PRM_RPT_003.Size = new System.Drawing.Size(154, 22);
-            this.PRM_RPT_003.Text = "포장 작업 일지";
-            this.PRM_RPT_003.Click += new System.EventHandler(this.MenuClick);
+            this.PRM_RPT_004.Name = "PRM_RPT_004";
+            this.PRM_RPT_004.Size = new System.Drawing.Size(180, 22);
+            this.PRM_RPT_004.Text = "포장 작업 일지";
+            this.PRM_RPT_004.Click += new System.EventHandler(this.MenuClick);
             // 
             // 분석관리ToolStripMenuItem
             // 
             this.분석관리ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.KPI_PRT_002,
-            this.KPI_PRT_001});
+            this.KPI_PRT_001,
+            this.KPI_PRT_003,
+            this.KPI_PRT_004});
             this.분석관리ToolStripMenuItem.Name = "분석관리ToolStripMenuItem";
             this.분석관리ToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.분석관리ToolStripMenuItem.Text = "분석 관리";
             // 
-            // KPI_PRT_002
+            // KPI_PRT_003
             // 
-            this.KPI_PRT_002.Name = "KPI_PRT_002";
-            this.KPI_PRT_002.Size = new System.Drawing.Size(182, 22);
-            this.KPI_PRT_002.Text = "월별 생산 현황";
-            this.KPI_PRT_002.Click += new System.EventHandler(this.MenuClick);
+            this.KPI_PRT_003.Name = "KPI_PRT_003";
+            this.KPI_PRT_003.Size = new System.Drawing.Size(180, 22);
+            this.KPI_PRT_003.Text = "품목별 생산 현황";
+            this.KPI_PRT_003.Click += new System.EventHandler(this.MenuClick);
             // 
-            // KPI_PRT_001
+            // KPI_PRT_004
             // 
-            this.KPI_PRT_001.Name = "KPI_PRT_001";
-            this.KPI_PRT_001.Size = new System.Drawing.Size(182, 22);
-            this.KPI_PRT_001.Text = "월간 포장 실적 현황";
-            this.KPI_PRT_001.Click += new System.EventHandler(this.MenuClick);
+            this.KPI_PRT_004.Name = "KPI_PRT_004";
+            this.KPI_PRT_004.Size = new System.Drawing.Size(180, 22);
+            this.KPI_PRT_004.Text = "품목별 포장 현황";
+            this.KPI_PRT_004.Click += new System.EventHandler(this.MenuClick);
             // 
             // 금형관리ToolStripMenuItem
             // 
@@ -593,14 +614,14 @@ namespace Final
             // PPS_MLD_001
             // 
             this.PPS_MLD_001.Name = "PPS_MLD_001";
-            this.PPS_MLD_001.Size = new System.Drawing.Size(154, 22);
+            this.PPS_MLD_001.Size = new System.Drawing.Size(180, 22);
             this.PPS_MLD_001.Text = "금형 정보 등록";
             this.PPS_MLD_001.Click += new System.EventHandler(this.MenuClick);
             // 
             // PPS_MLD_002
             // 
             this.PPS_MLD_002.Name = "PPS_MLD_002";
-            this.PPS_MLD_002.Size = new System.Drawing.Size(154, 22);
+            this.PPS_MLD_002.Size = new System.Drawing.Size(180, 22);
             this.PPS_MLD_002.Text = "금형 사용 현황";
             this.PPS_MLD_002.Click += new System.EventHandler(this.MenuClick);
             // 
@@ -617,21 +638,21 @@ namespace Final
             // QAM_SQC_005
             // 
             this.QAM_SQC_005.Name = "QAM_SQC_005";
-            this.QAM_SQC_005.Size = new System.Drawing.Size(166, 22);
+            this.QAM_SQC_005.Size = new System.Drawing.Size(180, 22);
             this.QAM_SQC_005.Text = "공정조건 조회";
             this.QAM_SQC_005.Click += new System.EventHandler(this.MenuClick);
             // 
             // QAM_SQC_004
             // 
             this.QAM_SQC_004.Name = "QAM_SQC_004";
-            this.QAM_SQC_004.Size = new System.Drawing.Size(166, 22);
+            this.QAM_SQC_004.Size = new System.Drawing.Size(180, 22);
             this.QAM_SQC_004.Text = "품질 측정값 조회";
             this.QAM_SQC_004.Click += new System.EventHandler(this.MenuClick);
             // 
             // QAM_SQC_006
             // 
             this.QAM_SQC_006.Name = "QAM_SQC_006";
-            this.QAM_SQC_006.Size = new System.Drawing.Size(166, 22);
+            this.QAM_SQC_006.Size = new System.Drawing.Size(180, 22);
             this.QAM_SQC_006.Text = "원재료 LOT관리";
             this.QAM_SQC_006.Click += new System.EventHandler(this.MenuClick);
             // 
@@ -881,6 +902,12 @@ namespace Final
             this.tabControl2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl2_MouseClick);
             this.tabControl2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl2_MouseDown);
             // 
+            // KPI_PRT_001
+            // 
+            this.KPI_PRT_001.Name = "KPI_PRT_001";
+            this.KPI_PRT_001.Size = new System.Drawing.Size(180, 22);
+            this.KPI_PRT_001.Text = "일별 실적 현황";
+            // 
             // FinalMDIParent
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -891,7 +918,7 @@ namespace Final
             this.Controls.Add(this.button19);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("나눔스퀘어OTF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -964,11 +991,10 @@ namespace Final
         private System.Windows.Forms.ToolStripMenuItem PRM_PRF_010;
         private System.Windows.Forms.ToolStripMenuItem 일지관리ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PRM_RPT_001;
-        private System.Windows.Forms.ToolStripMenuItem PRM_RPT_002;
-        private System.Windows.Forms.ToolStripMenuItem PRM_RPT_003;
+        private System.Windows.Forms.ToolStripMenuItem PRM_RPT_004;
         private System.Windows.Forms.ToolStripMenuItem 분석관리ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem KPI_PRT_001;
-        private System.Windows.Forms.ToolStripMenuItem KPI_PRT_002;
+        private System.Windows.Forms.ToolStripMenuItem KPI_PRT_004;
+        private System.Windows.Forms.ToolStripMenuItem KPI_PRT_003;
         private System.Windows.Forms.ToolStripMenuItem 금형관리ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PPS_MLD_001;
         private System.Windows.Forms.ToolStripMenuItem PPS_MLD_002;
@@ -978,5 +1004,6 @@ namespace Final
         private System.Windows.Forms.ToolStripMenuItem QAM_SQC_004;
         public MDITabForm.ucTabControl tabControl2;
         private System.Windows.Forms.TextBox lblName;
+        private System.Windows.Forms.ToolStripMenuItem KPI_PRT_001;
     }
 }

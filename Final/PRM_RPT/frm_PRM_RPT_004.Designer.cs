@@ -34,33 +34,23 @@ namespace Final.PRM_RPT
             this.panel2 = new System.Windows.Forms.Panel();
             this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(55, 25);
+            this.label2.Location = new System.Drawing.Point(31, 26);
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.Text = "생산일자";
             // 
             // btn_WorkCenter
             // 
+            this.btn_WorkCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_WorkCenter.Location = new System.Drawing.Point(1170, 15);
             this.btn_WorkCenter.Text = "출력";
             this.btn_WorkCenter.Click += new System.EventHandler(this.btn_WorkCenter_Click);
@@ -82,7 +72,7 @@ namespace Final.PRM_RPT
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(266, 17);
+            this.button22.Location = new System.Drawing.Point(271, 11);
             this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // textBox1
@@ -102,7 +92,7 @@ namespace Final.PRM_RPT
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(129, 22);
+            this.dateTimePicker1.Location = new System.Drawing.Point(107, 22);
             // 
             // label3
             // 
@@ -113,12 +103,10 @@ namespace Final.PRM_RPT
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.HighlightText;
             this.panel5.Controls.Add(this.panel1);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 57);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1266, 749);
+            this.panel5.Size = new System.Drawing.Size(1266, 828);
             this.panel5.TabIndex = 21;
             // 
             // panel1
@@ -126,11 +114,10 @@ namespace Final.PRM_RPT
             this.panel1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1266, 749);
+            this.panel1.Size = new System.Drawing.Size(1266, 828);
             this.panel1.TabIndex = 19;
             // 
             // panel2
@@ -139,9 +126,9 @@ namespace Final.PRM_RPT
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.documentViewer1);
-            this.panel2.Location = new System.Drawing.Point(6, 48);
+            this.panel2.Location = new System.Drawing.Point(0, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1257, 688);
+            this.panel2.Size = new System.Drawing.Size(1266, 758);
             this.panel2.TabIndex = 11;
             // 
             // documentViewer1
@@ -150,9 +137,9 @@ namespace Final.PRM_RPT
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.documentViewer1.IsMetric = true;
-            this.documentViewer1.Location = new System.Drawing.Point(0, 0);
+            this.documentViewer1.Location = new System.Drawing.Point(0, 33);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(1257, 688);
+            this.documentViewer1.Size = new System.Drawing.Size(1266, 725);
             this.documentViewer1.TabIndex = 0;
             // 
             // label7
@@ -164,70 +151,6 @@ namespace Final.PRM_RPT
             this.label7.Size = new System.Drawing.Size(306, 42);
             this.label7.TabIndex = 10;
             this.label7.Text = "파일 양식 출력(건조)";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.panel8);
-            this.panel3.Location = new System.Drawing.Point(6, 14);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(194, 28);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.label8);
-            this.panel8.Location = new System.Drawing.Point(-572, -248);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(194, 28);
-            this.panel8.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(34, 7);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 18);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "생산의뢰";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(511, 353);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(377, 42);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "파일 양식 출력(선별/포장)";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.Control;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(6, 14);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(194, 28);
-            this.panel6.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Location = new System.Drawing.Point(-572, -248);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(194, 28);
-            this.panel7.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 18);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "생산의뢰";
             // 
             // label5
             // 
@@ -247,21 +170,14 @@ namespace Final.PRM_RPT
             this.ClientSize = new System.Drawing.Size(1266, 828);
             this.Controls.Add(this.panel5);
             this.Name = "frm_PRM_RPT_004";
-            this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
+            this.Controls.SetChildIndex(this.panel4, 0);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,18 +186,11 @@ namespace Final.PRM_RPT
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
