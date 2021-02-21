@@ -66,11 +66,11 @@ namespace FinalVO
         // 품목명
         public string Item_Name { get; set; }
         // 작업장코드
-        public int Wc_Code { get; set; }
+        public string Wc_Code { get; set; }
         // 작업장명
-        public int Wc_Name { get; set; }
+        public string Wc_Name { get; set; }
         // 금형타수
-        public decimal Mold_Shot_Cnt { get; set; }
+        public int Mold_Shot_Cnt { get; set; }
         // 금형생산량
         public int Mold_Prd_Qty { get; set; }
         // 금형사용시작시간
@@ -78,7 +78,7 @@ namespace FinalVO
         // 금형사용종료시간
         public string Use_Endtime { get; set; }
         // 금형사용시간
-        public string Cum_Time { get; set; }
+        public decimal Cum_Time { get; set; }
 
 
     }

@@ -31,12 +31,8 @@ namespace FinalVO
         public string Nop_Check_Time { get; set; }
         // 최종실적처리시간
         public string Last_Cnt_Time { get; set; }
-        // Gas사용여부
-        public string Gas_UseYN { get; set; }
         // 실적등록유형
         public string Prd_Req_Type { get; set; }
-        // 팔렛생성여부
-        public string Pallet_YN { get; set; }
         // 최종작업품목
         public string Item_Code { get; set; }
         // 실적단위
